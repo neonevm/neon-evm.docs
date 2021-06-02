@@ -2,7 +2,7 @@
 
 [Introduction](https://github.com/neonlabsorg/neon-evm.docs/wiki)
 
-[Installation & Setup](https://github.com/neonlabsorg/neon-evm.docs/wiki/Installation-&-Setup)
+[Local Solana Cluster: Installation, Setup and Tests](https://github.com/neonlabsorg/neon-evm.docs/wiki/Local-Solana-Cluster:-Installation,-Setup-and-Tests)
 
 [Running Uniswap V2 integration tests](https://github.com/neonlabsorg/neon-evm.docs/wiki/Running-Uniswap-V2-integration-tests)
 
