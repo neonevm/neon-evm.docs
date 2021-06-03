@@ -1,12 +1,11 @@
 
-<img width="128" src="./images/neon_logo_colors.png" />
+<img width="200" src="./images/neon_logo_colors.png" />
 
 *****  
 
 **Welcome to the Neon EVM source code repository!**  
 
 [![Build status](https://badge.buildkite.com/264f0e74ae8aabfcf3bf3b100d32caa05360f03b21542d2c09.svg?branch=develop)](https://buildkite.com/cyberway/evm-loader)
-
 [![GitHub](https://img.shields.io/github/license/neonlabsorg/neonlabsorg.svg)](https://github.com/neonlabsorg/solana/blob/master/LICENSE)
 
 ## Table of contents

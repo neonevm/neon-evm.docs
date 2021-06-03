@@ -1,4 +1,4 @@
-# Deploing Smart Contracts on Solana Testnet via Remix
+# Deploying Smart Contracts on Solana Testnet via Remix
 
 This tutorial will show you step by step how to use Remix and Metamask to create and deploy a simple smart contract on Solana's Testnet.
 

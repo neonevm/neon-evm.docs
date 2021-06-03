@@ -45,7 +45,7 @@ The window with settings menu for selecting a network should open.
   * Solana claster is accessed via the proxy hosted locally.
   * Solana Testnet is used and the proxy interacts with it through the EVM-loader.
 
-**Step 1.** Before you start, make sure that you have a daemon running. If you see something like this:  
+**Step 1.** Before you start, make sure that you have a daemon running. If you see something like this one:  
 ```sh
 $ docker info
 Cannot connect to the Docker daemon at <docker.sock>. Is the docker daemon running?
