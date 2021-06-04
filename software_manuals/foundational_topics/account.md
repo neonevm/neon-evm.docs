@@ -1,4 +1,4 @@
-# Accounts
+# An Ethereum account
 
 An Ethereum account is an entity with an ETH balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts.  
 

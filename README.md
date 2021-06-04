@@ -1,21 +1,20 @@
 
 <img width="200" src="./images/neon_logo_colors.png" />
 
+**Welcome to the Neon EVM source code repository!**  
 *****  
 
-**Welcome to the Neon EVM source code repository!**  
-
 [![Build status](https://badge.buildkite.com/264f0e74ae8aabfcf3bf3b100d32caa05360f03b21542d2c09.svg?branch=develop)](https://buildkite.com/cyberway/evm-loader)
-[![GitHub](https://img.shields.io/github/license/neonlabsorg/neonlabsorg.svg)](https://github.com/neonlabsorg/solana/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/github/license/cyberway/cyberway.svg)](https://github.com/neonlabsorg/solana/blob/master/LICENSE)
 
-## Table of contents
-**[🔘 Introduction](https://github.com/neonlabsorg/neon-evm.docs/wiki)**
+
+## Overview
 
 **[🔘 Installation & Setup](https://github.com/neonlabsorg/neon-evm.docs/wiki/Installation-&-Setup)**
 
 **[🔘 Running Uniswap V2 integration tests](https://github.com/neonlabsorg/neon-evm.docs/wiki/Running-Uniswap-V2-integration-tests)**
 
-**[🔘 SUMMARY](SUMMARY.md)**
+**[🔘 Controlling BPF Trace](https://github.com/neonlabsorg/neon-evm.docs/wiki/Controlling-BPF-Trace)**
 
 ## Community
 * [Fast and Secure Rollup Running on Solana](https://neonlabs.org/) - (Coming in Summer 2021)  

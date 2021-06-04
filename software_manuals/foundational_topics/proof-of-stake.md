@@ -5,7 +5,7 @@ Ethereum is moving to a consensus mechanism called **Proof-of-Stake (PoS)** from
 ## What is Proof-of-Stake?
 **PoS** is a method of cryptocurrency protection, in which the probability of forming the next block in the blockchain depends on the existing stake of the participant, and not on powerful equipment, as is the case with **PoW**.
 
-## How does PoS work (*in future*)?
+## How does PoS work?
 
 The network itself verifies transactions. It also maintains anonymity and security, since the cryptocurrency is already distributed among the users of the network.  
 
