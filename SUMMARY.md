@@ -1,0 +1,20 @@
+# SUMMARY
+
+* [INTRODUCTION](README.md)
+* [DEVPORTAL](/devportal/devportal.md)
+  * [Installing and Setting up MetaMask](/devportal/metamask_setup.md)
+  * [Connection to Solana Testnet via a Proxy Server](/devportal/testnet/connect_to_solana_via_proxy.md)
+  * [Deploying a Contract via Remix](/devportal/testnet/deploy_contract_via_remix.md)
+* [SOFTWARE MANUALS](/software_manuals/software_manuals.md)
+  * [Foundational Topics](/software_manuals/foundational_topics.md)
+    * [WEB3](/software_manuals/foundational_topics/web3.md)
+    * [Account](/software_manuals/foundational_topics/account.md)
+    * [Transaction](/software_manuals/foundational_topics/transaction.md)
+    * [Block](/software_manuals/foundational_topics/block.md)
+    * [Gas](/software_manuals/foundational_topics/gas.md)
+    * [Proof-of-Work](/software_manuals/foundational_topics/proof-of-work.md)
+    * [Proof-of-Stake](/software_manuals/foundational_topics/proof-of-stake.md)
+  * [How To Guides](/software_manuals/how_to_guides.md)
+    * [How To Deploy An Ethereum Contract](/software_manuals/how_to_guides/deploy_contract.md)
+* [GLOSSARY](glossary.md)
+

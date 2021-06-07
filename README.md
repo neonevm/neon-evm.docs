@@ -1,9 +1,23 @@
-# Neon Rollup
 
-[Introduction](https://github.com/neonlabsorg/neon-evm.docs/wiki)
+<img width="200" src="./images/neon_logo_colors.png" />
 
-[Local Solana Cluster: Installation, Setup and Tests](https://github.com/neonlabsorg/neon-evm.docs/wiki/Local-Solana-Cluster:-Installation,-Setup-and-Tests)
+**Welcome to the Neon EVM source code repository!**  
+*****  
 
-[Running Uniswap V2 integration tests](https://github.com/neonlabsorg/neon-evm.docs/wiki/Running-Uniswap-V2-integration-tests)
+[![Build status](https://badge.buildkite.com/264f0e74ae8aabfcf3bf3b100d32caa05360f03b21542d2c09.svg?branch=develop)](https://buildkite.com/cyberway/evm-loader)
+[![GitHub](https://img.shields.io/github/license/cyberway/cyberway.svg)](https://github.com/neonlabsorg/solana/blob/master/LICENSE)
 
-[Controlling BPF Trace](https://github.com/neonlabsorg/neon-evm.docs/wiki/Controlling-BPF-Trace)
+
+## Overview
+
+**[🔘 Installation & Setup](https://github.com/neonlabsorg/neon-evm.docs/wiki/Installation-&-Setup)**
+
+**[🔘 Running Uniswap V2 integration tests](https://github.com/neonlabsorg/neon-evm.docs/wiki/Running-Uniswap-V2-integration-tests)**
+
+**[🔘 Controlling BPF Trace](https://github.com/neonlabsorg/neon-evm.docs/wiki/Controlling-BPF-Trace)**
+
+## Community
+* [Fast and Secure Rollup Running on Solana](https://neonlabs.org/) - (Coming in Summer 2021)  
+* [Neon Labs](https://twitter.com/neonlabsorg) - Settings, personalization and some else (in Russian)
+
+> This is an open-source community effort, so feel free to suggest new topics, add new content, and provide examples wherever you think it might be helpful. All documentation is editable via GitHub.
