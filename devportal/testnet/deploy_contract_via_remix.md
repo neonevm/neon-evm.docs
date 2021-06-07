@@ -9,7 +9,7 @@ Before you start, make sure that the following requirements are met:
   * MetaMask wallet must be configured for both Proxy and EVM-loader (regardless of how Proxy and EVM-loader are started, MetaMask wallet must always be configured for them).
 
 **The network configuration:**
-  * Solana claster is accessed via a proxy.
+  * Solana cluster is accessed via a proxy.
   * Solana works in test mode and the proxy interacts with it through the EVM-loader.
 
 ## Steps to complete
@@ -25,19 +25,19 @@ At Environment field, choose `Injected Web3`to connect to localhost. (Fig. 1).
 
 ### Create a simple smart contract at Remix
 
-**Step 2.** Click on the icon `Create New File` and type the file name in the field that appears below it. Let it be the smart contract named HelloWorld.sol  
+**Step 2.** Click on the icon `Create New File` and type the file name in the field that appears below it. Let it be the smart contract named helloWorld.sol  
 For now, it is an empty file. To fill it with content, click on the created file name and type the text on the right side of the explorer (or copy your pre-prepared text there)(Fig. 2).  
 
 <p align="center"> <img width="700" src="./images/remix-2.png" /> </p>  
-<p align="center"> Fig. 2 - Loading the HelloWorld smart contract </p>  
+<p align="center"> Fig. 2 - Loading the helloWorld smart contract </p>  
 
 ### Compile a smart contract
 
 **Step 3.** In the left side menu select the `Solidity compiler`, it is the third button. The `SOLIDITY COMPILER` menu will be active.  
-Click on the `Compile helloWorld.sol` button to compile the loaded smart contract HelloWorld (Fig. 3).  
+Click on the `Compile helloWorld.sol` button to compile the loaded smart contract helloWorld (Fig. 3).  
 
 <p align="center"> <img width="700" src="./images/remix-3.png" /> </p>  
-<p align="center"> Fig. 3 - Compiling HelloWorld smart contract </p>  
+<p align="center"> Fig. 3 - Compiling helloWorld smart contract </p>  
 
 If the compilation is successful, a green icon will appear near the third button.  
 You can also get detailed information about the compilation process by clicking the `Compilation Details` button (Fig. 4).  
@@ -66,7 +66,7 @@ Click `Connect` button to connect to this account (Fig. 7).
 
 **Step 5.** In the left side menu select the `Deploy & run transactions`, it is the fourth button. The `DEPLOY & RUN TRANSACTIONS` menu will be active.  
 In our case there is only one smart contract to deploy. Therefore, it is automatically selected from dropdown and Remix will automatically generate a transaction.  
-The `Account` field will display an account address and required number of coins to deploy the smart contract. This data is taken from MetaMask.  
+The `Account` field will display the amount of the wallet account. This data is taken from MetaMask.  
 Click the `Deploy` button (Fig. 8).  
 
 <p align="center"> <img width="700" src="./images/remix-8.png" /> </p>  
@@ -79,7 +79,7 @@ Click the `Deploy` button (Fig. 8).
 
 **Step 7.** Once the transaction is confirmed, you can check it by the appeared messages at bottom right (Fig. 10).  
 
-<p align="center"> <img width="300" src="./images/remix-10.png" /> </p>  
+<p align="center"> <img width="600" src="./images/remix-10.png" /> </p>  
 <p align="center"> Fig. 10 </p>  
 
 After successfully deploying the smart contract, you will see a message containing the name and address of the smart contract where it was uploaded (Fig. 11).  
@@ -92,8 +92,12 @@ If all steps are completed successfully, a green icon will appear near the fourt
 <p align="center"> <img width="700" src="./images/remix-12.png" /> </p>  
 <p align="center"> Fig. 12 - The final view of the Remix panel </p>  
 
-Our congratulations! Now you can call methods of the HelloWorld smart contract deployed on the Solana Testnet (Fig. 13).  
+Our congratulations! Now you can call methods of the helloWorld smart contract deployed on the Solana Testnet (Fig. 13 shows the result of your smart contract - the text string "Hello World!").  
 
 <p align="center"> <img width="300" src="./images/remix-13.png" /> </p>  
 <p align="center"> Fig. 13 - Calling the smart contract methods </p>  
 
+----  
+
+> **Usefull liks**  
+> https://ethereum.org/en/developers/tutorials/deploying-your-first-smart-contract/

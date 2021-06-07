@@ -21,7 +21,7 @@ The MetaMask wallet must be installed on your device.
 ## Option 1: Interaction with Solana Testnet via a proxy hosted on a remote virtual server
 
 **The network configuration:**
-  * Solana claster is accessed via a proxy hosted on a remote virtual server.
+  * Solana cluster is accessed via a proxy hosted on a remote virtual server.
   * Solana works in test mode and the proxy interacts with it through the EVM-loader.
 
 **Step 1.** Open your MetaMask wallet and in the upper-right corner, click the red apple view element.  
@@ -42,7 +42,7 @@ The window with settings menu for selecting a network should open.
 ## Option 2: Running Solana Testnet via a proxy hosted locally
 
 **The network configuration:**
-  * Solana claster is accessed via the proxy hosted locally.
+  * Solana cluster is accessed via the proxy hosted locally.
   * Solana Testnet is used and the proxy interacts with it through the EVM-loader.
 
 **Step 1.** Before you start, make sure that you have a daemon running. If you see something like this one:  
@@ -72,7 +72,7 @@ As soon as this command is completed, the proxy will be available at `http://loc
 ## Option 3: Running Solana via a poxy when both are hosted locally
 
 **The network configuration:**
-  * Both Solana claster and the proxy hosted locally.
+  * Both Solana cluster and the proxy hosted locally.
   * The proxy interacts with Solana through the EVM-loader.
 
 ```sh
