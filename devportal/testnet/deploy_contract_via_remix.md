@@ -16,8 +16,8 @@ Before you start, make sure that the following requirements are met:
 
 ### Set the Remix environment
 
-**Step 1.** In order for Remix to be used to load a smart contract into the EVM-loader, Remix must be connected to your MetaMask wallet and run in `Injected Web3` environment.  
-Go to http://remix.ethereum.org/ and open the `Remix - Ethereum IDE` web application. In the left side menu select the `File explorers`, it is the second button. The `FILE EXPLOPERS` menu should be active.  
+**Step 1.** For Remix to be used to load a smart contract into the EVM-loader, Remix must be connected to your MetaMask wallet and run in `Injected Web3` environment.  
+Go to http://remix.ethereum.org/ and open the `Remix - Ethereum IDE` web application. In the left side menu select the `File explorers`, it is the second button. The `FILE EXPLOPERS` menu will be active.  
 At Environment field, choose `Injected Web3`to connect to localhost. (Fig. 1).  
 
 <p align="center"> <img width="700" src="./images/remix-1.png" /> </p>  
@@ -62,7 +62,7 @@ Click `Connect` button to connect to this account (Fig. 7).
 <p align="center"> <img width="300" src="./images/remix-7.png" /> </p>  
 <p align="center"> Fig. 7 </p>  
 
-### Deploy a smart contract at Solana Testnet
+### Deploy a smart contract in Solana Testnet
 
 **Step 5.** In the left side menu select the `Deploy & run transactions`, it is the fourth button. The `DEPLOY & RUN TRANSACTIONS` menu will be active.  
 In our case there is only one smart contract to deploy. Therefore, it is automatically selected from dropdown and Remix will automatically generate a transaction.  
@@ -72,12 +72,12 @@ Click the `Deploy` button (Fig. 8).
 <p align="center"> <img width="700" src="./images/remix-8.png" /> </p>  
 <p align="center"> Fig. 8 - Deploying the smart contract </p>  
 
-**Step 6.** MetaMask will send a notification in the form of a popup window to confirm the transaction. Click the `Confirm` button (Fig. 9).  
+**Step 6.** MetaMask will send a notification in the form of a pop-up window to confirm the transaction. Click the `Confirm` button (Fig. 9).  
 
 <p align="center"> <img width="300" src="./images/remix-9.png" /> </p>  
 <p align="center"> Fig. 9 - MetaMask notification </p>  
 
-**Step 7.** Once the transaction is confirmed, you can check it by the appeared messages at bottom right (Fig. 10).  
+**Step 7.** Once the transaction is confirmed, you can check it by the appeared messages at the bottom right (Fig. 10).  
 
 <p align="center"> <img width="600" src="./images/remix-10.png" /> </p>  
 <p align="center"> Fig. 10 </p>  
@@ -99,5 +99,5 @@ Our congratulations! Now you can call methods of the helloWorld smart contract d
 
 ----  
 
-> **Usefull liks**  
+> **Usefull links**  
 > https://ethereum.org/en/developers/tutorials/deploying-your-first-smart-contract/
