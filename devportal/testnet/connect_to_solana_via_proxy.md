@@ -1,18 +1,18 @@
-# Connection to Solana Testnet via a Proxy Server
+# Connecting to Solana Testnet via a Proxy Server
 
 ## Goal
 
-Connect to Solana evm-loader through a proxy server and run Solana Testnet.  
+To connect to Solana EVM-loader through a proxy server and run Solana Testnet.  
 
-Depending on the tasks to be solved, as well as on a location of the proxy and Solana, you can use one of 3 options for configuring the network:
+Depending on the tasks to be solved, as well as on the location of the proxy and Solana, you can use one of 3 options for configuring the network:
   * *Option 1:* The proxy is hosted on a remote virtual server; Solana Testnet is used.
   * *Option 2:* The proxy is hosted locally; Solana Testnet is used.
-  * *Option 3:* Both the proxy and Solana are hosted locally (debug mode, allows you to configure your own node locally).
+  * *Option 3:* Both the proxy and Solana are hosted locally (debug mode, which allows you to configure your node locally).
   
-Solana Testnet is an alternative cryptocurrency chain exclusively for developers. It allows developers to run their own node in a test blockchain and experiment without losing real currency.  
+Solana Testnet is an alternative cryptocurrency chain exclusively for developers. It allows developers to run their node in a test blockchain and experiment without losing real currency.  
 The mainnet and testnet coins are incompatible with each other. Testnet coins have no value and developers cannot treansfer mainnet coins to testnet. Likewise, they cannot transfer testnet coins to mainnet.
 
-## Requirements to your device
+## Requirements for your device
 
 The MetaMask wallet must be installed on your device.  
 
@@ -28,7 +28,7 @@ The MetaMask wallet must be installed on your device.
 Click `Create Account` in the dropdown menu and add one more account to interact with the network configured.  
 
 **Step 2.** Open your wallet under the new account and click `Settings` in the dropdown menu.  
-The window with settings menu for selecting a network should open.  
+The window with a settings menu for selecting a network should open.  
 
 **Step 3.** Add the Network choosed and click `Add Network` in the top-right corner.
  In the window opened fill in the fields (an example of filling them is below):  
@@ -65,20 +65,20 @@ $ sudo docker run --rm -d --network host --name proxy cybercoredev/proxy:latest
   * `--rm` - deleting a container when the command is completed.
   * `-d` - detach a terminal.
   * `--network host` - use host network.
-  * `--name proxy` - specifies the proxy name (`cybercoredev/proxy:latest` - this is the specific image name. The EVM-loader address is registered inside `cybercoredev/proxy:latest`, so the proxy knows which EVM-loader is running in Solana Testnet).
+  * `--name proxy` - this specifies the proxy name (`cybercoredev/proxy:latest` - this is the specific image name. The EVM-loader address is registered inside `cybercoredev/proxy:latest`, so the proxy knows which EVM-loader is running in Solana Testnet).
 
 As soon as this command is completed, the proxy will be available at `http://localhost:9090/solana`. This address is set by default. To set a different address, you need to specify the variable `-e SOLANA_URL='http://localhost:<proxy address>'` on the command line.
 
 ## Option 3: Running Solana via a poxy when both are hosted locally
 
 **The network configuration:**
-  * Both Solana cluster and the proxy hosted locally.
+  * Both the Solana cluster and the proxy are hosted locally.
   * The proxy interacts with Solana through the EVM-loader.
 
 ```sh
 $ sudo docker compose app <filename>
 ```
->  new command will be specified !!!!!!
+>  The new command will be specified !!!!!!
 
 As soon as this command is completed, the proxy will be available at `http://localhost:9090/solana`, Solana will be available at `http://localhost:8899`.
 

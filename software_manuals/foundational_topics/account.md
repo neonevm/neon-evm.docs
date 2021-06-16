@@ -30,7 +30,7 @@ Ethereum accounts have four fields:
 
 ## Externally-owned accounts
 
-An account is made up of a cryptographic pair of keys: public and private. They help prove that a transaction was actually signed by the sender and prevent forgeries. Your private key is what you use to sign transactions, so it grants you custody over the funds associated with your account. You never really hold cryptocurrency, you hold private keys – the funds are always on Ethereum's ledger.
+An account is made up of a cryptographic pair of keys: public and private. They help prove that a transaction was  signed by the sender and prevent forgeries. Your private key is what you use to sign transactions, so it grants you custody over the funds associated with your account. You never really hold cryptocurrency, you hold private keys – the funds are always on Ethereum's ledger.
 
 ## Account creation
 
@@ -40,7 +40,7 @@ A private key is made up of 64 hex characters and can be encrypted with a passwo
 Example:  
 `ffffffffffffffffffffffffffffffff48a03bbfd25e8cd036415febaaedce6a`  
 
-The public key is generated from the private key using the [Elliptic Curve Digital Signature Algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). To get a public address for your account, you need to add `0x ' before the last 20 bytes of the public key.
+The public key is generated from the private key using the [Elliptic Curve Digital Signature Algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). To get a public address for your account, you need to add `0x` before the last 20 bytes of the public key.
 
 ## Contract accounts
 

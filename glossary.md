@@ -85,6 +85,11 @@ A string of characters (bit string) used by the cryptographic algorithm for encr
 
 ---  
 
+### Merkle Mountain Range
+A type of merkle tree that can be visualized as many (perfect) merkle trees which are then combined into 1, by creating a single root from all of their peaks.  
+
+---  
+
 ### MetaMask
 MetaMask is a software cryptocurrency wallet used to interact with the Ethereum blockchain. It allows users to access their Ethereum wallet through a browser extension or mobile app, which can then be used to interact with decentralized applications.
 

@@ -3,7 +3,7 @@
 * [INTRODUCTION](README.md)
 * [DEVPORTAL](/devportal/devportal.md)
   * [Installing and Setting up MetaMask](/devportal/metamask_setup.md)
-  * [Connection to Solana Testnet via a Proxy Server](/devportal/testnet/connect_to_solana_via_proxy.md)
+  * [Connecting to Solana Testnet via a Proxy Server](/devportal/testnet/connect_to_solana_via_proxy.md)
   * [Deploying a Contract via Remix](/devportal/testnet/deploy_contract_via_remix.md)
 * [SOFTWARE MANUALS](/software_manuals/software_manuals.md)
   * [Foundational Topics](/software_manuals/foundational_topics.md)

@@ -18,3 +18,9 @@ Install the MetaMask wallet on your device.
 
 * Configuring !!!!!!   - ДОПОЛНИТЬ
 Open the Nemworks menu. Click `Add Network` in the top-right corner to manually add the Binance Smart Chain one
+
+
+----  
+
+> **Usefull liks**  
+>  
