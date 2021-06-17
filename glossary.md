@@ -6,12 +6,12 @@ The Application Binary Interface (ABI) is a JSON-based description on how to con
 ---  
 
 ### Account
-An account is a unique identifier and a requirement to interact with Solana. Unlike most other cryptocurrencies, transfers are sent to a human readable account name instead of a public key, while keys attributed to the account are used to sign transactions.  
+An account is a unique identifier and a requirement to interact with Solana. Unlike most other cryptocurrencies, transfers are sent to a human-readable account name instead of a public key, while keys attributed to the account are used to sign transactions.  
 
 ---  
 
 ### Block
-A special structure for recording a group of transactions in the Bitcoin system and similar ones. A block consists of a header and a list of transactions. The block header includes its own hash, the hash of the previous block, transaction hashes, and additional overhead information.  
+A special structure for recording a group of transactions in the Bitcoin system and similar ones. A block consists of a header and a list of transactions. The block header includes its hash, the hash of the previous block, transaction hashes, and additional overhead information.  
 
 ---  
 
@@ -21,12 +21,7 @@ A strictly structured database with certain rules for building chains of transac
 ---  
 
 ### Block Log
-The block log is an append only log of blocks written to disk and contains all the irreversible blocks.  
-
----  
-
-### Community
-A group of persons formed around some point of interest. Community can be created by any user or group of users. Each community has its own point and parameters.  
+The block log is an append-only log of blocks written to disk and contains all the irreversible blocks.  
 
 ---  
 
@@ -36,7 +31,7 @@ An object created using a Docker image and containing all the necessary componen
 ---  
 
 ### Cryptographic Hash
-A cryptographic hash function is a hash function which takes an input (or `message`) and returns a fixed-size alphanumeric string. The alphanumeric string is called the `hash value`, `message digest`, `digital fingerprint`, `digest` or `checksum`.  
+A cryptographic hash function is a hash function that takes an input (or `message`) and returns a fixed-size alphanumeric string. The alphanumeric string is called the `hash value`, `message digest`, `digital fingerprint`, `digest` or `checksum`.  
 
 ---  
 
@@ -81,7 +76,7 @@ The head block is the last block written to the blockchain, stored in reversible
 ---  
 
 ### Key
-A string of characters (bit string) used by the cryptographic algorithm for encrypting and decrypting messages, setting and verifying a digital signature, as well as identification. Keys are symmetric (the same key is used for encryption and decryption) and asymmetric (public and private).  
+A string of characters (bit string) is used by the cryptographic algorithm for encrypting and decrypting messages, setting and verifying a digital signature, as well as identification. Keys are symmetric (the same key is used for encryption and decryption) and asymmetric (public and private).  
 
 ---  
 

@@ -1,7 +1,7 @@
 # How To Deploy An Ethereum Contract
 
 ## Goal
-Deploy a smart contract in order for it to be available to users of an Ethereum network.  
+To deploy a smart contract for it to be available to users of an Ethereum network.  
 To deploy a smart contract, you have to:
 * compile your smart contract;
 * create and send an Ethereum transaction containing the code of the compiled smart contract without specifying any recipients.
@@ -33,8 +33,8 @@ contract helloWorld {
 [Compile]((https://ethereum.org/en/developers/docs/smart-contracts/compiling/)) your smart contract to get the contract's bytecode.
 
 
-**Step 2.** Set your gas limit (in ETH) like other transactions.
-Be aware that contract deployment needs a lot more gas than a simple ETH transfer.
+**Step 2.** Set your gas limit (in coins) like other transactions.
+Be aware that contract deployment needs a lot more gas than a simple coin transfer.
 
 **Step 3.** Deploy script or plugin.
 
@@ -47,9 +47,9 @@ Once deployed, your contract will have an Ethereum address like other [accounts]
 ## Example: Deploying a smart contract in test mode using Remix
 
 ### Goal
-Deploy your smart contract on an Ethereum test network.  
+To deploy your smart contract on an Ethereum test network.  
 
-> Deploying a smart contract on the blockchain is actually just sending a transaction containing the code of the compiled smart contract without specifying any recipients.
+> Deploying a smart contract on the blockchain is just sending a transaction containing the code of the compiled smart contract without specifying any recipients.
 
 ### Steps
 **Step 1.** Visit [Remix](https://remix.ethereum.org/) and create a new file.  
@@ -60,7 +60,7 @@ Deploy your smart contract on an Ethereum test network.
 
 <p align="center"> <img width="500" src="./images/depl-contr-2.png" /> </p>  
 
-**Step 3.** Navigate to the compile icon on the left hand side and click on the `Compile` button.  
+**Step 3.** Navigate to the compile icon on the left-hand side and click on the `Compile` button.  
 
 <p align="center"> <img width="500" src="./images/depl-contr-3.png" /> </p>  
 
@@ -71,10 +71,10 @@ You can chose to select the "Auto compile" option so the contract will always be
 
 <p align="center"> <img width="500" src="./images/depl-contr-4.png" /> </p>  
 
-Once you are on the `deploy and run transactions` screen, check that your contract name appears and click on `Deploy`. 
+Once you are on the `deploy and run transactions` screen, check that your contract name appears and click on `Deploy`.  
 The `Javascript VM` of the current environment will appear at the top of the page. It means that you will deploy and interact with the smart contract on a local test blockchain to be able to test without any fees.  
 
-**Step 5.** Click the `Deploy` button. Your contract will appear on the bottom.  
+**Step 5.** Click the `Deploy` button. Your contract will appear at the bottom.  
 Click the arrow on the left to expand it so you can see the content of your contract.  
 
 <p align="center"> <img width="500" src="./images/depl-contr-5.png" /> </p>  
