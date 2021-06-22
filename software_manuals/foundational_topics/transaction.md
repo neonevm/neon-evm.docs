@@ -9,7 +9,7 @@ A transaction, which changes the state of the EVM, needs to be broadcast to the 
 A submitted transaction includes the following information:
 * **recipient** – the receiving address.
 * **signature** – the identifier of the sender (sender's signature with a private key).
-* **value** – amount of ETH to transfer from sender to recipient.
+* **value** – amount of coind to transfer from sender to recipient.
 * **data** – (optional field) arbitrary data.
 * **gasLimit** – the maximum amount of gas units that can be consumed by the transaction.
 * **gasPrice** – the fee the sender pays per unit of gas.
