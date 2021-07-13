@@ -131,6 +131,11 @@ A smart contract is a computer protocol intended to facilitate, verify, or enfor
 
 ---  
 
+### Sollet
+Sollet - Solana SPL token wallet. Siller.io is a non-custodial browser-based web wallet created by the Project Serum (DEX) team.  
+
+---  
+
 ### Staked tokens
 Tokens allocated for a stake acquisition that can’t be used for anything else in this state. The user can stake active tokens listed on his/her balance or deposit them. Also, the user can perform the reverse operation — withdraw tokens from the staked state to active.  
 
@@ -145,3 +150,6 @@ A complete all-or-nothing change to the Blockchain. A combination of one or more
 Wallets are clients that store keys that may or may not be associated with the permissions of one or more accounts. Ideally a wallet has a locked (encrypted) and unlocked (decrypted) state that is protected by a high entropy password.  
 
 ---  
+
+### USDT token
+USDT (United States Department of the Treasury) is the ticker symbol for the Tether stablecoin cryptocurrency.  

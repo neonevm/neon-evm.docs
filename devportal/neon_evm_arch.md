@@ -29,10 +29,10 @@ This is a transaction formed according to Ethereum rules with a signature produc
 This is an application that has an EVM (Solidity/Vyper/etc.) bytecode contract loaded into Neon EVM. The application generates a transaction *N-trx* according to Ethereum rules and sends it to a Proxy. Before sending *N-trx*, the client transfers funds to the Solana deposit required to cover the costs of an operator.  
 
 **Neon EVM Operator (or Operator)**  
-This is a role performed by a Solana account using a software tool. Within the framework of Neon EVM, an operator is provided with software in the form of a Proxy to fulfill certain functions. The operator can use either one Proxy or several. He can also configure one Proxy for multiple operators, as well as run several Proxy with different settings.  
+This is a role performed by a Solana account using a software tool. Within Neon EVM, an operator is provided with software in the form of a Proxy to fulfill certain functions. The operator can deploy either one Proxy or several. He can also configure one Proxy for multiple operators, as well as run several Proxy with different settings.  
 
 **Neon Web3 Proxy (or Proxy)**  
-This is software using which an operator does his job. Although Proxy is not a mandatory component in the Neon EVM architecture (for example, the Proxy logic can be implemented inside a client's browser), implementing it as a separate component can speed up transaction processing. In the Neon EVM Mainnet, Proxy must provide multithreading to work *n* parallel mode.  
+This is software using which an operator does his job. Although Proxy is not a mandatory component in the Neon EVM architecture (for example, the Proxy logic can be implemented inside a client's browser), implementing it as a separate component can speed up transaction processing. In the Neon EVM Mainnet, Proxy must provide multithreading to work in parallel.  
 
 The Proxy contains an EVM emulator that pre-tests the execution of the transaction. This testing determines the number of coins required on the operator's balance, as well as the current rate of SOL and ETH. This is so that there is economic motivation. Taking this into account that each operator configures a Proxy assigned to it at his discretion.  
 
@@ -54,6 +54,14 @@ Below is a list of the main Neon Web3 Proxy features that are implemented in the
 
 **Neon EVM**  
 This is an Ethereum Virtual Machine compiled into Berkeley Packet Filter bytecode of a virtual machine running on Solana. Neon EVM is configured using a multisig EVM account that looks like a decentralized Neon EVM governance. Participants of the multisig EVM account (actors) can change the Neon EVM code and set up Neon EVM parameters.  
+
+**Neon EVM Governance Participant**  
+The fuctions performed by the Governance participants:
+  * updating contracts;
+  * adding functionality;
+  * elimination of shortcomings of the program code;
+  * changing parameters in the settings (the fee value, opening new balance, the Mn value, the max number of iterations, etc.).  
+
 
 **ERC20 TKN**  
 This is a contract based on the ERC20 standard token. ERC20 Token shows user balances for a certain ticker. After an account (user-acc) selects a type of token, this contract becomes blocked.  
@@ -78,7 +86,7 @@ The processing of a transaction is conventionally divided into several steps (it
 
 A transaction will be considered successfully completed if the Final step finishes. The execution of the transaction should not go beyond the allotted number of Mn blocks. This means that the operations performed at all steps must be completed within the Mn period, otherwise the transaction is considered uncompleted.  
 
-A user who forms a transaction indicates in it an operator (Proxy) that will be responsible for its execution. Each operator has a deposit account in Neon EVM. These accounts are owned by Neon EVM, so no one can withdraw funds from the deposit until the finalization step is completed. Before processing a transaction, Neon EVM debits the amount of funds from the operator account (op-acc) and transfers them to the operator's deposit (dep-acc).  
+A user who forms a transaction indicates in it an operator (Proxy) that will be responsible for its execution. Each operator has a deposit account in Neon EVM. These accounts belong to Neon EVM, so no one can withdraw funds from the deposit until the finalization step is completed. Before processing a transaction, Neon EVM debits the amount of funds from the operator account (op-acc) and transfers them to the operator's deposit (dep-acc).  
 
 If for any reason (for example, due to a lack of funds on a deposit), an operation is not performed at a step, the next operator starts processing this transaction from the current step. This operator does not deposit any funds for the remaining steps. If he also does not complete all of the remaining steps, this process is passed to the next operator. At the Final step, a transaction is created to withdraw funds from the deposit in full, including a remainder, and credit them to the operator who completed this step. This implementation obliges not only the client, but also any operator involved in processing the transaction, to be interested in its successful completion.  
 
@@ -93,9 +101,12 @@ The values Mn and number of iterations are set by a Multisig account. The number
 
 At every step, the Continue operation checks if this is the last step in the transaction execution or not.
 
+### How does an operator know about the appearance of a transaction that can be continued?
+Solana's entire history is stored in Solana State. Using this history, the operator can obtain the necessary information about all transactions related to Neon EVM. Proxy can track incomplete transactions in this history, that can be continued by another operator. The operator who can continue to execute the unfinished transaction must first re-sign it with his key. If the number of blocks does not exceed *Mn* since the start of transaction processing by the previous operator, the signature of that operator is kept. If the number of blocks exceeds *Mn*, the transaction can be re-signed by any operator.
+
 ### Special cases
 *Case 1*. One of the initial and mandatory operations is blocking an account, that is, the execution of other transactions is blocked for this time.  
-For example, to go from step *1* to step *2* (see Fig.3), operator *1* must process Mn blocks. During this time, the Continue operation will not be available to other operators. If operator *1* is unable to complete a transaction during the processing of Mn blocks, this transaction remains incomplete. The funds on the balance are burned out.  
+For example, to go from step *1* to step *2* (see Fig.2), operator *1* must process Mn blocks. During this time, the Continue operation will not be available to other operators. If operator *1* is unable to complete a transaction during the processing of Mn blocks, this transaction remains incomplete. The funds on the balance are burned out.  
 Therefore, every operator is interested in using high-speed resources.  
 
 *Case 2*. A transaction cannot be completed if an error occurs.  
