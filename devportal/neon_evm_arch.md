@@ -84,7 +84,7 @@ The processing of a transaction is conventionally divided into several steps (it
 <p align="center"> <img width="550" src="./testnet/images/arch-neon-2.png" /> </p>  
 <p align="center"> Fig. 2 </p>  
 
-A transaction will be considered successfully completed if the Final step finishes. The execution of the transaction should not go beyond the allotted number of Mn blocks. This means that the operations performed at all steps must be completed within the Mn period, otherwise the transaction is considered uncompleted.  
+A transaction will be considered successfully completed if the Final step finishes. The execution of the transaction should not go beyond the allotted number of Mn blocks. This means that the operations performed at all steps must be completed within the Mn period, otherwise, the transaction is considered uncompleted.  
 
 A user who forms a transaction indicates in it an operator (Proxy) that will be responsible for its execution. Each operator has a deposit account in Neon EVM. These accounts belong to Neon EVM, so no one can withdraw funds from the deposit until the finalization step is completed. Before processing a transaction, Neon EVM debits the amount of funds from the operator account (op-acc) and transfers them to the operator's deposit (dep-acc).  
 
@@ -102,7 +102,7 @@ The values Mn and number of iterations are set by a Multisig account. The number
 At every step, the Continue operation checks if this is the last step in the transaction execution or not.
 
 ### How does an operator know about the appearance of a transaction that can be continued?
-Solana's entire history is stored in Solana State. Using this history, the operator can obtain the necessary information about all transactions related to Neon EVM. Proxy can track incomplete transactions in this history, that can be continued by another operator. The operator who can continue to execute the unfinished transaction must first re-sign it with his key. If the number of blocks does not exceed *Mn* since the start of transaction processing by the previous operator, the signature of that operator is kept. If the number of blocks exceeds *Mn*, the transaction can be re-signed by any operator.
+Solana's entire history is stored in Solana State. Using this history, the operator can obtain the necessary information about all transactions related to Neon EVM. The Proxy can track incomplete transactions in this history, that can be continued by another operator. The operator who can continue to execute the unfinished transaction must first re-sign it with his key. If the number of blocks does not exceed *Mn* since the start of transaction processing by the previous operator, the signature of that operator is kept. If the number of blocks exceeds *Mn*, the transaction can be re-signed by any operator.
 
 ### Special cases
 *Case 1*. One of the initial and mandatory operations is blocking an account, that is, the execution of other transactions is blocked for this time.  
@@ -134,7 +134,7 @@ The reason would be that: at the final step, funds would be transferred from the
 **The solution**  
 The default token type field along with the balance is added to the Neon account. This field will allow a user to select a type of token for payment using the special option. To transfer SPL tokens from outside to an operator's account, the ERC20 wrapper is used.  
 
-The Neon client does not have an option to select a type of token for payment and can only operate with ETH. Therefore, the storage of funds is implemented in the user's Solana State. The Neon account (user-acc) has a separate field that specifies the type of token.After a user specifies a type of token, this type will be indicated in the account field of this user. Having this information, Solana can turn to ERC20 wrapper to convert tokens.  
+The Neon client does not have an option to select a type of token for payment and can only operate with ETH. Therefore, the storage of funds is implemented in the user's Solana State. The Neon account (user-acc) has a separate field that specifies the type of token. After a user specifies a type of token, this type will be indicated in the account field of this user. Having this information, Solana can turn to ERC20 wrapper to convert tokens.  
 
 An operator will create a deposit account for the transaction. It is possible to create a pool of such deposit accounts, so that the ERC20 Wrapper logic will select the desired transaction from this pool, and thereby not create a queue for the payment of funds to the operator.  
 
@@ -151,7 +151,7 @@ Fig. 4 shows the scheme for transferring tokens between Solana and Ethereum.
 
 Ethereum tokens are generated in accordance with the ERC20 standard. Therefore, to transfer tokens between the Solana and Ethereum blockchains, a separate ERC20 Wrapper must be deployed for each Solana token. The task of the ERC20 Wrapper is to ensure the interaction of the Solana applications with EVM (Solidity/Vyper/etc.) bytecode contracts, as well as to transfer funds in Solana tokens using Ethereum wallets such as Metamask.  
 
-The main interacting component in toking transfer is the ERC20 Bridge, which is a separate contract. When it’s called, it generates a Solana token which represents the corresponding ERC20 token in the SPL Token contract. The Solana tokens registered in the SPL Token contract can be transferred to Solana contracts.  
+The main interacting component in the toking transfer is the ERC20 Bridge, which is a separate contract. When it’s called, it generates a Solana token which represents the corresponding ERC20 token in the SPL Token contract. The Solana tokens registered in the SPL Token contract can be transferred to Solana contracts.  
 
 Bridge operators are responsible for the ERC20 Bridge operation. They get fees from the conversion of tokens.
 
