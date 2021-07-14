@@ -3,15 +3,14 @@
 > *This section describes a unique solution that allows Ethereum users to use the key features of Solana and vice versa - Solana users to use the key features of Ethereum.*
 
 ### Terminology used
-Term | Meaning  
-:----- |:-----  
-*BPF* | the Berkley Packed Filter virtual machine  
-*Contract* | a smart contract  
-*dApp(s)* | decentralized application(s)  
-*N-trx* | a Neon transaction formed according to the Ethereum network rules. It is executed inside Neon EVM  
-*EVM* | the Ethereum Virtual Machine  
-*Proxy* | the Neon Web3 Proxy  
-*S-trx* | a transaction formed according to the Solana network rules  
+
+  * *BPF* - the Berkley Packed Filter virtual machine
+  * *Contract* - a smart contract
+  * *dApp(s)* - decentralized application(s)
+  * *N-trx* - a Neon transaction formed according to the Ethereum network rules. It is executed inside Neon EVM
+  * *EVM* - the Ethereum Virtual Machine
+  * *Proxy* - the Neon Web3 Proxy
+  * *S-trx* - a transaction formed according to the Solana network rules
 
 ## The key Ethereum capabilities
 
