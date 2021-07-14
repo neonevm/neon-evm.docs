@@ -60,7 +60,7 @@ The fuctions performed by the Governance participants:
   * updating contracts;
   * adding functionality;
   * elimination of shortcomings of the program code;
-  * changing parameters in the settings (the fee value, opening new balance, the Mn value, the max number of iterations, etc.).  
+  * changing parameters in the settings (the fee value, opening new balance, the *Mn* value, the max number of iterations, etc.).  
 
 
 **ERC20 TKN**  
@@ -84,7 +84,7 @@ The processing of a transaction is conventionally divided into several steps (it
 <p align="center"> <img width="550" src="./testnet/images/arch-neon-2.png" /> </p>  
 <p align="center"> Fig. 2 </p>  
 
-A transaction will be considered successfully completed if the Final step finishes. The execution of the transaction should not go beyond the allotted number of Mn blocks. This means that the operations performed at all steps must be completed within the Mn period, otherwise, the transaction is considered uncompleted.  
+A transaction will be considered successfully completed if the Final step finishes. The execution of the transaction should not go beyond the allotted number of *Mn* blocks. This means that the operations performed at all steps must be completed within the *Mn* period, otherwise, the transaction is considered uncompleted.  
 
 A user who forms a transaction indicates in it an operator (Proxy) that will be responsible for its execution. Each operator has a deposit account in Neon EVM. These accounts belong to Neon EVM, so no one can withdraw funds from the deposit until the finalization step is completed. Before processing a transaction, Neon EVM debits the amount of funds from the operator account (op-acc) and transfers them to the operator's deposit (dep-acc).  
 
@@ -92,12 +92,12 @@ If for any reason (for example, due to a lack of funds on a deposit), an operati
 
 **Example**  
 *Step 1* - transferring funds to a deposit.  
-*Step 2* - blocking an account.
-*Steps* - other actions.
+*Step 2* - blocking an account.  
+*Steps* - other actions.  
 *Final* - the deposit is returned to the operator's account (op acc). Results of the transaction have already been reflected in Solana State.  
 
-In the Neon EVM settings, there is a limit on the number of blocks (Mn) during which a transaction must be completed. By default, the Mn value is 1 (that is, a transaction must be completed during the processing of one block). There is also a limit on the number of steps (the maximum number of iterations) to complete a transaction.
-The values Mn and number of iterations are set by a Multisig account. The number of steps is also limited by funds on a user's balance.  
+In the Neon EVM settings, there is a limit on the number of blocks (*Mn*) during which a transaction must be completed. By default, the *Mn* value is 1 (that is, a transaction must be completed during the processing of one block). There is also a limit on the number of steps (the maximum number of iterations) to complete a transaction.
+The values *Mn* and number of iterations are set by a Multisig account. The number of steps is also limited by funds on a user's balance.  
 
 At every step, the Continue operation checks if this is the last step in the transaction execution or not.
 
@@ -106,11 +106,11 @@ Solana's entire history is stored in Solana State. Using this history, the opera
 
 ### Special cases
 *Case 1*. One of the initial and mandatory operations is blocking an account, that is, the execution of other transactions is blocked for this time.  
-For example, to go from step *1* to step *2* (see Fig.2), operator *1* must process Mn blocks. During this time, the Continue operation will not be available to other operators. If operator *1* is unable to complete a transaction during the processing of Mn blocks, this transaction remains incomplete. The funds on the balance are burned out.  
+For example, to go from step *1* to step *2* (see Fig.2), operator *1* must process *Mn* blocks. During this time, the Continue operation will not be available to other operators. If operator *1* is unable to complete a transaction during the processing of *Mn* blocks, this transaction remains incomplete. The funds on the balance are burned out.  
 Therefore, every operator is interested in using high-speed resources.  
 
 *Case 2*. A transaction cannot be completed if an error occurs.  
-If step 1 is completed, and Cancel occurred in step *2*, the funds are not returned to an operator. He cannot withdraw funds from a client for partial execution of a transaction. The funds are also not returned to the client. In this case, the funds on the deposit will be burned. To don't lose funds, the operator is interested in completing the transaction in full, and not in part.  
+If step *1* is completed, and Cancel occurred in step *2*, the funds are not returned to an operator. He cannot withdraw funds from a client for partial execution of a transaction. The funds are also not returned to the client. In this case, the funds on the deposit will be burned. To don't lose funds, the operator is interested in completing the transaction in full, and not in part.  
 
 *Case 3*. Before executing a transaction, funds are checked on the user's balance, including the exceeding Gas Limit. If a shortage of funds happens on some step, the transaction is fixed as a Fail. Funds are debited from the user's account and transferred to the operator's account.  
 
