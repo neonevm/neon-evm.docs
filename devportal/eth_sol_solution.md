@@ -3,15 +3,14 @@
 > *This section describes a unique solution that allows Ethereum users to use the key features of Solana and vice versa - Solana users to use the key features of Ethereum.*
 
 ### Terminology used
-Term | Meaning  
-:----- |:-----  
-*BPF* | the Berkley Packed Filter virtual machine  
-*Contract* | a smart contract  
-*dApp(s)* | decentralized application(s)  
-*E-trx* | a transaction formed according to the Ethereum network rules  
-*EVM* | the Ethereum Virtual Machine  
-*Proxy* | the Neon Web3 Proxy  
-*S-trx* | a transaction formed according to the Solana network rules  
+
+  * *BPF* - the Berkley Packed Filter virtual machine
+  * *Contract* - a smart contract
+  * *dApp(s)* - decentralized application(s)
+  * *N-trx* - a Neon transaction formed according to the Ethereum network rules. It is executed inside Neon EVM
+  * *EVM* - the Ethereum Virtual Machine
+  * *Proxy* - the Neon Web3 Proxy
+  * *S-trx* - a transaction formed according to the Solana network rules
 
 ## The key Ethereum capabilities
 
@@ -60,9 +59,9 @@ Using BPF capabilities, the EVM virtual machine was loaded inside Solana. That i
 Because Solana has a contract update mechanism, the Neon EVM contract can also be updated independently of the update of the Solana node itself. This allows developers to update EVM versions for their various needs without updating all the blockchain nodes.  
 
 **Neon Web3 Proxy**  
-A user is allowed to form transactions under an Ethereum account and sign them with a public key generated in Ethereum. Formed transactions according to Ethereum rules are sent to the input of the Proxy component. This component converts *E-trxs* into transactions under the Solana rules.  
+A user is allowed to form transactions under an Ethereum account and sign them with a public key generated in Ethereum. Formed transactions according to Ethereum rules are sent to the input of the Proxy component. This component converts *N-trxs* into transactions under the Solana rules.  
 
-An *E-trx* size can exceed the maximum *S-trx* size. Also, the amount of resources that a *S-trx* can spend is limited. Converting a transaction in a one-to-one format is difficult due to the possible lack of resources. Therefore, it was decided to generate multiple *S-trxs* for one *E-trx*.
+An *N-trx* size can exceed the maximum *S-trx* size. Also, the amount of resources that a *S-trx* can spend is limited. Converting a transaction in a one-to-one format is difficult due to the possible lack of resources. Therefore, it was decided to generate multiple *S-trxs* for one *N-trx*.
 Each generated transaction is signed with a Proxy key. Proxy sends the generated batch of transactions to Solana.  
 
 **Web3 API**  
@@ -95,13 +94,13 @@ A user calls a client that generates a transaction and sends it to the Proxy, in
 <p align="center"> Fig. 2 </p>  
 
 To perform this transaction, the Neon EVM emulator makes a request to Solana to get state data.
-Proxy requests a blockchain state from Solana and makes a test launch of *E-trx* using the Solana state. On the basis of the data received, Proxy forms the new transaction according to Solana's rules. The transaction generated for Solana will contain the packaged *E-trx*, as well as the account data required to complete the transaction, including: 
+Proxy requests a blockchain state from Solana and makes a test launch of *N-trx* using the Solana state. On the basis of the data received, Proxy forms the new transaction according to Solana's rules. The transaction generated for Solana will contain the packaged *N-trx*, as well as the account data required to complete the transaction, including: 
   * payer - the account that pays for the transaction;
   * other accounts involved in the execution of this transaction.  
 
 Next, the transaction is forwarded inside Solana, where participants of the transaction are determined according to the account data. The data added includes details about persons who initiate and take part in processing the transaction. The operator of Proxy is specified as a *payer*. The *payer* will be rewarded for completing the transaction.  
 
-Next, the transaction is transferred to Neon EVM, where its signature is checked according to Ethereum rules. If the signature is valid, the transaction will be transferred to the Solana blockchain for execution. Since testing of *E-trx* is made, it is possible to provide Solana with all the necessary information to parallelize the execution of the *E-trx*.
+Next, the transaction is transferred to Neon EVM, where its signature is checked according to Ethereum rules. If the signature is valid, the transaction will be transferred to the Solana blockchain for execution. Since testing of *N-trx* is made, it is possible to provide Solana with all the necessary information to parallelize the execution of the *N-trx*.
 
 ## Conclusion
 
@@ -112,3 +111,4 @@ The developed solution gives users the following features:
   * Solana developers are given the opportunity to:
      * use a unique toolkit created for Ethereum;
      * create and deploy their contracts on the Solana network.
+  * Unlike Ethereum, the Neon EVM can be updated at any time. This means that new functionality can be added at any time and code updates can take place simply by uploading them as a new smart contract.
