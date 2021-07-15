@@ -30,7 +30,7 @@ contract helloWorld {
     }
 }
 ```  
-[Compile]((https://ethereum.org/en/developers/docs/smart-contracts/compiling/)) your smart contract to get the contract's bytecode.
+[Compile](https://ethereum.org/en/developers/docs/smart-contracts/compiling/) your smart contract to get the contract's bytecode.
 
 
 **Step 2.** Set your gas limit (in coins) like other transactions.

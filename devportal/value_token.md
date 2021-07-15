@@ -33,6 +33,7 @@ After the Ethereum account is created, it becomes possible to send a *Value toke
 A user has the ability to choose a token to pay to an operator for completing a transaction.
 To do this, the user creates an account in Neon EVM, where he can transfer `ETH` tokens through a bridge to pay for transactions. Automatically, he gets a balance in the SPL token.  
 > *Transferring `ETH` (or `USDT`) tokens through one bridge (for example, through [WormHole](https://solana.com/wormhole)) will not be equivalent to transferring the same tokens through another bridge (for example, through [Sollet](https://solana.com/ecosystem/sollet)). This means that the user cannot withdraw `ETH` tokens from his balance through one bridge ([WormHole](https://solana.com/wormhole)), if these tokens were transferred to this balance through another bridge ([Sollet](https://solana.com/ecosystem/sollet))*.  
+
 Then the user can make transactions inside Neon EVM. Since a coroutine address is linked to the user's balance, no one except this coroutine address can use this token.
 
 ### Token circulation

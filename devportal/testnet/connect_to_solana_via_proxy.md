@@ -67,7 +67,14 @@ $ sudo docker run --rm -d --network host --name proxy cybercoredev/proxy:latest
   * `--network host` - use host network.
   * `--name proxy` - this specifies the proxy name (`cybercoredev/proxy:latest` - this is the specific image name. The EVM-loader address is registered inside `cybercoredev/proxy:latest`, so the proxy knows which EVM-loader is running in Solana Testnet).
 
-As soon as this command is completed, the proxy will be available at `http://localhost:9090/solana`. This address is set by default. To set a different address, you need to specify the variable `-e SOLANA_URL='http://localhost:<proxy address>'` on the command line.
+As soon as this command is completed, the proxy will be available at `http://localhost:9090/solana`. This address is set by default. To set a different address, you need to specify the variable `-e SOLANA_URL='http://localhost:<proxy address>'` on the command line.  
+
+When a proxy is deployed, it generates a wallet containing a key pair. If you do not need the new wallet and want to use the keys you already have, then you need to specify the path to your wallet on the command line. In this case, the poxy will not create a new key pair. The command line will look like this one:  
+
+```sh
+$ sudo docker run --rm -d --network host -v ~/.config/solana/id.json:/root/.config/solana/id.json --name proxy cybercoredev/proxy:latest
+```
+The parameter `~/.config/solana/id.json` - specifies the path to your key pair.
 
 ## Option 3: Running Solana via a poxy when both are hosted locally
 
@@ -81,6 +88,3 @@ $ sudo docker compose app <filename>
 >  The new command will be specified !!!!!!
 
 As soon as this command is completed, the proxy will be available at `http://localhost:9090/solana`, Solana will be available at `http://localhost:8899`.
-
-
-
