@@ -15,9 +15,3 @@
 **[🔘 Running Uniswap V2 integration tests](https://github.com/neonlabsorg/neon-evm.docs/wiki/Running-Uniswap-V2-integration-tests)**
 
 **[🔘 Controlling BPF Trace](https://github.com/neonlabsorg/neon-evm.docs/wiki/Controlling-BPF-Trace)**
-
-## Community
-* [Fast and Secure Rollup Running on Solana](https://neonlabs.org/) - (Coming in Summer 2021)  
-* [Neon Labs](https://twitter.com/neonlabsorg) - Settings, personalization and some else (in Russian)
-
-> This is an open-source community effort, so feel free to suggest new topics, add new content, and provide examples wherever you think it might be helpful. All documentation is editable via GitHub.
