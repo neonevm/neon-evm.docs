@@ -124,7 +124,7 @@ The interaction between SPL Token and ERC20 TKN is shown in Fig.3.
 
 There are 2 user balances: User SPL Balance, whose tokens are traded within Solana, and User ERC20 Balance, whose tokens are traded within the Neon EVM. The ERC20 Wrapper allows a user to transfer his SPL tokens on the ERC20 Balance, exchange them for tokens he needs and withdraw them back. Thus, a user can create a token inside Neon EVM and transfer any number of coins from User SPL Balance to User ERC20 Balance. Then, using EVM contracts, he can handle these coins.
 
-### Possible formation of a queue of payments and solution to this issue
+### Payment queues
 
 **Issue description**  
 Let the ERC20 TKN contract contain only one map for all users with their balances. Then the following conflict situation is possible: if the majority of users pay with ETH tokens, then the same contract will appear inside each *N-trx*, within which the value will need to be changed. This will cause all *N-trxs* to line up in one queue and they cannot be executed in parallel.  
