@@ -1,4 +1,4 @@
-# Terminology Used
+# Terminology
 
 ### ABI
 The Application Binary Interface (ABI) is a JSON-based description on how to convert user actions between their JSON and binary representations. The ABI may also describe how to convert the database state to/from JSON. Once you have described your contract via an ABI this allows developers and users to interact with your contract seamlessly via JSON.  
@@ -11,7 +11,7 @@ An account is a unique identifier and a requirement to interact with Solana. Unl
 ---  
 
 ### Block
-A special structure for recording a group of transactions in the Bitcoin system and similar ones. A block consists of a header and a list of transactions. The block header includes its hash, the hash of the previous block, transaction hashes, and additional overhead information.  
+A special structure for recording a group of transactions in blockchain systems. A block consists of a header and a list of transactions. The block header includes its hash, the hash of the previous block, transaction hashes, and additional overhead information.  
 
 ---  
 
@@ -20,7 +20,7 @@ A strictly structured database with certain rules for building chains of transac
 
 ---  
 
-### Block Log
+### Block log
 The block log is an append-only log of blocks written to disk and contains all the irreversible blocks.  
 
 ---  
@@ -30,8 +30,8 @@ An object created using a Docker image and containing all the necessary componen
 
 ---  
 
-### Cryptographic Hash
-A cryptographic hash function is a hash function that takes an input (or `message`) and returns a fixed-size alphanumeric string. The alphanumeric string is called the `hash value`, `message digest`, `digital fingerprint`, `digest` or `checksum`.  
+### Cryptographic hash
+A cryptographic hash function is a hash function that takes an input (or `message`) and returns a fixed-size alphanumeric string. The alphanumeric string is called the `hash value`, `message digest`, `digital fingerprint`, `digest`, or `checksum`.  
 
 ---  
 
@@ -40,7 +40,7 @@ A program on Linux systems, launched by the system itself and running in the bac
 
 ---  
 
-### Digital Signature
+### Digital signature
 A digital signature is a mathematical scheme for verifying the authenticity of digital messages or documents. A valid digital signature, where the prerequisites are satisfied, gives a recipient very strong reason to believe that the message was created by a known sender (authentication), and that the message was not altered in transit (integrity). Digital signatures are a standard element of most cryptographic protocol suites, and are commonly used for software distribution, financial transactions, contract management software, and in other cases where it is important to detect forgery or tampering.  
 
 ---  
@@ -70,7 +70,7 @@ DPoS stands for "Delegated Proof of Stake" and is a consensus algorithm initiall
 
 ---  
 
-### Head Block
+### Head block
 The head block is the last block written to the blockchain, stored in reversible blocks.  
 
 ---  
@@ -112,7 +112,7 @@ A publicly available key that can be authorized to permissions of an account and
 ---  
 
 ### Remix
-Remix is an online web tool. It is an IDE (Integrated Development Environment) used to write, compile, deploy and debug Solidity code. Can be connected with Metamask and used to deploy smart contracts to both the Solana Testnet and Mainnet.
+Remix is an online web tool. It is an IDE (Integrated Development Environment) used to write, compile, deploy, and debug Solidity code. Can be connected with Metamask and used to deploy smart contracts to both the Solana Testnet and Mainnet.
 
 ---  
 
@@ -126,27 +126,27 @@ A signature is a mathematical scheme for demonstrating the authenticity of digit
 
 ---  
 
-### Smart Contract
+### Smart contract
 A smart contract is a computer protocol intended to facilitate, verify, or enforce the negotiation or performance of a contract.  
 
 ---  
 
 ### Sollet
-Sollet - Solana SPL token wallet. Siller.io is a non-custodial browser-based web wallet created by the Project Serum (DEX) team.  
+Sollet is Solana SPL token wallet. Siller.io is a non-custodial browser-based web wallet created by the Project Serum (DEX) team.  
 
 ---  
 
 ### Staked tokens
-Tokens allocated for a stake acquisition that can’t be used for anything else in this state. The user can stake active tokens listed on his/her balance or deposit them. Also, the user can perform the reverse operation — withdraw tokens from the staked state to active.  
+Tokens allocated for a stake acquisition that can’t be used for anything else in this state. The user can stake active tokens listed on their balance or deposit them. Also, the user can perform the reverse operation — withdraw tokens from the staked state to active.  
 
 ---  
 
 ### Transaction
-A complete all-or-nothing change to the Blockchain. A combination of one or more actions. Usually the execution result of a Smart Contract.  
+A complete all-or-nothing change to the blockchain. A combination of one or more actions. Usually the execution result of a smart contract.  
 
 ---  
 
-### MetaMask Wallet
+### Wallet
 Wallets are clients that store keys that may or may not be associated with the permissions of one or more accounts. Ideally a wallet has a locked (encrypted) and unlocked (decrypted) state that is protected by a high entropy password.  
 
 ---  

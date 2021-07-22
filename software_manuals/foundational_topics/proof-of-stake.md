@@ -13,9 +13,9 @@ Unlike **PoW**, validators don't need to use significant amounts of computationa
 
 ## The PoS concept
 
-* The **PoS** concept states that a person can mine or verify block transactions depending on how many coins he holds. This means that the more coins a miner owns, the more mining power he has.
+* The **PoS** concept states that a person can mine or verify block transactions depending on how many coins he holds; this means that the more coins a miner owns, the more mining power he has.
 * The probability of checking a new block is determined by how large the share that a person holds.
-* Validators do not receive block rewards. Instead, they take network commission as their reward.
+* Validators do not receive block rewards; instead, they take network commission as their reward.
 * Unlike **PoW**, **PoS** systems can be more cost-effective and efficient, but less decentralized.
 
 

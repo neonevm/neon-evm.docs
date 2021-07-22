@@ -5,28 +5,28 @@ An Ethereum account is an entity with an ETH balance that can send transactions 
 ## Account types
 
 Ethereum has two account types:
-* **Externally-owned** – controlled by anyone with the private keys
-* **Contract** – a smart contract deployed to the network, controlled by code
+* **Externally-owned** – controlled by anyone with the private keys.
+* **Contract** – a smart contract deployed to the network, controlled by code.
 
 ### Key differences
 
 **Externally-owned**
-* Creating an account costs nothing
-* Can initiate transactions
-* Transactions between externally-owned accounts can only be ETH transfers  
+* Creating an account costs nothing.
+* Can initiate transactions.
+* Transactions between externally-owned accounts can only be ETH transfers.  
 
 **Contract**
-* Creating an account has a cost because you're using network storage
-* Can only send transactions in response to receiving a transaction
-* Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transferring tokens or even creating a new contract
+* Creating an account has a cost because you're using network storage.
+* Can only send transactions in response to receiving a transaction.
+* Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transferring tokens or even creating a new contract.
 
 ## An account examined
 
 Ethereum accounts have four fields:
-* **nonce** – a counter that indicates the number of transactions sent from the account. 
-* **balance** – the number of wei owned by this address. Wei is a denomination of ETH and there are 1e+18 wei per ETH.
-* **codeHash** – this hash refers to the code of an account on the Ethereum virtual machine (EVM). This EVM code cannot be changed unlike the other account fields. For externally owned accounts, the codeHash field is the hash of an empty string.
-* **storageRoot** – it is known as a storage hash. A 256-bit hash of the root node of a Merkle Patricia trie that encodes the storage contents of the account (a mapping between 256-bit integer values), encoded into the trie as a mapping from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-bit integer values. This trie encodes the hash of the storage contents of this account, and is empty by default.
+* **Nonce** – a counter that indicates the number of transactions sent from the account. 
+* **Balance** – number of wei owned by this address. Wei is a denomination of ETH and there are 1e+18 wei per ETH.
+* **CodeHash** – refers to the code of an account on the Ethereum virtual machine (EVM). This EVM code cannot be changed unlike the other account fields. For externally owned accounts, the codeHash field is the hash of an empty string.
+* **StorageRoot** – known as a storage hash. A 256-bit hash of the root node of a Merkle Patricia trie that encodes the storage contents of the account (a mapping between 256-bit integer values), encoded into the trie as a mapping from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-bit integer values. This trie encodes the hash of the storage contents of this account, and is empty by default.
 
 ## Externally-owned accounts
 
@@ -34,7 +34,7 @@ An account is made up of a cryptographic pair of keys: public and private. They 
 
 ## Account creation
 
-When you have to create an account most libraries will generate you a random private key.  
+When you have to create an account most libraries will generate a random private key for you.  
 A private key is made up of 64 hex characters and can be encrypted with a password.  
 
 Example:  
@@ -49,10 +49,10 @@ Contract accounts have a 42 character hexadecimal address:
 Example:  
 `0x02042f8cf97ae237070f9587f8e7a266dbead5de`  
 
-The contract address is given when a contract is deployed to the Ethereum Blockchain. The address comes from the creator's address and the number of transactions sent from that address (the `nonce`)  
+The contract address is given when a contract is deployed to the Ethereum blockchain. The address comes from the creator's address and the number of transactions sent from that address (`nonce`)  
 
 > **Note**  
-> An account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account.
+> An account is not a wallet. A wallet is the keypair associated with a user-owned account, which allows a user to make transactions from or manage the account.
 
 > **More details**  
 > [ETHEREUM ACCOUNTS](https://ethereum.org/en/developers/docs/accounts/)
