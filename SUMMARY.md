@@ -10,7 +10,7 @@
     * [Connecting to Solana Testnet via proxy server](/devportal/testnet/connect_to_solana_via_proxy.md)
     * [Deploying a contract via Remix](/devportal/testnet/deploy_contract_via_remix.md)
 * [SOFTWARE MANUALS](/software_manuals/software_manuals.md)
-  * [Foundational topics](/software_manuals/foundational_topics.md)
+  * [Core aspects](/software_manuals/foundational_topics.md)
     * [WEB3](/software_manuals/foundational_topics/web3.md)
     * [Account](/software_manuals/foundational_topics/account.md)
     * [Transaction](/software_manuals/foundational_topics/transaction.md)
