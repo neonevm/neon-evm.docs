@@ -31,7 +31,7 @@ The settings menu window to selecting a network should open.
 **Step 3.** Click `Add Network` in the top-right corner.
  In the window opened fill in the fields, for example:  
   * `Network Name`: "remote proxy - solana testnet"
-  * `New RPS URL`: https://<remote proxy address>:<remote proxy port>/solana
+  * `New RPC URL`: `https://proxy.testnet.neonlabs.org/solana`
   * `Chain ID`: 111
   * `Currency Symbol`: SYM
 
@@ -84,7 +84,7 @@ The parameter `~/.config/solana/id.json` - specifies the path to your key pair.
 
 Upload the docker-compose-test.yml file to your currently directory using the following command:
 ```sh
-$ wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/proxy/docker-compose-test.yml
+$ wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/master/proxy/docker-compose-test.yml
 ```
 Execute the command:
 ```sh
