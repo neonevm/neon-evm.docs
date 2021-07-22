@@ -1,4 +1,4 @@
-# Foundational topics
+# Core aspects
 
 * [WEB3](/software_manuals/foundational_topics/web3.md)
 * [Account](/software_manuals/foundational_topics/account.md)
