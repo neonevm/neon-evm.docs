@@ -10,14 +10,14 @@
 
 ## Overview
 
-**[🔘 Installation & Setup](https://github.com/neonlabsorg/neon-evm.docs/wiki/Local-Solana-Cluster:-Installation,-Setup-and-Tests)**
+**[🔘 Installation & setup](https://github.com/neonlabsorg/neon-evm.docs/wiki/Local-Solana-Cluster:-Installation,-Setup-and-Tests)**
 
 **[🔘 Running Uniswap V2 integration tests](https://github.com/neonlabsorg/neon-evm.docs/wiki/Running-Uniswap-V2-integration-tests)**
 
-**[🔘 Controlling BPF Trace](https://github.com/neonlabsorg/neon-evm.docs/wiki/Controlling-BPF-Trace)**
+**[🔘 Controlling BPF trace](https://github.com/neonlabsorg/neon-evm.docs/wiki/Controlling-BPF-Trace)**
 
 ## Community
-* [Fast and Secure Rollup Running on Solana](https://neonlabs.org/) - (Coming in Summer 2021)  
-* [Neon Labs](https://twitter.com/neonlabsorg) - Settings, personalization and some else (in Russian)
-
-> This is an open-source community effort, so feel free to suggest new topics, add new content, and provide examples wherever you think it might be helpful. All documentation is editable via GitHub.
+  * [Ethereum smart contracts scaled by Solana](https://neonlabs.org/) — (Coming summer 2021)  
+  * [Twitter](https://twitter.com/neonlabsorg) — Latest product updates and our thoughts on technology development
+  * [Discord](https://discord.gg/d9BhxNWTsj) — Chat with the Neon team and other dApps developers in our channel
+  

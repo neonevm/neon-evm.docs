@@ -1,3 +1,3 @@
-# How To Guides
+# How to guides
 
-* [How To Deploy An Ethereum Contract](/software_manuals/how_to_guides/deploy_contract.md)
+* [How to deploy an Ethereum contract](/software_manuals/how_to_guides/deploy_contract.md)

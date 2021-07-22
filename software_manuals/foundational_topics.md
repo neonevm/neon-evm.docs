@@ -1,6 +1,6 @@
-# Foundational Topics
+# Foundational topics
 
-* [WEB3:](/software_manuals/foundational_topics/web3.md)
+* [WEB3](/software_manuals/foundational_topics/web3.md)
 * [Account](/software_manuals/foundational_topics/account.md)
 * [Transaction](/software_manuals/foundational_topics/transaction.md)
 * [Block](/software_manuals/foundational_topics/block.md)
