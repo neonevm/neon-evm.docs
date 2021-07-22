@@ -56,7 +56,7 @@ $ sudo systemctl start docker
 **Step 2.** Start the proxy and connect it to the Docker network:
 
 ```sh
-$ sudo docker run --rm -d --network host --name proxy cybercoredev/proxy:latest
+$ sudo docker run --rm -d --network host --name proxy cybercoredev/proxy:stable
 ```
 
 **The command line options:**
@@ -64,15 +64,17 @@ $ sudo docker run --rm -d --network host --name proxy cybercoredev/proxy:latest
   * `-d`: detach a terminal.
   * `--network host`: use host network.
   * `--name proxy`: specify the proxy name.
-    * `cybercoredev/proxy:latest`: specific image name. 
-    * The EVM-loader address is registered inside `cybercoredev/proxy:latest`, so the proxy knows which EVM-loader is running in Solana Testnet.
+    * `cybercoredev/proxy:stable`: specific image name. 
+    * The EVM-loader address is registered inside `cybercoredev/proxy:stable`, so the proxy knows which EVM-loader is running in Solana Testnet.
 
-After executing this command, the proxy will be available at `http://localhost:9090/solana`. This address is set by default. To set a different address, you need to specify the variable `-e SOLANA_URL='http://localhost:<proxy address>'` on the command line.  
+After executing this command, the proxy will be available at `http://localhost:9090/solana`. This address is set by default.
+
+The proxy connect to public Solana testnet RPC endoint. To use a different endpoint, you need to specify the variable `-e SOLANA_URL='http://<Solana-node RPC endpoint>'` on the command line.
 
 When a proxy is deployed, it generates a wallet containing a key pair. If you do not need the new wallet and want to use the keys you already have, then you need to specify the path to your wallet on the command line. In this case, the poxy will not create a new key pair. The command line will look like the following:  
 
 ```sh
-$ sudo docker run --rm -d --network host -v ~/.config/solana/id.json:/root/.config/solana/id.json --name proxy cybercoredev/proxy:latest
+$ sudo docker run --rm -d --network host -v ~/.config/solana/id.json:/root/.config/solana/id.json --name proxy cybercoredev/proxy:stable
 ```
 The parameter `~/.config/solana/id.json` - specifies the path to your key pair.
 
@@ -88,7 +90,7 @@ $ wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/master/proxy
 ```
 Execute the command:
 ```sh
-$ sudo REVISION=latest docker-compose -f docker-compose-test.yml up -d
+$ sudo REVISION=stable docker-compose -f docker-compose-test.yml up -d
 ```
 As soon as the latest command is completed, the proxy will start to deploy the EVM-loader in a local solana node. After that, the proxy and Solana will be available at the URLs `http://localhost:9090/solana` and `http://localhost:8899`, respectively.
 

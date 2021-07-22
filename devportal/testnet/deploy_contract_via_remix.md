@@ -17,8 +17,7 @@ Before you start, make sure of the following:
 ### Set the Remix environment
 
 **Step 1.** For Remix to be used to load a smart contract into the EVM-loader, Remix must be connected to your MetaMask wallet and run in the `Injected Web3` environment.  
-Go to http://remix.ethereum.org/ and open the `Remix - Ethereum IDE` web application. In the left side menu, select `File explorers` (second button). The `FILE EXPLOPERS` menu will be active.  
-In the "Environment" field, select `Injected Web3` to connect to localhost (Fig. 1).  
+Go to http://remix.ethereum.org/ and open the `Remix - Ethereum IDE` web application. In the left side menu, select `File explorers`. The `FILE EXPLOPERS` menu will be active (Fig. 1).  
 
 <p align="center"> <img width="700" src="./images/remix-1.png" /> </p>  
 <p align="center"> Fig. 1 - Connecting to localhost </p>  
@@ -33,13 +32,13 @@ For now, it is an empty file. To fill it with content, click on the created file
 
 ### Compile a smart contract
 
-**Step 3.** In the left side menu select the `Solidity compiler` (third button). The `SOLIDITY COMPILER` menu will be active.  
+**Step 3.** In the left side menu select the `Solidity compiler`. The `SOLIDITY COMPILER` menu will be active.  
 Click on the `Compile helloWorld.sol` button to compile the loaded smart contract helloWorld (Fig. 3).  
 
 <p align="center"> <img width="700" src="./images/remix-3.png" /> </p>  
 <p align="center"> Fig. 3 - Compiling helloWorld smart contract </p>  
 
-If the compilation is successful, a green icon will appear near the third button.  
+If the compilation is successful, a green icon will appear near the `Solidity compiler` button.  
 You can also get detailed information about the compilation process by clicking `Compilation Details` (Fig. 4).  
 
 <p align="center"> <img width="700" src="./images/remix-4.png" /> </p>  
@@ -64,7 +63,7 @@ Click `Connect` to connect to this account (Fig. 7).
 
 ### Deploy a smart contract in Solana Testnet
 
-**Step 5.** In the left side menu, select `Deploy & run transactions` (fourth button). The `DEPLOY & RUN TRANSACTIONS` menu will become active.  
+**Step 5.** In the left side menu, select `Deploy & run transactions`. The `DEPLOY & RUN TRANSACTIONS` menu will become active.  
 
 In our case there is only one smart contract to deploy. Therefore, it is automatically selected from the dropdown and Remix will automatically generate a transaction.  
 
@@ -90,7 +89,7 @@ After successfully deploying the smart contract, you will see a message containi
 <p align="center"> <img width="300" src="./images/remix-11.png" /> </p>  
 <p align="center"> Fig. 11 - Deployed the smart contract data</p>  
 
-If all the steps have been completed successfully, a green icon will appear near the fourth button (Fig. 12).
+If all the steps have been completed successfully, a green icon will appear near the `Deploy & run transactions` button (Fig. 12).
 
 <p align="center"> <img width="700" src="./images/remix-12.png" /> </p>  
 <p align="center"> Fig. 12 - Final view of the Remix panel </p>  
