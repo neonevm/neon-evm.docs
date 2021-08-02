@@ -28,8 +28,8 @@ The Solana blockchain provides:
     * Short block processing time.
     * Processing of many transactions per second (transactions can be executed in parallel).
   * Low transaction fees.
-  * Increasing the number of nodes in the network without reducing the performance of the network as a whole.
-  * Building-in your language a code in *C*, *C++*, *Rust*.
+  * Ability to increase the number of nodes in the network without reducing the performance of the network as a whole.
+  * Capability to build in coding languages *C*, *C++*, *Rust*.
 
 ## Goal
 
@@ -43,7 +43,7 @@ To find a solution that combines the best of both Ethereum and Solana and allows
 To achieve the goal, the following solution was proposed and implemented by the NeonLabs development team:
   * EVM was integrated in Solana and named Neon EVM: an emulator implemented using Rust.
   * Neon EVM operates inside Solana providing parallel transaction processing and a low transaction fee.
-  * The Neon Web3 Proxy was created to mediate interactions between the Ethereum user (account) and the Neon EVM: the main function of the proxy is to provide an API for external clients.
+  * The Neon Web3 Proxy was created to mediate interactions between the Ethereum user (account) and the Neon EVM; the main function of the proxy is to provide an API for external clients.
 
 ## Solution in detail
 
@@ -66,7 +66,7 @@ The size of *N-trx*  can exceed that of *S-trx*. Also, the amount of resources t
 Each transaction generated is signed with a proxy key. The proxy sends the generated batch of transactions to Solana.  
 
 **Web3 API**  
-The proxy provides the full Web3 API to interact with external clients. In Ethereum, some contracts work at the blockchain level, and there is also an API that is supported by an Ethereum node. Clients that are created for Ethereum contracts support standard interfaces. For a client (i.e. Metamask, Remix) to work in a web browser, it must work via the Web3 API. That is, the written client parts of the program code do not need to be rewritten again.  
+The proxy provides the full Web3 API to interact with external clients. In Ethereum, some contracts work at the blockchain level, and there is also an API that is supported by an Ethereum node. Clients that are created for Ethereum contracts support standard interfaces. For a client (i.e. Metamask, Remix) to work in a web browser, it must work via the Web3 API. With Neon EVM, Ethereum dApps can be deployed on Solana without any edits to the source code or recompilation: dApps look and function exactly the same.  
 
 Clients will work on a different blockchain if they are provided with the same interface. You can do this by changing the address where these clients need to go. Ethereum contracts and clients do not need to be rewritten to work in Solana, you just need to register the proxy address. Any client can run a proxy to deploy a contract inside Solana. The interface that the clients interact with will be the same as for dApps running on Ethereum.
 
