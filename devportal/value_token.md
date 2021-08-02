@@ -21,10 +21,10 @@ Since only a specific Ethereum account can access the Solana account, only this 
 
 When funds are transferred between users, an `SPL` token is requested, and it transfers funds from one balance to another. Users' balances are stored in their accounts. This placement of balances eliminates the appearance of a queue for processing transactions.
 
-Neon EVM contains the ERC20 contract. This contract provides work with the balances of Solana's accounts (the ERC20 contract is called from inside the Solidity contract).
+Neon EVM contains the ERC20 contract. This contract works with the balances of Solana's accounts (the ERC20 contract is called from inside the Solidity contract).
 
 ## Creating an Ethereum account
-As soon as an Ethereum account is created, an `SPL` token balance it is automatically built for a specific user. This operation can only be done by Neon EVM since only it has authorization to perform an operation from the program-account address (Solana account).  
+As soon as an Ethereum account is created, an `SPL` token balance is automatically built for a specific user. This operation can only be done by Neon EVM since only it has authorization to perform an operation from the program-account address (Solana account).  
 
 After the Ethereum account is created, it becomes possible to send a *Value token* to the contract to a user's balance to process transfers made from the contract code.
 
@@ -39,7 +39,7 @@ Since a coroutine address is linked to the user's balance, no one except this co
 ### Token circulation
 When a user creates a transaction, they specify the cost of its execution, taking into account gas price. An operator receives the transaction for execution taking into account the cost specified by the user, as well as a fee. The user's funds are blocked to be paid to the operator following execution.  
 
-User funds are transferred to the collateral pool in the form of `SOL` tokens. The amount of tokens depends on setting up a multisig account (in the current implementation, this value is hardcoded).  
+User funds are transferred to the collateral pool in the form of `SOL` tokens. The amount of tokens needed depends on setting up a multisig account (in the current implementation, this value is hardcoded).  
 
 Depending on the number of operations in a transaction, it can be performed in one or several iterations.
 

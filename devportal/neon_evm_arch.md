@@ -34,7 +34,7 @@ Role performed by a Solana account using a software tool. Within Neon EVM, an op
 **Neon Web3 Proxy (proxy)**  
 The software that an operator uses to do their job. Although the proxy is not a mandatory component in the Neon EVM architecture (for example, proxy logic can be implemented inside a client's browser), implementing it as a separate component can speed up transaction processing. In the Neon EVM Mainnet, proxy must provide multithreading to work in parallel.  
 
-The proxy contains an EVM emulator that pre-tests the execution of the transaction. This testing determines the number of coins required on the operator's balance, as well as the current rate of SOL to ETH. This relates to economic motivation. Each operator configures their proxy server with this course in mind.  
+The proxy contains an EVM emulator that pre-tests the execution of the transaction. This testing determines the number of coins required on the operator's balance, as well as the current exchange rate of SOL to ETH. Each operator configures their proxy server with this course in mind. This relates to economic motivation.  
 
 A proxy converts *N-trx* into transactions under Solana rules. *N-trx* is signed by a user, while *S-trxs* are signed by an operator. A separate account is created in Solana, to which the Neon transaction text is loaded from the received *S-trxs*. Neon EVM receives a command to execute the transaction located at this account address.  
 
@@ -73,7 +73,7 @@ SPL token (Solana Program Library token) is a contract containing a system regis
 This is a blockchain containing a stream of blocks. It stores a block-log of completed operations. It also contains the current Solana state, where the results of transactions, accounts, and public keys are stored. There are also 2 balances: one for ETH tokens and and another for the token in which the transaction will be paid.  
 
 **ERC20 Wrapper**  
-This is a separate contract developed based on the ERC20 standard. It contains maps with user balances. Although this contract is hosted inside Neon EVM, it is completely standalone.  
+This is a separate contract developed based on the ERC20 standard. It contains maps with user balances. Although this contract is hosted inside Neon EVM, it is completely standalone and independent.  
 
 A user can create a contract supporting the ERC20 standard for a specific token and generate the required number of tokens (coins). These tokens will only be liquid within Neon EVM. For these coins to be liquid in Solana, the SPL Token and ERC20 TKN contracts must be interoperable. This function is performed by the ERC20 Wrapper contract.
 
@@ -107,7 +107,7 @@ Solana's entire history is stored in Solana State. Using this history, the opera
 ### Special cases
 *Case 1*. One of the initial and mandatory operations is blocking an account, that is, the execution of other transactions is blocked for this time.  
 
-For an operator to be interested in reducing this time, they  must complete a transaction in Mn blocks,  otherwise another operator will perform this transaction.  
+For an operator to be interested in reducing this time, they  must complete a transaction in Mn blocks, otherwise another operator will perform this transaction.  
 
 For example, to go from step *1* to step *2* (see Fig.2), operator *1* must process *Mn* blocks. During this time, the "Continue" operation will not be available to other operators. If operator *1* is unable to complete a transaction during the processing of *Mn* blocks, this transaction remains incomplete. The funds on the balance are burned out.  
 
