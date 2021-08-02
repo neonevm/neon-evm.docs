@@ -29,7 +29,7 @@ The Solana blockchain provides:
     * Processing of many transactions per second (transactions can be executed in parallel).
   * Low transaction fees.
   * Ability to increase the number of nodes in the network without reducing the performance of the network as a whole.
-  * .Capability to build in coding languages *C*, *C++*, *Rust*.
+  * Capability to build in coding languages *C*, *C++*, *Rust*.
 
 ## Goal
 
