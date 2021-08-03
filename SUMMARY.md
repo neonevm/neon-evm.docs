@@ -7,7 +7,7 @@
   * [Transaction value token](/devportal/value_token.md)
   * [Installing and setting up MetaMask](/devportal/metamask_setup.md)
   * [Testnet](/devportal/testnet.md)
-    * [Connecting to Solana Testnet via proxy server](/devportal/testnet/connect_to_solana_via_proxy.md)
+    * [Connecting to the Solana cluster via proxy server](/devportal/testnet/connect_to_solana_via_proxy.md)
     * [Deploying a contract via Remix](/devportal/testnet/deploy_contract_via_remix.md)
 * [SOFTWARE MANUALS](/software_manuals/software_manuals.md)
   * [Core aspects](/software_manuals/foundational_topics.md)

@@ -1,14 +1,14 @@
-# Connecting to Solana Testnet via proxy server
+# Connecting to the Solana cluster via proxy server
 
 ## Goal
 
 Depending on the tasks to be solved, as well as on the location of the proxy and Solana, you can use one of 3 options for configuring the network:
-  * *Option 1:* The proxy is hosted on a remote virtual server; Solana Testnet is used.
+  * *Option 1:* The proxy is hosted on a remote virtual server; either Solana Testnet or Solana Devnet is used.
   * *Option 2:* The proxy is hosted locally; Solana Testnet is used.
   * *Option 3:* Both the proxy and Solana are hosted locally (debug mode, which allows you to configure your node locally).
-  
-Solana Testnet is an alternative cryptocurrency chain exclusively for developers. It allows developers to run their node in a test blockchain and experiment without losing real currency.  
-The mainnet and testnet coins are incompatible with each other. Testnet coins have no value and developers cannot treansfer mainnet coins to testnet. Likewise, they cannot transfer testnet coins to mainnet.
+
+Solana Testnet, like Solana Devnet, is an alternative cryptocurrency chain exclusively for developers. It allows developers to run their node in a test blockchain and experiment without losing real currency.  
+The mainnet, testnet, and devnet coins are incompatible with each other. Testnet and devnet coins have no value and developers cannot treansfer mainnet coins to testnet/devnet. Likewise, they cannot transfer testnet/devnet coins to mainnet.
 
 ## Requirements for your device
 
@@ -16,7 +16,7 @@ The MetaMask wallet must be installed on your device.
 
 > Although this tutorial uses the *Ubuntu* platform, the instructions provided can be applied to other Linux platforms.  
 
-## Option 1: Interaction with Solana Testnet via a proxy hosted on a remote virtual server
+## Option 1: Interaction with the Solana cluster via a proxy hosted on a remote virtual server
 
 **The network configuration:**
   * Solana cluster is accessed via a proxy hosted on a remote virtual server.
@@ -28,14 +28,20 @@ Click `Create Account` in the dropdown menu and add one more account to interact
 **Step 2.** Open your wallet under the new account and click `Settings` in the dropdown menu.  
 The settings menu window to selecting a network should open.  
 
-**Step 3.** Click `Add Network` in the top-right corner.
- In the window opened fill in the fields, for example:  
+**Step 3.** Click `Add Network` in the top-right corner.  
+To connect to the Solana Testnet cluster, in the window opened fill in the fields, for example:
   * `Network Name`: "remote proxy - solana testnet"
   * `New RPC URL`: `https://proxy.testnet.neonlabs.org/solana`
   * `Chain ID`: 111
   * `Currency Symbol`: SYM
 
-**Step 4.** After filling in the field click `Save`. Now you have access to Solana Testnet and can carry out transactions.
+To connect to the Solana Devnet cluster, in the window opened fill in the fields, for example:
+  * `Network Name`: "remote proxy - solana devnet"
+  * `New RPC URL`: `https://proxy.devnet.neonlabs.org/solana`
+  * `Chain ID`: 110
+  * `Currency Symbol`: SYM
+
+**Step 4.** After filling in the field click `Save`. Now you have access to the Solana cluster and can carry out transactions.
 
 ## Option 2: Running Solana Testnet via a proxy hosted locally
 
