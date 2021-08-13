@@ -6,6 +6,7 @@
   * [Overview of Neon EVM architecture](/devportal/neon_evm_arch.md)
   * [Transaction value token](/devportal/value_token.md)
   * [Installing and setting up MetaMask](/devportal/metamask_setup.md)
+  * [Uniswap service](/devportal/uniswap.md)
   * [Testnet](/devportal/testnet.md)
     * [Connecting to the Solana cluster via proxy server](/devportal/testnet/connect_to_solana_via_proxy.md)
     * [Deploying a contract via Remix](/devportal/testnet/deploy_contract_via_remix.md)
