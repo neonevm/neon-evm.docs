@@ -1,23 +1,33 @@
+# Website
 
-<img width="200" src="./images/neon_logo_colors.png" />
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-**Welcome to the Neon EVM source code repository!**  
-*****  
+## Installation
 
-[![Build status](https://badge.buildkite.com/264f0e74ae8aabfcf3bf3b100d32caa05360f03b21542d2c09.svg?branch=develop)](https://buildkite.com/cyberway/evm-loader)
-[![GitHub](https://img.shields.io/github/license/cyberway/cyberway.svg)](https://github.com/neonlabsorg/solana/blob/master/LICENSE)
+```console
+yarn install
+```
 
+## Local Development
 
-## Overview
+```console
+yarn start
+```
 
-**[🔘 Installation & setup](https://github.com/neonlabsorg/neon-evm.docs/wiki/Local-Solana-Cluster:-Installation,-Setup-and-Tests)**
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-**[🔘 Running Uniswap V2 integration tests](https://github.com/neonlabsorg/neon-evm.docs/wiki/Running-Uniswap-V2-integration-tests)**
+## Build
 
-**[🔘 Controlling BPF trace](https://github.com/neonlabsorg/neon-evm.docs/wiki/Controlling-BPF-Trace)**
+```console
+yarn build
+```
 
-## Community
-  * [Ethereum smart contracts scaled by Solana](https://neonlabs.org/)  
-  * [Twitter](https://twitter.com/neonlabsorg) — Latest product updates and our thoughts on technology development
-  * [Discord](https://discord.gg/d9BhxNWTsj) — Chat with the Neon team and other dApps developers in our channel
-  
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+## Deployment
+
+```console
+GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
