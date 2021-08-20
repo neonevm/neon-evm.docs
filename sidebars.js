@@ -24,6 +24,7 @@ module.exports = {
     },
   ],
    */
+
   tutorialSidebar: [
     {
       type: 'category',
@@ -44,7 +45,7 @@ module.exports = {
         'devportal/neon_evm_arch',
         'devportal/value_token',
         'devportal/metamask_setup',
-        'devportal/uniswap',
+        'devportal/bpf_trace',
         {
           type: 'category',
           label: 'Testnet',
@@ -54,6 +55,24 @@ module.exports = {
             'devportal/testnet/deploy_contract_via_remix',
           ],
         },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Local Solana cluster',
+      items:
+      [
+        'solana_cluster/cluster_installation',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Neonswap',
+      items:
+      [
+        'neonswap/neonswap_overview',
+        'neonswap/neonswap',
+        'neonswap/neonswap_tests',
       ],
     },
     {

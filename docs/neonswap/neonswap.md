@@ -1,10 +1,8 @@
 # Porting the uniswap service to Neon EVM
 
-*The purpose of this document is to share the experience with Ethereum users how easily their applications can be ported to Neon EVM.*
+*The purpose of this document is to share the experience with Ethereum users how easily their applications can be ported to Neon EVM. We want to demonstrate that our Neon EVM product allows you to port the Uniswap service from Ethereum to Solana.*
 
-> Uniswap is an open-source dApp used on Ethereum. In Ethereum, exchanging some tokens for others requires deploying contracts. We want to demonstrate that our Neon EVM product allows you to port the Uniswap service from Ethereum to Solana. To do this, we deploy the complete Uniswap infrastructure, including contracts in our Neon EVM, as well as the uniswap-interface on a separate server. Using the uniswap service deployed on Neon EVM, users can make transactions in their usual form and make sure that Neon EVM is functioning successfully.  
-
-Any dApp using the Uniswap service consists of 2 parts: contracts and software serving these contracts. Contracts are loaded into a chain, and the software is deployed on a separate server for providing users interaction with these contracts.
+Any dApp using the Uniswap service consist s of 2 parts: contracts and software serving these contracts. Contracts are loaded into a chain, and the software is deployed on a separate server for providing users interaction with these contracts.
 
 Porting applications from Ethereum to Solana is done in 3 stages:  
 **Stage 1.** Deploying contracts in a Neon EVM environment.  
@@ -12,7 +10,7 @@ Porting applications from Ethereum to Solana is done in 3 stages:
 **Stage 3.** Deploying Uniswap-interface.
 
 ## Stage 1. Deploying contracts in a Neon EVM environment
-No changes to the Uniswap product are required to port applications using the Uniswap service. The product version used is Uniswap-v2. Changes are made only to those components that are necessary for its operation on Neon EVM.  
+No changes to the Uniswap product are required to port applications using the Neonswap service. The product version used is Uniswap-v2. Changes are made only to those components that are necessary for its operation on Neon EVM.  
 
 The contracts are built by a typical Solidity compiler used in Ethereum. After compilation, all the necessary contracts are deployed on Neon EVM using a Web 3 proxy. This proxy provides a standard interface that Ethereum utilities and tools can use.  
 
@@ -101,8 +99,7 @@ To do this, open Metamask and in the settings for `Networks` in the `Neon RPC UR
 
 <p align="center">
 
-![](./testnet/images/uniswap-1.png)  
-</p>  
+![](img/neonswap-1.png) </p>  
 
 #### Step 2
 Create and deploy an ER20 standard contract containing the *T_A1* token. 
@@ -110,8 +107,7 @@ To do this, open the Remix web application and load the ERC20 contract into it. 
 
 <p align="center">
 
-![](./testnet/images/uniswap-2.png)  
-</p>  
+![](img/neonswap-2.png) </p>  
 
 After editing the text, compile the contract.
 
@@ -125,8 +121,7 @@ If the operations for deploying contracts for *T_A1* and *T_B1* tokens are compl
 
 <p align="center">
 
-![](./testnet/images/uniswap-3.png)  
-</p>
+![](img/neonswap-3.png) </p>  
 
 #### Step 5
 *For an exchange operation, it is necessary to create a liquidity pool for a pair of tokens that will be exchanged. Certain amounts should be debited from the balances of these tokens. The exchange operation must be carried out within these amounts.*  
@@ -139,16 +134,14 @@ In the menu, click `Pool` and In the pop-up window, click `Create a pair`.
 
 <p align="center">
 
-![](./testnet/images/uniswap-4.png)  
-</p>
+![](img/neonswap-4.png) </p>  
 
 #### Step 6
 In the Remix window, you need to copy the *T_A1* token address. Then open the Uniswap window and write this address into the `Select a token` field. Click `Import`.
 
 <p align="center">
 
-![](./testnet/images/uniswap-5.png)  
-</p>
+![](img/neonswap-5.png) </p>  
 
 Repeat this step to copy the *T_B1* token address.  
 > When creating a liquidity pair, a warning about the risk of selling a token back may appear.
@@ -159,8 +152,7 @@ Specify the amount for which the liquidity pool is created. For example, let's a
 
 <p align="center">
 
-![](./testnet/images/uniswap-6.png)  
-</p>
+![](img/neonswap-6.png) </p>  
 
 Creating a liquidity pair requires an approval operation for both tokens. The need for the operation is due to the ERC20 contract requirement.  
 
@@ -173,15 +165,13 @@ In the window that appears, click `Create Pool & Supply`. Confirm this operation
 
 <p align="center">
 
-![](./testnet/images/uniswap-7.png)  
-</p>
+![](img/neonswap-7.png) </p>  
 
 After receiving a notification about the successful completion of the transaction, click `Close`
 
 <p align="center">
 
-![](./testnet/images/uniswap-8.png)  
-</p>
+![](img/neonswap-8.png) </p>  
 
 #### Step 9
 Make sure the balances have been updated. The balances of the *T_A1* and *T_B1* tokens should be reduced by 1000 and 2000 tokens, respectively. Now the token exchange operation can be performed.  
@@ -190,8 +180,7 @@ In the upper left corner of the Uniswap window, select the `Swap` operation.
 
 <p align="center">
 
-![](./testnet/images/uniswap-9.png)  
-</p>
+![](img/neonswap-9.png) </p>  
 
 #### Step 10
 In the appearing Swap window, select the *T_A1* and *T_B1* tokens using `Select a token`. Specify the exchange amount in `From`. The amount for *T_B1* will automatically appear in `To`. This amount is calculated taking into account the exchange rate and fee. The exchange rate is calculated based on the amounts of tokens specified in the pair.  
@@ -200,8 +189,7 @@ For example, let's specify the exchange amount of 1 token.
 
 <p align="center">
 
-![](./testnet/images/uniswap-10.png)  
-</p>
+![](img/neonswap-10.png) </p>  
 
 #### Step 11
 Click `Swap` and then `Confirm swap`.  
@@ -209,8 +197,7 @@ After the transaction is completed successfully, click `Close` to end the sessio
 
 <p align="center">
 
-![](./testnet/images/uniswap-11.png)  
-</p>
+![](img/neonswap-11.png) </p>  
 
 ****  
 > **More details**  
