@@ -22,13 +22,16 @@ The MetaMask wallet must be installed on your device.
   * Solana cluster is accessed via a proxy hosted on a remote virtual server.
   * Solana works in test mode and the proxy interacts with it through the EVM-loader.
 
-**Step 1.** Open your MetaMask wallet and in the upper-right corner, click the red apple view element.  
+#### Step 1
+Open your MetaMask wallet and in the upper-right corner, click the identical.  
 Click `Create Account` in the dropdown menu and add one more account to interact with the network configured.  
 
-**Step 2.** Open your wallet under the new account and click `Settings` in the dropdown menu.  
+#### Step 2
+Open your wallet under the new account and click `Settings` in the dropdown menu.  
 The settings menu window to selecting a network should open.  
 
-**Step 3.** Click `Add Network` in the top-right corner.  
+#### Step 3
+Click `Add Network` in the top-right corner.  
 To connect to the Solana Testnet cluster, in the window opened fill in the fields, for example:
   * `Network Name`: "remote proxy - solana testnet"
   * `New RPC URL`: `https://proxy.testnet.neonlabs.org/solana`
@@ -41,7 +44,8 @@ To connect to the Solana Devnet cluster, in the window opened fill in the fields
   * `Chain ID`: 110
   * `Currency Symbol`: SYM
 
-**Step 4.** After filling in the field click `Save`. Now you have access to the Solana cluster and can carry out transactions.
+#### Step 4
+After filling in the field click `Save`. Now you have access to the Solana cluster and can carry out transactions.
 
 ## Option 2: Running Solana Testnet via a proxy hosted locally
 
@@ -49,7 +53,8 @@ To connect to the Solana Devnet cluster, in the window opened fill in the fields
   * Solana cluster is accessed via the proxy hosted locally.
   * Solana Testnet is used and the proxy interacts with it through the EVM-loader.
 
-**Step 1.** Before you start, make sure that you have a daemon running. If you see something like:  
+#### Step 1
+Before you start, make sure that you have a daemon running. If you see something like:  
 ```sh
 $ docker info
 Cannot connect to the Docker daemon at <docker.sock>. Is the docker daemon running?
@@ -59,7 +64,8 @@ you need to run the daemon first:
 $ sudo systemctl start docker
 ```
 
-**Step 2.** Start the proxy and connect it to the Docker network:
+### Step 2
+Start the proxy and connect it to the Docker network:
 
 ```sh
 $ sudo docker run --rm -d --network host --name proxy cybercoredev/proxy:stable

@@ -157,9 +157,9 @@ Wallets are clients that store keys that may or may not be associated with the p
 ---  
 
 ### Uniswap
-Uniswap is a decentralized exchange. Liquidity providers can earn fees by providing the required tokens or ether for both sides of a trade. It is widely used and therefore has one of the highest liquidities for a very wide range of tokens.  
+Uniswap is a decentralized exchange. Liquidity providers can earn fees by providing the required tokens or ETH for both sides of a trade. It is widely used and therefore has one of the highest liquidities for a very wide range of tokens.  
 
 ---  
 
 ### USDT token
-USDT (United States Department of the Treasury) is the ticker symbol for the Tether stablecoin cryptocurrency.  
+USDT is the ticker symbol for the [Tether](https://en.wikipedia.org/wiki/Tether_(cryptocurrency)) stablecoin cryptocurrency.  
