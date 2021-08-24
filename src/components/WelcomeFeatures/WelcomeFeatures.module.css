@@ -1,0 +1,41 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+.feature {
+  margin-bottom: 36px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 1280px;
+  width: 100%;
+  padding: 5rem 24px;
+  
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.2rem;
+  min-height: 100%;
+  box-shadow: 0 8px 28px 4px rgb(86 91 115 / 15%);
+  border-radius: 4px;
+  background-color: var(--ifm-card-background-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+.featureCardHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.featureCardTitle {
+  margin: 0 0 0 12px;
+}
