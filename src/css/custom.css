@@ -6,6 +6,11 @@
  */
 
 /* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+  font-family: 'Roboto', 'Courier New', Courier, monospace;
+}
 :root {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
@@ -15,6 +20,18 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+  --ifm-link-color: #CE3A8B;
+  --ifm-link-hover-color: #4355F9;
+  --ifm-navbar-link-hover-color: #4355F9;
+}
+
+.main-wrapper {background-color: var();
+  display: flex;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--ifm-link-hover-color);
 }
 
 .docusaurus-highlight-code-line {

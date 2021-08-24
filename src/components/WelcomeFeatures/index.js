@@ -41,7 +41,8 @@ const FeatureList = [
 
 function Feature({title, icon, url, description}) {
   return (
-    <div className={clsx('col col--4')} className={styles.feature}>
+    <div className={clsx('col col--4')} >
+      <div className={styles.feature}>
       <Link to={url} className={styles.featureCard}>
         <div className={styles.featureCardHeader}>
           <FontAwesomeIcon icon={icon}  size='lg'/>
@@ -49,6 +50,7 @@ function Feature({title, icon, url, description}) {
         </div>
         <p>{description}</p>
       </Link>
+      </div>
     </div>
   );
 }
