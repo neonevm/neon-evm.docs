@@ -4,7 +4,7 @@
 
 The trace logs together with the ELF dump can provide a lot of insight.
 
-To turn on BPF interpreter trace messages in a local cluster, configure the `solana_rbpf` level in `RUST_LOG` to trace. For example:
+To turn on BPF interpreter trace messages in a local cluster, specify the value `solana_rbpf` in `RUST_LOG` to trace. For example:
 ```sh
 $ export RUST_LOG=solana_bpf_loader_program=trace
 ```

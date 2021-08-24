@@ -2,7 +2,7 @@
 
 *The guide describes how to install, configure and test the local Solana cluster. This document will be useful in assisting new developers to create their development environment. You can just follow this guide step by step.*
 
-> The *Neon Rollup* is a solution that performs transaction execution outside layer 1.
+> The *Neon EVM* is a solution that performs transaction execution outside layer 1.
 > 
 > The development process should run on any modern Linux or Mac system, though this document is based on Ubuntu 20.04 experience.
 
@@ -44,7 +44,7 @@ $ sudo apt install <list-of-packages>
 
 ## Linux File Number Limit
 
-Linux systems limit the number of file descriptors that anyone process may open. Solana requires much more than typical Linux system permits. So we have to increase this limit by adding the following two lines to the file `/etc/security/limits.conf`:
+Linux systems limit the number of file descriptors that any one process may open. Solana requires much more than typical Linux system permits. So we have to increase this limit by adding the following two lines to the file `/etc/security/limits.conf`:
 ```
 <username> soft nofile 500000
 <username> hard nofile 500000

@@ -32,7 +32,7 @@ module.exports = {
       items:
       [
         'intro',
-        'getting_started',
+//        'getting_started',
         'glossary',
       ],
     },
@@ -100,6 +100,7 @@ module.exports = {
           items: 
           [
             'software_manuals/how_to_guides/deploy_contract',
+            'software_manuals/how_to_guides/support_docs',
           ],
         },
       ],
