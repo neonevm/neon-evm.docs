@@ -21,8 +21,10 @@ body {
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
   --ifm-link-color: #CE3A8B;
+  --ifm-color-primary: #4355F9;
   --ifm-link-hover-color: #4355F9;
   --ifm-navbar-link-hover-color: #4355F9;
+  --ifm-menu-color-active: #CE3A8B;
 }
 
 .main-wrapper {background-color: var();
