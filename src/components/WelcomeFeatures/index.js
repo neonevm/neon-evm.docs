@@ -45,7 +45,7 @@ function Feature({title, icon, url, description}) {
       <div className={styles.feature}>
       <Link to={url} className={styles.featureCard}>
         <div className={styles.featureCardHeader}>
-          <FontAwesomeIcon icon={icon}  size='lg'/>
+          <FontAwesomeIcon className={styles.featureIcon} icon={icon}  size='lg'/>
           <h3 className={styles.featureCardTitle}>{title}</h3>
         </div>
         <p>{description}</p>
