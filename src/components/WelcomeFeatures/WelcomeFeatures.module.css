@@ -35,6 +35,9 @@
   align-items: center;
   margin-bottom: 16px;
 }
+.featureIcon {
+  max-width: 30px;
+}
 
 .featureCardTitle {
   margin: 0 0 0 12px;
