@@ -92,7 +92,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Solana Foundation`, // OK
+      copyright: `Copyright © ${new Date().getFullYear()} Neon Labs`, // OK
     },
     prism: {
       theme: lightCodeTheme,
