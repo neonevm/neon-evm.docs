@@ -9,7 +9,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'throw', // options: throw, warn
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/neon_logo_colors.png',
+  favicon: 'img/fav_192.png',
   organizationName: 'neonlabsorg', // Usually your GitHub org/user name.
   projectName: 'neon-evm.docs', // Usually your repo name.
   themeConfig: {
