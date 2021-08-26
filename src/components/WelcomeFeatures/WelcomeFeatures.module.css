@@ -12,7 +12,10 @@
   max-width: 1280px;
   width: 100%;
   padding: 5rem 24px;
-  
+}
+
+.featuresRow {
+  justify-content: center;
 }
 
 .featureCard {
@@ -22,7 +25,7 @@
   min-height: 100%;
   box-shadow: 0 8px 28px 4px rgb(86 91 115 / 15%);
   border-radius: 4px;
-  min-height: 162px;
+  min-height: 190px;
   background-color: var(--ifm-card-background-color);
   transition: all 0.2s ease-in-out;
 }
@@ -41,5 +44,13 @@
 }
 
 .featureCardTitle {
+  font-size: 20px;
   margin: 0 0 0 12px;
+}
+
+.featureCardDesc {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

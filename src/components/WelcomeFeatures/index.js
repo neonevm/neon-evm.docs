@@ -13,7 +13,7 @@ const FeatureList = [
     url: '/docs/getting_started',
     description: (
       <>
-        Fast discover Neon EVM. Community and Wiki sources.
+        Start building on Neon
       </>
     ),
   },
@@ -23,17 +23,17 @@ const FeatureList = [
     url: '/docs/intro',
     description: (
       <>
-        Short technology presentation, writing in couple paragraphs
+        Learn more about Neon and how it works
       </>
     ),
   },
   {
-    title: 'Development Manuals',
+    title: 'Нow to deploy a Solidity Smart Contract',
     icon: faKeyboard,
     url: '/docs/software_manuals/how_to_guides/deploy_contract/',
     description: (
       <>
-        How to deploy an Ethereum contract
+        Move your dApp to Solana and enjoy it's advantages
       </>
     )
   },
@@ -43,7 +43,7 @@ const FeatureList = [
     url: '/docs/neonswap/neonswap/',
     description: (
       <>
-        Porting the uniswap service to Neon EVM
+        Play with one of the biggest dApps running on Solana testnet
       </>
     ),
   },
@@ -58,7 +58,9 @@ function Feature({title, icon, url, description}) {
           <FontAwesomeIcon className={styles.featureIcon} icon={icon}  size='lg'/>
           <h3 className={styles.featureCardTitle}>{title}</h3>
         </div>
-        <p>{description}</p>
+        <div className={styles.featureCardDesc}>
+          <p>{description}</p>
+        </div>
       </Link>
       </div>
     </div>
@@ -69,7 +71,7 @@ export default function WelcomeFeatures() {
  return (
    <section className={styles.features}>
      <div className="container">
-       <div className="row">
+       <div className={`row ${styles.featuresRow}`}>
          {FeatureList.map((props, idx) => (
            <Feature key={idx} {...props} />
          ))}
