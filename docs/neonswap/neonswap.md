@@ -1,16 +1,16 @@
-# Porting the uniswap service to Neon EVM
+# Porting dapps to Neon EVM
 
-*The purpose of this document is to share the experience with Ethereum users how easily their applications can be ported to Neon EVM. We want to demonstrate that our Neon EVM product allows you to port the Uniswap service from Ethereum to Solana.*
+*The purpose of this document is to share the experience with Ethereum users how easily their applications can be ported to Neon EVM. We want to demonstrate that our neonswap service allows you to run your dapps on Solana.*
 
-Any dApp using the [Uniswap](https://doc.neonlabs.org/docs/glossary#uniswap) service consist s of 2 parts: contracts and software serving these contracts. Contracts are loaded into a chain, and the software is deployed on a separate server for providing users interaction with these contracts.
+Any dapp using the [Uniswap](https://doc.neonlabs.org/docs/glossary#uniswap) service consists of 2 parts: contracts and software serving these contracts. Contracts are loaded into a chain, and the software is deployed on a separate server for providing users interaction with these contracts.
 
 Porting applications from [Ethereum](https://ethereum.org/en/) to [Solana](https://docs.solana.com/introduction) is done in 3 stages:  
 **Stage 1.** Deploying contracts in a Neon EVM environment.  
 **Stage 2.** Checking the functioning of deployed contracts.  
-**Stage 3.** Deploying Uniswap-interface.
+**Stage 3.** Deploying neonswap-interface.
 
 ## Stage 1. Deploying contracts in a Neon EVM environment
-No changes to the Uniswap product are required to port applications using the Neonswap service. The product version used is Uniswap-v2. Changes are made only to those components that are necessary for its operation on Neon EVM.  
+No changes to software serving contracts are required to port dapps using the [Neonswap](https://doc.neonlabs.org/docs/glossary#neonswap) service. Changes are made only to those components that are necessary for its operation on Neon EVM.  
 
 The contracts are built by a typical Solidity compiler used in Ethereum. After compilation, all the necessary contracts are deployed on Neon EVM using a [Web 3](https://doc.neonlabs.org/docs/glossary#web3) proxy. This proxy provides a standard interface that Ethereum utilities and tools can use.  
 
@@ -49,7 +49,7 @@ Contracts health checking is performed in a real chain, not in a test environmen
 
 Unlike the test environment, in a really working chain, the range of test operations cannot be performed in full (for example, operations such as generating a block with a specified number of transactions, etc., are excluded). In a chain, all operations rely on real-time and a user checking the contracts cannot influence the block generation.  
 
-To test Uniswap, we use the entire set of tests available in Ethereum. The method of running these tests has been changed. Before running the tests, it is indicated that the deployment of contracts, calls to their methods, as well as testing takes place not in the test framework, but in the real blockchain.  
+To test Neonswap, we use the entire set of uniswap tests available in Ethereum. The method of running these tests has been changed. Before running the tests, it is indicated that the deployment of contracts, calls to their methods, as well as testing takes place not in the test framework, but in the real blockchain.  
 
 > For testing, we use an unmanaged environment. However, in uniswap tests (in contracts), there are sections of program code that contain environment management. In these pieces, we were able to successfully replace the environment management to expectation for a reaction from a chain. That is, where the block is to be generated, a delay is set. Then an action is performed and the reaction of the contract is evaluated, namely, whether it meets the expectation or not. At the same time, we believe that the number of blocks produced may be different.  
 

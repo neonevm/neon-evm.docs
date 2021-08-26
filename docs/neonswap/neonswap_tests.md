@@ -1,8 +1,8 @@
 # Integration tests
 
-*This guide describes how to build and configure the ***Neon EVM*** to execute ***Uniswap V2*** integration tests.*
+*This guide describes how to build and configure the ***Neon EVM*** to run integration tests on it.*  
 
-> *Uniswap* is a decentralized finance protocol that is used to exchange cryptocurrencies.
+> We want to demonstrate to Ethereum users that the neonswap infrastructure deployed on our Neon EVM ensures a passage of the *Uniswap-V2* integration tests suite. This means Ethereum users can successfully run their applications on Neon EVM.
 
 ## Prerequisites
 It is assumed:
@@ -41,7 +41,7 @@ Start the proxy:
 $ python3 -m proxy --hostname 127.0.0.1 --port 9090 --enable-web-server --plugins proxy.plugin.SolanaProxyPlugin --num-workers=1
 ```
 
-## Prepare Uniswap V2 Core
+## Prepare integration tests suite
 
 Clone the project `https://github.com/neonlabsorg/uniswap-v2-core`. Build the tests (ignoring messages like "gyp ERR!"):
 ```sh
@@ -69,3 +69,4 @@ Results of the second test suite:
 
 ![](img/neonswap-tests-2.png)</p>
 
+The absence of error messages indicates the successful completion of integration tests.
