@@ -1,6 +1,6 @@
 # Deploying smart contracts on Solana Testnet via Remix
 
-This tutorial will show you step by step how to use Remix and Metamask to create and deploy a simple smart contract on Solana's Testnet.
+This tutorial will show you step by step how to use [Remix](https://doc.neonlabs.org/docs/glossary#remix) and [Metamask](https://doc.neonlabs.org/docs/glossary#metamask) to create and deploy a simple smart contract on Solana's Testnet.
 
 ## Requirements
 Before you start, make sure of the following:
@@ -9,7 +9,7 @@ Before you start, make sure of the following:
   * MetaMask is configured for both proxy and EVM-loader (regardless of how proxy and EVM-loader run, MetaMask wallet must always be configured for them).
 
 **The network configuration:**
-  * Solana cluster is accessed via a proxy.
+  * [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
   * Solana works in test mode and the proxy interacts with it through the EVM-loader.
 
 ## Steps to complete
