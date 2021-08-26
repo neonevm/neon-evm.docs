@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import styles from './WelcomeFeatures.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from '@docusaurus/Link';
-import { faNewspaper, faCompass, faListAlt } from '@fortawesome/free-regular-svg-icons'
+import { faNewspaper, faCompass, faKeyboard, faPaperPlane } from '@fortawesome/free-regular-svg-icons'
 
 
 const FeatureList = [
@@ -28,12 +28,22 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Glossary',
-    icon: faListAlt,
-    url: '/docs/glossary',
+    title: 'Development Manuals',
+    icon: faKeyboard,
+    url: '/docs/software_manuals/how_to_guides/deploy_contract/',
     description: (
       <>
-        List of definitions, which used in the documentation.
+        How to deploy an Ethereum contract
+      </>
+    )
+  },
+  {
+    title: 'Neon Swap',
+    icon: faPaperPlane,
+    url: '/docs/neonswap/neonswap/',
+    description: (
+      <>
+        Porting the uniswap service to Neon EVM
       </>
     ),
   },

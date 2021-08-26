@@ -22,6 +22,7 @@
   min-height: 100%;
   box-shadow: 0 8px 28px 4px rgb(86 91 115 / 15%);
   border-radius: 4px;
+  min-height: 162px;
   background-color: var(--ifm-card-background-color);
   transition: all 0.2s ease-in-out;
 }
