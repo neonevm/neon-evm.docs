@@ -100,6 +100,11 @@ MetaMask is a software cryptocurrency wallet used to interact with the Ethereum 
 
 ----  
 
+### Neon Swap
+Neon Swap is an open source service and a fork of [Uniswap V2](https://uniswap.org/blog/uniswap-v2), running on Neon EVM in Solana Testnet.  
+
+---  
+
 ### Node
 A separate (software) device that is connected to the blockchain network according to the client-server scheme. Nodes are active elements and form the basis of the blockchain network technology.  
 
