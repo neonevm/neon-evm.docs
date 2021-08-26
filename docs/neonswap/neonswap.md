@@ -2,9 +2,9 @@
 
 *The purpose of this document is to share the experience with Ethereum users how easily their applications can be ported to Neon EVM. We want to demonstrate that our Neon EVM product allows you to port the Uniswap service from Ethereum to Solana.*
 
-Any dApp using the Uniswap service consist s of 2 parts: contracts and software serving these contracts. Contracts are loaded into a chain, and the software is deployed on a separate server for providing users interaction with these contracts.
+Any dApp using the [Uniswap](https://doc.neonlabs.org/docs/glossary#uniswap) service consist s of 2 parts: contracts and software serving these contracts. Contracts are loaded into a chain, and the software is deployed on a separate server for providing users interaction with these contracts.
 
-Porting applications from Ethereum to Solana is done in 3 stages:  
+Porting applications from [Ethereum](https://ethereum.org/en/) to [Solana](https://docs.solana.com/introduction) is done in 3 stages:  
 **Stage 1.** Deploying contracts in a Neon EVM environment.  
 **Stage 2.** Checking the functioning of deployed contracts.  
 **Stage 3.** Deploying Uniswap-interface.
@@ -12,7 +12,7 @@ Porting applications from Ethereum to Solana is done in 3 stages:
 ## Stage 1. Deploying contracts in a Neon EVM environment
 No changes to the Uniswap product are required to port applications using the Neonswap service. The product version used is Uniswap-v2. Changes are made only to those components that are necessary for its operation on Neon EVM.  
 
-The contracts are built by a typical Solidity compiler used in Ethereum. After compilation, all the necessary contracts are deployed on Neon EVM using a Web 3 proxy. This proxy provides a standard interface that Ethereum utilities and tools can use.  
+The contracts are built by a typical Solidity compiler used in Ethereum. After compilation, all the necessary contracts are deployed on Neon EVM using a [Web 3](https://doc.neonlabs.org/docs/glossary#web3) proxy. This proxy provides a standard interface that Ethereum utilities and tools can use.  
 
 Here is a list of contracts to be deployed:
   * Governance.

@@ -45,6 +45,11 @@ A program on Linux systems, launched by the system itself and running in the bac
 
 ---  
 
+### dapp
+A decentralized application (dapp) is an application built on a decentralized network that combines a smart contract and a frontend user interface.  
+
+---  
+
 ### Digital signature
 A digital signature is a mathematical scheme for verifying the authenticity of digital messages or documents. A valid digital signature, where the prerequisites are satisfied, gives a recipient very strong reason to believe that the message was created by a known sender (authentication), and that the message was not altered in transit (integrity). Digital signatures are a standard element of most cryptographic protocol suites, and are commonly used for software distribution, financial transactions, contract management software, and in other cases where it is important to detect forgery or tampering.  
 
@@ -146,6 +151,11 @@ Tokens allocated for a stake acquisition that can’t be used for anything else 
 
 ---  
 
+### Web 3
+In the context of Ethereum, these are decentralized apps that run on the blockchain and allow anyone to participate without monetising their personal data.  
+
+---  
+
 ### Transaction
 A complete all-or-nothing change to the blockchain. A combination of one or more actions. Usually the execution result of a smart contract.  
 
@@ -155,6 +165,8 @@ A complete all-or-nothing change to the blockchain. A combination of one or more
 Wallets are clients that store keys that may or may not be associated with the permissions of one or more accounts. Ideally a wallet has a locked (encrypted) and unlocked (decrypted) state that is protected by a high entropy password.  
 
 ---  
+
+### 
 
 ### Uniswap
 Uniswap is a decentralized exchange. Liquidity providers can earn fees by providing the required tokens or ETH for both sides of a trade. It is widely used and therefore has one of the highest liquidities for a very wide range of tokens.  
