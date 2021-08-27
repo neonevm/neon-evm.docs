@@ -7,16 +7,16 @@ import { faNewspaper, faCompass, faKeyboard, faPaperPlane } from '@fortawesome/f
 
 
 const FeatureList = [
-  {
-    title: 'Getting Started',
-    icon: faCompass,
-    url: '/docs/getting_started',
-    description: (
-      <>
-        Start building on Neon
-      </>
-    ),
-  },
+  // {
+  //   title: 'Getting Started',
+  //   icon: faCompass,
+  //   url: '/docs/getting_started',
+  //   description: (
+  //     <>
+  //       Start building on Neon
+  //     </>
+  //   ),
+  // },
   {
     title: 'Introduction',
     icon: faNewspaper,
