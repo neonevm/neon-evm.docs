@@ -32,7 +32,7 @@ module.exports = {
       items:
       [
         'intro',
-//        'getting_started',
+        'getting_started',
         'glossary',
       ],
     },

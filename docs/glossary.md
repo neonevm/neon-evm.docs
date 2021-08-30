@@ -80,6 +80,16 @@ DPoS stands for "Delegated Proof of Stake" and is a consensus algorithm initiall
 
 ---  
 
+### ERC20
+The token standard which is used for Ethereum smart contracts. Developed in 2015, ERC-20 defines a common list of rules that an Ethereum token has to implement. This gives developers the ability to program how new tokens will function within the Ethereum ecosystem.  
+
+---  
+
+### ERC721
+A more complex token standard than ERC20, with multiple optional extensions, and is split across a number of contracts. Unlike ERC20, tokens of this standart are not interchangeable. Each token is different from others – it has different characteristics.  
+
+---  
+
 ### Head block
 The head block is the last block written to the blockchain, stored in reversible blocks.  
 
@@ -92,6 +102,11 @@ A string of characters (bit string) is used by the cryptographic algorithm for e
 
 ### Merkle Mountain Range
 A type of merkle tree that can be visualized as many (perfect) merkle trees which are then combined into 1, by creating a single root from all of their peaks.  
+
+---  
+
+### Merkle Patricia trie
+A hash tree that stores key-value pairs, with the keys being represented in binary form. The nodes of this tree consist of 2 types: those that contain part of the path (prefix), and end nodes that contain the stored value.  
 
 ---  
 
@@ -156,11 +171,6 @@ Tokens allocated for a stake acquisition that can’t be used for anything else 
 
 ---  
 
-### Web 3
-In the context of Ethereum, these are decentralized apps that run on the blockchain and allow anyone to participate without monetising their personal data.  
-
----  
-
 ### Transaction
 A complete all-or-nothing change to the blockchain. A combination of one or more actions. Usually the execution result of a smart contract.  
 
@@ -171,7 +181,10 @@ Wallets are clients that store keys that may or may not be associated with the p
 
 ---  
 
-### 
+### Web 3
+In the context of Ethereum, these are decentralized apps that run on the blockchain and allow anyone to participate without monetising their personal data.  
+
+---  
 
 ### Uniswap
 Uniswap is a decentralized exchange. Liquidity providers can earn fees by providing the required tokens or ETH for both sides of a trade. It is widely used and therefore has one of the highest liquidities for a very wide range of tokens.  
