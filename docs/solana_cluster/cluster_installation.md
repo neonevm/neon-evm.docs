@@ -59,7 +59,7 @@ $ cargo build --workspace --release
 ```
 It should build all packages in the workspace. The final artifacts will be placed into the `target/release` directory.
 
-> Note: Ubununtu 20.04 Linux platform not have libssl and libsssl 1.0.0 version in default packages and for sucess build need to make it's from [source](https://github.com/openssl/openssl/tree/OpenSSL_1_0_2-stable) or another binary package.
+> Note: [Ubununtu 20.04 Linux platform not have libssl and libsssl 1.0.0 version in default packages and for sucess build need to make it's from [source](https://github.com/openssl/openssl/tree/OpenSSL_1_0_2-stable) or another binary package containing it.
 
 ## PATH
 
@@ -167,14 +167,14 @@ The `proxy server` enables `Metamask` to work with Solana seamlessly. Current ve
 * `rlp`
 * `solana`
 
-Apply patch `./proxy/solana-py.patch` to `solana` python library in [Proxy Server](https://github.com/neonlabsorg/proxy-model.py) local repository path.
+Apply patch `./proxy/solana-py.patch` to `solana` python library in [proxy server](https://github.com/neonlabsorg/proxy-model.py) local repository path..
 
 The proxy server makes it possible. Export `program id` of the `evm_loader` before start of the proxy:
 ```sh
 $ export EVM_LOADER=6Xazu21Qa1SLk1RN5594uz4tDJr6gMhr2ykCD8CF29gw
 ```
 
-Now you can start it in in [Proxy Server](https://github.com/neonlabsorg/proxy-model.py) local repository path:
+Now you can start it in [proxy server](https://github.com/neonlabsorg/proxy-model.py) local repository path:
 ```sh
 $ python3 -m venv venv
 $ source venv/bin/activate
