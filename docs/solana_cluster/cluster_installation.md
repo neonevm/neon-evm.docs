@@ -59,7 +59,7 @@ $ cargo build --workspace --release
 ```
 It should build all packages in the workspace. The final artifacts will be placed into the `target/release` directory.
 
-> Note: [Ubuntu 20.04 Linux platform not have libssl and libsssl 1.0.0 version in default packages and for sucess build need to make it's from [source](https://github.com/openssl/openssl/tree/OpenSSL_1_0_2-stable) or another binary package containing it.
+> Note: Ubuntu 20.04 Linux platform not have libssl and libsssl 1.0.0 version in default packages and for sucess build need to make it's from [source](https://github.com/openssl/openssl/tree/OpenSSL_1_0_2-stable) or another binary package containing it.
 
 ## PATH
 
