@@ -1,0 +1,26 @@
+# Solana cluster
+Solana maintains several different clusters with different purposes. A Solana cluster is a set of validators that serve client transactions and maintain the integrity of the registry. Two or more clusters can coexist if they have a common genesis block. Otherwise, they simply ignore the existence of the other. Transactions sent to the wrong address are rejected.  
+
+### Endpoints
+Solana maintains dedicated api nodes to fulfill JSON-RPC requests for each public cluster, and third parties may as well. Here are the public RPC endpoints currently available and recommended for each public cluster:
+  * Devnet endpoint  
+`https://api.devnet.solana.com` — single Solana-hosted api node; rate-limited.  
+Devnet serves as a playground for anyone who wants to take Solana for a test drive, as a user, token holder, app developer, or validator. Tokens are not real.
+  * Testnet endpoint  
+`https://api.testnet.solana.com` — single Solana-hosted api node; rate-limited.  
+Testnet is used to stress test recent release features on a live cluster, particularly focused on network performance, stability and validator behavior. Tokens are not real.
+  * Mainnet Beta endpoints  
+`https://api.mainnet-beta.solana.com` — Solana-hosted api node cluster, backed by a load balancer; rate-limited.  
+`https://solana-api.projectserum.com` — Project Serum-hosted api node.  
+This is a permissionless, persistent cluster for early token holders and launch partners. Issuing tokens are real SOL.
+
+### Synchronization
+Fast, reliable synchronization is one of the main challenges for achieving high throughput. Traditional blockchains synchronize on large chunks of transactions called blocks. As a consensus algorithm, they use *[Proof-of-Work](https://en.wikipedia.org/wiki/Proof_of_work)* or *[Proof-of-Stake](https://en.wikipedia.org/wiki/Proof_of_stake)*.  
+Unlike traditional synchronization methods, Solana takes a completely approach, which it calls *[Proof-of-History](https://docs.neonlabs.org/docs/glossary#proof-of-history)*. Solana uses an optimistic method of processing blocks (it was introduced in 1981 and called [Optimistic Concurrency Control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control)).  
+The peculiarity of this method is that Solana technically never sends a *[block](https://docs.neonlabs.org/docs/glossary#block)*, but uses the term to describe the sequence of entries that validators vote on to achieve *confirmation*. By processing the transactions optimistically, there is effectively no delay between the time the last entry is received and the time when the node can vote. In the event consensus is not achieved, a node simply rolls back its state.
+
+
+> **More details**  
+> [A Solana cluster](https://docs.solana.com/cluster/overview)  
+> [Solana clusters](https://docs.solana.com/clusters)  
+> [Solana cluster RPC endpoints](https://docs.solana.com/cluster/rpc-endpoints)

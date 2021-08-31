@@ -92,6 +92,7 @@ module.exports = {
             'software_manuals/foundational_topics/gas',
             'software_manuals/foundational_topics/proof-of-work',
             'software_manuals/foundational_topics/proof-of-stake',
+            'software_manuals/foundational_topics/solana-cluster',
           ],
         },
         {

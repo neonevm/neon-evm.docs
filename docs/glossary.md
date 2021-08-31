@@ -136,6 +136,11 @@ A private key is a secret key used to sign transactions.
 
 ---  
 
+### Proof of History
+The blockchain algorithm for time synchronisation. Instead of using the classic concept of timestamps, it is possible to prove that a message/event occurred at a certain time after one event but before another.  
+
+---  
+
 ### Public key
 A publicly available key that can be authorized to permissions of an account and can be used to identify the origin transaction. A public key can be inferred from a signature.  
 
