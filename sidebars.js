@@ -67,7 +67,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Neon Swap',
+      label: 'NeonSwap',
       items:
       [
         'neonswap/neonswap_overview',
