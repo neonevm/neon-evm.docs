@@ -111,12 +111,12 @@ A hash tree that stores key-value pairs, with the keys being represented in bina
 ---  
 
 ### MetaMask
-MetaMask is a software cryptocurrency wallet used to interact with the Ethereum blockchain. It allows users to access their Ethereum wallet through a browser extension or mobile app, which can then be used to interact with decentralized applications.
+A software cryptocurrency wallet used to interact with the Ethereum blockchain. It allows users to access their Ethereum wallet through a browser extension or mobile app, which can then be used to interact with decentralized applications.  
 
 ----  
 
 ### NeonSwap
-NeonSwap is an open source service and a fork of [Uniswap V2](https://uniswap.org/blog/uniswap-v2), running on Neon EVM in Solana Testnet.  
+An open source service and a fork of [Uniswap V2](https://uniswap.org/blog/uniswap-v2), running on Neon EVM in Solana Testnet.  
 
 ---  
 
