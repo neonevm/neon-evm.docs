@@ -1,16 +1,16 @@
 # Porting dapps to Neon EVM
 
-*The purpose of this document is to share the experience with Ethereum users how easily their applications can be ported to Neon EVM. We want to demonstrate that our Neon Swap service allows you to run your dapps on Solana.*
+*The purpose of this document is to share the experience with Ethereum users how easily their applications can be ported to Neon EVM. We want to demonstrate that our NeonSwap service allows you to run your dapps on Solana.*
 
-Any dapp using the [UniSwap](https://doc.neonlabs.org/docs/glossary#uniswap) service consists of 2 parts: contracts and software serving these contracts. Contracts are loaded into a chain, and the software is deployed on a separate server for providing users interaction with these contracts.
+Any dapp using the [Uniswap](https://doc.neonlabs.org/docs/glossary#uniswap) service consists of 2 parts: contracts and software serving these contracts. Contracts are loaded into a chain, and the software is deployed on a separate server for providing users interaction with these contracts.
 
 Porting applications from [Ethereum](https://ethereum.org/en/) to [Solana](https://docs.solana.com/introduction) is done in 3 stages:  
 **Stage 1.** Deploying contracts in a Neon EVM environment.  
 **Stage 2.** Check if the deployed contracts work correctly.  
-**Stage 3.** Deploying the Neon Swap interface.
+**Stage 3.** Deploying the NeonSwap interface.
 
 ## Stage 1. Deploying contracts in a Neon EVM environment
-No changes to software serving contracts are required to port dapps using the [Neon Swap](https://doc.neonlabs.org/docs/glossary#neon-swap) service. Changes are made only to those components that are necessary for its operation on Neon EVM.  
+No changes to software serving contracts are required to port dapps using the [NeonSwap](https://doc.neonlabs.org/docs/glossary#neonswap) service. Changes are made only to those components that are necessary for its operation on Neon EVM.  
 
 The contracts are built by a typical Solidity compiler used in Ethereum. After compilation, all the necessary contracts are deployed on Neon EVM using a [Web 3](https://doc.neonlabs.org/docs/glossary#web3) proxy. This proxy provides a standard interface that Ethereum utilities and tools can use.  
 
@@ -49,7 +49,7 @@ Contracts health checking is performed in a real chain, not in a test environmen
 
 Unlike the test environment, in a really working chain, the range of test operations cannot be performed in full (for example, operations such as generating a block with a specified number of transactions, etc., are excluded). In a chain, all operations rely on real-time and a user checking the contracts cannot influence the block generation.  
 
-To test Neon Swap, we use the entire set of uniswap-v2-core tests available in Ethereum. The method of running these tests has been changed. Before running the tests, it is indicated that the deployment of contracts, calls to their methods, as well as testing takes place not in the test framework, but in the real blockchain.  
+To test NeonSwap, we use the entire set of uniswap-v2-core tests available in Ethereum. The method of running these tests has been changed. Before running the tests, it is indicated that the deployment of contracts, calls to their methods, as well as testing takes place not in the test framework, but in the real blockchain.  
 
 > For testing, we use an unmanaged environment. However, in uniswap-v2-core tests (in contracts), there are sections of program code that contain environment management. In these pieces, we were able to successfully replace the environment management to expectation for a reaction from a chain. That is, where the block is to be generated, a delay is set. Then an action is performed and the reaction of the contract is evaluated, namely, whether it meets the expectation or not. At the same time, we believe that the number of blocks produced may be different.  
 
@@ -72,12 +72,12 @@ const derivedPromise = promise.then((tx) => contract.provider.waitForTransaction
 ```
   * Increased the value of `gasLimit` in the `ethereum-waffle` library.
 
-## Stage 3. Deploying the Neon Swap interface
-After we have managed to get the addresses of the contracts loaded into the Neon EVM, we can start deploying the Neon Swap interface. It is necessary to specify that we use a real blockchain and our contracts are located in this blockchain.  
+## Stage 3. Deploying the NeonSwap interface
+After we have managed to get the addresses of the contracts loaded into the Neon EVM, we can start deploying the NeonSwap interface. It is necessary to specify that we use a real blockchain and our contracts are located in this blockchain.  
 
-**Changes for the Neon Swap interface**  
-For the Neon Swap interface to function successfully in Neon EVM, we were made the following changes:
-  * Added a new testnet to the adapted Neon Swap interface code. The name of the new network with the new chain-ID is registered in all places where it was used, including:
+**Changes for the NeonSwap interface**  
+For the NeonSwap interface to function successfully in Neon EVM, we were made the following changes:
+  * Added a new testnet to the adapted NeonSwap interface code. The name of the new network with the new chain-ID is registered in all places where it was used, including:
     * Added `ChainId LOCAL` to dependent libraries and sources.
     * ChainID, url was specified in the .env file.
   * For the new network, a set of the loaded contracts was registered. In the directory `node_modules`, the addresses of contracts in the sources and dependent libraries were replaced.
