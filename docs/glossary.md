@@ -151,6 +151,11 @@ Remix is an online web tool. It is an IDE (Integrated Development Environment) u
 
 ---  
 
+### RPC
+A Remote Procedure Call system.  
+
+---  
+
 ### Serialization
 Serialization is the process of turning an object in memory into a stream of bytes so it can be stored on disk or sent over the network.  
 
