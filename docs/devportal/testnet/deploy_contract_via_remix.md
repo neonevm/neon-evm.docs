@@ -59,7 +59,7 @@ Interaction with the EVM-loader is carried out through MetaMask. Choose the `Inj
 <p align="center">  
 
 ![](./images/remix-5.png)  
-Fig. 5 -Injected Web3 connects Remix with an active account in Metamask </p>  
+Fig. 5 - Injected Web3 connects Remix with an active account in Metamask </p>  
 
 The MetaMask window should appear. It should display a list of available accounts (in our case, only one account will be displayed). Choose this account and click `Next` (Fig. 6).  
 

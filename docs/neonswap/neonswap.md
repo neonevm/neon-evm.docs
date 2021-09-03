@@ -1,10 +1,10 @@
-# Porting dapps to Neon EVM
+# Migrating dapps to Neon EVM
 
 *The purpose of this document is to share the experience with Ethereum users how easily their applications can be ported to Neon EVM. We want to demonstrate that our NeonSwap service allows you to run your dapps on Solana.*
 
 Any dapp using the [Uniswap](https://doc.neonlabs.org/docs/glossary#uniswap) service consists of 2 parts: contracts and software serving these contracts. Contracts are loaded into a chain, and the software is deployed on a separate server for providing users interaction with these contracts.
 
-Porting applications from [Ethereum](https://ethereum.org/en/) to [Solana](https://docs.solana.com/introduction) is done in 3 stages:  
+Migrating applications from [Ethereum](https://ethereum.org/en/) to [Solana](https://docs.solana.com/introduction) is done in 3 stages:  
 **Stage 1.** Deploying contracts in a Neon EVM environment.  
 **Stage 2.** Check if the deployed contracts work correctly.  
 **Stage 3.** Deploying the NeonSwap interface.
