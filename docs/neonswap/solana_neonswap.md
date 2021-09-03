@@ -43,9 +43,10 @@ The results of the actions performed are shown in the following figure.
 ### Step 4. Add test assets
   * The accounts provided to you should have two tokens (*NEON_A* and *NEON_B*, for instance) already. If they do not appear, follow the steps below:
     * In MetaMask, click `Assets` and `Add Token`. There will be two assets.
-    * Copy/paste the following Token Contract Addresses and click `Next`:  
-`0xB150f5Df93491A3b8B1742f0b5943Ac4287C7064`  
-`0x5a379A80Ae648748baBcE274944Da26c6aa9bF9f`
+    * Copy/paste the following Token Contract Addresses and click `Next`:
+
+*0xB150f5Df93491A3b8B1742f0b5943Ac4287C7064*  
+*0x5a379A80Ae648748baBcE274944Da26c6aa9bF9f*
 
 ### Step 5. Start swapping
   * Copy contract addresses from Step 4.
