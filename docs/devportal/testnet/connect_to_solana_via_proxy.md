@@ -4,7 +4,7 @@
 
 Depending on the tasks to be solved, as well as on the location of the proxy and [Solana](https://docs.solana.com/introduction), you can use one of 3 options for configuring the network:
   * [Option 1:](#option-1-interaction-with-the-solana-cluster-via-a-proxy-hosted-on-a-remote-virtual-server) The proxy is hosted on a remote virtual server; either Solana Testnet or Solana Devnet is used.
-  * [Option 2:](#option-2-running-solana-testnet-via-a-proxy-hosted-locally) The proxy is hosted locally; Solana Testnet is used.
+  * [Option 2:](#option-2-running-solana-testnet-via-a-proxy-hosted-locally) The proxy is hosted locally; either Solana Testnet or Solana Devnet is used..
   * [Option 3:](#option-3-running-solana-via-a-proxy-when-both-are-hosted-locally) Both the proxy and Solana are hosted locally (debug mode, which allows you to configure your node locally).
 
 [Solana Testnet](https://docs.solana.com/clusters#testnet), like [Solana Devnet](https://docs.solana.com/clusters#devnet), is an alternative cryptocurrency chain exclusively for developers. It allows developers to run their node in a test blockchain and experiment without losing real currency.  
@@ -32,7 +32,7 @@ The settings menu window to selecting a network should open.
 
 #### Step 3
 Click `Add Network` in the top-right corner.  
-To connect to the Solana Testnet cluster, in the window opened fill in the fields, for example:
+To connect to the [Solana Testnet cluster](https://docs.solana.com/clusters#testnet), in the window opened fill in the fields, for example:
   * `Network Name`: "remote proxy - solana testnet"
   * `New RPC URL`: `https://proxy.testnet.neonlabs.org/solana`
   * `Chain ID`: 111
@@ -47,11 +47,11 @@ To connect to the [Solana Devnet cluster](https://docs.solana.com/clusters#devne
 #### Step 4
 After filling in the field click `Save`. Now you have access to the [Solana cluster](https://docs.solana.com/clusters) and can carry out transactions.
 
-## Option 2: Running Solana Testnet via a proxy hosted locally
+## Option 2: Running Solana cluster via a proxy hosted locally
 
 **The network configuration:**
   * Solana cluster is accessed via the proxy hosted locally.
-  * [Solana Testnet](https://docs.solana.com/clusters#testnet) is used and the proxy interacts with it through the EVM-loader.
+  * Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet) is used and the proxy interacts with it through the EVM-loader.
 
 #### Step 1
 Before you start, make sure that you have a daemon running. If you see something like:  
@@ -65,30 +65,43 @@ $ sudo systemctl start docker
 ```
 
 #### Step 2
-Start the proxy and connect it to the Docker network:
 
+Start the proxy and connect it to the Docker network:
 ```sh
-$ sudo docker run --rm -d --network host --name proxy cybercoredev/proxy:stable
+$ sudo docker run --rm -ti --network=host -e CONFIG=<devnet/testnet> cybercoredev/proxy:v0.2.0
 ```
 
 **The command line options:**
   * `--rm`: delete a container when the command is completed.
-  * `-d`: detach a terminal.
+  * `-ti`: allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
   * `--network host`: use host network.
-  * `--name proxy`: specify the proxy name.
-    * `cybercoredev/proxy:stable`: specific image name. 
-    * The EVM-loader address is registered inside `cybercoredev/proxy:stable`, so the proxy knows which EVM-loader is running in Solana Testnet.
+  * `-e`: set environment variables.
+  * `CONFIG=<devnet/testnet>`: Solana cluster configuration; either `CONFIG=devnet` or `CONFIG=testnet` is specified.
+  * `cybercoredev/proxy:v0.2.0`: specific proxy name.
+
+The EVM-loader address is registered inside `cybercoredev/proxy:v0.2.0`, so the proxy knows which EVM-loader is running in Solana cluster.
 
 After executing this command, the proxy will be available at `http://localhost:9090/solana`. This address is set by default.
 
-The proxy connect to public [Solana testnet RPC endoint](https://docs.solana.com/cluster/rpc-endpoints#testnet). To use a different endpoint, you need to specify the variable `-e SOLANA_URL='http://<Solana-node RPC endpoint>'` on the command line.
+A proxy connects to public [Solana cluster RPC endoint](https://docs.solana.com/cluster/rpc-endpoints) according to the following table:
+
+ Solana network | RPC endpoint 
+:-|:-
+devnet | `https://api.devnet.solana.com`
+testnet | `https://api.testnet.solana.com`
+
+To use a different endpoint, you need to specify the variable `-e SOLANA_URL='http://<Solana-node RPC endpoint>'` on the command line.
 
 When a proxy is deployed, it generates a wallet containing a key pair. If you do not need the new wallet and want to use the keys you already have, then you need to specify the path to your wallet on the command line. In this case, the poxy will not create a new key pair. The command line will look like the following:  
 
 ```sh
-$ sudo docker run --rm -d --network host -v ~/.config/solana/id.json:/root/.config/solana/id.json --name proxy cybercoredev/proxy:stable
+$ sudo docker run --rm -d --network=host -v ~/.config/solana/id.json:/root/.config/solana/id.json --name proxy cybercoredev/proxy:v0.2.0
 ```
-The parameter `~/.config/solana/id.json` - specifies the path to your key pair.
+
+**The command line options:**
+  * `-d`: detach a terminal.
+  * `~/.config/solana/id.json`: the path to your key pair.
+  * `--name proxy`: specify the proxy name.
 
 ## Option 3: Running Solana via a proxy when both are hosted locally
 
@@ -104,5 +117,5 @@ Execute the command:
 ```sh
 $ sudo REVISION=stable docker-compose -f docker-compose-test.yml up -d
 ```
-As soon as the latest command is completed, the proxy will start to deploy the EVM-loader in a local solana node. After that, the proxy and [Solana](https://docs.solana.com/cluster/overview) will be available at the URLs `http://localhost:9090/solana` and `http://localhost:8899`, respectively.
+As soon as the latest command is completed, the proxy will start to deploy the EVM-loader in a local solana node. After that, the proxy and Solana will be available at the URLs `http://localhost:9090/solana` and `http://localhost:8899`, respectively.
 
