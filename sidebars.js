@@ -78,6 +78,14 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Neon proxy',
+      items:
+      [
+        'proxy/operator_guide',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Software manuals',
       items:
       [
