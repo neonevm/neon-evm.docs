@@ -3,7 +3,7 @@
 
 Recently, when using NeonSwap and other smart contracts that use Neon,  you'll see a warning that all the calculations should be **rounded up to 9 decimal digits **
 
-####Why is it needed?
+#### Why is it needed?
 While usual Etherium transactions keep accuracy up to 18 decimal digits, values passed by worm-hole can only take the first 9 decimal digits.
 
 Neon EVM revokes and error in case there is a non-zero decimal digit after a nineth one, and transaction cannot be completed. 
