@@ -74,8 +74,18 @@ module.exports = {
         'neonswap/neonswap',
         'neonswap/neonswap_tests',
         'neonswap/solana_neonswap',
+        'neonswap/precision_accuracy'
       ],
     },
+    {
+      type: 'category',
+      label: 'hello World',
+      items:
+      [
+        'hello',
+      ],
+    },
+
     {
       type: 'category',
       label: 'Software manuals',

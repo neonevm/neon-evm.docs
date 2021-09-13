@@ -89,6 +89,9 @@ The token standard which is used for Ethereum smart contracts. Developed in 2015
 A more complex token standard than ERC20, with multiple optional extensions, and is split across a number of contracts. Unlike ERC20, tokens of this standart are not interchangeable. Each token is different from others – it has different characteristics.  
 
 ---  
+### GWEI
+A denomination of the cryptocurrency ETH, which is used on the Ethereum network. Gwei is the most commonly used unit of ETH because *gas* prices are easily specified in gwei. For example, instead of saying that your gas costs *0.000 000 001* ETH, you can say your gas costs *1* gwei.  
+
 
 ### Head block
 The head block is the last block written to the blockchain, stored in reversible blocks.  
