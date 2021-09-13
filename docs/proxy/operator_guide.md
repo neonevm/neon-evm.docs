@@ -13,7 +13,7 @@ The main task of a proxy operator is to install software on a server to accept a
     * Receiving requests over Web3 API protocol.
     * Shaping responses using Web3 API protocol.
     * Converting transactions to Solana format.
- * Connecting a Proxy server to a Solana cluster RPC endoint.   (- это реализуется ????)
+ * Connecting a Proxy server to a Solana cluster RPC endoint.
  * Successful execution of transactions.
 
 > All operations related to the execution of transactions on Solana are performed by the software installed on your node.
