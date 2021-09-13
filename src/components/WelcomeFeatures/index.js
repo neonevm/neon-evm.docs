@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import styles from './WelcomeFeatures.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from '@docusaurus/Link';
+import Head from '@docusaurus/Head';
 import { faNewspaper, faCompass, faKeyboard, faPaperPlane } from '@fortawesome/free-regular-svg-icons'
 
 
@@ -68,8 +69,11 @@ function Feature({title, icon, url, description}) {
 }
 
 export default function WelcomeFeatures() {
+  
  return (
-   <section className={styles.features}>
+   <>
+   <Head><title>Neon Docs</title></Head>
+     <section className={styles.features}>
      <div className="container">
        <div className={`row ${styles.featuresRow}`}>
          {FeatureList.map((props, idx) => (
@@ -77,7 +81,8 @@ export default function WelcomeFeatures() {
          ))}
        </div>
      </div>
-   </section>
+     </section>
+   </>
  );
 }
 
