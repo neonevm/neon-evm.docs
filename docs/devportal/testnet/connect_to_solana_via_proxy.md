@@ -118,3 +118,4 @@ Execute the command:
 $ sudo REVISION=stable docker-compose -f docker-compose-test.yml up -d
 ```
 As soon as the latest command is completed, the proxy will start to deploy the EVM-loader in a local solana node. After that, the proxy and Solana will be available at the URLs `http://localhost:9090/solana` and `http://localhost:8899`, respectively.
+
