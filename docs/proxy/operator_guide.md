@@ -90,7 +90,7 @@ $ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> cybercoredev/
   * `CONFIG=<network mode>`: specifies a Solana cluster operating mode; either `CONFIG=devnet` or `CONFIG=testnet` is recommended.
   * `cybercoredev/proxy:v0.2.0`: the specific proxy name.
 
-This command line will automatically perform all the actions required to build a docker and run a proxy, including: installation of packages and modules, patching API.
+This command line will automatically perform all the actions required to launch a docker-conrainer and run a proxy.
 
 #### CONFIG values
 Each `CONFIG` value (devnet/testnet/local), by default, the corresponding variables are set:
