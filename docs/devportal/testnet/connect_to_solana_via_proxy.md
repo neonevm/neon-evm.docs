@@ -4,7 +4,7 @@
 
 Depending on the tasks to be solved, as well as on the location of the proxy and [Solana](https://docs.solana.com/introduction), you can use one of 3 options for configuring the network:
   * [Option 1:](#option-1-interaction-with-the-solana-cluster-via-a-proxy-hosted-on-a-remote-virtual-server) The proxy is hosted on a remote virtual server; either Solana Testnet or Solana Devnet is used.
-  * [Option 2:](#option-2-running-solana-testnet-via-a-proxy-hosted-locally) The proxy is hosted locally; either Solana Testnet or Solana Devnet is used..
+  * [Option 2:](#option-2-running-solana-testnet-via-a-proxy-hosted-locally) The proxy is hosted locally; either Solana Testnet or Solana Devnet is used.
   * [Option 3:](#option-3-running-solana-via-a-proxy-when-both-are-hosted-locally) Both the proxy and Solana are hosted locally (debug mode, which allows you to configure your node locally).
 
 [Solana Testnet](https://docs.solana.com/clusters#testnet), like [Solana Devnet](https://docs.solana.com/clusters#devnet), is an alternative cryptocurrency chain exclusively for developers. It allows developers to run their node in a test blockchain and experiment without losing real currency.  
@@ -68,24 +68,24 @@ $ sudo systemctl start docker
 
 Start the proxy and connect it to the Docker network:
 ```sh
-$ sudo docker run --rm -ti --network=host -e CONFIG=<devnet/testnet> cybercoredev/proxy:v0.2.0
+$ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> cybercoredev/proxy:v0.2.0
 ```
 
-**The command line options:**
+**The command line options:**  
   * `--rm`: delete a container when the command is completed.
   * `-ti`: allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
   * `--network host`: use host network.
   * `-e`: set environment variables.
-  * `CONFIG=<devnet/testnet>`: Solana cluster configuration; either `CONFIG=devnet` or `CONFIG=testnet` is specified.
+  * `CONFIG=<network mode>`: specifies a solana operating mode; either `CONFIG=devnet` or `CONFIG=testnet` is recommended.
   * `cybercoredev/proxy:v0.2.0`: specific proxy name.
 
 The EVM-loader address is registered inside `cybercoredev/proxy:v0.2.0`, so the proxy knows which EVM-loader is running in Solana cluster.
 
 After executing this command, the proxy will be available at `http://localhost:9090/solana`. This address is set by default.
 
-A proxy connects to public [Solana cluster RPC endoint](https://docs.solana.com/cluster/rpc-endpoints) according to the following table:
+A proxy connects to public [Solana cluster RPC endoint](https://docs.solana.com/cluster/rpc-endpoints) depending on the *SOLANA_URL* value set. The table below shows *endpoint* value that are set automatically when specifying *CONFIG*.
 
- Solana network | RPC endpoint 
+CONFIG | RPC endpoint
 :-|:-
 devnet | `https://api.devnet.solana.com`
 testnet | `https://api.testnet.solana.com`

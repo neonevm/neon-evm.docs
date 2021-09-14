@@ -43,6 +43,7 @@ module.exports = {
       [
         'devportal/eth_sol_solution',
         'devportal/neon_evm_arch',
+        'devportal/erc20wrapper',
         'devportal/value_token',
         'devportal/metamask_setup',
         'devportal/bpf_trace',
@@ -74,6 +75,14 @@ module.exports = {
         'neonswap/neonswap',
         'neonswap/neonswap_tests',
         'neonswap/solana_neonswap',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Neon proxy',
+      items:
+      [
+        'proxy/operator_guide',
       ],
     },
     {
