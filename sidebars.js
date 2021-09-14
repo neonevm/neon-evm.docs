@@ -43,6 +43,7 @@ module.exports = {
       [
         'devportal/eth_sol_solution',
         'devportal/neon_evm_arch',
+        'devportal/erc20wrapper',
         'devportal/value_token',
         'devportal/metamask_setup',
         'devportal/bpf_trace',
