@@ -20,10 +20,10 @@ The main task of a proxy operator is to install software on a server to accept a
 
 ## Operator requirements
 
-If you do not have public and private keys in Solana, as well as a balance to keep the SOL tokens, you need to create them first.
+If you have not registered in Solana, you need to do this, that is, create an account with a balance for storing SOL tokens and get the public and private keys.
 
 #### Minimum SOL requirements
-There is no strict minimum amount of SOL required to run an operator on Neon EVM.
+There is no strict minimum amount of SOL required to run an operator on Neon EVM. However, you should take into account that you will need tokens to create accounts for new users, deploy contracts, and also to execute transactions.
 
 #### Hardware recommendations
 The minimum specifications recommended to choose your node:
@@ -90,14 +90,8 @@ $ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> cybercoredev/
   * `CONFIG=<network mode>`: specifies a Solana cluster operating mode; either `CONFIG=devnet` or `CONFIG=testnet` is recommended.
   * `cybercoredev/proxy:v0.2.0`: the specific proxy name.
 
+This command line will automatically perform all the actions required to build a docker and run a proxy, including: installation of packages and modules, patching API.
 
-#### Start proxy
-
-To start a proxy, you just need to run the *run-proxy.sh* script. This script will automatically perform all the actions required to build a docker, including: installation of packages and modules, patching API.
-
-```sh
-$ sudo ./proxy/run-proxy.sh
-```
 #### CONFIG values
 Each `CONFIG` value (devnet/testnet/local), by default, the corresponding variables are set:
   * `SOLANA_URL`
