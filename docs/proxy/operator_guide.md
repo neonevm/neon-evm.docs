@@ -70,6 +70,7 @@ you need to run the daemon first:
 $ sudo systemctl start docker
 ```
 
+Для использования прокси из докера не требуется клонировать репозиторий (тем более, что пользователь склонирует develop ветку, которая не соответствует образу cybercoredev/proxy:v0.2.0)
 #### Clone the *proxy-model.py* repository from GitHub
 
 ```sh
@@ -91,8 +92,8 @@ $ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> cybercoredev/
   * `-ti`: allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
   * `--network host`: use host network.
   * `-e`: set environment variables.
-  * `CONFIG=<network mode>`: specifies a Solana cluster operating mode; either `CONFIG=devnet` or `CONFIG=testnet` is recommended.
-  * `cybercoredev/proxy:v0.2.0`: the specific proxy name.
+  * `-e CONFIG=<network mode>`: specifies a Solana cluster operating mode; either `CONFIG=devnet` or `CONFIG=testnet` is recommended.
+  * `cybercoredev/proxy:v0.2.0`: the specific proxy image.
 
 This command line will automatically perform all the actions required to launch a docker-conrainer and run a proxy.
 
@@ -161,8 +162,8 @@ devnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
 testnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
 local | deploy
 
-If you set the value to `ETH_TOKEN_MINT=deploy`, then the new collateral pool accounts will be created.
-new token will be created.
+
+If you set the value to `ETH_TOKEN_MINT=deploy`, then the new token will be created.
 
 ### Using PIP
 Надо пройти этот путь и описать его.
