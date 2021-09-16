@@ -92,6 +92,11 @@ $ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> cybercoredev/
 
 This command line will automatically perform all the actions required to launch a docker-conrainer and run a proxy.
 
+To pass your private key (.json file) to the container, you also need to specify the option `-v (--volume)` in the command line:
+```
+ -v <path-to-keypair-file/id.json>:/root/.config/solana/id.json
+```
+
 #### CONFIG values
 Each `CONFIG` value (devnet/testnet/local), by default, the corresponding variables are set:
   * `SOLANA_URL`
@@ -157,55 +162,3 @@ local | deploy
 
 If you set the value to `ETH_TOKEN_MINT=deploy`, then the new collateral pool accounts will be created.
 new token will be created.
-
-### Using PIP
-
-Clone the *proxy-model.py* repository from GitHub.  
-```
-$ pip install git+https://github.com/neonlabsorg/proxy-model.py
-$ cd proxy-model.py
-```
-Install packages specified in *requirements.txt* using PIP. At the time of creating this guide, the list of packages in requirements.txt was as follows:  
-```sh
-$ cat requirements.txt
-  typing-extensions==3.7.4.2
-  ecdsa==0.16.0
-  pysha3==1.0.2
-  eth-keys==0.3.3
-  rlp==2.0.1
-  web3
-  solana==0.10.0
-```
-
-Install the packages.
-```
-$ pip install -r requirements.txt
-```  
-
-Set the following variables:
-```sh
-export EVM_LOADER=CXRkrvuH4DikTHuC97ofmX1LMvaMeffmwDwNcoN2AJ4Z
-export ETH_TOKEN_MINT=HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
-export SOLANA_URL="http://localhost:8899"
-export COLLATERAL_POOL_BASE=CXRkrvuH4DikTHuC97ofmX1LMvaMeffmwDwNcoN2AJ4Z
-```
-
-Start proxy.
-```sh
-$ python3 -m proxy --hostname 0.0.0.0 --port 9090 --enable-web-server --plugins proxy.plugin.SolanaProxyPlugin
-```
-
-After running this command, the proxy will contact the node at `SOLANA_URL`.
-
-
-
-
-
-
-
-
-
-
-
-
-
