@@ -43,10 +43,14 @@ The following software should be installed on your node:
   * Docker
   * Docker-compose
 
+Пока стоит предлагать запуск прокси внутри докера. Для нас не особо критичны будут задержки, которые появляются при таком подходе.
 > Docker is used only for development purposes. Running an operator inside Docker for a live network is not recommended. This is due to Docker's overall containerization overhead and resultant performance degradation.
 
 #### Networking
 Internet service should be at least 300 Mbit/s.
+
+#### Solana Node
+Для нас критична скорость обмена с нодой и желательно иметь свою выделенную API ноду соланы.
 
 ## Installation
 
@@ -91,6 +95,8 @@ $ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> cybercoredev/
   * `cybercoredev/proxy:v0.2.0`: the specific proxy name.
 
 This command line will automatically perform all the actions required to launch a docker-conrainer and run a proxy.
+
+Нужно описать, каким образом внутрь контейнера можно передать приватный ключ оператора.
 
 #### CONFIG values
 Each `CONFIG` value (devnet/testnet/local), by default, the corresponding variables are set:
@@ -159,6 +165,7 @@ If you set the value to `ETH_TOKEN_MINT=deploy`, then the new collateral pool ac
 new token will be created.
 
 ### Using PIP
+Надо пройти этот путь и описать его.
 
 Clone the *proxy-model.py* repository from GitHub.  
 ```
@@ -166,6 +173,8 @@ $ pip install git+https://github.com/neonlabsorg/proxy-model.py
 $ cd proxy-model.py
 ```
 Install packages specified in *requirements.txt* using PIP. At the time of creating this guide, the list of packages in requirements.txt was as follows:  
+Неблагодарное это дело приводить список требуемых пакетов. Давай просто укажем, что найти их можно в этом файле и как поставить
+(эти сведения точно не будут сильно меняться в процессе).
 ```sh
 $ cat requirements.txt
   typing-extensions==3.7.4.2
@@ -183,6 +192,7 @@ $ pip install -r requirements.txt
 ```  
 
 Set the following variables:
+Эти параметры неверные!
 ```sh
 export EVM_LOADER=CXRkrvuH4DikTHuC97ofmX1LMvaMeffmwDwNcoN2AJ4Z
 export ETH_TOKEN_MINT=HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
@@ -190,6 +200,9 @@ export SOLANA_URL="http://localhost:8899"
 export COLLATERAL_POOL_BASE=CXRkrvuH4DikTHuC97ofmX1LMvaMeffmwDwNcoN2AJ4Z
 ```
 
+Предлагаю использовать запуск через run_proxy.sh. Тогда он будет такой же, как и в докере (конфигурацию можно будет задать
+переменной окружения CONFIG). Но нужно будет отметить, что для целей оперетора (оплата создания аккаунтов и оплата выполнения транзакций)
+используется текущих ключ пользователя (посмотреть можно с помощью `solana address`, создать как `solana-pubkey new`)
 Start proxy.
 ```sh
 $ python3 -m proxy --hostname 0.0.0.0 --port 9090 --enable-web-server --plugins proxy.plugin.SolanaProxyPlugin
