@@ -90,6 +90,11 @@ A more complex token standard than ERC20, with multiple optional extensions, and
 
 ---  
 
+### Gwei
+A denomination of the cryptocurrency ETH, which is used on the Ethereum network. Gwei is the most commonly used unit of ETH because *gas* prices are easily specified in gwei. For example, instead of saying that your gas costs *0.000 000 001* ETH, you can say your gas costs *1* gwei.  
+
+---  
+
 ### Head block
 The head block is the last block written to the blockchain, stored in reversible blocks.  
 
@@ -193,6 +198,11 @@ Wallets are clients that store keys that may or may not be associated with the p
 
 ### Web 3
 In the context of Ethereum, these are decentralized apps that run on the blockchain and allow anyone to participate without monetising their personal data.  
+
+---  
+
+### Wormhole
+The Solana Wormhole is an Ethereum bridge that helps transfer wealth from the Ethereum blockchain to the Solana blockchain. It also helps transfer liquidity between the Ethereum ERC-20 token standard to the Solana SPL token standard.  
 
 ---  
 

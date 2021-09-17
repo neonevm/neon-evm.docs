@@ -20,12 +20,18 @@ The main task of a proxy operator is to install software on a server to accept a
 
 ## Operator requirements
 
-If you have not registered in Solana, you need to do this, that is, create an account with a balance for storing SOL tokens and get the public and private keys.
+If you have not registered in Solana, you need to do this, that is, create an account with a balance for storing SOL tokens and get the public and private keys.  
 
-#### Minimum SOL requirements
-There is no strict minimum amount of SOL required to run an operator on Neon EVM. However, you should take into account that you will need tokens to create accounts for new users, deploy contracts, and also to execute transactions.
+There is no strict minimum amount of SOL required to run an operator on Neon EVM. However, you should take into account that you will need tokens to create accounts for new users, deploy contracts, and also to execute transactions.  
 
-#### Hardware recommendations
+In addition to the balance for storing SOL tokens, an operator must also have the `ETH_TOKEN_MINT`balance for storing value-tokens. These tokens are used to pay funds from users to an operator for the successful execution of transactions. Depending on the chosen configuration, specific values for `ETH_TOKEN_MINT` are indicated in the [table](#eth_token_mint) below.  
+
+To create the `ETH_TOKEN_MINT` balance, you can use the following command:
+```
+spl-token -u <Solana RPC node URL> create-account <ETH_TOKEN_MINT>
+```
+
+### Hardware recommendations
 The minimum specifications recommended to choose your node:
   * CPU
     * High Clock Speed 4+ Cores, or more
@@ -35,7 +41,7 @@ The minimum specifications recommended to choose your node:
   * Disk space amount
     * 80 GB, or more
 
-#### Software recommendations
+### Software recommendations
 The following software should be installed on your node:
   * OS
     * Ubuntu 20.04, or later
@@ -45,54 +51,53 @@ The following software should be installed on your node:
 
 > Docker is used only for development purposes. Running an operator inside Docker for a live network is not recommended. This is due to Docker's overall containerization overhead and resultant performance degradation.
 
-#### Networking
+### Networking
 Internet service should be at least 300 Mbit/s.
 
-## Installation
+## Installation using docker
 
 After you have choosed a node that meets the listed recommendations, you can start installing a proxy operator software on it.  
 
-### Using Docker
+### Run a daemon
 
-#### Run a daemon
+Make sure that you have a daemon running. If you see something like:
 
-Make sure that you have a daemon running. If you see something like:  
 ```sh
 $ docker info
 Cannot connect to the Docker daemon at <docker.sock>. Is the docker daemon running?
 ```
+
 you need to run the daemon first:
+
 ```sh
 $ sudo systemctl start docker
 ```
 
-#### Clone the *proxy-model.py* repository from GitHub
+### Start a proxy in a docker container
 
-```sh
-$ git clone https://github.com/neonlabsorg/proxy-model.py.git
-$ cd proxy-model.py
-```
-
-#### Start docker
-
-Сreate an image of a machine on which the proxy will run.
+Create and run a proxy container on the daemon.
 When starting docker, you need to set the *CONFIG* environment variable, which can take one of the following values: *local*, *devnet*, *testnet*.
 
 ```sh
-$ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> cybercoredev/proxy:v0.2.0
+$ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> -v <path-to-keypair-file/id.json>:/root/.config/solana/id.json cybercoredev/proxy:v0.2.0
 ```
 
 **The command line options:**
-  * `--rm`: delete a container when the command is completed.
-  * `-ti`: allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
-  * `--network host`: use host network.
-  * `-e`: set environment variables.
-  * `CONFIG=<network mode>`: specifies a Solana cluster operating mode; either `CONFIG=devnet` or `CONFIG=testnet` is recommended.
-  * `cybercoredev/proxy:v0.2.0`: the specific proxy name.
+  * `--rm` — delete a container when the command is completed.
+  * `-ti` — allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
+  * `--network host` — use host network.
+  * `-e CONFIG=<network mode>` — specifies a Solana cluster operating mode; either `CONFIG=devnet` or `CONFIG=testnet` is recommended.
+  * `-v <path-to-keypair-file/id.json>:/root/.config/solana/id.json` — specifies the path to the .json file where your keypair is stored and passes your private key to the container.
+  * `cybercoredev/proxy:v0.2.0` — the specific proxy image.
 
-This command line will automatically perform all the actions required to launch a docker-conrainer and run a proxy.
+This command line will automatically perform all the actions required to launch a docker-conrainer and run a proxy.  
 
-#### CONFIG values
+*Example*
+```sh
+$ sudo docker run --rm -ti --network=host -e CONFIG=devnet -v ~/.config/solana/id.json:/root/.config/solana/id.json cybercoredev/proxy:v0.2.0
+```
+
+### CONFIG values
 Each `CONFIG` value (devnet/testnet/local), by default, the corresponding variables are set:
   * `SOLANA_URL`
   * `NEON_CHAIN_ID`
@@ -109,13 +114,13 @@ devnet | `https://api.devnet.solana.com` | 0x6e | 10 s
 testnet | `https://api.testnet.solana.com` | 0x6f | 15 s
 local | `http://localhost:8899` | 0x6f | 0,9 s
 
-**SOLANA_URL**  
+#### SOLANA_URL
 Specifies a Solana RPC endpoint that a proxy is connecting to. If you specify `CONFIG=local` and `SOLANA_URL=<your node URL>`, then requests of a proxy will be sent to your node.  
 
-**NEON_CHAIN_ID**  
+#### NEON_CHAIN_ID
 You can run a proxy with your own chain by specifying `NEON_CHAIN_ID`.  
 
-**NEON_CLI_TIMEOUT**  
+#### NEON_CLI_TIMEOUT
 In Neon EVM, a transaction is run for emulation before execution to determine accounts that will be involved in it. The `NEON_CLI_TIMEOUT` variable specifies the time (in seconds) required for a transaction to be executed.  
 
 The emulation execution time is affected by the following factors:
@@ -124,7 +129,7 @@ The emulation execution time is affected by the following factors:
 
 Setting the `NEON_CLI_TIMEOUT` time too short may not be sufficient to complete a transaction and pack it into a block. Therefore, `NEON_CLI_TIMEOUT` is set to the smallest value for `CONFIG = local`. Setting the `NEON_CLI_TIMEOUT` value too high may block other users from accessing this node.  
 
-**EVM_LOADER**  
+#### EVM_LOADER
 `CONFIG` defaults the following values for the variable `EVM_LOADER`:
 
 CONFIG | EVM_LOADER
@@ -135,7 +140,7 @@ local | deploy
 
 If you set the value to `EVM_LOADER=deploy`, then the new Neon EVM will be deployed.  
 
-**COLLATERAL_POOL_BASE**  
+#### COLLATERAL_POOL_BASE
 `CONFIG` defaults the following values for the variable `COLLATERAL_POOL_BASE`:
 
 CONFIG | COLLATERAL_POOL_BASE
@@ -146,7 +151,7 @@ local | deploy
 
 If you set the value to `COLLATERAL_POOL_BASE=deploy`, then the new collateral pool accounts will be created.  
 
-**ETH_TOKEN_MINT**  
+#### ETH_TOKEN_MINT
 `CONFIG` defaults the following values for the variable `ETH_TOKEN_MINT`:
 
 CONFIG | ETH_TOKEN_MINT
@@ -155,57 +160,4 @@ devnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
 testnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
 local | deploy
 
-If you set the value to `ETH_TOKEN_MINT=deploy`, then the new collateral pool accounts will be created.
-new token will be created.
-
-### Using PIP
-
-Clone the *proxy-model.py* repository from GitHub.  
-```
-$ pip install git+https://github.com/neonlabsorg/proxy-model.py
-$ cd proxy-model.py
-```
-Install packages specified in *requirements.txt* using PIP. At the time of creating this guide, the list of packages in requirements.txt was as follows:  
-```sh
-$ cat requirements.txt
-  typing-extensions==3.7.4.2
-  ecdsa==0.16.0
-  pysha3==1.0.2
-  eth-keys==0.3.3
-  rlp==2.0.1
-  web3
-  solana==0.10.0
-```
-
-Install the packages.
-```
-$ pip install -r requirements.txt
-```  
-
-Set the following variables:
-```sh
-export EVM_LOADER=CXRkrvuH4DikTHuC97ofmX1LMvaMeffmwDwNcoN2AJ4Z
-export ETH_TOKEN_MINT=HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
-export SOLANA_URL="http://localhost:8899"
-export COLLATERAL_POOL_BASE=CXRkrvuH4DikTHuC97ofmX1LMvaMeffmwDwNcoN2AJ4Z
-```
-
-Start proxy.
-```sh
-$ python3 -m proxy --hostname 0.0.0.0 --port 9090 --enable-web-server --plugins proxy.plugin.SolanaProxyPlugin
-```
-
-After running this command, the proxy will contact the node at `SOLANA_URL`.
-
-
-
-
-
-
-
-
-
-
-
-
-
+If you set the value to `ETH_TOKEN_MINT=deploy`, then the new token will be created.
