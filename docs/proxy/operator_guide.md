@@ -66,29 +66,22 @@ you need to run the daemon first:
 $ sudo systemctl start docker
 ```
 
-#### Clone the *proxy-model.py* repository from GitHub
-
-```sh
-$ git clone https://github.com/neonlabsorg/proxy-model.py.git
-$ cd proxy-model.py
-```
-
 #### Start docker
 
 Сreate an image of a machine on which the proxy will run.
 When starting docker, you need to set the *CONFIG* environment variable, which can take one of the following values: *local*, *devnet*, *testnet*.
 
 ```sh
-$ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> cybercoredev/proxy:v0.2.0
+$ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> -v <path-to-keypair-file/id.json>:/root/.config/solana/id.json cybercoredev/proxy:v0.2.0
 ```
 
 **The command line options:**
-  * `--rm`: delete a container when the command is completed.
-  * `-ti`: allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
-  * `--network host`: use host network.
-  * `-e`: set environment variables.
-  * `CONFIG=<network mode>`: specifies a Solana cluster operating mode; either `CONFIG=devnet` or `CONFIG=testnet` is recommended.
-  * `cybercoredev/proxy:v0.2.0`: the specific proxy name.
+  * `--rm` — delete a container when the command is completed.
+  * `-ti` — allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
+  * `--network host` — use host network.
+  * `-e CONFIG=<network mode>` — specifies a Solana cluster operating mode; either `CONFIG=devnet` or `CONFIG=testnet` is recommended.
+  * `-v <path-to-keypair-file/id.json>:/root/.config/solana/id.json` — specifies the path to the .json file where your keypair is stored and passes your private key to the container.
+  * `cybercoredev/proxy:v0.2.0` — the specific proxy image.
 
 This command line will automatically perform all the actions required to launch a docker-conrainer and run a proxy.
 
@@ -155,57 +148,4 @@ devnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
 testnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
 local | deploy
 
-If you set the value to `ETH_TOKEN_MINT=deploy`, then the new collateral pool accounts will be created.
-new token will be created.
-
-### Using PIP
-
-Clone the *proxy-model.py* repository from GitHub.  
-```
-$ pip install git+https://github.com/neonlabsorg/proxy-model.py
-$ cd proxy-model.py
-```
-Install packages specified in *requirements.txt* using PIP. At the time of creating this guide, the list of packages in requirements.txt was as follows:  
-```sh
-$ cat requirements.txt
-  typing-extensions==3.7.4.2
-  ecdsa==0.16.0
-  pysha3==1.0.2
-  eth-keys==0.3.3
-  rlp==2.0.1
-  web3
-  solana==0.10.0
-```
-
-Install the packages.
-```
-$ pip install -r requirements.txt
-```  
-
-Set the following variables:
-```sh
-export EVM_LOADER=CXRkrvuH4DikTHuC97ofmX1LMvaMeffmwDwNcoN2AJ4Z
-export ETH_TOKEN_MINT=HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
-export SOLANA_URL="http://localhost:8899"
-export COLLATERAL_POOL_BASE=CXRkrvuH4DikTHuC97ofmX1LMvaMeffmwDwNcoN2AJ4Z
-```
-
-Start proxy.
-```sh
-$ python3 -m proxy --hostname 0.0.0.0 --port 9090 --enable-web-server --plugins proxy.plugin.SolanaProxyPlugin
-```
-
-After running this command, the proxy will contact the node at `SOLANA_URL`.
-
-
-
-
-
-
-
-
-
-
-
-
-
+If you set the value to `ETH_TOKEN_MINT=deploy`, then the new token will be created.
