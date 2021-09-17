@@ -20,17 +20,16 @@ The main task of a proxy operator is to install software on a server to accept a
 
 ## Operator requirements
 
-If you have not registered in Solana, you need to do this, that is, create an account with a balance for storing SOL tokens and get the public and private keys.
+If you have not registered in Solana, you need to do this, that is, create an account with a balance for storing SOL tokens and get the public and private keys.  
 
-To create a balance, you can use the following command:
+There is no strict minimum amount of SOL required to run an operator on Neon EVM. However, you should take into account that you will need tokens to create accounts for new users, deploy contracts, and also to execute transactions.  
+
+In addition to the balance for storing SOL tokens, an operator must also have the `ETH_TOKEN_MINT`balance for storing value-tokens. These tokens are used to pay funds from users to an operator for the successful execution of transactions. Depending on the chosen configuration, specific values for `ETH_TOKEN_MINT` are indicated in the [table](#eth_token_mint) below.  
+
+To create the `ETH_TOKEN_MINT` balance, you can use the following command:
 ```
 spl-token -u <Solana RPC node URL> create-account <ETH_TOKEN_MINT>
 ```
-
-The `ETH_TOKEN_MINT` variable defines the type of payment token used for transferring funds from users to an operator for the successful execution of transactions. Depending on the chosen configuration, specific values for `ETH_TOKEN_MINT` are indicated in the [table](#eth_token_mint) below.
-
-### Minimum SOL requirements
-There is no strict minimum amount of SOL required to run an operator on Neon EVM. However, you should take into account that you will need tokens to create accounts for new users, deploy contracts, and also to execute transactions.
 
 ### Hardware recommendations
 The minimum specifications recommended to choose your node:

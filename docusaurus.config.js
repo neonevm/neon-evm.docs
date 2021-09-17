@@ -13,11 +13,14 @@ module.exports = {
   organizationName: 'neonlabsorg', // Usually your GitHub org/user name.
   projectName: 'neon-evm.docs', // Usually your repo name.
   themeConfig: {
-    /*algolia: {
-      apiKey: '',
-      indexName: '',
-      appId: ''   //optional
-    },*/
+    algolia: {
+      apiKey: 'd6087190dcafb13244b08a148f16fd70',
+      indexName: 'neon-labs',
+      inputSelector: 'search something...',
+      algoliaOptions: { 'facetFilters': ["type:$TYPE"] },
+      debug: false,
+      dropdown: true
+    },
     navbar: {
       title: 'Neon Docs',
       logo: {
