@@ -118,7 +118,12 @@ A hash tree that stores key-value pairs, with the keys being represented in bina
 ### MetaMask
 A software cryptocurrency wallet used to interact with the Ethereum blockchain. It allows users to access their Ethereum wallet through a browser extension or mobile app, which can then be used to interact with decentralized applications.  
 
-----  
+---  
+
+### MVP
+Мinimum viable product — a product with minimal, but sufficient functions to satisfy the first consumers. The main task is to get feedback for the formation of hypotheses for the further product development.  
+
+---  
 
 ### NeonSwap
 An open source service and a fork of [Uniswap V2](https://uniswap.org/blog/uniswap-v2), running on Neon EVM in Solana Testnet.  

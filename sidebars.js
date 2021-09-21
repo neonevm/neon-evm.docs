@@ -116,5 +116,31 @@ module.exports = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'Design proposals',
+      items: 
+      [
+        {
+          type: 'category',
+          label: 'Implemented',
+          items: 
+          [
+            'design_proposals/implemented/implemented_proposals',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Accepted',
+          items:
+          [
+            'design_proposals/accepted/accepted_proposals',
+            'design_proposals/accepted/gas_calculator',
+            'design_proposals/accepted/unsupported_functions',
+            'design_proposals/accepted/storage_size_for_account',
+          ],
+        },
+      ],
+    },
   ],
 };
