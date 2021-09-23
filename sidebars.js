@@ -135,6 +135,7 @@ module.exports = {
           items:
           [
             'design_proposals/accepted/accepted_proposals',
+            'design_proposals/accepted/precompiled_contracts',
             'design_proposals/accepted/gas_calculator',
             'design_proposals/accepted/unsupported_functions',
             'design_proposals/accepted/storage_size_for_account',

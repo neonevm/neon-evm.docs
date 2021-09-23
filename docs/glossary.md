@@ -121,7 +121,7 @@ A software cryptocurrency wallet used to interact with the Ethereum blockchain. 
 ---  
 
 ### MVP
-Мinimum viable product — a product with minimal, but sufficient functions to satisfy the first consumers. The main task is to get feedback for the formation of hypotheses for the further product development.  
+Мinimum Viable Product (MVP) is a product with minimal, but sufficient functions to satisfy the first consumers. The main task is to get feedback for the formation of hypotheses for the further product development.  
 
 ---  
 
@@ -166,6 +166,11 @@ A Remote Procedure Call system.
 
 ---  
 
+### RSA
+Rivest Shamir Adleman (RSA) is a public-key cryptosystem that is widely used for secure data transmission.  
+
+---  
+
 ### Serialization
 Serialization is the process of turning an object in memory into a stream of bytes so it can be stored on disk or sent over the network.  
 
@@ -196,6 +201,16 @@ A complete all-or-nothing change to the blockchain. A combination of one or more
 
 ---  
 
+### Uniswap
+Uniswap is a decentralized exchange. Liquidity providers can earn fees by providing the required tokens or ETH for both sides of a trade. It is widely used and therefore has one of the highest liquidities for a very wide range of tokens.  
+
+---  
+
+### USDT token
+USDT is the ticker symbol for the [Tether](https://en.wikipedia.org/wiki/Tether_(cryptocurrency)) stablecoin cryptocurrency.  
+
+---  
+
 ### Wallet
 Wallets are clients that store keys that may or may not be associated with the permissions of one or more accounts. Ideally a wallet has a locked (encrypted) and unlocked (decrypted) state that is protected by a high entropy password.  
 
@@ -211,10 +226,7 @@ The Solana Wormhole is an Ethereum bridge that helps transfer wealth from the Et
 
 ---  
 
-### Uniswap
-Uniswap is a decentralized exchange. Liquidity providers can earn fees by providing the required tokens or ETH for both sides of a trade. It is widely used and therefore has one of the highest liquidities for a very wide range of tokens.  
+### ZK-STARK
+Zero-Knowledge Scalable Transparent Argument of Knowledge (ZK-STARK) is a cryptographic protocol that uses public zero-knowledge probabilistically verifiable proofs. This technology allows users to exchange verified information without disclosing it, or to perform computations with a third party without disclosing the computation.  
 
 ---  
-
-### USDT token
-USDT is the ticker symbol for the [Tether](https://en.wikipedia.org/wiki/Tether_(cryptocurrency)) stablecoin cryptocurrency.  
