@@ -1,11 +1,11 @@
-# Precompiled contracts that can not be used in Solana
+# Precompiled Contracts that can not be used in Solana
 
 ### Problem
 Contracts written in the Solidity language cannot work in Solana if they contain calls to the following precompiled contracts:
-  * `bigModExp` — Used for efficient [RSA](https://doc.neonlabs.org/docs/glossary#rsa) verification inside of EVM, as well as other forms of number theory-based cryptography.
-  * `bn256Add` — Performs addition on the elliptic curve operations.
-  * `bn256ScalarMult` — Performs scalar multiplication on the elliptic curve operations.
-  * `bn256Pairing` — Elliptic curve pairing operations to perform [zkSNARKs](https://doc.neonlabs.org/docs/glossary#zk-snark) verification within the block gas limit.
+  * *[bigModExp](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-198.md)* — Used for efficient [RSA](https://doc.neonlabs.org/docs/glossary#rsa) verification inside of EVM, as well as other forms of number theory-based cryptography.
+  * *[bn256Add](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-196.md)* — Performs addition on the elliptic curve operations.
+  * *[bn256ScalarMult](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-196.md)* — Performs scalar multiplication on the elliptic curve operations.
+  * *[bn256Pairing](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-197.md)* — Elliptic curve pairing operations to perform [zkSNARKs](https://doc.neonlabs.org/docs/glossary#zk-snark) verification within the block gas limit.
 
 Neon EVM requires the implementation of system calls in Solana for these contracts.
 
@@ -21,10 +21,11 @@ Currently, there are several precompiled contracts implemented as *bpf-code*. Wh
 ### Solution
 In order for the precompiled contracts to be used in Solana, it is proposed to implement sys-calls inside the Solana core. That is, to perform an implementation similar to the *erc-recover* implementation.
 
-### Implementation strategy
+### Implementation Strategy
 1. Preparing the necessary changes to support precompiled contracts in the Solana core.
 2. Create *pull requests* for the Solana core to make these improvements.
 3. Testing changes in Testnet.
 4. Testing changes in Devnet.
 5. Testing changes in Mainnet.
 6. Update Neon EVM to support these precompiled contracts.
+
