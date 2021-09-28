@@ -226,7 +226,7 @@ The Solana Wormhole is an Ethereum bridge that helps transfer wealth from the Et
 
 ---  
 
-### ZK-STARK
-Zero-Knowledge Scalable Transparent Argument of Knowledge (ZK-STARK) is a cryptographic protocol that uses public zero-knowledge probabilistically verifiable proofs. This technology allows users to exchange verified information without disclosing it, or to perform computations with a third party without disclosing the computation.  
+### ZK-SNARK
+Zero-Knowledge Scalable Transparent Argument of Knowledge (ZK-SNARK) is a cryptographic protocol that uses public zero-knowledge probabilistically verifiable proofs. This technology allows users to exchange verified information without disclosing it, or to perform computations with a third party without disclosing the computation.  
 
 ---  
