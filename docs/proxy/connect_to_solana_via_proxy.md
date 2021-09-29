@@ -1,6 +1,7 @@
-# Connecting to the Solana cluster via proxy server
+# Connecting to Solana via a Proxy
 
 ## Goal
+*Connect to the Solana cluster via a proxy server.*
 
 Depending on the tasks to be solved, as well as on the location of the proxy and [Solana](https://docs.solana.com/introduction), you can use one of 3 options for configuring the network:
   * [Option 1:](#option-1-interaction-with-the-solana-cluster-via-a-proxy-hosted-on-a-remote-virtual-server) The proxy is hosted on a remote virtual server; either Solana Testnet or Solana Devnet is used.
