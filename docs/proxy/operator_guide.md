@@ -78,7 +78,7 @@ Create and run a proxy container on the daemon.
 When starting Docker, you need to set the *CONFIG* environment variable, which can take one of the following values: *local*, *devnet*, *testnet*.
 
 ```sh
-$ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> -v <path-to-keypair-file/id.json>:/root/.config/solana/id.json cybercoredev/proxy:v0.2.0
+$ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> -v <path-to-keypair-file/id.json>:/root/.config/solana/id.json neonlabsorg/proxy:v0.2.0
 ```
 
 **The command line options:**
@@ -87,13 +87,13 @@ $ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> -v <path-to-k
   * `--network host` — use host network.
   * `-e CONFIG=<network mode>` — specifies a Solana cluster operating mode; either `CONFIG=devnet` or `CONFIG=testnet` is recommended.
   * `-v <path-to-keypair-file/id.json>:/root/.config/solana/id.json` — specifies the path to the .JSON file where your keypair is stored and passes your private key to the container.
-  * `cybercoredev/proxy:v0.2.0` — the specific proxy image.
+  * `neonlabsorg/proxy:v0.2.0` — the specific proxy image.
 
 This command line will automatically perform all the actions required to launch a Docker container and run a proxy.
 
 *Example:*
 ```sh
-$ sudo docker run --rm -ti --network=host -e CONFIG=devnet -v ~/.config/solana/id.json:/root/.config/solana/id.json cybercoredev/proxy:v0.2.0
+$ sudo docker run --rm -ti --network=host -e CONFIG=devnet -v ~/.config/solana/id.json:/root/.config/solana/id.json neonlabsorg/proxy:v0.2.0
 ```
 
 ### CONFIG values

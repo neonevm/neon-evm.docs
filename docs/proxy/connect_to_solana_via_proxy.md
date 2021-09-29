@@ -69,7 +69,7 @@ $ sudo systemctl start docker
 
 Start the proxy and connect it to the Docker network:
 ```sh
-$ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> cybercoredev/proxy:v0.2.0
+$ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> neonlabsorg/proxy:v0.2.0
 ```
 
 **The command line options:**  
@@ -78,9 +78,9 @@ $ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> cybercoredev/
   * `--network host`: use host network.
   * `-e`: set environment variables.
   * `CONFIG=<network mode>`: specifies a solana operating mode; either `CONFIG=devnet` or `CONFIG=testnet` is recommended.
-  * `cybercoredev/proxy:v0.2.0`: specific proxy name.
+  * `neonlabsorg/proxy:v0.2.0`: specific proxy name.
 
-The EVM-loader address is registered inside `cybercoredev/proxy:v0.2.0`, so the proxy knows which EVM-loader is running in Solana cluster.
+The EVM-loader address is registered inside `neonlabsorg/proxy:v0.2.0`, so the proxy knows which EVM-loader is running in Solana cluster.
 
 After executing this command, the proxy will be available at `http://localhost:9090/solana`. This address is set by default.
 
@@ -96,7 +96,7 @@ To use a different endpoint, you need to specify the variable `-e SOLANA_URL='ht
 When a proxy is deployed, it generates a wallet containing a key pair. If you do not need the new wallet and want to use the keys you already have, then you need to specify the path to your wallet on the command line. In this case, the poxy will not create a new key pair. The command line will look like the following:  
 
 ```sh
-$ sudo docker run --rm -d --network=host -v ~/.config/solana/id.json:/root/.config/solana/id.json --name proxy cybercoredev/proxy:v0.2.0
+$ sudo docker run --rm -d --network=host -v ~/.config/solana/id.json:/root/.config/solana/id.json --name proxy neonlabsorg/proxy:v0.2.0
 ```
 
 **The command line options:**
