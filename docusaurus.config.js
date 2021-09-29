@@ -41,7 +41,12 @@ module.exports = {
           position: 'left',
         },
         {
-          to: 'docs/software_manuals/foundational_topics/web3#',
+          to: 'docs/proxy/connect_to_solana_via_proxy',
+          label: 'Operate',
+          position: 'left',
+        },
+        {
+          to: 'docs/software_manuals/foundational_topics/web3',
           label: 'Manuals',
           position: 'left',
         },

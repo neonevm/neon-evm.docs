@@ -52,7 +52,6 @@ module.exports = {
           label: 'Testnet',
           items: 
           [
-            'devportal/testnet/connect_to_solana_via_proxy',
             'devportal/testnet/deploy_contract_via_remix',
           ],
         },
@@ -82,6 +81,7 @@ module.exports = {
       label: 'Neon proxy',
       items:
       [
+        'proxy/connect_to_solana_via_proxy',
         'proxy/operator_guide',
       ],
     },
