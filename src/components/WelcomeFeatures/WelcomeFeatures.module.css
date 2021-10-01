@@ -53,5 +53,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+html[data-theme='dark'] .featureCardDesc {
+  color: #fff;
+}
+html[data-theme='light'] .featureCardDesc {
   color: #191919;
 }
