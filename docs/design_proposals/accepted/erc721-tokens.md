@@ -1,7 +1,7 @@
 # Unsupported Tokens in Neon EVM
 
 ### Problem
-In Testnet and Devnet, Neon EVM operates with those tokens that comply with the [ERC20](https://doc.neonlabs.org/docs/glossary#erc20) standard. Non-fungible tokens (NET) generated in accordance with the [ERC721](https://doc.neonlabs.org/docs/glossary#erc721) standard are not processed by Neon EVM.
+In Testnet and Devnet, Neon EVM operates with those tokens that comply with the [ERC20](https://doc.neonlabs.org/docs/glossary#erc20) standard. Non-fungible tokens (NFT) generated in accordance with the [ERC721](https://doc.neonlabs.org/docs/glossary#erc721) standard are not processed by Neon EVM.
 
 ### Details
 To support the [ERC20](https://doc.neonlabs.org/docs/glossary#erc20) token type, a separate component is implemented in the form of a wrapper over the Solana system frame named *[SPL Token](https://doc.neonlabs.org/docs/glossary#spl_token)*. This wrapper uses the API to access the SPL-token methods to obtain the account balance data.

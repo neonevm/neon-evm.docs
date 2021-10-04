@@ -71,9 +71,9 @@ module.exports = {
       items:
       [
         'neonswap/neonswap_overview',
-        'neonswap/neonswap',
+//        'neonswap/neonswap',
         'neonswap/neonswap_tests',
-        'neonswap/solana_neonswap',
+//        'neonswap/solana_neonswap',
       ],
     },
     {
