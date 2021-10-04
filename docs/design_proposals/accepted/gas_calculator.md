@@ -1,4 +1,4 @@
-# Neon and Ethereum gas calculators give different results
+# Neon and Ethereum Gas Calculators give different Results
 
 ### Problem
 In Neon EVM, a calculator is implemented to account the gas consumption.
@@ -22,6 +22,6 @@ At the moment, the following is known about this bug:
 
 Due to a bug in the Neon EVM code, the result of such checks may be incorrect.
 
-### When the bug is expected to be fixed
+### When will the bug be fixed
 Investigating and fixing the bug will start after MVP on Mainnet.
 
