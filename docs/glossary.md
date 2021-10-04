@@ -191,6 +191,16 @@ Sollet is Solana SPL token wallet. Siller.io is a non-custodial browser-based we
 
 ---  
 
+### SPL_Token
+Solana Program Library Token (*SPL Token*) is a contract containing a system register of tokens that are in the system along with the Solana balances of their accounts.  
+
+---  
+
+### SPL-token
+A token registered in *[SPL Token](#spl_token)*.  
+
+---  
+
 ### Staked tokens
 Tokens allocated for a stake acquisition that can’t be used for anything else in this state. The user can stake active tokens listed on their balance or deposit them. Also, the user can perform the reverse operation — withdraw tokens from the staked state to active.  
 

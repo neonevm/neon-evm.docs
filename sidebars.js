@@ -135,6 +135,8 @@ module.exports = {
           items:
           [
             'design_proposals/accepted/accepted_proposals',
+            'design_proposals/accepted/spl_token_precision',
+            'design_proposals/accepted/erc721-tokens',
             'design_proposals/accepted/precompiled_contracts',
             'design_proposals/accepted/gas_calculator',
             'design_proposals/accepted/unsupported_functions',
