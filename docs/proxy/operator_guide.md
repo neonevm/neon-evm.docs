@@ -62,14 +62,15 @@ After you have chosen a node that meets the listed recommendations, you can star
 Make sure that you have a daemon running. If you see something like:
 
 ```sh
-docker info
+$ docker info
+
 Cannot connect to the Docker daemon at <docker.sock>. Is the docker daemon running?
 ```
 
 you need to run the daemon first:
 
 ```sh
-sudo systemctl start docker
+$ sudo systemctl start docker
 ```
 
 ### Start a proxy in a Docker container
@@ -78,7 +79,7 @@ Create and run a proxy container on the daemon.
 When starting Docker, you need to set the *CONFIG* environment variable, which can take one of the following values: *local*, *devnet*, *testnet*.
 
 ```sh
-sudo docker run --rm -ti --network=host -e CONFIG=<network mode> -v <path-to-keypair-file/id.json>:/root/.config/solana/id.json neonlabsorg/proxy:v0.2.0
+$ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> -v <path-to-keypair-file/id.json>:/root/.config/solana/id.json neonlabsorg/proxy:v0.2.0
 ```
 
 **The command line options:**
@@ -93,7 +94,7 @@ This command line will automatically perform all the actions required to launch 
 
 *Example:*
 ```sh
-sudo docker run --rm -ti --network=host -e CONFIG=devnet -v ~/.config/solana/id.json:/root/.config/solana/id.json neonlabsorg/proxy:v0.2.0
+$ sudo docker run --rm -ti --network=host -e CONFIG=devnet -v ~/.config/solana/id.json:/root/.config/solana/id.json neonlabsorg/proxy:v0.2.0
 ```
 
 ### CONFIG values

@@ -57,19 +57,20 @@ After filling in the field click `Save`. Now you have access to the [Solana clus
 #### Step 1
 Before you start, make sure that you have a daemon running. If you see something like:  
 ```sh
-docker info
+$ docker info
+
 Cannot connect to the Docker daemon at <docker.sock>. Is the docker daemon running?
 ```
 you need to run the daemon first:
 ```sh
-sudo systemctl start docker
+$ sudo systemctl start docker
 ```
 
 #### Step 2
 
 Start the proxy and connect it to the Docker network:
 ```sh
-sudo docker run --rm -ti --network=host -e CONFIG=<network mode> neonlabsorg/proxy:v0.2.0
+$ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> neonlabsorg/proxy:v0.2.0
 ```
 
 **The command line options:**  
@@ -96,7 +97,7 @@ To use a different endpoint, you need to specify the variable `-e SOLANA_URL='ht
 When a proxy is deployed, it generates a wallet containing a key pair. If you do not need the new wallet and want to use the keys you already have, then you need to specify the path to your wallet on the command line. In this case, the proxy will not create a new key pair. The command line will look like the following:  
 
 ```sh
-sudo docker run --rm -d --network=host -v ~/.config/solana/id.json:/root/.config/solana/id.json --name proxy neonlabsorg/proxy:v0.2.0
+$ sudo docker run --rm -d --network=host -v ~/.config/solana/id.json:/root/.config/solana/id.json --name proxy neonlabsorg/proxy:v0.2.0
 ```
 
 **The command line options:**
@@ -112,11 +113,11 @@ sudo docker run --rm -d --network=host -v ~/.config/solana/id.json:/root/.config
 
 Upload the docker-compose-test.yml file to your currently directory using the following command:
 ```sh
-wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/master/proxy/docker-compose-test.yml
+$ wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/master/proxy/docker-compose-test.yml
 ```
 Execute the command:
 ```sh
-sudo REVISION=stable docker-compose -f docker-compose-test.yml up -d
+$ sudo REVISION=stable docker-compose -f docker-compose-test.yml up -d
 ```
 As soon as the latest command is completed, the proxy will start to deploy the EVM-loader in a local solana node. After that, the proxy and Solana will be available at the URLs `http://localhost:9090/solana` and `http://localhost:8899`, respectively.
 
