@@ -10,13 +10,13 @@ Before you start, make sure of the following:
 
 **The network configuration:**
   * [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
-  * Solana works in test mode and the proxy interacts with it through the Neon EVM.
+  * Solana works in test mode and the proxy interacts with it through Neon EVM.
 
 ## Steps to complete
 
 ### Step 1. Set the Remix environment
 
-For Remix to be used to load a smart contract into the Neon EVM, Remix must be connected to your MetaMask wallet and run in the `Injected Web3` environment.  
+For Remix to be used to load a smart contract into Neon EVM, Remix must be connected to your MetaMask wallet and run in the `Injected Web3` environment.  
 Go to http://remix.ethereum.org/ and open the `Remix - Ethereum IDE` web application. In the left side menu, select `File explorers`. The `FILE EXPLOPERS` menu will be active (Fig. 1).  
 
 <p align="center">  
@@ -54,7 +54,7 @@ Fig. 4 - Compilation Details </p>
 
 ### Step 4. Connect Remix to MetaMask
 
-Interaction with the Neon EVM is carried out through MetaMask. Choose the `Injected Web3` environment to connect Remix with an active account in Metamask (Fig. 5).  
+Interaction with Neon EVM is carried out through MetaMask. Choose the `Injected Web3` environment to connect Remix with an active account in Metamask (Fig. 5).  
 
 <p align="center">  
 
