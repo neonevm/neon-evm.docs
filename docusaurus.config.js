@@ -113,9 +113,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/neonlabsorg/neon-evm.docs',
+          // Please change this to your repo. Places "Edit this page" on the bottom
+          // of each page. This is useful for parsing the source code, but not
+          // desirable for making changes directly to the master branch.
+//          editUrl:
+//            'https://github.com/neonlabsorg/neon-evm.docs/blob/master',
         },
 //        blog: {
 //          showReadingTime: true,
