@@ -1,4 +1,4 @@
-# Deploying smart contracts on Solana Testnet via Remix
+# Deploying Contracts on Solana Testnet via Remix
 
 This tutorial will show you step by step how to use [Remix](https://doc.neonlabs.org/docs/glossary#remix) and [Metamask](https://doc.neonlabs.org/docs/glossary#metamask) to create and deploy a simple smart contract on Solana's Testnet.
 
@@ -6,17 +6,17 @@ This tutorial will show you step by step how to use [Remix](https://doc.neonlabs
 Before you start, make sure of the following:
   * MetaMask is installed on your device.  
   * You have provided online access to remix.ethereum.org to use the `Remix - Ethereum IDE` open source web application.
-  * MetaMask is configured for both proxy and EVM-loader (regardless of how proxy and EVM-loader run, MetaMask wallet must always be configured for them).
+  * MetaMask is configured for both proxy and Neon EVM (regardless of how proxy and Neon EVM run, MetaMask wallet must always be configured for them).
 
 **The network configuration:**
   * [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
-  * Solana works in test mode and the proxy interacts with it through the EVM-loader.
+  * Solana works in test mode and the proxy interacts with it through the Neon EVM.
 
 ## Steps to complete
 
 ### Step 1. Set the Remix environment
 
-For Remix to be used to load a smart contract into the EVM-loader, Remix must be connected to your MetaMask wallet and run in the `Injected Web3` environment.  
+For Remix to be used to load a smart contract into the Neon EVM, Remix must be connected to your MetaMask wallet and run in the `Injected Web3` environment.  
 Go to http://remix.ethereum.org/ and open the `Remix - Ethereum IDE` web application. In the left side menu, select `File explorers`. The `FILE EXPLOPERS` menu will be active (Fig. 1).  
 
 <p align="center">  
@@ -54,7 +54,7 @@ Fig. 4 - Compilation Details </p>
 
 ### Step 4. Connect Remix to MetaMask
 
-Interaction with the EVM-loader is carried out through MetaMask. Choose the `Injected Web3` environment to connect Remix with an active account in Metamask (Fig. 5).  
+Interaction with the Neon EVM is carried out through MetaMask. Choose the `Injected Web3` environment to connect Remix with an active account in Metamask (Fig. 5).  
 
 <p align="center">  
 
