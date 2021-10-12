@@ -21,7 +21,7 @@ The MetaMask wallet must be installed on your device.
 
 **The network configuration:**
   * [Solana cluster](https://docs.solana.com/cluster/overview) is accessed via a proxy hosted on a remote virtual server.
-  * Solana works in test mode and the proxy interacts with it through the EVM-loader.
+  * Solana works in test mode and the proxy interacts with it through Neon EVM.
 
 #### Step 1
 Open your MetaMask wallet and in the upper-right corner, click the identical.  
@@ -52,7 +52,7 @@ After filling in the field click `Save`. Now you have access to the [Solana clus
 
 **The network configuration:**
   * Solana cluster is accessed via the proxy hosted locally.
-  * Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet) is used and the proxy interacts with it through the EVM-loader.
+  * Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet) is used and the proxy interacts with it through Neon EVM.
 
 #### Step 1
 Before you start, make sure that you have a daemon running. If you see something like:  
@@ -81,7 +81,7 @@ $ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> neonlabsorg/p
   * `CONFIG=<network mode>`: specifies a solana operating mode; either `CONFIG=devnet` or `CONFIG=testnet` is recommended.
   * `neonlabsorg/proxy:v0.2.0`: specific proxy name.
 
-The EVM-loader address is registered inside `neonlabsorg/proxy:v0.2.0`, so the proxy knows which EVM-loader is running in Solana cluster.
+The Neon EVM address is registered inside `neonlabsorg/proxy:v0.2.0`, so the proxy knows which Neon EVM is running in Solana cluster.
 
 After executing this command, the proxy will be available at `http://localhost:9090/solana`. This address is set by default.
 
@@ -109,7 +109,7 @@ $ sudo docker run --rm -d --network=host -v ~/.config/solana/id.json:/root/.conf
 
 **The network configuration:**
   * Both the Solana cluster and the proxy are hosted locally.
-  * The proxy interacts with Solana through the EVM-loader.
+  * The proxy interacts with Solana through Neon EVM.
 
 Upload the docker-compose-test.yml file to your currently directory using the following command:
 ```sh
@@ -119,5 +119,5 @@ Execute the command:
 ```sh
 $ sudo REVISION=stable docker-compose -f docker-compose-test.yml up -d
 ```
-As soon as the latest command is completed, the proxy will start to deploy the EVM-loader in a local solana node. After that, the proxy and Solana will be available at the URLs `http://localhost:9090/solana` and `http://localhost:8899`, respectively.
+As soon as the latest command is completed, the proxy will start to deploy Neon EVM in a local solana node. After that, the proxy and Solana will be available at the URLs `http://localhost:9090/solana` and `http://localhost:8899`, respectively.
 
