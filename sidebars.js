@@ -47,6 +47,7 @@ module.exports = {
         'devportal/value_token',
         'devportal/metamask_setup',
         'devportal/bpf_trace',
+        'devportal/using_truffle',
         {
           type: 'category',
           label: 'Testnet',
@@ -59,7 +60,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Local Solana cluster',
+      label: 'Local Solana Cluster',
       items:
       [
         'solana_cluster/cluster_installation',
@@ -78,7 +79,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Neon proxy',
+      label: 'Neon Proxy',
       items:
       [
         'proxy/connect_to_solana_via_proxy',
@@ -87,7 +88,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Software manuals',
+      label: 'Software Manuals',
       items:
       [
         {
@@ -118,7 +119,7 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Design proposals',
+      label: 'Design Proposals',
       items: 
       [
         {
