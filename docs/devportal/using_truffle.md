@@ -110,18 +110,14 @@ All test files should be located in the `test/` directory.
 
 To run all tests by default, simply run:
 ```sh
-$ truffle test 
+$ truffle test
 ```
 
-To run only one file from the entire test suite, you just need to specify the name of this test:
+To run only one file from the entire test suite or a specific file that is not in `test/`, you need to specify the full name of this file:
 ```sh
-$ truffle test <file.js>
+$ truffle test <./path/file.js>
 ```
 
-To run a specific file which does not exist in the `test/` directory, you need to specify a path to that file:
-```sh
-$ truffle test </path/file.js>
-```
 The full set of options that you can use during testing are listed in the page with [truffle test](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#test) command.
 
 
