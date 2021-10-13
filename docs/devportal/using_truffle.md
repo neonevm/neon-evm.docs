@@ -113,7 +113,7 @@ To run all tests by default, simply run:
 $ truffle test
 ```
 
-To run only one file from the entire test suite or a specific file that is not in `test/`, you need to specify the full name of this file:
+To run only one file from the entire test suite or a specific file that is not in `test/`, you need to specify the full name of that file:
 ```sh
 $ truffle test <./path/file.js>
 ```
