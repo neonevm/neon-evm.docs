@@ -27,7 +27,7 @@ Neon will provide credentials to access this page (if there are difficulties, do
 ![](./img/sol-swap1.png)
 
 ### Step 3. Add the Neon proxy network
-Add a custom [RPC](https://doc.neonlabs.org/docs/glossary#rpc) network. To do so:
+Add a custom [RPC](https://doc.neonlabs.org/docs/glossary#remote-procedure-call-rpc) network. To do so:
   * Click the identicon in the top right corner of MetaMask window and click `Settings`.
   * Select `Networks` in the bottom of the list, then click `Add Network`.
   * Choose any Currency Symbol you like. The required fields are:
