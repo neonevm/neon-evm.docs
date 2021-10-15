@@ -136,6 +136,7 @@ module.exports = {
           items:
           [
             'design_proposals/accepted/accepted_proposals',
+            'design_proposals/accepted/restriction_on_iterative_trx',
             'design_proposals/accepted/spl_token_precision',
             'design_proposals/accepted/erc721-tokens',
             'design_proposals/accepted/precompiled_contracts',

@@ -150,5 +150,3 @@ module.exports = {
 ```
 
 > **Note:** If both mnemonic and private keys are provided, the mnemonic is used.
-
-As contracts of Ethereum are written in Solidity and have a file extension of .sol, associated Solidity libraries will also have a .sol extension.
