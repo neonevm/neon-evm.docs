@@ -12,7 +12,7 @@ Migrating applications from [Ethereum](https://ethereum.org/en/) to [Solana](htt
 ## Stage 1. Deploying contracts in a Neon EVM environment
 No changes to software serving contracts are required to port dapps using the [NeonSwap](https://doc.neonlabs.org/docs/glossary#neonswap) service. Changes are made only to those components that are necessary for its operation on Neon EVM.  
 
-The contracts are built by a typical Solidity compiler used in Ethereum. After compilation, all the necessary contracts are deployed on Neon EVM using a [Web 3](https://doc.neonlabs.org/docs/glossary#web3) proxy. This proxy provides a standard interface that Ethereum utilities and tools can use.  
+The contracts are built by a typical Solidity compiler used in Ethereum. After compilation, all the necessary contracts are deployed on Neon EVM using a [Web 3](https://doc.neonlabs.org/docs/glossary#web-3) proxy. This proxy provides a standard interface that Ethereum utilities and tools can use.  
 
 Here is a list of contracts to be deployed:
   * Governance.
