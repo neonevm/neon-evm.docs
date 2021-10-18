@@ -156,7 +156,7 @@ A publicly available key that is required for users to receive  transactions int
 ---  
 
 ### Remix
-An online IDE (Integrated Development Environment (IDE) used to write, compile, deploy, and debug Solidity code. This web tool can be connected with MetaMask and used to deploy smart contracts to both the Solana Testnet and Solana Mainnet.
+An online Integrated Development Environment (IDE) used to write, compile, deploy, and debug Solidity code. This web tool can be connected with MetaMask and used to deploy smart contracts to both the Solana Testnet and Solana Mainnet.
 
 ---  
 

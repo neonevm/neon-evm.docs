@@ -5,7 +5,7 @@
 ## Fundamental topics
 If you are new to Neon EVM development, we recommend starting from the very beginning and moving forward in order through each of the topics.  
 
-[🔘 Web2 vs. Web3](https://docs.neonlabs.org/docs/software_manuals/foundational_topics/web3) — Describes the fundamental differences between Web2 and Web3.  
+[🔘 Web2 versus Web3](https://docs.neonlabs.org/docs/software_manuals/foundational_topics/web3) — Describes the fundamental differences between Web2 and Web3.  
 [🔘 Ethereum account](https://docs.neonlabs.org/docs/software_manuals/foundational_topics/account) — An entity with an ETH balance that can send transactions on Ethereum.  
 [🔘 Ethereum transaction](https://docs.neonlabs.org/docs/software_manuals/foundational_topics/transaction) — A cryptographically signed instruction from an account.  
 [🔘 Block](https://docs.neonlabs.org/docs/software_manuals/foundational_topics/block) — A special structure for recording a group of transactions in blockchain systems.  
