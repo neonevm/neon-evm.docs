@@ -43,7 +43,6 @@ module.exports = {
       [
         'devportal/eth_sol_solution',
         'devportal/neon_evm_arch',
-        'devportal/erc20wrapper',
         'devportal/value_token',
         'devportal/metamask_setup',
         'devportal/bpf_trace',
@@ -84,6 +83,15 @@ module.exports = {
       [
         'proxy/connect_to_solana_via_proxy',
         'proxy/operator_guide',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Supported Standards',
+      items:
+      [
+        'supported_standards/standards_overview',
+        'supported_standards/erc20wrapper',
       ],
     },
     {
