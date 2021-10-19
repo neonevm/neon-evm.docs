@@ -1,14 +1,14 @@
-# ERC20 SPL-Wrapper
+# ERC-20 SPL-Wrapper
 
-ERC20 SPL-Wrapper contract provides an access to native Solana tokens, registered in the SPL-token contract, through the ERC20 interface.
+The ERC-20 SPL-Wrapper contract provides an access to native Solana tokens, registered in the SPL-token contract, through the ERC-20 interface.
 
-This allows interaction of the Solana applications with EVM(Solidity/Vyper/etc.) bytecode contracts. ERC20 SPL-Wrapper can be also used to transfer funds in Solana tokens using Ethereum wallets such as Metamask.
+This allows interaction of the Solana applications with EVM(Solidity/Vyper/etc.) bytecode contracts. ERC-20 SPL-Wrapper can also be used to transfer funds in Solana tokens using Ethereum wallets such as Metamask.
 
-Contract is implemented in Rust as part of NeonEVM program.
+Contract is implemented in Rust as part of Neon EVM program.
 
-[Rust source code](https://github.com/neonlabsorg/neon-evm/blob/c43345d7abf7af14aa840e6b15c0fc64b084bb2c/evm_loader/program/src/precompile_contracts.rs#L106)
-
-[Solidity wrapper source code](https://github.com/neonlabsorg/neon-evm/blob/develop/evm_loader/SPL_ERC20_Wrapper.sol)
+Source codes:
+  * [Rust source code](https://github.com/neonlabsorg/neon-evm/blob/c43345d7abf7af14aa840e6b15c0fc64b084bb2c/evm_loader/program/src/precompile_contracts.rs#L106)
+  * [Solidity wrapper source code](https://github.com/neonlabsorg/neon-evm/blob/develop/evm_loader/SPL_ERC20_Wrapper.sol)
 
 ### Contract interface
 
@@ -25,35 +25,35 @@ interface IERC20 {
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address indexed spender, uint256 value);
 
-
     function approveSolana(bytes32 spender, uint64 value) external returns (bool);
     event ApprovalSolana(address indexed owner, bytes32 indexed spender, uint64 value);
 }
 ```
 
-`decimals()` — Returns the number of decimals used to get its user representation. For example, if `decimals` equals 2, a balance of 505 tokens should be displayed to a user as 5,05 (505 / 10 * 2).
+Functionality of interface modules:
+  * `decimals()` — Returns the number of decimals used to get its user representation. For example, if `decimals` equals 2, a balance of 505 tokens should be displayed to a user as 5,05 (505 / 10 * 2).
 
-`totalSupply()` — Returns the amount of tokens in existence.
+  * `totalSupply()` — Returns the amount of tokens in existence.
 
-`balanceOf(address account)` — Returns the amount of tokens owned by `account`.
+  * `balanceOf(address account)` — Returns the amount of tokens owned by the `account`.
 
-`allowance(address owner, address spender)` — Returns the remaining number of tokens that `spender` will be allowed to spend on behalf of `owner` through `​​​​​​​transferFrom`​​​​​​​. This is zero by default.
+  * `allowance(address owner, address spender)` — Returns the remaining number of tokens that a `spender` will be allowed to spend on behalf of the `owner` through `​​​​​​​transferFrom`​​​​​​​. This is zero by default.
 
-`transfer(address recipient, uint256 amount)` — Sends specified amount of tokens  `amount` from the caller's account balance to the `recipient` account balance.
+  * `transfer(address recipient, uint256 amount)` — Sends the specified `amount` of tokens from the caller's account balance to the `recipient's` account balance.
 
-`approve(address spender, uint256 amount)` — Sets `amount` as the allowance of `spender` over the caller's tokens.
+  * `approve(address spender, uint256 amount)` — Sets an `amount` as the spender's allowance over the caller's tokens.
 
-`transferFrom(address sender, address recipient, uint256 amount)` — Transfer `amount` tokens from `sender` to `recipient`.
+  * `transferFrom(address sender, address recipient, uint256 amount)` — Transfer the `amount` of tokens from the `sender` to the `recipient`.
 
-`approveSolana(bytes32 spender, uint64 value)` - Allows ***Solana*** user `spender` to withdraw from the caller's account multiple times, up to the `value` amount. Only one Solana `spender` can exists at the time. Translates into spl-token `Approve` instruction.
+  * `approveSolana(bytes32 spender, uint64 value)` — Allows ***Solana*** user `spender` to withdraw from the caller's account multiple times, up to the `value` amount. Only one Solana `spender` can exists at the time. Translates into spl-token `Approve` instruction.
 
 ### Restrictions
 
-According to spl-token structure, *u64* is used to store the balance (in ERC20 it's *U256*). Based on *u64*, maximum balance and transfer amounts are restricted by (2^64-1)/(10^9) (for 9 decimals accuracy).
+According to SPL token structure, u64 is used to store the balance (In ERC-20 it's u256). Based on u64, maximum balance and transfer amounts are restricted by (2^64-1)/(10^9) (for 9 decimals accuracy).
 
 ### Finding the Token Account address
 
-Token account for a given wallet address is a program-derived account consisting of two constants, the Ethereum wallet address itself, ERC20 contract address, and the token mint.
+Token account for a given wallet address is a program-derived account consisting of two constants, the Ethereum wallet address itself, ERC-20 contract address, and the token mint.
 
 The account address can be derived in Rust with:
 
