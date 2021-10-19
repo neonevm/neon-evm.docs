@@ -167,5 +167,5 @@ $ truffle migrate --network solana --reset
 
 ---
 
-*Welcome to deploy your solidity programs on [Solana](https://solana.com) using [Neon EVM](https://neon-labs.org/)*.
+*Welcome to deploy your solidity programs on [Solana](https://solana.com) driven [Neon EVM](https://neon-labs.org/)*.
 
