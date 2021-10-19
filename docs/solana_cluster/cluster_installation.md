@@ -2,7 +2,7 @@
 
 *This guide describes how to install, configure and test the local Solana cluster with Neon EVM on-board. It helps new developers to create their own environment and run Ethereum programs, wrapped into Neon EVM. All you need is to follow this guide step by step.*
 
-The *[Neon EVM](https://neon-labs.org/)* is a solution that performs transaction execution outside layer 1. The development process should run on any modern Linux or Mac system, though this document is based on Ubuntu 20.04 experience.
+The [Neon EVM](https://neon-labs.org/) is a solution that performs transaction execution outside layer 1. The development process can be run on any modern Linux or Mac system, though this document is based on Ubuntu 20.04 experience.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ The *[Neon EVM](https://neon-labs.org/)* is a solution that performs transaction
 
 ## Setting up the Solana Cluster
 
-The next step is making  Solana Validator node working from the docker container:
+The next step is making Solana Validator node working from the docker container:
 
 ```sh
 $ docker run -p 8899:8899 -p 8900:8900 -p 8001:8001 -p 8000-8009:8000-8009/udp -ti -e RUST_LOG=solana_runtime::system_instruction_processor=trace,solana_runtime::message_processor=debug,solana_bpf_loader=debug,solana_rbpf=debug -e NDEBUG=1 --name=solana neonlabsorg/solana:stable-testnet | grep -v 'Program Vote111111111111111111111111111111111111111'
@@ -20,7 +20,7 @@ $ docker run -p 8899:8899 -p 8900:8900 -p 8001:8001 -p 8000-8009:8000-8009/udp -
 
 ## Starting Neon EVM endpoint
 
-The Neon EVM endpoint enables `Metamask` to work with Solana seamlessly. You should issue the following command in a new terminal window:
+The Neon EVM endpoint enables [Metamask](https://metamask.io/) to work with Solana seamlessly. You should issue the following command in a new terminal window:
 
 ```sh
  $ docker run --rm -ti --network=host -e CONFIG=local -e EXTRA_GAS=10000 --name=proxy neonlabsorg/proxy:latest
@@ -28,21 +28,29 @@ The Neon EVM endpoint enables `Metamask` to work with Solana seamlessly. You sho
 
 ## Remix and Metamask with Neon EVM
 
-Setup the **Metamask** Chromium extension to connect to the proxy via Custom RPC at `http://localhost:9090/solana`. The following image describes how to set up the local Solana connection:
+Setup the "Metamask" Chromium extension to connect to the proxy via Custom RPC at `http://localhost:9090/solana`. The following image describes how to set up the local Solana connection:  
 
-<p alight="center">
-<img width=300 style="border: 1px solid #fd9c9f;" src="img/cluster-install-1.png"></p>
+<div style={{textAlign: 'center'}}>  
 
-Open Remix (also in Chromium) and select "**Injected Web3**" environment. You'll be able to deploy EVM-wrapped smart contracts on Solana and invoke  instructions:
+![](./img/cluster-install-1.png) 
 
-<p alight="center">
-<img width=300 style="border: 1px solid #fd9c9f;" src="img/cluster-install-2.png"></p>
+</div>
+
+Open Remix (also in Chromium) and select `Injected Web3` environment. You can deploy EVM-wrapped smart contracts on Solana and invoke instructions:  
+
+<div style={{textAlign: 'center'}}>  
+
+![](./img/cluster-install-2.png) 
+
+</div>
+
+
 
 ## Truffle suite with Neon EVM
 
 Truffle is a popular platform to deploy and test solidity programs. This section is to check Neon EVM and truffle suite compatibility. 
 
-Again, in a new terminal, let's create a truffle project and deploy contracts into EVM:
+In the new terminal, create a truffle project and deploy contracts into EVM:
 
 ```sh
 $ sudo npm install -g truffle
@@ -53,7 +61,7 @@ $ npm install web3 @truffle/hdwallet-provider
 
 ### Common truffle settings
 
-Then put your own `truffle-config.js` into the truffle root:
+Put your `truffle-config.js` into the truffle root:
 
 ```sh
 $ echo 'const Web3 = require("web3");
@@ -88,7 +96,7 @@ module.exports = {
 
 ### Contract creating
 
-Create a trivial contract at `contracts/Storage.sol`
+Create a trivial contract at `contracts/Storage.sol`:
 
 ```sh
 $ echo '// SPDX-License-Identifier: GPL-3.0
@@ -102,7 +110,7 @@ contract Storage {
         number = num;
     }
 
-	function get() public view returns (uint256) {
+    function get() public view returns (uint256) {
         return number;
     }
 }' > contracts/Storage.sol
@@ -110,20 +118,20 @@ contract Storage {
 
 ### Migration
 
-The following commands are to deploy `Storage` contract onto the local blockchain.
+The following commands are to deploy `Storage` contract onto the local blockchain:
 
 ```sh
 $ echo 'const Storage = artifacts.require("Storage");
 
 module.exports = function (deployer) {
-	 deployer.deploy(Storage);
+    deployer.deploy(Storage);
 }' > migrations/2_storage.js
 $ truffle migrate --network solana
 ```
 
 ### Testing
 
-Now it's possible to test `Storage` invocations with truffle testing facility:
+You can now start testing `Storage` invocations with truffle facility:
 
 ```sh
 $ echo 'const Storage = artifacts.require("Storage");
@@ -149,9 +157,9 @@ $ truffle test test/Storage.test.js --network solana
 
 If for some reasons you remove the Solana container and run it again then all related accounts, stored in foreign systems, get invalid from that moment. That's why you need to re-run proxy container and reset the state of Metamask and truffle as well, to make all relations consistent.
 
-To reset the Metamask state follow **`Settings`**/**`Advanced`**/**`Reset Account`** and push the button. 
+To reset the metamask state, follow the steps `Settings`, `Advanced`, `Reset Account`, .
 
-The Truffle state can be reset by redeploying in the following way: 
+The truffle state can be reset by redeploying in the following way: 
 
 ```sh
 $ truffle migrate --network solana --reset
@@ -159,5 +167,5 @@ $ truffle migrate --network solana --reset
 
 ---
 
-#### *Welcome to deploy your solidity programs on [Solana](https://solana.com) driven [Neon EVM](https://neon-labs.org/)*
+*Welcome to deploy your solidity programs on [Solana](https://solana.com) using [Neon EVM](https://neon-labs.org/)*.
 
