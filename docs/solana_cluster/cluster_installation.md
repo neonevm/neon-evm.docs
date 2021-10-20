@@ -65,11 +65,13 @@ Put your `truffle-config.js` into the truffle root:
 
 ```sh
 $ echo 'const Web3 = require("web3");
+const Web3eth = require("web3-eth");
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 const provider = new Web3.providers.HttpProvider("http://localhost:9090/solana");
 
-const privateKeys = ["288223d97bb45b3f623ca00396c7b66d6867fc622e53b87e16020472203bf4eb"];
+const web3eth = new Web3eth();
+const privateKeys = Array.from(Array(10), (_, x) => web3eth.accounts.create().privateKey);
 
 module.exports = {
   networks: {
@@ -80,16 +82,16 @@ module.exports = {
           provider
         );
       },
-      from: "0xB50F582f55EA9B1130b7fB8b1464Df6c897c2502",
       network_id: "111",
       gas: 3000000,
       gasPrice: 1000000000,
     }
   },
+
   compilers: {
-      solc: {
-        version: "0.8.9"
-      }
+    solc: {
+      version: "0.8.9"
+    }
   }
 };' > truffle-config.js
 ```
@@ -114,19 +116,6 @@ contract Storage {
         return number;
     }
 }' > contracts/Storage.sol
-```
-
-### Migration
-
-The following commands are to deploy `Storage` contract onto the local blockchain:
-
-```sh
-$ echo 'const Storage = artifacts.require("Storage");
-
-module.exports = function (deployer) {
-    deployer.deploy(Storage);
-}' > migrations/2_storage.js
-$ truffle migrate --network solana
 ```
 
 ### Testing
@@ -159,7 +148,7 @@ If for some reasons you remove the Solana container and run it again then all re
 
 To reset the metamask state, follow the steps `Settings`, `Advanced`, `Reset Account`, .
 
-The truffle state can be reset by redeploying in the following way: 
+The truffle state can be reset by redeploying in the following way:
 
 ```sh
 $ truffle migrate --network solana --reset
