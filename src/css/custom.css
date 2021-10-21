@@ -12,7 +12,6 @@ body {
   font-family: 'Roboto', 'Courier New', Courier, monospace;
 }
 :root {
-  --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
@@ -21,6 +20,7 @@ body {
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
   --ifm-link-color: #CE3A8B;
+  --ifm-neon-pink: #CE3A8B;
   --ifm-color-primary: #4355F9;
   --ifm-link-hover-color: #4355F9;
   --ifm-navbar-link-hover-color: #4355F9;
@@ -41,6 +41,11 @@ a:hover {
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+.neon-img-container img {
+    width: 300px;
+    border: 2px solid var(--ifm-neon-pink);
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
