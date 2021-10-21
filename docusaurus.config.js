@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Neon Docs',
   tagline: 'Neon EVM is an open source project implementing the Ethereum virtual machine on Solana.',
-  url: 'https://doc.neonlabs.org', // !!! Path to the docs main page 
+  url: 'https://doc.neonlabs.org', // !!! Path to the docs main page
   baseUrl: '/',
   onBrokenLinks: 'throw', // options: throw, warn
   onBrokenMarkdownLinks: 'warn',
@@ -13,6 +13,7 @@ module.exports = {
   organizationName: 'neonlabsorg', // Usually your GitHub org/user name.
   projectName: 'neon-evm.docs', // Usually your repo name.
   themeConfig: {
+    image: 'img/og_image.png',
     algolia: {
       apiKey: 'd6087190dcafb13244b08a148f16fd70',
       indexName: 'neon-labs',
@@ -30,7 +31,7 @@ module.exports = {
       items: [
 //        {
 //          type: 'doc',
-//          docId: 'intro', // Tutorial 
+//          docId: 'intro', // Tutorial
 //          position: 'left',
 //          label: 'Tutorial',
 //        },
