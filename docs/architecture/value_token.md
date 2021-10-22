@@ -41,11 +41,7 @@ To do this, the user creates an account in Neon EVM, where he can transfer `ETH`
 Since a coroutine address is linked to the user's balance, no one except this coroutine address can use this token.
 
 ### Token circulation
-When a user creates a transaction, they specify the cost of its execution, taking into account gas price. An operator receives the transaction for execution taking into account the cost specified by the user, as well as a fee. The user's funds are blocked to be paid to the operator following execution.  
-
-User funds are transferred to the collateral pool in the form of `SOL` tokens. The amount of tokens needed depends on setting up a multisig account (in the current implementation, this value is hardcoded).  
-
-Depending on the number of operations in a transaction, it can be performed in one or several iterations.
+Depending on the number of operations in a transaction, it can be performed in one or several iterations. When a user creates a transaction, they specify the cost of its execution, taking into account gas price. For each iteration performed separately, funds are transferred to an operator from the specified total transaction cost. Neon EVM acts as a guarantor in payment of funds to the operator for each iteration performed by them in accordance with the gas price.
 
 #### Token circulation for transaction execution in one iteration
 Before executing a transaction, an operator transfers funds to the Neon token collateral pool. At the same time, they pay a fee to the validator for checking signatures and pays rent for storing data on the balance of the account.  
