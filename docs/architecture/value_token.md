@@ -1,15 +1,16 @@
-# Transaction Value token as an analogue of ETH for Neon EVM Solutions
+# Transaction Value token
 
 > This section contains introductory information about the *Transaction Value token* (hereinafter *Value token*), which is analogous to the ETH token in Neon EVM solutions.  
 
 Using the original `ETH` token in Neon EVM can create additional difficulties when calculating payment of rewards to transaction participants. Therefore, the *Value token* is introduced to circulate inside Neon EVM. This token is analogous to ETH, coming from the Ethereum network through one of the bridges: [WormHole](https://solana.com/wormhole) or [Sollet](https://solana.com/ecosystem/sollet). Each of these bridges transfers funds (assets) from ETH-token to SPL-token and back.  
 
-Transfer of funds using bridges is automated, so the converted tokens are directly transferred to Neon EVM. The token conversion scheme is implemented in such a way that it allows transactions to be executed in parallel. Unlike the method of conversion through ERC20 tokens (this method is used in Ethereum, where a map is used with accounts inside a contract), this scheme does not allow transactions to line up in one queue.  
+Transfer of funds using bridges is automated, so the converted tokens are directly transferred to Neon EVM. The token conversion scheme is implemented in such a way that it allows transactions to be executed in parallel. Unlike the method of conversion through ERC20 tokens (this method is used in Ethereum, where a map is used with accounts inside a contract), this scheme does not allow transactions to line up in one queue.
 
-<p align="center">
+<div style={{textAlign: 'center'}}>
 
-![](./testnet/images/value_token-1.png)  
-</p>  
+![](./img/value_token-1.png)
+
+</div>
 
 ## Storing balances inside Neon EVM
 Inside Neon EVM is the Ethereum account. For each user, the Ethereum account contains two fields for storing two types of coins:

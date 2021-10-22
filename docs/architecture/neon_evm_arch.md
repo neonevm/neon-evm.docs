@@ -11,10 +11,15 @@ For a user's transaction to be executed quickly, it must be finalized quickly. T
 
 The architectural solution based on Neon EVM is presented in Fig. 1.
 
-<p align="center">
+<div style={{textAlign: 'center'}}>
 
-![](./testnet/images/arch-neon-1.png) </p>  
-<p align="center"> Fig. 1 </p>  
+![](./img/arch-neon-1.png)
+
+</div> <div style={{textAlign: 'center'}}>
+
+Fig. 1
+
+</div>
 
 The components of the architecture are:
 
@@ -84,10 +89,15 @@ A user can create a contract supporting the ERC20 standard for a specific token 
 
 Conventionally, the processing of a transaction is divided into several steps (iterations). The number of steps may vary depending on the number of operations required to complete the transaction. The next step starts only after the previous step has been successfully completed (Fig. 2).
 
-<p align="center">
+<div style={{textAlign: 'center'}}>
 
-![](./testnet/images/arch-neon-2.png) </p>  
-<p align="center"> Fig. 2 </p>  
+![](./img/arch-neon-2.png)
+
+</div> <div style={{textAlign: 'center'}}>
+
+Fig. 2
+
+</div>
 
 A transaction is considered to be successfully completed if the "Final" step finishes. The execution of the transaction should not go beyond the allotted number of Mn blocks. In other words, the operations performed at all steps must be completed within the Mn period, or the transaction is considered incomplete.  
 
@@ -127,10 +137,15 @@ The ERC-20 wrapper, a special dApp (contract) with token balances, has been crea
 
 The interaction between the SPL token and ERC-20 TKN is shown in Fig.3.  
 
-<p align="center">
+<div style={{textAlign: 'center'}}>
 
-![](./testnet/images/arch-neon-3.png) </p>  
-<p align="center"> Fig. 3 </p>  
+![](./img/arch-neon-3.png)
+
+</div> <div style={{textAlign: 'center'}}>
+
+Fig. 3
+
+</div>
 
 There are two user balances:  
   * User SPL Balance, whose tokens are traded within Solana.
@@ -160,10 +175,15 @@ A user also can transfer part of the funds to their balance inside Neon EVM and 
 
 Fig. 4 shows the process for transferring tokens between Solana and Ethereum.
 
-<p align="center">
+<div style={{textAlign: 'center'}}>
 
-![](./testnet/images/arch-neon-4.png) </p>  
-<p align="center"> Fig. 4 </p>  
+![](./img/arch-neon-4.png)
+
+</div> <div style={{textAlign: 'center'}}>
+
+Fig. 4
+
+</div>
 
 Ethereum tokens are generated in accordance with the ERC-20 standard. Therefore, to transfer tokens between the Solana and Ethereum blockchains, a separate ERC-20 wrapper must be deployed for each Solana token. The ERC-20 wrapper’s job is to ensure that the Solana applications interact with EVM (Solidity, Vyper, etc.) bytecode contracts, as well as to transfer funds in Solana tokens using Ethereum wallets such as MetaMask.  
 

@@ -37,7 +37,7 @@ module.exports = {
 //        },
 //        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          to: 'docs/devportal/eth_sol_solution',
+          to: 'docs/devportal/metamask_setup',
           label: 'Develop',
           position: 'left',
         },
