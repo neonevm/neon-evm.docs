@@ -30,17 +30,17 @@ The Neon EVM endpoint enables [Metamask](https://metamask.io/) to work with Sola
 
 Setup the "Metamask" Chromium extension to connect to the proxy via Custom RPC at `http://localhost:9090/solana`. The following image describes how to set up the local Solana connection:  
 
-<div style={{textAlign: 'center'}}>  
+<div class='neon-img-container' style={{textAlign: 'center'}}>  
 
-![](./img/cluster-install-1.png) 
+![](./img/cluster-install-1.png)
 
 </div>
 
 Open Remix (also in Chromium) and select `Injected Web3` environment. You can deploy EVM-wrapped smart contracts on Solana and invoke instructions:  
 
-<div style={{textAlign: 'center'}}>  
+<div class='neon-img-container' style={{textAlign: 'center'}}>  
 
-![](./img/cluster-install-2.png) 
+![](./img/cluster-install-2.png)
 
 </div>
 
@@ -48,7 +48,7 @@ Open Remix (also in Chromium) and select `Injected Web3` environment. You can de
 
 ## Truffle suite with Neon EVM
 
-Truffle is a popular platform to deploy and test solidity programs. This section is to check Neon EVM and truffle suite compatibility. 
+Truffle is a popular platform to deploy and test solidity programs. This section is to check Neon EVM and truffle suite compatibility.
 
 In the new terminal, create a truffle project and deploy contracts into EVM:
 
@@ -157,4 +157,3 @@ $ truffle migrate --network solana --reset
 ---
 
 *Welcome to deploy your solidity programs on [Solana](https://solana.com) driven [Neon EVM](https://neon-labs.org/)*.
-
