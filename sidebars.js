@@ -36,14 +36,23 @@ module.exports = {
         'glossary',
       ],
     },
+
+    {
+      type: 'category',
+      label: 'Architecture',
+      items:
+      [
+        'architecture/eth_sol_solution',
+        'architecture/neon_evm_arch',
+        'architecture/value_token',
+      ],
+    },
+
     {
       type: 'category',
       label: 'Devportal',
       items:
       [
-        'devportal/eth_sol_solution',
-        'devportal/neon_evm_arch',
-        'devportal/value_token',
         'devportal/metamask_setup',
         'devportal/bpf_trace',
         'devportal/using_truffle',

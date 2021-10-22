@@ -52,12 +52,17 @@ To achieve the goal, the following solution was proposed and implemented by the 
 
 ## The Solution in Detail
 
-The block diagram of the solution is shown in Fig. 1.  
+The block diagram of the solution is shown in Fig. 1.
 
-<p align="center">
+<div style={{textAlign: 'center'}}>
 
-![](./testnet/images/neon-evm-1.png) </p>  
-<p align="center"> Fig. 1 </p>  
+![](./img/neon-evm-1.png)
+
+</div> <div style={{textAlign: 'center'}}>
+
+Fig. 1
+
+</div>
 
 ### Berkeley Packet Filter (BPF)
 The BPF virtual machine is installed in Solana, allowing developers to embed other virtual machines inside Solana.  
@@ -101,10 +106,15 @@ A user calls a client that generates a transaction and sends it to the proxy, wh
   * **Value**: amount of coins to transfer from sender to a recipient.
   * **Recipient**: address of the recipient.
 
-<p align="center">
+<div style={{textAlign: 'center'}}>
 
-![](./testnet/images/neon-evm-2.png) </p>  
-<p align="center"> Fig. 2 </p>  
+![](./img/neon-evm-2.png)
+
+</div> <div style={{textAlign: 'center'}}>
+
+Fig. 2
+
+</div>
 
 To perform this transaction, the Neon EVM emulator makes a request to Solana to get state data. The proxy requests a blockchain state from Solana and makes a test launch of N-trx using the Solana state. On the basis of the data received, Proxy forms the new transaction according to Solana's rules. The transaction generated for Solana will contain the packaged N-trx, as well as the account data required to complete the transaction, including: 
   * The Payer. (The account that pays for the transaction.)
