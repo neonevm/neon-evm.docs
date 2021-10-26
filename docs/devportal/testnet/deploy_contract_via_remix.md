@@ -19,61 +19,82 @@ Before you start, make sure of the following:
 For Remix to be used to load a smart contract into Neon EVM, Remix must be connected to your MetaMask wallet and run in the `Injected Web3` environment.  
 Go to http://remix.ethereum.org/ and open the `Remix - Ethereum IDE` web application. In the left side menu, select `File explorers`. The `FILE EXPLOPERS` menu will be active (Fig. 1).  
 
-<p align="center">  
+<div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-1.png)  
-Fig. 1 - Connecting to localhost </p>  
+![](./images/remix-1.png)
+
+Fig. 1 — Connecting to localhost
+
+</div>
 
 ### Step 2. Create a simple smart contract at Remix
 
 Click on the icon `Create New File` and type the file name in the field that appears below it. For example helloWorld.sol  
 For now, it is an empty file. To fill it with content, click on the created file name and type the text on the right side of the explorer (or copy your pre-prepared text there)(Fig. 2).  
 
-<p align="center">  
+<div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-2.png)  
-Fig. 2 - Loading the helloWorld smart contract </p>  
+![](./images/remix-2.png)
+
+Fig. 2 — Loading the helloWorld smart contract
+
+</div>
 
 ### Step 3. Compile a smart contract
 
 In the left side menu select the `Solidity compiler`. The `SOLIDITY COMPILER` menu will be active.  
 Click on the `Compile helloWorld.sol` button to compile the loaded smart contract helloWorld (Fig. 3).  
 
-<p align="center">  
+<div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-3.png)  
-Fig. 3 - Compiling helloWorld smart contract </p>  
+![](./images/remix-3.png)
+
+Fig. 3 — Compiling helloWorld smart contract
+
+</div>
 
 If the compilation is successful, a green icon will appear near the `Solidity compiler` button.  
 You can also get detailed information about the compilation process by clicking `Compilation Details` (Fig. 4).  
 
-<p align="center">  
+<div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-4.png)  
-Fig. 4 - Compilation Details </p>  
+![](./images/remix-4.png)
+
+Fig. 4 — Compilation Details
+
+</div>
 
 ### Step 4. Connect Remix to MetaMask
 
 Interaction with Neon EVM is carried out through MetaMask. Choose the `Injected Web3` environment to connect Remix with an active account in Metamask (Fig. 5).  
 
-<p align="center">  
+<div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
-![](./images/remix-5.png)  
-Fig. 5 - Injected Web3 connects Remix with an active account in Metamask </p>  
+![](./images/remix-5.png)
+
+Fig. 5 — Injected Web3 connects Remix with an active account in Metamask
+
+</div>
 
 The MetaMask window should appear. It should display a list of available accounts (in our case, only one account will be displayed). Choose this account and click `Next` (Fig. 6).  
 
-<p align="center">  
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](./images/remix-6.png)  
-Fig. 6 - Selecting an account to interact with Remix </p>  
+![](./images/remix-6.png)
+
+Fig. 6 — Selecting an account to interact with Remix
+
+</div>
  
-Click `Connect` to connect to this account (Fig. 7).  
+Click `Connect` to connect to this account (Fig. 7).
 
-<p align="center">  
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](./images/remix-7.png)  
-Fig. 7 </p>  
+![](./images/remix-7.png)
+
+Fig. 7
+
+</div>
 
 ### Step 5. Deploy a smart contract in Solana Testnet
 
@@ -85,45 +106,63 @@ The `Account` field will display the amount in the wallet account. This data is 
 
 Click `Deploy` (Fig. 8).  
 
-<p align="center">  
+<div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-8.png)  
-Fig. 8 - Deploying the smart contract </p>  
+![](./images/remix-8.png)
+
+Fig. 8 — Deploying the smart contract
+
+</div>
 
 MetaMask will send a notification in the form of a pop-up window to confirm the transaction. Click `Confirm` (Fig. 9).  
 
-<p align="center">  
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](./images/remix-9.png)  
-Fig. 9 - MetaMask notification </p>  
+![](./images/remix-9.png)
+
+Fig. 9 — MetaMask notification
+
+</div>
 
 Once the transaction is confirmed, you can check it in the messages on the bottom right (Fig. 10).  
 
-<p align="center">  
+<div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-10.png)  
-Fig. 10 </p>  
+![](./images/remix-10.png)
+
+Fig. 10
+
+</div>
 
 After successfully deploying the smart contract, you will see a message containing the name and address of the smart contract where it was uploaded (Fig. 11).  
 
-<p align="center">  
+<div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
-![](./images/remix-11.png)  
-Fig. 11 - Deployed the smart contract data </p>  
+![](./images/remix-11.png)
+
+Fig. 11 — Deployed the smart contract data
+
+</div>
 
 If all the steps have been completed successfully, a green icon will appear near the `Deploy & run transactions` button (Fig. 12).
 
-<p align="center">  
+<div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-12.png)  
-Fig. 12 - Final view of the Remix panel </p>  
+![](./images/remix-12.png)
+
+Fig. 12 — Final view of the Remix panel
+
+</div>
 
 Congratulations! You can now call methods of the helloWorld smart contract deployed on the Solana Testnet (Fig. 13 shows the result of your smart contract — the text string "Hello World!").  
 
-<p align="center">  
+<div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
-![](./images/remix-13.png)  
-Fig. 13 - Calling the smart contract methods </p>  
+![](./images/remix-13.png)
+
+Fig. 13 — Calling the smart contract methods
+
+</div>
 
 ----  
 

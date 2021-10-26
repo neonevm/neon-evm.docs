@@ -38,16 +38,16 @@ const FeatureList = [
       </>
     )
   },
-  {
-    title: 'Neon Swap',
-    icon: faPaperPlane,
-    url: '/docs/neonswap/neonswap/',
-    description: (
-      <>
-        Play with one of the biggest dApps running on Solana testnet
-      </>
-    ),
-  },
+//  {
+//    title: 'Neon Swap',
+//    icon: faPaperPlane,
+//    url: '/docs/neonswap/neonswap_overview/',
+//    description: (
+//      <>
+//        Play with one of the biggest dApps running on Solana testnet
+//      </>
+//    ),
+//  },
 ];
 
 function Feature({title, icon, url, description}) {

@@ -20,7 +20,7 @@ To deploy a smart contract, you have to:
 **Step 1**  
 For the EVM to be able to run your contract, it needs to be in bytecode.
 Let's use a simple smart contract:  
-```cpp
+```js
 pragma solidity ^0.5.12;
 
 contract helloWorld {
@@ -59,23 +59,29 @@ To deploy your smart contract on an Ethereum test network.
 **Step 1**  
 Visit [Remix](https://remix.ethereum.org/) and create a new file.  
 
-<p align="center">  
+<div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
-![](./images/depl-contr-1.png) </p>  
+![](./images/depl-contr-1.png)
+
+</div>
 
 **Step 2**  
 On the upper left part of the Remix interface add the new file and enter the file name you want. In the new file paste your smart contract code.  
 
-<p align="center">  
+<div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/depl-contr-2.png) </p>  
+![](./images/depl-contr-2.png)
+
+</div>
 
 **Step 3**  
 Navigate to the compile icon on the left-hand side and click `Compile`.  
 
-<p align="center">  
+<div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/depl-contr-3.png) </p>  
+![](./images/depl-contr-3.png)
+
+</div>
 
 
 You can select the "Auto compile" option so the contract will always be compiled when you save the content on the text editor.
@@ -83,9 +89,11 @@ You can select the "Auto compile" option so the contract will always be compiled
 **Step 4**  
 Navigate to the deploy icon and run transactions screen:
 
-<p align="center">  
+<div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/depl-contr-4.png) </p>  
+![](./images/depl-contr-4.png)
+
+</div>
 
 Once you are on the `deploy and run transactions` screen, check that your contract name appears and click `Deploy`.  
 The `Javascript VM` of the current environment will appear at the top of the page. It means that you will deploy and interact with the smart contract on a local test blockchain to be able to test without any fees.  
@@ -94,9 +102,11 @@ The `Javascript VM` of the current environment will appear at the top of the pag
 Click `Deploy`. Your contract will appear at the bottom.  
 Click the arrow on the left to expand it so you can see the content of your contract.  
 
-<p align="center">  
+<div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/depl-contr-5.png) </p>  
+![](./images/depl-contr-5.png)
+
+</div>
 
 If your contract contains several modules, you can see the details of each of them by clicking on the corresponding name. You can also see logs of the transactions that are made appearing on the bottom of the window.  
 

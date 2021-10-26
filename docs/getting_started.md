@@ -17,7 +17,7 @@ As a developer, you should begin by exploring the Neon EVM framework and setting
 [🔘 Ethereum and Solana capabilities in a single solution](https://docs.neonlabs.org/docs/devportal/eth_sol_solution) — Describes a unique solution that allows Ethereum users to use the key features of Solana and vice versa.  
 [🔘 Overview of Neon EVM Architecture](https://docs.neonlabs.org/docs/devportal/neon_evm_arch) — Describes the architectural solutions built into Neon EVM that enable fast transaction processing for Ethereum users.  
 [🔘 Installation and setup](https://docs.neonlabs.org/docs/solana_cluster/cluster_installation) — Describes how to install, configure, and test the local Solana cluster.  
-[🔘 Connecting to the Solana cluster via proxy server](https://docs.neonlabs.org/docs/devportal/testnet/connect_to_solana_via_proxy) — Describes how to interact with the Solana cluster.
+[🔘 Connecting to the Solana cluster via proxy server](https://docs.neonlabs.org/docs/proxy/connect_to_solana_via_proxy) — Describes how to interact with the Solana cluster.
 
 ## Summary of Neon EVM documentation
 This documentation is an open-source community effort, so feel free to suggest new topics or add new content wherever you think it might be helpful. All documentation is available for editing via GitHub.  

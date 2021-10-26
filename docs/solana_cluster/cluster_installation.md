@@ -30,7 +30,7 @@ The Neon EVM endpoint enables [Metamask](https://metamask.io/) to work with Sola
 
 Setup the "Metamask" Chromium extension to connect to the proxy via Custom RPC at `http://localhost:9090/solana`. The following image describes how to set up the local Solana connection:  
 
-<div class='neon-img-container' style={{textAlign: 'center'}}>  
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>  
 
 ![](./img/cluster-install-1.png)
 
@@ -38,7 +38,7 @@ Setup the "Metamask" Chromium extension to connect to the proxy via Custom RPC a
 
 Open Remix (also in Chromium) and select `Injected Web3` environment. You can deploy EVM-wrapped smart contracts on Solana and invoke instructions:  
 
-<div class='neon-img-container' style={{textAlign: 'center'}}>  
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>  
 
 ![](./img/cluster-install-2.png)
 
