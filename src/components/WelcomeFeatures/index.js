@@ -41,7 +41,7 @@ const FeatureList = [
   {
     title: 'Neon Swap',
     icon: faPaperPlane,
-    url: '/docs/neonswap/neonswap/',
+    url: '/docs/neonswap/neonswap_overview/',
     description: (
       <>
         Play with one of the biggest dApps running on Solana testnet

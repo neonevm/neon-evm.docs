@@ -43,9 +43,26 @@ a:hover {
   padding: 0 var(--ifm-pre-padding);
 }
 
-.neon-img-container img {
+/* Framed image; width 300px */
+.neon-img-box-300 img {
     width: 300px;
     border: 2px solid var(--ifm-neon-pink);
+}
+
+/* Image without frame; width 300px */
+.neon-img-width-300 img {
+    width: 300px;
+}
+
+/* Framed image; width 600px */
+.neon-img-box-600 img {
+    width: 600px;
+    border: 2px solid var(--ifm-neon-pink);
+}
+
+/* Image without frame; width 600px */
+.neon-img-width-600 img {
+    width: 600px;
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
