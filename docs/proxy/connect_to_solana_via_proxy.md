@@ -34,24 +34,24 @@ The settings menu window to selecting a network should open.
 #### Step 3
 Click `Add Network` in the top-right corner.  
 To connect to the Solana [Testnet](https://docs.solana.com/clusters#testnet) cluster, in the window opened fill in the fields, for example:
-  * `Network Name`: "remote proxy - solana testnet"
+  * `Network Name`: "remote proxy — solana testnet"
   * `New RPC URL`: `https://proxy.testnet.neonlabs.org/solana`
   * `Chain ID`: 245022926
-  * `Currency Symbol`: SYM
+  * `Currency Symbol`: NEON
 
 To connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster, in the window opened fill in the fields, for example:
-  * `Network Name`: "remote proxy - solana devnet"
+  * `Network Name`: "remote proxy — solana devnet"
   * `New RPC URL`: `https://proxy.devnet.neonlabs.org/solana`
   * `Chain ID`: 245022940
-  * `Currency Symbol`: SYM
+  * `Currency Symbol`: NEON
 
 To connect to the Solana [Mainnet](https://docs.solana.com/clusters#mainnet-beta) cluster, in the window opened fill in the fields, for example:
-  * `Network Name`: "remote proxy - solana mainnet-beta"
-  * `New RPC URL`: `https://proxy.mainnet.neonlabs.org/solana`
+  * `Network Name`: "remote proxy — solana mainnet-beta"
+  * `New RPC URL`:
   * `Chain ID`: 245022934
-  * `Currency Symbol`: SYM
+  * `Currency Symbol`: NEON
 
-> **Note:** Only those accounts whose public keys are contained in a special hardcoded list, can use the Solana [Mainnet](https://docs.solana.com/clusters#mainnet-beta) network.
+> **Note:** The addres of the `New RPC URL` will be published after MVP on Mainnet. 
 
 
 #### Step 4
