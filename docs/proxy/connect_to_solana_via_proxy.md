@@ -50,8 +50,8 @@ To connect to the Solana [Mainnet](https://docs.solana.com/clusters#mainnet-beta
   * `New RPC URL`: `https://proxy.mainnet.neonlabs.org/solana`
   * `Chain ID`: 245022934
   * `Currency Symbol`: SYM
-> **Note:**  
-> Only those accounts whose public keys are contained in a special hardcoded list can use the Solana [Mainnet](https://docs.solana.com/clusters#mainnet-beta) network.
+
+> **Note:** Only those accounts whose public keys are contained in a special hardcoded list, can use the Solana [Mainnet](https://docs.solana.com/clusters#mainnet-beta) network.
 
 
 #### Step 4
@@ -100,7 +100,7 @@ CONFIG | RPC endpoint
 :-|:-
 devnet | `https://api.devnet.solana.com`
 testnet | `https://api.testnet.solana.com`
-mainnet-beta | `https://api.mainnet-beta.solana.com`
+mainnet | `https://api.mainnet-beta.solana.com`
 
 To use a different endpoint, you need to specify the variable `-e SOLANA_URL='http://<Solana-node RPC endpoint>'` on the command line.
 

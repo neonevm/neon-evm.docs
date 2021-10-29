@@ -1,6 +1,6 @@
-# Deploying Contracts on Solana Testnet via Remix
+# Deploying Contracts on Solana via Remix
 
-This tutorial will show you step by step how to use [Remix](https://doc.neonlabs.org/docs/glossary#remix) and [Metamask](https://doc.neonlabs.org/docs/glossary#metamask) to create and deploy a simple smart contract on Solana's Testnet.
+*This tutorial will show you step by step how to use [Remix](https://doc.neonlabs.org/docs/glossary#remix) and [Metamask](https://doc.neonlabs.org/docs/glossary#metamask) to create and deploy a simple smart contract on Solana. Although the instructions use Salana's [Testnet](https://docs.solana.com/clusters#testnet), they may also be applicable to Solana's [Devnet](https://docs.solana.com/clusters#devnet) or Solana's [Mainnet Beta](https://docs.solana.com/clusters#mainnet-beta).*
 
 ## Requirements
 Before you start, make sure of the following:
@@ -21,7 +21,7 @@ Go to http://remix.ethereum.org/ and open the `Remix - Ethereum IDE` web applica
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-1.png)
+![](./img/remix-1.png)
 
 Fig. 1 — Connecting to localhost
 
@@ -34,7 +34,7 @@ For now, it is an empty file. To fill it with content, click on the created file
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-2.png)
+![](./img/remix-2.png)
 
 Fig. 2 — Loading the helloWorld smart contract
 
@@ -47,7 +47,7 @@ Click on the `Compile helloWorld.sol` button to compile the loaded smart contrac
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-3.png)
+![](./img/remix-3.png)
 
 Fig. 3 — Compiling helloWorld smart contract
 
@@ -58,7 +58,7 @@ You can also get detailed information about the compilation process by clicking 
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-4.png)
+![](./img/remix-4.png)
 
 Fig. 4 — Compilation Details
 
@@ -70,7 +70,7 @@ Interaction with Neon EVM is carried out through MetaMask. Choose the `Injected 
 
 <div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
-![](./images/remix-5.png)
+![](./img/remix-5.png)
 
 Fig. 5 — Injected Web3 connects Remix with an active account in Metamask
 
@@ -80,7 +80,7 @@ The MetaMask window should appear. It should display a list of available account
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](./images/remix-6.png)
+![](./img/remix-6.png)
 
 Fig. 6 — Selecting an account to interact with Remix
 
@@ -90,7 +90,7 @@ Click `Connect` to connect to this account (Fig. 7).
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](./images/remix-7.png)
+![](./img/remix-7.png)
 
 Fig. 7
 
@@ -108,7 +108,7 @@ Click `Deploy` (Fig. 8).
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-8.png)
+![](./img/remix-8.png)
 
 Fig. 8 — Deploying the smart contract
 
@@ -118,7 +118,7 @@ MetaMask will send a notification in the form of a pop-up window to confirm the 
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](./images/remix-9.png)
+![](./img/remix-9.png)
 
 Fig. 9 — MetaMask notification
 
@@ -128,7 +128,7 @@ Once the transaction is confirmed, you can check it in the messages on the botto
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-10.png)
+![](./img/remix-10.png)
 
 Fig. 10
 
@@ -138,7 +138,7 @@ After successfully deploying the smart contract, you will see a message containi
 
 <div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
-![](./images/remix-11.png)
+![](./img/remix-11.png)
 
 Fig. 11 — Deployed the smart contract data
 
@@ -148,17 +148,17 @@ If all the steps have been completed successfully, a green icon will appear near
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/remix-12.png)
+![](./img/remix-12.png)
 
 Fig. 12 — Final view of the Remix panel
 
 </div>
 
-Congratulations! You can now call methods of the helloWorld smart contract deployed on the Solana Testnet (Fig. 13 shows the result of your smart contract — the text string "Hello World!").  
+Congratulations! You can now call methods of the helloWorld smart contract deployed on the Solana network (Fig. 13 shows the result of your smart contract — the text string "Hello World!").  
 
 <div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
-![](./images/remix-13.png)
+![](./img/remix-13.png)
 
 Fig. 13 — Calling the smart contract methods
 

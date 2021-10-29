@@ -61,11 +61,12 @@ Install the HDWalletProvider library:
 ```sh
 $ npm install @truffle/hdwallet-provider
 ```
+
 > **Note:** To go into much detail here, you can see the *[official documentation](https://www.npmjs.com/package/@truffle/hdwallet-provider)*.
 
-## Connecting Truffle to a Proxy 
+## Connecting Truffle to a Proxy
 
-To connect Truffle to a proxy on node.js, the `eth_accounts` method from the [Ethereum JSON RPC API](https://eth.wiki/json-rpc/API) set is required. This method allows serving a list of *20* Bytes-addresses owned by a client. Since the Neon EVM proxy does not support the eth_accounts method required to connect Truffle , the HDWalletProvider library is used to function as this method. The connection is configured in `truffle-config.js`.
+To connect Truffle to a proxy on `node.js`, the `eth_accounts` method from the [Ethereum JSON RPC API](https://eth.wiki/json-rpc/API) set is required. This method allows serving a list of *20* Bytes-addresses owned by a client. Since the Neon EVM proxy does not support the `eth_accounts` method required to connect Truffle , the HDWalletProvider library is used to function as this method. The connection is configured in `truffle-config.js`.
 
 The configuration file is publicly available and therefore, `word mnemonic` and `private key` contained in the file are also publicly available. This makes it possible to use this data by the library. HDWalletProvider obtains `word mnemonic` or `private key` from the configuration file and uses this data to sign transactions before sending them to the proxy.
 

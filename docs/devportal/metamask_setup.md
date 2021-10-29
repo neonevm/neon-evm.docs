@@ -19,7 +19,7 @@ Go to the MetaMask [download page](https://metamask.io/download.html). From ther
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](./testnet/images/metamask-1.png)
+![](./img/metamask-1.png)
 
 Fig. 1 — Loading MetaMask
 
@@ -30,7 +30,7 @@ MetaMask is essentially a plugin in the form of an extension to a browser. There
 
 <div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
-![](./testnet/images/metamask-2.png)
+![](./img/metamask-2.png)
 
 Fig. 2
 
@@ -63,7 +63,7 @@ In the upper-right corner, click the red apple view element. Select settings fro
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](./testnet/images/metamask-3.png)
+![](./img/metamask-3.png)
 
 Fig. 3 — Select "Settings" from the dropdown menu
 
@@ -83,7 +83,7 @@ Click `Settings` in the dropdown menu. The window with settings menu for selecti
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](./testnet/images/metamask-4.png)
+![](./img/metamask-4.png)
 
 Fig. 4 — Choosing a Network
 
@@ -94,7 +94,7 @@ Add a Network (Fig. 5).
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](./testnet/images/metamask-5.png)
+![](./img/metamask-5.png)
 
 Fig. 5 — The Networks menu
 
@@ -106,15 +106,17 @@ The new window contains the settings for 6 default subnets. You need to use thes
 Fill in the fields on the next page (Fig. 6):  
 * `Network Name`: defined network name.
 * `New RPC URL`: path to interface.
-* `Chain ID`: blockchain ID.
+* `Chain ID`: 245022940.
 * `Currency Symbol`: coin ticker (e.g. ETH, BNB).
 * `Block Explorer URL (optional)`: URL of the block browser.
+
+> **Note:** The `Chain ID` is specified for [Testnet](https://docs.solana.com/clusters#testnet). To choose [Devnet](https://docs.solana.com/clusters#devnet) or [Mainnet](https://docs.solana.com/clusters#mainnet-beta) in this field, you need to specify the value *245022926* or *245022934*, respectively.
 
 The wallet settings depend on the values given for the option mentioned above.  
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](./testnet/images/metamask-6.png)
+![](./img/metamask-6.png)
 
 Fig. 6 — Fill the Fields
 
