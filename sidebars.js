@@ -56,14 +56,7 @@ module.exports = {
         'devportal/metamask_setup',
         'devportal/bpf_trace',
         'devportal/using_truffle',
-        {
-          type: 'category',
-          label: 'Testnet',
-          items: 
-          [
-            'devportal/testnet/deploy_contract_via_remix',
-          ],
-        },
+        'devportal/deploy_contract_via_remix',
       ],
     },
     {

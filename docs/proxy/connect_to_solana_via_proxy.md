@@ -4,11 +4,11 @@
 *Connect to the Solana cluster via a proxy server.*
 
 Depending on the tasks to be solved, as well as on the location of the proxy and [Solana](https://docs.solana.com/introduction), you can use one of 3 options for configuring the network:
-  * [Option 1:](#option-1-interaction-with-the-solana-cluster-via-a-proxy-hosted-on-a-remote-virtual-server) The proxy is hosted on a remote virtual server; either Solana Testnet or Solana Devnet is used.
-  * [Option 2:](#option-2-running-solana-testnet-via-a-proxy-hosted-locally) The proxy is hosted locally; either Solana Testnet or Solana Devnet is used.
+  * [Option 1:](#option-1-interaction-with-the-solana-cluster-via-a-proxy-hosted-on-a-remote-virtual-server) The proxy is hosted on a remote virtual server; Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used.
+  * [Option 2:](#option-2-running-solana-testnet-via-a-proxy-hosted-locally) The proxy is hosted locally; Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used.
   * [Option 3:](#option-3-running-solana-via-a-proxy-when-both-are-hosted-locally) Both the proxy and Solana are hosted locally (debug mode, which allows you to configure your node locally).
 
-[Solana Testnet](https://docs.solana.com/clusters#testnet), like [Solana Devnet](https://docs.solana.com/clusters#devnet), is an alternative cryptocurrency chain exclusively for developers. It allows developers to run their node in a test blockchain and experiment without losing real currency.  
+[Testnet](https://docs.solana.com/clusters#testnet), like [Devnet](https://docs.solana.com/clusters#devnet), is an alternative cryptocurrency chain exclusively for developers. It allows developers to run their node in a test blockchain and experiment without losing real currency.  
 The mainnet, testnet, and devnet coins are incompatible with each other. Testnet and devnet coins have no value and developers cannot treansfer mainnet coins to testnet/devnet. Likewise, they cannot transfer testnet/devnet coins to mainnet.
 
 ## Requirements for your device
@@ -21,7 +21,7 @@ The MetaMask wallet must be installed on your device.
 
 **The network configuration:**
   * [Solana cluster](https://docs.solana.com/cluster/overview) is accessed via a proxy hosted on a remote virtual server.
-  * Solana works in test mode and the proxy interacts with it through Neon EVM.
+  * Solana works in test mode (recommended) and the proxy interacts with it through Neon EVM.
 
 #### Step 1
 Open your MetaMask wallet and in the upper-right corner, click the identical.  
@@ -33,17 +33,26 @@ The settings menu window to selecting a network should open.
 
 #### Step 3
 Click `Add Network` in the top-right corner.  
-To connect to the [Solana Testnet cluster](https://docs.solana.com/clusters#testnet), in the window opened fill in the fields, for example:
-  * `Network Name`: "remote proxy - solana testnet"
+To connect to the Solana [Testnet](https://docs.solana.com/clusters#testnet) cluster, in the window opened fill in the fields, for example:
+  * `Network Name`: "remote proxy — solana testnet"
   * `New RPC URL`: `https://proxy.testnet.neonlabs.org/solana`
-  * `Chain ID`: 111
-  * `Currency Symbol`: SYM
+  * `Chain ID`: 245022926
+  * `Currency Symbol`: NEON
 
-To connect to the [Solana Devnet cluster](https://docs.solana.com/clusters#devnet), in the window opened fill in the fields, for example:
-  * `Network Name`: "remote proxy - solana devnet"
+To connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster, in the window opened fill in the fields, for example:
+  * `Network Name`: "remote proxy — solana devnet"
   * `New RPC URL`: `https://proxy.devnet.neonlabs.org/solana`
-  * `Chain ID`: 110
-  * `Currency Symbol`: SYM
+  * `Chain ID`: 245022940
+  * `Currency Symbol`: NEON
+
+To connect to the Solana [Mainnet](https://docs.solana.com/clusters#mainnet-beta) cluster, in the window opened fill in the fields, for example:
+  * `Network Name`: "remote proxy — solana mainnet-beta"
+  * `New RPC URL`:
+  * `Chain ID`: 245022934
+  * `Currency Symbol`: NEON
+
+> **Note:** The addres of the `New RPC URL` will be published after MVP on Mainnet. 
+
 
 #### Step 4
 After filling in the field click `Save`. Now you have access to the [Solana cluster](https://docs.solana.com/clusters) and can carry out transactions.
@@ -52,7 +61,7 @@ After filling in the field click `Save`. Now you have access to the [Solana clus
 
 **The network configuration:**
   * Solana cluster is accessed via the proxy hosted locally.
-  * Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet) is used and the proxy interacts with it through Neon EVM.
+  * Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used and the proxy interacts with it through Neon EVM.
 
 #### Step 1
 Before you start, make sure that you have a daemon running. If you see something like:  
@@ -91,6 +100,7 @@ CONFIG | RPC endpoint
 :-|:-
 devnet | `https://api.devnet.solana.com`
 testnet | `https://api.testnet.solana.com`
+mainnet | `https://api.mainnet-beta.solana.com`
 
 To use a different endpoint, you need to specify the variable `-e SOLANA_URL='http://<Solana-node RPC endpoint>'` on the command line.
 
@@ -108,8 +118,8 @@ $ sudo docker run --rm -d --network=host -v ~/.config/solana/id.json:/root/.conf
 ## Option 3: Running Solana via a proxy when both are hosted locally
 
 **The network configuration:**
-  * Both the Solana cluster and the proxy are hosted locally.
-  * The proxy interacts with Solana through Neon EVM.
+  * Both the Solana node and the proxy are hosted locally.
+  * The proxy interacts with the Solana node through Neon EVM.
 
 Upload the docker-compose-test.yml file to your currently directory using the following command:
 ```sh
@@ -120,4 +130,13 @@ Execute the command:
 $ sudo REVISION=stable docker-compose -f docker-compose-test.yml up -d
 ```
 As soon as the latest command is completed, the proxy will start to deploy Neon EVM in a local solana node. After that, the proxy and Solana will be available at the URLs `http://localhost:9090/solana` and `http://localhost:8899`, respectively.
+
+---  
+
+> **Note:**  
+> As a proxy, you can use the dedicated neon server, or a separate server that you will need to deploy and log into it.
+> 
+> As a Solana endpoint, you can use a separate node hosted on devnet or testnet.  
+> You can also use a Solana node that is not hosted on any network. In this case, you will need to configure this node and synchronize it with the devnet or testnet network. Then you will need to deploy the local proxy and configure it to work with this node. You will also need to connect to the EVM loader deployed within devnet or testnet.
+
 

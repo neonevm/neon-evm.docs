@@ -58,8 +58,6 @@ The block diagram of the solution is shown in Fig. 1.
 
 ![](./img/neon-evm-1.png)
 
-</div> <div style={{textAlign: 'center'}}>
-
 Fig. 1
 
 </div>
@@ -109,8 +107,6 @@ A user calls a client that generates a transaction and sends it to the proxy, wh
 <div style={{textAlign: 'center'}}>
 
 ![](./img/neon-evm-2.png)
-
-</div> <div style={{textAlign: 'center'}}>
 
 Fig. 2
 

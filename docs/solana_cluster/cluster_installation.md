@@ -82,7 +82,7 @@ module.exports = {
           provider
         );
       },
-      network_id: "111",
+      network_id: "245022940",
       gas: 3000000,
       gasPrice: 1000000000,
     }
@@ -95,6 +95,11 @@ module.exports = {
   }
 };' > truffle-config.js
 ```
+
+> **Note:**
+> The file `truffle-config.js` is configured for [Testnet](https://docs.solana.com/clusters#testnet)(recommended). If you want to test or debug your contract directly in [Devnet](https://docs.solana.com/clusters#devnet) or [Mainnet](https://docs.solana.com/clusters#mainnet-beta), you need to configure the file to a proxy running on Solana's network and specify the following network values:
+> `network_id = 245022926` for Devnet
+> `network_id = 245022934` for Mainnet
 
 ### Contract creating
 
