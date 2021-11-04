@@ -18,6 +18,8 @@ body {
   --ifm-color-primary-light: rgb(70, 203, 174);
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-blockquote-border-color: #CE3A8B;
+  --ifm-blockquote-bg: rgba(206,58,139, 0.2);
   --ifm-code-font-size: 95%;
   --ifm-link-color: #CE3A8B;
   --ifm-neon-pink: #CE3A8B;
@@ -25,6 +27,9 @@ body {
   --ifm-link-hover-color: #4355F9;
   --ifm-navbar-link-hover-color: #4355F9;
   --ifm-menu-color-active: #CE3A8B;
+  --ifm-blockquote-padding-vertical: 1rem;
+  --ifm-blockquote-padding-horizontal: 1.2rem;
+  --ifm-blockquote-border-left-width: 6px;
 }
 
 .main-wrapper {background-color: var();
@@ -67,4 +72,8 @@ a:hover {
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.markdown blockquote {
+  background-color: var(--ifm-blockquote-bg);
 }
