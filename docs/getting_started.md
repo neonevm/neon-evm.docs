@@ -14,8 +14,8 @@ If you are new to Neon EVM development, we recommend starting from the very begi
 ## Setting up the local development environment
 As a developer, you should begin by exploring the Neon EVM framework and setting up your local development environment, which includes installing, configuring, and testing your local Solana cluster. After setting up the local development environment, you can progress to running your applications on the Solana cluster.  
 
-[🔘 Ethereum and Solana capabilities in a single solution](https://docs.neonlabs.org/docs/devportal/eth_sol_solution) — Describes a unique solution that allows Ethereum users to use the key features of Solana and vice versa.  
-[🔘 Overview of Neon EVM Architecture](https://docs.neonlabs.org/docs/devportal/neon_evm_arch) — Describes the architectural solutions built into Neon EVM that enable fast transaction processing for Ethereum users.  
+[🔘 Ethereum and Solana capabilities in a single solution](https://docs.neonlabs.org/docs/architecture/eth_sol_solution) — Describes a unique solution that allows Ethereum users to use the key features of Solana and vice versa.  
+[🔘 Overview of Neon EVM Architecture](https://docs.neonlabs.org/docs/architecture/neon_evm_arch) — Describes the architectural solutions built into Neon EVM that enable fast transaction processing for Ethereum users.  
 [🔘 Installation and setup](https://docs.neonlabs.org/docs/solana_cluster/cluster_installation) — Describes how to install, configure, and test the local Solana cluster.  
 [🔘 Connecting to the Solana cluster via proxy server](https://docs.neonlabs.org/docs/proxy/connect_to_solana_via_proxy) — Describes how to interact with the Solana cluster.
 
