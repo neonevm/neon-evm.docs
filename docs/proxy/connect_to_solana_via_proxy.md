@@ -33,6 +33,12 @@ The settings menu window to selecting a network should open.
 
 #### Step 3
 Click `Add Network` in the top-right corner.  
+To connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster, in the window opened fill in the fields, for example:
+  * `Network Name`: "remote proxy — solana devnet"
+  * `New RPC URL`: `https://proxy.devnet.neonlabs.org/solana`
+  * `Chain ID`: 245022926
+  * `Currency Symbol`: NEON
+
 To connect to the Solana [Testnet](https://docs.solana.com/clusters#testnet) cluster, in the window opened fill in the fields, for example:
   * `Network Name`: "remote proxy — solana testnet"
   * `New RPC URL`: `https://proxy.testnet.neonlabs.org/solana`
@@ -40,12 +46,6 @@ To connect to the Solana [Testnet](https://docs.solana.com/clusters#testnet) clu
   * `Currency Symbol`: NEON
 
 > **Note:** We recommend that you use Devnet instead of Testnet, as Devnet is more stable and reliable.
-
-To connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster, in the window opened fill in the fields, for example:
-  * `Network Name`: "remote proxy — solana devnet"
-  * `New RPC URL`: `https://proxy.devnet.neonlabs.org/solana`
-  * `Chain ID`: 245022926
-  * `Currency Symbol`: NEON
 
 To connect to the Solana [Mainnet](https://docs.solana.com/clusters#mainnet-beta) cluster, in the window opened fill in the fields, for example:
   * `Network Name`: "remote proxy — solana mainnet-beta"
