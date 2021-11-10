@@ -4,14 +4,14 @@
 
 <table>
     <tr>
-        <th>Network (Chain ID)</th>
+        <th width="130">Network (Chain ID)</th>
         <th>RPC URL</th>
         <th>Operator name</th>
     </tr>
     <tr>
         <td rowspan="2">Testnet (245022940)</td>
-        <td>https://proxy.testnet.neonlabs.org/solana</td>
-        <td>Neon Labs</td>
+        <td >https://proxy.testnet.neonlabs.org/solana</td>
+        <td >Neon Labs</td>
     </tr>
     <tr>
         <td>https://proxy.devnet.neonlabs.org/solana</td>
@@ -43,6 +43,7 @@
 
 
 Semantic meaning of table columns:
-  * `RPC URL` — address for interacting with the required proxy. Solana network determines what the RPC URL should be.
-  * `Operator name` — Operator providing the proxy.
+  * `Network (Chain ID)` — Solana network and its identifier. The network determines what the RPC URL proxy can be used.
+  * `RPC URL` — address for interacting with the required proxy.
+  * `Operator name` — operator name providing the proxy.
 

@@ -39,6 +39,8 @@ To connect to the Solana [Testnet](https://docs.solana.com/clusters#testnet) clu
   * `Chain ID`: 245022940
   * `Currency Symbol`: NEON
 
+> **Note:** We recommend that you use Devnet instead of Testnet, as Devnet is more stable and reliable.
+
 To connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster, in the window opened fill in the fields, for example:
   * `Network Name`: "remote proxy — solana devnet"
   * `New RPC URL`: `https://proxy.devnet.neonlabs.org/solana`
