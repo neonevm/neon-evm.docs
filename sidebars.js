@@ -83,8 +83,10 @@ module.exports = {
       label: 'Neon Proxy',
       items:
       [
+        'proxy/url_table',
         'proxy/connect_to_solana_via_proxy',
         'proxy/operator_guide',
+        'proxy/choosing_proxy',
       ],
     },
     {

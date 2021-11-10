@@ -104,11 +104,11 @@ The new window contains the settings for 6 default subnets. You need to use thes
 
 ### Step 7
 Fill in the fields on the next page (Fig. 6):  
-* `Network Name`: defined network name.
-* `New RPC URL`: path to interface.
-* `Chain ID`: 245022940.
-* `Currency Symbol`: coin ticker (e.g. ETH, BNB).
-* `Block Explorer URL (optional)`: URL of the block browser.
+* `Network Name`: "remote proxy — solana testnet"
+* `New RPC URL`: https://proxy.testnet.neonlabs.org/solana
+* `Chain ID`: 245022940
+* `Currency Symbol`: NEON
+* `Block Explorer URL (optional)`: URL of the block browser
 
 > **Note:** The `Chain ID` is specified for [Testnet](https://docs.solana.com/clusters#testnet). To choose [Devnet](https://docs.solana.com/clusters#devnet) or [Mainnet](https://docs.solana.com/clusters#mainnet-beta) in this field, you need to specify the value *245022926* or *245022934*, respectively.
 
