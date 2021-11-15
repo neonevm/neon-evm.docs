@@ -9,17 +9,17 @@
         <th>Operator name</th>
     </tr>
     <tr>
-        <td rowspan="2">Testnet (245022940)</td>
+        <td rowspan="1">Testnet (245022940)</td>
         <td >https://proxy.testnet.neonlabs.org/solana</td>
         <td >Neon Labs</td>
     </tr>
     <tr>
-        <td rowspan="2">Devnet (245022926)</td>
+        <td rowspan="1">Devnet (245022926)</td>
         <td>https://proxy.devnet.neonlabs.org/solana</td>
         <td>Neon Labs</td>
     </tr>
     <tr>
-        <td rowspan="3">Mainnet Beta (245022934)</td>
+        <td rowspan="1">Mainnet Beta (245022934)</td>
         <td>https://neon-proxy.rbf.systems</td>
         <td>RBF</td>
     </tr>
