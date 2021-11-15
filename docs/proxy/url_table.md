@@ -14,28 +14,12 @@
         <td >Neon Labs</td>
     </tr>
     <tr>
-        <td>https://proxy.devnet.neonlabs.org/solana</td>
-        <td>Neon Labs</td>
-    </tr>
-    <tr>
         <td rowspan="2">Devnet (245022926)</td>
-        <td>https://proxy.testnet.neonlabs.org/solana</td>
-        <td>Neon Labs</td>
-    </tr>
-    <tr>
         <td>https://proxy.devnet.neonlabs.org/solana</td>
         <td>Neon Labs</td>
     </tr>
     <tr>
         <td rowspan="3">Mainnet Beta (245022934)</td>
-        <td>https://proxy.testnet.neonlabs.org/solana</td>
-        <td>Neon Labs</td>
-    </tr>
-    <tr>
-        <td>https://proxy.devnet.neonlabs.org/solana</td>
-        <td>Neon Labs</td>
-    </tr>
-    <tr>
         <td>https://neon-proxy.rbf.systems</td>
         <td>RBF</td>
     </tr>
