@@ -23,11 +23,11 @@ A proxy operator’s main task is to install software on a server to accept a tr
 First, you must be registered in Solana, which involves creating an account with a balance for storing SOL tokens, and getting the public and private keys.
 There is no strict minimum amount of SOL required to run an operator on Neon EVM. However, you should take into account that you will need tokens to create accounts for new users, deploy contracts, and execute transactions.
 
-In addition to the balance for storing SOL tokens, an operator must also have the `ETH_TOKEN_MINT`balance for storing value tokens. These tokens are used to pay funds from users to an operator for the successful execution of transactions. Depending on the chosen configuration, specific values for `ETH_TOKEN_MINT` are indicated in the [table](#eth_token_mint) below.
+In addition to the balance for storing SOL tokens, an operator must also have the `NEON_TOKEN_MINT`balance for storing value tokens. These tokens are used to pay funds from users to an operator for the successful execution of transactions. Depending on the chosen configuration, specific values for `NEON_TOKEN_MINT` are indicated in the [table](#neon_token_mint) below.
 
-To create the `ETH_TOKEN_MINT` balance, you can use the following command:
+To create the `NEON_TOKEN_MINT` balance, you can use the following command:
 ```
-spl-token -u <Solana RPC node URL> create-account <ETH_TOKEN_MINT>
+spl-token -u <Solana RPC node URL> create-account <NEON_TOKEN_MINT>
 ```
 
 ### Hardware recommendations
@@ -131,6 +131,7 @@ Each `CONFIG` value (devnet/testnet/local), by default, the corresponding variab
   * `POSTGRES_HOST`
   * `MINIMAL_GAS_PRICE`
   * `EVM_LOADER`
+  * `NEON_TOKEN_MINT`
 
 When you start Docker, you can override all these parameters by specifying different values for them on the command line. The table below shows default values for the following variables:
 
@@ -166,3 +167,12 @@ CONFIG | EVM_LOADER
 devnet | eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU
 testnet | eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU
 local | —
+
+#### NEON_TOKEN_MINT
+`CONFIG` defaults the following values for the variable `NEON_TOKEN_MINT`:
+
+CONFIG | NEON_TOKEN_MINT
+:-|:-
+devnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
+testnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
+local | HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
