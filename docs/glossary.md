@@ -180,6 +180,11 @@ A mathematical algorithm used to demonstrate the authenticity of digital message
 
 ---  
 
+### Slot
+The period of time during which a block is created. Collectively, slots create a logical clock. Slots are ordered sequentially and non-overlapping, comprising roughly equal time.  
+
+---  
+
 ### Smart contract
 A computer protocol intended to facilitate, verify, or enforce the negotiation or performance of a contract.  
 
@@ -202,6 +207,11 @@ A token registered in *[SPL Token](#solana-program-library-token-spl-token)*.
 
 ### Staked tokens
 Tokens allocated for a stake acquisition that can’t be used for anything else in this state. The user can stake active tokens listed on their balance, or deposit them. Also, the user can perform the reverse operation: withdraw tokens from the staked state to active.  
+
+---  
+
+### Tmpfs
+A temporary file storage paradigm implemented in many Unix-like operating systems. It is intended to appear as a mounted file system, but data is stored in volatile memory instead of a persistent storage device.  
 
 ---  
 

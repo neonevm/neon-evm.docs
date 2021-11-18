@@ -31,7 +31,7 @@ spl-token -u <Solana RPC node URL> create-account <ETH_TOKEN_MINT>
 ```
 
 ### Hardware recommendations
-The minimum specifications recommended to choose your node:
+The minimum specifications recommended to your Neon EVM proxy:
   * CPU
     * High clock speed: 4+ cores or more
     * 2.8 GHz or faster
@@ -40,8 +40,19 @@ The minimum specifications recommended to choose your node:
   * Disk space
     * 80 GB or more
 
+> Do not use a public or shared Solana RPC node for your Neon EVM proxy. Use only the device that you control.
+
+In addition to the Neon EVM proxy you need a Solana RPC node. It should be a dedicated RPC node with low latency to interact with your Neon EVM proxy.
+
+The minimum specifications recommended to your Solana RPC node:
+  * 256 GB memory
+  * 16 cores
+  * EPIC Gen 2 or Gen 3
+  * Core isolation
+  * [Tmpfs](https://docs.neon-labs.org/docs/glossary#tmpfs)
+
 ### Software recommendations
-The following software should be installed on your node:
+The following software should be installed on your Neon EVM proxy:
   * OS
     * Ubuntu 20.04 or later
     * macOS Darwin 10.12 or later
@@ -55,22 +66,36 @@ Internet service should be at least 300 Mbps.
 
 ## Installation Using Docker
 
-After you have chosen a node that meets the listed recommendations, you can start installing a proxy operator software on it.
+After you have chosen the node (Neon EVM proxy) that meets the listed recommendations, you can start installing a proxy operator software on it.
 
 ### Run a daemon
 
 Make sure that you have a daemon running. If you see something like:
 
-```sh
+```bash
 $ docker info
 
 Cannot connect to the Docker daemon at <docker.sock>. Is the docker daemon running?
 ```
 
-you need to run the daemon first:
+you need to run the daemon and postgres services first:
 
-```sh
-$ sudo systemctl start docker
+```bash
+$ sudo docker run --rm -ti --network=host -e POSTGRES_DB=<database> -e POSTGRES_USER=<username> -e POSTGRES_PASSWORD=<password> --name=postgres postgres:14.0
+```
+
+**The command line options:**
+  * `--rm` — delete a container when the command is completed.
+  * `-ti` — allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
+  * `--network host` — use host network.
+  * `-e POSTGRES_DB=<database>` — specifies the name of DB; `neon-db` is recommended.
+  * `-e POSTGRES_USER=<username>` — specifies a username of DB; `neon-proxy` is recommended.
+  * `-e POSTGRES_PASSWORD=<password>` — specifies a username's password; `neon-proxy-pass` is recommended.
+  * `--name=postgres` — specifies a postgres version; `postgres:14.0` is recommended.
+
+*Example:*
+```bash
+$ sudo docker run --rm -ti --network=host -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass --name=postgres postgres:14.0
 ```
 
 ### Start a proxy in a Docker container
@@ -78,56 +103,58 @@ $ sudo systemctl start docker
 Create and run a proxy container on the daemon.
 When starting Docker, you need to set the *CONFIG* environment variable, which can take one of the following values: *local*, *devnet*, *testnet*.
 
-```sh
-$ sudo docker run --rm -ti --network=host -e CONFIG=<network mode> -v <path-to-keypair-file/id.json>:/root/.config/solana/id.json neonlabsorg/proxy:v0.2.0
+```bash
+$ sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=<database> -e POSTGRES_USER=<username> -e POSTGRES_PASSWORD=<password> -v <path-to-keypair-file/id.json>:/root/.config/solana/id.json neonlabsorg/proxy:v0.4.0
 ```
 
 **The command line options:**
-  * `--rm` — delete a container when the command is completed.
-  * `-ti` — allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
-  * `--network host` — use host network.
-  * `-e CONFIG=<network mode>` — specifies a Solana cluster operating mode; either `CONFIG=devnet` or `CONFIG=testnet` is recommended.
+  * `-e CONFIG=<network>` — specifies a Solana network configuration; `CONFIG=devnet` is recommended.
   * `-v <path-to-keypair-file/id.json>:/root/.config/solana/id.json` — specifies the path to the .JSON file where your keypair is stored and passes your private key to the container.
-  * `neonlabsorg/proxy:v0.2.0` — the specific proxy image.
+  * `neonlabsorg/proxy:v0.4.0` — the specific proxy image.
+
+> The option `-v <path-to-keypair-file>` is only relevant for authorized operators. If you are not yet registered as an operator and are just about to become one, you do not need to specify this option.
 
 This command line will automatically perform all the actions required to launch a Docker container and run a proxy.
 
 *Example:*
-```sh
-$ sudo docker run --rm -ti --network=host -e CONFIG=devnet -v ~/.config/solana/id.json:/root/.config/solana/id.json neonlabsorg/proxy:v0.2.0
+```bash
+$ sudo docker run --rm -ti --network=host -e CONFIG=devnet -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass neonlabsorg/proxy:v0.4.0
 ```
 
 ### CONFIG values
 Each `CONFIG` value (devnet/testnet/local), by default, the corresponding variables are set:
   * `SOLANA_URL`
-  * `NEON_CHAIN_ID`
   * `NEON_CLI_TIMEOUT`
+  * `CANCEL_TIMEOUT`
+  * `POSTGRES_HOST`
+  * `MINIMAL_GAS_PRICE`
   * `EVM_LOADER`
-  * `COLLATERAL_POOL_BASE`
-  * `ETH_TOKEN_MINT`
 
 When you start Docker, you can override all these parameters by specifying different values for them on the command line. The table below shows default values for the following variables:
 
-CONFIG | SOLANA_URL | NEON_CHAIN_ID | NEON_CLI_TIMEOUT
-:-|:-|:-|:-
-devnet | `https://api.devnet.solana.com` | 0x6e | 10 s
-testnet | `https://api.testnet.solana.com` | 0x6f | 15 s
-local | `http://localhost:8899` | 0x6f | 0,9 s
+CONFIG | SOLANA_URL | NEON_CLI_TIMEOUT | CANCEL_TIMEOUT | POSTGRES_HOST | MINIMAL_GAS_PRICE
+:-|:-|:-|:-|:-
+devnet | `https://api.devnet.solana.com` | 10 s | 60 s | localhost | 1
+testnet | `https://api.testnet.solana.com` | 15 s | 60 s | localhost | 1
+local | `http://localhost:8899` | 0,9 s | 10 s | localhost | 0
 
 #### SOLANA_URL
 Specifies a Solana RPC endpoint that a proxy is connecting to. If you specify `CONFIG=local` and `SOLANA_URL=<your node URL>`, then requests of a proxy will be sent to your node.
 
-#### NEON_CHAIN_ID
-You can run a proxy with your own chain by specifying `NEON_CHAIN_ID`.  
-
 #### NEON_CLI_TIMEOUT
-In Neon EVM, a transaction is run for emulation before execution to determine the accounts that will be involved in it. The `NEON_CLI_TIMEOUT` variable specifies the time (in seconds) required for a transaction to be executed.
+In Neon EVM, a transaction is run for emulation before execution to determine the accounts that will be involved in it. The `NEON_CLI_TIMEOUT` variable specifies the time (in [slots](https://docs.neon-labs.org/docs/glossary#slot)) required for a transaction to be executed.
 
 The emulation execution time is affected by the following factors:
   * The geographical distance between a node and proxy.
   * The load of the node due to processing requests at the moment.
 
 Setting the `NEON_CLI_TIMEOUT` time too short may not be sufficient to complete a transaction and pack it into a block. Therefore, `NEON_CLI_TIMEOUT` is set to the smallest value for `CONFIG = local`. Setting the `NEON_CLI_TIMEOUT` value too high may block other users from accessing this node.
+
+#### CANCEL_TIMEOUT
+This parameter limits the time (in [slots](https://docs.neon-labs.org/docs/glossary#slot)) for blocking an account. If the blocking time for the account exceeds the time specified in this parameter, an attempt will be made to cancel the transaction that blocked this account.
+
+#### MINIMAL_GAS_PRICE
+This parameter sets the lowest possible gas value specified in a transaction.
 
 #### EVM_LOADER
 `CONFIG` defaults the following values for the variable `EVM_LOADER`:
@@ -136,28 +163,4 @@ CONFIG | EVM_LOADER
 :-|:-
 devnet | eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU
 testnet | eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU
-local | deploy
-
-If you set the value to `EVM_LOADER=deploy`, then the new Neon EVM will be deployed.  
-
-#### COLLATERAL_POOL_BASE
-`CONFIG` defaults the following values for the variable `COLLATERAL_POOL_BASE`:
-
-CONFIG | COLLATERAL_POOL_BASE
-:-|:-
-devnet | 7SBdHNeF9FFYySEoszpjZXXQsAiwa5Lzpsz6nUJWusEx
-testnet | 7SBdHNeF9FFYySEoszpjZXXQsAiwa5Lzpsz6nUJWusEx
-local | deploy
-
-If you set the value to `COLLATERAL_POOL_BASE=deploy`, then the new collateral pool accounts will be created.
-
-#### ETH_TOKEN_MINT
-`CONFIG` defaults the following values for the variable `ETH_TOKEN_MINT`:
-
-CONFIG | ETH_TOKEN_MINT
-:-|:-
-devnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
-testnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
-local | deploy
-
-If you set the value to `ETH_TOKEN_MINT=deploy`, then the new token will be created.
+local | —
