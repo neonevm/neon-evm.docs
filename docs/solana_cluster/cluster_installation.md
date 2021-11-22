@@ -12,7 +12,13 @@ The [Neon EVM](https://neon-labs.org/) is a solution that performs transaction e
 
 ## Setting up the Solana Cluster
 
-The next step is making Solana Validator node working from the docker container:
+PostgreSQL must be running before starting the docker container:
+
+```sh
+$ docker run --rm -ti --network=host -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass --name=postgres postgres:14.0
+```
+
+The next step is making Solana RPC endpoint working from the docker container:
 
 ```sh
 $ docker run -p 8899:8899 -p 8900:8900 -p 8001:8001 -p 8000-8009:8000-8009/udp -ti -e RUST_LOG=solana_runtime::system_instruction_processor=trace,solana_runtime::message_processor=debug,solana_bpf_loader=debug,solana_rbpf=debug -e NDEBUG=1 --name=solana neonlabsorg/solana:stable-testnet | grep -v 'Program Vote111111111111111111111111111111111111111'
@@ -23,7 +29,7 @@ $ docker run -p 8899:8899 -p 8900:8900 -p 8001:8001 -p 8000-8009:8000-8009/udp -
 The Neon EVM endpoint enables [Metamask](https://metamask.io/) to work with Solana seamlessly. You should issue the following command in a new terminal window:
 
 ```sh
- $ docker run --rm -ti --network=host -e CONFIG=local -e EXTRA_GAS=10000 --name=proxy neonlabsorg/proxy:latest
+ $ docker run --rm -ti --network=host -e CONFIG=local -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass -e EXTRA_GAS=10000 --name=proxy neonlabsorg/proxy:latest
 ```
 
 ## Remix and Metamask with Neon EVM
