@@ -47,7 +47,7 @@ In addition to the Neon EVM proxy you need a Solana RPC node. It should be a ded
 The minimum specifications recommended to your Solana RPC node:
   * 256 GB memory
   * 16 cores
-  * EPIC Gen 2 or Gen 3
+  * EPYC Gen 2 or Gen 3
   * Core isolation
   * [Tmpfs](https://docs.neon-labs.org/docs/glossary#tmpfs)
 
