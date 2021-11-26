@@ -31,7 +31,7 @@ spl-token -u <Solana RPC node URL> create-account <NEON_TOKEN_MINT>
 ```
 
 ### Hardware recommendations
-We do not have strict hardware recommendations. The device specifications below are based on information obtained from official Solana documentation.
+We do not have strict hardware recommendations. The device specifications below are based on information obtained from official Solana [documentation](https://docs.solana.com/running-validator/validator-reqs).
 
 The minimum specifications recommended to your Neon EVM proxy:
   * CPU
