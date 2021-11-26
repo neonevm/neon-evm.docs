@@ -37,6 +37,7 @@ The minimum specifications recommended to your Neon EVM proxy:
   * CPU
     * 12 cores
     * 2.8 GHz or faster
+    * AVX2 instruction support
   * RAM
     * 128 GB or more
   * Disk space
