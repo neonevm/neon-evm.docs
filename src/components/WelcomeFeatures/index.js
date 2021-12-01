@@ -48,6 +48,18 @@ const FeatureList = [
 //      </>
 //    ),
 //  },
+
+  {
+    title: 'FAQ',
+    icon: faPaperPlane,
+    url: '/docs/faq/neon-faq/',
+    description: (
+      <>
+        "What is Neon?" and other answers to basic questions about the Neon EVM
+      </>
+    ),
+  },
+
 ];
 
 function Feature({title, icon, url, description}) {
