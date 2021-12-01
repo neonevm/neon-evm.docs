@@ -159,5 +159,20 @@ module.exports = {
         },
       ],
     },
+    {
+      type: 'category',
+      label: 'Neon FAQ',
+      items: 
+      [
+        'faq/neon-faq',
+//        'faq/what-is-neon',
+//        'faq/how-neon-work',
+//        'faq/how-use-neon',
+//        'faq/why-choose-neon',
+//        'faq/how-run-neon-evm',
+//        'faq/couldnt-find-answer',
+      ],
+    },
+
   ],
 };
