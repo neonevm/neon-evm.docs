@@ -1,6 +1,6 @@
 # How does Neon work?
 
-  * [How does Neon EVM interact with Solana?](#how-does-neon-evm-interact-with solana)
+  * [How does Neon EVM interact with Solana?](#how-does-neon-evm-interact-with-solana)
   * [How does the Neon EVM contract work?](#how-does-the-neon-evm-contract-work)
   * [How does Neon EVM enable the parallel execution of transactions?](#how-does-neon-evm-enable-the-parallel-execution-of-transactions)
   * [What types of transactions can be executed in parallel?](#what-types-of-transactions-can-be-executed-in-parallel)

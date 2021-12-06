@@ -124,6 +124,7 @@ module.exports = {
           items: 
           [
             'software_manuals/how_to_guides/deploy_contract',
+            'software_manuals/how_to_guides/connect_metamask_to_solana',
             'software_manuals/how_to_guides/support_docs',
           ],
         },
@@ -165,12 +166,6 @@ module.exports = {
       items: 
       [
         'faq/neon-faq',
-//        'faq/what-is-neon',
-//        'faq/how-neon-work',
-//        'faq/how-use-neon',
-//        'faq/why-choose-neon',
-//        'faq/how-run-neon-evm',
-//        'faq/couldnt-find-answer',
       ],
     },
 
