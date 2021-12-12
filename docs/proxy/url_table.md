@@ -26,12 +26,12 @@
             <td>Gw3Xiwve6HdvpJeQguhwT23cpK9nRjSy1NpNYCFY4XU9</td>
         </tr>
     <tr>
-        <th rowspan="19">Devnet (245022926)</th>
+        <th rowspan="18">Devnet (245022926)</th>
         <td rowspan="12"><a href="https://neon-labs.org">Neon Labs</a></td> 
         <td rowspan="12">https://proxy.devnet.neonlabs.org/solana</td>
         <td>Fg4uzL4QDfL6x56YFUcJBJSK3PqV4yXoFmXzZQkxn2DK</td>
     </tr>
-            <tr><td>8Uh8Rp1FWBiaDejyrZZhRY448oeG7GwKUyPDufP2Xxu7<td></tr>
+            <tr><td>8Uh8Rp1FWBiaDejyrZZhRY448oeG7GwKUyPDufP2Xxu7</td></tr>
             <tr><td>6ndMCacBc69VXqgNbcW3BLk2am9oeUDZa6SgBjHozDPd</td></tr>
             <tr><td>GEsnEWcKapTk7cgRoixBvCDc7yYuhmoMjpJ2v7mvmsBZ</td></tr>
             <tr><td>G5397iLxoKKYgMkFfkYBhJYEtErD7ygz8APmH59H8FM6</td></tr>
@@ -55,12 +55,12 @@
         <tr>
             <td><a href="https://brightlystake.com">Brightlystake</a></td>
             <td>http://65.21.110.127:9090/solana</td>
-            <td>2GDfarSJnNC6ii5tQVE9rBH81Ny35LxrSCZ7tFhktSqi<td>
+            <td>2GDfarSJnNC6ii5tQVE9rBH81Ny35LxrSCZ7tFhktSqi</td>
         </tr>
         <tr>
             <td><a href="https://stakeservice.com">Stake Service</a></td>
             <td>http://65.108.79.46:9090/solana</td>
-            <td>4Mh3ik4iS6MBxHy1VBN89vBiiPRDkebtnybDWnfTtpfC<td>
+            <td>4Mh3ik4iS6MBxHy1VBN89vBiiPRDkebtnybDWnfTtpfC</td>
         </tr>
         <tr>
             <td>Think Network</td>
@@ -71,11 +71,6 @@
             <td>NodesCrew</td>
             <td>http://51.222.40.26:9090/solana</td>
             <td>HN4FeaSXB8t3FDW85hRw8mK1hYETJGeqhkkxJr6j2GiV</td>
-        </tr>
-        <tr>
-            <td><a href="https://making.cash/">Druid</a></td>
-            <td>http://65.21.136.60:9090/solana</td>
-            <td>AnKcUi9sRv1LwhKwW8HePfFYQM88wppXPYsE7kzL7</td>
         </tr>
     <tr>
         <th rowspan="13">Testnet (245022940)</th>
