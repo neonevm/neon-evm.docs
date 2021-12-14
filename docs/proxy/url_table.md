@@ -26,7 +26,7 @@
             <td>Gw3Xiwve6HdvpJeQguhwT23cpK9nRjSy1NpNYCFY4XU9</td>
         </tr>
     <tr>
-        <th rowspan="18">Devnet (245022926)</th>
+        <th rowspan="19">Devnet (245022926)</th>
         <td rowspan="12"><a href="https://neon-labs.org">Neon Labs</a></td> 
         <td rowspan="12">https://proxy.devnet.neonlabs.org/solana</td>
         <td>Fg4uzL4QDfL6x56YFUcJBJSK3PqV4yXoFmXzZQkxn2DK</td>
@@ -71,6 +71,11 @@
             <td>NodesCrew</td>
             <td>http://51.222.40.26:9090/solana</td>
             <td>HN4FeaSXB8t3FDW85hRw8mK1hYETJGeqhkkxJr6j2GiV</td>
+        </tr>
+        <tr>
+            <td>DSRV</td>
+            <td>http://neon-devnet.allthatnode.com:9090/solana</td>
+            <td>5kKd1iy6onhCkzDq6DBw6woHLas3fy6HX4Yz8t1VPc1r</td>
         </tr>
     <tr>
         <th rowspan="13">Testnet (245022940)</th>
