@@ -6,17 +6,21 @@ The [Neon EVM](https://neon-labs.org/) is a solution that performs transaction e
 
 ## Prerequisites
 
-* [Docker](https://www.docker.com/)
+* [Docker](https://docs.docker.com/engine/install/ubuntu/)
 * [Docker-compose](https://docs.docker.com/compose/install/)
 * A Chromium-based browser for [Metamask](https://metamask.io/) and [Remix](https://remix.ethereum.org/)
 * [npm CLI](https://www.npmjs.com/)
 
 ## Setting up the Solana Cluster
 
-All you need to have the Solana Cluster with Neon EVM on-board is to deploy multi-container environment with [the following compose file](docker-compose-local.yml).
+All you need to have the Solana Cluster with Neon EVM on-board is to deploy multi-container environment with [the following compose file](docker-compose-local.yml) and of course you should have `docker` and `docker-container` apps installed.
 
 ```sh
 $ docker-compose -f docker-compose-local.yml up -d
+Creating solana   ... done
+Creating postgres ... done
+Creating evm_loader ... done
+Creating proxy      ... done
 $ ls ./solana_state
 ledger  run
 ```
@@ -142,6 +146,7 @@ contract("Storage", (accounts) => {
         assert.equal(value, 248);
     })
 })' > test/Storage.test.js
+
 $ truffle test test/Storage.test.js --network solana
 ```
 
