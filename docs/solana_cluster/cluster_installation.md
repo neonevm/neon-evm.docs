@@ -26,7 +26,7 @@ ledger  run
 ```
 
 Once you deploy the environment you'll have the Solana RPC endpoint working from the docker container at the 9090 port. 
-The folder named as "solana_state" will be created as well, it contains the solana's ledger to keep the state over restarts. If you need to reset the ledger just remove this folder and it'll be recreated after next-time running docker-compose.
+The folder named "solana_state" will be created as well, it contains the solana's ledger to keep the state over restarts. If you need to reset the ledger just remove this folder and it'll be recreated after next-time running docker-compose.
 
 ## Logs
 
