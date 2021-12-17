@@ -10,7 +10,6 @@ The [Neon EVM](https://neon-labs.org/) is a solution that performs transaction e
 * [Docker-compose](https://docs.docker.com/compose/install/)
 * A Chromium-based browser for [Metamask](https://metamask.io/) and [Remix](https://remix.ethereum.org/)
 * [Node.js/npm](https://www.w3schools.com/nodejs/nodejs_npm.asp)
-* [npm cli](https://www.npmjs.com/)
 
 ## Setting up the Solana Cluster
 
