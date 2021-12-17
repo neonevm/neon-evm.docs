@@ -47,6 +47,8 @@ Setup the "Metamask" Chromium extension to connect to the proxy via Custom RPC a
 
 </div>
 
+Worth remarking is that once you create or import new account in metamask there some NEONs will be airdropped onto it.
+
 Open Remix (also in Chromium) and select `Injected Web3` environment. You can deploy EVM-wrapped smart contracts on Solana and invoke instructions:  
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>  
