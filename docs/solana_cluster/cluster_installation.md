@@ -13,7 +13,7 @@ The [Neon EVM](https://neon-labs.org/) is a solution that performs transaction e
 
 ## Setting up the Solana Cluster
 
-All you need to have the Solana Cluster with Neon EVM on-board is to deploy multi-container environment with [the following compose file](docker-compose-local.yml) and of course you should have `docker` and `docker-container` apps installed.
+All you need to have the Solana Cluster with Neon EVM on board is to deploy multi-container environment with [the following compose file](docker-compose-local.yml) and of course you should have `docker` and `docker-container` apps installed.
 
 ```sh
 $ docker-compose -f docker-compose-local.yml up -d
