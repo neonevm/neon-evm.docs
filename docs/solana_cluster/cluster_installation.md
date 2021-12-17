@@ -6,30 +6,35 @@ The [Neon EVM](https://neon-labs.org/) is a solution that performs transaction e
 
 ## Prerequisites
 
-* [Docker](https://www.docker.com/)
+* [Docker](https://docs.docker.com/engine/install/ubuntu/)
+* [Docker-compose](https://docs.docker.com/compose/install/)
 * A Chromium-based browser for [Metamask](https://metamask.io/) and [Remix](https://remix.ethereum.org/)
-* [npm CLI](https://www.npmjs.com/)
+* [Node.js/npm](https://www.w3schools.com/nodejs/nodejs_npm.asp)
 
 ## Setting up the Solana Cluster
 
-PostgreSQL must be running before starting the docker container:
+All you need to have the Solana Cluster with Neon EVM on board is to deploy multi-container environment with [the following compose file](docker-compose-local.yml) and of course you should have `docker` and `docker-container` apps installed.
 
 ```sh
-$ docker run --rm -ti --network=host -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass --name=postgres postgres:14.0
+$ docker-compose -f docker-compose-local.yml up -d
+Creating solana   ... done
+Creating postgres ... done
+Creating evm_loader ... done
+Creating proxy      ... done
+$ ls ./solana_state
+ledger  run
 ```
 
-The next step is making Solana RPC endpoint working from the docker container:
+Once you deploy the environment you'll have the Solana RPC endpoint working from the docker container at the 9090 port. 
+The folder named "solana_state" will be created as well, it contains the solana's ledger to keep the state over restarts. If you need to reset the ledger just remove this folder and it'll be recreated after next-time running docker-compose.
 
-```sh
-$ docker run -p 8899:8899 -p 8900:8900 -p 8001:8001 -p 8000-8009:8000-8009/udp -ti -e RUST_LOG=solana_runtime::system_instruction_processor=trace,solana_runtime::message_processor=debug,solana_bpf_loader=debug,solana_rbpf=debug -e NDEBUG=1 --name=solana neonlabsorg/solana:stable-testnet | grep -v 'Program Vote111111111111111111111111111111111111111'
-```
+## Logs
 
-## Starting Neon EVM endpoint
+To look for events or errors that you can be interested in just run the `docker logs` for either `solana` or `proxy` container:
 
-The Neon EVM endpoint enables [Metamask](https://metamask.io/) to work with Solana seamlessly. You should issue the following command in a new terminal window:
-
-```sh
- $ docker run --rm -ti --network=host -e CONFIG=local -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass -e EXTRA_GAS=10000 --name=proxy neonlabsorg/proxy:latest
+```sh 
+$ docker logs -f solana 2>&1 | grep -v "Program Vote111111111111111111111111111111111111111"
+$ docker logs -f proxy
 ```
 
 ## Remix and Metamask with Neon EVM
@@ -41,6 +46,8 @@ Setup the "Metamask" Chromium extension to connect to the proxy via Custom RPC a
 ![](./img/cluster-install-1.png)
 
 </div>
+
+Worth remarking is that once you create or import new account in metamask there some NEONs will be airdropped onto it.
 
 Open Remix (also in Chromium) and select `Injected Web3` environment. You can deploy EVM-wrapped smart contracts on Solana and invoke instructions:  
 
@@ -71,24 +78,20 @@ Put your `truffle-config.js` into the truffle root:
 
 ```sh
 $ echo 'const Web3 = require("web3");
+
 const Web3eth = require("web3-eth");
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 
-const provider = new Web3.providers.HttpProvider("http://localhost:9090/solana");
-
 const web3eth = new Web3eth();
-const privateKeys = Array.from(Array(10), (_, x) => web3eth.accounts.create().privateKey);
+const accs = Array.from(Array(10), (_, x) => web3eth.accounts.create());
+const privateKeys = accs.map((account) => account.privateKey);
 
 module.exports = {
   networks: {
     solana: {
-      provider: () => {
-        return new HDWalletProvider(
-          privateKeys,
-          provider
-        );
-      },
-      network_id: "*",
+      provider: new HDWalletProvider(privateKeys, "http://127.0.0.1:9090/solana"),
+      from: accs[0].publicKey,
+      network_id: "111",
       gas: 3000000,
       gasPrice: 1000000000,
     }
@@ -145,6 +148,7 @@ contract("Storage", (accounts) => {
         assert.equal(value, 248);
     })
 })' > test/Storage.test.js
+
 $ truffle test test/Storage.test.js --network solana
 ```
 
@@ -157,7 +161,7 @@ To reset the metamask state, follow the steps `Settings`, `Advanced`, `Reset Acc
 The truffle state can be reset by redeploying in the following way:
 
 ```sh
-$ truffle migrate --network solana --reset
+$ truffle compile --network solana --reset
 ```
 
 ---
