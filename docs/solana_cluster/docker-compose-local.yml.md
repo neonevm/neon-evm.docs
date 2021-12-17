@@ -59,8 +59,8 @@ services:
       POSTGRES_PASSWORD: neon-proxy-pass
       POSTGRES_HOST: postgres
       NEW_USER_AIRDROP_AMOUNT: 100
-      LOG_SENDING_SOLANA_TRANSACTION: YES
-      LOG_NEON_CLI_DEBUG: YES
+      LOG_SENDING_SOLANA_TRANSACTION: "YES"
+      LOG_NEON_CLI_DEBUG: "YES"
       EVM_LOADER: 53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io
     depends_on:
       postgres:
