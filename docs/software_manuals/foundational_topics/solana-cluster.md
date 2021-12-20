@@ -1,7 +1,7 @@
 # Solana Cluster
 A Solana cluster is a set of independently owned computers working together to verify the output of user-submitted programs. A Solana cluster can be utilized any time a user wants to preserve an immutable record of events in time or programmatic interpretations of those events.  
 
-It can also be argued that a Solana cluster is a set of validators that serve client transactions and maintain the integrity of the registry. Solana maintains several different clusters with different purposes. Solana maintains several different clusters with different purposes.  
+It can also be argued that a Solana cluster is a set of validators that serve client transactions and maintain the integrity of the registry. Solana maintains several different clusters with different purposes. 
 
 Two or more clusters can coexist if they have a common genesis block. Otherwise, they simply ignore the existence of the other. Transactions sent to the wrong address are rejected.  
 
