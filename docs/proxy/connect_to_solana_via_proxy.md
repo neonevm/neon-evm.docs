@@ -95,14 +95,14 @@ If you want to use your proxy with other settings, you need to register as an op
 
 Start the proxy and connect it to the Docker network:
 ```bash
-$ sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass neonlabsorg/proxy:v0.4.0
+$ sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass neonlabsorg/proxy:v0.5.1
 ```
 
 **The command line parameters:**  
   * `CONFIG=<network>` — specifies a Solana network configuration; `CONFIG=devnet` is recommended.
-  * `neonlabsorg/proxy:v0.4.0` — specific Neon EVM proxy.
+  * `neonlabsorg/proxy:v0.5.1` — specific Neon EVM proxy.
 
-The Neon EVM address is registered inside `neonlabsorg/proxy:v0.4.0`, so the proxy knows which Neon EVM is running in Solana cluster.
+The Neon EVM address is registered inside `neonlabsorg/proxy:v0.5.1`, so the proxy knows which Neon EVM is running in Solana cluster.
 
 After executing this command, the proxy will be available at `http://localhost:9090/solana`. This address is set by default.
 
@@ -119,7 +119,7 @@ To use a different endpoint, you need to specify the variable `-e SOLANA_URL='ht
 When a proxy is deployed, it generates a wallet containing a key pair. If you do not need the new wallet and want to use the keys you already have, then you need to specify the path to your wallet on the command line. In this case, the proxy will not create a new key pair. The command line will look like the following:  
 
 ```bash
-$ sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass -v ~/.config/solana/id.json:/root/.config/solana/id.json --name proxy neonlabsorg/proxy:v0.4.0
+$ sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass -v ~/.config/solana/id.json:/root/.config/solana/id.json --name proxy neonlabsorg/proxy:v0.5.1
 ```
 
 **The command line options:**
@@ -129,7 +129,7 @@ $ sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neo
 If you is not registered as an operator, you can only use test public keys (the list of available public keys is given in the [table](https://docs.neon-labs.org/docs/proxy/url_table)). You do not need to specify the key via the -v flag, since it is already hard-coded in Devnet/Testnet containers. Use the following command:
 
 ```bash
-sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass neonlabsorg/proxy:v0.4.0
+sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass neonlabsorg/proxy:v0.5.1
 ```
 
 ## Option 3: Running Solana via a proxy when both are hosted locally
