@@ -50,9 +50,7 @@ The Metamask window will display a list of your accounts (in our case, this will
 
 </div>
 
-You can start performing all operations inherent in your wallet, including creating new accounts. For debugging work in the Neon EVM Devnet/Testnet networks, 5 tokens will be credited to each account balance. These tokens can only be used within Devnet/Testnet.
-
-If you connect to the Neon EVM Mainnet, NEON tokens will not be credited. How to credit NEON tokens to an account balance on Mainnet, you can find in **the instruction** (will be aded later).
+You can start performing all operations inherent in your wallet, including creating new accounts. For debugging work in the Neon EVM Devnet/Testnet networks, 5 tokens will be credited to each account balance. These tokens can only be used within Devnet/Testnet. If you connect to the Neon EVM Mainnet, NEON tokens will not be credited.
 
 ### Step 4
 If you want to switch Metamask to another network, you need to click `Add To Metamask` on the new network and click `Switch network` in the Metamask window.
