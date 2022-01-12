@@ -105,7 +105,7 @@ module.exports = {
       [
         {
           type: 'category',
-          label: 'Core aspects',
+          label: 'Core Aspects',
           items: 
           [
             'software_manuals/foundational_topics/web3',
@@ -120,11 +120,12 @@ module.exports = {
         },
         {
           type: 'category',
-          label: 'How to guides',
+          label: 'How to Guides',
           items: 
           [
             'software_manuals/how_to_guides/deploy_contract',
             'software_manuals/how_to_guides/connect_metamask_to_solana',
+            'software_manuals/how_to_guides/get_list_available_tokens',
 //            'software_manuals/how_to_guides/transfer_spl_to_neon',
             'software_manuals/how_to_guides/swap_erc20',
             'software_manuals/how_to_guides/support_docs',
