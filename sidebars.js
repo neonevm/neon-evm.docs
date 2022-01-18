@@ -47,7 +47,14 @@ module.exports = {
         'architecture/value_token',
       ],
     },
-
+    {
+      type: 'category',
+      label: 'Governance',
+      items:
+      [
+        'governance/governance_overview',
+      ],
+    },
     {
       type: 'category',
       label: 'Devportal',
