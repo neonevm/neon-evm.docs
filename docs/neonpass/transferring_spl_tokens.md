@@ -1,10 +1,10 @@
 # Transferring SPL Tokens via Neon Pass
 
 ## Overview
-This guide provides instructions on how to transfer ERC-20 tokens between Solana and Neon EVM using Neon Pass. You can do it in any direction, i.e. transfer tokens from Solana to Neon EVM or withdraw them back. However, you need to take into account that a fee will be charged for each transaction in the form of SOL tokens.
+This guide provides instructions on how to transfer ERC-20 tokens between Solana and Neon EVM using Neon Pass. You can do it in any direction, i.e. transfer tokens from Solana to Neon EVM or withdraw them back. However, you need to keep in mind that each transaction in Neon EVM or Solana will be charged a fee in the form of NEON or SOL tokens, respectively. For example, withdrawing tokens from Neon EVM to Solana requires 2 transactions — one for Neon EVM (requires fee in NEON) and another for Solana (requires fee in SOL). Therefore, you will have to pay 2 fees.
 
 Before you start to transfer ERC-20 tokens, you have to fulfill the following requirements:
-  * You should already have accounts in Solana and Neon EVM with balances of the types of tokens that will be transferred. In addition, there are enough SOL tokens on the account balance in Solana to pay the fee.
+  * On a source side, you should already have an account with the balance of tokens that will be transferred.
   * Neon Pass uses [Metamask](https://docs.neon-labs.org/docs/glossary#metamask) and [Phantom](https://docs.neon-labs.org/docs/glossary#phantom) — two popular non-custodial browser based wallets.
   * The Neon Pass application is deployed in the browser to which your wallets are attached.
 
@@ -13,6 +13,7 @@ This procedure presents the example of transferring USDT tokens from Neon EVM to
 
 Initial conditions:
   * Your Neon EVM account contains non-zero USDT-balance.
+  * You have a non-zero NEON balance to pay the withdrawal approval fee.
   * Your Solana account contains non-zero SOL-balance to pay fee.
 
 Transferring tokens using Neon Pass takes 3 stages:
@@ -30,7 +31,7 @@ Go to the [Neon Pass](https://neonpass.live/) page in the browser to which the P
 
 </div>
 
-Click `Connect Wallet` to connect your Metamask wallet to the Neon Pass app. The Metamask window should pop up on the screen. Follow the login procedure to your wallet and make sure it is connected to Devnet. Also make sure you have enough USDT tokens in your account to transfer (there are 987.9 USDT in our example). Upon successful connection of the Metamask wallet to Neon Pass and access to your account balance, the inscription `Connect Wallet` will change to the public key of your account in Neon EVM.
+Click `Connect Wallet` to connect your Metamask wallet to the Neon Pass app. The Metamask window should pop up on the screen. Follow the login procedure to your wallet and make sure it is connected to Devnet. Also make sure you have enough USDT tokens in your account to transfer (there are 987.9 USDT in our example) and have a non-zero NEON balance to pay the withdrawal approval fee. Upon successful connection of the Metamask wallet to Neon Pass and access to your account balance, the inscription `Connect Wallet` will change to the public key of your account in Neon EVM.
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
@@ -60,19 +61,11 @@ The `Target` windows will appear on the Neon Pass screen. Click `Select Wallet` 
 
 The Phantom window should pop up on the screen. Follow the login procedure to your wallet and make sure it is connected to Devnet. Also make sure you have non-zero SOL balance in your account to pay fee (there are 10 SOL in our example).
 
-If you do not have the USDT balance in your account, it is time to create one. Open the `Add token metadata` page in Phantum and fill in the fields with the token data. You need to write down the SPL-address of the token's contract deployed in Devnet, token's symbol and name. You can take these data from the [token-list](https://github.com/neonlabsorg/token-list/blob/main/tokenlist.json) repository. Click `Add` to add USDT balance to your account in Devnet.
-
-<div class='neon-img-width-300' style={{textAlign: 'center'}}>
-
-![](./img/transfer-spl-5.png)
-
-</div>
-
 Upon successful connection of the Phantom wallet to Neon Pass and access to your account balance, the inscription `Select Wallet` will change to the public key of your account in Solana. This means that a user authorizes Neon Pass to use this key to sign transactions. Phantom stores sets of account keys, but does not store any balances. To obtain balances, Phantom will refer to the Solana blockchain.
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](./img/transfer-spl-6.png)
+![](./img/transfer-spl-5.png)
 
 </div>
 
@@ -84,7 +77,7 @@ Read the details of the upcoming transfer of tokens and click `Confirm`.
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](./img/transfer-spl-7.png)
+![](./img/transfer-spl-6.png)
 
 </div>
 
@@ -92,7 +85,7 @@ Metamask window will pop up on the Neon Pass screen with the amount of fee charg
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](./img/transfer-spl-8.png)
+![](./img/transfer-spl-7.png)
 
 </div>
 
@@ -100,7 +93,7 @@ You should also approve the transaction in the Phantom window, which will displa
 
 <div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
-![](./img/transfer-spl-9.png)
+![](./img/transfer-spl-8.png)
 
 </div>
 
@@ -108,7 +101,7 @@ You should receive a notification that the token transfer was successful. Open t
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](./img/transfer-spl-10.png)
+![](./img/transfer-spl-9.png)
 
 </div>
 
@@ -116,7 +109,7 @@ The `Token Balance Change` tab shows the change in balances upon completion of t
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](./img/transfer-spl-11.png)
+![](./img/transfer-spl-10.png)
 
 </div>
 
