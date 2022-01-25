@@ -125,13 +125,23 @@ A product with minimal features and/or functionality, but enough to satisfy earl
 
 ---  
 
+### NeonPass
+An open-source service for transferring SPL tokens to Neon EVM.  
+
+---  
+
 ### NeonSwap
-An open-source service and [Uniswap V2](https://uniswap.org/blog/uniswap-v2) fork that runs on Neon EVM in the Solana Testnet.  
+An open-source service being fork of [Uniswap V2](https://uniswap.org/blog/uniswap-v2) and modified to work with Neon EVM.  
 
 ---  
 
 ### Node
 A separate software device that is connected to the blockchain network according to the client-server scheme. Nodes are active elements and form the basis of the blockchain network technology.  
+
+---  
+
+### Phantom
+A software cryptocurrency wallet reimagined for DeFi. Phantom makes it safe and easy for you to store, send, receive, collect and swap tokens on the Solana blockchain.  
 
 ---  
 
@@ -177,6 +187,11 @@ The process of turning an object in memory into a stream of bytes so it can be s
 
 ### Signature
 A mathematical algorithm used to demonstrate the authenticity of digital messages or documents.  
+
+---  
+
+### Slippage
+The difference between where the computer signaled the entry and exit for a trade and where actual clients, with actual money, entered and exited the market using the computer’s signals.
 
 ---  
 
