@@ -7,7 +7,7 @@ Calculations within Ethereum users' contracts are performed with an accuracy of 
 
 ### What can be affected by such a limitation of accuracy
 
-  * There is no problem when calculating fee, gas-prise, [gwei](https://doc.neonlabs.org/docs/glossary#gwei) is used as the calculation unit and, therefore, digits *10* to *18* always contain zeros after the decimal point.
+  * There is no problem when calculating fee, gas-price, [gwei](https://doc.neonlabs.org/docs/glossary#gwei) is used as the calculation unit and, therefore, digits *10* to *18* always contain zeros after the decimal point.
   * There is no problem when transferring tokens in manual mode, since the transferred amount of tokens usually contains zero values after the 9th digit.
   * The problem can arise with numerical values that are obtained as a result of calculations by automated smart contracts.
   * The problem can arise when a user tries to convert [SPL-tokens](https://doc.neonlabs.org/docs/glossary#spl-token) to ETH and vice versa while those token values are calculated automatically within a smart-contract.
