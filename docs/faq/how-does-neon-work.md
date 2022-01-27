@@ -27,7 +27,7 @@
 
 The alpha version of Neon EVM has an interface that can interact with [SPL token](https://docs.neon-labs.org/docs/glossary#spl-token) accounts. 
 The beta version of Neon EVM will have interface that can read data from Solana accounts and will facilitate the integration of Neon EVM contracts with Oracles on Solana.
-In upcoming versions, Neon Labs has plans to impelement an interface for writing data to Solana accounts, which will allow the integration of Neon EVM contracts with Solana programs.
+In upcoming versions, Neon Labs has plans to implement an interface for writing data to Solana accounts, which will allow the integration of Neon EVM contracts with Solana programs.
 
 Neon EVM works as a smart contract on the Solana blockchain. The contract can interact with and call other
 smart contracts on Solana—for example, [SPL tokens](https://docs.neon-labs.org/docs/glossary#spl-token). Neon EVM is able to access data stored on Solana
@@ -118,7 +118,7 @@ on the client side.
 
 ### I'm a dApp developer and I don't want to use the Neon Web3 Proxy. How will this impact my project?
 
-The Neon Web3 Proxy can be implemented as a library, but implemention isn't simple. The most complex part of Neon Web3 Proxy implementation is the iterative transaction execution. The Neon Web3 Proxy forms Solana transactions, marking the number of VM steps to be executed without exceeding the BPF instruction limit of the Solana VM. The Neon Web3 Proxy traces the process of Neon transaction execution, sending transactions for the continuation of the suspended Neon transaction, awaiting its full execution. So if you don't want to use the Neon Web3 Proxy, you will still need to implement its functionality in your client.
+The Neon Web3 Proxy can be implemented as a library, but implementation isn't simple. The most complex part of Neon Web3 Proxy implementation is the iterative transaction execution. The Neon Web3 Proxy forms Solana transactions, marking the number of VM steps to be executed without exceeding the BPF instruction limit of the Solana VM. The Neon Web3 Proxy traces the process of Neon transaction execution, sending transactions for the continuation of the suspended Neon transaction, awaiting its full execution. So if you don't want to use the Neon Web3 Proxy, you will still need to implement its functionality in your client.
 
 ### Are proxies custodial?
 
