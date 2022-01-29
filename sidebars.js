@@ -53,6 +53,7 @@ module.exports = {
       items:
       [
         'governance/governance_overview',
+        'governance/governance_ui',
       ],
     },
     {
