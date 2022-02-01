@@ -15,10 +15,10 @@ To swap an ERC-20 token with another token of the same standard using the Neon S
 ## Steps
 The Neon Swap application allows any user to swap one token for another. You just need to connect your wallet to the application following the step-by-step instructions. Swapping tokens will be carried out automatically without sending funds to the exchange. There are some gas transaction fees to pay with the application.
 
-This tutorial outlines the exchange of ETH->USDT tokens.
+As an example, this tutorial outlines the exchange of ETH->USDT tokens.
 
 ### Step 1. Open the Neon Swap application and connect your wallet
-Go to the main [Neon](https://neon-labs.org/) page and open the `Neon Swap` tab (the link will be added later) to call the Neon Swap application. Before you can make a swap you need to connect your wallet. Click `Connect Wallet` on the swap screen.
+Go to the [Neon Swap](https://neonswap.live/) page to call the Neon Swap application. Before you can make a swap you need to connect your wallet. Click `Connect Wallet` on the swap screen.
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
@@ -43,7 +43,7 @@ Click `Select a token` to open up a menu where you can select a token to exchang
 ### Step3. Add a new token to the list, if necessary
 The `Select a token` menu contains tokens deployed in Neon EVM. If the token symbol you specified is not in the list, you can paste the token's address if you know what it is. But be aware, the token must first be deployed on the Neon EVM network.
 
-If you want to add a new token to the list, click `Manage` at the bottom of the box. The `Manage` tab will open on the screen. Add the address of the new token deployed in the Neon EVM network and click `Import` (you can take a token's address from a namber of places including ERC20 Wrapper Address (Neon EVM) (*the link will be added later*).
+If you want to add a new token to the list, click `Manage` at the bottom of the box. The `Manage` tab will open on the screen. Add the address of the new token deployed in the Neon EVM network and click `Import` (you can take a token's address from the [token-list](https://github.com/neonlabsorg/token-list/)).
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
