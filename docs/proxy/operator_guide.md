@@ -66,8 +66,6 @@ The following software should be installed on your Neon EVM proxy:
   * Docker
   * Docker Compose
 
-> Docker is used only for development purposes. Running an operator inside Docker for a live network is not recommended due to Docker's overall containerization overhead and the resulting performance degradation.
-
 ### Solana cluster requirements (optional)
 If you want to use a local solana cluster, you need to meet the following requirements:
   * Solana cluster with `--enable-rpc-transaction-history` enabled.
