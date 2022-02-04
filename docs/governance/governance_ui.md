@@ -29,7 +29,7 @@ Here is an example of the article "Execute new proposal" published on the forum:
 
 ### Submitting a proposal to Neon Governance
 
-If an article after its discussions on the forum receives positive reviews, it can be submitted for consideration to stakeholders. (Currently, only the Neon EVM network administrator can register a submission in Governance UI. The author of the article should notify the administrator of the intention to create a propoaal).
+If an article after its discussions on the forum receives positive reviews, it can be submitted for consideration to stakeholders. (Currently, only the Neon EVM network administrator can register a submission in Governance UI. The author of the article should notify the administrator of the intention to create a proposal).
 
 Proposal should match the recommended template and contain the following fields:
   * `Summary` — brief description.
