@@ -73,6 +73,27 @@ services:
       - net
     entrypoint: proxy/run-test-proxy.sh
 
+  indexer:
+    container_name: indexer
+    image: neonlabsorg/proxy:latest
+    environment:
+      SOLANA_URL: http://solana:8899
+      POSTGRES_DB: neon-db
+      POSTGRES_USER: neon-proxy
+      POSTGRES_PASSWORD: neon-proxy-pass
+      POSTGRES_HOST: postgres
+      WRITE_TRANSACTION_COST_IN_DB: Nope
+      CONFIG: local
+    hostname: indexer
+    depends_on:
+      postgres:
+        condition: service_healthy
+      evm_loader:
+        condition: service_completed_successfully
+    networks:
+      - net
+    entrypoint: proxy/run-indexer.sh
+
 networks:
   net:
 ```
