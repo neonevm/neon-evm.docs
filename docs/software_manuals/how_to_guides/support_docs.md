@@ -12,14 +12,14 @@ In this section, you will learn about making changes to the Neon documentation.
 ## Steps
 
 #### Step 1
-Create a workspace on your device by downloading the docs repository:  
+Create a workspace on your device by downloading the docs repository:
 
 ```sh
 $ git clone https://github.com/neonlabsorg/neon-evm.docs/ <path-to-your-repo>
 
-```  
+```
 
-It is strongly recommended to use a local branch for work. Let it be `<my-website>` branch.  
+It is strongly recommended to use a local branch for work. Let it be `<my-website>` branch.
 
 ```sh
 $ cd <path-to-your-repo>
@@ -29,13 +29,13 @@ $ git checkout <my-website>
 
 #### Step 2
 
-Make the necessary changes in the docs content. The sections with the source files are located in `<my-website>/docs`.  
+Make the necessary changes in the docs content. The sections with the source files are located in `<my-website>/docs`.
 
-> If you make changes to the structure of the documentation (adding, deleteting, moving a file or section), you also have to fix the file `<my-website>/sidebars.js`.  
+> If you make changes to the structure of the documentation (adding, deleteting, moving a file or section), you also have to fix the file `<my-website>/sidebars.js`.
 
 #### Step 3
 
-It is strongly recommended to test your build locally before pushing changes to the main repository and deploying to production.  
+It is strongly recommended to test your build locally before pushing changes to the main repository and deploying to production.
 
 Generate contents with your changes (you can use `npm`, `npx`, `yarn`).
 ```sh
@@ -63,11 +63,11 @@ Before making changes to the [main](https://github.com/neonlabsorg/neon-evm.docs
 
 #### Step 5
 
-To simplify the deploying to production, we should use a script that will automatically run after making changes to the master branch.  
+To simplify the deploying to production, we should use a script that will automatically run after making changes to the master branch.
 This script should perform the following operations:
   * Automatic building html-files after making changes to https://github.com/neonlabsorg/neon-evm.docs/
   * Pushing the built html-files to the html-repository https://github.com/neonlabsorg/neonlabsorg.github.io
-  * Deploying the built html-files to the website https://doc.neonlabs.org/
+  * Deploying the built html-files to the website https://doc.neon-labs.org/
 
 Unfortunately, at the moment this script is under development, and therefore you need to perform further actions in manual mode.
 
@@ -76,7 +76,7 @@ To do this, you need to:
   * Write the html-files taken from `<my-website>/build` into `<my-html-repo>`
   * Push the `<my-html-repo>` changes to the [html-repository](https://github.com/neonlabsorg/neonlabsorg.github.io) by following the standard procedure.
 
-If all the actions are performed correctly, the changes you have made in docs will be displayed at https://doc.neonlabs.org/ .
+If all the actions are performed correctly, the changes you have made in docs will be displayed at https://doc.neon-labs.org/ .
 
 
 

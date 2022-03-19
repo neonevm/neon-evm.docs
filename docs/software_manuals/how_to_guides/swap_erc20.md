@@ -3,7 +3,7 @@
 ## Goal
 To swap an ERC-20 token with another token of the same standard using the Neon Swap application.
 
-*Condition:* The ERC-20 token can be any [SPL token](https://doc.neonlabs.org/docs/glossary#spl-token) whose contract complies with the [ERC-20 standard](https://docs.neon-labs.org/docs/glossary#erc-20) and is deployed in Neon EVM.
+*Condition:* The ERC-20 token can be any [SPL token](https://doc.neon-labs.org/docs/glossary#spl-token) whose contract complies with the [ERC-20 standard](https://docs.neon-labs.org/docs/glossary#erc-20) and is deployed in Neon EVM.
 
 ## Before you begin
   * Understand the following:
@@ -71,7 +71,7 @@ In our case, we exchange ETH tokens for USDT tokens. Let's specify the number of
 ### Step 5. Perform the exchange
 Before you can submit this exchange, you need to understand the following things about it:
   * `Price` — the price at which the exchange is possible.
-  * `Minimum received` — the minimum amount of tokens (in our case, USDT) you will receive if the trade goes through. The trade will fail if price deviates too much during the transaction (also known as [slippage](https://doc.neonlabs.org/docs/glossary#slippage)).
+  * `Minimum received` — the minimum amount of tokens (in our case, USDT) you will receive if the trade goes through. The trade will fail if price deviates too much during the transaction (also known as [slippage](https://doc.neon-labs.org/docs/glossary#slippage)).
   * `Price impact` tells you how much your swap will affect this token's price. This value can be seen as a loss you will take on the swap. The closer this number is to zero the better.
   * `Liquidity Provider Fee` — the fee you will pay for this transaction. Neon Swap charges a *0.03 %* fee of the total transaction amount. This fee is expressed in the token you are selling (in our case, ETH).
 
@@ -116,7 +116,7 @@ Click the cogwheel icon. The window `Transaction Settings` will pop-up on the sc
 </div>
 
 Transaction settings:
-  * `Slippage tolerance` — the allowable amount of price change. It means that the order is fulfilled at a price different from what you expected. If it exceeds the tolerance level selected, the transaction will not go through. If you are trading during high volatility, you may want to increase this value. Increasing the transaction speed can help you to reduce the chances of high [slippage](https://doc.neonlabs.org/docs/glossary#slippage).
+  * `Slippage tolerance` — the allowable amount of price change. It means that the order is fulfilled at a price different from what you expected. If it exceeds the tolerance level selected, the transaction will not go through. If you are trading during high volatility, you may want to increase this value. Increasing the transaction speed can help you to reduce the chances of high [slippage](https://doc.neon-labs.org/docs/glossary#slippage).
   * `Transaction deadline` — allows the transaction to automatically cancel if it is taking too long to process.
-  * `Toggle Expert Mode` — disables the confirmation screen and removes [slippage](https://doc.neonlabs.org/docs/glossary#slippage) limits. It is not encouraged to enable this mode unless you fully understand the risks.
+  * `Toggle Expert Mode` — disables the confirmation screen and removes [slippage](https://doc.neon-labs.org/docs/glossary#slippage) limits. It is not encouraged to enable this mode unless you fully understand the risks.
   * `Disable Multihops` — disables complex conversion paths. For example, if there is not enough liquidity in the "A->B" token pair, then the algorithm can involve other tokens to find the "A->C->B" intermediate route and make an exchange for you. This action requires more network fees, because several smart contracts are involved.

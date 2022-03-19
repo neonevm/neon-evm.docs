@@ -8,6 +8,6 @@ In Solana, the size of storage allocated for an account has a limit and it can n
 
 *Solution 2*. In Solana storage, it is proposed to increase the threshold value of the account size, which will be more than *10 MB*. The implementation of this solution will be proposed by the Solana developers.
 
-The *10 MB* limit means that about *100000* records can be used by the contract for its data. This limitation is set directly in Solana. It is large enough and not critical. At the startup of the [MVP](https://doc.neonlabs.org/docs/glossary#minimum-viable-product-mvp) project, we do not expect contracts with sizes exceeding *10 MB* to appear.
+The *10 MB* limit means that about *100000* records can be used by the contract for its data. This limitation is set directly in Solana. It is large enough and not critical. At the startup of the [MVP](https://doc.neon-labs.org/docs/glossary#minimum-viable-product-mvp) project, we do not expect contracts with sizes exceeding *10 MB* to appear.
 
 Therefore, in the first months of Neon EVM operation, the limit on the storage size allocated for one account will still remain the same *10 MB*.
