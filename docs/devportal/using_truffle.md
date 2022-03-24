@@ -35,7 +35,7 @@ $ cd <project name>
 
 Install Truffle:
 ```sh
-$ npm install -g truffle
+$ npm install truffle
 ```
 
 Initialize the project directory by running the following command:
@@ -123,31 +123,41 @@ The full set of options that you can use during testing are listed in the page w
 
 
 ## Example of configuration file settings
-The example of the configuration file for connecting Truffle to a proxy using the one-way library on Node.js:
+The example of the configuration file for connecting Truffle to a devnet-proxy using the one-way library on Node.js:
 ```js
 const Web3 = require("web3");
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 
-const provider = new Web3.providers.HttpProvider("http://localhost:9090/solana");
+Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.prototype.send
 
-const privateKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Specify your private key here
+const provider = new Web3.providers.HttpProvider("https://proxy.devnet.neonlabs.org/solana");
+
+const privateKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Specify your private key here
 
 module.exports = {
   networks: {
-    solana: {
+    neonlabs: {
       provider: () => {
         return new HDWalletProvider(
           privateKey,
           provider,
         );
       },
-      from: "0x1beb0aEb41AcA04467BF4FA9913a41188FF9C082",
+      from: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx", // Specify public key corresponding to private key defined above
       network_id: "*",
-      gas: 3000000,
-      gasPrice: 1000000000,
+      gas: 3000000000,
+      gasPrice: 443065000000,
     }
   }
 };
 ```
 
 > **Note:** If both mnemonic and private keys are provided, the mnemonic is used.
+
+Use next comand to deploy contracts using **neonlabs** network:
+```sh
+truffle migrate --network neonlabs
+```
+
+## Use examples repository
+You can obtain example Truffle project here - https://github.com/neonlabsorg/examples/tree/main/simple-erc20-truffle
