@@ -24,3 +24,7 @@ To connect to a proxy using Metamask follow the instruction [Installing and sett
 ## Connecting to a proxy using Truffle
 
 To connect to a proxy using Truffle follow the instruction [Debugging Contracts via Truffle](https://docs.neon-labs.org/docs/devportal/using_truffle). You need to configure `truffle-config.js` by setting the HDWalletProvider library to the RPC URL selected from the [table](https://docs.neon-labs.org/docs/proxy/connect_to_solana_via_proxy#url_table).
+
+## Connecting to a proxy using Hardhat
+
+To connect to a proxy using Hardhat follow the instruction [Debugging Contracts via Hardhat](https://docs.neon-labs.org/docs/devportal/using_hardhat). You need to configure `hardhat.config.js` by setting the url, network_id/chainId to RPC URL selected from the [table](https://docs.neon-labs.org/docs/proxy/connect_to_solana_via_proxy#url_table).
