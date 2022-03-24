@@ -159,5 +159,5 @@ Use next comand to deploy contracts using **neonlabs** network:
 truffle migrate --network neonlabs
 ```
 
-## Use examples repository
-You can obtain example Truffle project here - https://github.com/neonlabsorg/examples/tree/main/simple-erc20-truffle
+## Example project
+You can obtain example Truffle project from here - https://github.com/neonlabsorg/examples/tree/main/simple-erc20-truffle

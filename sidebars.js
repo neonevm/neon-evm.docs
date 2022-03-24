@@ -64,6 +64,7 @@ module.exports = {
         'devportal/metamask_setup',
         'devportal/bpf_trace',
         'devportal/using_truffle',
+        'devportal/using_hardhat',
         'devportal/deploy_contract_via_remix',
       ],
     },
