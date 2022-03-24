@@ -30,7 +30,7 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/devportal/metamask_setup',
+          to: 'docs/wallet/setup_metamask/metamask_setup',
           label: 'Develop',
           position: 'left',
         },

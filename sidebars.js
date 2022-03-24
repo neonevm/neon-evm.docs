@@ -10,19 +10,41 @@
  */
 
 module.exports = {
-  tutorialSidebar: [
-    {
+  tutorialSidebar: [ {
       type: 'category',
       label: 'About',
-      items:
-      [
+      items: [
         'intro',
-        'getting_started',
         'glossary',
       ],
-    },
-
-    {
+    }, {
+      type: 'category',
+      label: 'Wallets',
+      items: [ {
+          type: 'category',
+          label: "Installing and setting up MetaMask",
+          items: [
+              "wallet/setup_metamask/metamask_setup",
+              "wallet/setup_metamask/dummy",
+              "wallet/setup_metamask/dummy",
+          ]
+        },
+        "wallet/wallets"
+      ]
+    }, {
+      type: 'category',
+      label: 'Token transferring',
+      items: [
+        "token_transferring/using_3d_party_bridges",
+        {
+          type: 'category',
+          label: 'Transferring SPL Tokens via Neon Pass',
+          items: [
+              // overview
+          ]
+        }
+      ]
+    },{
       type: 'category',
       label: 'Architecture',
       items:
@@ -46,7 +68,6 @@ module.exports = {
       label: 'Devportal',
       items:
       [
-        'devportal/metamask_setup',
         'devportal/bpf_trace',
         'devportal/using_truffle',
         'devportal/deploy_contract_via_remix',
