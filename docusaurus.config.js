@@ -29,13 +29,6 @@ module.exports = {
         src: 'img/neon-logo.png',
       },
       items: [
-//        {
-//          type: 'doc',
-//          docId: 'intro', // Tutorial
-//          position: 'left',
-//          label: 'Tutorial',
-//        },
-//        {to: '/blog', label: 'Blog', position: 'left'},
         {
           to: 'docs/devportal/metamask_setup',
           label: 'Develop',
@@ -73,10 +66,6 @@ module.exports = {
         {
           title: 'Community',
           items: [
-//            {
-//              label: 'Stack Overflow',
-//              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-//            },
             {
               label: 'Discord',
               href: 'https://discord.com/invite/d9BhxNWTsj', // OK
@@ -114,18 +103,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo. Places "Edit this page" on the bottom
-          // of each page. This is useful for parsing the source code, but not
-          // desirable for making changes directly to the master branch.
-//          editUrl:
-//            'https://github.com/neonlabsorg/neon-evm.docs/blob/master',
         },
-//        blog: {
-//          showReadingTime: true,
-//          // Please change this to your repo.
-//          editUrl:
-//            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
-//        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
