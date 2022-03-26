@@ -66,10 +66,10 @@ module.exports = {
     {
       type: 'category',
       label: 'Explorers',
-      // link: {
-      //   type: 'doc',
-      //   id: 'explorers',
-      // },
+      link: {
+        type: 'doc',
+        id: 'explorers',
+      },
       items:
       [ {
           type: 'link',
@@ -86,39 +86,10 @@ module.exports = {
       ],
     }, {
       type: 'category',
-      label: "Operating",
-      items: [
-
-      ]
-    },
-    {
-      type: 'category',
-      label: 'Governance',
-      items:
-      [
-        // 'governance/governance_overview',
-        // 'governance/governance_ui',
-      ],
-    }, {
-      type: 'category',
-      label: 'Envitonments / Clusters',
-      items: [
-
-      ]
-
-    }, {
-      type: 'category',
       label: 'Devportal',
       items:
       [
         'devportal/bpf_trace'
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Neon Pass',
-      items:
-      [
       ],
     },
     {
