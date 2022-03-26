@@ -3,6 +3,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
+
   title: 'Neon Docs',
   tagline: 'Neon EVM is an open source project implementing the Ethereum virtual machine on Solana.',
   url: 'https://doc.neonlabs.org', // !!! Path to the docs main page
@@ -15,7 +16,8 @@ module.exports = {
   themeConfig: {
     image: 'img/og_image.png',
     algolia: {
-      apiKey: 'd6087190dcafb13244b08a148f16fd70',
+      apiKey: '0f824db4cd55cfd5a55e3e586cad5dbc',
+      appId: "BWG2PNCWQK",
       indexName: 'neon-labs',
       inputSelector: 'search something...',
       algoliaOptions: { 'facetFilters': ["type:$TYPE"] },
@@ -30,12 +32,12 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/wallet/setup_metamask/metamask_setup',
+          to: 'docs/wallet/metamask_setup',
           label: 'Develop',
           position: 'left',
         },
         {
-          to: 'docs/proxy/connect_to_solana_via_proxy',
+          to: 'docs/developing/dev_environment/connect_to_solana_via_proxy',
           label: 'Operate',
           position: 'left',
         },

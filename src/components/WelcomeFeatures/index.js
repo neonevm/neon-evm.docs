@@ -21,7 +21,7 @@ const FeatureList = [
   {
     title: 'Getting Started',
     icon: faCompass,
-    url: '/docs/getting_started',
+    url: '/docs/developing/getting_started',
     description: (
       <>
         Start building on Neon
