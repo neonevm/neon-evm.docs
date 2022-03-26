@@ -17,7 +17,7 @@ The search will select three Neon EVM networks with their corresponding ChainIDs
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](./images/connect-metamask-1.png)
+![](images/connect-metamask-1.png)
 
 </div>
 
@@ -26,7 +26,7 @@ In the upper right corner, click `Connect Wallet`. This field should display the
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](./images/connect-metamask-2.png)
+![](images/connect-metamask-2.png)
 
 </div>
 
@@ -37,7 +37,7 @@ Check that the data in the Metamask fields correspond to the network you need. C
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](./images/connect-metamask-3.png)
+![](images/connect-metamask-3.png)
 
 </div>
 
@@ -46,7 +46,7 @@ The Metamask window will display a list of your accounts (in our case, this will
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](./images/connect-metamask-4.png)
+![](images/connect-metamask-4.png)
 
 </div>
 
@@ -57,7 +57,7 @@ If you want to switch Metamask to another network, you need to click `Add To Met
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](./images/connect-metamask-5.png)
+![](images/connect-metamask-5.png)
 
 </div>
 
@@ -66,6 +66,6 @@ You can close the browser window and reopen it at any time. Do not worry, your m
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](./images/connect-metamask-6.png)
+![](images/connect-metamask-6.png)
 
 </div>

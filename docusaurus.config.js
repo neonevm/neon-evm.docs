@@ -42,7 +42,7 @@ module.exports = {
           position: 'left',
         },
         {
-          to: 'docs/software_manuals/foundational_topics/web3',
+          to: 'docs/architecture/web3',
           label: 'Manuals',
           position: 'left',
         },

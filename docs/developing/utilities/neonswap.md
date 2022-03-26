@@ -22,7 +22,7 @@ Go to the [Neon Swap](https://neonswap.live/) page to call the Neon Swap applica
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../software_manuals/how_to_guides/images/swap-erc20-1.png)
+![](../../to_be_redistributed/how_to_guides/images/swap-erc20-1.png)
 
 </div>
 
@@ -36,7 +36,7 @@ Click `Select a token` to open up a menu where you can select a token to exchang
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../software_manuals/how_to_guides/images/swap-erc20-2.png)
+![](../../to_be_redistributed/how_to_guides/images/swap-erc20-2.png)
 
 </div>
 
@@ -47,7 +47,7 @@ If you want to add a new token to the list, click `Manage` at the bottom of the 
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../software_manuals/how_to_guides/images/swap-erc20-3.png)
+![](../../to_be_redistributed/how_to_guides/images/swap-erc20-3.png)
 
 </div>
 
@@ -64,7 +64,7 @@ In our case, we exchange ETH tokens for USDT tokens. Let's specify the number of
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../software_manuals/how_to_guides/images/swap-erc20-4.png)
+![](../../to_be_redistributed/how_to_guides/images/swap-erc20-4.png)
 
 </div>
 
@@ -83,7 +83,7 @@ The request will open up a MetaMask window where you can confirm the transaction
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](../../software_manuals/how_to_guides/images/swap-erc20-5.png)
+![](../../to_be_redistributed/how_to_guides/images/swap-erc20-5.png)
 
 </div>
 
@@ -91,7 +91,7 @@ You can also check the result of the trade in the Neon Swap window. Click `Close
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../software_manuals/how_to_guides/images/swap-erc20-6.png)
+![](../../to_be_redistributed/how_to_guides/images/swap-erc20-6.png)
 
 </div>
 
@@ -99,7 +99,7 @@ Now you can open the Metamax, as well as the list of tokens, by clicking `Select
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../software_manuals/how_to_guides/images/swap-erc20-7.png)
+![](../../to_be_redistributed/how_to_guides/images/swap-erc20-7.png)
 
 </div>
 
@@ -111,7 +111,7 @@ Click the cogwheel icon. The window `Transaction Settings` will pop-up on the sc
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../software_manuals/how_to_guides/images/swap-erc20-8.png)
+![](../../to_be_redistributed/how_to_guides/images/swap-erc20-8.png)
 
 </div>
 

@@ -13,10 +13,8 @@ module.exports = {
   tutorialSidebar: [ {
       type: 'category',
       label: 'About',
-      items: [
-        'intro',
-        'glossary',
-      ],
+      items: [ 'intro',
+               'glossary' ]
     }, {
       type: 'category',
       label: 'Wallets',
@@ -26,10 +24,7 @@ module.exports = {
     }, {
       type: 'category',
       label: 'Token transferring',
-      items: [
-        'token_transferring/neonpass_overview',
-
-      ]
+      items: [ 'token_transferring/neonpass_overview' ]
     }, {
       type: 'category',
       label: 'Developing',
@@ -37,13 +32,11 @@ module.exports = {
         'developing/getting_started',
         {
           type: 'category',
-          label: 'Development environment',
-          items: [
-              'developing/dev_environment/connect_to_solana_via_proxy',
-              'wallet/metamask_setup',
-              'developing/dev_environment/choosing_proxy',
-              'developing/dev_environment/solana_cluster/cluster_installation'
-          ]
+          label: 'Setting up environment',
+          items: [ 'developing/dev_environment/connect_to_solana_via_proxy',
+                   'wallet/metamask_setup',
+                   'developing/dev_environment/choosing_proxy',
+                   'developing/dev_environment/solana_cluster/cluster_installation' ]
         },
         "developing/neonswap_tests",
         {
@@ -54,8 +47,7 @@ module.exports = {
                    { type: 'doc', id: 'developing/deploy_facilities/using_hardhat', label: 'Using HardHat' },
                    { type: 'doc', id: 'developing/deploy_facilities/using_erc20_tokens', label: 'Using ERC-20 tokens' },
                    'developing/deploy_facilities/adding_new_tokens',
-                   'developing/deploy_facilities/migrating_dapps'
-          ]
+                   'developing/deploy_facilities/migrating_dapps' ]
         }, {
           type: 'category',
           label: 'Using utilities',
@@ -66,125 +58,45 @@ module.exports = {
     {
       type: 'category',
       label: 'Explorers',
-      link: {
-        type: 'doc',
-        id: 'explorers',
-      },
-      items:
-      [ {
-          type: 'link',
-          label: 'NeonScan',
-          href: "https://beta.neonscan.org/"
-        }, {
-          type: 'link',
-          label: 'Neon analytics by aleph',
-          href: "http://neonqltest.aleph.cloud:8004/"
-        }
-        // 'architecture/eth_sol_solution',
-        // 'architecture/neon_evm_arch',
-        // 'architecture/value_token',
-      ],
+      link: { type: 'doc', id: 'explorers' },
+      items: [ { type: 'link', label: 'NeonScan', href: "https://beta.neonscan.org/" },
+               { type: 'link', label: 'Indexing dashboard', href: "http://neonqltest.aleph.cloud:8004/" } ]
     }, {
       type: 'category',
-      label: 'Devportal',
-      items:
-      [
-        'devportal/bpf_trace'
-      ],
-    },
-    {
+      label: "Operating",
+      items: [ { type: 'doc', label: "Proxy requirements and configuring", id: 'operating/operator_guide' } ]
+    }, {
       type: 'category',
-      label: 'Neon Swap',
-      items:
-      [
-        'neonswap/neonswap_overview'
-      ],
-    },
-    {
+      label: 'Architecture',
+      items: [ { type: 'doc', label: 'Core Aspects', id: 'architecture/web3' },
+               { type: 'doc', label: 'Neon EVM principles', id: 'architecture/eth_sol_solution' } ]
+    }, {
       type: 'category',
-      label: 'Neon Proxy',
-      items:
-      [
-        'proxy/operator_guide',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Supported Standards',
-      items:
-      [
-        'supported_standards/standards_overview',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Software Manuals',
-      items:
-      [
-        {
-          type: 'category',
-          label: 'Core Aspects',
-          items: 
-          [
-            'software_manuals/foundational_topics/web3',
-            'software_manuals/foundational_topics/account',
-            'software_manuals/foundational_topics/transaction',
-            'software_manuals/foundational_topics/block',
-            'software_manuals/foundational_topics/gas',
-            'software_manuals/foundational_topics/proof-of-work',
-            'software_manuals/foundational_topics/proof-of-stake',
-            'software_manuals/foundational_topics/solana-cluster',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'How to Guides',
-          items: 
-          [
-            'software_manuals/how_to_guides/deploy_contract',
-            'software_manuals/how_to_guides/connect_metamask_to_solana',
-            'software_manuals/how_to_guides/support_docs',
-          ],
-        },
-      ],
-    },
-    {
+      label: 'Contributing',
+      items: [ { type: 'doc', label: 'Debugging BPF', id: 'contributing/bpf_trace' },
+               { type: 'doc', label: 'Maintain docs', id: 'contributing/maintain_docs' } ]
+    }, {
       type: 'category',
       label: 'Design Proposals',
-      items: 
-      [
-        {
-          type: 'category',
-          label: 'Implemented',
-          items: 
-          [
-            'design_proposals/implemented/implemented_proposals',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Accepted',
-          items:
-          [
-            'design_proposals/accepted/accepted_proposals',
-            'design_proposals/accepted/restriction_on_iterative_trx',
-            'design_proposals/accepted/spl_token_precision',
-            'design_proposals/accepted/erc721-tokens',
-            'design_proposals/accepted/precompiled_contracts',
-            'design_proposals/accepted/gas_calculator',
-            'design_proposals/accepted/unsupported_functions',
-            'design_proposals/accepted/storage_size_for_account',
-          ],
-        },
-      ],
+      items: [ { type: 'doc', label: 'Implemented', id: 'design_proposals/implemented_proposals' },
+               { type: 'doc', label: 'Accepted', id: 'design_proposals/accepted_proposals' } ]
     },
-    {
-      type: 'category',
-      label: 'Neon FAQ',
-      items: 
-      [
-        'faq/neon-faq',
-      ],
-    },
+    { type: 'doc', label: 'FAQ', id: 'faq/neon-faq' }
   ]
 };
+
+// TODO: To be redistributed
+// software_manuals/how_to_guides/deploy_contract,
+// software_manuals/how_to_guides/connect_metamask_to_solana
+// software_manuals/foundational_topics/account,
+// software_manuals/foundational_topics/transaction,
+// software_manuals/foundational_topics/block,
+// software_manuals/foundational_topics/gas,
+// software_manuals/foundational_topics/proof-of-work,
+// software_manuals/foundational_topics/proof-of-stake,
+// software_manuals/foundational_topics/solana-cluster,
+// supported_standards/standards_overview,
+// neonswap/neonswap_overview
+// proxy/operator_guide,
+// architecture/neon_evm_arch,
+// architecture/value_token,

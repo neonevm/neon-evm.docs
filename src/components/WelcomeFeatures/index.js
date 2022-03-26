@@ -29,16 +29,6 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Нow to deploy a Solidity Smart Contract',
-    icon: faKeyboard,
-    url: '/docs/software_manuals/how_to_guides/deploy_contract/',
-    description: (
-      <>
-        Move your dApp to Solana and enjoy it's advantages
-      </>
-    )
-  },
-  {
     title: 'FAQ',
     icon: faPaperPlane,
     url: '/docs/faq/neon-faq/',
