@@ -20,66 +20,98 @@ module.exports = {
     }, {
       type: 'category',
       label: 'Wallets',
-      items: [ {
-          type: 'category',
-          label: "Installing and setting up MetaMask",
-          items: [
-              "wallet/setup_metamask/metamask_setup",
-              "wallet/setup_metamask/dummy",
-              "wallet/setup_metamask/dummy",
-          ]
-        },
-        "wallet/wallets"
+      items: [
+          "wallet/metamask_setup"
       ]
     }, {
       type: 'category',
       label: 'Token transferring',
       items: [
-        "token_transferring/using_3d_party_bridges",
+        'token_transferring/neonpass_overview',
+
+      ]
+    }, {
+      type: 'category',
+      label: 'Developing',
+      items: [
+        'developing/getting_started',
         {
           type: 'category',
-          label: 'Transferring SPL Tokens via Neon Pass',
+          label: 'Development environment',
           items: [
-              // overview
+              'developing/dev_environment/connect_to_solana_via_proxy',
+              'wallet/metamask_setup',
+              'developing/dev_environment/choosing_proxy',
+              'developing/dev_environment/solana_cluster/cluster_installation'
           ]
+        },
+        "developing/neonswap_tests",
+        {
+          type: 'category',
+          label: 'Deploying dApps',
+          items: [ { type: 'doc', id: 'developing/deploy_facilities/using_remix', label: "Using Remix" },
+                   { type: 'doc', id: 'developing/deploy_facilities/using_truffle', label: "Using Truffle" },
+                   { type: 'doc', id: 'developing/deploy_facilities/using_hardhat', label: 'Using HardHat' },
+                   { type: 'doc', id: 'developing/deploy_facilities/using_erc20_tokens', label: 'Using ERC-20 tokens' },
+                   'developing/deploy_facilities/adding_new_tokens',
+                   'developing/deploy_facilities/migrating_dapps'
+          ]
+        }, {
+          type: 'category',
+          label: 'Using utilities',
+          items: [ "developing/utilities/neonswap" ]
         }
       ]
-    },{
+    },
+    {
       type: 'category',
-      label: 'Architecture',
+      label: 'Explorers',
+      // link: {
+      //   type: 'doc',
+      //   id: 'explorers',
+      // },
       items:
-      [
-        'architecture/eth_sol_solution',
-        'architecture/neon_evm_arch',
-        'architecture/value_token',
+      [ {
+          type: 'link',
+          label: 'NeonScan',
+          href: "https://beta.neonscan.org/"
+        }, {
+          type: 'link',
+          label: 'Neon analytics by aleph',
+          href: "http://neonqltest.aleph.cloud:8004/"
+        }
+        // 'architecture/eth_sol_solution',
+        // 'architecture/neon_evm_arch',
+        // 'architecture/value_token',
       ],
+    }, {
+      type: 'category',
+      label: "Operating",
+      items: [
+
+      ]
     },
     {
       type: 'category',
       label: 'Governance',
       items:
       [
-        'governance/governance_overview',
-        'governance/governance_ui',
+        // 'governance/governance_overview',
+        // 'governance/governance_ui',
       ],
-    },
-    {
+    }, {
+      type: 'category',
+      label: 'Envitonments / Clusters',
+      items: [
+
+      ]
+
+    }, {
       type: 'category',
       label: 'Devportal',
       items:
       [
-        'devportal/bpf_trace',
-        'devportal/using_truffle',
-        'devportal/using_hardhat',
-        'devportal/deploy_contract_via_remix',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Local Solana Cluster',
-      items:
-      [
-        'solana_cluster/cluster_installation',
+        'devportal/bpf_trace'
       ],
     },
     {
@@ -87,8 +119,6 @@ module.exports = {
       label: 'Neon Pass',
       items:
       [
-        'neonpass/neonpass_overview',
-        'neonpass/transferring_spl_tokens',
       ],
     },
     {
@@ -96,9 +126,7 @@ module.exports = {
       label: 'Neon Swap',
       items:
       [
-        'neonswap/neonswap_overview',
-        'neonswap/neonswap',
-        'neonswap/neonswap_tests',
+        'neonswap/neonswap_overview'
       ],
     },
     {
@@ -106,10 +134,7 @@ module.exports = {
       label: 'Neon Proxy',
       items:
       [
-        'proxy/url_table',
-        'proxy/connect_to_solana_via_proxy',
         'proxy/operator_guide',
-        'proxy/choosing_proxy',
       ],
     },
     {
@@ -118,7 +143,6 @@ module.exports = {
       items:
       [
         'supported_standards/standards_overview',
-        'supported_standards/erc20wrapper',
       ],
     },
     {
@@ -148,8 +172,6 @@ module.exports = {
           [
             'software_manuals/how_to_guides/deploy_contract',
             'software_manuals/how_to_guides/connect_metamask_to_solana',
-            'software_manuals/how_to_guides/get_list_available_tokens',
-            'software_manuals/how_to_guides/swap_erc20',
             'software_manuals/how_to_guides/support_docs',
           ],
         },
@@ -193,6 +215,5 @@ module.exports = {
         'faq/neon-faq',
       ],
     },
-
-  ],
+  ]
 };

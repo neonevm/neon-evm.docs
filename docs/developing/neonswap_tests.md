@@ -1,11 +1,13 @@
-# Integration tests
+# Testing contracts
 
 *This guide describes how to build and configure the Neon EVM to run integration tests on it.*  
 
 > We want to demonstrate to Ethereum users that the neonswap infrastructure deployed on our Neon EVM ensures a passage of the *Uniswap-V2* integration tests suite. This means Ethereum users can successfully run their applications on Neon EVM.
 
 ## Prerequisites
+
 It is assumed:
+
 * You are already familiar with the document [Local Solana Cluster: Installation, Setup and Tests](https://docs.neonlabs.org/docs/solana_cluster/cluster_installation)
 * Integration tests are performed on *NodeJS* (*v12* or higher) which should be installed in the system
 * The local development *Solana* cluster should be up and active
@@ -62,11 +64,11 @@ $ node node_modules/mocha/bin/mocha --grep "^UniswapV2Pair"
 Results of the first test suite:  
 <p align="center">  
 
-![](img/neonswap-tests-1.png)</p>
+![](../neonswap/img/neonswap-tests-1.png)</p>
 
 Results of the second test suite:  
 <p align="center">  
 
-![](img/neonswap-tests-2.png)</p>
+![](../neonswap/img/neonswap-tests-2.png)</p>
 
 The absence of error messages indicates the successful completion of integration tests.

@@ -1,4 +1,4 @@
-# setup
+# Setting up MetaMask
 
 MetaMask wallet is a convenient and fairly easy-to-use application for storing Ethereum addresses and private keys.
 
@@ -19,7 +19,7 @@ Go to the MetaMask [download page](https://metamask.io/download.html). From ther
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](../../devportal/img/metamask-1.png)
+![](../developing/deploy_facilities/img/metamask-1.png)
 
 Fig. 1 — Loading MetaMask
 
@@ -30,7 +30,7 @@ MetaMask is essentially a plugin in the form of an extension to a browser. There
 
 <div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
-![](../../devportal/img/metamask-2.png)
+![](../developing/deploy_facilities/img/metamask-2.png)
 
 Fig. 2
 
@@ -49,7 +49,7 @@ A secret phrase will be generated automatically. Record the secret phrase for ba
 
 After that, you should see your wallet linked to your account.
 
-## Setting up the MetaMask
+## Setting up an RPC network
 
 You can use your wallet to interact with the Solana cluster via a proxy server. To do this, you need to configure your wallet to the desired proxy server.  
 Depending on the tasks to be solved, as well as on the location of the proxy and Solana, there are 3 options for setting up the MetaMask wallet:  
@@ -63,7 +63,7 @@ In the upper-right corner, click the red apple view element. Select settings fro
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](../../devportal/img/metamask-3.png)
+![](../developing/deploy_facilities/img/metamask-3.png)
 
 Fig. 3 — Select "Settings" from the dropdown menu
 
@@ -83,7 +83,7 @@ Click `Settings` in the dropdown menu. The window with settings menu for selecti
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](../../devportal/img/metamask-4.png)
+![](../developing/deploy_facilities/img/metamask-4.png)
 
 Fig. 4 — Choosing a Network
 
@@ -94,7 +94,7 @@ Add a Network (Fig. 5).
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](../../devportal/img/metamask-5.png)
+![](../developing/deploy_facilities/img/metamask-5.png)
 
 Fig. 5 — The Networks menu
 
@@ -116,7 +116,7 @@ The wallet settings depend on the values given for the option mentioned above.
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](../../devportal/img/metamask-6.png)
+![](../developing/deploy_facilities/img/metamask-6.png)
 
 Fig. 6 — Fill the Fields
 
@@ -124,6 +124,7 @@ Fig. 6 — Fill the Fields
 
 
 ### Step 8
+
 Click `Save` to keep the settings.  
 Your MetaMask wallet has been successfully installed and is ready to use.
 
