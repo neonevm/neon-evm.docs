@@ -13,8 +13,8 @@ module.exports = {
   tutorialSidebar: [ {
       type: 'category',
       label: 'About',
-      items: [ 'intro',
-               'glossary' ]
+      items: [ { type: 'doc', id: 'about/introduction', label: "Introduction" },
+               { type: 'doc', id: 'about/terminology', label: "Terminology" } ]
     }, {
       type: 'category',
       label: 'Wallets',
