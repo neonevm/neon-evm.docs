@@ -64,7 +64,7 @@ module.exports = {
     }, {
       type: 'category',
       label: "Operating",
-      items: [ { type: 'doc', label: "Proxy requirements and configuring", id: 'operating/operator_guide' } ]
+      items: [ { type: 'doc', label: "Proxy configuring", id: 'operating/operator_guide' } ]
     }, {
       type: 'category',
       label: 'Architecture',
