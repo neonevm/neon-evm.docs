@@ -14,7 +14,7 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-beta.6",
+    "@docusaurus/core": "^2.0.0-beta.18",
     "@docusaurus/preset-classic": "^2.0.0-beta.6",
     "@docusaurus/theme-search-algolia": "^2.0.0-beta.6",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -22,6 +22,7 @@
     "@fortawesome/react-fontawesome": "^0.1.15",
     "@mdx-js/react": "^1.6.21",
     "@svgr/webpack": "^5.5.0",
+    "algolia": "^0.0.0",
     "clsx": "^1.1.1",
     "file-loader": "^6.2.0",
     "prism-react-renderer": "^1.2.1",

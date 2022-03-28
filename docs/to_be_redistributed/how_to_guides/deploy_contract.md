@@ -61,7 +61,7 @@ Visit [Remix](https://remix.ethereum.org/) and create a new file.
 
 <div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
-![](./images/depl-contr-1.png)
+![](images/depl-contr-1.png)
 
 </div>
 
@@ -70,7 +70,7 @@ On the upper left part of the Remix interface add the new file and enter the fil
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/depl-contr-2.png)
+![](images/depl-contr-2.png)
 
 </div>
 
@@ -79,7 +79,7 @@ Navigate to the compile icon on the left-hand side and click `Compile`.
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/depl-contr-3.png)
+![](images/depl-contr-3.png)
 
 </div>
 
@@ -91,7 +91,7 @@ Navigate to the deploy icon and run transactions screen:
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/depl-contr-4.png)
+![](images/depl-contr-4.png)
 
 </div>
 
@@ -104,7 +104,7 @@ Click the arrow on the left to expand it so you can see the content of your cont
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](./images/depl-contr-5.png)
+![](images/depl-contr-5.png)
 
 </div>
 

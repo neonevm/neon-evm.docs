@@ -21,34 +21,13 @@ const FeatureList = [
   {
     title: 'Getting Started',
     icon: faCompass,
-    url: '/docs/getting_started',
+    url: '/docs/developing/getting_started',
     description: (
       <>
         Start building on Neon
       </>
     ),
   },
-  {
-    title: 'Нow to deploy a Solidity Smart Contract',
-    icon: faKeyboard,
-    url: '/docs/software_manuals/how_to_guides/deploy_contract/',
-    description: (
-      <>
-        Move your dApp to Solana and enjoy it's advantages
-      </>
-    )
-  },
-//  {
-//    title: 'Neon Swap',
-//    icon: faPaperPlane,
-//    url: '/docs/neonswap/neonswap_overview/',
-//    description: (
-//      <>
-//        Play with one of the biggest dApps running on Solana testnet
-//      </>
-//    ),
-//  },
-
   {
     title: 'FAQ',
     icon: faPaperPlane,

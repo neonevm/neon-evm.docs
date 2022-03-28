@@ -1,4 +1,4 @@
-# Installation and setup
+# Local Neon EVM infrastructure
 
 *This guide describes how to install, configure and test the local Solana cluster with Neon EVM on-board. It helps new developers to create their own environment and run Ethereum programs, wrapped into Neon EVM. All you need is to follow this guide step by step.*
 
@@ -43,7 +43,7 @@ Setup the "Metamask" Chromium extension to connect to the proxy via Custom RPC a
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>  
 
-![](./img/cluster-install-1.png)
+![](img/cluster-install-1.png)
 
 </div>
 
@@ -53,7 +53,7 @@ Open Remix (also in Chromium) and select `Injected Web3` environment. You can de
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>  
 
-![](./img/cluster-install-2.png)
+![](img/cluster-install-2.png)
 
 </div>
 

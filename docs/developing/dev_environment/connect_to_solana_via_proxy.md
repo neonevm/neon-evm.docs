@@ -1,4 +1,4 @@
-# Connecting to Solana via a Proxy
+# Connecting to the Neon EVM proxy
 
 *This section can be useful as a reference for:*
   * *authorized operators for connecting their proxies to solana nodes so that they can stream requests to Neon EVM through the proxies to a solana network.*
