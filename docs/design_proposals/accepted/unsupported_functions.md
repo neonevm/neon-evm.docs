@@ -1,4 +1,7 @@
-# Unsupported Functions in Neon EVM
+---
+title: Unsupported Functions in Neon EVM
+---
+
 The Neon EVM doesn't support the following functions:
   * `gas_price(&self)`
   * `block_hash(&self, number: U256)`

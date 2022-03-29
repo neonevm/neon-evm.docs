@@ -1,4 +1,6 @@
-# Connecting to the Neon EVM proxy
+---
+title: Connecting to the Neon Proxy
+---
 
 *This section can be useful as a reference for:*
   * *authorized operators for connecting their proxies to solana nodes so that they can stream requests to Neon EVM through the proxies to a solana network.*
@@ -153,8 +155,6 @@ As soon as the latest command is completed, the proxy will start to deploy Neon 
 
 > **Note:**  
 > As a proxy, you can use the dedicated neon server, or a separate server that you will need to deploy and log into it.
-> 
+>
 > As a Solana endpoint, you can use a separate node hosted on devnet or testnet.  
 > You can also use a Solana node that is not hosted on any network. In this case, you will need to configure this node and synchronize it with the devnet or testnet network. Then you will need to deploy the local proxy and configure it to work with this node. You will also need to connect to the EVM loader deployed within devnet or testnet.
-
-

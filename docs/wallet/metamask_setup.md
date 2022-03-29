@@ -1,4 +1,6 @@
-# Setting up MetaMask
+---
+title: Setting up MetaMask
+---
 
 MetaMask wallet is a convenient and fairly easy-to-use application for storing Ethereum addresses and private keys.
 

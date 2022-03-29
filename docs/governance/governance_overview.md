@@ -1,4 +1,6 @@
-# Governance Overview
+---
+title: Governance Overview
+---
 
 ## Objectives of Governance
 Neon governance is the process by which community stakeholders must ensure:

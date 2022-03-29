@@ -1,4 +1,6 @@
-# Proof-of-Stake
+---
+title: Proof-of-Stake
+---
 
 Ethereum is moving to a consensus mechanism called **Proof-of-Stake (PoS)** from **Proof-of-Work (PoW)**.
 

@@ -1,4 +1,6 @@
-# Local Neon EVM infrastructure
+---
+title: Setting up local Solana Cluster
+---
 
 *This guide describes how to install, configure and test the local Solana cluster with Neon EVM on-board. It helps new developers to create their own environment and run Ethereum programs, wrapped into Neon EVM. All you need is to follow this guide step by step.*
 
@@ -25,14 +27,14 @@ $ ls ./solana_state
 ledger  run
 ```
 
-Once you deploy the environment you'll have the Solana RPC endpoint working from the docker container at the 9090 port. 
+Once you deploy the environment you'll have the Solana RPC endpoint working from the docker container at the 9090 port.
 The folder named "solana_state" will be created as well, it contains the solana's ledger to keep the state over restarts. If you need to reset the ledger just remove this folder and it'll be recreated after next-time running docker-compose.
 
 ## Logs
 
 To look for events or errors that you can be interested in just run the `docker logs` for either `solana` or `proxy` container:
 
-```sh 
+```sh
 $ docker logs -f solana 2>&1 | grep -v "Program Vote111111111111111111111111111111111111111"
 $ docker logs -f proxy
 ```

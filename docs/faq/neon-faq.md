@@ -1,4 +1,6 @@
-# FAQ Categories
+---
+title: FAQ Categories
+---
 
 *This section contains answers to frequently asked questions (FAQ). All questions are divided into groups in accordance with their focus:*
 

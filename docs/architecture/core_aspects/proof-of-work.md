@@ -1,4 +1,6 @@
-# Proof-of-Work
+---
+title: Proof-of-Work
+---
 
 **Proof-of-work (PoW)** is a consensus protocol (proof-of-work completion) that allows the decentralized Ethereum network to come to consensus, or agree on things like account balances and the order of transactions. This prevents users "double spending" their coins and ensures that the Ethereum chain is incredibly difficult to attack or overwrite.
 

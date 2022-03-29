@@ -1,4 +1,6 @@
-# Neon Swap
+---
+title: NeonSwap
+---
 
 ## Goal
 To swap an ERC-20 token with another token of the same standard using the Neon Swap application.
@@ -11,6 +13,18 @@ To swap an ERC-20 token with another token of the same standard using the Neon S
     * What is the [Metamask](https://docs.neon-labs.org/docs/glossary#metamask).
   * The [Metamask](https://docs.neon-labs.org/docs/glossary#metamask) wallet must be installed on your device and can be accessed from the browser you are using.
   * Learn the guide [How to Connect Metamask to Solana's Network](https://docs.neon-labs.org/docs/software_manuals/how_to_guides/connect_metamask_to_solana).
+
+## Neon Swap overview
+
+  *Neon Swap is open source service forked from [Uniswap V2](https://uniswap.org/blog/uniswap-v2) and modified to work with Neon EVM.*  
+
+  Neon Swap is an open-source [dapp](https://doc.neonlabs.org/docs/glossary#decentralized-application-dapp) whose main function is to provide the services required to deploy user Ethereum contracts on Neon EVM. In Ethereum, transactions, such as exchanging one token for another, require the deployment of contracts. These contracts operate using their specific services and cannot be deployed outside of this environment.
+
+  We want to demonstrate that our Neon EVM product allows you to transfer your applications from Ethereum to Solana and ensures their reliable functioning. The Neon Swap infrastructure provides full support for your applications on Neon EVM, as well as the swap interface on a separate server. No changes are required to port applications using the Neon Swap service.
+
+  > **[Neon Swap](https://doc.neonlabs.org/docs/glossary#neonswap)** service provides an opportunity for Ethereum developers to migrate their applications to Neon EVM without any difficulties.
+
+
 
 ## Steps
 The Neon Swap application allows any user to swap one token for another. You just need to connect your wallet to the application following the step-by-step instructions. Swapping tokens will be carried out automatically without sending funds to the exchange. There are some gas transaction fees to pay with the application.

@@ -1,4 +1,6 @@
-# What is Neon?
+---
+title: What is Neon?
+---
 
   * [What is Neon?](#what-is-neon)
   * [What is the Neon Web3 Proxy?](#what-is-the-neon-web3-proxy)
@@ -9,7 +11,7 @@
 
 ### What is Neon?
 
-Neon is a smart contract on Solana that was designed to bring EVM (Ethereum Virtual Machine) compatibility to Solana. Neon enables the use of Ethereum dApps and tools on Solana without any reconfiguration. 
+Neon is a smart contract on Solana that was designed to bring EVM (Ethereum Virtual Machine) compatibility to Solana. Neon enables the use of Ethereum dApps and tools on Solana without any reconfiguration.
 
 ### What is the Neon Web3 Proxy?
 
@@ -20,12 +22,12 @@ The Neon Web3 Proxy allows users to access Solana via the existing Ethereum app 
 **Neon user**: Any account in Neon EVM with a non-zero balance in Neon tokens (later NEON/ETH/ERC-20).
 Neon users order Ethereum-like transactions that are executed via Neon EVM program on Solana.
 
-**Neon client**: An application with EVM bytecode (Solidity, Vyper, etc.) loaded into Neon. 
+**Neon client**: An application with EVM bytecode (Solidity, Vyper, etc.) loaded into Neon.
 The application generates a Neon transaction according to Ethereum rules and sends it to Neon EVM
 via the Web3 Proxy.
 
-**Neon operator**: Anyone who operates a Neon Web3 Proxy. Operators are compensated by users in 
-Neon tokens (later NEON/ETH/ERC-20). Operators must maintain SOL tokens as payment to Neon EVM and 
+**Neon operator**: Anyone who operates a Neon Web3 Proxy. Operators are compensated by users in
+Neon tokens (later NEON/ETH/ERC-20). Operators must maintain SOL tokens as payment to Neon EVM and
 Solana validators for the execution of Neon transactions. Operators receive a fee from Neon users for finalizing the executions of Neon transactions.
 
 ### What is the ERC-20/SPL wrapper?

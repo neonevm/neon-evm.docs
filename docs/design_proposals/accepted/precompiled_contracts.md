@@ -1,4 +1,6 @@
-# Precompiled Contracts that can not be used in Solana
+---
+title: Precompiled Contracts that can not be used in Solana
+---
 
 ### Problem
 Contracts written in the Solidity language cannot work in Solana if they contain calls to the following precompiled contracts:

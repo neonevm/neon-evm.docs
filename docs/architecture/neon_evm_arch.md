@@ -1,4 +1,6 @@
-# Neon EVM Architecture Overview
+---
+title: Neon EVM Architecture Overview
+---
 
 > *This section describes the architectural solutions built into Neon EVM that enable fast transaction processing for Ethereum users. It also describes how tokens pass from users to final consumers.*
 

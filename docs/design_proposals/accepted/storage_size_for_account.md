@@ -1,4 +1,6 @@
-# Storage size limit for an account
+---
+title: Storage size limit for an account
+---
 
 ### Problem
 In Solana, the size of storage allocated for an account has a limit and it can not exceed *10 MB*. This means, the storage size of contracts placed on the account can also not exceed *10 MB*. This a threshold value limits an amount of records in a contract and can cause inconvenience to users.

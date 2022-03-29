@@ -1,4 +1,6 @@
-# Governance User Interface
+---
+title: Governance User Interface
+---
 
 The Neon Governance application is an open source service designed to provide a convenient form for submitting proposals to improve Neon EVM and for voting on acceptance of these proposals.
 

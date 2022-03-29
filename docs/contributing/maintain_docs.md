@@ -1,3 +1,10 @@
+---
+title: Maintaining docs
+---
+
+## Summary of Neon EVM documentation
+This documentation is an open-source community effort, so feel free to suggest new topics or add new content wherever you think it might be helpful. All documentation is available for editing via GitHub.  
+
 # How to maintain docs
 
 In this section, you will learn about making changes to the Neon documentation.
