@@ -69,7 +69,8 @@ module.exports = {
       type: 'category',
       label: 'Architecture',
       items: [ { type: 'doc', label: 'Core Aspects', id: 'architecture/web3' },
-               { type: 'doc', label: 'Neon EVM principles', id: 'architecture/eth_sol_solution' } ]
+               { type: 'doc', label: 'Neon EVM principles', id: 'architecture/eth_sol_solution' },
+               { type: 'doc', label: 'EVM compatibility', id: 'architecture/evm_compatibility'}]
     }, {
       type: 'category',
       label: 'Contributing',
