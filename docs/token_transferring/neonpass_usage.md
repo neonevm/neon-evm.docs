@@ -7,7 +7,7 @@ This guide provides instructions on how to transfer ERC-20 tokens between Solana
 
 Before you start to transfer ERC-20 tokens, you have to fulfill the following requirements:
   * On a source side, you should already have an account with the balance of tokens that will be transferred.
-  * Neon Pass uses [Metamask](https://docs.neon-labs.org/docs/glossary#metamask) and [Phantom](https://docs.neon-labs.org/docs/glossary#phantom) — two popular non-custodial browser based wallets.
+  * Neon Pass uses [Metamask](about/terminology.md#metamask) and [Phantom](about/terminology.md#phantom) — two popular non-custodial browser based wallets.
   * The Neon Pass application is deployed in the browser to which your wallets are attached.
 
 ## Procedure

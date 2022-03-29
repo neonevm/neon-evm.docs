@@ -10,7 +10,7 @@ title: Testing Contracts
 
 It is assumed:
 
-* You are already familiar with the document [Local Solana Cluster: Installation, Setup and Tests](https://docs.neonlabs.org/docs/solana_cluster/cluster_installation)
+* You are already familiar with the document [Local Solana Cluster: Installation, Setup and Tests](developing/dev_environment/solana_cluster/cluster_installation.md)
 * Integration tests are performed on *NodeJS* (*v12* or higher) which should be installed in the system
 * The local development *Solana* cluster should be up and active
 

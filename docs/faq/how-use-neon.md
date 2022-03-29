@@ -26,7 +26,7 @@ A Neon EVM operator needs the following:
   1. The Neon Web3 Proxy. A dedicated RPC Solana node for Operators is highly desirable.
   2. A Solana account (wallet) funded with SOL tokens.
 
-See details [here](https://docs.neon-labs.org/docs/proxy/operator_guide).
+See details [here](operating/operator_guide.md).
 
 ### How do Neon EVM users pay for using dApps deployed on Neon EVM?
 

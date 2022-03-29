@@ -110,7 +110,7 @@ The emulation execution time is affected by the following factors:
 Setting the `NEON_CLI_TIMEOUT` time too short may not be sufficient to complete a transaction and pack it into a block. Therefore, `NEON_CLI_TIMEOUT` is set to the smallest value for `CONFIG = local`. Setting the `NEON_CLI_TIMEOUT` value too high may block other users from accessing this node.
 
 #### CANCEL_TIMEOUT
-This parameter limits the time (in [slots](https://docs.neon-labs.org/docs/glossary#slot)) for blocking an account. If the blocking time for the account exceeds the time specified in this parameter, an attempt will be made to cancel the transaction that blocked this account.
+This parameter limits the time (in [slots](about/terminology.md#slot)) for blocking an account. If the blocking time for the account exceeds the time specified in this parameter, an attempt will be made to cancel the transaction that blocked this account.
 
 #### MINIMAL_GAS_PRICE
 This parameter sets the lowest possible gas price specified in a transaction.

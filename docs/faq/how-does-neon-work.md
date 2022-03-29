@@ -27,18 +27,18 @@ title: How does Neon work?
 
 ### How does Neon EVM interact with Solana?
 
-The alpha version of Neon EVM has an interface that can interact with [SPL token](https://docs.neon-labs.org/docs/glossary#spl-token) accounts.
+The alpha version of Neon EVM has an interface that can interact with [SPL token](about/terminology.md#spl-token) accounts.
 The beta version of Neon EVM will have interface that can read data from Solana accounts and will facilitate the integration of Neon EVM contracts with Oracles on Solana.
 In upcoming versions, Neon Labs has plans to implement an interface for writing data to Solana accounts, which will allow the integration of Neon EVM contracts with Solana programs.
 
 Neon EVM works as a smart contract on the Solana blockchain. The contract can interact with and call other
-smart contracts on Solana—for example, [SPL tokens](https://docs.neon-labs.org/docs/glossary#spl-token). Neon EVM is able to access data stored on Solana
+smart contracts on Solana—for example, [SPL tokens](about/terminology.md#spl-token). Neon EVM is able to access data stored on Solana
 accounts. Furthermore, every Ethereum-like account within Neon EVM is stored in a corresponding Solana
 account.
 
 ### How does the Neon EVM contract work?
 
-Neon EVM is a smart contract on Solana acting as the Ethereum Virtual Machine. It is compiled into [Berkeley Packet Filter](https://docs.neon-labs.org/docs/glossary#berkeley-packet-filter-bpf) bytecode, a format that can be executed on Solana.This allows Neon EVM to receive Solana transactions with wrapped Ethereum-like transactions and process them on Solana according to Ethereum rules.
+Neon EVM is a smart contract on Solana acting as the Ethereum Virtual Machine. It is compiled into [Berkeley Packet Filter](about/terminology.md#berkeley-packet-filter-bpf) bytecode, a format that can be executed on Solana.This allows Neon EVM to receive Solana transactions with wrapped Ethereum-like transactions and process them on Solana according to Ethereum rules.
 
 ### How does Neon EVM enable the parallel execution of transactions?
 
@@ -113,7 +113,7 @@ within it. The Solana transaction can then be sent directly to a Solana node wit
 When using this method, it’s important to understand that the sender (Neon user) is responsible for the
 following items:
 
-1. In cases where the Neon transaction is too large, it has to be executed [iteratively](https://docs.neon-labs.org/docs/architecture/value_token#token-circulation).
+1. In cases where the Neon transaction is too large, it has to be executed [iteratively](architecture/value_token.md#token-circulation).
 2. A list of all Neon accounts and contracts corresponding to the Neon transaction needs to be determined
 on the client side.
 

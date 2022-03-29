@@ -21,7 +21,7 @@ Go to the MetaMask [download page](https://metamask.io/download.html). From ther
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](../developing/deploy_facilities/img/metamask-1.png)
+![](img/metamask-1.png)
 
 Fig. 1 — Loading MetaMask
 
@@ -32,7 +32,7 @@ MetaMask is essentially a plugin in the form of an extension to a browser. There
 
 <div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
-![](../developing/deploy_facilities/img/metamask-2.png)
+![](img/metamask-2.png)
 
 Fig. 2
 
@@ -65,7 +65,7 @@ In the upper-right corner, click the red apple view element. Select settings fro
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](../developing/deploy_facilities/img/metamask-3.png)
+![](img/metamask-3.png)
 
 Fig. 3 — Select "Settings" from the dropdown menu
 
@@ -77,7 +77,7 @@ The dropdown menu elements:
 * `Account 1`: account of your wallet that was created during the MetaMask installation; this account provides management of your wallet.
 * `Create Account`: this allows you to create one more account to interact with the new proxy server; you can configure this wallet to interact with multiple proxy servers.
 * `Import Account`: this allows you to import your private key generated and saved previously into this wallet and use it in the future.
-* `Connect Hardware Wallet`: this allows you to save the private key to an external device (i.e. flash memory) located outside the network, thereby increasing the security of your private key. 
+* `Connect Hardware Wallet`: this allows you to save the private key to an external device (i.e. flash memory) located outside the network, thereby increasing the security of your private key.
 * `Settings`: used to change the default values; by default, the wallet is configured for Ethereum addresses, including those that you can’t use.
 
 ### Step 5
@@ -85,7 +85,7 @@ Click `Settings` in the dropdown menu. The window with settings menu for selecti
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](../developing/deploy_facilities/img/metamask-4.png)
+![](img/metamask-4.png)
 
 Fig. 4 — Choosing a Network
 
@@ -96,7 +96,7 @@ Add a Network (Fig. 5).
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](../developing/deploy_facilities/img/metamask-5.png)
+![](img/metamask-5.png)
 
 Fig. 5 — The Networks menu
 
@@ -106,9 +106,9 @@ The new window contains the settings for 6 default subnets. You need to use thes
 
 ### Step 7
 Fill in the fields on the next page (Fig. 6):  
-* `Network Name`: "remote proxy — solana testnet"
-* `New RPC URL`: https://proxy.testnet.neonlabs.org/solana
-* `Chain ID`: 245022940
+* `Network Name`: "remote proxy — solana devnet"
+* `New RPC URL`: https://proxy.devnet.neonlabs.org/solana
+* `Chain ID`: 245022926
 * `Currency Symbol`: NEON
 * `Block Explorer URL (optional)`: URL of the block browser
 
@@ -118,7 +118,7 @@ The wallet settings depend on the values given for the option mentioned above.
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](../developing/deploy_facilities/img/metamask-6.png)
+![](img/metamask-6.png)
 
 Fig. 6 — Fill the Fields
 
@@ -129,12 +129,3 @@ Fig. 6 — Fill the Fields
 
 Click `Save` to keep the settings.  
 Your MetaMask wallet has been successfully installed and is ready to use.
-
-
-
-
-
-
-
-
-

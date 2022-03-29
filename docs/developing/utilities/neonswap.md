@@ -5,24 +5,24 @@ title: NeonSwap
 ## Goal
 To swap an ERC-20 token with another token of the same standard using the Neon Swap application.
 
-*Condition:* The ERC-20 token can be any [SPL token](https://doc.neonlabs.org/docs/glossary#spl-token) whose contract complies with the [ERC-20 standard](https://docs.neon-labs.org/docs/glossary#erc-20) and is deployed in Neon EVM.
+*Condition:* The ERC-20 token can be any [SPL token](about/terminology.md#spl-token) whose contract complies with the [ERC-20 standard](about/terminology.md#erc-20) and is deployed in Neon EVM.
 
 ## Before you begin
   * Understand the following:
     * What is the [Solana network](https://docs.solana.com/clusters).
-    * What is the [Metamask](https://docs.neon-labs.org/docs/glossary#metamask).
-  * The [Metamask](https://docs.neon-labs.org/docs/glossary#metamask) wallet must be installed on your device and can be accessed from the browser you are using.
+    * What is the [Metamask](about/terminology.md#metamask).
+  * The [Metamask](about/terminology.md#metamask) wallet must be installed on your device and can be accessed from the browser you are using.
   * Learn the guide [How to Connect Metamask to Solana's Network](https://docs.neon-labs.org/docs/software_manuals/how_to_guides/connect_metamask_to_solana).
 
 ## Neon Swap overview
 
   *Neon Swap is open source service forked from [Uniswap V2](https://uniswap.org/blog/uniswap-v2) and modified to work with Neon EVM.*  
 
-  Neon Swap is an open-source [dapp](https://doc.neonlabs.org/docs/glossary#decentralized-application-dapp) whose main function is to provide the services required to deploy user Ethereum contracts on Neon EVM. In Ethereum, transactions, such as exchanging one token for another, require the deployment of contracts. These contracts operate using their specific services and cannot be deployed outside of this environment.
+  Neon Swap is an open-source [dapp](about/terminology.md#decentralized-application-dapp) whose main function is to provide the services required to deploy user Ethereum contracts on Neon EVM. In Ethereum, transactions, such as exchanging one token for another, require the deployment of contracts. These contracts operate using their specific services and cannot be deployed outside of this environment.
 
   We want to demonstrate that our Neon EVM product allows you to transfer your applications from Ethereum to Solana and ensures their reliable functioning. The Neon Swap infrastructure provides full support for your applications on Neon EVM, as well as the swap interface on a separate server. No changes are required to port applications using the Neon Swap service.
 
-  > **[Neon Swap](https://doc.neonlabs.org/docs/glossary#neonswap)** service provides an opportunity for Ethereum developers to migrate their applications to Neon EVM without any difficulties.
+  > **[Neon Swap](about/terminology.md#neonswap)** service provides an opportunity for Ethereum developers to migrate their applications to Neon EVM without any difficulties.
 
 
 
@@ -36,7 +36,7 @@ Go to the [Neon Swap](https://neonswap.live/) page to call the Neon Swap applica
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../to_be_redistributed/how_to_guides/images/swap-erc20-1.png)
+![](images/swap-erc20-1.png)
 
 </div>
 
@@ -50,7 +50,7 @@ Click `Select a token` to open up a menu where you can select a token to exchang
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../to_be_redistributed/how_to_guides/images/swap-erc20-2.png)
+![](images/swap-erc20-2.png)
 
 </div>
 
@@ -61,7 +61,7 @@ If you want to add a new token to the list, click `Manage` at the bottom of the 
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../to_be_redistributed/how_to_guides/images/swap-erc20-3.png)
+![](images/swap-erc20-3.png)
 
 </div>
 
@@ -78,14 +78,14 @@ In our case, we exchange ETH tokens for USDT tokens. Let's specify the number of
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../to_be_redistributed/how_to_guides/images/swap-erc20-4.png)
+![](images/swap-erc20-4.png)
 
 </div>
 
 ### Step 5. Perform the exchange
 Before you can submit this exchange, you need to understand the following things about it:
   * `Price` — the price at which the exchange is possible.
-  * `Minimum received` — the minimum amount of tokens (in our case, USDT) you will receive if the trade goes through. The trade will fail if price deviates too much during the transaction (also known as [slippage](https://doc.neonlabs.org/docs/glossary#slippage)).
+  * `Minimum received` — the minimum amount of tokens (in our case, USDT) you will receive if the trade goes through. The trade will fail if price deviates too much during the transaction (also known as [slippage](about/terminology.md#slippage)).
   * `Price impact` tells you how much your swap will affect this token's price. This value can be seen as a loss you will take on the swap. The closer this number is to zero the better.
   * `Liquidity Provider Fee` — the fee you will pay for this transaction. Neon Swap charges a *0.03 %* fee of the total transaction amount. This fee is expressed in the token you are selling (in our case, ETH).
 
@@ -97,7 +97,7 @@ The request will open up a MetaMask window where you can confirm the transaction
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](../../to_be_redistributed/how_to_guides/images/swap-erc20-5.png)
+![](images/swap-erc20-5.png)
 
 </div>
 
@@ -105,7 +105,7 @@ You can also check the result of the trade in the Neon Swap window. Click `Close
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../to_be_redistributed/how_to_guides/images/swap-erc20-6.png)
+![](images/swap-erc20-6.png)
 
 </div>
 
@@ -113,7 +113,7 @@ Now you can open the Metamax, as well as the list of tokens, by clicking `Select
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../to_be_redistributed/how_to_guides/images/swap-erc20-7.png)
+![](images/swap-erc20-7.png)
 
 </div>
 
@@ -125,12 +125,12 @@ Click the cogwheel icon. The window `Transaction Settings` will pop-up on the sc
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](../../to_be_redistributed/how_to_guides/images/swap-erc20-8.png)
+![](images/swap-erc20-8.png)
 
 </div>
 
 Transaction settings:
-  * `Slippage tolerance` — the allowable amount of price change. It means that the order is fulfilled at a price different from what you expected. If it exceeds the tolerance level selected, the transaction will not go through. If you are trading during high volatility, you may want to increase this value. Increasing the transaction speed can help you to reduce the chances of high [slippage](https://doc.neonlabs.org/docs/glossary#slippage).
+  * `Slippage tolerance` — the allowable amount of price change. It means that the order is fulfilled at a price different from what you expected. If it exceeds the tolerance level selected, the transaction will not go through. If you are trading during high volatility, you may want to increase this value. Increasing the transaction speed can help you to reduce the chances of high [slippage](about/terminology.md#slippage).
   * `Transaction deadline` — allows the transaction to automatically cancel if it is taking too long to process.
-  * `Toggle Expert Mode` — disables the confirmation screen and removes [slippage](https://doc.neonlabs.org/docs/glossary#slippage) limits. It is not encouraged to enable this mode unless you fully understand the risks.
+  * `Toggle Expert Mode` — disables the confirmation screen and removes [slippage](about/terminology.md#slippage) limits. It is not encouraged to enable this mode unless you fully understand the risks.
   * `Disable Multihops` — disables complex conversion paths. For example, if there is not enough liquidity in the "A->B" token pair, then the algorithm can involve other tokens to find the "A->C->B" intermediate route and make an exchange for you. This action requires more network fees, because several smart contracts are involved.

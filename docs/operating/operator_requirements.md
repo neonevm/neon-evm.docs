@@ -38,7 +38,7 @@ The minimum specifications recommended to your Solana RPC node:
     * Core isolation
   * RAM
     * 256 GB memory
-    * [Tmpfs](https://docs.neon-labs.org/docs/glossary#tmpfs)
+    * [Tmpfs](about/terminology.md#tmpfs)
   * Disk space
     * Depends on the transaction history required for storage
 
