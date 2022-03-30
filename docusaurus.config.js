@@ -32,19 +32,19 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/wallet/metamask_setup',
           label: 'Develop',
           position: 'left',
+          to: 'docs/developing/getting_started',
         },
         {
-          to: 'docs/developing/dev_environment/connect_to_solana_via_proxy',
           label: 'Operate',
           position: 'left',
+          to: 'docs/operating/operator_guide',
         },
         {
-          to: 'docs/architecture/core_aspects/web3',
-          label: 'Manuals',
+          label: 'Learn',
           position: 'left',
+          to: 'docs/architecture/neon_evm_arch',
         },
         {
           href: 'https://github.com/neonlabsorg',
