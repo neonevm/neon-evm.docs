@@ -22,7 +22,7 @@ module.exports = {
       type: 'category',
       label: 'Explorers',
       items: [ { type: 'link', label: 'NeonScan', href: "https://neonscan.org/" },
-               { type: 'link', label: 'Indexing Dashboard', href: "http://neonqltest.aleph.cloud:8004/" } ]
+               { type: 'link', label: 'Indexing Dashboard', href: "https://neon.aleph.cloud/" } ]
     }, {
       type: 'category',
       label: 'Tokens Transferring',
@@ -58,9 +58,9 @@ module.exports = {
           type: 'category',
           label: 'Using utilities',
           items: [
-            'developing/utilities/neonswap',
             { type: 'link', label: 'NeonScan', href: "https://neonscan.org/" },
             { type: 'doc', label: 'NeonPass', id: "token_transferring/neonpass_usage" },
+            'developing/utilities/neonswap',
           ]
         }
       ]
