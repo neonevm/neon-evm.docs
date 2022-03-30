@@ -96,7 +96,7 @@ module.exports = {
         'architecture/eth_sol_solution',
         'architecture/neon_evm_arch',
 		'architecture/value_token',
-        'architecture/evm_compatibility',
+        { type: 'doc', label: 'EVM compatibility', id: 'architecture/evm_compatibility' },
         {
           type: 'category',
           label: 'Core Aspects',
