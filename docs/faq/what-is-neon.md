@@ -2,12 +2,12 @@
 title: What is Neon?
 ---
 
-  * [What is Neon?](#what-is-neon)
-  * [What is the Neon Web3 Proxy?](#what-is-the-neon-web3-proxy)
-  * [What are the main roles in Neon?](#what-are-the-main-roles-in-neon)
-  * [What is the ERC-20/SPL wrapper?](#what-is-the-erc-20spl-wrapper)
-  * [What about the NFT support (ERC-721 and ERC-1155)?](#what-about-the-nft-support-erc-721-and-erc-1155)
-  * [What is the ERC-20/SPL bridge?](#what-is-the-erc-20spl-bridge)
+* [What is Neon?](#what-is-neon)
+* [What is the Neon Web3 Proxy?](#what-is-the-neon-web3-proxy)
+* [What are the main roles in Neon?](#what-are-the-main-roles-in-neon)
+* [What is the ERC-20/SPL wrapper?](#what-is-the-erc-20spl-wrapper)
+* [What about the NFT support (ERC-721 and ERC-1155)?](#what-about-the-nft-support-erc-721-and-erc-1155)
+* [What is the ERC-20/SPL bridge?](#what-is-the-erc-20spl-bridge)
 
 ### What is Neon?
 

@@ -4,41 +4,65 @@ import styles from './WelcomeFeatures.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
-import { faNewspaper, faCompass, faKeyboard, faPaperPlane } from '@fortawesome/free-regular-svg-icons'
+import * as icons from '@fortawesome/free-regular-svg-icons'
 
 
 const FeatureList = [
   {
-    title: 'Introduction',
-    icon: faNewspaper,
-    url: '/docs/about/introduction',
-    description: (
-      <>
-        Learn more about Neon and how it works
-      </>
-    ),
-  },
-  {
-    title: 'Getting Started',
-    icon: faCompass,
+    title: 'Start building',
+    icon: icons.faCompass,
     url: '/docs/developing/getting_started',
     description: (
       <>
         Start building on Neon
       </>
     ),
-  },
-  {
-    title: 'FAQ',
-    icon: faPaperPlane,
-    url: '/docs/faq/neon-faq/',
+  }, {
+    title: 'Run as a Proxy Operator',
+    icon:  icons.faNewspaper,
+    url: 'docs/operating/operator_guide',
     description: (
       <>
-        "What is Neon?" and other answers to basic questions about the Neon EVM
+        This guide is for people who want to register with Neon EVM as a proxy operator
       </>
     ),
-  },
-
+  }, {
+    title: 'Manage a Wallet',
+    icon:  icons.faChartBar,
+    url: 'docs/wallet/metamask_setup',
+    description: (
+      <>
+        A crypto wallet & gateway to blockchain apps
+      </>
+    ),
+  }, {
+    title: 'Transfer SPL Tokens',
+    icon:  icons.faHandshake,
+    url: 'docs/token_transferring/neonpass_usage',
+    description: (
+      <>
+        Transfer ERC-20 tokens between Solana and Neon EVM using Neon Pass
+      </>
+    ),
+  }, {
+    title: 'Learn How Neon EVM Works',
+    icon:  icons.faObjectGroup,
+    url: 'docs/architecture/neon_evm_arch',
+    description: (
+      <>
+        Architectural solutions built in Neon EVM for fast transaction processing
+      </>
+    ),
+  }, {
+    title: 'FAQ',
+    icon:  icons.faCircleQuestion,
+    url: 'docs/faq/what-is-neon',
+    description: (
+      <>
+       What is Neon? What is the Neon Web3 Proxy? What are the roles ...
+      </>
+    ),
+  }
 ];
 
 function Feature({title, icon, url, description}) {
