@@ -95,7 +95,6 @@ module.exports = {
       items: [
         'architecture/eth_sol_solution',
         'architecture/neon_evm_arch',
-		'architecture/value_token',
         { type: 'doc', label: 'EVM compatibility', id: 'architecture/evm_compatibility' },
         {
           type: 'category',
@@ -148,3 +147,4 @@ module.exports = {
 // software_manuals/how_to_guides/connect_metamask_to_solana
 // neonswap/neonswap_overview
 // proxy/operator_guide,
+// architecture/value_token
