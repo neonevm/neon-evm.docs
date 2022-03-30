@@ -1,8 +1,6 @@
-2022-03-30 17:50:16.180 I main.rs:67 60713 faucet:main {} version 0.6.0-dev-latest
-
 # Neon Faucet
-The Neon Faucet is a service that distributes small amounts of tokens.
 
+The Neon Faucet is a service that distributes small amounts of tokens.
 
 # HTTP API Endpoints
 
@@ -135,4 +133,3 @@ Environment variables, if present, override portions of the configuration.
 | NEON_LOG | | `json`
 | RUST_LOG | | `info`
 |-
-
