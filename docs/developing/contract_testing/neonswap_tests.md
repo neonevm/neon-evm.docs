@@ -1,84 +1,120 @@
-<<<<<<<< HEAD:docs/developing/contract_testing/neonswap_tests.md
 ---
-title: Testing Contracts
+title: Transferring SPL Tokens
 ---
-========
-# Testing contracts
->>>>>>>> develop:docs/developing/neonswap_tests.md
 
-*This guide describes how to build and configure the Neon EVM to run integration tests on it.*  
+## Overview
+This guide provides instructions on how to transfer ERC-20 tokens between Solana and Neon EVM using Neon Pass. You can do it in any direction, i.e. transfer tokens from Solana to Neon EVM or withdraw them back. However, you need to keep in mind that each transaction in Neon EVM or Solana will be charged a fee in the form of NEON or SOL tokens, respectively. For example, withdrawing tokens from Neon EVM to Solana requires 2 transactions — one for Neon EVM (requires fee in NEON) and another for Solana (requires fee in SOL). Therefore, you will have to pay 2 fees.
 
-> We want to demonstrate to Ethereum users that the neonswap infrastructure deployed on our Neon EVM ensures a passage of the *Uniswap-V2* integration tests suite. This means Ethereum users can successfully run their applications on Neon EVM.
+Before you start to transfer ERC-20 tokens, you have to fulfill the following requirements:
+  * On a source side, you should already have an account with the balance of tokens that will be transferred.
+  * Neon Pass uses [Metamask](about/terminology.md#metamask) and [Phantom](about/terminology.md#phantom) — two popular non-custodial browser based wallets.
+  * The Neon Pass application is deployed in the browser to which your wallets are attached.
 
-## Prerequisites
+## Procedure
+This procedure presents the example of transferring USDT tokens from Neon EVM to Solana in Devnet. The task is to transfer 5 USDT from Neon EVM to Solana.
 
-It is assumed:
+Initial conditions:
+  * Your Neon EVM account contains non-zero USDT-balance.
+  * You have a non-zero NEON balance to pay the withdrawal approval fee.
+  * Your Solana account contains non-zero SOL-balance to pay fee.
 
-<<<<<<<< HEAD:docs/developing/contract_testing/neonswap_tests.md
-* You are already familiar with the document [Local Solana Cluster: Installation, Setup and Tests](developing/dev_environment/solana_cluster/cluster_installation.md)
-========
-* You are already familiar with the document [Local Solana Cluster: Installation, Setup and Tests](https://docs.neonlabs.org/docs/solana_cluster/cluster_installation)
->>>>>>>> develop:docs/developing/neonswap_tests.md
-* Integration tests are performed on *NodeJS* (*v12* or higher) which should be installed in the system
-* The local development *Solana* cluster should be up and active
+Transferring tokens using Neon Pass takes 3 stages:
+  * Source — connecting the Metamask wallet to Neon Pass and providing access to the sender's account balance.
+  * Target — connecting the Phantom wallet to Neon Pass and providing access to the recipient's account balance.
+  * Confirmation — signing the transaction and checking the result of transferring tokens.
 
-## Prepare solana-program-library
+### The Source stage
 
-Clone the project `https://github.com/neonlabsorg/solana-program-library`. Don't forget to clone the dependent project (EVM): `git submodule update --remote --init --recursive`.
+Go to the [Neon Pass](https://neonpass.live/) page in the browser to which the Phantom and Metamask wallets are attached. Make sure that the icons of these wallets are displayed at the top right. By default, the direction of transferring tokens is set from `Solana` to `Neon`. If this is not the case you have to click on the arrow icon to reverse the forwarding direction.
 
-## Deploy the EVM Loader
+<div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-Build the EVM Loader:
-```sh
-$ ./do.sh update
-$ ./do.sh build evm_loader
-```
-Directory `target/bpfel-unknown-unknown/release` should contain the resulting `evm_loader.so` file. Deploy it to the Solana cluster (which should be ready at this moment):
-```sh
-$ solana deploy evm_loader.so
-```
+![](img/transfer-spl-1.png)
 
-## Prepare the proxy
+</div>
 
-Clone the project `https://github.com/neonlabsorg/proxy-model.py`.
+Click `Connect Wallet` to connect your Metamask wallet to the Neon Pass app. The Metamask window should pop up on the screen. Follow the login procedure to your wallet and make sure it is connected to Devnet. Also make sure you have enough USDT tokens in your account to transfer (there are 987.9 USDT in our example) and have a non-zero NEON balance to pay the withdrawal approval fee. Upon successful connection of the Metamask wallet to Neon Pass and access to your account balance, the inscription `Connect Wallet` will change to the public key of your account in Neon EVM.
 
-## Launch the proxy
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-Export the EVM Loader program id before starting the proxy (replace the example address with the actual):
-```sh
-$ export EVM_LOADER="Hqg8EZdZZdXr5so55b9zpTUz1g68haMx44sgjqNLP1cK"
-```
-Start the proxy:
-```sh
-$ python3 -m proxy --hostname 127.0.0.1 --port 9090 --enable-web-server --plugins proxy.plugin.SolanaProxyPlugin --num-workers=1
-```
+![](img/transfer-spl-2.png)
 
-## Prepare integration tests suite
+</div>
 
-Clone the project `https://github.com/neonlabsorg/uniswap-v2-core`. Build the tests (ignoring messages like "gyp ERR!"):
-```sh
-$ yarn install
-```
+On the Neon Pass screen, click `Select a token`. In the list that appears, select the desired token symbol and specify the quantity to be sent (in our example, it is 5 USDT).
 
-## Run the tests
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
-Now everything should be ready to run the integration tests of **Uniswap V2**:
-```sh
-$ yarn test
-```
-Individual test suites can be run with following command (replace the example test suite name with needed):
-```sh
-$ node node_modules/mocha/bin/mocha --grep "^UniswapV2Pair"
-```
+![](img/transfer-spl-3.png)
 
-Results of the first test suite:  
-<p align="center">  
+</div>
 
-![](img/neonswap-tests-1.png)</p>
+Click `Next` to continue the token transfer procedure and proceed to the Target stage.
 
-Results of the second test suite:  
-<p align="center">  
+### The Target stage
 
-![](img/neonswap-tests-2.png)</p>
+The `Target` windows will appear on the Neon Pass screen. Click `Select Wallet` to connect your Phantom wallet to Neon Pass.
 
-The absence of error messages indicates the successful completion of integration tests.
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+
+![](img/transfer-spl-4.png)
+
+</div>
+
+The Phantom window should pop up on the screen. Follow the login procedure to your wallet and make sure it is connected to Devnet. Also make sure you have non-zero SOL balance in your account to pay fee (there are 10 SOL in our example).
+
+Upon successful connection of the Phantom wallet to Neon Pass and access to your account balance, the inscription `Select Wallet` will change to the public key of your account in Solana. This means that a user authorizes Neon Pass to use this key to sign transactions. Phantom stores sets of account keys, but does not store any balances. To obtain balances, Phantom will refer to the Solana blockchain.
+
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+
+![](img/transfer-spl-5.png)
+
+</div>
+
+Click `Next` to continue the token transfer procedure and proceed to the Confirmation stage.
+
+### The Confirmation stage
+
+Read the details of the upcoming transfer of tokens and click `Confirm`.
+
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+
+![](img/transfer-spl-6.png)
+
+</div>
+
+Metamask window will pop up on the Neon Pass screen with the amount of fee charged for using gas in Neon EVM. The fee is paid in NEON tokens. If you agree with these terms, click `Confirm`. The transaction will be signed automatically with the public key of your Neon EVM account.
+
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+
+![](img/transfer-spl-7.png)
+
+</div>
+
+You should also approve the transaction in the Phantom window, which will display the amount transferred and fee charged in SOL tokens. The transaction will be signed automatically with the public key of your Solana account.
+
+<div class='neon-img-width-300' style={{textAlign: 'center'}}>
+
+![](img/transfer-spl-8.png)
+
+</div>
+
+You should receive a notification that the token transfer was successful. Open the `View on Solana Explorer` page to see the results of transferring funds using Neon Pass.
+
+<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+
+![](img/transfer-spl-9.png)
+
+</div>
+
+The `Token Balance Change` tab shows the change in balances upon completion of the procedure.
+
+<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+
+![](img/transfer-spl-10.png)
+
+</div>
+
+## Conclusion
+
+We examined the use of Neon Pass in Devnet using the example of transferring USDT tokens from Neon EVM to Solana. The procedure for reverse transferring tokens from Solana to Neon EVM using Neon Pass is not much different from the one given, and therefore we do not consider it here. The main difference will be only in the order of connecting wallets to Neon Pass.
