@@ -1,4 +1,6 @@
-# BPF trace
+---
+title: BPF trace
+---
 
 *During the runtime BPF interpreter can be configured to log a trace message for each BPF instruction executed. This can be very helpful for things like pin-pointing the runtime context leading up to a memory access violation.*
 

@@ -1,4 +1,6 @@
-# Testing contracts
+---
+title: Testing Contracts
+---
 
 *This guide describes how to build and configure the Neon EVM to run integration tests on it.*  
 
@@ -8,7 +10,7 @@
 
 It is assumed:
 
-* You are already familiar with the document [Local Solana Cluster: Installation, Setup and Tests](https://docs.neonlabs.org/docs/solana_cluster/cluster_installation)
+* You are already familiar with the document [Local Solana Cluster: Installation, Setup and Tests](developing/dev_environment/solana_cluster/cluster_installation.md)
 * Integration tests are performed on *NodeJS* (*v12* or higher) which should be installed in the system
 * The local development *Solana* cluster should be up and active
 
@@ -64,11 +66,11 @@ $ node node_modules/mocha/bin/mocha --grep "^UniswapV2Pair"
 Results of the first test suite:  
 <p align="center">  
 
-![](../neonswap/img/neonswap-tests-1.png)</p>
+![](img/neonswap-tests-1.png)</p>
 
 Results of the second test suite:  
 <p align="center">  
 
-![](../neonswap/img/neonswap-tests-2.png)</p>
+![](img/neonswap-tests-2.png)</p>
 
 The absence of error messages indicates the successful completion of integration tests.

@@ -1,4 +1,6 @@
-# How can I use Neon?
+---
+title: How can I use Neon?
+---
 
   * [How do I start using dApps deployed on Neon EVM?](#how-do-i-start-using-dapps-deployed-on-neon-evm)
   * [What tools does a Neon EVM user need to start using the Neon EVM?](#what-tools-does-a-neon-evm-user-need-to-start-using-the-neon-evm)
@@ -9,12 +11,12 @@
 
 ### How do I start using dApps deployed on Neon EVM?
 
-To start using a dApp deployed on Neon EVM as a user, you should have an account within 
+To start using a dApp deployed on Neon EVM as a user, you should have an account within
 with a balance in NEON.
 
 ### What tools does a Neon EVM user need to start using the Neon EVM?
 
-As a user, all you need is a MetaMask wallet pointed to the Neon network. For a description of how to set 
+As a user, all you need is a MetaMask wallet pointed to the Neon network. For a description of how to set
 up this configuration, check out this [quick tutorial](https://www.youtube.com/watch?v=ry2yGhWmGRw).
 
 ### What tools does a Neon EVM operator need to run the Neon EVM?
@@ -24,7 +26,7 @@ A Neon EVM operator needs the following:
   1. The Neon Web3 Proxy. A dedicated RPC Solana node for Operators is highly desirable.
   2. A Solana account (wallet) funded with SOL tokens.
 
-See details [here](https://docs.neon-labs.org/docs/proxy/operator_guide). 
+See details [here](operating/operator_guide.md).
 
 ### How do Neon EVM users pay for using dApps deployed on Neon EVM?
 

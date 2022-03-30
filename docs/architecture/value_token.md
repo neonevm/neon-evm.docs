@@ -1,4 +1,6 @@
-# Transaction Value token
+---
+title: Transaction Value token
+---
 
 > This section contains introductory information about the *Transaction Value token* (hereinafter *Value token*), which is analogous to the ETH token in Neon EVM solutions.  
 

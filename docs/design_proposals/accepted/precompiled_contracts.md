@@ -1,11 +1,13 @@
-# Precompiled Contracts that can not be used in Solana
+---
+title: Precompiled Contracts that can not be used in Solana
+---
 
 ### Problem
 Contracts written in the Solidity language cannot work in Solana if they contain calls to the following precompiled contracts:
-  * *[bigModExp](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-198.md)* — Used for efficient [RSA](https://doc.neonlabs.org/docs/glossary#rsa) verification inside of EVM, as well as other forms of number theory-based cryptography.
+  * *[bigModExp](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-198.md)* — Used for efficient [RSA](about/terminology.md#rsa) verification inside of EVM, as well as other forms of number theory-based cryptography.
   * *[bn256Add](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-196.md)* — Performs addition on the elliptic curve operations.
   * *[bn256ScalarMult](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-196.md)* — Performs scalar multiplication on the elliptic curve operations.
-  * *[bn256Pairing](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-197.md)* — Elliptic curve pairing operations to perform [zkSNARKs](https://doc.neonlabs.org/docs/glossary#zk-snark) verification within the block gas limit.
+  * *[bn256Pairing](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-197.md)* — Elliptic curve pairing operations to perform [zkSNARKs](about/terminology.md#zk-snark) verification within the block gas limit.
 
 Neon EVM requires the implementation of system calls in Solana for these contracts.
 

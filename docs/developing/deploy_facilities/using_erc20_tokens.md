@@ -1,4 +1,6 @@
-# ERC-20 SPL-Wrapper
+---
+title: Interacting with SPL-tokens
+---
 
 The ERC-20 SPL-Wrapper contract provides an access to native Solana tokens, registered in the SPL-token contract, through the ERC-20 interface.
 
@@ -17,7 +19,7 @@ interface IERC20 {
     function decimals() external view returns (uint8);
     function totalSupply() external view returns (uint256);
     function balanceOf(address who) external view returns (uint256);
-    function allowance(address owner, address spender) external view returns (uint256);
+    function allowance(address ow ERC-20 SPL-Wrapperer, address spender) external view returns (uint256);
     function transfer(address to, uint256 value) external returns (bool);
     function approve(address spender, uint256 value) external returns (bool);
     function transferFrom(address from, address to, uint256 value) external returns (bool);

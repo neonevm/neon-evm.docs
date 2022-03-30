@@ -1,4 +1,6 @@
-# Terminology
+---
+title: Terminology
+---
 
 ### Application Binary Interface (ABI)
 A JSON-based description on how to convert user actions between their JSON and binary representations. The ABI may also describe how to convert the database state to/from JSON. Once you have described your contract via an ABI this allows developers and users to interact with your contract seamlessly via JSON.  

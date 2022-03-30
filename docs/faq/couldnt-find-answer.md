@@ -1,4 +1,6 @@
-# I couldn't find an answer to my issue
+---
+title: I couldn't find an answer to my issue
+---
 
 I have a question about Neon EVM that is not answered in the FAQ. What do I do?
 

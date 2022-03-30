@@ -42,7 +42,7 @@ module.exports = {
           position: 'left',
         },
         {
-          to: 'docs/architecture/web3',
+          to: 'docs/architecture/core_aspects/web3',
           label: 'Manuals',
           position: 'left',
         },
@@ -61,7 +61,7 @@ module.exports = {
           items: [
             {
               label: 'Introduction',
-              to: '/docs/intro',
+              to: '/docs/about/introduction',
             },
           ],
         },

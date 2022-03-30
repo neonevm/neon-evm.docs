@@ -1,6 +1,8 @@
-# Deploying and Debugging smart contracts using the Remix
+---
+title: Using the Remix
+---
 
-*This tutorial will show you step by step how to use [Remix](https://doc.neonlabs.org/docs/glossary#remix) and [Metamask](https://doc.neonlabs.org/docs/glossary#metamask) to create and deploy a simple smart contract on Solana. Although the instructions use Solana's [Testnet](https://docs.solana.com/clusters#testnet), they may also be applicable to Solana's [Devnet](https://docs.solana.com/clusters#devnet) or Solana's [Mainnet Beta](https://docs.solana.com/clusters#mainnet-beta).*
+*This tutorial will show you step by step how to use [Remix](about/terminology.md#remix) and [Metamask](about/terminology.md#metamask) to create and deploy a simple smart contract on Solana. Although the instructions use Solana's [Testnet](https://docs.solana.com/clusters#testnet), they may also be applicable to Solana's [Devnet](https://docs.solana.com/clusters#devnet) or Solana's [Mainnet Beta](https://docs.solana.com/clusters#mainnet-beta).*
 
 ## Requirements
 Before you start, make sure of the following:
@@ -85,7 +87,7 @@ The MetaMask window should appear. It should display a list of available account
 Fig. 6 — Selecting an account to interact with Remix
 
 </div>
- 
+
 Click `Connect` to connect to this account (Fig. 7).
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>

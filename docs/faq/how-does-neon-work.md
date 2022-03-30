@@ -1,4 +1,6 @@
-# How does Neon work?
+---
+title: How does Neon work?
+---
 
   * [How does Neon EVM interact with Solana?](#how-does-neon-evm-interact-with-solana)
   * [How does the Neon EVM contract work?](#how-does-the-neon-evm-contract-work)
@@ -25,18 +27,18 @@
 
 ### How does Neon EVM interact with Solana?
 
-The alpha version of Neon EVM has an interface that can interact with [SPL token](https://docs.neon-labs.org/docs/glossary#spl-token) accounts. 
+The alpha version of Neon EVM has an interface that can interact with [SPL token](about/terminology.md#spl-token) accounts.
 The beta version of Neon EVM will have interface that can read data from Solana accounts and will facilitate the integration of Neon EVM contracts with Oracles on Solana.
 In upcoming versions, Neon Labs has plans to implement an interface for writing data to Solana accounts, which will allow the integration of Neon EVM contracts with Solana programs.
 
 Neon EVM works as a smart contract on the Solana blockchain. The contract can interact with and call other
-smart contracts on Solana—for example, [SPL tokens](https://docs.neon-labs.org/docs/glossary#spl-token). Neon EVM is able to access data stored on Solana
+smart contracts on Solana—for example, [SPL tokens](about/terminology.md#spl-token). Neon EVM is able to access data stored on Solana
 accounts. Furthermore, every Ethereum-like account within Neon EVM is stored in a corresponding Solana
 account.
 
 ### How does the Neon EVM contract work?
 
-Neon EVM is a smart contract on Solana acting as the Ethereum Virtual Machine. It is compiled into [Berkeley Packet Filter](https://docs.neon-labs.org/docs/glossary#berkeley-packet-filter-bpf) bytecode, a format that can be executed on Solana.This allows Neon EVM to receive Solana transactions with wrapped Ethereum-like transactions and process them on Solana according to Ethereum rules.
+Neon EVM is a smart contract on Solana acting as the Ethereum Virtual Machine. It is compiled into [Berkeley Packet Filter](about/terminology.md#berkeley-packet-filter-bpf) bytecode, a format that can be executed on Solana.This allows Neon EVM to receive Solana transactions with wrapped Ethereum-like transactions and process them on Solana according to Ethereum rules.
 
 ### How does Neon EVM enable the parallel execution of transactions?
 
@@ -73,7 +75,7 @@ No, this is not possible in the alpha version of Neon EVM. We are working on an 
 ### How are Neon EVM gas fees calculated?
 
 Neon EVM gas fees include three main components:
-  1. The cost of executing a Solana transaction, which depends on the number of signatures specified in the 
+  1. The cost of executing a Solana transaction, which depends on the number of signatures specified in the
 transaction.
   2. A fee paid to the Neon EVM governance body for using Neon EVM.
   3. A fee paid to the Neon EVM operator that executes the transaction.
@@ -98,21 +100,21 @@ Therefore, the Neon EVM program saves the EVM state to the Solana storage, and w
 
 ### What does it mean to "send a Solana transaction directly to a Solana node without Neon Web3 Proxy"?
 
-It means that a Neon user makes Solana transactions needed to execute their Ethereum-like 
+It means that a Neon user makes Solana transactions needed to execute their Ethereum-like
 transactions on their own. In this use case, the Neon operator is excluded from the process.
 
 All fees tied to the Solana transactions for this use case must be paid for directly by the Neon user in SOL.
 
 ### How can Neon transactions be performed without the Neon Web3 Proxy?
 
-The Solana transaction needs to be built on the client side (web/mobile) with a Neon transaction packed 
+The Solana transaction needs to be built on the client side (web/mobile) with a Neon transaction packed
 within it. The Solana transaction can then be sent directly to a Solana node without the Neon Web3 Proxy.
 
-When using this method, it’s important to understand that the sender (Neon user) is responsible for the 
+When using this method, it’s important to understand that the sender (Neon user) is responsible for the
 following items:
 
-1. In cases where the Neon transaction is too large, it has to be executed [iteratively](https://docs.neon-labs.org/docs/architecture/value_token#token-circulation).
-2. A list of all Neon accounts and contracts corresponding to the Neon transaction needs to be determined 
+1. In cases where the Neon transaction is too large, it has to be executed [iteratively](architecture/value_token.md#token-circulation).
+2. A list of all Neon accounts and contracts corresponding to the Neon transaction needs to be determined
 on the client side.
 
 
@@ -130,25 +132,25 @@ The Ethereum-like accounts are saved in Solana storage by Neon EVM (Solana is ag
 
 ### Is arbitrary data stored on a remote host and simply executed on Solana?
 
-Neon EVM stores all data in Solana state. In terms of execution, the Neon EVM smart contract on Solana 
+Neon EVM stores all data in Solana state. In terms of execution, the Neon EVM smart contract on Solana
 handles and processes arbitrary data.
 
 ### Does Neon EVM add complex virtualization requiring Solana validators to cooperatively execute Neon transactions across multiple blocks?
 
-The Neon EVM Web3 Proxy handles all the transaction structuring and conversion work automatically. 
-There is no need for Solana validators to treat transactions from Neon EVM any differently. Anyone, 
+The Neon EVM Web3 Proxy handles all the transaction structuring and conversion work automatically.
+There is no need for Solana validators to treat transactions from Neon EVM any differently. Anyone,
 including Neon EVM clients or users, can launch and run the Neon Web3 Proxy.
 
 ### How does the transfer of funds from Ethereum to Neon EVM occur?
 
 This transfer is then facilitated by the Wormhole Bridge.
 
-When ERC-20 tokens on layer 1 (L1) are sent across the Wormhole Bridge, SPL tokens representing the 
+When ERC-20 tokens on layer 1 (L1) are sent across the Wormhole Bridge, SPL tokens representing the
 ERC-20 tokens are generated by an SPL token contract on Solana.
 
-To enable the interaction between SPL tokens and the Neon EVM interface (along with smart contracts on 
-Neon EVM), the original ERC-20 tokens are "wrapped" into SPL tokens. Once the ERC-20 tokens are 
-wrapped, they're able to operate on the Solana network. This "wrapper" is also used to transfer SOL/SPL 
+To enable the interaction between SPL tokens and the Neon EVM interface (along with smart contracts on
+Neon EVM), the original ERC-20 tokens are "wrapped" into SPL tokens. Once the ERC-20 tokens are
+wrapped, they're able to operate on the Solana network. This "wrapper" is also used to transfer SOL/SPL
 tokens to Ethereum wallets such as MetaMask.
 
 After these two steps, the funds are considered to be transferred from Ethereum to a Neon user's wallet.

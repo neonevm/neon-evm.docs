@@ -1,4 +1,6 @@
-# Neon and Ethereum Gas Calculators give different Results
+---
+title: Neon and Ethereum Gas Calculators give different Results
+---
 
 ### Problem
 In Neon EVM, a calculator is implemented to account the gas consumption.

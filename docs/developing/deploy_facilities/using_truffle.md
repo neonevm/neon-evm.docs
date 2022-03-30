@@ -1,4 +1,6 @@
-# Deploying and Debugging smart contract using the Truffle
+---
+title: Using the Truffle
+---
 
 *This page outlines a methodology for deploying and testing contracts in Neon EVM using the Truffle tool. This technique can be useful for personnel involved in the development and maintenance of Neon EVM.*
 
