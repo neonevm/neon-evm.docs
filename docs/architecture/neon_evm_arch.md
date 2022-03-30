@@ -47,11 +47,13 @@ The proxy contains an EVM emulator that pre-tests the execution of the transacti
 
 A proxy converts N-trx into transactions under Solana rules. N-trx is signed by a user, while S-trxes are signed by an operator. The Neon transaction text is loaded from the received S-trexes into a separate account that is created in Solana. Neon EVM receives a command to execute the transaction located at the address of this account.  
 
+More details on how the proxy converts a N-trx to multiple S-trxes can be found [here](https://neonlabsorg.medium.com/neon-web3-proxy-facilitating-seamless-transactions-on-neon-evm-b33c2041aa08).
+
 Below is a list of the main Neon Web3 Proxy features that are implemented in the Neon EVM Testnet:
   * Receiving requests over Web3 API protocol
   * Shaping responses using Web3 API protocol
   * Packaging a Neon transaction into a Solana transaction. The Solana transaction contains the following information:
-    * The Neon EVM operator account that the amount in SOL tokens should be withdrawn from for execution
+    * The Neon EVM operator account from whom the given amount in SOL tokens should be withdrawn for the execution of the transaction
     * The Neon EVM operator account where a payment is sent for the job done in tokens specified by the user
     * The Neon EVM account to deposit funds to be spent for iterative execution of a transaction
     * A list of accounts that are participating in the execution of Neon transactions (formed according to Solana rules)

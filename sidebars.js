@@ -21,7 +21,6 @@ module.exports = {
     }, {
       type: 'category',
       label: 'Explorers',
-//      link: { type: 'doc', id: 'explorers' },
       items: [ { type: 'link', label: 'NeonScan', href: "https://neonscan.org/" },
                { type: 'link', label: 'Indexing Dashboard', href: "http://neonqltest.aleph.cloud:8004/" } ]
     }, {

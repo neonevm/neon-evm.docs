@@ -21,7 +21,7 @@ Go to the MetaMask [download page](https://metamask.io/download.html). From ther
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](img/metamask-1.png)
+![](./img/metamask-1.png)
 
 Fig. 1 — Loading MetaMask
 
@@ -32,7 +32,7 @@ MetaMask is essentially a plugin in the form of an extension to a browser. There
 
 <div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
-![](img/metamask-2.png)
+![](./img/metamask-2.png)
 
 Fig. 2
 
@@ -65,7 +65,7 @@ In the upper-right corner, click the red apple view element. Select settings fro
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](img/metamask-3.png)
+![](./img/metamask-3.png)
 
 Fig. 3 — Select "Settings" from the dropdown menu
 

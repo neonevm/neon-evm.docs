@@ -46,8 +46,8 @@ To find a solution that combined the best of both Ethereum and Solana. This solu
 
 ## The Proposed Solution
 
-To achieve the goal, the following solution was proposed and implemented by the NeonLabs development team:
-  * EVM was integrated in Solana and named Neon EVM: an emulator implemented using Rust.
+To achieve our goal, the following solution was proposed and implemented by the NeonLabs development team:
+  * EVM was integrated with Solana and named Neon EVM (an emulator implemented using Rust).
   * Neon EVM operates inside Solana providing parallel transaction processing and a low transaction fee.
   * The Neon Web3 Proxy was created to mediate interactions between the Ethereum user (account) and Neon EVM. The main function of the proxy is to provide an API for external clients.
 
