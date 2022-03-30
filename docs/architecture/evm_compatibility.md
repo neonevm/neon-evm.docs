@@ -1,4 +1,6 @@
-# Ethereum JSON-RPC compatibility
+---
+title: Ethereum JSON-RPC compatibility
+---
 
 The following tables present the full list of JSON-RPC methods each of them is in one of the states: `done`, `in progress`, `to do`
 
