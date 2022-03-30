@@ -11,7 +11,7 @@ const FeatureList = [
   {
     title: 'Introduction',
     icon: faNewspaper,
-    url: '/docs/intro',
+    url: '/docs/about/introduction',
     description: (
       <>
         Learn more about Neon and how it works
