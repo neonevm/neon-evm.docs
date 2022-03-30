@@ -53,13 +53,13 @@ module.exports = {
                    'developing/deploy_facilities/adding_new_tokens',
                  ]
         },
-        'developing/contract_testing/neonswap_tests',
+//        'developing/contract_testing/neonswap_tests',
         {
           type: 'category',
           label: 'Using utilities',
           items: [
-            { type: 'link', label: 'NeonScan', href: "https://neonscan.org/" },
-            { type: 'doc', label: 'NeonPass', id: "token_transferring/neonpass_usage" },
+            { type: 'link', label: 'NeonScan', href: "https://neonscan.'org/" },
+            'developing/utilities/neonpass',
             'developing/utilities/neonswap',
           ]
         }
@@ -71,11 +71,13 @@ module.exports = {
         'operating/operator_requirements',
         'operating/operator_guide',
       ]
-    }, {
-      type: 'category',
-      label: 'Contributing',
-      items: [ 'contributing/maintain_docs','contributing/bpf_trace' ]
-    }, {
+    },
+//    {
+//      type: 'category',
+//      label: 'Contributing',
+//      items: [ 'contributing/maintain_docs','contributing/bpf_trace' ]
+//    },
+    {
       type: 'category',
       label: 'Governance',
       items: [
@@ -84,7 +86,7 @@ module.exports = {
       ]
     }, {
       type: 'category',
-      label: 'Clusters',
+      label: 'Environment',
       items: [
         'clusters/solana_cluster',
         'clusters/neon_proxy_rpc_endpoints'
@@ -93,8 +95,8 @@ module.exports = {
       type: 'category',
       label: 'Architecture',
       items: [
-        'architecture/eth_sol_solution',
         'architecture/neon_evm_arch',
+        'architecture/eth_sol_solution',
         { type: 'doc', label: 'EVM compatibility', id: 'architecture/evm_compatibility' },
         {
           type: 'category',
@@ -106,29 +108,20 @@ module.exports = {
                    'architecture/core_aspects/proof-of-work',
                    'architecture/core_aspects/transaction',
                    'architecture/core_aspects/web3' ]
-        }
+        },
+        {
+              type: 'category',
+              label: 'Architectural Limitations',
+              items: [
+    					'design_proposals/accepted/restriction_on_iterative_trx',
+    					'design_proposals/accepted/erc721_tokens',
+    					'design_proposals/accepted/precompiled_contracts',
+    					'design_proposals/accepted/gas_calculator',
+    					'design_proposals/accepted/unsupported_functions',
+    					'design_proposals/accepted/storage_size_for_account'
+    				]
+            }
       ]
-    }, {
-      type: 'category',
-      label: 'Design Proposals',
-      items: [
-		{
-          type: 'category',
-          label: 'Accepted',
-          items: [
-          'design_proposals/accepted/accepted_proposals',
-					'design_proposals/accepted/restriction_on_iterative_trx',
-					'design_proposals/accepted/erc721_tokens',
-					'design_proposals/accepted/precompiled_contracts',
-					'design_proposals/accepted/gas_calculator',
-					'design_proposals/accepted/unsupported_functions',
-					'design_proposals/accepted/storage_size_for_account'
-				]
-        } , {
-          type: 'category',
-          label: 'Implemented',
-          items: [ 'design_proposals/implemented_proposals' ]
-        }, ]
     },
     { type: 'category', label: 'FAQ', items: [
       'faq/what-is-neon',

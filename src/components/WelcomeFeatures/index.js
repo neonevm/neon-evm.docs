@@ -9,21 +9,21 @@ import * as icons from '@fortawesome/free-regular-svg-icons'
 
 const FeatureList = [
   {
-    title: 'Start Building',
+    title: 'Start Deploying dApps',
     icon: icons.faCompass,
     url: '/docs/developing/getting_started',
     description: (
       <>
-        Start building on Neon
+
       </>
     ),
   }, {
-    title: 'Run as a Proxy Operator',
+    title: 'Run a Proxy Server',
     icon:  icons.faNewspaper,
     url: 'docs/operating/operator_guide',
     description: (
       <>
-        This guide is for people who want to register with Neon EVM as a proxy operator
+
       </>
     ),
   }, {
@@ -32,7 +32,7 @@ const FeatureList = [
     url: 'docs/wallet/metamask_setup',
     description: (
       <>
-        A crypto wallet & gateway to blockchain apps
+
       </>
     ),
   }, {
@@ -41,7 +41,7 @@ const FeatureList = [
     url: 'docs/token_transferring/neonpass_usage',
     description: (
       <>
-        Transfer ERC-20 tokens between Solana and Neon EVM using Neon Pass
+
       </>
     ),
   }, {
@@ -50,7 +50,7 @@ const FeatureList = [
     url: 'docs/architecture/neon_evm_arch',
     description: (
       <>
-        Architectural solutions built in Neon EVM for fast transaction processing
+
       </>
     ),
   }, {
@@ -59,7 +59,7 @@ const FeatureList = [
     url: 'docs/faq/what-is-neon',
     description: (
       <>
-       What is Neon? What is the Neon Web3 Proxy? What are the roles ...
+
       </>
     ),
   }
@@ -84,7 +84,7 @@ function Feature({title, icon, url, description}) {
 }
 
 export default function WelcomeFeatures() {
-  
+
  return (
    <>
    <Head><title>Neon Docs</title></Head>

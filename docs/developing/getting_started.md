@@ -12,6 +12,11 @@ Depending on your purposes, there are several ways how to do it:
 [🔘 Connecting to the Neon Proxy](developing/dev_environment/choosing_proxy.md) — Describes how to Connect to the Solana cluster via local or remote proxy server..  
 [🔘 Setting up local Solana Cluster](developing/dev_environment/choosing_proxy.md) — Describes how to install, configure and test the local Solana cluster with Neon EVM on-board.  
 
+## Deploying dApps
+[🔘 Using Remix](developing/deploy_facilities/using_remix.md) — Example of deploying smart contract using Remix.  
+[🔘 Using Truffle](developing/deploy_facilities/using_truffle.md) — Example of deploying smart contract using Truffle.  
+[🔘 Using Hardhat](developing/deploy_facilities/using_hardhat.md) — Example of deploying smart contract using Hardhat.  
+
 ## Neon EVM Architecture
 [🔘 Ethereum and Solana capabilities in a single solution](architecture/eth_sol_solution.md) — Describes a unique solution that allows Ethereum users to use the key features of Solana and vice versa.  
 [🔘 Overview of Neon EVM Architecture](architecture/neon_evm_arch.md) — Describes the architectural solutions built into Neon EVM that enable fast transaction processing for Ethereum users.  

@@ -1,5 +1,5 @@
 ---
-title: NeonSwap
+title: Neon Swap
 ---
 
 ## Goal
@@ -12,7 +12,7 @@ To swap an ERC-20 token with another token of the same standard using the Neon S
     * What is the [Solana network](https://docs.solana.com/clusters).
     * What is the [Metamask](about/terminology.md#metamask).
   * The [Metamask](about/terminology.md#metamask) wallet must be installed on your device and can be accessed from the browser you are using.
-  * Learn the guide [How to Connect Metamask to Solana's Network](https://docs.neon-labs.org/docs/software_manuals/how_to_guides/connect_metamask_to_solana).
+  * Learn the guide [How to Connect Metamask to Solana's Network](wallet/metamask_setup.md).
 
 ## Neon Swap overview
 
