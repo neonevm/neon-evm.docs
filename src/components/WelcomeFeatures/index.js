@@ -9,7 +9,7 @@ import * as icons from '@fortawesome/free-regular-svg-icons'
 
 const FeatureList = [
   {
-    title: 'Start building',
+    title: 'Start Building',
     icon: icons.faCompass,
     url: '/docs/developing/getting_started',
     description: (
