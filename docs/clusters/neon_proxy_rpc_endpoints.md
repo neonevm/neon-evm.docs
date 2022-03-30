@@ -75,7 +75,7 @@ title: Neon Proxy RPC Endpoints
             <td>HN4FeaSXB8t3FDW85hRw8mK1hYETJGeqhkkxJr6j2GiV</td>
         </tr>
         <tr>
-            <td>DSRV</td>
+            <td><a href="https://dsrvlabs.com">DSRV</a></td>
             <td>http://neon-devnet.allthatnode.com:9090/solana</td>
             <td>5kKd1iy6onhCkzDq6DBw6woHLas3fy6HX4Yz8t1VPc1r</td>
         </tr>
