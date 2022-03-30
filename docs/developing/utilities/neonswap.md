@@ -10,8 +10,8 @@ To swap an ERC-20 token with another token of the same standard using the Neon S
 ## Before you begin
   * Understand the following:
     * What is the [Solana network](https://docs.solana.com/clusters).
-    * What is the [Metamask](about/terminology/#metamask).
-  * The [Metamask](about/terminology/#metamask) wallet must be installed on your device and can be accessed from the browser you are using.
+    * What is the [Metamask](about/terminology.md#metamask).
+  * The [Metamask](about/terminology.md#metamask) wallet must be installed on your device and can be accessed from the browser you are using.
   * Learn the guide [How to Connect Metamask to Solana's Network](https://docs.neon-labs.org/docs/software_manuals/how_to_guides/connect_metamask_to_solana).
 
 ## Neon Swap overview
@@ -132,5 +132,5 @@ Click the cogwheel icon. The window `Transaction Settings` will pop-up on the sc
 Transaction settings:
   * `Slippage tolerance` — the allowable amount of price change. It means that the order is fulfilled at a price different from what you expected. If it exceeds the tolerance level selected, the transaction will not go through. If you are trading during high volatility, you may want to increase this value. Increasing the transaction speed can help you to reduce the chances of high [slippage](about/terminology.md#slippage).
   * `Transaction deadline` — allows the transaction to automatically cancel if it is taking too long to process.
-  * `Toggle Expert Mode` — disables the confirmation screen and removes [slippage](about/terminology/#slippage) limits. It is not encouraged to enable this mode unless you fully understand the risks.
+  * `Toggle Expert Mode` — disables the confirmation screen and removes [slippage](about/terminology.md#slippage) limits. It is not encouraged to enable this mode unless you fully understand the risks.
   * `Disable Multihops` — disables complex conversion paths. For example, if there is not enough liquidity in the "A->B" token pair, then the algorithm can involve other tokens to find the "A->C->B" intermediate route and make an exchange for you. This action requires more network fees, because several smart contracts are involved.

@@ -74,11 +74,11 @@ $ node node_modules/mocha/bin/mocha --grep "^UniswapV2Pair"
 Results of the first test suite:  
 <p align="center">  
 
-![](../neonswap/img/neonswap-tests-1.png)</p>
+![](img/neonswap-tests-1.png)</p>
 
 Results of the second test suite:  
 <p align="center">  
 
-![](../neonswap/img/neonswap-tests-2.png)</p>
+![](img/neonswap-tests-2.png)</p>
 
 The absence of error messages indicates the successful completion of integration tests.

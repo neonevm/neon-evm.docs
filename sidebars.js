@@ -94,21 +94,21 @@ module.exports = {
       label: 'Architecture',
       items: [
         'architecture/eth_sol_solution',
-				'architecture/neon_evm_arch',
-				'architecture/value_token',
-				{
-				  type: 'category',
-				  label: 'Core Aspects',
-				  items: [ 'architecture/core_aspects/account',
-							'architecture/core_aspects/block',
-							'architecture/core_aspects/gas',
-							'architecture/core_aspects/proof-of-stake',
-							'architecture/core_aspects/proof-of-work',
-							'architecture/core_aspects/transaction',
-							'architecture/core_aspects/web3',
-						]
-				}
-			]
+        'architecture/neon_evm_arch',
+		'architecture/value_token',
+        'architecture/evm_compatibility',
+        {
+          type: 'category',
+          label: 'Core Aspects',
+          items: [ 'architecture/core_aspects/account',
+                   'architecture/core_aspects/block',
+                   'architecture/core_aspects/gas',
+                   'architecture/core_aspects/proof-of-stake',
+                   'architecture/core_aspects/proof-of-work',
+                   'architecture/core_aspects/transaction',
+                   'architecture/core_aspects/web3' ]
+        }
+      ]
     }, {
       type: 'category',
       label: 'Design Proposals',
@@ -128,7 +128,7 @@ module.exports = {
         } , {
           type: 'category',
           label: 'Implemented',
-          items: [ 'design_proposals/implemented/implemented_proposals' ]
+          items: [ 'design_proposals/implemented_proposals' ]
         }, ]
     },
     { type: 'category', label: 'FAQ', items: [
