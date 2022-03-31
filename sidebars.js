@@ -14,7 +14,7 @@ module.exports = {
       type: 'category',
       label: 'About',
       items: [ 'about/introduction', 'about/terminology']
-	}, {
+    }, {
       type: 'category',
       label: 'Wallets',
       items: ['wallet/metamask_setup']
@@ -25,7 +25,7 @@ module.exports = {
                { type: 'link', label: 'Indexing Dashboard', href: "https://neon.aleph.cloud/" } ]
     }, {
       type: 'category',
-      label: 'Tokens Transferring',
+      label: 'Token Transferring',
       items: [ 'token_transferring/neonpass_overview',
                'token_transferring/neonpass_usage' ]
     }, {
@@ -50,7 +50,7 @@ module.exports = {
                    'developing/deploy_facilities/adding_new_tokens' ]
         }, {
           type: 'category',
-          label: 'Using utilities',
+          label: 'Using Utilities',
           items: [ { type: 'link', label: 'NeonScan', href: "https://neonscan.'org/" },
                    'developing/utilities/neonpass',
                    'developing/utilities/neonswap' ]
@@ -94,11 +94,11 @@ module.exports = {
               type: 'category',
               label: 'Architectural Limitations',
               items: [ 'design_proposals/accepted/restriction_on_iterative_trx',
-    				   'design_proposals/accepted/erc721_tokens',
-    				   'design_proposals/accepted/precompiled_contracts',
-    				   'design_proposals/accepted/gas_calculator',
-    				   'design_proposals/accepted/unsupported_functions',
-    				   'design_proposals/accepted/storage_size_for_account' ]
+                       'design_proposals/accepted/erc721_tokens',
+                       'design_proposals/accepted/precompiled_contracts',
+                       'design_proposals/accepted/gas_calculator',
+                       'design_proposals/accepted/unsupported_functions',
+                       'design_proposals/accepted/storage_size_for_account' ]
         } ]
     }, {
       type: 'category',

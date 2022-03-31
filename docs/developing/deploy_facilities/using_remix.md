@@ -1,20 +1,20 @@
 ---
-title: Using the Remix
+title: Using Remix
 ---
 
-*This tutorial will show you step by step how to use [Remix](about/terminology.md#remix) and [Metamask](about/terminology.md#metamask) to create and deploy a simple smart contract on Solana. Although the instructions use Solana's [Testnet](https://docs.solana.com/clusters#testnet), they may also be applicable to Solana's [Devnet](https://docs.solana.com/clusters#devnet) or Solana's [Mainnet Beta](https://docs.solana.com/clusters#mainnet-beta).*
+*This tutorial will show you step by step how to use [Remix](about/terminology.md#remix) and [MetaMask](about/terminology.md#metamask) to create and deploy a simple smart contract on Solana. Although the instructions use Solana's [Testnet](https://docs.solana.com/clusters#testnet), they may also be applicable to Solana's [Devnet](https://docs.solana.com/clusters#devnet) or Solana's [Mainnet Beta](https://docs.solana.com/clusters#mainnet-beta).*
 
 ## Requirements
 Before you start, make sure of the following:
   * MetaMask is installed on your device.  
   * You have provided online access to remix.ethereum.org to use the `Remix - Ethereum IDE` open source web application.
-  * MetaMask is configured for both proxy and Neon EVM (regardless of how proxy and Neon EVM run, MetaMask wallet must always be configured for them).
+  * MetaMask is configured for both proxy and Neon EVM. (Regardless of how proxy and Neon EVM run, MetaMask wallet must always be configured for them.)
 
 **The network configuration:**
   * [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
   * Solana works in test mode and the proxy interacts with it through Neon EVM.
 
-## Steps to complete
+## Steps to Complete
 
 ### Step 1. Set the Remix environment
 
@@ -29,10 +29,10 @@ Fig. 1 — Connecting to localhost
 
 </div>
 
-### Step 2. Create a simple smart contract at Remix
+### Step 2. Create a simple smart contract in Remix
 
-Click on the icon `Create New File` and type the file name in the field that appears below it. For example helloWorld.sol  
-For now, it is an empty file. To fill it with content, click on the created file name and type the text on the right side of the explorer (or copy your pre-prepared text there)(Fig. 2).  
+Click on the icon `Create New File` and type the file name in the field that appears below it. For example, helloWorld.sol  
+For now, it is an empty file. To fill it with content, click on the created file name and type the text on the right side of the explorer (or copy your pre-prepared text there) (Fig. 2).  
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
@@ -44,7 +44,7 @@ Fig. 2 — Loading the helloWorld smart contract
 
 ### Step 3. Compile a smart contract
 
-In the left side menu select the `Solidity compiler`. The `SOLIDITY COMPILER` menu will be active.  
+In the left side menu, select the `Solidity compiler`. The `SOLIDITY COMPILER` menu will be active.  
 Click on the `Compile helloWorld.sol` button to compile the loaded smart contract helloWorld (Fig. 3).  
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
@@ -62,7 +62,7 @@ You can also get detailed information about the compilation process by clicking 
 
 ![](img/remix-4.png)
 
-Fig. 4 — Compilation Details
+Fig. 4 — Compilation details
 
 </div>
 
@@ -78,7 +78,7 @@ Fig. 5 — Injected Web3 connects Remix with an active account in Metamask
 
 </div>
 
-The MetaMask window should appear. It should display a list of available accounts (in our case, only one account will be displayed). Choose this account and click `Next` (Fig. 6).  
+The MetaMask window should appear. It should display a list of available accounts. (In our case, only one account will be displayed.) Choose this account and click `Next` (Fig. 6).  
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
@@ -102,7 +102,7 @@ Fig. 7
 
 In the left side menu, select `Deploy & run transactions`. The `DEPLOY & RUN TRANSACTIONS` menu will become active.  
 
-In our case there is only one smart contract to deploy. Therefore, it is automatically selected from the dropdown and Remix will automatically generate a transaction.  
+In our case there is only one smart contract to deploy, therefore it is automatically selected from the dropdown and Remix will automatically generate a transaction.  
 
 The `Account` field will display the amount in the wallet account. This data is taken from MetaMask.  
 
@@ -156,7 +156,7 @@ Fig. 12 — Final view of the Remix panel
 
 </div>
 
-Congratulations! You can now call methods of the helloWorld smart contract deployed on the Solana network (Fig. 13 shows the result of your smart contract — the text string "Hello World!").  
+Congratulations! You can now call methods of the helloWorld smart contract deployed on the Solana network. (Fig. 13 shows the result of your smart contract — the text string "Hello World!".)  
 
 <div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
@@ -166,7 +166,7 @@ Fig. 13 — Calling the smart contract methods
 
 </div>
 
-----  
+----
 
 > **Useful links**  
 > https://ethereum.org/en/developers/tutorials/deploying-your-first-smart-contract/

@@ -1,5 +1,5 @@
 ---
-title: Running Neon Proxy Operator
+title: Running Neon EVM as a Proxy Operator
 ---
 
 *This guide is for people who want to register with Neon EVM as a proxy operator for processing transactions on Solana. It is assumed these people have previous experience compiling Solana-based blockchain nodes or have worked as blockchain validators.*
@@ -14,7 +14,7 @@ A proxy operator’s main task is to install software on a server to accept a tr
  * Configuring a proxy server to perform the following operations:
     * Receiving requests over Web3 API protocol.
     * Shaping responses using Web3 API protocol.
-    * Converting transactions to Solana format.
+    * Converting transactions to the Solana format.
  * Connecting a proxy server to a Solana cluster RPC endpoint.
  * Successfully executing transactions.
 
@@ -24,7 +24,7 @@ A proxy operator’s main task is to install software on a server to accept a tr
 
 After you have chosen the node (Neon EVM proxy) that meets the listed recommendations, you can start installing a proxy operator software on it.
 
-### Run a daemon
+### Run a Daemon
 
 Make sure that you have a daemon running. If you see something like:
 
@@ -42,21 +42,21 @@ $ sudo docker run --rm -ti --network=host -e POSTGRES_HOST=<localhost|postgres> 
 ```
 
 **The command line options:**
-  * `--rm` — delete a container when the command is completed.
-  * `-ti` — allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
-  * `--network host` — use host network.
-  * `-e POSTGRES_HOST=<localhost|postgres>` — specifies DB hosting; `localhost` is set by default and is recommended; the parameter can be skipped if you use PostgreSQL hosted locally.
-  * `-e POSTGRES_DB=<database>` — specifies the name of DB; `neon-db` is recommended.
-  * `-e POSTGRES_USER=<username>` — specifies a username of DB; `neon-proxy` is recommended.
-  * `-e POSTGRES_PASSWORD=<password>` — specifies a username's password; `neon-proxy-pass` is recommended.
-  * `--name=postgres` — specifies a version of PostgreSQL; `postgres:14.0` is recommended.
+  * `--rm` — Delete a container when the command is completed.
+  * `-ti` — Allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
+  * `--network host` — Use the host network.
+  * `-e POSTGRES_HOST=<localhost|postgres>` — Specifies DB hosting; `localhost` is set by default and is recommended; the parameter can be skipped if you use PostgreSQL hosted locally.
+  * `-e POSTGRES_DB=<database>` — Specifies the name of DB; `neon-db` is recommended.
+  * `-e POSTGRES_USER=<username>` — Specifies a username of DB; `neon-proxy` is recommended.
+  * `-e POSTGRES_PASSWORD=<password>` — Specifies a username's password; `neon-proxy-pass` is recommended.
+  * `--name=postgres` — Specifies a version of PostgreSQL; `postgres:14.0` is recommended.
 
 *Example:*
 ```bash
 $ sudo docker run --rm -ti --network=host -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass --name=postgres postgres:14.0
 ```
 
-### Start a proxy in a Docker container
+### Start a Proxy in a Docker Container
 
 Create and run a proxy container on the daemon.
 When starting Docker, you need to set the *CONFIG* environment variable, which can take one of the following values: *local*, *devnet*, *testnet*.
@@ -66,9 +66,9 @@ $ sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=<da
 ```
 
 **The command line options:**
-  * `-e CONFIG=<network>` — specifies a Solana network configuration; `CONFIG=devnet` is recommended.
-  * `-v <path-to-keypair-file/id.json>:/root/.config/solana/id.json` — specifies the path to the .JSON file where your keypair is stored and passes your private key to the container.
-  * `neonlabsorg/proxy:v0.5.1` — the specific proxy image.
+  * `-e CONFIG=<network>` — Specifies a Solana network configuration; `CONFIG=devnet` is recommended.
+  * `-v <path-to-keypair-file/id.json>:/root/.config/solana/id.json` — Specifies the path to the .JSON file where your keypair is stored and passes your private key to the container.
+  * `neonlabsorg/proxy:v0.5.1` — The specific proxy image.
 
 > The option `-v <path-to-keypair-file>` is only relevant for authorized operators. If you are not yet registered as an operator and are just about to become one, you do not need to specify this option.
 
@@ -98,7 +98,7 @@ testnet | `https://api.testnet.solana.com` | 15 (s) | 60 (slot) | localhost | 1
 local | `http://localhost:8899` | 0,9 (s) | 10 (slot) | localhost | 0
 
 #### SOLANA_URL
-Specifies a Solana RPC endpoint that a proxy is connecting to. If you specify `CONFIG=local` and `SOLANA_URL=<your node URL>`, then requests of a proxy will be sent to your node.
+Specifies a Solana RPC endpoint that a proxy is connecting to. If you specify `CONFIG=local` and `SOLANA_URL=<your node URL>`, then the requests of a proxy will be sent to your node.
 
 #### NEON_CLI_TIMEOUT
 In Neon EVM, a transaction is run for emulation before execution to determine the accounts that will be involved in it. The `NEON_CLI_TIMEOUT` variable specifies the time (in seconds) required for a transaction to be executed.
