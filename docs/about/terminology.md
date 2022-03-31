@@ -218,7 +218,7 @@ A contract containing a system register of tokens that are in the system along w
 ---  
 
 ### SPL token
-A token registered in *[SPL Token](#solana-program-library-token-spl-token)*.  
+A token registered in *[SPL Token](https://spl.solana.com/token)*.  
 
 ---  
 

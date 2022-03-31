@@ -11,7 +11,7 @@ title: Connecting to the Neon Proxy
 
 Depending on the tasks to be solved, as well as on the location of the proxy and [Solana](https://docs.solana.com/introduction), you can use one of 3 options for configuring the network:
   * [Option 1:](#option-1-interaction-with-the-solana-cluster-via-a-proxy-hosted-on-a-remote-virtual-server) The proxy is hosted on a remote virtual server; Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used.
-  * [Option 2:](#option-2-running-solana-testnet-via-a-proxy-hosted-locally) The proxy is hosted locally; Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used.
+  * [Option 2:](#option-2-running-solana-cluster-via-a-proxy-hosted-locally) The proxy is hosted locally; Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used.
   * [Option 3:](#option-3-running-solana-via-a-proxy-when-both-are-hosted-locally) Both the proxy and Solana are hosted locally (debug mode, which allows you to configure your node locally).
 
 [Testnet](https://docs.solana.com/clusters#testnet), like [Devnet](https://docs.solana.com/clusters#devnet), is an alternative cryptocurrency chain exclusively for developers. It allows developers to run their node in a test blockchain and experiment without losing real currency.  
@@ -128,7 +128,7 @@ $ sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neo
   * `~/.config/solana/id.json` — the path to your key pair.
   * `--name proxy` — specify the proxy name.
 
-If you is not registered as an operator, you can only use test public keys (the list of available public keys is given in the [table](https://docs.neon-labs.org/docs/proxy/url_table)). You do not need to specify the key via the -v flag, since it is already hard-coded in Devnet/Testnet containers. Use the following command:
+If you is not registered as an operator, you can only use test public keys (the list of available public keys is given in the [table](clusters/neon_proxy_rpc_endpoints.md)). You do not need to specify the key via the -v flag, since it is already hard-coded in Devnet/Testnet containers. Use the following command:
 
 ```bash
 sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass neonlabsorg/proxy:v0.5.1
