@@ -38,7 +38,7 @@ Fig. 2
 
 </div>
 
-When the MetaMask extension is installed, a fox's face (MetaMask’s logo) will appear in the upper left corner of the web browser window. This means that you have successfully installed MetaMask on your device and can start using.
+When the MetaMask extension is installed, a fox's face (MetaMask’s logo) will appear in the upper right corner of the web browser window. This means that you have successfully installed MetaMask on your device and can start using.
 
 ### Step 3
 Create a wallet if you don't already have one. MetaMask offers a choice of two options for creating an account:  
