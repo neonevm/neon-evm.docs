@@ -100,14 +100,3 @@ export default function WelcomeFeatures() {
    </>
  );
 }
-
-// export default function HomepageFeatures() {
-//   return (
-//     <section className={styles.features}>
-//       <div className="container">
-//         <div className="row">
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
