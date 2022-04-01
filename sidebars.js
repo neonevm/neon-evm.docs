@@ -38,7 +38,7 @@ module.exports = {
           label: 'Setting up environment',
           items: [ 'developing/dev_environment/choosing_proxy',
                    'developing/dev_environment/connect_to_solana_via_proxy',
-                   { type: 'doc', label: 'Local Neon EVM environment', id: 'developing/dev_environment/local_evironment/cluster_installation' } ]
+                   { type: 'doc', label: 'Local Neon EVM environment', id: 'developing/dev_environment/solana_cluster/cluster_installation' } ]
         }, {
           type: 'category',
           label: 'Deploying dApps',
