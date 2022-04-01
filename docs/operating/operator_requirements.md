@@ -7,7 +7,7 @@ title: Operator Requirements
 First, you must be registered in Solana, which involves creating an account with a balance for storing SOL tokens, and getting the public and private keys.
 There is no strict minimum amount of SOL required to run an operator on Neon EVM. However, you should take into account that you will need tokens to create accounts for new users, deploy contracts, and execute transactions.
 
-In addition to the balance for storing SOL tokens, an operator must also have the `NEON_TOKEN_MINT` balance for storing value tokens. These tokens are used to pay funds from users to an operator for the successful execution of transactions. Depending on the chosen configuration, specific values for `NEON_TOKEN_MINT` are indicated in the [table](#neon_token_mint) below.
+In addition to the balance for storing SOL tokens, an operator must also have the `NEON_TOKEN_MINT` balance for storing value tokens. These tokens are used to pay funds from users to an operator for the successful execution of transactions. Depending on the chosen configuration, specific values for `NEON_TOKEN_MINT` are indicated in the [table](operating/operator_guide.md#neon_token_mint).
 
 To create the `NEON_TOKEN_MINT` balance, you can use the following command:
 ```

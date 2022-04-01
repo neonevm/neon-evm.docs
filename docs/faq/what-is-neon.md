@@ -2,12 +2,12 @@
 title: What is Neon?
 ---
 
-  * [What is Neon?](#what-is-neon)
-  * [What is the Neon Web3 Proxy?](#what-is-the-neon-web3-proxy)
-  * [What are the main roles in Neon?](#what-are-the-main-roles-in-neon)
-  * [What is the ERC-20/SPL wrapper?](#what-is-the-erc-20spl-wrapper)
-  * [What about the NFT support (ERC-721 and ERC-1155)?](#what-about-the-nft-support-erc-721-and-erc-1155)
-  * [What is the ERC-20/SPL bridge?](#what-is-the-erc-20spl-bridge)
+* [What is Neon?](#what-is-neon)
+* [What is the Neon Web3 Proxy?](#what-is-the-neon-web3-proxy)
+* [What are the main roles in Neon?](#what-are-the-main-roles-in-neon)
+* [What is the ERC-20/SPL wrapper?](#what-is-the-erc-20spl-wrapper)
+* [What about the NFT support (ERC-721 and ERC-1155)?](#what-about-the-nft-support-erc-721-and-erc-1155)
+* [What is the ERC-20/SPL bridge?](#what-is-the-erc-20spl-bridge)
 
 ### What is Neon?
 
@@ -20,7 +20,7 @@ The Neon Web3 Proxy allows users to access Solana via the existing Ethereum app 
 ### What are the main roles in Neon?
 
 **Neon user**: Any account in Neon EVM with a non-zero balance in Neon tokens (later NEON/ETH/ERC-20).
-Neon users order Ethereum-like transactions that are executed via Neon EVM program on Solana.
+Neon users order Ethereum-like transactions that are executed via the Neon EVM program on Solana.
 
 **Neon client**: An application with EVM bytecode (Solidity, Vyper, etc.) loaded into Neon.
 The application generates a Neon transaction according to Ethereum rules and sends it to Neon EVM
@@ -42,4 +42,4 @@ NFTs (ERC-721 and ERC-1155) aren't supported right now but will be supported in 
 
 Say, for example, you have a dApp on Ethereum. This dApp has an ERC-20 contract with its own logic of token minting, and you want to deploy it on Neon EVM.
 
-The dApp tokens will be available to other Solidity contracts on Neon EVM, but they will not exists for Solana programs. The ERC-20/SPL bridge will allow you to transfer such tokens from an ERC-20 contract to SPL token accounts.
+The dApp tokens will be available to other Solidity contracts on Neon EVM, but they will not exist for Solana programs. The ERC-20/SPL bridge will allow you to transfer such tokens from an ERC-20 contract to SPL token accounts.

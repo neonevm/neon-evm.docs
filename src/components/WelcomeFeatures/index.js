@@ -4,41 +4,65 @@ import styles from './WelcomeFeatures.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
-import { faNewspaper, faCompass, faKeyboard, faPaperPlane } from '@fortawesome/free-regular-svg-icons'
+import * as icons from '@fortawesome/free-regular-svg-icons'
 
 
 const FeatureList = [
   {
-    title: 'Introduction',
-    icon: faNewspaper,
-    url: '/docs/about/introduction',
-    description: (
-      <>
-        Learn more about Neon and how it works
-      </>
-    ),
-  },
-  {
-    title: 'Getting Started',
-    icon: faCompass,
+    title: 'Start Deploying dApps',
+    icon: icons.faCompass,
     url: '/docs/developing/getting_started',
     description: (
       <>
-        Start building on Neon
+
       </>
     ),
-  },
-  {
-    title: 'FAQ',
-    icon: faPaperPlane,
-    url: '/docs/faq/neon-faq/',
+  }, {
+    title: 'Run a Proxy Server',
+    icon:  icons.faNewspaper,
+    url: 'docs/operating/operator_guide',
     description: (
       <>
-        "What is Neon?" and other answers to basic questions about the Neon EVM
+
       </>
     ),
-  },
+  }, {
+    title: 'Manage a Wallet',
+    icon:  icons.faChartBar,
+    url: 'docs/wallet/metamask_setup',
+    description: (
+      <>
 
+      </>
+    ),
+  }, {
+    title: 'Transfer SPL Tokens',
+    icon:  icons.faHandshake,
+    url: 'docs/token_transferring/neonpass_usage',
+    description: (
+      <>
+
+      </>
+    ),
+  }, {
+    title: 'Learn How Neon EVM Works',
+    icon:  icons.faObjectGroup,
+    url: 'docs/architecture/neon_evm_arch',
+    description: (
+      <>
+
+      </>
+    ),
+  }, {
+    title: 'FAQ',
+    icon:  icons.faCircleQuestion,
+    url: 'docs/faq/what-is-neon',
+    description: (
+      <>
+
+      </>
+    ),
+  }
 ];
 
 function Feature({title, icon, url, description}) {
@@ -60,7 +84,7 @@ function Feature({title, icon, url, description}) {
 }
 
 export default function WelcomeFeatures() {
-  
+
  return (
    <>
    <Head><title>Neon Docs</title></Head>
@@ -76,14 +100,3 @@ export default function WelcomeFeatures() {
    </>
  );
 }
-
-// export default function HomepageFeatures() {
-//   return (
-//     <section className={styles.features}>
-//       <div className="container">
-//         <div className="row">
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
