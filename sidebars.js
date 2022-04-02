@@ -51,7 +51,7 @@ module.exports = {
         }, {
           type: 'category',
           label: 'Using Utilities',
-          items: [ { type: 'link', label: 'NeonScan', href: "https://neonscan.'org/" },
+          items: [ { type: 'link', label: 'NeonScan', href: "https://neonscan.org/" },
                    'developing/utilities/neonpass',
                    'developing/utilities/neonswap' ]
         } ]
