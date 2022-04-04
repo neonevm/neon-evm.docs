@@ -4,19 +4,19 @@ title: Setting Up the Local Neon EVM Environment
 
 *This step-by-step guide describes how to install, configure, and test the local Solana cluster with Neon EVM onboard. It will help new developers create their own environment and run Ethereum programs wrapped into the Neon EVM.*
 
-The [Neon EVM](https://neon-labs.org/) is a solution that performs transaction execution outside layer 1. The development process can be run on any modern Linux or Mac system, though this document is based on a Ubuntu 20.04 experience.
+The [Neon EVM](https://neon-labs.org/) is a solution that performs transaction execution outside layer 1. The development process can be run on any modern Linux or Mac system, though this document is based on an Ubuntu 20.04 experience.
 
-All the services in the **`Neon EVM environment`** presented by the docker-compose configuration files can be interchangeably substituted with their experimental versions in order to develop and test each service independently. To resolve issues, the Neon engineer has to be able to replace any service with a customized one according to the current requirements. Feel free to change the following `docker-compose` configuration files based on your needs. Also you can bring them altogether in a single docker-compose file providing dependencies according to the following sequence.
+All the services in the **`Neon EVM environment`** presented by the docker-compose configuration files can be interchangeably substituted with their experimental versions in order to develop and test each service independently. To resolve issues, the Neon engineer has to be able to replace any service with a customized one according to the current requirements. You are welcome to change the following `docker-compose` configuration files based on your needs. Also, you can bring them altogether in a single docker-compose file, it is important to provide dependencies according to the following sequence.
 
 Before you start to build your local environment, make sure you have all the [prerequisites](#prerequisites).
 
 ## Prerequisites
 
-- **Docker** - for docker installation, please follow instructions at: https://docs.docker.com/engine/install/ubuntu/
-- **Docker Compose** - Docker Compose is required to start up containers at: https://docs.docker.com/compose/install/
-- **Solana Tool Suite** - for interaction with Solana, we need to install Solana CLI Tools: https://docs.solana.com/ru/cli/install-solana-cli-tools
-- A Chromium-based **browser** for [MetaMask](https://metamask.io/) and [Remix](https://remix.ethereum.org/)
-* **Node package manager** - [Node.js/npm](https://www.w3schools.com/nodejs/nodejs_npm.asp) to interact with he Neon EVM with [Web3](https://www.npmjs.com/package/web3) and [Eth](https://www.npmjs.com/package/web3-eth) modules.
+- **Docker** — for docker installation, please follow instructions at: https://docs.docker.com/engine/install/ubuntu/
+- **Docker Compose** — Docker Compose is required to start up containers at: https://docs.docker.com/compose/install/
+- **Solana Tool Suite** — for interaction with Solana, we need to install Solana CLI Tools: https://docs.solana.com/ru/cli/install-solana-cli-tools
+- A Chromium-based **browser** — for [MetaMask](https://metamask.io/) and [Remix](https://remix.ethereum.org/)
+* **Node package manager** — [Node.js/npm](https://www.w3schools.com/nodejs/nodejs_npm.asp) to interact with he Neon EVM with [Web3](https://www.npmjs.com/package/web3) and [Eth](https://www.npmjs.com/package/web3-eth) modules.
 
 ## Setting up the Neon Local Workspace Environment
 
@@ -374,7 +374,7 @@ Set up the "MetaMask" Chromium extension to connect to the proxy via Custom RPC 
 
 </div>
 
-Note: Once you create or import new account in MetaMask, some NEONs will be airdropped into it.
+Note: Once you create or import a new account in MetaMask, some NEONs will be airdropped into it.
 
 Open Remix (also in Chromium) and select `Injected Web3` environment. You can deploy EVM-wrapped smart contracts on Solana and input these instructions:  
 
