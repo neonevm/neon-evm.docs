@@ -2,7 +2,7 @@
 title: Neon Proxy RPC Endpoints
 ---
 
-*The lookup table containing URLs of all available proxies in Neon EVM.*
+*The lookup table containing the URLs of all available proxies in the Neon EVM.*
 
 <table>
     <tr>
@@ -29,7 +29,7 @@ title: Neon Proxy RPC Endpoints
         </tr>
     <tr>
         <th rowspan="19">Devnet (245022926)</th>
-        <td rowspan="12"><a href="https://neon-labs.org">Neon Labs</a></td> 
+        <td rowspan="12"><a href="https://neon-labs.org">Neon Labs</a></td>
         <td rowspan="12">https://proxy.devnet.neonlabs.org/solana</td>
         <td>Fg4uzL4QDfL6x56YFUcJBJSK3PqV4yXoFmXzZQkxn2DK</td>
     </tr>
@@ -109,7 +109,7 @@ title: Neon Proxy RPC Endpoints
 
 
 Semantic meaning of table columns:
-  * `Network (Chain ID)` — Solana network and its identifier; the network determines what the RPC URL proxy can be used.
+  * `Network (Chain ID)` — Solana network and its identifier; the network determines what RPC URL proxy can be used.
   * `Operator name` — operator name providing the proxy.
   * `RPC URL` — address for interacting with the required proxy.
-  * `Public key` — public key granting access to a network; this is either a public key of an authorized Neon EVM operator, or a developer key used for access only to Testnet or Devnet.
+  * `Public key` — public key granting access to a network; this is either a public key of an authorized Neon EVM operator, or a developer key used to access only the Testnet or Devnet.
