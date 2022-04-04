@@ -2,7 +2,7 @@
 title: Transaction Value Token
 ---
 
-> This section contains introductory information about the *Transaction Value token* (hereinafter *Value token*), which is analogous to the ETH token in Neon EVM solutions.  
+*This section contains introductory information about the *Transaction Value token* (hereinafter *Value token*), which is analogous to the ETH token in Neon EVM solutions.*  
 
 Using the original `ETH` token in Neon EVM can create additional difficulties when calculating payment of rewards to transaction participants. Therefore, the *Value token* has been introduced to circulate inside Neon EVM. This token is analogous to ETH, coming from the Ethereum network through one of the bridges, [Wormhole](https://solana.com/wormhole) or [Sollet](https://solana.com/ecosystem/sollet). Each of these bridges transfers funds (assets) from ETH-token to SPL-token and back.  
 

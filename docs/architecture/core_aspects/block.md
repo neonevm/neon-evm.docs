@@ -2,9 +2,9 @@
 title: Block
 ---
 
-Blocks are batches of transactions with a hash of the previous block in the chain. Hashes link blocks together (in a chain) because they are cryptographically derived from the block data. One change in any block in history will invalidate all the following blocks. This feature protects the blocks in a chain from tampering.  
+*Blocks are batches of transactions with a hash of the previous block in the chain. Hashes link blocks together (in a chain) because they are cryptographically derived from the block data. One change in any block in history will invalidate all the following blocks. This feature protects the blocks in a chain from tampering.*  
 
-To preserve the transaction history, blocks are strictly ordered (every new block created contains a reference to its parent block), and transactions within blocks are strictly ordered, too.
+*To preserve the transaction history, blocks are strictly ordered (every new block created contains a reference to its parent block), and transactions within blocks are strictly ordered, too.*
 
 ## What is in a block?
 
