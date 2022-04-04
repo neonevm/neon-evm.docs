@@ -4,15 +4,15 @@ title: Testing Contracts
 
 *This guide describes how to build and configure the Neon EVM to run integration tests on it.*  
 
-> We want to demonstrate to Ethereum users that the neonswap infrastructure deployed on our Neon EVM ensures a passage of the *Uniswap-V2* integration tests suite. This means Ethereum users can successfully run their applications on Neon EVM.
+> We want to demonstrate to Ethereum users that the NeonSwap infrastructure deployed on our Neon EVM ensures a passage of the *Uniswap-V2* integration test suite. This means Ethereum users can successfully run their applications on Neon EVM.
 
 ## Prerequisites
 
 It is assumed:
 
-* You are already familiar with the document [Local Solana Cluster: Installation, Setup and Tests](developing/dev_environment/solana_cluster/cluster_installation.md)
-* Integration tests are performed on *NodeJS* (*v12* or higher) which should be installed in the system
-* The local development *Solana* cluster should be up and active
+* You are already familiar with the document [Local Solana Cluster: Installation, Setup and Tests](developing/dev_environment/solana_cluster/cluster_installation.md).
+* Integration tests are performed on *NodeJS* (*v12* or higher), which should be installed in the system.
+* The local development *Solana* cluster should be up and active.
 
 ## Prepare solana-program-library
 
@@ -30,11 +30,11 @@ Directory `target/bpfel-unknown-unknown/release` should contain the resulting `e
 $ solana deploy evm_loader.so
 ```
 
-## Prepare the proxy
+## Prepare the Proxy
 
 Clone the project `https://github.com/neonlabsorg/proxy-model.py`.
 
-## Launch the proxy
+## Launch the Proxy
 
 Export the EVM Loader program id before starting the proxy (replace the example address with the actual):
 ```sh
@@ -45,14 +45,14 @@ Start the proxy:
 $ python3 -m proxy --hostname 127.0.0.1 --port 9090 --enable-web-server --plugins proxy.plugin.SolanaProxyPlugin --num-workers=1
 ```
 
-## Prepare integration tests suite
+## Prepare the Integration Tests Suite
 
 Clone the project `https://github.com/neonlabsorg/uniswap-v2-core`. Build the tests (ignoring messages like "gyp ERR!"):
 ```sh
 $ yarn install
 ```
 
-## Run the tests
+## Run the Tests
 
 Now everything should be ready to run the integration tests of **Uniswap V2**:
 ```sh

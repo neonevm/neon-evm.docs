@@ -1,19 +1,19 @@
 ---
-title: Ethereum JSON-RPC compatibility
+title: Ethereum JSON-RPC Compatibility
 ---
 
-The following tables present the full list of JSON-RPC methods each of them is in one of the states: `done`, `in progress`, `to do`
+The following tables present the full list of JSON-RPC methods. Each of them is in one of the states: `done`, `in progress`, `to do`.
 
 ---
 
-## JSON-RPC methods according to [Ethereum client API](https://ethereum.org/en/developers/docs/apis/json-rpc/) 
+## JSON-RPC Methods According to [Ethereum Client API](https://ethereum.org/en/developers/docs/apis/json-rpc/)
 
 
 | Num | Method                                                                      | Description                                                                                                                                                   | Status                             |
 |-----|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
 | 1   | [eth_getBlockByHash](https://playground.open-rpc.org/)                      | _Returns information about a block by hash_                                                                                                                   | ![done](img/done.ico)              |
 | 2   | [eth_getBlockByNumber](https://playground.open-rpc.org/)                    | _Returns information about a block by number_                                                                                                                 | ![done](img/done.ico)              |
-| 3   | [eth_getBlockTransactionCountByHash](https://playground.open-rpc.org/)      | _Returns the number of transactions in a block from a block matching the given block hash_                                                                    | ![done](img/done.ico)              | 
+| 3   | [eth_getBlockTransactionCountByHash](https://playground.open-rpc.org/)      | _Returns the number of transactions in a block from a block matching the given block hash_                                                                    | ![done](img/done.ico)              |
 | 4   | [eth_getBlockTransactionCountByNumber](https://playground.open-rpc.org/)    | _Returns the number of transactions in a block matching the given block number_                                                                               | ![done](img/done.ico)              |
 | 5   | [eth_getUncleCountByBlockHash](https://playground.open-rpc.org/)            | _Returns the number of uncles in a block from a block matching the given block hash_                                                                          | ![todo](img/todo.ico)              |
 | 6   | [eth_getUncleCountByBlockNumber](https://playground.open-rpc.org/)          | _Returns the number of uncles in a block from a block matching the given block number_                                                                        | ![todo](img/todo.ico)              |
@@ -53,7 +53,7 @@ The following tables present the full list of JSON-RPC methods each of them is i
 | 40  | [eth_getTransactionReceipt](https://playground.open-rpc.org/)               | _Returns the receipt of a transaction by transaction hash_                                                                                                    | ![done](img/done.ico)              |
 
 
-## JSON-RPC methods according to [The web3 module API](https://openethereum.github.io/JSONRPC-web3-module)
+## JSON-RPC Methods According to [the Web3 Module API](https://openethereum.github.io/JSONRPC-web3-module)
 
 | Num | Method                                                                                       | Description                                                            | Status                         |
 |-----|----------------------------------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------|
@@ -62,7 +62,7 @@ The following tables present the full list of JSON-RPC methods each of them is i
 
 
 
-## JSON-RPC methods according to [The net module API](https://openethereum.github.io/JSONRPC-net-module)
+## JSON-RPC Methods According to [the Net Module API](https://openethereum.github.io/JSONRPC-net-module)
 
 | Num | Method                                                                           | Description                                                            | Status                         |
 |-----|----------------------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------|

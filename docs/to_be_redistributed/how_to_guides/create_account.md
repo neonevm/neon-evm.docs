@@ -3,12 +3,12 @@
 ### Goal
 the text will be added soon
 
-### Before you begin
+### Before You Begin
   * Install the currently supported version of `neon-cli`.
   * Understand the following:
-    * What is an account;
-    * What is a public and private key pair.
-  * Imported a key pair which can authorize on behalf of a creator account.
+    * What is an account
+    * What is a public and private key pair
+  * Imported a key pair that can authorize on behalf of a creator account.
 
 ### Steps
 See

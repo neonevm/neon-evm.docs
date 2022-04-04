@@ -1,8 +1,8 @@
 ---
-title: BPF trace
+title: BPF Trace
 ---
 
-*During the runtime BPF interpreter can be configured to log a trace message for each BPF instruction executed. This can be very helpful for things like pin-pointing the runtime context leading up to a memory access violation.*
+*During the runtime, the BPF interpreter can be configured to log a trace message for each BPF instruction executed. This can be very helpful for things like pinpointing the runtime context leading up to a memory access violation.*
 
 The trace logs together with the ELF dump can provide a lot of insight.
 
@@ -24,69 +24,69 @@ $ export SOLANA_BPF_TRACE_CONTROL="8888"
 The control config contains several settings to change the BPF tracing behavior without restarting a local cluster. Here is the default configuration as viewed with the `solana-bpf-trace-control` utility:
 ```
 enable = true
-filter = 
+filter =
 output = /tmp/trace
 binary = false
 multiple_files = true
 max_threads = 2
 min_length = 1000000
 ```
-It enables tracing without filtering, and redirects the output of each execution into a different file.
+This enables tracing without filtering, and redirects the output of each execution into a different file.
 
-The following are examples of settings.
+The following are examples of settings:
 
-### Enable or disable BPF tracing altogether
+### Enable or Disable BPF Tracing Altogether
 For example:
 ```
 enable = true
 ```
 
-### Filter BPF tracing of a certain program
+### Filter BPF Tracing of a Certain Program
 For example:
 ```
 filter = evm_loader:3CMCRJieHS3sWWeovyFyH4iRyX4rHf3u2zbC5RCFrRex
 ```
-The first part of `filter` setting is arbitrary string to be included to the trace file name. The second part is a program ID of interest. Empty `filter` setting passes any program.  
+The first part of the `filter` setting is an arbitrary string to be included in the trace file name. The second part is a program ID of interest. An empty `filter` setting passes any program.  
 
 > Irrelevant information in the `filter` blocks any tracing.
 
-### Redirect BPF tracing into a file
+### Redirect BPF Tracing into a File
 For example:
 ```
 output = /tmp/trace
 ```
-Empty `output` setting means the tracing will be dumped to the standard output.
+An empty `output` setting means the tracing will be dumped to the standard output.
 
-### Force writing binary files
+### Force Writing Binary Files
 For example:
 ```
 binary = true
 ```
 Skips disassembling and formatting traces on write; write the raw binary data.
 
-### Separate BPF traces of different runs
+### Separate BPF Traces of Different Runs
 For example:
 ```
 multuple_files = true
 ```
 
-Each new BPF trace will be written into a separate file. Names of these files will contain timestamps. Otherwise, the `multiple_files` setting causes all new traces to be added to a single file (if a `trace-file` is present).
+Each new BPF trace will be written into a separate file. The names of these files will contain timestamps. Otherwise, the `multiple_files` setting causes all new traces to be added to a single file (if a `trace-file` is present).
 
-### Limit writing threads
+### Limit Writing Threads
 For example:
 ```
 max_threads = 2
 ```
-Allows you to run no more than 2 writing streams at the same time. If `multuple_files = false`, setting `max_threads` has no effect.
+Allows you to run no more than two writing streams at the same time. If `multuple_files = false`, setting `max_threads` has no effect.
 
-### Limit program trace length
+### Limit Program Trace Length
 For example:
 ```
 min_length = 1000000
 ```
 Filters out too short (so less interesting) traces.
 
-### The control tool: solana-bpf-trace-control
+### The Control Tool: solana-bpf-trace-control
 There is a special tool for viewing (a command without arguments) or changing (a command with arguments) settings. It can be found in the [temporary repo](https://github.com/vakond/solana-bpf-trace-control). Below are some usage examples of the tool.
 ```
 solana-bpf-trace-control
@@ -113,10 +113,10 @@ solana-bpf-trace-control trace-file ''
 solana-bpf-trace-control multiple-files false
 ```
 
-> To clear a string setting just pass empty quoted string as the argument.
+> To clear a string setting just pass an empty quoted string as the argument.
 
-### Performance considerations
+### Performance Considerations
 
 Writing a large trace file could be a substantially heavy task for the system, which can affect the overall performance. You should tweak `max-threads` and `min-length` settings to limit the number of writes. Increasing available RAM size and using SSD are also of great help.
 
-The BPF Trace Monitoring service of the local cluster starts the OS thread and binds the socket. To minimize possible performance impact the service will actually start only after the first BPF execution. At the first execution, the default settings will be taken into account. You should run a small program like `memo` or `token` first, to make sure the controlling service is up and running.
+The BPF Trace Monitoring service of the local cluster starts the OS thread and binds the socket. To minimize possible performance impact the service will actually start only after the first BPF execution. At the first execution, the default settings will be taken into account. You should run a small program like `memo` or `token` first to make sure the controlling service is up and running.
