@@ -1,5 +1,5 @@
 # Explorers
 
-### Block explorer (Neonscan)
+### Block Explorer (Neonscan)
 
-### Indexing dashboard (Aleph)
+### Indexing Dashboard (Aleph)

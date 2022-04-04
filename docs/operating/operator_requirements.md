@@ -2,10 +2,10 @@
 title: Operator Requirements
 ---
 
-### Balance recommendations
+### Balance Recommendations
 
 First, you must be registered in Solana, which involves creating an account with a balance for storing SOL tokens, and getting the public and private keys.
-There is no strict minimum amount of SOL required to run an operator on Neon EVM. However, you should take into account that you will need tokens to create accounts for new users, deploy contracts, and execute transactions.
+There is no strict minimum amount of SOL required to run as an operator on the Neon EVM. However, you should take into account that you will need tokens to create accounts for new users, deploy contracts, and execute transactions.
 
 In addition to the balance for storing SOL tokens, an operator must also have the `NEON_TOKEN_MINT` balance for storing value tokens. These tokens are used to pay funds from users to an operator for the successful execution of transactions. Depending on the chosen configuration, specific values for `NEON_TOKEN_MINT` are indicated in the [table](operating/operator_guide.md#neon_token_mint).
 
@@ -14,10 +14,10 @@ To create the `NEON_TOKEN_MINT` balance, you can use the following command:
 spl-token -u <Solana RPC node URL> create-account <NEON_TOKEN_MINT>
 ```
 
-### Hardware recommendations
+### Hardware Recommendations
 We do not have strict hardware recommendations. The device specifications below are based on information obtained from official Solana [documentation](https://docs.solana.com/running-validator/validator-reqs).
 
-The minimum specifications recommended to your Neon EVM proxy:
+The minimum specifications recommended for your Neon EVM proxy are:
   * CPU
     * 12 cores
     * 2.8 GHz or faster
@@ -27,11 +27,11 @@ The minimum specifications recommended to your Neon EVM proxy:
   * Disk space
     * 500 GB or more
 
-> Do not use a public or shared Solana RPC node for your Neon EVM proxy. Use only the device that you control.
+> Do not use a public or shared Solana RPC node for your Neon EVM proxy. Use only a device that you control.
 
-In addition to the Neon EVM proxy you need a Solana RPC node. It should be a dedicated RPC node with low latency to interact with your Neon EVM proxy.
+In addition to the Neon EVM proxy, you need a Solana RPC node. It should be a dedicated RPC node with low latency to interact with your Neon EVM proxy.
 
-The minimum specifications recommended to your Solana RPC node:
+The minimum specifications recommended to your Solana RPC node are:
   * CPU
     * 16 cores
     * EPYC Gen 2 or Gen 3
@@ -42,7 +42,7 @@ The minimum specifications recommended to your Solana RPC node:
   * Disk space
     * Depends on the transaction history required for storage
 
-### Software recommendations
+### Software Recommendations
 The following software should be installed on your Neon EVM proxy:
   * OS
     * Ubuntu 20.04 or later
@@ -50,8 +50,8 @@ The following software should be installed on your Neon EVM proxy:
   * Docker
   * Docker Compose
 
-### Solana cluster requirements (optional)
-If you want to use a local solana cluster, you need to meet the following requirements:
+### Solana Cluster Requirements (optional)
+If you want to use a local Solana cluster, you need to meet the following requirements:
   * Solana cluster with `--enable-rpc-transaction-history` enabled.
   * Solana cluster with `--enable-rpc-bigtable-ledger-storage` enabled.
 
