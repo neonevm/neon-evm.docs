@@ -38,7 +38,7 @@ module.exports = {
           label: 'Setting up environment',
           items: [ 'developing/dev_environment/choosing_proxy',
                    'developing/dev_environment/connect_to_solana_via_proxy',
-                   'developing/dev_environment/solana_cluster/cluster_installation' ]
+                   { type: 'doc', label: 'Local Neon EVM environment', id: 'developing/dev_environment/solana_cluster/cluster_installation' } ]
         }, {
           type: 'category',
           label: 'Deploying dApps',
@@ -51,7 +51,7 @@ module.exports = {
         }, {
           type: 'category',
           label: 'Using Utilities',
-          items: [ { type: 'link', label: 'NeonScan', href: "https://neonscan.'org/" },
+          items: [ { type: 'link', label: 'NeonScan', href: "https://neonscan.org/" },
                    'developing/utilities/neonpass',
                    'developing/utilities/neonswap' ]
         } ]
