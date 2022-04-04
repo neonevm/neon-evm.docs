@@ -1,19 +1,20 @@
-# Neon Faucet
+---
+title: Faucet
+---
 
-The Neon Faucet is a service that distributes small amounts of tokens.
+Using Faucet you can request Test NEON tokens on Solana devnet.
 
-# Neon Swap
-
-A utility that allows you to access the token distribution service through the user interface.
-
-## Getting tokens
+## Requesting test NEON tokens via UI
 
 ### Step 1
-Go to the page for obtaining tokens using the following [link](https://neonswap.live/#/get-tokens).
+Set up MetsMask in accordance with [Setting up MetaMask](../../wallet/metamask_setup#installing-metamask)
 
 ### Step 2
-Connect your wallet to get tokens:
-- Click button `CONNECT WALET` after installing the dependency using the following article [Installing MetaMask](../../wallet/metamask_setup#installing-metamask)
+Go to the page to request test tokens using the following [link](https://neonswap.live/#/get-tokens).
+
+### Step 3
+Connect your wallet:
+- Click button `CONNECT WALET`
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
@@ -54,7 +55,7 @@ Connect your wallet to get tokens:
 </div>
 
 
-# HTTP API Endpoints
+# Requesting test NEON tokens via HTTP API Endpoints
 
 A client uses POST requests to send data to the server.
 Several endpoints are supported.
