@@ -2,6 +2,57 @@
 
 The Neon Faucet is a service that distributes small amounts of tokens.
 
+# Neon Swap
+
+A utility that allows you to access the token distribution service through the user interface.
+
+## Getting tokens
+
+### Step 1
+Go to the page for obtaining tokens using the following [link](https://neonswap.live/#/get-tokens).
+
+### Step 2
+Connect your wallet to get tokens:
+- Click button `CONNECT WALET` after installing the dependency using the following article [Installing MetaMask](../../wallet/metamask_setup#installing-metamask)
+
+<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+
+![](./images/connect_walet.png)
+
+</div>
+
+- Click button `CONNECT METAMASK`
+
+<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+
+![](./images/connect_metamask.png)
+
+</div>
+
+- In the MetaMask window, select one or more accounts and click `Next`.
+
+<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+
+![](./images/metamask_next.png)
+
+</div>
+
+- Сlick the `Connect` button to confirm.
+
+<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+
+![](./images/confirm_connection.png)
+
+</div>
+
+- In the form that appears, enter the number of requested tokens and click the button `GET TOKENS`.
+
+<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+
+![](./images/get_tokens.png)
+
+</div>
+
 
 # HTTP API Endpoints
 
