@@ -1,4 +1,4 @@
-# How to deploy an Ethereum contract
+# How to Deploy an Ethereum Contract
 
 ## Goal
 To deploy a smart contract for it to be available to users of an Ethereum network.  
@@ -6,14 +6,14 @@ To deploy a smart contract, you have to:
 * Compile your smart contract.
 * Create and send an Ethereum transaction containing the code of the compiled smart contract without specifying any recipients.
 
-## Before you begin
+## Before You Begin
 * Understand the following:
-  * What is the [Ethereum network](https://ethereum.org/en/developers/docs/networks/).
-  * What is a [transaction](https://ethereum.org/en/developers/docs/transactions/).
-  * What is a [smart contract](https://ethereum.org/en/developers/docs/smart-contracts/anatomy/).
-  * What are [gas and fees](https://ethereum.org/en/developers/docs/gas/).
+  * What is the [Ethereum network](https://ethereum.org/en/developers/docs/networks/)?
+  * What is a [transaction](https://ethereum.org/en/developers/docs/transactions/)?
+  * What is a [smart contract](https://ethereum.org/en/developers/docs/smart-contracts/anatomy/)?
+  * What are [gas and fees](https://ethereum.org/en/developers/docs/gas/)?
   * How to compile a [smart contract](https://ethereum.org/en/developers/docs/smart-contracts/compiling/).
-* Make sure you have some ETH to pay a transaction fee.
+* Make sure you have some ETH to pay transaction fees.
 
 ## Steps
 
@@ -35,20 +35,20 @@ contract helloWorld {
 
 
 **Step 2**  
-Set your gas limit (in coins) like other transactions.
+Set your gas limit (in coins) like other transaction.
 Be aware that contract deployment needs a lot more gas than a simple coin transfer.
 
 **Step 3**  
-Deploy script or plugin.
+Deploy the script or plugin.
 
 **Step 4**  
-Access an [Ethereum node](https://ethereum.org/en/developers/docs/nodes-and-clients/), either by running your own, connecting to a public node, or via an API key using a service like Infura or Alchemy
+Access an [Ethereum node](https://ethereum.org/en/developers/docs/nodes-and-clients/), either by running your own, connecting to a public node, or via an API key using a service like Infura or Alchemy.
 
 Once deployed, your contract will have an Ethereum address like other [accounts](https://ethereum.org/en/developers/docs/accounts/).  
 
 ----  
 
-## Example: Deploying a smart contract in test mode using Remix
+## Example: Deploying a Smart Contract in Test Mode Using Remix
 
 ### Goal
 To deploy your smart contract on an Ethereum test network.  
@@ -66,7 +66,7 @@ Visit [Remix](https://remix.ethereum.org/) and create a new file.
 </div>
 
 **Step 2**  
-On the upper left part of the Remix interface add the new file and enter the file name you want. In the new file paste your smart contract code.  
+On the upper left part of the Remix interface, add the new file and enter the file name you want. In the new file, paste your smart contract code.  
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
@@ -87,7 +87,7 @@ Navigate to the compile icon on the left-hand side and click `Compile`.
 You can select the "Auto compile" option so the contract will always be compiled when you save the content on the text editor.
 
 **Step 4**  
-Navigate to the deploy icon and run transactions screen:
+Navigate to the deploy icon and go to the transactions screen:
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
@@ -108,13 +108,9 @@ Click the arrow on the left to expand it so you can see the content of your cont
 
 </div>
 
-If your contract contains several modules, you can see the details of each of them by clicking on the corresponding name. You can also see logs of the transactions that are made appearing on the bottom of the window.  
+If your contract contains several modules, you can see the details of each of them by clicking on the corresponding name. You can also see logs of the transactions that are made at the bottom of the window.  
 
 ----  
 
 > **Useful links**  
 > https://ethereum.org/en/developers/tutorials/deploying-your-first-smart-contract/
-
-
-
-

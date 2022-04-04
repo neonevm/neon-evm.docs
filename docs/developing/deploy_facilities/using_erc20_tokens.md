@@ -1,18 +1,18 @@
 ---
-title: Interacting with SPL-tokens
+title: Interacting with SPL Tokens
 ---
 
-The ERC-20 SPL-Wrapper contract provides an access to native Solana tokens, registered in the SPL-token contract, through the ERC-20 interface.
+The ERC-20 SPL wrapper contract provides access to native Solana tokens registered in the SPL token contract, through the ERC-20 interface.
 
-This allows interaction of the Solana applications with EVM(Solidity/Vyper/etc.) bytecode contracts. ERC-20 SPL-Wrapper can also be used to transfer funds in Solana tokens using Ethereum wallets such as Metamask.
+This allows interaction of the Solana applications with the EVM (Solidity, Vyper, etc.) bytecode contracts. The ERC-20 SPL wrapper can also be used to transfer funds in Solana tokens using Ethereum wallets such as MetaMask.
 
-Contract is implemented in Rust as part of Neon EVM program.
+The contract is implemented in Rust as part of the Neon EVM program.
 
-Source codes:
+Source code:
   * [Rust source code](https://github.com/neonlabsorg/neon-evm/blob/c43345d7abf7af14aa840e6b15c0fc64b084bb2c/evm_loader/program/src/precompile_contracts.rs#L106)
   * [Solidity wrapper source code](https://github.com/neonlabsorg/neon-evm/blob/develop/evm_loader/solidity/erc20_wrapper.sol)
 
-### Contract interface
+### Contract Interface
 
 ```solidity
 interface IERC20 {
@@ -45,17 +45,17 @@ Functionality of interface modules:
 
   * `approve(address spender, uint256 amount)` — Sets an `amount` as the spender's allowance over the caller's tokens.
 
-  * `transferFrom(address sender, address recipient, uint256 amount)` — Transfer the `amount` of tokens from the `sender` to the `recipient`.
+  * `transferFrom(address sender, address recipient, uint256 amount)` — Transfers the `amount` of tokens from the `sender` to the `recipient`.
 
-  * `approveSolana(bytes32 spender, uint64 value)` — Allows ***Solana*** user `spender` to withdraw from the caller's account multiple times, up to the `value` amount. Only one Solana `spender` can exists at the time. Translates into spl-token `Approve` instruction.
+  * `approveSolana(bytes32 spender, uint64 value)` — Allows ***Solana*** user `spender` to withdraw from the caller's account multiple times up to the `value` amount. Only one Solana `spender` can exists at the time. Translates into SPL token `Approve` instruction.
 
 ### Restrictions
 
-According to SPL token structure, u64 is used to store the balance (In ERC-20 it's u256). Based on u64, maximum balance and transfer amounts are restricted by (2^64-1)/(10^9) (for 9 decimals accuracy).
+According to SPL token structure, u64 is used to store the balance. (In ERC-20, it's u256). Based on u64, maximum balance and transfer amounts are restricted by (2^64-1)/(10^9) (for 9 decimals of accuracy).
 
-### Finding the Token Account address
+### Finding the Token Account Address
 
-Token account for a given wallet address is a program-derived account consisting of two constants, the Ethereum wallet address itself, ERC-20 contract address, and the token mint.
+The token account for a given wallet address is a program-derived account consisting of the following constants: the Ethereum wallet address itself, ERC-20 contract address, and the token mint.
 
 The account address can be derived in Rust with:
 
