@@ -132,3 +132,80 @@ CONFIG | NEON_TOKEN_MINT
 devnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
 testnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
 local | HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
+
+## Prometheus metrics in Proxy
+
+### Proxy Prometheus Metrics
+
+| Metrics title              | units    | description                      |
+|----------------------------|----------|----------------------------------|
+| request_count              | count    | App Request Count                |
+| request_latency_seconds    | ms       | Request latency                  |
+| tx_total                   | tx count | Incoming TX Count                |
+| tx_success_count           | tx count | Count Of Succeeded Txs           |
+| tx_failed_count            | tx count | Count Of Failed Txs              |
+| tx_in_progress             | tx count | Count Of Txs Currently Processed |
+| operator_sol_balance       | Sols     | Operator Balance in Sol's      |
+| operator_neon_balance      | Neons    | Operator Balance in Neon's     |
+| operator_sol_balance_diff  | Sols     | Operator Sol Balance Diff On TX  |
+| operator_neon_balance_diff | Neons    | Operator Neon Balance Diff On TX |
+| operator_account_rent      | Sols     | Operator Account Rent            |
+| usd_price_sol              | USD      | Sol Price USD                    |
+| usd_price_neon             | USD      | Neon Price USD                   |
+| gas_price                  | Wei      | Gas Price                        |
+| operator_fee               | Percent  | Operator Fee                     |
+
+### Indexer Prometheus Metrics
+
+| Metrics title            | units         | description                                                       |
+|--------------------------|---------------|-------------------------------------------------------------------|
+| tx_sol_spent             | lamports      | How many lamports being spend in Neon transaction per iteration   |
+| tx_bpf_per_iteration     | bpf units     | How many BPF cycles was used in each iteration                    |
+| tx_steps_per_iteration   | steps         | How many steps was used in each iteration                         |
+| tx_count                 | tx count      | Count of Neon transactions were completed (independent on status) |
+| tx_canceled              | tx count      | Count of Neon transactions were canceled                          |
+| count_tx_count_by_type   | tx count      | Count of transactions by type(single\\iter\\iter w holder)        |
+| count_sol_tx_per_neon_tx | tx count      | Count of solana txs within by type(single\\iter\\iter w holder)   |
+| postgres_availability    | 1 or 0 status | Postgres availability                                             |
+| solana_rpc_health        | 1 or 0 status | Solana Node status                                                |
+
+### Prometheus formulas examples
+
+#### Profit and Loass monitoring
+
+```promql
+sum (avg by (operator_sol_wallet) (operator_sol_balance) ) * avg by (app) (usd_price_sol) + sum (avg by (operator_neon_wallet) (operator_neon_balance) ) * avg by (app) (usd_price_neon))
+```
+
+#### Solana Node status:
+
+```promql
+solana_rpc_health{job="indexer-monitor"}
+```
+
+#### Postgress DB status:
+
+```promql
+postgres_availability{job="indexer-monitor"}
+```
+
+###Prometheus configuration example
+
+```yml
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'proxy-monitor'
+    metrics_path: '/'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['proxy:8888']
+
+  - job_name: 'indexer-monitor'
+    metrics_path: '/'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['indexer:8887']
+```
