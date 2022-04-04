@@ -3,7 +3,7 @@ title: Terminology
 ---
 
 ### Application Binary Interface (ABI)
-A JSON-based description on how to convert user actions between their JSON and binary representations. The ABI may also describe how to convert the database state to/from JSON. Once you have described your contract via an ABI this allows developers and users to interact with your contract seamlessly via JSON.  
+A JSON-based description on how to convert user actions between their JSON and binary representations. The ABI may also describe how to convert the database state to/from JSON. Once you have described your contract via an ABI, this allows developers and users to interact with your contract seamlessly via JSON.  
 
 ---  
 
@@ -18,7 +18,7 @@ A special structure for recording a group of transactions in blockchain systems.
 ---  
 
 ### Blockchain
-A database with a strict structure and certain rules for building chains of transactions and accessing  information which excludes data theft, fraud, violation of property rights, and more.  
+A database with a strict structure and certain rules for building chains of transactions and accessing information which excludes data theft, fraud, violation of property rights, and more.  
 
 ---  
 
@@ -37,23 +37,23 @@ An object created using a Docker image and containing all the necessary componen
 
 ---  
 
-### Cryptographic hash function (CHF)
+### Cryptographic Hash Function (CHF)
 A type of hash function that takes an input (or `message`) and returns a fixed-size alphanumeric string. The alphanumeric string is called the `hash value`, `message digest`, `digital fingerprint`, `digest`, or `checksum`.  
 
 ---  
 
 ### Daemon
-A program on Linux systems that is  launched by the system itself and runs in the background without direct user interaction.  
+A program on Linux systems that is launched by the system itself and runs in the background without direct user interaction.  
 
 ---  
 
-### Decentralized Application (dAapp)
+### Decentralized Application (dApp)
 An application built on a decentralized network that combines a smart contract and a frontend user interface.  
 
 ---  
 
 ### Digital signature
-A mathematical algorithm used to verify the authenticity and integrity of digital messages or documents. A valid digital signature  helps to reassure the recipient that the message was created by a known sender, and that the message was not altered in transit. Digital signatures are a standard feature of most cryptographic protocol suites, and are also commonly used for software distribution, financial transactions, contract management software, and other cases where it is important to detect and/or prevent forgery or tampering.  
+A mathematical algorithm used to verify the authenticity and integrity of digital messages or documents. A valid digital signature helps to reassure the recipient that the message was created by a known sender, and that the message was not altered in transit. Digital signatures are a standard feature of most cryptographic protocol suites, and are also commonly used for software distribution, financial transactions, contract management software, and other cases where it is important to detect and/or prevent forgery or tampering.  
 
 ---  
 
@@ -78,7 +78,7 @@ A read-only template on the Docker platform that is used to create containers.
 ---  
 
 ### Delegated Proof-of-Stake (DPoS)
-A consensus algorithm initially developed by Daniel Larimer in 2013 for BitShares. It's sometimes referred to as the more “democratic” version of Proof-of-Stake (PoS).  
+A consensus algorithm initially developed by Daniel Larimer in 2013 for BitShares. It is sometimes referred to as the more “democratic” version of Proof-of-Stake (PoS).  
 
 ---  
 
@@ -112,7 +112,7 @@ A type of merkle tree that can be visualized as many (perfect) merkle trees whic
 
 ---  
 
-### Merkle Patricia trie
+### Merkle-Patricia Tree
 A hash tree that stores key-value pairs, with the keys being represented in binary form. The nodes of this tree consist of two types: prefix nodes that contain part of the path, and end nodes that contain the stored value.  
 
 ---  
@@ -133,7 +133,7 @@ An open-source service for transferring SPL tokens to Neon EVM.
 ---  
 
 ### NeonSwap
-An open-source service being fork of [Uniswap V2](https://uniswap.org/blog/uniswap-v2) and modified to work with Neon EVM.  
+An open-source service being a fork of [Uniswap V2](https://uniswap.org/blog/uniswap-v2) and modified to work with Neon EVM.  
 
 ---  
 
@@ -143,12 +143,12 @@ A separate software device that is connected to the blockchain network according
 ---  
 
 ### Phantom
-A software cryptocurrency wallet reimagined for DeFi. Phantom makes it safe and easy for you to store, send, receive, collect and swap tokens on the Solana blockchain.  
+A software cryptocurrency wallet reimagined for DeFi. Phantom makes it safe and easy for you to store, send, receive, collect, and swap tokens on the Solana blockchain.  
 
 ---  
 
 ### Plugin
-A software component, built as a separate module, that adds new capabilities to the main program.  
+A software component built as a separate module that adds new capabilities to the main program.  
 
 ---  
 
@@ -158,7 +158,7 @@ A secret number (code string) that you can use to securely access your wallet or
 ---  
 
 ### Proof-of-History (PoH)
-The blockchain algorithm for time synchronisation. Instead of using the traditional timestamps, PoH is able to prove that a message or event occurred at a certain time after one event, but before another.  
+The blockchain algorithm for time synchronization. Instead of using the traditional timestamps, PoH is able to prove that a message or event occurred at a certain time after one event, but before another.  
 
 ---  
 
@@ -173,7 +173,7 @@ An online Integrated Development Environment (IDE) used to write, compile, deplo
 ---  
 
 ### Remote Procedure Call (RPC)
-A system that lets users send Queries and commands to a system remotely.  
+A system that lets users send queries and commands to a system remotely.  
 
 ---  
 
@@ -212,18 +212,18 @@ Sollet (Sollet.io) is browser-based wallet for Solana and SPL tokens. It was cre
 
 ---  
 
-### Solana Program Library Token (SPL Token)
-A contract containing a system register of tokens that are in the system along with the Solana balances of their accounts.  
+### Solana Program Library (SPL)
+A contract containing a system registry of tokens that are in the system along with the Solana balances of their accounts.  
 
 ---  
 
 ### SPL token
-A token registered in *[SPL Token](https://spl.solana.com/token)*.  
+A token registered in the *[Solana Program Library (SPL)](https://spl.solana.com/token)*.  
 
 ---  
 
 ### Staked tokens
-Tokens allocated for a stake acquisition that can’t be used for anything else in this state. The user can stake active tokens listed on their balance, or deposit them. Also, the user can perform the reverse operation: withdraw tokens from the staked state to active.  
+Tokens allocated for a stake acquisition that can’t be used for anything else in this state. The user can stake active tokens listed on their balance, or deposit them. The user can also perform the reverse operation: withdraw tokens from the staked state to active.  
 
 ---  
 
@@ -233,7 +233,7 @@ A temporary file storage paradigm implemented in many Unix-like operating system
 ---  
 
 ### Transaction
-A combination of one or more actions that results in a complete all-or-nothing change to the blockchain.. Usually the executional result of a smart contract.  
+A combination of one or more actions that results in a complete all-or-nothing change to the blockchain. Usually the executional result of a smart contract.  
 
 ---  
 
@@ -252,7 +252,7 @@ Wallets are clients that store keys that may or may not be associated with the p
 
 ---  
 
-### Web 3
+### Web3
 In the context of Ethereum, Web3 is a collection of decentralized apps that run on the blockchain and allow anyone to participate without monetizing their personal data.  
 
 ---  
