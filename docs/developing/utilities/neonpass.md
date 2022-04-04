@@ -1,9 +1,9 @@
 ---
-title: Neon Pass
+title: NeonPass
 ---
 
-Neon Pass is an open source service designed to transfer tokens between Solana and Neon EVM
+NeonPass is an open source service designed to transfer tokens between Solana and the Neon EVM.
 
-Go to the [Neon Pass](https://neonpass.live/) page to call the Neon Pass application
+Go to the [NeonPass](https://neonpass.live/) page to call the NeonPass application.
 
-Read more about Neon Pass in [Tokens Transferring](token_transferring/neonpass_usage.md)
+Read more about NeonPass in [Token Transferring](token_transferring/neonpass_usage.md).

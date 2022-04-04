@@ -1,18 +1,18 @@
 # How to Connect Metamask to Solana's Network
 
 ## Goal
-To connect Metamask to Solana's network via Neon EVM.
+To connect Metamask to Solana's network via the Neon EVM.
 
-## Before you begin
+## Before You Begin
   * Understand the following:
-    * What is the [Solana network](https://docs.solana.com/clusters).
-    * What is the [Metamask](https://metamask.io).
-  * Metamask must be installed on your device and can be accessed from the browser you are using.
+    * What is the [Solana network](https://docs.solana.com/clusters)?
+    * What is [MetaMask](https://metamask.io)?
+  * MetaMask must be installed on your device and can be accessed from the browser you are using.
 
 ## Steps
 
 ### Step 1
-Open https://chainlist.org/ web page. In the `Search Networks` field, type the NEON token symbol. 
+Open the https://chainlist.org/ web page. In the `Search Networks` field, type the NEON token symbol.
 The search will select three Neon EVM networks with their corresponding ChainIDs in which this token can be circulated.
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
@@ -22,7 +22,7 @@ The search will select three Neon EVM networks with their corresponding ChainIDs
 </div>
 
 ### Step 2
-In the upper right corner, click `Connect Wallet`. This field should display the address of your Metamask wallet, accessible from your browser.
+In the upper right corner, click `Connect Wallet`. This field should display the address of your MetaMask wallet, which is accessible from your browser.
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
@@ -31,9 +31,9 @@ In the upper right corner, click `Connect Wallet`. This field should display the
 </div>
 
 ### Step 3
-Select the Neon EVM network to which you are going to connect your wallet to perform operations and click `Add To Metamask` (for debugging or testing contracts, it is recommended to use Neon EVM Devnet). The Metamask window should appear with the selected network ID and proxy address.
+Select the Neon EVM network to which you are going to connect your wallet to perform operations and click `Add To MetaMask`. (For debugging or testing contracts, it is recommended to use the Neon EVM Devnet). The MetaMask window should appear with the selected network ID and proxy address.
 
-Check that the data in the Metamask fields correspond to the network you need. Click `Approve` to complete the Metamask connection to the Neon EVM network.
+Check that the data in the MetaMask fields that correspond to the network you need. Click `Approve` to complete the MetaMask connection to the Neon EVM network.
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
@@ -41,7 +41,7 @@ Check that the data in the Metamask fields correspond to the network you need. C
 
 </div>
 
-The Metamask window will display a list of your accounts (in our case, this will be "Account 1").
+The MetaMask window will display a list of your accounts. (In our case, this will be "Account 1".)
 
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
@@ -50,10 +50,10 @@ The Metamask window will display a list of your accounts (in our case, this will
 
 </div>
 
-You can start performing all operations inherent in your wallet, including creating new accounts. For debugging work in the Neon EVM Devnet/Testnet networks, 5 tokens will be credited to each account balance. These tokens can only be used within Devnet/Testnet. If you connect to the Neon EVM Mainnet, NEON tokens will not be credited.
+You can start performing all operations inherent in your wallet, including creating new accounts. For debugging work in the Neon EVM Devnet/Testnet networks, five tokens will be credited to each account balance. These tokens can only be used within Devnet/Testnet. If you connect to the Neon EVM Mainnet, NEON tokens will not be credited.
 
 ### Step 4
-If you want to switch Metamask to another network, you need to click `Add To Metamask` on the new network and click `Switch network` in the Metamask window.
+If you want to switch MetaMask to another network, you need to click `Add To MetaMask` on the new network and click `Switch network` in the MetaMask window.
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
@@ -62,7 +62,7 @@ If you want to switch Metamask to another network, you need to click `Add To Met
 </div>
 
 ### Step 5
-You can close the browser window and reopen it at any time. Do not worry, your metamask will keep access to the connected network. To return to the Neon EVM network session, simply open the browser to which your wallet is attached and click on the Metamask icon in the upper right corner.
+You can close the browser window and reopen it at any time. Don't worry, your MetaMask will keep access to the connected network. To return to the Neon EVM network session, simply open the browser to which your wallet is attached and click on the MetaMask icon in the upper right corner.
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
