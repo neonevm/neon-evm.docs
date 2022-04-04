@@ -129,6 +129,8 @@ This container aims to handle the database that stores all the relevant Ethereum
           - net
         ports:
           - "127.0.0.1:5432:5432"
+        expose:
+          - "5432"
 
       dbcreation:
         container_name: dbcreation
