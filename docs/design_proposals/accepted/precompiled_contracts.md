@@ -7,7 +7,7 @@ Contracts written in the Solidity language cannot work in Solana if they contain
   * *[bigModExp](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-198.md)* — Used for efficient [RSA](about/terminology.md#rsa) verification inside of EVM, as well as other forms of number theory-based cryptography.
   * *[bn256Add](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-196.md)* — Performs addition on the elliptic curve operations.
   * *[bn256ScalarMult](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-196.md)* — Performs scalar multiplication on the elliptic curve operations.
-  * *[bn256Pairing](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-197.md)* — Elliptic curve pairing operations to perform [zkSNARKs](about/terminology.md#zk-snark) verification within the block gas limit.
+  * *[bn256Pairing](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-197.md)* — Elliptic curve pairing operations to perform [zkSTARKs](about/terminology.md#zk-stark) verification within the block gas limit.
 
 The Neon EVM requires the implementation of system calls in Solana for these contracts.
 
