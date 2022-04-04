@@ -4,12 +4,8 @@ title: Ethereum JSON-RPC Compatibility
 
 *The following tables present the full list of JSON-RPC methods. Each of them is in one of the states:*
 
-|||
-|--|--|
-|![done](img/done.ico)| done|
-|![in progress](img/inprogress.ico) | in progress|
-|![todo](img/todo.ico) | to do|
-
+|![done](img/done.ico)| — done|![in progress](img/inprogress.ico) | — in progress|![todo](img/todo.ico) | — to do|
+|--|--|--|--|--|--|
 
 ## JSON-RPC Methods According to [Ethereum Client API](https://ethereum.org/en/developers/docs/apis/json-rpc/)
 
