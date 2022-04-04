@@ -47,6 +47,7 @@ curl -i -X POST \
 
 The configuration file should be in TOML format.
 
+```
 |----------------------------------------------------------------------------------------------
 | Option                  | Description
 |----------------------------------------------------------------------------------------------
@@ -65,6 +66,7 @@ The configuration file should be in TOML format.
 | solana.evm_loader       | Address of the EVM Loader program
 | solana.max_amount       | Largest amount of NEONs to distribute with a single request
 |----------------------------------------------------------------------------------------------
+```
 
 Example of the configuration file contents:
 ```
@@ -98,6 +100,7 @@ The configuration file is optional and, if present, can be incomplete
 
 Environment variables, if present, override portions of the configuration.
 
+```
 |----------------------------------------------------------------------------------------------
 | Name                       | Overrides               | Value Example
 |----------------------------------------------------------------------------------------------
@@ -118,3 +121,4 @@ Environment variables, if present, override portions of the configuration.
 | NEON_LOG                   |                         | `json`
 | RUST_LOG                   |                         | `info`
 |----------------------------------------------------------------------------------------------
+```
