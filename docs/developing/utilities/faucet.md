@@ -1,22 +1,21 @@
----
-title: Faucet
----
+# Neon Faucet
 
-Using Faucet you can request Test NEON tokens on Solana devnet.
+The Neon Faucet is a service that distributes small amounts of tokens.
 
-## Requesting test NEON tokens via UI
+# Neon Swap
+
+A utility that allows you to access the token distribution service through the user interface.
+
+## Getting tokens
 
 ### Step 1
-Set up MetsMask in accordance with [Setting up MetaMask](../../wallet/metamask_setup#installing-metamask)
+Go to the page for obtaining tokens using the following [link](https://neonswap.live/#/get-tokens).
 
 ### Step 2
-Go to the page to request test tokens using the following [link](https://neonswap.live/#/get-tokens).
+Connect your wallet to get tokens:
+- Click button `CONNECT WALET` after installing the dependency using the following article [Installing MetaMask](../../wallet/metamask_setup#installing-metamask)
 
-### Step 3
-Connect your wallet:
-- Click button `CONNECT WALET`
-
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/connect_walet.png)
 
@@ -24,7 +23,7 @@ Connect your wallet:
 
 - Click button `CONNECT METAMASK`
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/connect_metamask.png)
 
@@ -32,7 +31,7 @@ Connect your wallet:
 
 - In the MetaMask window, select one or more accounts and click `Next`.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/metamask_next.png)
 
@@ -40,7 +39,7 @@ Connect your wallet:
 
 - Сlick the `Connect` button to confirm.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/confirm_connection.png)
 
@@ -48,14 +47,14 @@ Connect your wallet:
 
 - In the form that appears, enter the number of requested tokens and click the button `GET TOKENS`.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/get_tokens.png)
 
 </div>
 
 
-# Requesting test NEON tokens via HTTP API Endpoints
+# HTTP API Endpoints
 
 A client uses POST requests to send data to the server.
 Several endpoints are supported.
