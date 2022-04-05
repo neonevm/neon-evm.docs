@@ -2,10 +2,6 @@
 title: Connecting to the Neon Proxy
 ---
 
-*This section can be useful as a reference for:*
-  * *authorized operators who want to learn how to connect their proxies to Solana nodes so that they can stream requests to the Neon EVM through the proxies to a Solana network.*
-  * *users who intend to become proxy operators to learn how to connect a proxy to [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet).*
-  * *developers who want to debug their Solidity contracts by hosting a proxy and a Solana node locally.*
 ## Goal
 *Connect to the Solana cluster via a proxy server.*
 
