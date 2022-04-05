@@ -16,7 +16,7 @@ Go to the page to request test tokens using the following [link](https://neonswa
 Connect your wallet:
 - Click button `CONNECT WALET`
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/connect_walet.png)
 
@@ -24,7 +24,7 @@ Connect your wallet:
 
 - Click button `CONNECT METAMASK`
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/connect_metamask.png)
 
@@ -32,7 +32,7 @@ Connect your wallet:
 
 - In the MetaMask window, select one or more accounts and click `Next`.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/metamask_next.png)
 
@@ -40,7 +40,7 @@ Connect your wallet:
 
 - Сlick the `Connect` button to confirm.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/confirm_connection.png)
 
@@ -48,7 +48,7 @@ Connect your wallet:
 
 - In the form that appears, enter the number of requested tokens and click the button `GET TOKENS`.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/get_tokens.png)
 
