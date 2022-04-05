@@ -1,5 +1,5 @@
 ---
-title: Running Neon EVM as a Proxy Operator
+title: Running a Proxy server
 ---
 
 *This guide is for people who want to register with Neon EVM as a proxy operator for processing transactions on Solana. It is assumed these people have previous experience compiling Solana-based blockchain nodes or have worked as blockchain validators.*
