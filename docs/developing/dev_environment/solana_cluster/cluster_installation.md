@@ -259,7 +259,7 @@ The Faucet service provides the liquidity in `NEON` to all the accounts that are
 
       faucet:
         container_name: faucet
-        image: neonlabsorg/faucet:local
+        image: neonlabsorg/faucet:latest
         environment:
           - FAUCET_RPC_BIND=0.0.0.0
           - FAUCET_RPC_PORT=3333
