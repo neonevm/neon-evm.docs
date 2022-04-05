@@ -88,7 +88,7 @@ This container helps deploy the Neon EVM base contract onto Solana that listens 
           - SOLANA_URL=http://solana:8899
         networks:
           - net
-        command: bash -c "create-test-accounts.sh 1 && deploy-evm.sh && /opt/spl-token create-account HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU && /opt/spl-token mint HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU 1000000000 --owner /opt/  evm_loader-keypair.json -- HX14J4Pp9CgSbWP13Dtpm8VLJpNxMYffLtRCRGsx7Edv"
+        command: bash -c "create-test-accounts.sh 1 && deploy-evm.sh"
 
     networks:
       net:
