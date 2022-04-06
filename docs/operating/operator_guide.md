@@ -147,9 +147,6 @@ local | HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
 | tx_in_progress             | tx count | Count Of Txs Currently Processed |
 | operator_sol_balance       | Sols     | Operator Balance in Sol's      |
 | operator_neon_balance      | Neons    | Operator Balance in Neon's     |
-| operator_sol_balance_diff  | Sols     | Operator Sol Balance Diff On TX  |
-| operator_neon_balance_diff | Neons    | Operator Neon Balance Diff On TX |
-| operator_account_rent      | Sols     | Operator Account Rent            |
 | usd_price_sol              | USD      | Sol Price USD                    |
 | usd_price_neon             | USD      | Neon Price USD                   |
 | gas_price                  | Wei      | Gas Price                        |
@@ -160,6 +157,7 @@ local | HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
 | Metrics title            | units         | description                                                       |
 |--------------------------|---------------|-------------------------------------------------------------------|
 | tx_sol_spent             | lamports      | How many lamports being spend in Neon transaction per iteration   |
+| tx_neon_income           | weis          | Neons payed for transaction                                       |
 | tx_bpf_per_iteration     | bpf units     | How many BPF cycles was used in each iteration                    |
 | tx_steps_per_iteration   | steps         | How many steps was used in each iteration                         |
 | tx_count                 | tx count      | Count of Neon transactions were completed (independent on status) |
