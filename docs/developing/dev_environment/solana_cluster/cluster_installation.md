@@ -75,7 +75,7 @@ Once you deploy the environment, you'll have the Solana RPC endpoint working fro
 
 <details><summary>2. EVM loader service</summary>
 
-This container helps deploy the Neon EVM base contract onto Solana that listens for incoming connections on the port 8899
+This container helps deploy the Neon EVM base contract onto Solana that listens for incoming connections on the port 8899. It's important to say that this container doesn't work as daemon, it just uploads the Neon EVM contract and finishes with zero return code.
 
 #### docker-compose.yml
 
