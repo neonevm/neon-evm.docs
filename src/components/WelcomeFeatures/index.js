@@ -4,62 +4,65 @@ import styles from './WelcomeFeatures.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
-import { faNewspaper, faCompass, faKeyboard, faPaperPlane } from '@fortawesome/free-regular-svg-icons'
+import * as icons from '@fortawesome/free-regular-svg-icons'
 
 
 const FeatureList = [
   {
-    title: 'Introduction',
-    icon: faNewspaper,
-    url: '/docs/intro',
+    title: 'Start Deploying dApps',
+    icon: icons.faCompass,
+    url: '/docs/developing/getting_started',
     description: (
       <>
-        Learn more about Neon and how it works
-      </>
-    ),
-  },
-  {
-    title: 'Getting Started',
-    icon: faCompass,
-    url: '/docs/getting_started',
-    description: (
-      <>
-        Start building on Neon
-      </>
-    ),
-  },
-  {
-    title: 'Нow to deploy a Solidity Smart Contract',
-    icon: faKeyboard,
-    url: '/docs/software_manuals/how_to_guides/deploy_contract/',
-    description: (
-      <>
-        Move your dApp to Solana and enjoy it's advantages
-      </>
-    )
-  },
-//  {
-//    title: 'Neon Swap',
-//    icon: faPaperPlane,
-//    url: '/docs/neonswap/neonswap_overview/',
-//    description: (
-//      <>
-//        Play with one of the biggest dApps running on Solana testnet
-//      </>
-//    ),
-//  },
 
-  {
+      </>
+    ),
+  }, {
+    title: 'Run a Proxy Server',
+    icon:  icons.faNewspaper,
+    url: 'docs/operating/operator_guide',
+    description: (
+      <>
+
+      </>
+    ),
+  }, {
+    title: 'Manage a Wallet',
+    icon:  icons.faChartBar,
+    url: 'docs/wallet/metamask_setup',
+    description: (
+      <>
+
+      </>
+    ),
+  }, {
+    title: 'Transfer SPL Tokens',
+    icon:  icons.faHandshake,
+    url: 'docs/token_transferring/neonpass_usage',
+    description: (
+      <>
+
+      </>
+    ),
+  }, {
+    title: 'Learn How Neon EVM Works',
+    icon:  icons.faObjectGroup,
+    url: 'docs/architecture/neon_evm_arch',
+    description: (
+      <>
+
+      </>
+    ),
+  }, {
     title: 'FAQ',
-    icon: faPaperPlane,
-    url: '/docs/faq/neon-faq/',
+    icon:  icons.faCircleQuestion,
+    url: 'docs/faq/what-is-neon',
     description: (
       <>
-        "What is Neon?" and other answers to basic questions about the Neon EVM
+
       </>
     ),
-  },
-
+  }
 ];
 
 function Feature({title, icon, url, description}) {
@@ -81,7 +84,7 @@ function Feature({title, icon, url, description}) {
 }
 
 export default function WelcomeFeatures() {
-  
+
  return (
    <>
    <Head><title>Neon Docs</title></Head>
@@ -97,14 +100,3 @@ export default function WelcomeFeatures() {
    </>
  );
 }
-
-// export default function HomepageFeatures() {
-//   return (
-//     <section className={styles.features}>
-//       <div className="container">
-//         <div className="row">
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }

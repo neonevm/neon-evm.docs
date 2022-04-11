@@ -1,17 +1,19 @@
-# Neon and Ethereum Gas Calculators give different Results
+---
+title: Neon and Ethereum Gas Calculators Give Different Results
+---
 
 ### Problem
-In Neon EVM, a calculator is implemented to account the gas consumption.
+In Neon EVM, a calculator is implemented to account for the gas consumption.
 Despite the fact that this calculator is implemented in the same way as in Ethereum, sometimes it shows different results in gas calculations on tests.  
 
-Since contracts for Neon EVM can be created using various languages (including *Solidity/Viper/others*), these contracts can implement their own gas counting method.  
+Since contracts for Neon EVM can be created using various languages (including *Solidity/Viper*), these contracts can implement their own gas counting method.  
 
 Let's assume that the Ethereum network contract implements the following operations:
   * Calculation of gas consumption using their own methods.
   * Calculation of gas consumption using the EVM calculator.
   * Comparison of the results obtained.
 
-Since the results may be different, this method will not be able to work.
+Since the results may be different, this method will not work.
 
 At the moment, the following is known about this bug:
   * The error is in the Neon EVM code.
@@ -22,6 +24,5 @@ At the moment, the following is known about this bug:
 
 Due to a bug in the Neon EVM code, the result of such checks may be incorrect.
 
-### When will the bug be fixed
+### When will the bug be fixed?
 Investigating and fixing the bug will start after MVP on Mainnet.
-

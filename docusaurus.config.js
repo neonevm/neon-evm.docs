@@ -3,6 +3,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
+
   title: 'Neon Docs',
   tagline: 'Neon EVM is an open source project implementing the Ethereum virtual machine on Solana.',
   url: 'https://doc.neonlabs.org', // !!! Path to the docs main page
@@ -15,7 +16,8 @@ module.exports = {
   themeConfig: {
     image: 'img/og_image.png',
     algolia: {
-      apiKey: 'd6087190dcafb13244b08a148f16fd70',
+      apiKey: '0f824db4cd55cfd5a55e3e586cad5dbc',
+      appId: "BWG2PNCWQK",
       indexName: 'neon-labs',
       contextualSearch: false,
       inputSelector: 'search something...',
@@ -30,27 +32,20 @@ module.exports = {
         src: 'img/neon-logo.png',
       },
       items: [
-//        {
-//          type: 'doc',
-//          docId: 'intro', // Tutorial
-//          position: 'left',
-//          label: 'Tutorial',
-//        },
-//        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          to: 'docs/devportal/metamask_setup',
           label: 'Develop',
           position: 'left',
+          to: 'docs/developing/getting_started',
         },
         {
-          to: 'docs/proxy/connect_to_solana_via_proxy',
           label: 'Operate',
           position: 'left',
+          to: 'docs/operating/operator_guide',
         },
         {
-          to: 'docs/software_manuals/foundational_topics/web3',
-          label: 'Manuals',
+          label: 'Learn',
           position: 'left',
+          to: 'docs/architecture/neon_evm_arch',
         },
         {
           href: 'https://github.com/neonlabsorg',
@@ -67,17 +62,13 @@ module.exports = {
           items: [
             {
               label: 'Introduction',
-              to: '/docs/intro',
+              to: '/docs/about/introduction',
             },
           ],
         },
         {
           title: 'Community',
           items: [
-//            {
-//              label: 'Stack Overflow',
-//              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-//            },
             {
               label: 'Discord',
               href: 'https://discord.com/invite/d9BhxNWTsj', // OK
@@ -115,18 +106,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo. Places "Edit this page" on the bottom
-          // of each page. This is useful for parsing the source code, but not
-          // desirable for making changes directly to the master branch.
-//          editUrl:
-//            'https://github.com/neonlabsorg/neon-evm.docs/blob/master',
         },
-//        blog: {
-//          showReadingTime: true,
-//          // Please change this to your repo.
-//          editUrl:
-//            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
-//        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
