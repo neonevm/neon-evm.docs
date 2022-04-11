@@ -185,6 +185,7 @@ The indexer service indexes all the relevant Ethereum processing metadata consis
           START_SLOT: LATEST
         hostname: indexer
         entrypoint: proxy/run-indexer.sh
+
         networks:
           - net
 
