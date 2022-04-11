@@ -17,6 +17,7 @@ module.exports = {
     algolia: {
       apiKey: 'd6087190dcafb13244b08a148f16fd70',
       indexName: 'neon-labs',
+      contextualSearch: false,
       inputSelector: 'search something...',
       algoliaOptions: { 'facetFilters': ["type:$TYPE"] },
       debug: false,
