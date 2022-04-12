@@ -169,7 +169,7 @@ local | HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
 
 ### Prometheus formulas examples
 
-#### Profit and Loass monitoring
+#### Profit and Loss monitoring
 
 ```promql
 sum (avg by (operator_sol_wallet) (operator_sol_balance) ) * avg by (app) (usd_price_sol) + sum (avg by (operator_neon_wallet) (operator_neon_balance) ) * avg by (app) (usd_price_neon))
@@ -181,7 +181,7 @@ sum (avg by (operator_sol_wallet) (operator_sol_balance) ) * avg by (app) (usd_p
 solana_rpc_health{job="indexer-monitor"}
 ```
 
-#### Postgress DB status
+#### PostgreSQL DB status
 
 ```promql
 postgres_availability{job="indexer-monitor"}
