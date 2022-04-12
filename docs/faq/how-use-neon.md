@@ -2,10 +2,10 @@
 title: How can I use Neon?
 ---
 
-  * [How do I start using dApps deployed on the Neon EVM?](#how-do-i-start-using-dapps-deployed-on-neon-evm)
+  * [How do I start using dApps deployed on the Neon EVM?](#how-do-i-start-using-dapps-deployed-on-the-neon-evm)
   * [What tools does a Neon EVM user need to start using the Neon EVM?](#what-tools-does-a-neon-evm-user-need-to-start-using-the-neon-evm)
   * [What tools does a Neon EVM operator need to run the Neon EVM?](#what-tools-does-a-neon-evm-operator-need-to-run-the-neon-evm)
-  * [How do Neon EVM users pay for using dApps deployed on the Neon EVM?](#how-do-neon-evm-users-pay-for-using-dapps-deployed-on-neon-evm)
+  * [How do Neon EVM users pay for using dApps deployed on the Neon EVM?](#how-do-neon-evm-users-pay-for-using-dapps-deployed-on-the-neon-evm)
   * [What happens if no Neon EVM operators accept my requested Neon transaction?](#what-happens-if-no-neon-evm-operators-accept-my-requested-neon-transaction)
   * [How do I transfer the token contracts deployed on the proxy network to my Phantom wallet?](#how-do-i-transfer-the-token-contracts-deployed-on-the-proxy-network-to-my-phantom-wallet)
 

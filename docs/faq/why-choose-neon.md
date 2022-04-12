@@ -2,9 +2,9 @@
 title: Why should I choose Neon?
 ---
 
-  * [What are the main advantages of the Neon EVM?](#what-are-the-main-advantages-of-neon-evm)
-  * [How are the costs of the Neon EVM so low while maintaining a high transaction throughput?](#how-are-the-costs-of-neon-evm-so-low-while-maintaining-a-high-transaction-throughput)
-  * [Are there any dApps currently running on the Neon EVM?](#are-there-any-dapps-currently-running-on-neon-evm)
+  * [What are the main advantages of the Neon EVM?](#what-are-the-main-advantages-of-the-neon-evm)
+  * [How are the costs of the Neon EVM so low while maintaining a high transaction throughput?](#how-are-the-costs-of-the-neon-evm-so-low-while-maintaining-a-high-transaction-throughput)
+  * [Are there any dApps currently running on the Neon EVM?](#are-there-any-dapps-currently-running-on-the-neon-evm)
 
 ### What are the main advantages of the Neon EVM?
 

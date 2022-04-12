@@ -4,7 +4,7 @@ title: How can I run Neon EVM?
 
   * [Where can I find the Testnet RPC and ChainID?](#where-can-i-find-the-testnet-rpc-and-chainid)
   * [Will the Mainnet addresses for USDC/USDT/BTC/ETH be the same as they are in Testnet?](#will-the-mainnet-addresses-for-usdcusdtbtceth-be-the-same-as-they-are-in-testnet)
-  * [Can I use the Solana Devnet proxy for the Neon EVM?](#can-i-use-the-solana-devnet-proxy-for-neon-evm)
+  * [Can I use the Solana Devnet proxy for the Neon EVM?](#can-i-use-the-solana-devnet-proxy-for-the-neon-evm)
   * [How much should a Neon operator deposit for executing a transaction?](#how-much-should-a-neon-operator-deposit-for-executing-a-transaction)
   * [Is there an explorer to view Neon transactions, or do I use Solana's explorer?](#is-there-an-explorer-to-view-neon-transactions-or-do-i-use-solanas-explorer)
 
