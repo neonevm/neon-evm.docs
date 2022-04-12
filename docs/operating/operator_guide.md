@@ -240,6 +240,7 @@ python3 -m proxy-cli info | python3 -m json.tool
                "status":"FINALIZED_STORAGE",
                "balance":"0.913152"
             }
+         ],
          "holder":[
             {
                "address":"EYb7qSkqS4wSg4wxxawCYThDRMdRhe72W4KdMjAdNbbA",
