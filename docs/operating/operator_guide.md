@@ -149,7 +149,7 @@ local | HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
 | operator_neon_balance      | Neons    | Operator Balance in Neon's     |
 | usd_price_sol              | USD      | Sol Price USD                    |
 | usd_price_neon             | USD      | Neon Price USD                   |
-| gas_price                  | Wei      | Gas Price                        |
+| gas_price                  | alans    | Gas Price                        |
 | operator_fee               | Percent  | Operator Fee                     |
 
 ### Indexer Prometheus Metrics
@@ -157,7 +157,7 @@ local | HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
 | Metrics title            | units         | description                                                       |
 |--------------------------|---------------|-------------------------------------------------------------------|
 | tx_sol_spent             | lamports      | How many lamports being spend in Neon transaction per iteration   |
-| tx_neon_income           | weis          | Neons payed for transaction                                       |
+| tx_neon_income           | alans         | Neons payed for transaction                                       |
 | tx_bpf_per_iteration     | bpf units     | How many BPF cycles was used in each iteration                    |
 | tx_steps_per_iteration   | steps         | How many steps was used in each iteration                         |
 | tx_count                 | tx count      | Count of Neon transactions were completed (independent on status) |
@@ -213,7 +213,7 @@ scrape_configs:
 ### Example of execution
 
 ```shell
-python3 -m proxy-cli info
+docker exec proxy ./proxy-cli.sh info
 ```
 
 ### Commands
@@ -225,7 +225,7 @@ python3 -m proxy-cli info
 #### Output example
 
 ```shell
-python3 -m proxy-cli info | python3 -m json.tool
+docker exec proxy ./proxy-cli.sh info | python3 -m json.tool
 ```
 
 ```json
@@ -265,7 +265,7 @@ python3 -m proxy-cli info | python3 -m json.tool
 | info holder-accounts    | Print list of Holder accounts owned by operator     |
 
 ```shell
-# python3 -m proxy-cli info holder-accounts
+# docker exec proxy ./proxy-cli.sh info holder-accounts
 
 EYb7qSkqS4wSg4wxxawCYThDRMdRhe72W4KdMjAdNbbA
 DEG7mDtzEVq4zUGxxajNCnRPLnumSDPQHGMMC4zyPz9h
@@ -278,7 +278,7 @@ DueRTJ7WvwA2csPoVeheiDnZPXfpVstSuSsffgF8baTE
 | info storage-accounts   | Print list of Storage accounts owned by operator         |
 
 ```shell
-# python3 -m proxy-cli info storage-accounts
+# docker exec proxy ./proxy-cli.sh info storage-accounts
 
 7Jt1HpgrtaKadZgCvEPfAn2p55AJi6bovrH9byVVNNKh
 BkBzYwk7dL8yYAaYxyeS9LrDBuW5vMinPf1WUWQTLMpK
@@ -291,7 +291,7 @@ BkBzYwk7dL8yYAaYxyeS9LrDBuW5vMinPf1WUWQTLMpK
 | info solana-private-key | Print list of Solana accounts and its private key   |
 
 ```shell
-# python3 -m proxy-cli info solana-private-key
+# docker exec proxy ./proxy-cli.sh info solana-private-key
 
 BMp6gEnveANdvSvspESJUrNczuHz1GF5UQKjVLCkAZih    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 99, 114, 88, 57, 110, 109, 112, 70, 52, 110, 56, 98, 85, 81, 122, 52, 74, 118, 77, 100, 77, 57, 106, 101, 84, 53, 86, 81, 102, 117, 117, 70, 51, 87, 102, 89, 98, 90, 111, 71, 56, 119, 55, 84, 82, 53, 53, 84, 56, 76, 85, 107, 54, 52, 50, 121, 110, 116, 68, 90, 121, 53, 121, 65, 54, 76, 86, 112, 109]
 ```
@@ -301,7 +301,7 @@ BMp6gEnveANdvSvspESJUrNczuHz1GF5UQKjVLCkAZih    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 
 | info neon-private-key   | Print list of Neon accounts and its private key |
 
 ```shell
-# python3 -m proxy-cli info neon-private-key
+# docker exec proxy ./proxy-cli.sh info neon-private-key
 
 0xd1b27c35c47bd37398ad6ab642b1bf63aec0ca43    0xa1b2c3d4e5f68dec7c7bc8c0ff17a12274ca46b6b05ec344b9203d2acb39f5be
 ```
@@ -311,7 +311,7 @@ BMp6gEnveANdvSvspESJUrNczuHz1GF5UQKjVLCkAZih    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 
 | info neon-address       | Print list of Neon accounts and their balances plus total balance    |
 
 ```shell
-# python3 -m proxy-cli info neon-address
+# docker exec proxy ./proxy-cli.sh info neon-address
 
 0xb1239ffe4a30d4ad678f42cd5e56ce13c0daf3e9    5.293965780000000000
 0x910bc86b92aa1bda080648ae19216e7ebe8dc340    3.511933000000000000
@@ -325,22 +325,23 @@ total_balance    49.943540400046476000
 | info solana-accounts    | Print list of Solana accounts balances and Resource accounts balances plus total balance   |
 
 ```shell
-# python3 -m proxy-cli info solana-accounts
+# docker exec proxy ./proxy-cli.sh info solana-accounts
 
-BMp6gEnveANdvSvspESJUrNczuHz1GF5UQKjVLCkAZih    8,972.135227520
+BMp6gEnveANdvSvspESJUrNczuHz1GF5UQKjVLCkAZih    8,972.619517760
 holder:
-    BMp6gEnveANdvSvspESJUrNczuHz1GF5UQKjVLCkAZih    8,972.135227520
-    BMp6gEnveANdvSvspESJUrNczuHz1GF5UQKjVLCkAZih    8,972.135227520
+    EYb7qSkqS4wSg4wxxawCYThDRMdRhe72W4KdMjAdNbbA    0.913152000
+    DEG7mDtzEVq4zUGxxajNCnRPLnumSDPQHGMMC4zyPz9h    0.913152000
 storage:
-    BMp6gEnveANdvSvspESJUrNczuHz1GF5UQKjVLCkAZih    8,972.135227520
-    BMp6gEnveANdvSvspESJUrNczuHz1GF5UQKjVLCkAZih    8,972.135227520
-9kPRbbwKL5SYELF4cZqWWFmP88QkKys51DoaUBx8eK73    4,995.550730560
+    62MMKXigkapYUDBo1swJRZvyQjH37WPh8SRvpBD5WS4F    0.913152000
+    BdX7H8cFVJwmmsRjZTYHSfaVVoRGijUkYT3T7FgrdejE    0.913152000
+9kPRbbwKL5SYELF4cZqWWFmP88QkKys51DoaUBx8eK73    4,995.719095600
 holder:
-    9kPRbbwKL5SYELF4cZqWWFmP88QkKys51DoaUBx8eK73    4,995.550730560
-    9kPRbbwKL5SYELF4cZqWWFmP88QkKys51DoaUBx8eK73    4,995.550730560
+    BKLT27mXenjyeoKc7Fn8xkrezrNubuRdzbq19mmxW9vS    0.913152000
+    Wup8BGZ1HiKPo7iw8owzCpgX5fnw2jVsk9gNLpi3Jtq    0.913152000
 storage:
-    9kPRbbwKL5SYELF4cZqWWFmP88QkKys51DoaUBx8eK73    4,995.550730560
-    9kPRbbwKL5SYELF4cZqWWFmP88QkKys51DoaUBx8eK73    4,995.550730560
+    5ky8gugmaB9YhVdgrfkwXxeqnQ2V8zEQ9jtxJKC4Ewg1    0.913152000
+    HhMTo9nvqoiUMiXuDBUfSsbaxUdEicUxVzB7Sb5qZF5C    0.913152000
+...
 total_balance       78,913.573017880
 resource_balance    54.789120000
 ```
