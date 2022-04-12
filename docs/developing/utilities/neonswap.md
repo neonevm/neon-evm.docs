@@ -11,7 +11,7 @@ To swap an ERC-20 token with another token of the same standard using the NeonSw
   * Familiarize yourself with the following:
     * The [Solana network](https://docs.solana.com/clusters).
     * [MetaMask](about/terminology.md#metamask).
-  * The [MetaMask](about/terminology.md#decentralized-application-daapp) wallet must be installed on your device and can be accessed from the browser you are using.
+  * The [MetaMask](about/terminology.md#metamask) wallet must be installed on your device and can be accessed from the browser you are using.
   * Read the guide [How to Connect MetaMask to Solana's Network](wallet/metamask_setup.md).
 
 ## NeonSwap Overview
