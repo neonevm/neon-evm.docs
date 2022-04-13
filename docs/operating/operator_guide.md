@@ -145,8 +145,8 @@ local | HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
 | tx_success_count           | tx count | Count Of Succeeded Txs           |
 | tx_failed_count            | tx count | Count Of Failed Txs              |
 | tx_in_progress             | tx count | Count Of Txs Currently Processed |
-| operator_sol_balance       | Sols     | Operator Balance in Sol's      |
-| operator_neon_balance      | Neons    | Operator Balance in Neon's     |
+| operator_sol_balance       | Sols     | Operator Balance in Sol's        |
+| operator_neon_balance      | Neons    | Operator Balance in Neon's       |
 | usd_price_sol              | USD      | Sol Price USD                    |
 | usd_price_neon             | USD      | Neon Price USD                   |
 | gas_price                  | alans    | Gas Price                        |
@@ -218,8 +218,8 @@ docker exec proxy ./proxy-cli.sh info
 
 ### Commands
 
-| Command                 | Description         |
-|-------------------------|---------------|
+| Command                 | Description                                                                                                                           |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | info                    | Print full accounts (Solana accounts and Neon accounts, their balance and private key \| Resource accounts and their balance) in JSON |
 
 #### Output example
@@ -260,8 +260,8 @@ docker exec proxy ./proxy-cli.sh info | python3 -m json.tool
 }
 ```
 
-| Command                 | Description         |
-|-------------------------|---------------|
+| Command                 | Description                                         |
+|-------------------------|-----------------------------------------------------|
 | info holder-accounts    | Print list of Holder accounts owned by operator     |
 
 ```shell
@@ -275,8 +275,8 @@ DueRTJ7WvwA2csPoVeheiDnZPXfpVstSuSsffgF8baTE
 2rJszXcUPuqJkpoW2ZgMRR7sLytSMDsGkecGAiBWqimD
 ```
 
-| Command                 | Description         |
-|-------------------------|---------------|
+| Command                 | Description                                              |
+|-------------------------|----------------------------------------------------------|
 | info storage-accounts   | Print list of Storage accounts owned by operator         |
 
 ```shell
@@ -290,8 +290,8 @@ BkBzYwk7dL8yYAaYxyeS9LrDBuW5vMinPf1WUWQTLMpK
 2rJszXcUPuqJkpoW2ZgMRR7sLytSMDsGkecGAiBWqimD
 ```
 
-| Command                 | Description         |
-|-------------------------|---------------|
+| Command                 | Description                                         |
+|-------------------------|-----------------------------------------------------|
 | info solana-private-key | Print list of Solana accounts and its private key   |
 
 ```shell
@@ -302,8 +302,8 @@ docker exec proxy ./proxy-cli.sh info solana-private-key
 BMp6gEnveANdvSvspESJUrNczuHz1GF5UQKjVLCkAZih    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 99, 114, 88, 57, 110, 109, 112, 70, 52, 110, 56, 98, 85, 81, 122, 52, 74, 118, 77, 100, 77, 57, 106, 101, 84, 53, 86, 81, 102, 117, 117, 70, 51, 87, 102, 89, 98, 90, 111, 71, 56, 119, 55, 84, 82, 53, 53, 84, 56, 76, 85, 107, 54, 52, 50, 121, 110, 116, 68, 90, 121, 53, 121, 65, 54, 76, 86, 112, 109]
 ```
 
-| Command                 | Description         |
-|-------------------------|---------------|
+| Command                 | Description                                     |
+|-------------------------|-------------------------------------------------|
 | info neon-private-key   | Print list of Neon accounts and its private key |
 
 ```shell
@@ -314,8 +314,8 @@ docker exec proxy ./proxy-cli.sh info neon-private-key
 0xd1b27c35c47bd37398ad6ab642b1bf63aec0ca43    0xa1b2c3d4e5f68dec7c7bc8c0ff17a12274ca46b6b05ec344b9203d2acb39f5be
 ```
 
-| Command                 | Description         |
-|-------------------------|---------------|
+| Command                 | Description                                                          |
+|-------------------------|----------------------------------------------------------------------|
 | info neon-address       | Print list of Neon accounts and their balances plus total balance    |
 
 ```shell
@@ -330,8 +330,8 @@ docker exec proxy ./proxy-cli.sh info neon-address
 total_balance    49.943540400046476000
 ```
 
-| Command                 | Description         |
-|-------------------------|---------------|
+| Command                 | Description                                                                                |
+|-------------------------|--------------------------------------------------------------------------------------------|
 | info solana-accounts    | Print list of Solana accounts balances and Resource accounts balances plus total balance   |
 
 ```shell
