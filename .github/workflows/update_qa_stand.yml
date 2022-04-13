@@ -2,7 +2,7 @@ name: Update QA Stand
 on:
   push:
     branches:
-      - master
+      - cicd-implementation
 
 jobs:
   deploy:
