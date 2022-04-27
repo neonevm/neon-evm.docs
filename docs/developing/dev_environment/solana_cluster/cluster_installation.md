@@ -38,32 +38,33 @@ Once you deploy the environment, you'll have the Solana RPC endpoint working fro
 
 #### docker-compose.yml
 
-        version: "3"
-        services:
-          solana:
-            container_name: solana
-            image: neonlabsorg/solana:${SOLANA_REVISION:-v1.9.12-testnet}
-            environment:
-              SOLANA_URL: http://solana:8899
-              RUST_LOG: solana_runtime::system_instruction_processor=trace,solana_runtime::message_processor=debug,solana_bpf_loader=debug,solana_rbpf=debug
-            expose:
-              - 8899
-              - 8900
-            networks:
-              - net
-            healthcheck:
-              test: [ CMD-SHELL, "solana cluster-version -u http://solana:8899" ]
-              interval: 5s
-              timeout: 10s
-              retries: 10
-              start_period: 10s
-            volumes:
-              - "./solana_state:/opt/solana/config/"
+    version: "3"
 
+    services:
+      solana:
+        container_name: solana
+        image: neonlabsorg/solana:${SOLANA_REVISION:-v1.9.12-testnet}
+        environment:
+          SOLANA_URL: http://solana:8899
+          RUST_LOG: solana_runtime::system_instruction_processor=trace,solana_runtime::message_processor=debug,solana_bpf_loader=debug,solana_rbpf=debug
+        expose:
+          - 8899
+          - 8900
         networks:
-          net:
-            external: yes
-            name: local
+          - net
+        healthcheck:
+          test: [ CMD-SHELL, "solana cluster-version -u http://solana:8899" ]
+          interval: 5s
+          timeout: 10s
+          retries: 10
+          start_period: 10s
+        volumes:
+          - "./solana_state:/opt/solana/config/"
+
+    networks:
+      net:
+        external: yes
+        name: local
 
 #### How to run it in bash
 
@@ -74,7 +75,7 @@ Once you deploy the environment, you'll have the Solana RPC endpoint working fro
 
 <details><summary>2. EVM loader service</summary>
 
-This container helps deploy the Neon EVM base contract onto Solana that listens for incoming connections on the port 8899
+This container helps deploy the Neon EVM base contract onto Solana that listens for incoming connections on the port 8899. It's important to say that this container doesn't work as daemon, it just uploads the Neon EVM contract and finishes with zero return code.
 
 #### docker-compose.yml
 
@@ -88,7 +89,7 @@ This container helps deploy the Neon EVM base contract onto Solana that listens 
           - SOLANA_URL=http://solana:8899
         networks:
           - net
-        command: bash -c "create-test-accounts.sh 1 && deploy-evm.sh"
+        command: bash -c "create-test-accounts.sh 1 && deploy-evm.sh && /opt/spl-token create-account HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU && /opt/spl-token mint HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU 1000000000 --owner /opt/evm_loader-keypair.json -- HX14J4Pp9CgSbWP13Dtpm8VLJpNxMYffLtRCRGsx7Edv"
 
     networks:
       net:
@@ -184,6 +185,7 @@ The indexer service indexes all the relevant Ethereum processing metadata consis
           START_SLOT: LATEST
         hostname: indexer
         entrypoint: proxy/run-indexer.sh
+
         networks:
           - net
 
