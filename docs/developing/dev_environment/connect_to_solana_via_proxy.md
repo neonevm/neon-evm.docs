@@ -15,13 +15,13 @@ The Mainnet, Testnet, and Devnet coins are incompatible with each other. Testnet
 
 ## Device Requirements
 
-The MetaMask wallet must be installed on your device.  
+The MetaMask wallet must be already installed on your device.  
 
-> Although this tutorial uses the *Ubuntu* platform, these instructions can be applied to other Linux platforms.
+> Although this tutorial uses the *Ubuntu* operating system, these instructions can be applied to other Linux distros as well.
 
 ## Option 1: Interacting with the Solana cluster via a proxy hosted on a remote virtual server
 
-### The Network Configuration
+### Network Configuration
   * The [Solana cluster](https://docs.solana.com/cluster/overview) is accessed via a proxy hosted on a remote virtual server.
   * Solana works in test mode (recommended) and the proxy interacts with it through the Neon EVM.
 
@@ -35,13 +35,13 @@ The settings menu window for selecting a network should open.
 
 ### Step 3
 Click `Add Network` in the top-right corner.  
-To connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster, fill in the fields in the open window. For example:
+To connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster, fill in the fields in the open window. For example,
   * `Network Name`: "remote proxy — solana devnet"
   * `New RPC URL`: `https://proxy.devnet.neonlabs.org/solana`
   * `Chain ID`: 245022926
   * `Currency Symbol`: NEON
 
-To connect to the Solana [Testnet](https://docs.solana.com/clusters#testnet) cluster, fill in the required fields. For example:
+To connect to the Solana [Testnet](https://docs.solana.com/clusters#testnet) cluster, fill in the required fields. For example,
   * `Network Name`: "remote proxy — solana testnet"
   * `New RPC URL`: `https://proxy.testnet.neonlabs.org/solana`
   * `Chain ID`: 245022940
@@ -62,12 +62,12 @@ After filling in the fields, click `Save`. You can now access the [Solana cluste
 
 ## Option 2: Running the Solana cluster via a proxy hosted locally
 
-### The Network Configuration
+### Network Configuration
   * Solana cluster is accessed via the proxy hosted locally.
   * Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used, and the proxy interacts with it through the Neon EVM.
 
 ### Step 1
-Docker images themselves are never "started" and never "running." The Docker run command takes the Docker image as a template and produces a container from it. Before starting your proxy container, you need to start service containers.
+Docker images themselves are never "started" and never "running". The `docker run` command takes the Docker image as a template and produces a container from it. Before starting your proxy container, you need to start service containers.
 
 Make sure that you have a daemon running. If you see something like:
 ```bash
@@ -79,7 +79,8 @@ you need to run the daemon first:
 ```bash
 $ sudo systemctl start docker
 ```
-Currently, Neon EVM proxies are hard-coded to work with PostgreSQL. To connect the proxy to DB, you also need to start the PostgreSQL container before. For a quick start of PostgreSQL, most of the configurable parameters can be left as they are by default, with the exception of the password, which must be set explicitly. To start the PostgreSQL container, you can use the following command:
+
+Currently, Neon EVM proxies are hardcoded to work with PostgresQL. To connect the proxy to a database, you need to start a PostgresQL container. For a quick start of PostgreSQL, most of the configurable parameters can be left as they are by default, with the exception of the password, which must be set explicitly. To start the PostgresQL container, use the following command:
 
 ```bash
 $ sudo docker run --rm -ti --network=host -e POSTGRES_HOST=localhost -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass --name=postgres postgres:14.0
@@ -96,7 +97,7 @@ Start the proxy and connect it to the Docker network:
 $ sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass neonlabsorg/proxy:v0.5.1
 ```
 
-**The command line parameters:**  
+**Command Line Arguments**  
   * `CONFIG=<network>` — specifies a Solana network configuration; `CONFIG=devnet` is recommended.
   * `neonlabsorg/proxy:v0.5.1` — specific Neon EVM proxy.
 
@@ -104,7 +105,7 @@ The Neon EVM address is registered inside `neonlabsorg/proxy:v0.5.1`, so the pro
 
 After executing this command, the proxy will be available at `http://localhost:9090/solana`. This address is set by default.
 
-A proxy connects to a public [Solana cluster RPC endoint](https://docs.solana.com/cluster/rpc-endpoints) depending on the *SOLANA_URL* value set. The table below shows *endpoint* value that are set automatically when specifying *CONFIG*.
+A proxy connects to a public [Solana cluster RPC endpoint](https://docs.solana.com/cluster/rpc-endpoints) depending on the *SOLANA_URL* value set. The table below shows *endpoint* value that are set automatically when specifying *CONFIG*.
 
 CONFIG | RPC endpoint
 :-|:-
