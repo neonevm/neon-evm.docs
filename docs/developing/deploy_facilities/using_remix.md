@@ -16,7 +16,7 @@ Before you start, make sure of the following:
 
 ## Steps to Complete
 
-### Step 1. Set the Remix environment
+### Step 1: Set up the Remix Environment
 
 For Remix to be used to load a smart contract into Neon EVM, Remix must be connected to your MetaMask wallet and run in the `Injected Web3` environment.  
 Go to http://remix.ethereum.org/ and open the `Remix - Ethereum IDE` web application. In the left side menu, select `File explorers`. The `FILE EXPLOPERS` menu will be active (Fig. 1).  
@@ -29,7 +29,7 @@ Fig. 1 — Connecting to localhost
 
 </div>
 
-### Step 2. Create a simple smart contract in Remix
+### Step 2: Create a Simple Smart Contract in Remix
 
 Click on the icon `Create New File` and type the file name in the field that appears below it. For example, helloWorld.sol  
 For now, it is an empty file. To fill it with content, click on the created file name and type the text on the right side of the explorer (or copy your pre-prepared text there) (Fig. 2).  
@@ -42,7 +42,7 @@ Fig. 2 — Loading the helloWorld smart contract
 
 </div>
 
-### Step 3. Compile a smart contract
+### Step 3: Compile a Smart Contract
 
 In the left side menu, select the `Solidity compiler`. The `SOLIDITY COMPILER` menu will be active.  
 Click on the `Compile helloWorld.sol` button to compile the loaded smart contract helloWorld (Fig. 3).  
@@ -66,7 +66,7 @@ Fig. 4 — Compilation details
 
 </div>
 
-### Step 4. Connect Remix to MetaMask
+### Step 4: Connect Remix to MetaMask
 
 Interaction with Neon EVM is carried out through MetaMask. Choose the `Injected Web3` environment to connect Remix with an active account in Metamask (Fig. 5).  
 
@@ -98,7 +98,7 @@ Fig. 7
 
 </div>
 
-### Step 5. Deploy a smart contract in Solana Testnet
+### Step 5: Deploy a Smart Contract on Solana Testnet
 
 In the left side menu, select `Deploy & run transactions`. The `DEPLOY & RUN TRANSACTIONS` menu will become active.  
 

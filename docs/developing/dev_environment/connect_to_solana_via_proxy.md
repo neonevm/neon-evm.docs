@@ -35,21 +35,21 @@ The settings menu window for selecting a network should open.
 
 ### Step 3
 Click `Add Network` in the top-right corner.  
-To connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster, fill in the fields in the open window. For example,
+To connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster, fill in the fields in the open window as follows:
   * `Network Name`: "remote proxy — solana devnet"
   * `New RPC URL`: `https://proxy.devnet.neonlabs.org/solana`
   * `Chain ID`: 245022926
   * `Currency Symbol`: NEON
 
-To connect to the Solana [Testnet](https://docs.solana.com/clusters#testnet) cluster, fill in the required fields. For example,
+To connect to the Solana [Testnet](https://docs.solana.com/clusters#testnet) cluster, fill in the required fields in the open window as follows:
   * `Network Name`: "remote proxy — solana testnet"
   * `New RPC URL`: `https://proxy.testnet.neonlabs.org/solana`
   * `Chain ID`: 245022940
   * `Currency Symbol`: NEON
 
-> **Note:** We recommend that you use Devnet instead of Testnet, as Devnet is more stable and reliable.
+> **Note:** For development purposes, we recommend using `Devnet` instead of `Testnet`, as `Devnet` is more stable and reliable.
 
-To connect to the Solana [Mainnet](https://docs.solana.com/clusters#mainnet-beta) cluster, fill in the fields as in the following example:
+To connect to the Solana [Mainnet](https://docs.solana.com/clusters#mainnet-beta) cluster, fill in the fields in the open window as follows:
   * `Network Name`: "remote proxy — solana mainnet-beta"
   * `New RPC URL`: (will be published after MVP on Mainnet)
   * `Chain ID`: 245022934
@@ -80,7 +80,7 @@ you need to run the daemon first:
 $ sudo systemctl start docker
 ```
 
-Currently, Neon EVM proxies are hardcoded to work with PostgresQL. To connect the proxy to a database, you need to start a PostgresQL container. For a quick start of PostgreSQL, most of the configurable parameters can be left as they are by default, with the exception of the password, which must be set explicitly. To start the PostgresQL container, use the following command:
+Currently, Neon EVM proxies are hardcoded to work with PostgreSQL. To connect the proxy to a database, you need to start a PostgreSQL container. For a quick start of PostgreSQL, most of the configurable parameters can be left as they are by default, with the exception of the password, which must be set explicitly. To start the PostgreSQL container, use the following command:
 
 ```bash
 $ sudo docker run --rm -ti --network=host -e POSTGRES_HOST=localhost -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass --name=postgres postgres:14.0

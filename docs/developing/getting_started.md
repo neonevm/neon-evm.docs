@@ -16,47 +16,51 @@ The Neon EVM is a cross-chain solution that allows dApp developers to access the
 
 To get started quickly with Neon, follow the steps below. 
 
-### Setting up a Neon EVM Environment
+### Step 1: Install MetaMask
+Install MetaMask by clicking the "Download now" on [MetaMask's homepage](https://metamask.io/).
 
-In this section, you will set up a Neon EVM environment to interact with Solana Devnet using MetaMask. Please ensure that MetaMask has already been installed. 
+### Step 2: Create a New MetaMask Account
+Open your MetaMask wallet, and in the upper-right corner, click on the account icon.  
+Click `Create Account` in the dropdown menu and create a new account by giving it a descriptive name.
 
-### Network Configuration
-  * The [Solana cluster](https://docs.solana.com/cluster/overview) is accessed via a proxy hosted on a remote virtual server.
-  * Solana works in test mode (recommended) and the proxy interacts with it through the Neon EVM.
+### Step 3: Connect MetaMask to Neon EVM Devnet
+In this step, you will connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster. There are two ways to do so: using Chainlist.org or manually.
 
-#### Step 1
-Open your MetaMask wallet, and in the upper-right corner, click the identical.  
-Click `Create Account` in the dropdown menu and add one more account to interact with the network configured.
+#### Option A: Connect with Chainlist.org
+Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You should see `Neon EVM Devnet` and `Neon EVM MainNet`.  
 
-#### Step 2
-Open your wallet under the new account and click `Settings` in the dropdown menu.  
-The settings menu window for selecting a network should open.  
+![](img/chainlist_neon.png)
 
-#### Step 3
-Click `Add Network` in the top-right corner.  
-To connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster, fill in the fields in the open window. For example,
+Select `Neon EVM Devnet` and click `Connect Wallet`. A MetaMask pop-up window will show. Click `Next` and then `Connect`. You can now access the [Solana cluster](https://docs.solana.com/clusters) and carry out transactions.
+
+#### Option B: Connect Manually with MataMask
+Alternatively, you can connect to Neon EVM Devnet manually via MetaMask. Open your MetaMask wallet under the new account, click `Ethereum Mainnet`, and then click `Add Network` in the dropdown menu. The settings menu window for adding a new network should open in a new page, as follows.  
+
+![](img/metamask_add_network.png)
+
+fill in the fields in the open window as follows:
   * `Network Name`: "remote proxy — solana devnet"
   * `New RPC URL`: `https://proxy.devnet.neonlabs.org/solana`
   * `Chain ID`: 245022926
   * `Currency Symbol`: NEON
 
-#### Step 4
+![](img/metamask_devnet_config.png)
+
 After filling in the fields, click `Save`. You can now access the [Solana cluster](https://docs.solana.com/clusters) and carry out transactions.
 
-### Migrating dApps to the Neon EVM
+### Step 5: Migrating the NeonSwap dApp to the Neon EVM
 
-[🔘 Migrating NeonSwap to the Neon EVM](developing/deploy_facilities/migrating_dapps.md)
+Now that you have your Neon development environment set up, it is time to port a sample dApp, [NeonSwap](about/terminology.md#neonswap), over to Neon. Doing so requires no software code changes and once done the smart contracts will be running on [Solana](https://docs.solana.com/introduction). NeonSwap is a Uniswap v2 fork and an ideal set of contracts to demo how easy migrations can be done. 
+
+For more details, please refer to [🔘 Migrating NeonSwap to the Neon EVM](developing/deploy_facilities/migrating_dapps.md).
 
 ## Deploying dApps
+
+Deploying dApps on Neon is easy and you can do so with [Remix](https://remix-project.org/), [Truffle](https://trufflesuite.com/), and [Hardhat](https://hardhat.org/). 
 
 [🔘 Using Remix](developing/deploy_facilities/using_remix.md) — Example of deploying smart contracts using Remix.  
 [🔘 Using Truffle](developing/deploy_facilities/using_truffle.md) — Example of deploying smart contracts using Truffle.  
 [🔘 Using Hardhat](developing/deploy_facilities/using_hardhat.md) — Example of deploying smart contracts using Hardhat.  
-
-## Neon EVM Architecture
-
-[🔘 Ethereum and Solana capabilities in a single solution](architecture/eth_sol_solution.md) — Describes a unique solution that allows Ethereum users to use the key features of Solana and vice versa.  
-[🔘 Overview of Neon EVM architecture](architecture/neon_evm_arch.md) — Describes the architectural solutions built into Neon EVM that enable fast transaction processing for Ethereum users.  
 
 ## Fundamental Topics
 
@@ -67,3 +71,5 @@ If you are new to Neon EVM development, we recommend starting from the very begi
 [🔘 Ethereum transaction](architecture/core_aspects/transaction.md) — A cryptographically signed instruction from an account.  
 [🔘 Block](architecture/core_aspects/block.md) — A special structure for recording a group of transactions in blockchain systems.  
 [🔘 Gas](architecture/core_aspects/gas.md) — Computational power represented in tokens. Required to process transactions.
+[🔘 Ethereum and Solana capabilities in a single solution](architecture/eth_sol_solution.md) — Describes a unique solution that allows Ethereum users to use the key features of Solana and vice versa.  
+[🔘 Overview of Neon EVM architecture](architecture/neon_evm_arch.md) — Describes the architectural solutions built into Neon EVM that enable fast transaction processing for Ethereum users.  
