@@ -1,5 +1,5 @@
 ---
-title: Choosing a Neon Proxy
+title: (Optional) Choosing a Remote Neon Proxy RPC
 ---
 
 *This guide describes how to choose a Neon proxy to send a transaction to Solana.*
