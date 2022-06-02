@@ -17,14 +17,10 @@ The Neon EVM is a cross-chain solution that allows dApp developers to access the
 To get started quickly with Neon, follow the steps below. 
 
 ### Step 1: Install MetaMask
-Install MetaMask by clicking the "Download now" on [MetaMask's homepage](https://metamask.io/).
+Install MetaMask by following the setup instructions on the [Installing MetaMask](wallet/metamask_setup.md#installing-metamask) page.
 
-### Step 2: Create a New MetaMask Account
-Open your MetaMask wallet, and in the upper-right corner, click on the account icon.  
-Click `Create Account` in the dropdown menu and create a new account by giving it a descriptive name.
-
-### Step 3: Connect MetaMask to Neon EVM Devnet
-In this step, you will connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster. There are two ways to do so: using Chainlist.org or manually.
+### Step 2: Connect MetaMask to the Neon EVM Devnet
+There are two ways to connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster: using Chainlist.org or manually.
 
 #### Option A: Connect with Chainlist.org
 Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You should see `Neon EVM Devnet` and `Neon EVM MainNet`.  
@@ -33,22 +29,10 @@ Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You
 
 Select `Neon EVM Devnet` and click `Connect Wallet`. A MetaMask pop-up window will show. Click `Next` and then `Connect`. You can now access the [Solana cluster](https://docs.solana.com/clusters) and carry out transactions.
 
-#### Option B: Connect Manually with MataMask
-Alternatively, you can connect to Neon EVM Devnet manually via MetaMask. Open your MetaMask wallet under the new account, click `Ethereum Mainnet`, and then click `Add Network` in the dropdown menu. The settings menu window for adding a new network should open in a new page, as follows.  
+#### Option B: Connect Manually with MetaMask
+Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#setting-up-an-rpc-network).
 
-![](img/metamask_add_network.png)
-
-fill in the fields in the open window as follows:
-  * `Network Name`: "remote proxy — solana devnet"
-  * `New RPC URL`: `https://proxy.devnet.neonlabs.org/solana`
-  * `Chain ID`: 245022926
-  * `Currency Symbol`: NEON
-
-![](img/metamask_devnet_config.png)
-
-After filling in the fields, click `Save`. You can now access the [Solana cluster](https://docs.solana.com/clusters) and carry out transactions.
-
-### Step 5: Migrating the NeonSwap dApp to the Neon EVM
+### Step 3: Migrating the NeonSwap dApp to the Neon EVM
 
 Now that you have your Neon development environment set up, it is time to port a sample dApp, [NeonSwap](about/terminology.md#neonswap), over to Neon. Doing so requires no software code changes and once done the smart contracts will be running on [Solana](https://docs.solana.com/introduction). NeonSwap is a Uniswap v2 fork and an ideal set of contracts to demo how easy migrations can be done. 
 
