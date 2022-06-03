@@ -51,7 +51,7 @@ Functionality of interface modules:
 
 ### Restrictions
 
-According to SPL token structure, u64 is used to store the balance. (In ERC-20, it's u256). Based on u64, maximum balance and transfer amounts are restricted by (2^64-1)/(10^9) (for 9 decimals of accuracy).
+According to the SPL token structure, an unsigned 64-bit floating point number is used to store the balance. (In ERC-20, it's an unsigned 256-bit floating point number). Based on the unsigned 64-bit floating point standard, the maximum balance and transfer amount is (2^64-1)/(10^9), with 9 decimals of accuracy.
 
 ### Finding the Token Account Address
 

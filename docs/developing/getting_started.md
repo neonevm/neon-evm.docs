@@ -54,6 +54,6 @@ If you are new to Neon EVM development, we recommend starting from the very begi
 [🔘 Ethereum account](architecture/core_aspects/account.md) — An entity with an ETH balance that can send transactions on Ethereum.  
 [🔘 Ethereum transaction](architecture/core_aspects/transaction.md) — A cryptographically signed instruction from an account.  
 [🔘 Block](architecture/core_aspects/block.md) — A special structure for recording a group of transactions in blockchain systems.  
-[🔘 Gas](architecture/core_aspects/gas.md) — Computational power represented in tokens. Required to process transactions.
+[🔘 Gas](architecture/core_aspects/gas.md) — Computational power represented in tokens. Required to process transactions.  
 [🔘 Ethereum and Solana capabilities in a single solution](architecture/eth_sol_solution.md) — Describes a unique solution that allows Ethereum users to use the key features of Solana and vice versa.  
 [🔘 Overview of Neon EVM architecture](architecture/neon_evm_arch.md) — Describes the architectural solutions built into Neon EVM that enable fast transaction processing for Ethereum users.  

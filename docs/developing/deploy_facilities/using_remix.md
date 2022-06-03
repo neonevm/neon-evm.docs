@@ -19,6 +19,7 @@ Before you start, make sure of the following:
 ### Step 1: Set up the Remix Environment
 
 For Remix to be used to load a smart contract into Neon EVM, Remix must be connected to your MetaMask wallet and run in the `Injected Web3` environment.  
+
 Go to http://remix.ethereum.org/ and open the `Remix - Ethereum IDE` web application. In the left side menu, select `File explorers`. The `FILE EXPLOPERS` menu will be active (Fig. 1).  
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
@@ -31,8 +32,9 @@ Fig. 1 — Connecting to localhost
 
 ### Step 2: Create a Simple Smart Contract in Remix
 
-Click on the icon `Create New File` and type the file name in the field that appears below it. For example, helloWorld.sol  
-For now, it is an empty file. To fill it with content, click on the created file name and type the text on the right side of the explorer (or copy your pre-prepared text there) (Fig. 2).  
+Click on the icon `Create New File` and type the file name in the field that appears below it. For example, helloWorld.sol.  
+
+At this point, it is an empty file. To fill it with content, click on the created file name and type the text on the right side of the explorer (or copy your pre-prepared text there) (Fig. 2).  
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 
@@ -45,6 +47,7 @@ Fig. 2 — Loading the helloWorld smart contract
 ### Step 3: Compile a Smart Contract
 
 In the left side menu, select the `Solidity compiler`. The `SOLIDITY COMPILER` menu will be active.  
+
 Click on the `Compile helloWorld.sol` button to compile the loaded smart contract helloWorld (Fig. 3).  
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
@@ -168,5 +171,5 @@ Fig. 13 — Calling the smart contract methods
 
 ----
 
-> **Useful links**  
+> **Useful Links**  
 > https://ethereum.org/en/developers/tutorials/deploying-your-first-smart-contract/

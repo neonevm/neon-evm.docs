@@ -2,8 +2,8 @@
 title: NeonSwap
 ---
 
-## Goal
-To swap an ERC-20 token with another token of the same standard using the NeonSwap application.
+## The Goal
+The goal of this article is to show how to swap an ERC-20 token with another token of the same standard using the NeonSwap application.
 
 *Condition:* The ERC-20 token can be any [SPL token](about/terminology.md#spl-token) whose contract complies with the [ERC-20 standard](about/terminology.md#erc-20) and is deployed on the Neon EVM.
 
@@ -12,7 +12,7 @@ To swap an ERC-20 token with another token of the same standard using the NeonSw
     * The [Solana network](https://docs.solana.com/clusters).
     * [MetaMask](about/terminology.md#metamask).
   * The [MetaMask](about/terminology.md#metamask) wallet must be installed on your device and can be accessed from the browser you are using.
-  * Read the [How to Connect MetaMask to Solana's Network](wallet/metamask_setup.md) gudie.
+  * Read the [How to Connect MetaMask to Solana's Network](wallet/metamask_setup.md) guide.
 
 ## NeonSwap Overview
 
@@ -20,14 +20,14 @@ To swap an ERC-20 token with another token of the same standard using the NeonSw
 
   NeonSwap is an open-source dApp whose main function is to provide the services required to deploy Ethereum contracts on the Neon EVM. In Ethereum, transactions such as exchanging one token for another, require the deployment of contracts. These contracts operate using their specific services and cannot be deployed outside of this environment.
 
-  We want to demonstrate that our Neon EVM product allows you to transfer your applications from Ethereum to Solana while ensuring that they function reliably. The NeonSwap infrastructure provides full support for your applications on the Neon EVM, as well as the swap interface on a separate server. No changes are required to port applications over to Neon using the NeonSwap service.
+  The Neon EVM product allows you to transfer applications from Ethereum to Solana while ensuring that they function reliably. The NeonSwap infrastructure provides full support for applications on the Neon EVM, as well as the swap interface on a separate server. No changes are required to port applications over to Neon using the NeonSwap service.
 
-  > **[NeonSwap](about/terminology.md#neonswap)** service provides an opportunity for Ethereum developers to migrate their applications to the Neon EVM without any difficulties.
+  > The **[NeonSwap](about/terminology.md#neonswap)** service provides an opportunity for Ethereum developers to migrate their applications to the Neon EVM without any difficulties.
 
 ## Steps
 The NeonSwap application allows any user to swap one token for another. You just need to connect your wallet to the application following the step-by-step instructions. Swapping tokens will be carried out automatically without sending funds to the exchange. There are some gas transaction fees to pay with the application.
 
-As an example, this tutorial outlines the exchange of ETH->USDT tokens.
+As an example, this tutorial outlines an exchange of ETH tokens to USDT tokens.
 
 ### Step 1: Open the NeonSwap application and connect your wallet
 Go to the [NeonSwap](https://neonswap.live/) page to call the NeonSwap application. Before you can make a swap, you need to connect your wallet. Click `Connect Wallet` on the swap screen.
@@ -73,7 +73,7 @@ To check the balance of the token being sold, click `max` (next to the token sym
 
 If there are not enough tokens in the pool to exchange, NeonSwap will warn you by issuing the message "Insufficient liquidity for this trade".
 
-In our case, we exchange ETH tokens for USDT tokens. Let's specify the number of tokens to be exchanged equal to 10. Neon Swap will indicate the expected number of purchased USDT tokens, corresponding to 2.49176 at the exchange rate before our transaction.
+In our case, we want to exchange ETH tokens for USDT tokens. Let's specify the number of tokens to be exchanged as 10. Neon Swap will indicate the expected number of purchased USDT tokens, corresponding to 2.49176 at the exchange rate before our transaction.
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 

@@ -2,19 +2,19 @@
 title: Faucet
 ---
 
-You can request Test NEON tokens on Solana devnet with the Neon Faucet.
+You can request Test NEON tokens on the Solana devnet using the Neon Faucet.
 
 ## Requesting Test NEON Tokens via the User Interface
 
 ### Step 1
-Set up MetsMask by following the [Setting up MetaMask](../../wallet/metamask_setup#installing-metamask) guide
+Set up MetaMask by following the [Setting up MetaMask](../../wallet/metamask_setup#installing-metamask) guide.
 
 ### Step 2
-Go to the [Neonswap Faucet page](https://neonswap.live/#/get-tokens) to request test tokens
+Go to the [Neonswap Faucet page](https://neonswap.live/#/get-tokens) to request test tokens.
 
 ### Step 3
 Connect your wallet:
-- Click on the `CONNECT WALLET` button
+- Click on the `CONNECT WALLET` button.
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
@@ -22,7 +22,7 @@ Connect your wallet:
 
 </div>
 
-- Click on the `CONNECT METAMASK` button
+- Click on the `CONNECT METAMASK` button.
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 

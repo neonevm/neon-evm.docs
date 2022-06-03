@@ -23,8 +23,8 @@ As soon as the latest command is completed, the proxy will start to deploy the N
 ---  
 
 > **Note:**  
-> As a proxy, you can use the dedicated Neon server, or a separate server that you will need to deploy and log into.
+> For your proxy, you can use the dedicated Neon server, or a separate server that you will need to deploy and log into.
 >
-> As a Solana endpoint, you can use a separate node hosted on Devnet or Testnet.  
+> For the Solana endpoint, you can use a separate node hosted on Devnet or Testnet.  
 >
 You can also use a Solana node that is not hosted on any network. In this case, you will need to configure this node and synchronize it with the Devnet or Testnet network. Then you will need to deploy the local proxy and configure it to work with this node. You will also need to connect to the EVM loader deployed within Devnet or Testnet.

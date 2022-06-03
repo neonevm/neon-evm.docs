@@ -2,11 +2,11 @@
 title: Using Hardhat
 ---
 
-Hardhat is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers manage and automate the recurring tasks that are inherent to the process of building smart contracts and dApps, as well as easily introduce more functionality around this workflow. This means compiling, running, and testing smart contracts at the very core.
+Hardhat is a development environment to compile, deploy, test, and debug Ethereum software. It helps developers manage and automate the recurring tasks that are inherent to the process of building smart contracts and dApps, as well as easily introduce more functionality around this workflow. This means compiling, running, and testing smart contracts at the very core.
 
-We will not describe the details of using the Hardhat framework here. You can find all necessary documentation by following this link: https://hardhat.org/getting-started/#overview.
+The details of using the Hardhat framework will not be described here. You can find all necessary documentation by following [this link](https://hardhat.org/getting-started/#overview).
 
-As Neon is an Ethereum-compatible virtual machine and RPC, you can easily migrate existing Hardhat projects to it. The only thing required is the correct **hardhat.config.js** file. You can refer to the code below as an example of config-file content:
+As Neon is an Ethereum-compatible virtual machine and RPC, which allows for easy migration of existing Hardhat projects. The only thing required is the correct **hardhat.config.js** file. The code below is an example of config-file content:
 
 ```js
 require("@nomiclabs/hardhat-waffle");
@@ -37,4 +37,4 @@ module.exports = {
 
 ## Example Hardhat Project
 
-You can obtain an example Hardhat project from here: https://github.com/neonlabsorg/examples/tree/main/simple-erc20-hardhat.
+You can obtain an example Hardhat project from [here](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-hardhat).

@@ -6,7 +6,7 @@ title: Setting up a Local Solana Cluster
 
 The [Neon EVM](https://neon-labs.org/) is a solution that performs transaction execution outside layer 1. The development process can be run on any modern Linux or Mac system, though this document is based on an Ubuntu 20.04 experience.
 
-All the services in the **`Neon EVM environment`** presented by the docker-compose configuration files can be interchangeably substituted with their experimental versions in order to develop and test each service independently. To resolve issues, the Neon engineer has to be able to replace any service with a customized one according to the current requirements. You are welcome to change the following `docker-compose` configuration files based on your needs. Also, you can bring them altogether in a single docker-compose file, it is important to provide dependencies according to the following sequence.
+All the services in the **`Neon EVM environment`** presented by the docker-compose configuration files can be interchangeably substituted with their experimental versions in order to develop and test each service independently. To resolve issues, the Neon engineer has to be able to replace any service with a customized one according to the current requirements. You are welcome to change the following `docker-compose` configuration files based on your needs. You can also combine them in a single docker-compose file, though it is important to provide dependencies according to the following sequence.
 
 Before you start to build your local environment, make sure you have all the [prerequisites](#prerequisites).
 
@@ -20,13 +20,13 @@ Before you start to build your local environment, make sure you have all the [pr
 
 ## Setting up the Neon Local Workspace Environment
 
-Currently, the most flexible way is to use the set of independent docker containers sharing the common external network. To create the network called **`local`** that will be used over the docker containers, just input the following command:
+Currently, the most flexible way to setup the environment is to use the set of independent docker containers sharing the common external network. To create the network called **`local`** that will be used over the docker containers, just input the following command:
 
 ```bash
 docker network create local
 ```
 
-If you want to bind some ports from the service to the host machine to be able to connect them and work with a service independently, just extend a `docker-compose.yml` configurations with the `ports` instruction. For example, you can bind the Solana (8899, 8900)- or Proxy (9090)-related ports to the host machine this way.
+If you want to bind some ports from the service to the host machine to be able to connect them and work with a service independently, just extend a `docker-compose.yml` configuration with the `ports` instruction. For example, you can bind the Solana (8899, 8900)- or Proxy (9090)-related ports to the host machine this way.
 
 After establishing the local network, it's time to start the following containers:
 
@@ -66,7 +66,7 @@ Once you deploy the environment, you'll have the Solana RPC endpoint working fro
         external: yes
         name: local
 
-#### How to run it in bash
+#### How to Run it in Bash
 
     $ docker-compose -f solana/docker-compose.yml pull
     $ docker-compose -f solana/docker-compose.yml up -d
@@ -75,7 +75,7 @@ Once you deploy the environment, you'll have the Solana RPC endpoint working fro
 
 <details><summary>2. EVM loader service</summary>
 
-This container helps deploy the Neon EVM base contract onto Solana that listens for incoming connections on the port 8899. It's important to say that this container doesn't work as daemon, it just uploads the Neon EVM contract and finishes with zero return code.
+This container helps deploy the Neon EVM base contract onto Solana that listens for incoming connections on the port 8899. It's important to mention that this container doesn't work as daemon, it just uploads the Neon EVM contract and finishes with a zero return code.
 
 #### docker-compose.yml
 
@@ -96,7 +96,7 @@ This container helps deploy the Neon EVM base contract onto Solana that listens 
         external: yes
         name: local
 
-#### How to Run It in Bash
+#### How to Run it in Bash
 
        $ docker-compose -f evm-loader/docker-compose.yml pull
        $ docker-compose -f evm-loader/docker-compose.yml up
@@ -155,7 +155,7 @@ This container aims to handle the database that stores all the relevant Ethereum
         external: yes
         name: local
 
-#### How to Run It in Bash
+#### How to Run it in Bash
 
     $ docker-compose -f postgres/docker-compose.yml pull
     $ docker-compose -f postgres/docker-compose.yml up -d
@@ -194,7 +194,7 @@ The indexer service indexes all the relevant Ethereum processing metadata consis
         external: yes
         name: local
 
-#### How To Run It in Bash
+#### How To Run it in Bash
 
     $ docker-compose -f indexer/docker-compose.yml pull
     $ docker-compose -f indexer/docker-compose.yml up -d
@@ -202,7 +202,7 @@ The indexer service indexes all the relevant Ethereum processing metadata consis
 </details>
 
 <details><summary>5. Proxy service</summary>
-The Proxy service is a core service that allows Ethereum-like transactions to be processed on [Solana](https://docs.solana.com/introduction), taking full advantage of the functionality native to Solana, including the ability to execute transactions in parallel. It's available on 9090 port.
+The Proxy service is a core service that allows Ethereum-like transactions to be processed on Solana, taking full advantage of the functionality native to Solana, including the ability to execute transactions in parallel. It's available on 9090 port.
 
 #### docker-compose.yml
 
@@ -242,7 +242,7 @@ The Proxy service is a core service that allows Ethereum-like transactions to be
         external: yes
         name: local
 
-#### How to Run It in Bash
+#### How to Run it in Bash
 
     $ docker-compose -f proxy/docker-compose.yml pull
     $ docker-compose -f proxy/docker-compose.yml up -d
@@ -251,7 +251,7 @@ The Proxy service is a core service that allows Ethereum-like transactions to be
 
 
 <details><summary>6. Faucet service</summary>
-The Faucet service provides the liquidity in `NEON` to all the accounts that are mentioned in the incoming requests.
+The Faucet service provides the liquidity in 'NEON' to all the accounts that are mentioned in the incoming requests.
 
 #### docker-compose.yml
 
@@ -286,7 +286,7 @@ The Faucet service provides the liquidity in `NEON` to all the accounts that are
         external: yes
         name: local
 
-#### How to Run It in Bash
+#### How to Run it in Bash
 
     $ docker-compose -f faucet/docker-compose.yml pull
     $ docker-compose -f faucet/docker-compose.yml up -d
@@ -296,7 +296,7 @@ The Faucet service provides the liquidity in `NEON` to all the accounts that are
 
 <details><summary>7. Full test suite service</summary>
 
-The full test suite provides in general the [OpenZeppelin tests](https://docs.openzeppelin.com/learn/writing-automated-tests) to make sure the infrastructure deployed by this guide works properly. At the end, the `full test suite` outputs the result in the following form:
+The full test suite, generally speaking, provides the [OpenZeppelin tests](https://docs.openzeppelin.com/learn/writing-automated-tests) to make sure the infrastructure deployed by this guide works properly. At the end, the `full test suite` outputs the result in the following form:
 
     Full test passing - 1743
     Full test threshold - 1700
@@ -343,7 +343,7 @@ The full test suite provides in general the [OpenZeppelin tests](https://docs.op
     FTS_USERS_NUMBER=15
     FTS_JOBS_NUMBER=8
 
-#### How to Run It in Bash
+#### How to Run it in Bash
 
     $ docker-compose -f full_test_suite/docker-compose.yml pull
     $ docker-compose -f full_test_suite/docker-compose.yml --env-file full_test_suite/local.env up
@@ -352,7 +352,7 @@ The full test suite provides in general the [OpenZeppelin tests](https://docs.op
 
 ## Logs
 
-After following the previous steps, you will have four running containers for the Neon EVM local environment: **solana**, **`postgres`**, **`proxy`**, **`indexer`**:
+After following the previous steps, you will have four running containers for the Neon EVM local environment: **`solana`**, **`postgres`**, **`proxy`**, **`indexer`**:
 
 ```
 49c864f47ccd   neonlabsorg/solana:v1.9.12-testnet   "./run.sh"               About an hour ago   Up About an hour (healthy)   8003/udp, 0.0.0.0:8899-8900->8899-8900/tcp, :::8899-8900->8899-8900/tcp, 9900/tcp   solana
@@ -378,7 +378,7 @@ Set up the "MetaMask" Chromium extension to connect to the proxy via Custom RPC 
 
 </div>
 
-Note: Once you create or import a new account in MetaMask, some NEONs will be airdropped into it.
+Note: Once you create or import a new account in MetaMask, some NEON tokens will be airdropped into it.
 
 Open Remix (also in Chromium) and select `Injected Web3` environment. You can deploy EVM-wrapped smart contracts on Solana and input these instructions:  
 
@@ -392,7 +392,7 @@ Open Remix (also in Chromium) and select `Injected Web3` environment. You can de
 
 Truffle is a popular platform to deploy and test Solidity programs. This section shows you how to check the compatibility of the Neon EVM and the Truffle suite.
 
-In the new terminal, create a Truffle project and deploy contracts into EVM:
+In the new terminal, create a Truffle project and deploy contracts into the EVM:
 
 ```sh
 $ sudo npm install -g truffle
@@ -458,7 +458,7 @@ contract Storage {
 
 ### Testing
 
-You can now start testing `Storage` invocations with Truffle facility:
+You can now start testing `Storage` invocations with Truffley:
 
 ```sh
 $ echo 'const Storage = artifacts.require("Storage");
@@ -483,7 +483,7 @@ $ truffle test test/Storage.test.js --network solana
 
 ### Possible Problems
 
-If for some reasons you remove the Solana container and run it again, then all related accounts stored in foreign systems get invalid from that moment. That's why you need to re-run the proxy container and reset the state of MetaMask and Truffle as well, to make all relations consistent.
+If, for some reason, you remove the Solana container and run it again, then all related accounts stored in foreign systems become invalid from that moment on. To avoid this, re-run the proxy container and reset the state of MetaMask and Truffle as well, to make all relations consistent.
 
 To reset the MetaMask state, follow the steps at `Settings`, `Advanced`, `Reset Account`.
 
