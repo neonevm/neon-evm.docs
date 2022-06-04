@@ -42,8 +42,9 @@ module.exports = {
                    'developing/dev_environment/op3_local_proxy_local_solana',
                    'developing/dev_environment/remote_proxy',
                    'developing/dev_environment/remote_solana',
-                   'developing/dev_environment/local_proxy',
                    'developing/dev_environment/local_solana',
+                   'developing/dev_environment/local_proxy',
+                   'developing/dev_environment/faucet_and_test_suite_services',
                    'developing/dev_environment/choosing_proxy',
                  ]
         }, {
@@ -67,6 +68,17 @@ module.exports = {
             'developing/utilities/neonpass',
             'developing/utilities/neonswap',
             'developing/utilities/faucet',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Integrate',
+          items: [
+            'developing/integrate/introduction',
+            'developing/integrate/neon_transfer_sdk',
+            'developing/integrate/wallets',
+            'developing/integrate/oracles',
+            'developing/integrate/indexers',
           ]
         }
       ]

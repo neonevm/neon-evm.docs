@@ -28,13 +28,13 @@ docker network create local
 
 If you want to bind some ports from the service to the host machine to be able to connect them and work with a service independently, just extend a `docker-compose.yml` configuration with the `ports` instruction. For example, you can bind the Solana (8899, 8900)- or Proxy (9090)-related ports to the host machine this way.
 
-After establishing the local network, it's time to start the following containers:
+After setting up the local network, it is time to start the Solana validator service and EVM loader service containers.
 
-<details><summary>1. Solana validator service</summary>
+### Step 1: Solana Validator Service
 
-This service presents the Solana validator running inside the container
+This service presents the Solana validator running inside the container.
 
-Once you deploy the environment, you'll have the Solana RPC endpoint working from the docker container at the 9090 port. The folder named "solana_state" will be created as well. It contains the Solana ledger to keep the state over restarts. If you need to reset the ledger, just remove this folder and it'll be recreated the next time you run docker-compose.
+Once you deploy the environment, you will have the Solana RPC endpoint working from the docker container at port `9090`. A folder named `solana_state` will be created also and it contains the Solana ledger to keep the state over restarts. If you need to reset the ledger, just remove this folder and it will be recreated the next time you run `docker-compose`.
 
 #### docker-compose.yml
 
@@ -71,11 +71,9 @@ Once you deploy the environment, you'll have the Solana RPC endpoint working fro
     $ docker-compose -f solana/docker-compose.yml pull
     $ docker-compose -f solana/docker-compose.yml up -d
 
-</details>
+### Step 2: EVM Loader Service
 
-<details><summary>2. EVM loader service</summary>
-
-This container helps deploy the Neon EVM base contract onto Solana that listens for incoming connections on the port 8899. It's important to mention that this container doesn't work as daemon, it just uploads the Neon EVM contract and finishes with a zero return code.
+This container helps deploy onto Solana the Neon EVM base contract, which listens for incoming connections on the port `8899`. It is important to note that this container does **not** work as a daemon, it simply uploads the Neon EVM contract and finishes with a return code of `0`.
 
 #### docker-compose.yml
 
@@ -100,255 +98,6 @@ This container helps deploy the Neon EVM base contract onto Solana that listens 
 
        $ docker-compose -f evm-loader/docker-compose.yml pull
        $ docker-compose -f evm-loader/docker-compose.yml up
-</details>
-
-<details><summary>3. Database services</summary>
-
-This container aims to handle the database that stores all the relevant Ethereum processing metadata linked to each other: **`transactions`**, **`blocks`**, **`receipts`**, **`accounts`** etc. This data is consumed by the **indexer** service.
-
-#### docker-compose.yml
-
-    version: "3"
-
-    services:
-      postgres:
-        container_name: postgres
-        image: postgres:14.0
-        command: postgres -c 'max_connections=1000'
-        environment:
-          POSTGRES_DB: neon-db
-          POSTGRES_USER: neon-proxy
-          POSTGRES_PASSWORD: neon-proxy-pass
-        hostname: postgres
-        healthcheck:
-          test: [ CMD-SHELL, "pg_isready -h postgres -p 5432" ]
-          interval: 5s
-          timeout: 10s
-          retries: 10
-          start_period: 5s
-        networks:
-          - net
-        ports:
-          - "127.0.0.1:5432:5432"
-        expose:
-          - "5432"
-
-      dbcreation:
-        container_name: dbcreation
-        image: neonlabsorg/proxy:latest
-        environment:
-          SOLANA_URL: http://solana:8899
-          POSTGRES_DB: neon-db
-          POSTGRES_USER: neon-proxy
-          POSTGRES_PASSWORD: neon-proxy-pass
-          POSTGRES_HOST: postgres
-        entrypoint: proxy/run-dbcreation.sh
-        networks:
-          - net
-        depends_on:
-          postgres:
-            condition: service_healthy
-
-
-    networks:
-      net:
-        external: yes
-        name: local
-
-#### How to Run it in Bash
-
-    $ docker-compose -f postgres/docker-compose.yml pull
-    $ docker-compose -f postgres/docker-compose.yml up -d
-
-</details>
-
-
-<details><summary>4. Indexer service</summary>
-
-The indexer service indexes all the relevant Ethereum processing metadata consisting of **`signatures`**, **`transactions`**, **`blocks`**, **`receipts`**, **`accounts`**, etc. It gathers all this data from the Solana blockchain, filtering them by the EVM contract address. It also makes it possible to provide our users with the Ethereum API according to the data provided by the whole known operators.
-
-#### docker-compose.yml
-
-    version: "3"
-
-    services:
-      indexer:
-        container_name: indexer
-        image: neonlabsorg/proxy:latest
-        environment:
-          SOLANA_URL: http://solana:8899
-          POSTGRES_DB: neon-db
-          POSTGRES_USER: neon-proxy
-          POSTGRES_HOST: postgres
-          POSTGRES_PASSWORD: neon-proxy-pass
-          CONFIG: ci
-          START_SLOT: LATEST
-        hostname: indexer
-        entrypoint: proxy/run-indexer.sh
-
-        networks:
-          - net
-
-    networks:
-      net:
-        external: yes
-        name: local
-
-#### How To Run it in Bash
-
-    $ docker-compose -f indexer/docker-compose.yml pull
-    $ docker-compose -f indexer/docker-compose.yml up -d
-
-</details>
-
-<details><summary>5. Proxy service</summary>
-The Proxy service is a core service that allows Ethereum-like transactions to be processed on Solana, taking full advantage of the functionality native to Solana, including the ability to execute transactions in parallel. It's available on 9090 port.
-
-#### docker-compose.yml
-
-    version: "3"
-
-    services:
-      proxy:
-        container_name: proxy
-        image: neonlabsorg/proxy:latest
-        environment:
-          - POSTGRES_DB=neon-db
-          - POSTGRES_USER=neon-proxy
-          - POSTGRES_PASSWORD=neon-proxy-pass
-          - POSTGRES_HOST=postgres
-          - SOLANA_URL=http://solana:8899
-          - EXTRA_GAS=5000
-          - EVM_LOADER=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io
-          - CONFIG=ci
-          - LOG_NEON_CLI_DEBUG=YES
-          - USE_COMBINED_START_CONTINUE=yes
-          - NEON_CLI_TIMEOUT=60
-          - NEW_USER_AIRDROP_AMOUNT=0
-          - WRITE_TRANSACTION_COST_IN_DB=NO
-          - START_SLOT=LATEST
-          - PERM_ACCOUNT_LIMIT=16
-        hostname: proxy
-        entrypoint: ./proxy/run-proxy.sh
-        ports:
-          - "9090:9090"
-        expose:
-          - "9090"
-        networks:
-          - net
-
-    networks:
-      net:
-        external: yes
-        name: local
-
-#### How to Run it in Bash
-
-    $ docker-compose -f proxy/docker-compose.yml pull
-    $ docker-compose -f proxy/docker-compose.yml up -d
-
-</details>
-
-
-<details><summary>6. Faucet service</summary>
-The Faucet service provides the liquidity in 'NEON' to all the accounts that are mentioned in the incoming requests.
-
-#### docker-compose.yml
-
-    version: "3"
-
-    services:
-
-      faucet:
-        container_name: faucet
-        image: neonlabsorg/faucet:latest
-        environment:
-          - FAUCET_RPC_BIND=0.0.0.0
-          - FAUCET_RPC_PORT=3333
-          - SOLANA_URL=http://solana:8899
-          - NEON_ETH_MAX_AMOUNT=50000
-          - EVM_LOADER=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io
-          - FAUCET_RPC_ALLOWED_ORIGINS=["https://neonswap.live"]
-          - FAUCET_WEB3_ENABLE=false
-          - FAUCET_SOLANA_ENABLE=true
-          - NEON_OPERATOR_KEYFILE=/opt/faucet/id.json
-          - SOLANA_COMMITMENT=confirmed
-        entrypoint: /opt/faucet/faucet --config /opt/proxy/faucet.conf run
-        ports:
-          - 3333:3333
-        expose:
-          - "3333"
-        networks:
-          - net
-
-    networks:
-      net:
-        external: yes
-        name: local
-
-#### How to Run it in Bash
-
-    $ docker-compose -f faucet/docker-compose.yml pull
-    $ docker-compose -f faucet/docker-compose.yml up -d
-
-</details>
-
-
-<details><summary>7. Full test suite service</summary>
-
-The full test suite, generally speaking, provides the [OpenZeppelin tests](https://docs.openzeppelin.com/learn/writing-automated-tests) to make sure the infrastructure deployed by this guide works properly. At the end, the `full test suite` outputs the result in the following form:
-
-    Full test passing - 1743
-    Full test threshold - 1700
-    Check if 1743 is greater or equal 1700
-
-#### full_test_suite/docker-compose.yml
-
-    version: "3"
-
-    services:
-
-      full_test_suite:
-        container_name: ${FTS_CONTAINER_NAME:-full_test_suite}
-        image: ${FTS_IMAGE:-neonlabsorg/full_test_suite:develop}
-        entrypoint: ./run-full-test-suite.sh 2>/dev/null
-        environment:
-          - NETWORK_NAME=${NETWORK_NAME}
-          - PROXY_URL=${PROXY_URL}
-          - NETWORK_ID=${NETWORK_ID}
-          - REQUEST_AMOUNT=${REQUEST_AMOUNT}
-          - FAUCET_URL=${FAUCET_URL}
-          - USE_FAUCET=${USE_FAUCET}
-          - SOLANA_URL=${SOLANA_URL}
-          - FTS_USERS_NUMBER=${FTS_USERS_NUMBER}
-          - FTS_JOBS_NUMBER=${FTS_JOBS_NUMBER}
-
-        networks:
-          - net
-
-    networks:
-      net:
-        external: yes
-        name: local
-
-#### full_test_suite/local.env
-
-    NETWORK_NAME=local
-    PROXY_URL=http://proxy:9090/solana
-    NETWORK_ID=111
-    REQUEST_AMOUNT=20000
-    FAUCET_URL=http://faucet:3333/request_neon
-    USE_FAUCET=true
-    SOLANA_URL=http://solana:8899
-    FTS_USERS_NUMBER=15
-    FTS_JOBS_NUMBER=8
-
-#### How to Run it in Bash
-
-    $ docker-compose -f full_test_suite/docker-compose.yml pull
-    $ docker-compose -f full_test_suite/docker-compose.yml --env-file full_test_suite/local.env up
-
-</details>
 
 ## Logs
 

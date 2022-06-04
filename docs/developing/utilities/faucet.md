@@ -13,7 +13,7 @@ Set up MetaMask by following the [Setting up MetaMask](../../wallet/metamask_set
 Go to the [Neonswap Faucet page](https://neonswap.live/#/get-tokens) to request test tokens.
 
 ### Step 3
-Connect your wallet:
+Connect your MetaMask wallet:
 - Click on the `CONNECT WALLET` button.
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
