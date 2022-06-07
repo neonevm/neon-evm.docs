@@ -2,9 +2,9 @@
 title: "Option 1: Remote Proxy to Remote Solana"
 ---
 
-## Device Requirements
+## Prerequisites
 
-The MetaMask wallet must be already installed on your device.  
+[MetaMask wallet](https://metamask.io/) must be already installed on your device.  
 
 > Although this tutorial uses the *Ubuntu* operating system, these instructions can be applied to other Linux distros as well.
 

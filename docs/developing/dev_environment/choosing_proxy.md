@@ -4,7 +4,7 @@ title: (Optional) Choosing a Remote Neon Proxy RPC
 
 *This guide describes how to choose a Neon proxy to send a transaction to Solana.*
 
-Before sending a transaction to the Neon EVM, users can choose the operator that's best for them to perform the transaction. The operator is not chosen directly, but through the proxies they serve.
+Before sending a transaction to the Neon EVM, users can choose the operator that is optimal for them to perform the transaction. The operator is not chosen directly, but through the proxies they serve.
 
 The Neon EVM provides users with a [table](clusters/neon_proxy_rpc_endpoints.md) containing the [RPC](about/terminology.md#remote-procedure-call-rpc) URLs of all available proxies, each served by a separate operator. Each URL corresponds to the operator's public key, which it uses to sign and send a transaction to the Neon EVM.
 
@@ -27,6 +27,10 @@ To connect to a proxy using MetaMask, follow the instruction [Installing and Set
 
 To connect to a proxy using Truffle, follow the instructions [Using Truffle](developing/deploy_facilities/using_truffle.md). You need to configure `truffle-config.js` by setting the HDWalletProvider library to the RPC URL selected from the [table](clusters/neon_proxy_rpc_endpoints.md).
 
+To deploy dApps using Truffle, please refer to the [Using Truffle](../deploy_facilities/using_truffle.md) guide.
+
 ## Connecting to a Proxy using Hardhat
 
 To connect to a proxy using Hardhat, follow the instructions [Using Hardhat](developing/deploy_facilities/using_hardhat.md). You need to configure `hardhat.config.js` by setting the URL, network_id/chainId to RPC URL selected from the [table](clusters/neon_proxy_rpc_endpoints.md).
+
+To deploy dApps using Hardhat, please refer to the [Using Hardhat](../deploy_facilities/using_hardhat.md) guide.

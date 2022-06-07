@@ -12,13 +12,13 @@ First, set up and host a proxy locally as per [this guide](local_proxy.md). Afte
 
 A proxy connects to a public [Solana cluster RPC endpoint](https://docs.solana.com/cluster/rpc-endpoints) depending on the *SOLANA_URL* value set. The table below shows *endpoint* value that are set automatically when specifying *CONFIG*.
 
-CONFIG | RPC endpoint
+CONFIG | RPC Endpoint
 :-|:-
 devnet | `https://api.devnet.solana.com`
 testnet | `https://api.testnet.solana.com`
 mainnet | `https://api.mainnet-beta.solana.com`
 
-To use a different endpoint, you need to specify the variable `-e SOLANA_URL='http://<Solana-node RPC endpoint>'` on the command line.
+To use a different endpoint, you need to specify the variable `-e SOLANA_URL='http://<Solana node RPC endpoint>'` on the command line. For example, in order to use devnet, add the flag `-e SOLANA_URL='https://api.devnet.solana.com'`.
 
 When a proxy is deployed, it generates a wallet containing a key pair. If you do not need the new wallet and want to use the keys you already have, you need to specify the path to your wallet on the command line. In this case, the proxy will not create a new key pair. The command line will look like the following:  
 
