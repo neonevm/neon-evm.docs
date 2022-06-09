@@ -1,14 +1,14 @@
-# Website
+# Documentation
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+[Docs](https://docs.neon-labs.org/) are built using [Docusaurus 2](https://docusaurus.io/).
 
-## Installation
+### Installation
 
 ```console
 yarn install
 ```
 
-## Local Development
+### Local Development
 
 ```console
 yarn start
@@ -16,7 +16,7 @@ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-## Build
+### Build
 
 ```console
 yarn build
