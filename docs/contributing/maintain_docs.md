@@ -74,7 +74,7 @@ To simplify the deployment to production, you should use a script that will auto
 This script should perform the following operations:
   * Automatically building html files after making changes to https://github.com/neonlabsorg/neon-evm.docs/
   * Pushing the built html files to the html-repository https://github.com/neonlabsorg/neonlabsorg.github.io
-  * Deploying the built html files to the website https://doc.neonlabs.org/
+  * Deploying the built html files to the website https://docs.neon-labs.org/
 
 Unfortunately, at the moment, this script is under development, and therefore you need to perform further actions in manual mode.
 
@@ -83,4 +83,4 @@ To do this, you need to:
   * Write the html files taken from `<my-website>/build` into `<my-html-repo>`
   * Push the `<my-html-repo>` changes to the [html-repository](https://github.com/neonlabsorg/neonlabsorg.github.io) by following the standard procedure.
 
-If all the actions are performed correctly, the changes you have made in Docs will be displayed at https://doc.neonlabs.org/.
+If all the actions are performed correctly, the changes you have made in Docs will be displayed at https://docs.neon-labs.org/.
