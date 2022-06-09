@@ -6,7 +6,7 @@ module.exports = {
 
   title: 'Neon Docs',
   tagline: 'Neon EVM is an open source project implementing the Ethereum virtual machine on Solana.',
-  url: 'https://doc.neon-labs.org', // !!! Path to the docs main page
+  url: 'https://docs.neon-labs.org', // !!! Path to the docs main page
   baseUrl: '/',
   onBrokenLinks: 'throw', // options: throw, warn
   onBrokenMarkdownLinks: 'warn',
@@ -16,11 +16,11 @@ module.exports = {
   themeConfig: {
     image: 'img/og_image.png',
     algolia: {
-      apiKey: '242fd5b1f620c710e15b8b6a8eb89a3d',
-      appId: "L0OU6VTOZ2",
+      apiKey: 'b42bf0be9b7f964aa534f802164b53f8',
+      appId: "IMU5IHYKIJ",
       indexName: 'neon-labs',
       contextualSearch: true,
-      inputSelector: 'search something...',
+      placeholder: 'search something...',
       algoliaOptions: { 'facetFilters': ["type:$TYPE"] },
       debug: false,
       dropdown: true
@@ -96,7 +96,7 @@ module.exports = {
           items: [
             {
               label: 'NeonLabs.org',
-              to: 'https://neonlabs.org', // new
+              to: 'https://neon-labs.org', // new
             },
             {
               label: 'GitHub',
