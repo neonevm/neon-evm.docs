@@ -12,11 +12,11 @@ First, set up and host a proxy locally as per [this guide](local_proxy.md). Afte
 
 Upload the docker-compose-test.yml file to your currently directory using the following command:
 ```bash
-$ wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/master/proxy/docker-compose-test.yml
+wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/master/proxy/docker-compose-test.yml
 ```
 Execute the command:
 ```bash
-$ sudo REVISION=stable docker-compose -f docker-compose-test.yml up -d
+sudo REVISION=stable docker-compose -f docker-compose-test.yml up -d
 ```
 As soon as the latest command is completed, the proxy will start to deploy the Neon EVM in a local Solana node. After that, the proxy and Solana will be available at the URLs `http://localhost:9090/solana` and `http://localhost:8899`, respectively.
 

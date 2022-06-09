@@ -7,19 +7,19 @@ Docker images themselves are never "started" and never "running". The `docker ru
 
 Make sure that you have a daemon running. If you see something like:
 ```bash
-$ docker info
+docker info
 
 Cannot connect to the Docker daemon at <docker.sock>. Is the docker daemon running?
 ```
 you need to run the daemon first:
 ```bash
-$ sudo systemctl start docker
+sudo systemctl start docker
 ```
 
 Currently, Neon EVM proxies are hardcoded to work with PostgreSQL. To connect the proxy to a database, you need to start a PostgreSQL container. For a quick start of PostgreSQL, most of the configurable parameters can be left as they are by default, with the exception of the password, which must be set explicitly. To start the PostgreSQL container, use the following command:
 
 ```bash
-$ sudo docker run --rm -ti --network=host -e POSTGRES_HOST=localhost -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass --name=postgres postgres:14.0
+sudo docker run --rm -ti --network=host -e POSTGRES_HOST=localhost -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass --name=postgres postgres:14.0
 ```
 
 If you want to use your proxy with other settings, you need to register as an operator so that the Neon EVM can recognize your keys.
@@ -30,7 +30,7 @@ If you want to use your proxy with other settings, you need to register as an op
 
 Start the proxy and connect it to the Docker network:
 ```bash
-$ sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass neonlabsorg/proxy:v0.5.1
+sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass neonlabsorg/proxy:v0.5.1
 ```
 
 **Command Line Arguments**  
@@ -96,8 +96,13 @@ This container aims to handle the database that stores all the relevant Ethereum
 
 #### How to Run it in Bash
 
-    $ docker-compose -f postgres/docker-compose.yml pull
-    $ docker-compose -f postgres/docker-compose.yml up -d
+    docker-compose -f postgres/docker-compose.yml pull
+    docker-compose -f postgres/docker-compose.yml up -d
+
+The output should look like this:
+
+    Creating postgres ... done
+    Creating dbcreation ... done
 
 ### Step 4: Run the Indexer Service
 
@@ -132,8 +137,8 @@ The indexer service indexes all the relevant Ethereum processing metadata consis
 
 #### How To Run it in Bash
 
-    $ docker-compose -f indexer/docker-compose.yml pull
-    $ docker-compose -f indexer/docker-compose.yml up -d
+    docker-compose -f indexer/docker-compose.yml pull
+    docker-compose -f indexer/docker-compose.yml up -d
 
 ### Step 5: Run the Proxy Service
 
@@ -179,5 +184,5 @@ The Proxy service is a core service that allows Ethereum-like transactions to be
 
 #### How to Run it in Bash
 
-    $ docker-compose -f proxy/docker-compose.yml pull
-    $ docker-compose -f proxy/docker-compose.yml up -d
+    docker-compose -f proxy/docker-compose.yml pull
+    docker-compose -f proxy/docker-compose.yml up -d

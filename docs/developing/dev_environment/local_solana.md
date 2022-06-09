@@ -68,8 +68,8 @@ Once you deploy the environment, you will have the Solana RPC endpoint working f
 
 #### How to Run it in Bash
 
-    $ docker-compose -f solana/docker-compose.yml pull
-    $ docker-compose -f solana/docker-compose.yml up -d
+    docker-compose -f solana/docker-compose.yml pull
+    docker-compose -f solana/docker-compose.yml up -d
 
 ### Step 2: EVM Loader Service
 
@@ -96,8 +96,8 @@ This container helps deploy onto Solana the Neon EVM base contract, which listen
 
 #### How to Run it in Bash
 
-       $ docker-compose -f evm-loader/docker-compose.yml pull
-       $ docker-compose -f evm-loader/docker-compose.yml up
+       docker-compose -f evm-loader/docker-compose.yml pull
+       docker-compose -f evm-loader/docker-compose.yml up
 
 ## Logs
 
@@ -113,8 +113,8 @@ After following the previous steps, you will have four running containers for th
 To look for events or errors, just run the `docker logs` for either the `solana` or `proxy` container:
 
 ```sh
-$ docker logs -f solana 2>&1 | grep -v "Program Vote111111111111111111111111111111111111111"
-$ docker logs -f proxy
+docker logs -f solana 2>&1 | grep -v "Program Vote111111111111111111111111111111111111111"
+docker logs -f proxy
 ```
 
 ## Remix and MetaMask with the Neon EVM
@@ -144,10 +144,10 @@ Truffle is a popular platform to deploy and test Solidity programs. This section
 In the new terminal, create a Truffle project and deploy contracts into the EVM:
 
 ```sh
-$ sudo npm install -g truffle
-$ mkdir myproject && cd myproject
-$ truffle init
-$ npm install web3 @truffle/hdwallet-provider
+sudo npm install -g truffle
+mkdir myproject && cd myproject
+truffle init
+npm install web3 @truffle/hdwallet-provider
 ```
 
 ### Common Truffle Settings
@@ -155,7 +155,7 @@ $ npm install web3 @truffle/hdwallet-provider
 Put your `truffle-config.js` into the Truffle root:
 
 ```sh
-$ echo 'const Web3 = require("web3");
+echo 'const Web3 = require("web3");
 
 const Web3eth = require("web3-eth");
 const HDWalletProvider = require("@truffle/hdwallet-provider");
@@ -188,7 +188,7 @@ module.exports = {
 Create a trivial contract at `contracts/Storage.sol`:
 
 ```sh
-$ echo '// SPDX-License-Identifier: GPL-3.0
+echo '// SPDX-License-Identifier: GPL-3.0
 
 pragma solidity >=0.7.0 <0.9.0;
 
@@ -210,7 +210,7 @@ contract Storage {
 You can now start testing `Storage` invocations with Truffley:
 
 ```sh
-$ echo 'const Storage = artifacts.require("Storage");
+echo 'const Storage = artifacts.require("Storage");
 
 contract("Storage", (accounts) => {
     let storage;
@@ -227,7 +227,7 @@ contract("Storage", (accounts) => {
     })
 })' > test/Storage.test.js
 
-$ truffle test test/Storage.test.js --network solana
+truffle test test/Storage.test.js --network solana
 ```
 
 ### Possible Problems
@@ -239,7 +239,7 @@ To reset the MetaMask state, follow the steps at `Settings`, `Advanced`, `Reset 
 The Truffle state can be reset by redeploying it in the following way:
 
 ```sh
-$ truffle compile --network solana --reset
+truffle compile --network solana --reset
 ```
 
 ---

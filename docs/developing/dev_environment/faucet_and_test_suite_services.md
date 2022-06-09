@@ -42,8 +42,8 @@ The Faucet service provides liquidity in 'NEON' to all the accounts that are men
 
 #### How to Run it in Bash
 
-    $ docker-compose -f faucet/docker-compose.yml pull
-    $ docker-compose -f faucet/docker-compose.yml up -d
+    docker-compose -f faucet/docker-compose.yml pull
+    docker-compose -f faucet/docker-compose.yml up -d
 
 </details>
 
@@ -99,7 +99,7 @@ The full test suite, generally speaking, provides the [OpenZeppelin tests](https
 
 #### How to Run it in Bash
 
-    $ docker-compose -f full_test_suite/docker-compose.yml pull
-    $ docker-compose -f full_test_suite/docker-compose.yml --env-file full_test_suite/local.env up
+    docker-compose -f full_test_suite/docker-compose.yml pull
+    docker-compose -f full_test_suite/docker-compose.yml --env-file full_test_suite/local.env up
 
 </details>

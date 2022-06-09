@@ -12,5 +12,5 @@ title: "Option 1: Remote Proxy to Remote Solana"
   * The [Solana cluster](https://docs.solana.com/cluster/overview) is accessed via a proxy hosted on a remote virtual server.
   * Solana works in test mode (recommended) and the proxy interacts with it through the Neon EVM.
 
-### Connecting MetaMask to the Neon EVM Devnet
-To connect MetaMask to the Neon EVM Devnet, follow the instructions on the [Getting Started](developing/getting_started.md#step-2-connect-metamask-to-the-neon-evm-devnet) page.
+### Connecting MetaMask to the Neon EVM
+To connect MetaMask to the Neon EVM, follow the instructions on the [Getting Started](developing/getting_started.md#step-2-connect-metamask-to-the-neon-evm-devnet) page. The instructions on this page are mainly for connecting to the devnet, so if you want to connect to the mainnet or testnet, make sure to modify the instructions as described there.
