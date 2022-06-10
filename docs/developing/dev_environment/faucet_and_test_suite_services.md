@@ -4,7 +4,7 @@ title: (Optional) Setting up Faucet and Full Test Suite Services
 
 *This **optional** step-by-step guide describes how to set up faucet and full test suite services. It assumes that a proxy and a connection to a Solana cluster have already been established, either locally or remotely.*
 
-<details><summary>1. Faucet Service</summary>
+## Faucet Service
 The Faucet service provides liquidity in 'NEON' to all the accounts that are mentioned in the incoming requests.
 
 #### docker-compose.yml
@@ -45,10 +45,7 @@ The Faucet service provides liquidity in 'NEON' to all the accounts that are men
     docker-compose -f faucet/docker-compose.yml pull
     docker-compose -f faucet/docker-compose.yml up -d
 
-</details>
-
-
-<details><summary>2. Full Test Suite Service</summary>
+## Full Test Suite Service
 
 The full test suite, generally speaking, provides the [OpenZeppelin tests](https://docs.openzeppelin.com/learn/writing-automated-tests) to make sure the infrastructure deployed by this guide works properly. At the end, the `full test suite` outputs the result in the following form:
 
@@ -101,5 +98,3 @@ The full test suite, generally speaking, provides the [OpenZeppelin tests](https
 
     docker-compose -f full_test_suite/docker-compose.yml pull
     docker-compose -f full_test_suite/docker-compose.yml --env-file full_test_suite/local.env up
-
-</details>

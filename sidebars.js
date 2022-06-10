@@ -68,13 +68,25 @@ module.exports = {
         },
         {
           type: 'category',
-          label: 'Integrate',
+          label: 'Integrating',
           items: [
             'developing/integrate/introduction',
             'developing/integrate/neon_transfer_sdk',
-            'developing/integrate/wallets',
-            'developing/integrate/oracles',
-            'developing/integrate/indexers',
+            {
+              type: 'category',
+              label: 'Wallets',
+              items: [
+                'developing/integrate/wallets/integrating_metamask_into_your_dapp',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Oracles',
+              items: [
+                'developing/integrate/oracles/integrating_pyth',
+              ]
+            },
+            // 'developing/integrate/indexers',
           ]
         }
       ]
