@@ -4,8 +4,6 @@ title: "Option 3: Local Proxy to Local Solana"
 
 This option will let you connect to Solana via a proxy, when **both** are hosted locally. This option can be useful for developers that want to debug their Solidity contracts by hosting a proxy and a Solana node locally.
 
-First, set up and host a proxy locally as per [this guide](local_proxy.md). After you complete the steps, a proxy will be available at `http://localhost:9090/solana`.
-
 ### Network Configuration
   * Both the Solana node and the proxy are hosted locally.
   * The proxy interacts with the Solana node through the Neon EVM.
@@ -16,9 +14,19 @@ wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/master/proxy/d
 ```
 Execute the command:
 ```bash
-sudo REVISION=stable docker-compose -f docker-compose-test.yml up -d
+sudo REVISION=stable docker-compose -f docker-compose-test.yml up -d --quiet-pull
 ```
-As soon as the latest command is completed, the proxy will start to deploy the Neon EVM in a local Solana node. After that, the proxy and Solana will be available at the URLs `http://localhost:9090/solana` and `http://localhost:8899`, respectively.
+The output should look like this:
+```console
+Creating solana ... done
+Creating evm_loader ... done
+Creating postgres ... done
+Creating proxy ... done
+Creating faucet ... done
+Creating airdropper ... done
+Creating indexer ... done
+```
+As soon as the latest command is completed, the proxy will start to deploy the Neon EVM in a local Solana node. After that, the proxy and Solana will be available at the URLs `http://localhost:9090/solana` and `http://localhost:8899`, respectively. The Neon faucet will also be available at `http://localhost:3333`.
 
 ---  
 
