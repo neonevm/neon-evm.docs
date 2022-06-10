@@ -27,7 +27,7 @@ The proxy interacts with one EVM loader, which can be deployed in different Sola
 >
 > The table data will be provided to users in real time.
 
-To connect to a proxy using MetaMask/Truffle, follow the instructions below.
+To connect to a proxy using MetaMask/Truffle/Hardhat, follow the instructions below.
 
 #### Connecting to a Proxy Using MetaMask
 
@@ -35,15 +35,11 @@ To connect to a proxy using MetaMask, follow the instruction [Installing and Set
 
 #### Connecting to a Proxy Using Truffle
 
-To connect to a proxy using Truffle, follow the instructions [Using Truffle](developing/deploy_facilities/using_truffle.md). You need to configure `truffle-config.js` by setting the HDWalletProvider library to the RPC URL selected from the [table](clusters/neon_proxy_rpc_endpoints.md).
-
-To deploy dApps using Truffle, please refer to the [Using Truffle](developing/deploy_facilities/using_truffle.md) guide.
+To connect to a proxy using Truffle or to deploy dApps using Truffle, follow the instructions [Using Truffle](developing/deploy_facilities/using_truffle.md). You need to configure `truffle-config.js` by setting the HDWalletProvider library to the RPC URL selected from the [table](clusters/neon_proxy_rpc_endpoints.md).
 
 #### Connecting to a Proxy using Hardhat
 
-To connect to a proxy using Hardhat, follow the instructions [Using Hardhat](developing/deploy_facilities/using_hardhat.md). You need to configure `hardhat.config.js` by setting the URL and the network_id/chainId to the RPC URL selected from the [table](clusters/neon_proxy_rpc_endpoints.md).
-
-To deploy dApps using Hardhat, please refer to the [Using Hardhat](developing/deploy_facilities/using_hardhat.md) guide.
+To connect to a proxy using Hardhat or to deploy dApps using Hardhat, follow the instructions [Using Hardhat](developing/deploy_facilities/using_hardhat.md). You need to configure `hardhat.config.js` by setting the URL and the network_id/chainId to the RPC URL selected from the [table](clusters/neon_proxy_rpc_endpoints.md).
 
 ## Connecting MetaMask to the Neon EVM
 To connect MetaMask to the Neon EVM, follow the instructions on the [Getting Started](developing/getting_started.md#step-2-connect-metamask-to-the-neon-evm-devnet) page. The instructions on this page are mainly for connecting to the devnet, so if you want to connect to the mainnet or testnet, make sure to modify the instructions as described there.
