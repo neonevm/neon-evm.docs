@@ -40,19 +40,25 @@ The Faucet service provides liquidity in 'NEON' to all the accounts that are men
         external: yes
         name: local
 
-#### How to Run it in Bash
+Save the above content in faucet/docker-compose.yml.
 
-    docker-compose -f faucet/docker-compose.yml pull
-    docker-compose -f faucet/docker-compose.yml up -d
+##### How to Run it in Bash
+```bash
+docker-compose -f faucet/docker-compose.yml up -d --quiet-pull
+```
+The output should look like this:
+```console
+Creating faucet ... done
+```
 
 ## Full Test Suite Service
 
 The full test suite, generally speaking, provides the [OpenZeppelin tests](https://docs.openzeppelin.com/learn/writing-automated-tests) to make sure the infrastructure deployed by this guide works properly. At the end, the `full test suite` outputs the result in the following form:
-
+```console
     Full test passing - 1743
     Full test threshold - 1700
     Check if 1743 is greater or equal 1700
-
+```
 #### full_test_suite/docker-compose.yml
 
     version: "3"
@@ -95,6 +101,7 @@ The full test suite, generally speaking, provides the [OpenZeppelin tests](https
     FTS_JOBS_NUMBER=8
 
 #### How to Run it in Bash
-
-    docker-compose -f full_test_suite/docker-compose.yml pull
-    docker-compose -f full_test_suite/docker-compose.yml --env-file full_test_suite/local.env up
+```bash
+docker-compose -f full_test_suite/docker-compose.yml --env-file full_test_suite/local.env up
+```
+The outpur should show a summary of the test results at the end.

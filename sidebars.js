@@ -41,7 +41,6 @@ module.exports = {
                    'developing/dev_environment/op2_local_proxy_remote_solana',
                    'developing/dev_environment/op3_local_proxy_local_solana',
                    'developing/dev_environment/faucet_and_test_suite_services',
-                   'developing/dev_environment/choosing_proxy',
                  ]
         }, {
           type: 'category',
