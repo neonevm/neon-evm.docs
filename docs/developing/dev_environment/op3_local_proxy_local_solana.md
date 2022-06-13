@@ -12,7 +12,9 @@ Upload the docker-compose-test.yml file to your currently directory using the fo
 ```bash
 wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/master/proxy/docker-compose-test.yml
 ```
-```consule
+
+Alternatively, copy the following text and save it as docker-compose-test.yml.
+```console
 version: "3"
 
 services:
