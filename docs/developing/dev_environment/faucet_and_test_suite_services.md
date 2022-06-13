@@ -38,7 +38,7 @@ The Faucet service provides liquidity in 'NEON' to all the accounts that are men
     networks:
       net:
         external: yes
-        name: local
+        # name: local
 
 Save the above content in faucet/docker-compose.yml.
 
@@ -86,7 +86,7 @@ The full test suite, generally speaking, provides the [OpenZeppelin tests](https
     networks:
       net:
         external: yes
-        name: local
+        # name: local
 
 #### full_test_suite/local.env
 

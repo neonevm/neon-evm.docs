@@ -62,7 +62,7 @@ services:
       interval: 5s
       timeout: 10s
       retries: 10
-      start_period: 5s
+      # start_period: 5s
     networks:
       - net
     ports:
@@ -82,9 +82,9 @@ services:
     entrypoint: proxy/run-dbcreation.sh
     networks:
       - net
-    depends_on:
-      postgres:
-        condition: service_healthy
+    # depends_on:
+    #   postgres:
+    #     condition: service_healthy
 
   indexer:
     container_name: indexer
@@ -135,7 +135,7 @@ services:
 networks:
   net:
     external: yes
-    name: local
+    # name: local
 ```
 #### How to Run it in Bash
 ```bash
