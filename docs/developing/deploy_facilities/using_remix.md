@@ -10,7 +10,7 @@ Before you start, make sure of the following:
   * You have provided online access to remix.ethereum.org to use the `Remix - Ethereum IDE` open source web application.
   * MetaMask is configured for both proxy and Neon EVM. (Regardless of how proxy and Neon EVM run, MetaMask wallet must always be configured for them.)
 
-**The network configuration:**
+## Network Configurations
   * [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
   * Solana works in test mode and the proxy interacts with it through Neon EVM.
 

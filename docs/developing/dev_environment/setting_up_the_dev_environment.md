@@ -2,7 +2,9 @@
 title: Setting up the Development Environment
 ---
 
-As a new, aspiring Neon developer, you can begin by exploring the Neon EVM framework and setting up your development environment. In order to connect to a Solana cluster, you need a [proxy](architecture/neon_evm_arch.md/#neon-web3-proxy-proxy). Depending on your purposes, there are several ways to do so:
+As a new, aspiring Neon developer, your first step of exploring the Neon EVM framework is to set up your development environment. As mentioned in the Introduction, you need to have a [**proxy**](architecture/neon_evm_arch.md/#neon-web3-proxy-proxy), which wraps Ethereum-like transactions into Solana transactions and sends them, and a **Solana cluster**, where the resulting transactions are executed.
+
+There are several ways to do set up proxy and Solana cluster:
   * [Option 1:](developing/dev_environment/op1_remote_proxy_remote_solana.md) The proxy is hosted on a remote virtual server. Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used.
   * [Option 2:](developing/dev_environment/op2_local_proxy_remote_solana.md) The proxy is hosted locally. Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used.
   * [Option 3:](developing/dev_environment/op3_local_proxy_local_solana.md) Both the proxy and Solana are hosted locally. (Debug mode, which allows you to configure your node locally.)

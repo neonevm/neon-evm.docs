@@ -16,7 +16,7 @@ With Truffle, you get:
 
 ## Installation
 
-### Requirements for Your Device
+### Requirements
 The following software must be installed on your device:
   * NodeJS v8.9.4 or later
   * Web3 v1.2.0 or later
