@@ -2,7 +2,7 @@
 title: Faucet
 ---
 
-You can request Test NEON tokens on the Solana devnet using the Neon Faucet.
+You can request Test NEON tokens on the Solana devnet using the Neon Faucet. There are two ways to use the Neon Faucet - on the Neon Faucet website, and using the Neon Faucet API.
 
 ## Requesting Test NEON Tokens via the User Interface
 
@@ -10,23 +10,15 @@ You can request Test NEON tokens on the Solana devnet using the Neon Faucet.
 Set up MetaMask by following the [Setting up MetaMask](../../wallet/metamask_setup#installing-metamask) guide.
 
 ### Step 2
-Go to the [Neonswap Faucet page](https://neonswap.live/#/get-tokens) to request test tokens.
+Go to the [Neonswap Faucet page](https://neonfaucet.org/) to request test tokens.
 
 ### Step 3
 Connect your MetaMask wallet:
-- Click on the `CONNECT WALLET` button.
+- Click on the `Connect Wallet` button to authorize the connection in the MetaMask pop-up.
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/connect_walet.png)
-
-</div>
-
-- Click on the `CONNECT METAMASK` button.
-
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>
-
-![](./images/connect_metamask.png)
 
 </div>
 
@@ -46,7 +38,7 @@ Connect your MetaMask wallet:
 
 </div>
 
-- In the form that appears, enter the number of tokens you would like to request and click on the `GET TOKENS` button.
+- In the form that appears, select the token and enter the amount of tokens you would like to request, and then click on the `TEST AIRDROP` button.
 
 <div class='neon-img-box-300' style={{textAlign: 'center'}}>
 
@@ -57,8 +49,7 @@ Connect your MetaMask wallet:
 
 # Requesting Test NEON Tokens via HTTP API Endpoints
 
-A client uses POST requests to send data to the server.
-Several endpoints are supported.
+For this method, a client uses POST requests to send data to the server. Several endpoints are supported, as shown in the following table.
 
 ```
 |------------------------------------------------------------------------------------------
@@ -72,22 +63,24 @@ Several endpoints are supported.
 |------------------------------------------------------------------------------------------
 ```
 
-Example of JSON payload:
+Some usage examples of the API method include the following:
+
+An example of a JSON payload:
 ```
 { "wallet": "0x4570e07200b6332989Dc04fA2a671b839D26eF0E", "amount": 1 }
 ```
 
-Example of ping request with **curl**:
+An example of ping request with **curl**:
 ```
 curl -i -X POST -d 'Hello' 'http://localhost:3333/request_ping'
 ```
 
-Example of version request with **curl**:
+An example of version request with **curl**:
 ```
 curl -i -X POST 'http://localhost:3333/request_version'
 ```
 
-Example of NEON drop request with **curl**:
+An example of NEON drop request with **curl**:
 ```
 curl -i -X POST \
     -d '{"wallet": "0x4570e07200b6332989Dc04fA2a671b839D26eF0E", "amount": 1}' \
@@ -97,7 +90,7 @@ curl -i -X POST \
 
 # Configuration
 
-The configuration file should be in the TOML format.
+The configuration file should be in the TOML format. A table containing all the configuration options with their descriptions is shown below.
 
 ```
 |----------------------------------------------------------------------------------------------
@@ -106,12 +99,12 @@ The configuration file should be in the TOML format.
 | rpc.bind                | Local interface TCP address
 | rpc.port                | TCP port to listen
 | rpc.allowed_origins     | List of client URLs that can send requests
-| web3.enable             | Flag to on/off the entire web3 section
+| web3.enable             | Flag to toggle the entire web3 section
 | web3.rpc_url            | Ethereum network endpoint
 | web3.private_key        | Ethereum private key to support operations
 | web3.tokens             | List of available ERC20 token addresses
 | web3.max_amount         | Largest amount of ERC20 tokens to distribute with a single request
-| solana.enable           | Flag to on/off the entire solana section
+| solana.enable           | Flag to toggle the entire solana section
 | solana.url              | Solana network endpoint
 | solana.commitment       | Solana client commitment level
 | solana.operator_keyfile | Solana keyfile to support operations
