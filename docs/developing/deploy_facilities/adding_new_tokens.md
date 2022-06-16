@@ -8,7 +8,7 @@ When performing operations on tokens in the Neon EVM, it is important to know wh
 ## Devnet ERC-20 Token addresses
 
 |Token|Address                                   |
-|-----|------------------------------------------|
+|-----|:-----------------------------------------|
 |USDT |0x0a5bD0108227B3DFeC64199D6939841eeCF47a8E|
 |DAI  |0x7aD98AeADbbCdF3693B0b53C09dA4033704C9322|
 |USDC |0x2578C6c1ac883443388edd688ca10E87d088BfA8|
