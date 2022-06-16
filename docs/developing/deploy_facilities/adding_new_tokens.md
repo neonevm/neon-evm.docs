@@ -7,8 +7,8 @@ When performing operations on tokens in the Neon EVM, it is important to know wh
 
 ## Devnet ERC-20 Token addresses
 
-|Token|Address|
-|-----|---|
+|Token|Address                                   |
+|-----|------------------------------------------|
 |USDT |0x0a5bD0108227B3DFeC64199D6939841eeCF47a8E|
 |DAI  |0x7aD98AeADbbCdF3693B0b53C09dA4033704C9322|
 |USDC |0x2578C6c1ac883443388edd688ca10E87d088BfA8|
@@ -20,5 +20,6 @@ When performing operations on tokens in the Neon EVM, it is important to know wh
 |Bal  |0xC60911b5577F10F582914205d61C64622A6924d8|
 |SOL  |0xAEDe7ae447D63f0D2020621Eacf759E539cBfADD|
 
+---
 
 *The list of tokens whose contracts are deployed in Neon EVM and which are available to you can be found also in the [token-list](https://github.com/neonlabsorg/token-list/) repository*.
