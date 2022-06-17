@@ -5,14 +5,14 @@ title: Using Remix
 *This tutorial will show you step by step how to use [Remix](about/terminology.md#remix) and [MetaMask](about/terminology.md#metamask) to create and deploy a simple smart contract on Solana. Although the instructions use Solana's [Testnet](https://docs.solana.com/clusters#testnet), they may also be applicable to Solana's [Devnet](https://docs.solana.com/clusters#devnet) or Solana's [Mainnet Beta](https://docs.solana.com/clusters#mainnet-beta).*
 
 ## Requirements
-Before you start, make sure of the following:
+Before you start, make sure that the following is true:
   * MetaMask is installed on your device.  
   * You have provided online access to https://remix.ethereum.org to use the "Remix - Ethereum IDE" open-source web application.
   * MetaMask is configured for both proxy and Neon EVM. Regardless of how your proxy and Neon EVM are run, MetaMask must always be configured for them accordingly.
 
 ## Network Configurations
   * [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
-  * Solana works in test mode and the proxy interacts with it through Neon EVM.
+  * Solana works in test mode and the proxy interacts with it through the Neon EVM.
 
 ### Step 1: Set up the Remix Environment
 

@@ -8,7 +8,7 @@ Details on how to use the Hardhat framework will not be enumerated here. You can
 
 ## Hardhat Configuration File for Neon
 
-Since Neon is an Ethereum-compatible virtual machine and RPC, migration of existing Hardhat projects onto Neon is easy and seamless. The only thing required is a correct **hardhat.config.js** file. Please see below for an example of a configuration file:
+Since Neon is an Ethereum-compatible virtual machine and RPC, migration of existing Hardhat projects onto Neon is easy and seamless. The only thing required is a correct **hardhat.config.js** file. See below for an example of a configuration file:
 
 ```js
 require("@nomiclabs/hardhat-waffle");

@@ -2,7 +2,7 @@
 title: Using Truffle
 ---
 
-*This page outlines the steps for deploying and testing contracts in the Neon EVM using the Truffle tool. Truffle can be useful for personnel involved in the development and maintenance of Neon EVM.*
+*This page outlines the steps for deploying and testing contracts in the Neon EVM using the Truffle tool. Truffle can be useful for those involved in the development and maintenance of the Neon EVM.*
 
 > **Note:** Ethereum contracts can also be successfully deployed in the Neon EVM using Remix in manual mode (see the [previous section](developing/deploy_facilities/using_remix.md)). However, since Remix does not have as many capabilities, Truflle is offered as a useful, more advanced alternative for those that need the additional functionality and flexibility.
 
@@ -31,25 +31,25 @@ If Truffle is already installed on your device, you can skip this section and mo
 
 Create a new directory for your Truffle project:
 ```sh
-$ mkdir <project name>
-$ cd <project name>
+mkdir <project name>
+cd <project name>
 ```
 
 Install Truffle:
 ```sh
-$ npm install truffle
+npm install truffle
 ```
 
 Initialize the project directory by running the following command:
 ```sh
-$ truffle init
+truffle init
 ```
 
 Once this operation is completed, you will have a project structure with the following items:
   * `contracts/` — Directory containing Solidity contracts
   * `migrations/` — Directory for scriptable deployment files
   * `test/` — Directory containing test files for testing your Solidity contracts
-  * `truffle-config.js` — Truffle configuration file.
+  * `truffle-config.js` — Truffle configuration file
 
 You can run `truffle compile`, `truffle migrate` and `truffle test` to compile your contracts, deploy them to the network, and run their associated unit tests, respectively.
 
@@ -57,10 +57,10 @@ You can run `truffle compile`, `truffle migrate` and `truffle test` to compile y
 
 The HD Wallet-enabled Web3 provider `HDWalletProvider` is a standalone library. One of its functions is signing transactions with private keys. Since the Neon EVM proxy does not store private keys, it cannot sign transactions. Therefore, while debugging smart contracts, the `HDWalletProvider` library is used instead to sign transactions for addresses derived from a *12* or *24* word mnemonic.
 
-By default, the vanilla Truffle installation does not provide the HDWalletProvider library. If during the installation process none of the applications required the `HDWalletProvider` library to be installed, you will need to install it separately by running the following command.
+By default, the vanilla Truffle installation does not provide the HDWalletProvider library. If, during the installation process, none of the applications required the `HDWalletProvider` library to be installed, you will need to install it separately by running the following command.
 
 ```console
-$ npm install @truffle/hdwallet-provider
+npm install @truffle/hdwallet-provider
 ```
 
 Refer to the [official npm package documentation](https://www.npmjs.com/package/@truffle/hdwallet-provider) for the full installation process.
@@ -81,29 +81,28 @@ The configuration file is called `truffle-config.js` and is located at the root 
 ## Compiling Contracts
 All of your contracts are located in your project's `contracts/` directory. To compile a Truffle project, change to the root of the directory where the project is located and run the following command:
 ```sh
-$ truffle compile
+truffle compile
 ```
-
 For the first run, all contracts will be compiled. During subsequent runs, only contracts that have changed since the last compilation will be compiled again.
 
 If you want to re-compile all contracts, run the above command with the `--all` option:
 ```sh
-$ truffle compile --all
+truffle compile --all
 ```
 
 ## Running Migrations
 Migrations are a set of managed deployment scripts used to deploy contracts to the network. These scripts, which are JavaScript files, should be contained in the project's `migrations/` directory.
 
-To run migrations to deploy contracts, run
+To run migrations to deploy contracts, run:
 ```sh
-$ truffle migrate
+truffle migrate
 ```
 
 This will run all migrations located within the `migrations/` directory. If your migrations were previously run successfully, truffle migrate will start execution from the last migration that was run, running only newly created migrations. If no new migrations exist, truffle migrate won't perform any action.
 
 If you need to run all migrations from the beginning, instead of running from the last completed migration, you can use the `--reset` option:
 ```sh
-$ truffle migrate --reset
+truffle migrate --reset
 ```
 
 The full list of options that you can use for migrations can be found under the [truffle migrate](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#migrate) command.
@@ -113,19 +112,19 @@ All test files should be located under the `test/` directory.
 
 To run all tests, simply run:
 ```sh
-$ truffle test
+truffle test
 ```
 
 To run only one test file from the entire test suite or a specific file that is not in `test/`, you need to specify the full name of that file:
 ```sh
-$ truffle test <./path/file.js>
+truffle test <./path/file.js>
 ```
 
 The full list of options that you can use for testing can be found under the [truffle test](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#test) command.
 
 
 ## `truffle-config.js` Example
-Here is a full example of the `truffle-config.js` configuration file for connecting Truffle to a devnet-proxy using the one-way library on Node.js:
+The following is a full example of the `truffle-config.js` configuration file for connecting Truffle to a devnet-proxy using the one-way library on Node.js:
 
 ```js
 const Web3 = require("web3");

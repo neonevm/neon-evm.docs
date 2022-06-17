@@ -4,7 +4,7 @@ title: Interacting with SPL Tokens
 
 The ERC-20 SPL wrapper contract provides access to native Solana tokens registered in the SPL token contract, through the ERC-20 interface.
 
-This allows interaction of the Solana applications with the EVM (Solidity, Vyper, etc.) bytecode contracts. The ERC-20 SPL wrapper can also be used to transfer funds in Solana tokens using Ethereum wallets such as MetaMask.
+This allows Solana applications to interact with EVM (Solidity, Vyper, etc.) bytecode contracts. The ERC-20 SPL wrapper can also be used to transfer funds in Solana tokens using Ethereum wallets such as MetaMask.
 
 The contract is implemented in Rust as part of the Neon EVM program.
 
@@ -32,7 +32,7 @@ interface IERC20 {
 }
 ```
 
-Functionality of interface modules:
+The purpose of each function in the IERC20 interface is detailed below:
   * `decimals()` — Returns the number of decimals used to get its user representation. For example, if `decimals` equals 2, a balance of 505 tokens should be displayed to a user as 5,05 (505 / 10 * 2).
 
   * `totalSupply()` — Returns the amount of tokens in existence.
@@ -51,11 +51,11 @@ Functionality of interface modules:
 
 ### Restrictions
 
-According to the SPL token structure, an unsigned 64-bit floating point number is used to store the balance. (In ERC-20, it's an unsigned 256-bit floating point number). Based on the unsigned 64-bit floating point standard, the maximum balance and transfer amount is (2^64-1)/(10^9), with 9 decimals of accuracy.
+According to the SPL token structure, an unsigned 64-bit floating point number is used to store the balance; in ERC-20, it's an unsigned 256-bit floating point number. Based on the unsigned 64-bit floating point standard, the maximum balance and transfer amount is (2^64-1)/(10^9), with 9 decimals of accuracy.
 
 ### Finding the Token Account Address
 
-The token account for a given wallet address is a program-derived account consisting of the following constants: the Ethereum wallet address itself, ERC-20 contract address, and the token mint.
+The token account for a given wallet address is a program-derived account consisting of the following constants: the Ethereum wallet address itself, the ERC-20 contract address, and the token mint.
 
 The account address can be derived in Rust with:
 
