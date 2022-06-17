@@ -50,7 +50,7 @@ module.exports = {
                    'developing/deploy_facilities/using_truffle',
                    'developing/deploy_facilities/using_hardhat',
                   //  'developing/deploy_facilities/migrating_dapps',
-                   'developing/deploy_facilities/using_erc20_tokens',
+                   'developing/deploy_facilities/interacting_with_spl_tokens',
                    'developing/deploy_facilities/adding_new_tokens',
                  ]
         },

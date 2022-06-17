@@ -6,7 +6,7 @@ title: "Option 1: Remote Proxy to Remote Solana"
 
 [MetaMask wallet](https://metamask.io/) must be already installed on your device.  
 
-> Although this tutorial uses the *Ubuntu* operating system, these instructions can be applied to other Linux distros as well.
+> Although this tutorial uses the *Ubuntu* operating system, these instructions can be applied to other UNIX distros as well.
 
 ## Network Configuration
 At the end of this section, your network configuration should permit the following:

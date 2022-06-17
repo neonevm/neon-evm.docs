@@ -12,7 +12,7 @@ To install MetaMask on your device and to connect the wallet to the Solana Testn
 
 A browser that supports MetaMask must be installed on your device. You can use *Chrome*, *Opera*, or *Firefox*.  
 
-> Although this tutorial uses the *Ubuntu* platform, the instructions provided can be applied to other platforms.  
+> Although this tutorial uses the *Ubuntu* operating system, these instructions can be applied to other UNIX distros as well.  
 
 ## Installing MetaMask
 

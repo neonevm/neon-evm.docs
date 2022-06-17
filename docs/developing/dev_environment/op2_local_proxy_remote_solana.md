@@ -171,12 +171,13 @@ sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-
 Don't forget to specify the value of the CONFIG variable!
 
 **Command Line Options**
-  * `~/.config/solana/id.json` — the path to your key pair.
-  * `--name proxy` — specify the proxy name.
+  * `~/.config/solana/id.json` — absolute path to your key pair file stored locally
+  * `--name proxy` — specifies the proxy name
 
-If you are not registered as an operator, you can only use test public keys. (The list of available public keys is given in [this table](clusters/neon_proxy_rpc_endpoints.md).) You do not need to specify the key via the -v flag, since it is already hard-coded in the Devnet/Testnet containers. Use the following command:
+If you are not registered as an operator, you can only use test public keys. A list of available public keys is accessible in the [Neon Proxy RPC Endpoints](clusters/neon_proxy_rpc_endpoints.md) section. You do not need to specify the key using the `-v` flag, since it is already hard-coded into the Devnet/Testnet containers. Use the following command:
 
 ```bash
 sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass neonlabsorg/proxy:v0.5.1
 ```
+
 Don't forget to specify the value of the CONFIG variable!

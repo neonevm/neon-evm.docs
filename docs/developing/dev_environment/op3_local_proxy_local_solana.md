@@ -207,4 +207,4 @@ As soon as the latest command is completed, the proxy will start to deploy the N
 >
 > For the Solana endpoint, you can use a separate node hosted on Devnet or Testnet.  
 >
-You can also use a Solana node that is not hosted on any network. In this case, you will need to configure this node and synchronize it with the Devnet or Testnet network. Then you will need to deploy the local proxy and configure it to work with this node. You will also need to connect to the EVM loader deployed within Devnet or Testnet.
+You can also use a Solana node that is not hosted on any network. In this case, you will need to configure this node and synchronize it with the Devnet or Testnet network. Then you will need to deploy the local proxy and configure it to work with this node. In addition, you will also need to connect to the EVM loader deployed within Devnet or Testnet.
