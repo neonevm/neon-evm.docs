@@ -57,7 +57,7 @@ You can run `truffle compile`, `truffle migrate` and `truffle test` to compile y
 
 The HD Wallet-enabled Web3 provider `HDWalletProvider` is a standalone library. One of its functions is signing transactions with private keys. Since the Neon EVM proxy does not store private keys, it cannot sign transactions. Therefore, while debugging smart contracts, the `HDWalletProvider` library is used instead to sign transactions for addresses derived from a *12* or *24* word mnemonic.
 
-By default, the vanilla Truffle installation does not provide the HDWalletProvider library. If, during the installation process, none of the applications required the `HDWalletProvider` library to be installed, you will need to install it separately by running the following command.
+By default, the vanilla Truffle installation does not provide the `HDWalletProvider` library. If, during the installation process, none of the applications required the `HDWalletProvider` library to be installed, you will need to install it separately by running the following command.
 
 ```console
 npm install @truffle/hdwallet-provider
