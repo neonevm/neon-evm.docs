@@ -18,7 +18,7 @@ Before you start, make sure that the following is true:
 
 For Remix to be used to load a smart contract into Neon EVM, Remix must be connected to your MetaMask wallet and run in the `Injected Web3` environment.  
 
-Go to http://remix.ethereum.org/ and go over the tutorial walkthrough if you are unfamiliar with Remix. Open the `Remix - Ethereum IDE` web application. In the left sidebar menu, select `File explorers`. The `FILE EXPLOPERS` menu will be active (Fig. 1).  
+Go to https://remix.ethereum.org and go over the tutorial walkthrough if you are unfamiliar with Remix. Open the `Remix - Ethereum IDE` web application. In the left sidebar menu, select `File explorers`. The `FILE EXPLOPERS` menu will be active (Fig. 1).  
 
 <div class='neon-img-width-600' style={{textAlign: 'center'}}>
 

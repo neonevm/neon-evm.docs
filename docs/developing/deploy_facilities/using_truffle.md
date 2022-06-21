@@ -6,24 +6,27 @@ title: Using Truffle
 
 > **Note:** Ethereum contracts can also be successfully deployed in the Neon EVM using Remix in manual mode (see the [previous section](developing/deploy_facilities/using_remix.md)). However, since Remix does not have as many capabilities, Truflle is offered as a useful, more advanced alternative for those that need the additional functionality and flexibility.
 
-## The Goal
 The main goal in using Truffle is to make it easier for developers to deploy and debug contracts in Neon EVM.
 
 With Truffle, you get:
-  * Simple configuration parameter settings.
-  * An easy process of deploying and debugging contracts on the network.
-  * Automated deployment and running of tests.
+  * Simple configuration parameter settings
+  * An easy process of deploying and debugging contracts on the network
+  * Automated deployment and running of tests
+
+## Prerequisites
+Before you start, make sure of the following software is installed on your device:
+  * `NodeJS v8.9.4` or later
+  * `Web3 v1.2.0` or later
+
+## Network Configurations
+  * [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
+  * Solana works in test mode and the proxy interacts with it through Neon EVM.
 
 ## Installation
 
 > **Note:** Although this tutorial uses the *Ubuntu* operating system, these instructions can be applied to other UNIX distros as well.  
 
-### Requirements
-The following software must be installed on your device:
-  * `NodeJS v8.9.4` or later
-  * `Web3 v1.2.0` or later
-
-### Installing Truffle
+### Install Truffle
 
 If Truffle is already installed on your device, you can skip this section and move on to the next one. For those just getting started, you need to go through this section.
 
@@ -53,7 +56,7 @@ Once this operation is completed, you will have a project structure with the fol
 
 You can run `truffle compile`, `truffle migrate` and `truffle test` to compile your contracts, deploy them to the network, and run their associated unit tests, respectively.
 
-### Installation of the HDWalletProvider library
+### Install the HDWalletProvider library
 
 The HD Wallet-enabled Web3 provider `HDWalletProvider` is a standalone library. One of its functions is signing transactions with private keys. Since the Neon EVM proxy does not store private keys, it cannot sign transactions. Therefore, while debugging smart contracts, the `HDWalletProvider` library is used instead to sign transactions for addresses derived from a *12* or *24* word mnemonic.
 

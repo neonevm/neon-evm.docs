@@ -1,10 +1,24 @@
 ---
-title: Governance User Interface
+title: Using the Governance User Interface
 ---
 
 The Neon Governance application is an open source service designed to provide a convenient forum for submitting proposals to improve Neon EVM and for voting on the acceptance of these proposals.
 
 Any Neon user can submit a proposal to improve the Neon EVM governance, but only stakeholders can make the final decision on whether to implement the proposal or not. Submitting proposals and voting on them are carried out using the Neon Governance application.
+
+### Governance UI Features in the Neon Project Improvements
+
+The purpose of Governance UI is to:
+  * Store proposals and their related votes in the network's state.
+  * Increase the decentralization of governance through decision-making by majority vote.
+  * Avoid imposing ideas or their implementations.
+  * Eliminate the adoption of ambitious decisions, the implementation of which is associated with high risk.
+
+## General Statements for Stakeholders
+
+  * Members must not threaten other members.
+  * No member should improperly influence the vote of another.
+  * Members agree to hold software developers harmless for unintentional mistakes made by them in the expression of contractual intent, whether or not said mistakes were due to actual or perceived negligence.
 
 ## Proposal Submission Procedure
 
@@ -60,16 +74,16 @@ As an example, the following figure shows the page containing detailed informati
 Page fields and their functional meanings:
 
   1. Reverse arrow icon — by clicking on it you go to the `Governance Proposals` page
-  1. `Proposer` — public key of the proposer
-  1. Name of the proposal
-  1. Current status of the proposal
-  1. Proposal ID in Neon Governance
-  1. The date of the last vote, after which no votes are accepted
-  1. `See in forum` — link to forum post for further discussion
-  1. Voting scale, visually displaying the voting process. It also displays the percentage of `Approve` and `Deny` votes scored.
-  1. `Approval quorum` — displays the percentage of votes required to approve a proposal and the minimum number of approve votes required. Once the approval quorum is greater than or equal to the specified value, the proposal is eligible to pass.
-  1. `Cast your vote` — button to open the pop-up voting window. Only stakeholders are allowed to vote.
-  1. `Approvals` — list of voters with their votes given. The first numeric value means the number of stakeholders who voted `Approve`. The second numeric value means the total number of stakeholders who have the right to vote.
+  2. `Proposer` — public key of the proposer
+  3. Name of the proposal
+  4. Current status of the proposal
+  5. Proposal ID in Neon Governance
+  6. The date of the last vote, after which no votes are accepted
+  7. `See in forum` — link to forum post for further discussion
+  8. Voting scale, visually displaying the voting process. It also displays the percentage of `Approve` and `Deny` votes scored.
+  9. `Approval quorum` — displays the percentage of votes required to approve a proposal and the minimum number of approve votes required. Once the approval quorum is greater than or equal to the specified value, the proposal is eligible to pass.
+  10. `Cast your vote` — button to open the pop-up voting window. Only stakeholders are allowed to vote.
+  11. `Approvals` — list of voters with their votes given. The first numeric value means the number of stakeholders who voted `Approve`. The second numeric value means the total number of stakeholders who have the right to vote.
 
 Here is the list of possible states of proposals and their functional meaning:
   * `Draft` — The proposal is in the preparation stage.
@@ -102,3 +116,20 @@ Then you should click `See in forum` to view the content of the proposal. To vot
 </div>
 
  Click `Approve` or `Decline` to vote on the proposal. Next, you will be asked to confirm and you will have the option to add a message to your vote.
+
+## General Definitions/Terminology
+
+Yes Threshold
+Voting Period
+Hold-up Period
+Threshold to Create Proposal
+
+## Scenarios: Using the Governance UI
+
+View locked tokens amount
+Add tokens to Deposit
+Withdraw tokens
+Create proposal
+Vote for proposal
+Execute proposal
+Sign up for notifications

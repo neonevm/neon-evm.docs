@@ -1,8 +1,15 @@
 ---
-title: "Option 2: Local Proxy to Remote Solana"
+title: "Option 3: Local Proxy to Remote Solana"
 ---
 
 This option will let you connect to a remote Solana cluster via a proxy that is hosted locally.
+
+## Prerequisites
+[Docker](https://docs.docker.com/get-docker/) must be already installed on your device. `docker-compose` v1.29 is recommended.
+
+## Network Configuration
+  * Solana cluster is accessed via the locally-hosted proxy.
+  * Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used, and the proxy interacts with it through the Neon EVM.
 
 ## Setting up a Local Proxy
 First, set up and host a proxy locally as per the following steps. After executing these commands, the proxy will be available at `http://localhost:9090/solana`. This address and port are set by default.
@@ -41,8 +48,8 @@ The Proxy service is a core service that allows Ethereum-like transactions to be
 
 The Neon EVM address is registered inside `neonlabsorg/proxy`, so the proxy knows which Neon EVM is running in the Solana cluster. After executing this command, the proxy will be available at `http://localhost:9090/solana`. This address and port are set by default.
 
-#### docker-compose.yml
-To create these services, you need to run the `docker-compose` function on the following file, which you should save as docker-compose.yml.
+#### Create and Run Services with Docker Compose
+In order to create and run these abovementioned services, you will need to first save the following file as `docker-compose.yml` file:
 
 ```console
 version: "3"
@@ -137,10 +144,12 @@ networks:
     external: yes
     # name: local
 ```
-#### How to Run it in Bash
+
+Then, run the `docker-compose` command.
 ```bash
 docker-compose up -d --quiet-pull
 ```
+
 The output should look like this:
 ```console
 Creating postgres ... done
@@ -149,11 +158,9 @@ Creating indexer ... done
 Creating proxy ... done
 ```
 
-## Network Configuration
-  * Solana cluster is accessed via the locally-hosted proxy.
-  * Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used, and the proxy interacts with it through the Neon EVM.
+## Connecting to Solana Cluster RPC Endpoints
 
-A proxy connects to a public [Solana cluster RPC endpoint](https://docs.solana.com/cluster/rpc-endpoints) depending on the *SOLANA_URL* value set. The table below shows the *endpoint* value that is set automatically based on the value of the *CONFIG* variable.
+A proxy connects to a public [Solana cluster RPC endpoint](https://docs.solana.com/cluster/rpc-endpoints) depending on the `SOLANA_URL` value set. The table below shows the *endpoint* value that is set automatically based on the value of the `CONFIG` flag.
 
 CONFIG | RPC Endpoint
 :-|:-
@@ -168,7 +175,7 @@ When a proxy is deployed, it generates a wallet containing a key pair. If you do
 ```bash
 sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass -v ~/.config/solana/id.json:/root/.config/solana/id.json --name proxy neonlabsorg/proxy:v0.5.1
 ```
-Don't forget to specify the value of the CONFIG variable!
+Don't forget to specify the value of the `CONFIG` flag!
 
 **Command Line Options**
   * `~/.config/solana/id.json` — absolute path to your key pair file stored locally
@@ -180,4 +187,4 @@ If you are not registered as an operator, you can only use test public keys. A l
 sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass neonlabsorg/proxy:v0.5.1
 ```
 
-Don't forget to specify the value of the CONFIG variable!
+Again, don't forget to specify the value of the `CONFIG` flag!

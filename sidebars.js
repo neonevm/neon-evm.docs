@@ -38,8 +38,8 @@ module.exports = {
           label: 'Setting up Environment',
           items: [ 'developing/dev_environment/setting_up_the_dev_environment',
                    'developing/dev_environment/op1_remote_proxy_remote_solana',
-                   'developing/dev_environment/op2_local_proxy_remote_solana',
-                   'developing/dev_environment/op3_local_proxy_local_solana',
+                   'developing/dev_environment/op2_local_proxy_local_solana',
+                   'developing/dev_environment/op3_local_proxy_remote_solana',
                    'developing/dev_environment/faucet_and_test_suite_services',
                  ]
         }, {
@@ -106,8 +106,17 @@ module.exports = {
       type: 'category',
       label: 'Governance',
       items: [
-        'governance/governance_overview',
-        'governance/governance_ui'
+        'governance/overview/overview',
+        'governance/neon_daos/neon_daos',
+        'governance/forum/forum',
+        'governance/proposals/proposals',
+        {
+          type: 'category',
+          label: 'Using the Governance User Interface',
+          items: [
+            'governance/using_governance_ui/using_governance_ui',
+          ]
+        }
       ]
     }, {
       type: 'category',
