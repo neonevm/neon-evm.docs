@@ -118,11 +118,36 @@ Then you should click `See in forum` to view the content of the proposal. To vot
  Click `Approve` or `Decline` to vote on the proposal. Next, you will be asked to confirm and you will have the option to add a message to your vote.
 
 ## General Definitions/Terminology
+Understanding Neon's Governance structure requires one to know some niche terminology. The following are some of the more common terms used in reference to Neon Governance:
 
-Yes Threshold
-Voting Period
-Hold-up Period
-Threshold to Create Proposal
+### Voting
+**Voting**, in the context of Neon Governance, is the act of staking NEON tokens to either support or oppose a proposal. In general, the more tokens one stakes, the more power their vote has; however, the precise vote weight of each token varies, and can take into account factors such as the vesting period of the tokens as well as the percentage of the total token supply.
+
+### Proposal
+A **Proposal** is a request for a particular change to something in the Neon ecosystem. Each DAO authority over a certain area of this ecosystem, and a proposal in any given DAO cannot involve a change to anything that DAO does not have authority to change. For example, the Grants DAO will only publish proposals that are related to the creation and distribution of grants and rewards.
+
+### Pass Threshold
+The **Pass Threshold** is the minimum token proportion that must be submitted in support of the proposal, expressed as a percentage of the total NEON token supply. For example, proposals submitted to the Community DAO have a 1% pass threshold, so the votes in favour of the proposal must comprise more than 1% of the total supply of NEON tokens. In addition to meeting the pass threshold, a proposal must have the majority of the votes be in support in order to be accepted.
+
+### Voting Period
+The **Voting Period** is the amount of time eligible token holders have to cast their vote on a particular proposal. After this point, votes can no longer be submitted.
+
+### Hold-up Period
+The **Hold-up Period** is the minimum amount of time that must pass between the approval of a proposal and its implementation. This delay allows for voters to unstake their tokens if they change their mind regarding the proposal's implementation. If enough voters withdraw their votes in support of the proposal that the pass threshold is no longer met, the proposal will be rejected - even if it had been accepted previously.
+
+### Proposal Creation Threshold
+In order to submit a proposal to a DAO, a user must stake a minimum amount of NEON tokens - this is known as the **Proposal Creation Threshold**. For example, to submit a proposal to the Emergency DAO, the proponent must stake at least 2*10<sup>3</sup> NEON, which is 0.0003% of the total token supply. This threshold discourages frivolous proposals and ensures that proponents have invested in their proposal's success.
+
+## Technical Implementation
+The Governance UI is based on the [SPL Governance program](https://github.com/solana-labs/solana-program-library/tree/master/governance) - a versatile DAO creation tool for the Solana blockchain.
+
+This program allows for the customisation of the following parameters:
+
+* Pass threshold
+* Voting period
+* Hold up period
+* Vote weight calculation (e.g. percentage of total supply, based on vested tokens)
+* Whether to allow voting using a portion of vested tokens
 
 ## Scenarios: Using the Governance UI
 

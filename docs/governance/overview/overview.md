@@ -63,7 +63,7 @@ The Neon DAOs are built using the [SPL Governance program](https://github.com/so
 
 This program allows for the customisation of the following parameters:
 
-* Vote threshold to accept a proposal
+* Pass threshold to accept a proposal
 * Voting period
 * Hold up period - the minimum time before executing an approved proposal
 * Vote weight calculation (e.g. percentage of total supply, based on vested tokens)
@@ -75,10 +75,10 @@ The following is a table with some important properties of the different Neon DA
 
 DAO Name | Pass Threshold | Voting Period | Hold Up Period | Threshold to Create Proposal
 :-|:-|:-|:-|:-
-Community DAO | 1% | 1 day | 2 days | 0.0003% (~$800)<br /> 3*10<sup>^3</sup> NEON
-Emergency DAO | 9% | 1 day | 0 days | 0.1% (~$250,000)<br /> 1*10<sup>^6</sup> NEON
-EVM Maintenance DAO | 1% | 1 day | 0 days | 0.002% (~$5,000)<br /> 2*10<sup>^5</sup> NEON
-Grants DAO | 1% | 1 day | 2 days | 0.0003% (~$800)<br /> 2*10<sup>^3</sup> NEON
+Community DAO | 1% | 1 day | 2 days | 0.0003% (~$800)<br /> 3*10<sup>3</sup> NEON
+Emergency DAO | 9% | 1 day | 0 days | 0.1% (~$250,000)<br /> 1*10<sup>6</sup> NEON
+EVM Maintenance DAO | 1% | 1 day | 0 days | 0.002% (~$5,000)<br /> 2*10<sup>5</sup> NEON
+Grants DAO | 1% | 1 day | 2 days | 0.0003% (~$800)<br /> 2*10<sup>3</sup> NEON
 
 
 Below is a table of different proposal types that can be submitted to different DAOs, and what they affect:
