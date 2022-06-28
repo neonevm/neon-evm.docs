@@ -2,9 +2,17 @@
 title: Neon DAOs
 ---
 
-Neon's governance model is based on an interplay of several Decentralized Autonomous Organizations (aka DAOs). These DAOs function by accepting proposals from eligible members, which are put to a vote after some discussion. This vote, between Accepting and Rejecting the proposal, is conducted by eligible DAO members submitting an arbitrary amount of NEON tokens toward either option, with each NEON token being worth one vote. If the Accept option receives more than the threshold required, the proposal passes; otherwise, it fails.
+Neon's governance model is based on an interplay and synergy of several Decentralized Autonomous Organizations (DAOs). In a nutshell, DAOs are member-owned communities that serve as a safe and effective way for like-minded indivuals to constructively work together and engage in collective decision-making. DAOs function by accepting proposals from eligible members, which are put to a vote after a discussion phase. This vote, between Accepting and Rejecting the proposal, is conducted by eligible DAO members submitting an arbitrary amount of NEON tokens toward either option, with each NEON token being worth one vote. If the `Accept` option receives more than the threshold required, the proposal passes; otherwise, it fails.
 
 The Neon governance model consists of the following DAOs:
+
+- [Community DAO](#community-dao)
+- [Emergency DAO](#emergency-dao)
+- [EVM Maintenance DAO](#evm-maintenance-dao)
+- [Grants DAO](#grants-dao)
+- [Bug Bounty Committee](#bug-bounty-committee)
+
+![](img/dao_organization.png)
 
 ## Community DAO
 

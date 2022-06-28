@@ -7,11 +7,11 @@ title: Overview
 The goal of Neon's decentralized governance system is to allow the community of token holders to have a say in how the protocol evolves. The governance process includes core developers, application developers, operators, users, and other contributors in order to come to a consensus on solving issues and developing rules for the functioning of governance. The rules can be changed by contractual amendments as decided by the stakeholders.
 
 Neon governance is the process by which community stakeholders:
-  * Reach consensus on solving issues that cannot be fully covered by software algorithms.
-  * Develop rules for the functioning of governance in accordance with the decisions stakeholders make, and record and store rules within the blockchain.
-  * Change the governance rules themselves through contractual amendments.
+  * Reach consensus on solving issues that cannot be fully covered by software algorithms
+  * Develop rules for the functioning of governance in accordance with the decisions stakeholders make, and record and store rules within the blockchain
+  * Change the governance rules themselves through contractual amendments
 
-Since the results depend on Neon stability, a high level of coordination must be ensured when making changes to the management and technical processes to ensure that any changes to Neon are secure and approved by the community. It is also necessary to make the process of resolving issues related to Neon management transparent.
+Since the results depend on Neon's stability, a high level of coordination must be ensured when making changes to the management and technical processes to ensure that any changes to Neon are secure and approved by the community. It is also necessary to make the process of resolving issues related to Neon management transparent.
 
 ### Principles and Objectives
 
@@ -29,9 +29,11 @@ There are also more concrete prohibitions on improper behavior that must be kept
 * No member should improperly influence the vote of another.
 * Members agree to hold software developers blameless for unintentional mistakes made by them in the expression of contractual intent, whether or not said mistakes were due to actual or perceived negligence.
 
+In addition, NEON governance is transparent and flexibile. All users have access to all relevant information in order to make well-informed decisions, and the governance process is adaptable to the ever-evolving needs of the community.
+
 ## Governance on Neon: Organization
 
-The Neon network is decentralized and its is economy fee-based, with NEON tokens being used for governance purposes. Following the same philosophy, Neon's governance framework is itself handled by a decentralized protocol with a clear and user-friendly process for proposing and voting for protocol improvements. It is organized as a series of DAOs (Decentralized Autonomous Organizations) that are each responsible for a different aspect of the decisionmaking process. While each DAO has different criteria for submitting proposals, eligibility for voting, and the scope of influence its decisions can have, they all follow the same basic formula, which is:
+Neon is decentralized and its economy fee-based, with NEON tokens being used for governance purposes. Following the same philosophy, Neon's governance framework is itself handled by a decentralized protocol with a clear and user-friendly process for proposing and voting for protocol improvements. It is organized as a series of DAOs (Decentralized Autonomous Organizations) that are each responsible for a different aspect of the decisionmaking process. While each DAO has different criteria for submitting proposals, eligibility for voting, and the scope of influence its decisions can have, they all follow the same basic formula, which is:
 
 * Eligible users submit a proposal.
 * DAO members discuss, review, and revise the proposal on off-chain platforms.
@@ -40,7 +42,7 @@ The Neon network is decentralized and its is economy fee-based, with NEON tokens
 
 As mentioned, the decentralized aspect of Neon governance is only for the voting - the proposal discussion and review stage, on the other hand, must take place on another platform. 
 
-For more details on Neon's DAOs and the differences and interactions between them, see the [following page](/docs/governance/neon_daos/).
+For more details on Neon's DAOs and the differences and interactions between them, see the [NEON DAOs section](/docs/governance/neon_daos/).
 
 ## Submitting and Evaluating Proposals
 
