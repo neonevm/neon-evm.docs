@@ -34,7 +34,7 @@ After setting up the local network, it is time to start the Solana validator ser
 
 This service presents the Solana validator running inside the container.
 
-Once you deploy the environment, you will have the Solana RPC endpoint working from the docker container at port `9090`. A folder named `solana_state` will be created also and it contains the Solana ledger to keep the state over restarts. If you need to reset the ledger, just remove this folder and it will be recreated the next time you run `docker-compose`.
+Once you deploy the environment, you will have the Solana RPC endpoint working from the docker container at port `8899`. A folder named `solana_state` will be created also and it contains the Solana ledger to keep the state over restarts. If you need to reset the ledger, just remove this folder and it will be recreated the next time you run `docker-compose`.
 
 #### docker-compose.yml
 
@@ -170,8 +170,6 @@ module.exports = {
       provider: new HDWalletProvider(privateKeys, "http://127.0.0.1:9090/solana"),
       from: accs[0].publicKey,
       network_id: "111",
-      gas: 3000000,
-      gasPrice: 1000000000,
     }
   },
 

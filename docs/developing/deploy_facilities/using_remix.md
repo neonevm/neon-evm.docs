@@ -8,7 +8,7 @@ title: Using Remix
 Before you start, make sure that the following is true:
   * MetaMask is installed on your device.  
   * You have provided online access to https://remix.ethereum.org to use the "Remix - Ethereum IDE" open-source web application.
-  * MetaMask is configured for both proxy and Neon EVM. Regardless of how your proxy and Neon EVM are run, MetaMask must always be configured for them accordingly.
+  * MetaMask is configured for the Neon EVM.
 
 ## Network Configurations
   * [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.

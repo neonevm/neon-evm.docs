@@ -5,7 +5,7 @@ title: (Optional) Setting up Faucet and Full Test Suite Services
 *This **optional** step-by-step guide describes how to set up faucet and full test suite services. It assumes that a proxy and a connection to a Solana cluster have already been established, either locally or remotely.*
 
 ## Faucet Service
-The Faucet service provides liquidity in 'NEON' to all the accounts that are mentioned in the incoming requests.
+The Faucet service provides liquidity to all the accounts that are mentioned in the incoming requests.
 
 #### docker-compose.yml
 
