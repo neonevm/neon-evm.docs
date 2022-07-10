@@ -49,101 +49,39 @@ The Proxy service is a core service that allows Ethereum-like transactions to be
 The Neon EVM address is registered inside `neonlabsorg/proxy`, so the proxy knows which Neon EVM is running in the Solana cluster. After executing this command, the proxy will be available at `http://localhost:9090/solana`. This address and port are set by default.
 
 #### Create and Run Services with Docker Compose
-In order to create and run these abovementioned services, you will need to first save the following file as `docker-compose.yml` file:
+In order to create and run these abovementioned services, 
 
-```console
-version: "3"
+1. Create "keys" folder and put your whitelisted key into it. Note that the file with operator key should be named `id.json`.
 
-services:
-  postgres:
-    container_name: postgres
-    image: postgres:14.0
-    command: postgres -c 'max_connections=1000'
-    environment:
-      POSTGRES_DB: neon-db
-      POSTGRES_USER: neon-proxy
-      POSTGRES_PASSWORD: neon-proxy-pass
-    hostname: postgres
-    healthcheck:
-      test: [ CMD-SHELL, "pg_isready -h postgres -p 5432" ]
-      interval: 5s
-      timeout: 10s
-      retries: 10
-    networks:
-      - net
-    ports:
-      - "127.0.0.1:5432:5432"
-    expose:
-      - "5432"
+2. Set environment variables
+   - `EVM_LOADER`
+     - For devnet/testnet, it should be `eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU`
+   - `SOLANA_URL`
+   - `PROXY_VERSION`
+For example,
 
-  dbcreation:
-    container_name: dbcreation
-    image: neonlabsorg/proxy:latest
-    environment:
-      SOLANA_URL: http://solana:8899
-      POSTGRES_DB: neon-db
-      POSTGRES_USER: neon-proxy
-      POSTGRES_PASSWORD: neon-proxy-pass
-      POSTGRES_HOST: postgres
-    entrypoint: proxy/run-dbcreation.sh
-    networks:
-      - net
-
-  indexer:
-    container_name: indexer
-    image: neonlabsorg/proxy:latest
-    environment:
-      SOLANA_URL: http://solana:8899
-      POSTGRES_DB: neon-db
-      POSTGRES_USER: neon-proxy
-      POSTGRES_HOST: postgres
-      POSTGRES_PASSWORD: neon-proxy-pass
-      CONFIG: ci
-      START_SLOT: LATEST
-    hostname: indexer
-    entrypoint: proxy/run-indexer.sh
-
-    networks:
-      - net
-
-  proxy:
-    container_name: proxy
-    image: neonlabsorg/proxy:latest
-    environment:
-      - POSTGRES_DB=neon-db
-      - POSTGRES_USER=neon-proxy
-      - POSTGRES_PASSWORD=neon-proxy-pass
-      - POSTGRES_HOST=postgres
-      - SOLANA_URL=http://solana:8899
-      - EXTRA_GAS=5000
-      - EVM_LOADER=53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io
-      - CONFIG=ci
-      - LOG_NEON_CLI_DEBUG=YES
-      - USE_COMBINED_START_CONTINUE=yes
-      - NEON_CLI_TIMEOUT=60
-      - NEW_USER_AIRDROP_AMOUNT=0
-      - WRITE_TRANSACTION_COST_IN_DB=NO
-      - START_SLOT=LATEST
-      - PERM_ACCOUNT_LIMIT=16
-    hostname: proxy
-    entrypoint: ./proxy/run-proxy.sh
-    ports:
-      - "9090:9090"
-    expose:
-      - "9090"
-    networks:
-      - net
-
-
-networks:
-  net:
-    external: yes
-```
-
-Then, run the `docker-compose` command.
 ```bash
-docker-compose up -d --quiet-pull
+export EVM_LOADER=eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU
+export SOLANA_URL=http://api.devnet.solana.com/
+export PROXY_VERSION=latest
 ```
+
+3. Download docker-compose file https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/proxy/docker-compose-remote-solana.yml. This file should be placed in the same folder with the keys folder
+```bash
+wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/proxy/docker-compose-remote-solana.yml
+```
+
+4. Start local environment
+```bash   
+docker-compose -f docker-compose-remote-solana.yml up -d
+```
+
+5. For destroying local environment
+```bash
+docker-compose -f docker-compose-remote-solana.yml down
+```
+
+> Attention: All local changes will be lost after destroying the local environment.
 
 The output should look like this:
 ```console
