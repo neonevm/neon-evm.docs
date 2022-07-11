@@ -2,13 +2,11 @@
 title: "Option 3: Local Proxy to Remote Solana"
 ---
 
-This option will let you connect to a remote Solana cluster via a proxy that is hosted locally.
-
 ## Prerequisites
 [Docker](https://docs.docker.com/get-docker/) must be already installed on your device. `docker-compose` v1.29 is recommended.
 
 ## Network Configuration
-  * Solana cluster is accessed via the locally-hosted proxy.
+  * The target Solana cluster is accessed via the locally-hosted proxy.
   * Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used, and the proxy interacts with it through the Neon EVM.
 
 ## Setting up a Local Proxy
@@ -44,7 +42,7 @@ Currently, Neon EVM proxies are hardcoded to work with PostgreSQL. To connect th
 The indexer service indexes all the relevant Ethereum processing metadata consisting of **`signatures`**, **`transactions`**, **`blocks`**, **`receipts`**, **`accounts`**, etc. It gathers all this data from the Solana blockchain, filtering them by the EVM contract address. It also makes it possible to provide our users with the Ethereum API according to the data provided by the whole known operators.
 
 #### Proxy Service
-The Proxy service is a core service that allows Ethereum-like transactions to be processed on Solana, taking full advantage of the functionality native to Solana, including the ability to execute transactions in parallel.
+The Proxy service is a core service that allows Ethereum-like transactions to be processed on Solana, taking full advantage of Solana-native functionality, including the ability to execute transactions in parallel.
 
 The Neon EVM address is registered inside `neonlabsorg/proxy`, so the proxy knows which Neon EVM is running in the Solana cluster. After executing this command, the proxy will be available at `http://localhost:9090/solana`. This address and port are set by default.
 
@@ -52,23 +50,29 @@ The Neon EVM address is registered inside `neonlabsorg/proxy`, so the proxy know
 In order to create and run these abovementioned services, 
 
 1. Create "keys" folder and put your whitelisted key into it. Note that the file with operator key should be named `id.json`.
+```bash
+mkdir keys
+mv {PATH_TO_WHITELISTED_KEYS} keys/
+```
 
-2. Set environment variables
+2. Set the following environment variables
    - `EVM_LOADER`
      - For devnet/testnet, it should be `eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU`
    - `SOLANA_URL`
+     - Refer to the [RPC Endpoints table](#rpc-endpoints)
    - `PROXY_VERSION`
-For example,
 
+For example,
 ```bash
 export EVM_LOADER=eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU
 export SOLANA_URL=http://api.devnet.solana.com/
 export PROXY_VERSION=latest
 ```
 
-3. Download docker-compose file https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/proxy/docker-compose-remote-solana.yml. This file should be placed in the same folder with the keys folder
+3. Download the `docker-compose` file https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/proxy/docker-compose-remote-solana.yml. This file should be placed in the same folder with the `keys/` directory.
 ```bash
 wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/proxy/docker-compose-remote-solana.yml
+mv docker-compose-remote-solana.yml keys/
 ```
 
 4. Start local environment
@@ -76,14 +80,14 @@ wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/proxy/
 docker-compose -f docker-compose-remote-solana.yml up -d
 ```
 
-5. For destroying local environment
+1. (Optional) Destroy existing local environment
 ```bash
 docker-compose -f docker-compose-remote-solana.yml down
 ```
 
-> Attention: All local changes will be lost after destroying the local environment.
+> Warning: All local changes will be lost after destroying the local environment.
 
-The output should look like this:
+The console output should look like this:
 ```console
 Creating postgres ... done
 Creating dbcreation ... done
@@ -95,6 +99,7 @@ Creating proxy ... done
 
 A proxy connects to a public [Solana cluster RPC endpoint](https://docs.solana.com/cluster/rpc-endpoints) depending on the `SOLANA_URL` value set. The table below shows the *endpoint* value that is set automatically based on the value of the `CONFIG` flag.
 
+### RPC Endpoints
 CONFIG | RPC Endpoint
 :-|:-
 devnet | `https://api.devnet.solana.com`
@@ -103,21 +108,10 @@ mainnet | `https://api.mainnet-beta.solana.com`
 
 To use a different endpoint, you need to specify the variable `-e SOLANA_URL='http://<Solana node RPC endpoint>'` on the command line. For example, in order to use devnet, add the flag `-e SOLANA_URL='https://api.devnet.solana.com'`.
 
-When a proxy is deployed, it generates a wallet containing a key pair. If you do not need the new wallet and want to use the keys you already have, you need to specify the path to your wallet on the command line. In this case, the proxy will not create a new key pair. The command line will look like the following:  
-
-```bash
-sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass -v ~/.config/solana/id.json:/root/.config/solana/id.json --name proxy neonlabsorg/proxy:v0.5.1
-```
-Don't forget to specify the value of the `CONFIG` flag!
+When a proxy is deployed, it generates a wallet containing a key pair. If you do not need the new wallet and want to use the keys you already have, you need to specify the path to your wallet on the command line.
 
 **Command Line Options**
   * `~/.config/solana/id.json` — absolute path to your key pair file stored locally
   * `--name proxy` — specifies the proxy name
 
-If you are not registered as an operator, you can only use test public keys. A list of available public keys is accessible in the [Neon Proxy RPC Endpoints](clusters/neon_proxy_rpc_endpoints.md) section. You do not need to specify the key using the `-v` flag, since it is already hard-coded into the Devnet/Testnet containers. Use the following command:
-
-```bash
-sudo docker run --rm -ti --network=host -e CONFIG=<network> -e POSTGRES_DB=neon-db -e POSTGRES_USER=neon-proxy -e POSTGRES_PASSWORD=neon-proxy-pass neonlabsorg/proxy:v0.5.1
-```
-
-Again, don't forget to specify the value of the `CONFIG` flag!
+If you are not registered as an operator, you can only use test public keys. A list of available public keys is accessible in the [Neon Proxy RPC Endpoints](clusters/neon_proxy_rpc_endpoints.md) section. You do not need to specify the key using the `-v` flag, since it is already hard-coded into the Devnet/Testnet containers.
