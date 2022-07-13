@@ -32,7 +32,7 @@ sudo systemctl start docker
 In this step, you will create the services necessary for the function of the proxy (including database and indexer services), as well as the proxy service itself. These services, the functions of which are described below, will be created from a docker-compose.yml file.
 
 #### Database Services
-This container aims to handle the database that stores all the relevant Ethereum processing metadata linked to each other: **`transactions`**, **`blocks`**, **`receipts`**, **`accounts`** etc. This data is consumed by the **indexer** service.
+This container aims to handle the database that stores all the relevant Ethereum processing metadata linked to each other: **`transactions`**, **`blocks`**, **`receipts`**, **`accounts`** etc. This data is consumed by the **Indexer** service.
 
 Currently, Neon EVM proxies are hardcoded to work with PostgreSQL. To connect the proxy to a database, you need to start a PostgreSQL container. The default settings are hardcoded in the following docker-compose.yml file. If you want to use your proxy with other settings, you need to register as an operator so that the Neon EVM can recognize your keys.
 
@@ -75,12 +75,12 @@ wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/proxy/
 mv docker-compose-remote-solana.yml keys/
 ```
 
-4. Start local environment
+4. Start the local environment.
 ```bash   
 docker-compose -f docker-compose-remote-solana.yml up -d
 ```
 
-1. (Optional) Destroy existing local environment
+If you want to destroy the local environment, run the following command:
 ```bash
 docker-compose -f docker-compose-remote-solana.yml down
 ```
