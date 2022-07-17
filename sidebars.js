@@ -106,17 +106,8 @@ module.exports = {
       type: 'category',
       label: 'Governance',
       items: [
-        'governance/overview/overview',
-        'governance/neon_daos/neon_daos',
-        'governance/forum/forum',
-        'governance/proposals/proposals',
-        {
-          type: 'category',
-          label: 'Using the Governance User Interface',
-          items: [
-            'governance/using_governance_ui/using_governance_ui',
-          ]
-        }
+        'governance/governance_overview',
+        'governance/governance_ui'
       ]
     }, {
       type: 'category',
