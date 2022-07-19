@@ -72,7 +72,6 @@ export PROXY_VERSION=latest
 3. Download the `docker-compose` [file](https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/proxy/docker-compose-remote-solana.yml). This file should be placed in the same folder with the `keys/` directory.
 ```bash
 wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/proxy/docker-compose-remote-solana.yml
-mv docker-compose-remote-solana.yml keys/
 ```
 
 4. Start the local environment.
@@ -84,8 +83,6 @@ If you want to destroy the local environment, run the following command:
 ```bash
 docker-compose -f docker-compose-remote-solana.yml down
 ```
-
-> Warning: All local changes will be lost after destroying the local environment.
 
 The console output should look like this:
 ```console
