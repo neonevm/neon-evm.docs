@@ -32,12 +32,6 @@ Select `Neon EVM Devnet` and click `Connect Wallet`. A MetaMask pop-up window wi
 #### Option B: Connect Manually with MetaMask
 Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#setting-up-an-rpc-network).
 
-### Step 3: Migrating the NeonSwap dApp to the Neon EVM
-
-Now that you have your Neon development environment set up, it is time to port a sample dApp, [NeonSwap](about/terminology.md#neonswap), over to Neon. Doing so requires no software code changes and once done the smart contracts will be running on [Solana](https://docs.solana.com/introduction). NeonSwap is a Uniswap v2 fork and an ideal set of contracts to demo how easy migrations can be done. 
-
-For more details, please refer to [🔘 Migrating NeonSwap to the Neon EVM](developing/deploy_facilities/migrating_dapps.md).
-
 ## Deploying dApps
 
 Deploying dApps on Neon is easy and you can do so with [Remix](https://remix-project.org/), [Truffle](https://trufflesuite.com/), and [Hardhat](https://hardhat.org/). 
