@@ -2,28 +2,31 @@
 title: Using Truffle
 ---
 
-*This page outlines a methodology for deploying and testing contracts in Neon EVM using the Truffle tool. This technique can be useful for personnel involved in the development and maintenance of Neon EVM.*
+*This page outlines the steps for deploying and testing contracts in the Neon EVM using the Truffle tool. Truffle can be useful for those involved in the development and maintenance of the Neon EVM.*
 
-It should be noted that Ethereum contracts can also be successfully deployed in Neon EVM using Remix in manual mode. However, since Remix does not have as many capabilities, it turned out to be not as convenient for software development, and therefore we wanted to provide developers with a more advanced methodology using Truffle.
+> **Note:** Ethereum contracts can also be successfully deployed in the Neon EVM using Remix in manual mode (see the [previous section](developing/deploy_facilities/using_remix.md)). However, since Remix does not have as many capabilities, Truflle is offered as a useful, more advanced alternative for those that need the additional functionality and flexibility.
 
-## The Goal
-Our main goal with Truffle is to make it easier for developers to deploy and debug contracts in Neon EVM.
+The main goal in using Truffle is to make it easier for developers to deploy and debug contracts in Neon EVM.
 
 With Truffle, you get:
-  * A simple setting of configuration parameters.
-  * An easy process of deploying and debugging contracts in the network.
-  * Automated deployment and running of tests.
+  * Simple configuration parameter settings
+  * An easy process of deploying and debugging contracts on the network
+  * Automated deployment and running of tests
+
+## Prerequisites
+Before you start, make sure of the following software is installed on your device:
+  * `NodeJS v8.9.4` or later
+  * `Web3 v1.2.0` or later
+
+## Network Configurations
+  * [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
+  * Solana works in test mode and the proxy interacts with it through Neon EVM.
 
 ## Installation
 
-### Requirements for your device
-The following software must be installed on your device:
-  * NodeJS v8.9.4 or later
-  * Web3 v1.2.0 or later
+> **Note:** Although this tutorial uses the *Ubuntu* operating system, these instructions can be applied to other UNIX distros as well.  
 
-> **Note:** Although this tutorial uses the Ubuntu platform, the instructions provided can be applied to other Linux platforms.
-
-### Installing Truffle
+### Install Truffle
 
 If Truffle is already installed on your device, you can skip this section and move on to the next one. For those just getting started, you need to go through this section.
 
@@ -31,101 +34,101 @@ If Truffle is already installed on your device, you can skip this section and mo
 
 Create a new directory for your Truffle project:
 ```sh
-$ mkdir <project name>
-$ cd <project name>
+mkdir <project name>
+cd <project name>
 ```
 
 Install Truffle:
 ```sh
-$ npm install truffle
+npm install truffle
 ```
 
 Initialize the project directory by running the following command:
 ```sh
-$ truffle init
+truffle init
 ```
 
 Once this operation is completed, you will have a project structure with the following items:
-  * `contracts/` — Directory for Solidity contracts
+  * `contracts/` — Directory containing Solidity contracts
   * `migrations/` — Directory for scriptable deployment files
-  * `test/` — Directory for test files for testing your contracts
+  * `test/` — Directory containing test files for testing your Solidity contracts
   * `truffle-config.js` — Truffle configuration file
 
-You can run `truffle compile`, `truffle migrate` and `truffle test` to compile your contracts, deploy them to the network, and run their associated unit tests.
+You can run `truffle compile`, `truffle migrate` and `truffle test` to compile your contracts, deploy them to the network, and run their associated unit tests, respectively.
 
-### Installation of the HDWalletProvider library
+### Install the HDWalletProvider library
 
-HD Wallet-enabled Web3 provider (HDWalletProvider) is a standalone library. One of its functions is signing transactions with private keys. Since the Neon EVM proxy does not store private keys, it cannot sign transactions. Therefore, during debugging contracts, the HDWalletProvider library is used to sign transactions for addresses derived from a *12* or *24* word mnemonic.
+The HD Wallet-enabled Web3 provider `HDWalletProvider` is a standalone library. One of its functions is signing transactions with private keys. Since the Neon EVM proxy does not store private keys, it cannot sign transactions. Therefore, while debugging smart contracts, the `HDWalletProvider` library is used instead to sign transactions for addresses derived from a *12* or *24* word mnemonic.
 
-By default, the Truffle installation does not provide the HDWalletProvider library. If during the installation of Truffle none of the applications required the HDWalletProvider library to be installed, you need to install it separately.
+By default, the vanilla Truffle installation does not provide the `HDWalletProvider` library. If, during the installation process, none of the applications required the `HDWalletProvider` library to be installed, you will need to install it separately by running the following command.
 
-Install the HDWalletProvider library:
-```sh
-$ npm install @truffle/hdwallet-provider
+```console
+npm install @truffle/hdwallet-provider
 ```
 
-> **Note:** To go into much detail here, you can see the *[official documentation](https://www.npmjs.com/package/@truffle/hdwallet-provider)*.
+Refer to the [official npm package documentation](https://www.npmjs.com/package/@truffle/hdwallet-provider) for the full installation process.
 
 ## Connecting Truffle to a Proxy
 
 To connect Truffle to a proxy on `node.js`, the `eth_accounts` method from the [Ethereum JSON RPC API](https://eth.wiki/json-rpc/API) set is required. This method allows serving a list of *20* byte addresses owned by a client. Since the Neon EVM proxy does not support the `eth_accounts` method required to connect Truffle, the HDWalletProvider library is used to function as this method. The connection is configured in `truffle-config.js`.
 
-The configuration file is publicly available, and therefore the `word mnemonic` and `private key` contained in the file are also publicly available. This makes it possible for the library to use this data. HDWalletProvider obtains `word mnemonic` or `private key` from the configuration file and uses this data to sign transactions before sending them to the proxy.
+The configuration file is publicly available, and therefore the `word mnemonic` and `private key` contained in the file are also publicly available. This makes it possible for the library to use this data. HDWalletProvider obtains the `word mnemonic` or `private key` from the configuration file and uses this data to sign transactions before sending them to the proxy.
 
 This method of configuration is convenient for debug mode, but not suitable for work in real conditions. Since the development process uses "test" wallets, this data is not of any value.
 
-> **Note:** We strongly recommend using Truffle in Neon EVM only for developing or testing contracts.
+> **Note:** It is strongly recommended to use Truffle in the Neon EVM only for developing or testing contracts.
 
 ## Configuration
-Your configuration file is called `truffle-config.js` and is located at the root of your project directory. This file is a JavaScript file and can execute any code necessary to create your configuration.
+The configuration file is called `truffle-config.js` and is located at the root of your project directory. This file is a JavaScript file and can execute any code necessary to create your configuration. Its file schema, variables, and other documentation can be found on the [official Truffle Suite website](https://trufflesuite.com/docs/truffle/reference/configuration/).
 
 ## Compiling Contracts
 All of your contracts are located in your project's `contracts/` directory. To compile a Truffle project, change to the root of the directory where the project is located and run the following command:
 ```sh
-$ truffle compile
+truffle compile
 ```
-
-Upon first run, all contracts will be compiled. Upon subsequent runs, only contracts that have changed since the last compilation will be compiled again.
+For the first run, all contracts will be compiled. During subsequent runs, only contracts that have changed since the last compilation will be compiled again.
 
 If you want to re-compile all contracts, run the above command with the `--all` option:
 ```sh
-$ truffle compile --all
+truffle compile --all
 ```
 
 ## Running Migrations
-Migration is used to deploy your contracts to the network. This operation is performed using JavaScript files contained in the `migration/` directory. Migrations are simply a set of managed deployment scripts.
+Migrations are a set of managed deployment scripts used to deploy contracts to the network. These scripts, which are JavaScript files, should be contained in the project's `migrations/` directory.
 
-Run migrations to deploy contracts:
+To run migrations to deploy contracts, run:
 ```sh
-$ truffle migrate
+truffle migrate
 ```
+
 This will run all migrations located within the `migrations/` directory. If your migrations were previously run successfully, truffle migrate will start execution from the last migration that was run, running only newly created migrations. If no new migrations exist, truffle migrate won't perform any action.
 
 If you need to run all migrations from the beginning, instead of running from the last completed migration, you can use the `--reset` option:
 ```sh
-$ truffle migrate --reset
+truffle migrate --reset
 ```
 
-The full set of options that you can use during running migrations are listed in the page with [truffle migrate](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#migrate) command.
+The full list of options that you can use for migrations can be found under the [truffle migrate](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#migrate) command.
 
 ## Testing Contracts
-All test files should be located in the `test/` directory.
+All test files should be located under the `test/` directory.
 
-To run all tests by default, simply run:
+To run all tests, simply run:
 ```sh
-$ truffle test
+truffle test
 ```
 
-To run only one file from the entire test suite or a specific file that is not in `test/`, you need to specify the full name of that file:
+To run only one test file from the entire test suite or a specific file that is not in `test/`, you need to specify the full name of that file:
 ```sh
-$ truffle test <./path/file.js>
+truffle test <./path/file.js>
 ```
 
-The full set of options that you can use during testing are listed in the page with the [truffle test](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#test) command.
+The full list of options that you can use for testing can be found under the [truffle test](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#test) command.
 
 
-## Example of Configuration File Settings
-The example of the configuration file for connecting Truffle to a devnet-proxy using the one-way library on Node.js:
+## `truffle-config.js` Example
+The following is a full example of the `truffle-config.js` configuration file for connecting Truffle to a devnet-proxy using the one-way library on Node.js:
+
 ```js
 const Web3 = require("web3");
 const HDWalletProvider = require("@truffle/hdwallet-provider");
@@ -154,12 +157,12 @@ module.exports = {
 };
 ```
 
-> **Note:** If both mnemonic and private keys are provided, the mnemonic is used.
+> **Note:** If both mnemonic and private keys are provided, the mnemonic takes precedence and is used instead.
 
-Use next command to deploy contracts using **neonlabs** network:
+To deploy contracts using the **neonlabs** network:
 ```sh
 truffle migrate --network neonlabs
 ```
 
 ## Example Project
-You can obtain example Truffle project from here: https://github.com/neonlabsorg/examples/tree/main/simple-erc20-truffle
+An example Truffle project can be found [here](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-truffle).

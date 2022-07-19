@@ -36,9 +36,12 @@ module.exports = {
         {
           type: 'category',
           label: 'Setting up Environment',
-          items: [ 'developing/dev_environment/choosing_proxy',
-                   'developing/dev_environment/connect_to_solana_via_proxy',
-                   { type: 'doc', label: 'Local Neon EVM environment', id: 'developing/dev_environment/solana_cluster/cluster_installation' } ]
+          items: [ 'developing/dev_environment/setting_up_the_dev_environment',
+                   'developing/dev_environment/op1_remote_proxy_remote_solana',
+                   'developing/dev_environment/op2_local_proxy_local_solana',
+                   'developing/dev_environment/op3_local_proxy_remote_solana',
+                   'developing/dev_environment/faucet_and_test_suite_services',
+                 ]
         }, {
           type: 'category',
           label: 'Deploying dApps',
@@ -46,20 +49,43 @@ module.exports = {
                    'developing/deploy_facilities/using_remix',
                    'developing/deploy_facilities/using_truffle',
                    'developing/deploy_facilities/using_hardhat',
-                   'developing/deploy_facilities/migrating_dapps',
-                   'developing/deploy_facilities/using_erc20_tokens',
+                  //  'developing/deploy_facilities/migrating_dapps',
+                   'developing/deploy_facilities/interacting_with_spl_tokens',
                    'developing/deploy_facilities/adding_new_tokens',
                  ]
         },
 //        'developing/contract_testing/neonswap_tests',
         {
           type: 'category',
-          label: 'Using utilities',
+          label: 'Using Neon Tools',
           items: [
             { type: 'link', label: 'NeonScan', href: "https://neonscan.org/" },
             'developing/utilities/neonpass',
-            'developing/utilities/neonswap',
+//          'developing/utilities/neonswap',
             'developing/utilities/faucet',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Integrating',
+          items: [
+            'developing/integrate/introduction',
+            'developing/integrate/neon_transfer_sdk',
+            {
+              type: 'category',
+              label: 'Wallets',
+              items: [
+                'developing/integrate/wallets/integrating_metamask_into_your_dapp',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Oracles',
+              items: [
+                'developing/integrate/oracles/integrating_pyth',
+              ]
+            },
+            // 'developing/integrate/indexers',
           ]
         }
       ]

@@ -1,4 +1,0 @@
-# Wallets
-
-#### Future work
-
