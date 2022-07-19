@@ -6,8 +6,8 @@ As a new, aspiring Neon developer, your first step of exploring the Neon EVM fra
 
 There are several ways to do set up proxy and Solana cluster:
   * [Option 1:](developing/dev_environment/op1_remote_proxy_remote_solana.md) The proxy is hosted on a remote virtual server. Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used.
-  * [Option 2:](developing/dev_environment/op2_local_proxy_remote_solana.md) The proxy is hosted locally. Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used.
-  * [Option 3:](developing/dev_environment/op3_local_proxy_local_solana.md) Both the proxy and Solana are hosted locally. (Debug mode, which allows you to configure your node locally.)
+  * [Option 2:](developing/dev_environment/op2_local_proxy_local_solana.md) The proxy is hosted locally. Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used.
+  * [Option 3:](developing/dev_environment/op3_local_proxy_remote_solana.md) Both the proxy and Solana are hosted locally. (Debug mode, which allows you to configure your node locally.)
 
 > **Note:** It is important to set up the most appropriate development environment for your purposes and use cases. Refer to the [Neon Proxy RPC Endpoints](clusters/neon_proxy_rpc_endpoints.md) section to learn more about which Neon proxy to connect to.  
 
