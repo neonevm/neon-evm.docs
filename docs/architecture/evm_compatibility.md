@@ -70,3 +70,13 @@ title: Ethereum JSON-RPC Compatibility
 | 1   | [net_listening](https://openethereum.github.io/JSONRPC-net-module#net_listening) | _Returns true if client is actively listening for network connections_ | ![done](img/done.ico)          |
 | 2   | [net_peerCount](https://openethereum.github.io/JSONRPC-net-module#net_peercount) | _Returns number of peers currenly connected to the client_             | ![done](img/done.ico)          |
 | 3   | [net_version](https://openethereum.github.io/JSONRPC-net-module#net_version)     | _Returns the current network protocol version._                        | ![done](img/done.ico)          |
+
+## Neon-specific JSON-RPC methods
+
+| Num | Method                                                                           | Description                                                            | Status                         |
+|-----|----------------------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------|
+| 1   | neon_proxy_version | _Returns string representing Neon-Proxy version_ | ![done](img/done.ico)          |
+| 2   | neon_cli_version | _Returns string representing version of Neon-CLI used by proxy_ | ![done](img/done.ico)          |
+| 3   | neon_getSolanaTransactionByNeonTransaction | _Returns list of Solana signatures corresponding to given Neon-trx signature. Accepts single argument - Neon-trx signature_ | ![done](img/done.ico)          |
+| 4   | neon_emulate | _Emulates given raw signed Neon-trx and returns result of emulation. Accepts single argument - raw signed Neon-trx_ | ![done](img/done.ico)          |
+| 5   | neon_getEvmParams | _Returns object where each field represents value of a single Neon-EVM parameter_ | ![done](img/done.ico)          |
