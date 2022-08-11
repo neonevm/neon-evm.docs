@@ -15,7 +15,7 @@ Install MetaMask by following the setup instructions on the [Installing MetaMask
 There are two ways to connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster: using Chainlist.org or manually.
 
 #### Option A: Connect with Chainlist.org
-Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You should see `Neon EVM Devnet` and `Neon EVM MainNet`.  
+Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You should see `Neon EVM Devnet` and `Neon EVM Mainnet`.  
 
 ![](img/chainlist_neon.png)
 
@@ -24,7 +24,10 @@ Select `Neon EVM Devnet` and click `Connect Wallet`. A MetaMask pop-up window wi
 #### Option B: Connect Manually with MetaMask
 Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#setting-up-an-rpc-network).
 
-## Deploying dApps
+### Step 3: Get NEON Devnet Tokens from the NeonFaucet
+NEON tokens for Devnet can be obtained using the [NeonFaucet](developing/utilities/faucet.md).
+
+### Step 4: Deploying dApps
 
 Deploying dApps on Neon is easy and you can do so with [Remix](https://remix-project.org/), [Truffle](https://trufflesuite.com/), and [Hardhat](https://hardhat.org/). 
 

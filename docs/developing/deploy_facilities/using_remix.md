@@ -2,7 +2,7 @@
 title: Using Remix
 ---
 
-*This tutorial will show you step by step how to use [Remix](about/terminology.md#remix) and [MetaMask](about/terminology.md#metamask) to create and deploy a simple smart contract on Solana. Although the instructions use Solana's [Testnet](https://docs.solana.com/clusters#testnet), they may also be applicable to Solana's [Devnet](https://docs.solana.com/clusters#devnet) or Solana's [Mainnet Beta](https://docs.solana.com/clusters#mainnet-beta).*
+*This tutorial will show you step by step how to use [Remix](about/terminology.md#remix) and [MetaMask](about/terminology.md#metamask) to create and deploy a simple smart contract on Solana. Although the instructions use Solana's [Devnet](https://docs.solana.com/clusters#devnet), they may also be applicable to Solana's [Testnet](https://docs.solana.com/clusters#testnet) or Solana's [Mainnet Beta](https://docs.solana.com/clusters#mainnet-beta).*
 
 ## Requirements
 Before you start, make sure that the following is true:
@@ -13,6 +13,8 @@ Before you start, make sure that the following is true:
 ## Network Configurations
   * [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
   * Solana works in test mode and the proxy interacts with it through the Neon EVM.
+
+## How to Use Remix
 
 ### Step 1: Set up the Remix Environment
 
@@ -30,7 +32,20 @@ Fig. 1 — Connecting to localhost
 
 ### Step 2: Create a Simple Smart Contract in Remix
 
-Click on the icon `Create New File` and type in the file name in the field that appears below it. For example, `helloWorld.sol`.  
+Click on the icon `Create New File` and type in the file name in the field that appears below it. For example, `helloWorld.sol`, shown below:
+
+#### helloWorld.sol
+```
+pragma solidity ^0.5.12;
+
+contract helloWorld {
+  string public text = "Hello World!";
+
+  function callHelloWorld() public view returns (string memory) {
+    return text;
+  }
+}
+```
 
 At this point, it is an empty file. To fill it with content, click on the created file name and type the text on the right side of the explorer (or copy your pre-prepared text there) (Fig. 2).  
 
@@ -69,7 +84,7 @@ Fig. 4 — Compilation details
 
 ### Step 4: Connect Remix to MetaMask
 
-Interactions with Neon EVM are carried out through MetaMask. Choose the `Injected Web3` environment to connect Remix with an active account in Metamask (Fig. 5).  
+Interactions with Neon EVM are carried out through MetaMask. Choose the `Injected Web3` environment to connect Remix with an active account in Metamask (Fig. 5). Make sure that your Metamask wallet is set to display the Neon Devnet network before you do this step. 
 
 <div class='neon-img-width-300' style={{textAlign: 'center'}}>
 
@@ -99,7 +114,7 @@ Fig. 7
 
 </div>
 
-### Step 5: Deploy a Smart Contract on Solana Testnet
+### Step 5: Deploy a Smart Contract on Solana Devnet
 
 In the left sidebar menu, select `Deploy & run transactions`. The `DEPLOY & RUN TRANSACTIONS` menu will become active.  
 
@@ -166,6 +181,8 @@ Congratulations! You can now call methods of the helloWorld smart contract deplo
 Fig. 13 — Calling the smart contract methods
 
 </div>
+
+## Example Project
 
 ----
 
