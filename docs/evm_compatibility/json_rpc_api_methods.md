@@ -1,5 +1,5 @@
 ---
-title: Ethereum JSON-RPC Compatibility
+title: JSON-RPC API Methods
 ---
 
 *The following tables present the full list of JSON-RPC methods. Each of them is in one of the states:*
