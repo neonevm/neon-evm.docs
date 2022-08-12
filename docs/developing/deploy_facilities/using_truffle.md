@@ -14,7 +14,7 @@ With Truffle, you get:
   * Automated deployment and running of tests
 
 ## Prerequisites
-Before you start, make sure of the following software is installed on your device:
+Before you start, make sure the following software is installed on your device:
   * `NodeJS v8.9.4` or later
   * `Web3 v1.2.0` or later
 
@@ -70,17 +70,7 @@ npm install @truffle/hdwallet-provider
 
 Refer to the [official npm package documentation](https://www.npmjs.com/package/@truffle/hdwallet-provider) for the full installation process.
 
-### Step 2: Connect Truffle to a Proxy
-
-To connect Truffle to a proxy on `node.js`, the `eth_accounts` method from the [Ethereum JSON RPC API](https://eth.wiki/json-rpc/API) set is required. This method allows serving a list of *20* byte addresses owned by a client. Since the Neon EVM proxy does not support the `eth_accounts` method required to connect Truffle, the HDWalletProvider library is used to function as this method. The connection is configured in `truffle-config.js`.
-
-The configuration file is publicly available, and therefore the `word mnemonic` and `private key` contained in the file are also publicly available. This makes it possible for the library to use this data. HDWalletProvider obtains the `word mnemonic` or `private key` from the configuration file and uses this data to sign transactions before sending them to the proxy.
-
-This method of configuration is convenient for debug mode, but not suitable for work in real conditions. Since the development process uses "test" wallets, this data is not of any value.
-
-> **Note:** It is strongly recommended to use Truffle in the Neon EVM only for developing or testing contracts.
-
-### Step 3: Add Configuration File
+### Step 2: Connect Truffle to a Proxy using the Configuration File
 The configuration file is called `truffle-config.js` and is located at the root of your project directory. This file is a JavaScript file and can execute any code necessary to create your configuration. Its file schema, variables, and other documentation can be found on the [official Truffle Suite website](https://trufflesuite.com/docs/truffle/reference/configuration/).
 
 The following is a full example of the `truffle-config.js` configuration file for connecting Truffle to a devnet-proxy using the one-way library on Node.js:
@@ -92,9 +82,9 @@ const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.prototype.send
 
-const provider = new Web3.providers.HttpProvider("https://proxy.devnet.neonlabs.org/solana");
+const provider = new Web3.providers.HttpProvider("https://devnet.neonevm.org");
 
-const privateKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Specify your private key here
+const privateKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Specify your private key here
 
 module.exports = {
   networks: {
@@ -105,10 +95,7 @@ module.exports = {
           provider,
         );
       },
-      from: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx", // Specify public key corresponding to private key defined above
-      network_id: "*",
-      gas: 3000000000,
-      gasPrice: 443065000000,
+      network_id: "*"
     }
   }
 };
@@ -116,7 +103,15 @@ module.exports = {
 
 > **Note:** If both mnemonic and private keys are provided, the mnemonic takes precedence and is used instead.
 
-### Step 4: Compile Contracts
+To connect Truffle to a proxy on `node.js`, the `eth_accounts` method from the [Ethereum JSON RPC API](https://eth.wiki/json-rpc/API) set is required. This method allows serving a list of *20* byte addresses owned by a client. Since the Neon EVM proxy does not support the `eth_accounts` method required to connect Truffle, the HDWalletProvider library is used to function as this method. The connection is configured in `truffle-config.js`.
+
+The configuration file is publicly available, and therefore the `word mnemonic` and `private key` contained in the file are also publicly available. This makes it possible for the library to use this data. HDWalletProvider obtains the `word mnemonic` or `private key` from the configuration file and uses this data to sign transactions before sending them to the proxy.
+
+This method of configuration is convenient for debug mode, but not suitable for work in real conditions. Since the development process uses "test" wallets, this data is not of any value.
+
+> **Note:** It is strongly recommended to use Truffle in the Neon EVM only for developing or testing contracts.
+
+### Step 3: Compile Contracts
 All of your contracts are located in your project's `contracts/` directory. Before these contracts can be run, they must first be compiled. To compile a Truffle project, change to the root of the directory where the project is located and run the following command:
 ```sh
 truffle compile
@@ -128,7 +123,7 @@ If you want to re-compile all contracts, run the above command with the `--all` 
 truffle compile --all
 ```
 
-### Step 5: Test Contracts
+### Step 4: Test Contracts
 Make sure to test your code before you migrate it to the network. All test files should be located under the `test/` directory.
 
 To run all tests, simply run:
@@ -143,7 +138,7 @@ truffle test <./path/file.js>
 
 The full list of options that you can use for testing can be found under the [truffle test](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#test) command.
 
-### Step 6: Running Migrations
+### Step 5: Running Migrations
 Migrations are a set of managed deployment scripts used to deploy contracts to the network. These scripts, which are JavaScript files, should be contained in the project's `migrations/` directory.
 
 To run migrations to deploy contracts, run:
@@ -158,7 +153,7 @@ If you need to run all migrations from the beginning, instead of running from th
 truffle migrate --reset
 ```
 
-As a concrete example, to deploy contracts using the **neonlabs** network, described [earlier](using_truffle#truffle-configjs):
+As a concrete example, to deploy contracts to the **neonlabs** network, described [earlier](using_truffle#truffle-configjs):
 ```sh
 truffle migrate --network neonlabs
 ```
