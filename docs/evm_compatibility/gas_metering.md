@@ -2,7 +2,10 @@
 title: Gas Metering
 ---
 
+<<<<<<< HEAD
 ## Introduction
+=======
+>>>>>>> 88b475d (Gas metering)
 Neon's gas metering system is part of the Neon Proxy's functionality, and is what allows proxies to create estimates for the gas a transaction will cost before it is actually executed. This helps users determine how much gas to use when submitting their transaction to make sure that it is successful. Without this estimate, they may err on the side of underestimating the required gas, which would result in the failure of the transaction; or they may err on the side of overestimation and thereby grossly overpay for their transaction's execution.
 
 While Neon's gas metering system was created to mirror Ethereum's gas estimation functionality as closely as possible, the cost of gas in Neon EVM is significantly lower than on Ethereum as it is based on Solana’s gas price. It is determined by taking into consideration the following:
