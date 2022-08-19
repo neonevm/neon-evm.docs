@@ -12,7 +12,7 @@ Before you start, make sure the following software is installed on your device:
   * `Web3 v1.2.0` or later
 
 Also make sure that the following is true:
-  * MetaMask is installed on your device.
+  * MetaMask is installed on your device. To install MetaMask, follow [this guide](wallet/metamask_setup.md#installing-metamask). 
   * MetaMask is configured for the Neon EVM.
 
 ## Network Configurations
@@ -32,7 +32,9 @@ npm install --save-dev hardhat
 A Hardhat project on Neon can either be imported from an existing Hardhat project elsewhere, or created based on Hardhat's sample project. See below for descriptions of both options.
 
 #### Option A: Import an Existing Project
-Since Neon is an Ethereum-compatible virtual machine and RPC, migration of existing Hardhat projects onto Neon is easy and seamless. The only thing required is a correct **hardhat.config.js** file. To begin, import your project files into the project folder, and then add the following information to the configuration file:
+Since Neon is an Ethereum-compatible virtual machine and RPC, migration of existing Hardhat projects onto Neon is easy and seamless. The only thing required is a correct **hardhat.config.js** file. In addition, the deployer wallet address needs to have enough NEON tokens to cover the gas cost of the deployment. NEON tokens for Devnet can be obtained using the [NeonFaucet](developing/utilities/faucet.md).
+
+To begin, import your project files into the project folder, and then add the following information to the **hardhat.config.js** configuration file:
 
 ##### hardhat.config.js
 ```js

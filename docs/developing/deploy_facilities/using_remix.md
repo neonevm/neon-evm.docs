@@ -6,7 +6,7 @@ title: Using Remix
 
 ## Requirements
 Before you start, make sure that the following is true:
-  * MetaMask is installed on your device.
+  * MetaMask is installed on your device. To install MetaMask, follow [this guide](wallet/metamask_setup.md#installing-metamask). 
   * MetaMask is configured for the Neon EVM.
 
 ## Network Configurations

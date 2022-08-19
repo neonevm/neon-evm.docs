@@ -22,7 +22,7 @@ Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You
 Select `Neon EVM Devnet` and click `Connect Wallet`. A MetaMask pop-up window will show. Click `Next` and then `Connect`. You can now access the [Solana cluster](https://docs.solana.com/clusters) and carry out transactions.
 
 #### Option B: Connect Manually with MetaMask
-Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#setting-up-an-rpc-network).
+Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#option-b-manual-configuration).
 
 ### Step 3: Get NEON Devnet Tokens from the NeonFaucet
 NEON tokens for Devnet can be obtained using the [NeonFaucet](developing/utilities/faucet.md).

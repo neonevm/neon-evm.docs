@@ -71,7 +71,7 @@ npm install @truffle/hdwallet-provider
 Refer to the [official npm package documentation](https://www.npmjs.com/package/@truffle/hdwallet-provider) for the full installation process.
 
 ### Step 2: Connect Truffle to a Proxy using the Configuration File
-The configuration file is called `truffle-config.js` and is located at the root of your project directory. This file is a JavaScript file and can execute any code necessary to create your configuration. Its file schema, variables, and other documentation can be found on the [official Truffle Suite website](https://trufflesuite.com/docs/truffle/reference/configuration/).
+The configuration file is called `truffle-config.js` and is located at the root of your project directory. This file is a JavaScript file and can execute any code necessary to create your configuration. Its file schema, variables, and other documentation can be found on the [official Truffle Suite website](https://trufflesuite.com/docs/truffle/reference/configuration/). Please note that the deployer wallet address needs to have enough NEON tokens to cover the gas cost of the deployment. NEON tokens for Devnet can be obtained using the [NeonFaucet](developing/utilities/faucet.md).
 
 The following is a full example of the `truffle-config.js` configuration file for connecting Truffle to a devnet-proxy using the one-way library on Node.js:
 
