@@ -141,24 +141,19 @@ The full list of options that you can use for testing can be found under the [tr
 ### Step 5: Running Migrations
 Migrations are a set of managed deployment scripts used to deploy contracts to the network. These scripts, which are JavaScript files, should be contained in the project's `migrations/` directory.
 
-To run migrations to deploy contracts, run:
+To run migrations to deploy contracts, run the `truffle migrate` command. Make sure to specify the network to deploy to with the `--network` option. For example, to deploy contracts to the **neonlabs** network, described [earlier](using_truffle#truffle-configjs), run:
 ```sh
-truffle migrate
+truffle migrate --network neonlabs
 ```
 
 This will run all migrations located within the `migrations/` directory. If your migrations were previously run successfully, truffle migrate will start execution from the last migration that was run, running only newly created migrations. If no new migrations exist, truffle migrate won't perform any action.
 
 If you need to run all migrations from the beginning, instead of running from the last completed migration, you can use the `--reset` option:
 ```sh
-truffle migrate --reset
+truffle migrate --reset --network neonlabs
 ```
 
-As a concrete example, to deploy contracts to the **neonlabs** network, described [earlier](using_truffle#truffle-configjs):
-```sh
-truffle migrate --network neonlabs
-```
-
-The full list of options that you can use for migrations can be found under the [truffle migrate](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#migrate) command.
+The full list of options that you can use for migrations can be found in the [truffle migrate](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#migrate) section of the Truffle documentation.
 
 ## Example Project
 An example Truffle project can be found [here](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-truffle).
