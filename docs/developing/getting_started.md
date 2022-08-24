@@ -5,31 +5,17 @@ title: Getting Started
 *The purpose of this guide is to get you familiarized with the Neon EVM's high-level structure and to provide you with step-by-step instructions on how to set up your local Neon EVM development environment.*
 
 ## Reference
-<<<<<<< HEAD
 If you are already familiar with Neon, make sure to check out the following tools and tutorials that will enhance you with your Neon experience:
-=======
-Before you start using Neon, make sure to check out the following tools and tutorials to familiarize yourself with the platform:
->>>>>>> 30c3770 (Truffle Migrate network flag and Getting Started Reference section)
 
 * Receive free NEON test tokens with the [Neon Faucet](https://neonfaucet.org/).
 * Browse Neon's blockchain transaction history with [NeonScan](https://neonscan.org/).
 * Transfer tokens to and from Neon using [NeonPass](https://neonpass.live/).
-<<<<<<< HEAD
 * Set up a Neon [wallet](../wallet/metamask_setup).
 
 For information on deploying dApps on Neon, check out the following resources:
 * [Using Remix](deploy_facilities/using_remix)
 * [Using Hardhat](deploy_facilities/using_hardhat)
 * [Using Truffle](deploy_facilities/using_truffle)
-=======
-* Set up a [Neon Wallet](wallet/metamask_setup).
-
-For information on deploying dApps on Neon, check out the following resources:
-* [Using Remix](developing/deploy_facilities/using_remix)
-* [Using Hardhat](developing/deploy_facilities/using_hardhat)
-* [Using Truffle](developing/deploy_facilities/using_truffle)
-
->>>>>>> 30c3770 (Truffle Migrate network flag and Getting Started Reference section)
 
 ## Quick Start
 
