@@ -4,6 +4,19 @@ title: Getting Started
 
 *The purpose of this guide is to get you familiarized with the Neon EVM's high-level structure and to provide you with step-by-step instructions on how to set up your local Neon EVM development environment.*
 
+## Reference
+If you are already familiar with Neon, make sure to check out the following tools and tutorials that will enhance you with your Neon experience:
+
+* Receive free NEON test tokens with the [Neon Faucet](https://neonfaucet.org/).
+* Browse Neon's blockchain transaction history with [NeonScan](https://neonscan.org/).
+* Transfer tokens to and from Neon using [NeonPass](https://neonpass.live/).
+* Set up a Neon [wallet](wallet/metamask_setup).
+
+For information on deploying dApps on Neon, check out the following resources:
+* [Using Remix](developing/deploy_facilities/using_remix)
+* [Using Hardhat](developing/deploy_facilities/using_hardhat)
+* [Using Truffle](developing/deploy_facilities/using_truffle)
+
 ## Quick Start
 
 To get started quickly with Neon, follow the steps below. 
@@ -22,7 +35,7 @@ Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You
 Select `Neon EVM Devnet` and click `Connect Wallet`. A MetaMask pop-up window will show. Click `Next` and then `Connect`. You can now access the [Solana cluster](https://docs.solana.com/clusters) and carry out transactions.
 
 #### Option B: Connect Manually with MetaMask
-Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#setting-up-an-rpc-network).
+Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#option-b-manual-configuration).
 
 ### Step 3: Get NEON Devnet Tokens from the NeonFaucet
 NEON tokens for Devnet can be obtained using the [NeonFaucet](developing/utilities/faucet.md).

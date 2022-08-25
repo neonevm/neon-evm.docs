@@ -61,7 +61,16 @@ Depending on the tasks to be solved, as well as on the location of the proxy and
   * *Option 3 (debug mode):* Both the proxy and Solana are hosted locally.
 
 ### Step 4
-In the upper-right corner, click the red apple view element. Select "Settings" from the dropdown menu to connect to the proxy server (Fig. 3).  
+
+#### Option A: Automatic Setup with Chainlist.org
+Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You should see `Neon EVM Devnet` and `Neon EVM Mainnet`.  
+
+![](../developing/img/chainlist_neon.png)
+
+Select `Neon EVM Devnet` and click `Connect Wallet`. A MetaMask pop-up window will show. Click `Next` and then `Connect`. You can now access the [Solana cluster](https://docs.solana.com/clusters) and carry out transactions. Your MetaMask wallet has been successfully installed, configured, and is ready to use. Enjoy!
+
+#### Option B: Manual Configuration
+In MetaMask browser extension's upper-right corner, click the red apple view element. Select "Settings" from the dropdown menu to connect to the proxy server (Fig. 3).  
 
 <div class='neon-img-box-600' style={{textAlign: 'center'}}>
 
@@ -70,7 +79,6 @@ In the upper-right corner, click the red apple view element. Select "Settings" f
 Fig. 3 — Select "Settings" from the dropdown menu
 
 </div>
-
 
 The dropdown menu elements:
 * `My Accounts`: A list of accounts created by your wallet.
@@ -124,8 +132,7 @@ Fig. 6 — Fill in the fields
 
 </div>
 
-
 ### Step 8
 
 Click `Save` to keep the settings.  
-Your MetaMask wallet has been successfully installed and is ready to use.
+Your MetaMask wallet has been successfully installed, configured, and is ready to use. Enjoy!

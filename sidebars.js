@@ -121,7 +121,7 @@ module.exports = {
       label: 'EVM Compatibility',
       items: [
         'evm_compatibility/json_rpc_api_methods',
-        'evm_compatibility/gas_metering',
+        // 'evm_compatibility/gas_metering',
         {
               type: 'category',
               label: 'Architectural Limitations',
@@ -129,7 +129,7 @@ module.exports = {
     					'evm_compatibility/architectural_limitations/restriction_on_iterative_trx',
     					'evm_compatibility/architectural_limitations/erc721_tokens',
     					'evm_compatibility/architectural_limitations/precompiled_contracts',
-    					'evm_compatibility/architectural_limitations/gas_calculator',
+    					// 'evm_compatibility/architectural_limitations/gas_calculator',
     					'evm_compatibility/architectural_limitations/unsupported_functions',
     					'evm_compatibility/architectural_limitations/storage_size_for_account'
     				]
