@@ -71,7 +71,7 @@ npm install @truffle/hdwallet-provider
 Refer to the [official npm package documentation](https://www.npmjs.com/package/@truffle/hdwallet-provider) for the full installation process.
 
 ### Step 2: Connect Truffle to a Proxy using the Configuration File
-The configuration file is called `truffle-config.js` and is located at the root of your project directory. This file is a JavaScript file and can execute any code necessary to create your configuration. Its file schema, variables, and other documentation can be found on the [official Truffle Suite website](https://trufflesuite.com/docs/truffle/reference/configuration/).
+The configuration file is called `truffle-config.js` and is located at the root of your project directory. This file is a JavaScript file and can execute any code necessary to create your configuration. Its file schema, variables, and other documentation can be found on the [official Truffle Suite website](https://trufflesuite.com/docs/truffle/reference/configuration/). Please note that the deployer wallet address needs to have enough NEON tokens to cover the gas cost of the deployment. NEON tokens for Devnet can be obtained using the [NeonFaucet](developing/utilities/faucet.md).
 
 The following is a full example of the `truffle-config.js` configuration file for connecting Truffle to a devnet-proxy using the one-way library on Node.js:
 
@@ -111,6 +111,19 @@ This method of configuration is convenient for debug mode, but not suitable for 
 
 > **Note:** It is strongly recommended to use Truffle in the Neon EVM only for developing or testing contracts.
 
+In the same directory, make sure to add a `package.json` file as shown below, with more dependencies included if necessary:
+
+#### package.json
+```
+{
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.4",
+    "truffle": "^5.5.5",
+    "web3": "^1.7.1"
+  }
+}
+```
+
 ### Step 3: Compile Contracts
 All of your contracts are located in your project's `contracts/` directory. Before these contracts can be run, they must first be compiled. To compile a Truffle project, change to the root of the directory where the project is located and run the following command:
 ```sh
@@ -141,24 +154,54 @@ The full list of options that you can use for testing can be found under the [tr
 ### Step 5: Running Migrations
 Migrations are a set of managed deployment scripts used to deploy contracts to the network. These scripts, which are JavaScript files, should be contained in the project's `migrations/` directory.
 
-To run migrations to deploy contracts, run:
+To run migrations to deploy contracts, run the `truffle migrate` command. Make sure to specify the network to deploy to with the `--network` option. For example, to deploy contracts to the **neonlabs** network, described [earlier](using_truffle#truffle-configjs), run:
 ```sh
-truffle migrate
+truffle migrate --network neonlabs
 ```
 
 This will run all migrations located within the `migrations/` directory. If your migrations were previously run successfully, truffle migrate will start execution from the last migration that was run, running only newly created migrations. If no new migrations exist, truffle migrate won't perform any action.
 
 If you need to run all migrations from the beginning, instead of running from the last completed migration, you can use the `--reset` option:
 ```sh
-truffle migrate --reset
+truffle migrate --reset --network neonlabs
 ```
 
-As a concrete example, to deploy contracts to the **neonlabs** network, described [earlier](using_truffle#truffle-configjs):
-```sh
-truffle migrate --network neonlabs
+The full list of options that you can use for migrations can be found in the [truffle migrate](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#migrate) section of the Truffle documentation.
+
+## Example Projects
+
+### Hello World
+To deploy a simple 'Hello World' contract to Neon with Truffle, follow these steps:
+
+1. Complete steps 1 and 2 above.
+2. In the `contracts/` folder, replace any existing files with the following file and save it as `helloWorld.sol`:
+
+#### helloWorld.sol
+```
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.7;
+
+contract helloWorld {
+  string public text = "Hello World!";
+
+  function callHelloWorld() public view returns (string memory) {
+    return text;
+  }
+}
 ```
 
-The full list of options that you can use for migrations can be found under the [truffle migrate](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#migrate) command.
+3. In the `migrations/` folder, replace any existing files with the following file and save it as `1_deploy.js`:
 
-## Example Project
-An example Truffle project can be found [here](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-truffle).
+#### 1_deploy.js
+```
+var HelloWorld = artifacts.require("helloWorld");
+
+module.exports = function(deployer) {
+  deployer.deploy(HelloWorld);
+};
+```
+
+4. Continue with steps 3 to 5 above.
+
+### More Examples
+A more complete example Truffle project can be found [here](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-truffle).
