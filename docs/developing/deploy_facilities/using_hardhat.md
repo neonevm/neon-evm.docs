@@ -105,6 +105,42 @@ To create a default project, select `Create a JavaScript project` or `Create a T
 
 To start with an empty project folder, select the `Create an empty hardhat.config.js` option, which will create only an empty hardhat.config.js file. This file can be replaced with the configuration file shown [above](using_hardhat#hardhatconfigjs).
 
+### Optional Step 2.5: Hello World Example Project
+This step will detail how to launch an example 'Hello World' to Neon with Hardhat. If you have a different project in mind, simply continue to Step 3. Make sure you chose Option B and created a JavaScript Project in Step 2 before completing this step.
+
+In the `contracts/` folder, replace any existing files with the following file and save it as `helloWorld.sol`:
+
+#### helloWorld.sol
+```
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.7;
+
+contract helloWorld {
+  string public text = "Hello World!";
+
+  function callHelloWorld() public view returns (string memory) {
+    return text;
+  }
+}
+```
+
+In the `scripts/` folder, replace the content in `deploy.js` with the following:
+
+#### deploy.js
+```
+const hre = require("hardhat");
+
+async function main() {
+  const HelloWorld = await hre.ethers.getContractFactory("helloWorld");
+  await HelloWorld.deploy();
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
+```
+
 ### Step 3: Compilation
 To compile your project, simply run:
 
@@ -140,46 +176,5 @@ Balance of deployer is: BigNumber { value: "100000000000" }
 ### Step 5: Connect Project to MetaMask
 To import your project as an asset in MetaMask, follow the instructions [here](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask#h_01FWH492CHY60HWPC28RW0872H) and use the contract address from the previous step as the 'Token Contract Address' in MetaMask.
 
-## Example Projects
-
-### Hello World
-To deploy a simple 'Hello World' contract to Neon with Hardhat, follow these steps:
-
-1. Complete steps 1 and 2 (Option B, Javascript project) above.
-2. In the `contracts/` folder, replace any existing files with the following file and save it as `helloWorld.sol`:
-
-#### helloWorld.sol
-```
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.7;
-
-contract helloWorld {
-  string public text = "Hello World!";
-
-  function callHelloWorld() public view returns (string memory) {
-    return text;
-  }
-}
-```
-
-3. In the `scripts/` folder, replace the content in `deploy.js` with the following:
-
-#### deploy.js
-```
-const hre = require("hardhat");
-
-async function main() {
-  const HelloWorld = await hre.ethers.getContractFactory("helloWorld");
-  await HelloWorld.deploy();
-}
-
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
-```
-
-4. Continue with steps 3 to 5 above.
-
-### More Examples
-A more complete example Hardhat project can be found [here](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-hardhat).
+## Example Project
+An example Hardhat project can be found [here](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-hardhat).

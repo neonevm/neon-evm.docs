@@ -124,6 +124,37 @@ In the same directory, make sure to add a `package.json` file as shown below, wi
 }
 ```
 
+
+### Optional Step 2.5: Hello World Example Project
+This step will detail how to launch an example 'Hello World' to Neon with Truffle. If you have a different project in mind, simply continue to Step 3.
+
+In the `contracts/` folder, replace any existing files with the following file and save it as `helloWorld.sol`:
+
+#### helloWorld.sol
+```
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.7;
+
+contract helloWorld {
+  string public text = "Hello World!";
+
+  function callHelloWorld() public view returns (string memory) {
+    return text;
+  }
+}
+```
+
+Then, in the `migrations/` folder, replace any existing files with the following file and save it as `1_deploy.js`:
+
+#### 1_deploy.js
+```
+var HelloWorld = artifacts.require("helloWorld");
+
+module.exports = function(deployer) {
+  deployer.deploy(HelloWorld);
+};
+```
+
 ### Step 3: Compile Contracts
 All of your contracts are located in your project's `contracts/` directory. Before these contracts can be run, they must first be compiled. To compile a Truffle project, change to the root of the directory where the project is located and run the following command:
 ```sh
@@ -168,40 +199,5 @@ truffle migrate --reset --network neonlabs
 
 The full list of options that you can use for migrations can be found in the [truffle migrate](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#migrate) section of the Truffle documentation.
 
-## Example Projects
-
-### Hello World
-To deploy a simple 'Hello World' contract to Neon with Truffle, follow these steps:
-
-1. Complete steps 1 and 2 above.
-2. In the `contracts/` folder, replace any existing files with the following file and save it as `helloWorld.sol`:
-
-#### helloWorld.sol
-```
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.7;
-
-contract helloWorld {
-  string public text = "Hello World!";
-
-  function callHelloWorld() public view returns (string memory) {
-    return text;
-  }
-}
-```
-
-3. In the `migrations/` folder, replace any existing files with the following file and save it as `1_deploy.js`:
-
-#### 1_deploy.js
-```
-var HelloWorld = artifacts.require("helloWorld");
-
-module.exports = function(deployer) {
-  deployer.deploy(HelloWorld);
-};
-```
-
-4. Continue with steps 3 to 5 above.
-
-### More Examples
-A more complete example Truffle project can be found [here](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-truffle).
+## Example Project
+An example Truffle project can be found [here](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-truffle).
