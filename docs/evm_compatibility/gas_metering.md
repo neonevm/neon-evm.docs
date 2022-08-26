@@ -33,29 +33,39 @@ The gas metering system on Neon works by following these steps:
 ## How Gas is Calculated
 The transaction fee on Neon is calculated based on the Solana transaction cost (proportional to the number of iterative transactions required, if any), the Neon EVM governance pool fee, and the Neon Proxy operator fee (which each operator sets for themselves). The estimated gas amount is calculated as follows:
 
-First, the gas necessary to execute Ethereum instructions is calculated as follows:
-* 2 \* 5000 \* number_of_iterations (for iterative transactions)
+First, the amount of gas units necessary to execute Ethereum instructions is calculated as follows:
+* 2 \* 5000 \* Number_of_iterations (for iterative transactions)
 * 3 \* 5000 (for non-iterative transactions)
 
-Then, the gas required to increase the storage size is **added**, if necessary:
+The 2x or 3x multiplier includes the fee for the Neon governance structure as well as the fee required to check the Ethereum signature.
+
+Then, the gas units required to increase the storage size are **added** to the amount above, if necessary. The gas units needed for storage are calculated as follows:
 * Bytes \* 6960
 
-The final gas price comes out to:
-* Gas price = (1 + Operator fee) * SOL-to-NEON-rate + (the fee above)
+The amount of gas units needed is proportionate to the amount of lamports needed to execute the same action on Solana.
+
+The price per unit of gas, in Alans, is calculated as follows:
+* Gas price = (1 + Operator_fee) * SOL_to_NEON_rate
 
 > Note: The operator's fee is set by individual operators. Its amount may vary depending on the operator.
 
+This price per gas unit is multiplied by the number of gas units to produce the final gas price, in NEON tokens, displayed to the user. The formula to calculate the gas price for non-iterative transactions is therefore:
+* (15,000 + (Bytes * 6960)) * ((1 + Operator) * SOL_to_NEON_rate)
+
+And the formula for iterative transactions is:
+* ((10,000 * Number_of_iterations) + (Bytes * 6960)) * ((1 + Operator) * SOL_to_NEON_rate)
+
 ## Examples
-The following are some examples of gas prices for common actions on Neon:
+The following are some examples of the gas required for common actions on Neon:
 
-* A simple asset transfer consumes around 15,000 gas
-* Verification of a Solana or Ethereum signature consumes around 5,000 gas
-* Using a treasury account consumes around 5,000 gas
+* A simple asset transfer consumes around 15,000 gas units.
+* Verification of a Solana or Ethereum signature consumes around 5,000 gas units.
+* Using a treasury account consumes around 5,000 gas units.
 
-For dApp deployment, the gas prices are steeper. Deploying a dApp with a 10Kb size, for example, mainly consists of the gas cost for storage: 10Kb \* 6980 = approximately 70 * 10^6 gas.
+For dApp deployment, the gas prices are steeper. Deploying a dApp with a 10Kb size, for example, mainly consists of the gas required for storage: 10Kb \* 6960 = approximately 7 * 10^6 gas units.
 
-A token swap on Neon may require requires 10 Solana transactions and 100 bytes of storage, as follows:
-* 10 \* 10,000 for verifying the Solana signatures.
-* 10 \* 10,000 for using the treasury account.
-* 100 \* 6980 - aprox 700,000
-This comes out to a total of 100,000 + 100,000 + 700,000 = 900,000 gas.
+A token swap on Neon may require 10 Solana transactions and 100 bytes of storage, as follows:
+* 10 \* 5,000 for verifying the Solana signatures.
+* 10 \* 5,000 for using the treasury account.
+* 100 \* 6960 = aprox 700,000
+This comes out to a total of 50,000 + 50,000 + 700,000 = 800,000 gas units.
