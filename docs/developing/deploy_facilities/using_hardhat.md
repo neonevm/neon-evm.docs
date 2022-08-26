@@ -42,7 +42,7 @@ require("@nomiclabs/hardhat-waffle");
 
 const proxy_url = 'https://devnet.neonevm.org';
 const network_id = 245022926;
-const deployerPrivateKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Specify your private key here
+const deployerPrivateKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Specify your private key here (the corresponding wallet must have a non-zero balance of NEON tokens in order to pay for gas fees. Devnet NEON tokens can be obtained for free at https://neonfaucet.org/).
 
 module.exports = {
   solidity: "0.8.7",

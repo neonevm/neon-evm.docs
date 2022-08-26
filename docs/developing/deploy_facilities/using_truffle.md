@@ -84,7 +84,7 @@ Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.pr
 
 const provider = new Web3.providers.HttpProvider("https://devnet.neonevm.org");
 
-const privateKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Specify your private key here
+const privateKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Specify your private key here (the corresponding wallet must have a non-zero balance of NEON tokens in order to pay for gas fees. Devnet NEON tokens can be obtained for free at https://neonfaucet.org/)
 
 module.exports = {
   networks: {
