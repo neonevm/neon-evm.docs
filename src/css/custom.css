@@ -6,30 +6,42 @@
  */
 
 /* You can override the default Infima variables here. */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
 body {
   font-family: 'Roboto', 'Courier New', Courier, monospace;
 }
 :root {
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-color-primary-dark: #409088;
+  --ifm-color-primary-darker: #387462;
+  --ifm-color-primary-darkest: #1b4e3f;
+  --ifm-color-primary-light: #42ba96;
+  --ifm-color-primary-lighter: #86b8b6;
+  --ifm-color-primary-lightest: #abd5c6;
   --ifm-blockquote-border-color: #CE3A8B;
   --ifm-blockquote-bg: rgba(206,58,139, 0.2);
   --ifm-code-font-size: 95%;
   --ifm-link-color: #CE3A8B;
   --ifm-neon-pink: #CE3A8B;
-  --ifm-color-primary: #4355F9;
-  --ifm-link-hover-color: #4355F9;
-  --ifm-navbar-link-hover-color: #4355F9;
+  
+  --ifm-color-primary: #CE3A8B;
+  --ifm-link-hover-color: #CE3A8B;
+  --ifm-navbar-link-hover-color: #CE3A8B;
   --ifm-menu-color-active: #CE3A8B;
   --ifm-blockquote-padding-vertical: 1rem;
   --ifm-blockquote-padding-horizontal: 1.2rem;
   --ifm-blockquote-border-left-width: 6px;
+
+  --ifm-navbar-padding-horizontal: var(--ifm-spacing-horizontal);
+  --ifm-navbar-padding-vertical: calc(var(--ifm-spacing-vertical)*0.5);
+
+  --ifm-menu-color: var(--ifm-color-emphasis-700);
+  --ifm-menu-color-background-active: var(--ifm-hover-overlay);
+  --ifm-menu-color-background-hover: var(--ifm-hover-overlay);
+  --ifm-menu-link-padding-horizontal: 1rem;
+  --ifm-menu-link-padding-vertical: 0.375rem;
+
+  --ifm-font-family-base: "Roboto", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .main-wrapper {background-color: var();
@@ -76,4 +88,14 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 .markdown blockquote {
   background-color: var(--ifm-blockquote-bg);
+}
+
+.menu__link {
+  padding: var(--ifm-menu-link-padding-vertical) calc(var(--ifm-menu-link-padding-horizontal) + 1.25rem)
+    var(--ifm-menu-link-padding-vertical) var(--ifm-menu-link-padding-horizontal);
+}
+
+.menu__link--sublist-caret:after {
+  right: 20px;
+  position: absolute;
 }
