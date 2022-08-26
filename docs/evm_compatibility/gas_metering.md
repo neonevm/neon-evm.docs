@@ -50,10 +50,10 @@ The price per unit of gas, in Alans, is calculated as follows:
 > Note: The operator's fee is set by individual operators. Its amount may vary depending on the operator.
 
 This price per gas unit is multiplied by the number of gas units to produce the final gas price, in NEON tokens, displayed to the user. The formula to calculate the gas price for non-iterative transactions is therefore:
-* (15,000 + (Bytes * 6960)) * ((1 + Operator) * SOL_to_NEON_rate)
+* (15,000 + (Bytes \* 6960)) \* ((1 + Operator) * SOL_to_NEON_rate)
 
 And the formula for iterative transactions is:
-* ((10,000 * Number_of_iterations) + (Bytes * 6960)) * ((1 + Operator) * SOL_to_NEON_rate)
+* ((10,000 \* Number_of_iterations) + (Bytes \* 6960)) \* ((1 + Operator) * SOL_to_NEON_rate)
 
 ## Examples
 The following are some examples of the gas required for common actions on Neon:
