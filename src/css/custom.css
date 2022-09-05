@@ -26,7 +26,7 @@ body {
   --ifm-code-font-size: 95%;
   --ifm-link-color: #CE3A8B;
   --ifm-neon-pink: #CE3A8B;
-  
+
   --ifm-color-primary: #CE3A8B;
   --ifm-link-hover-color: #CE3A8B;
   --ifm-navbar-link-hover-color: #CE3A8B;
@@ -47,12 +47,11 @@ body {
   --ifm-font-family-base: "Roboto", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
-.main-wrapper {background-color: var();
+.main-wrapper {
   display: flex;
 }
 
 a:hover {
-  text-decoration: none;
   color: var(--ifm-link-hover-color);
 }
 
@@ -101,4 +100,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 .menu__link--sublist-caret:after {
   right: 20px;
   position: absolute;
+}
+
+.featureCard_src-components-WelcomeFeatures-WelcomeFeatures-module:hover {
+  text-decoration: none;
 }
