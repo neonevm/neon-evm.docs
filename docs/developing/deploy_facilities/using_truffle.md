@@ -16,7 +16,11 @@ With Truffle, you get:
 ## Prerequisites
 Before you start, make sure the following software is installed on your device:
   * `NodeJS v8.9.4` or later
-  * MetaMask. To install MetaMask and connect it to Devnet, follow [this guide](wallet/metamask_setup.md#installing-metamask).
+  * `Web3 v1.2.0` or later
+
+Also make sure that the following is true:
+  * MetaMask is installed on your device. To install MetaMask, follow [this guide](wallet/metamask_setup.md#installing-metamask). 
+  * MetaMask is configured for the Neon EVM.
 
 ## Network Configurations
   * [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
@@ -76,7 +80,7 @@ This section will describe, step by step, how to deploy a simple ERC-20 Neon con
 
 > **Note:** Although this tutorial uses the *Ubuntu* operating system, these instructions can be applied to other UNIX distros as well.  
 
-By the end of this tutorial, you will deploy a contract describing an ERC-20 token to the Neon Devnet, and subsequently mint 1 test token that is desposited to the first wallet specified in the configuration file (see above).
+By the end of this tutorial, you will deploy a contract describing an ERC-20 token to the Neon Devnet, and subsequently mint 1 test token that is deposited to the first wallet specified in the configuration file (see above).
 
 ### Step 1: Installation
 > **Note:** This page is just a quickstart based on a specific example program. For more details on installing Truffle, refer to the *[Truffle documentation](https://www.trufflesuite.com/docs/truffle/getting-started/installation)*.
@@ -101,7 +105,7 @@ npm cache clear --force
 npm install
 ```
 
-## Step 2: Set Up MetaMask Accounts
+### Step 2: Set Up MetaMask Accounts
 To interact with the soon-to-be-deployed contracts, you'll need to create two new accounts in MetaMask. Before you begin, make sure that MetaMask is connected to the Neon Devnet.
 
 In MetaMask, create two new accounts. This can be done by clicking on your current account's icon in the top right of the MetaMask extension pop-up, and then clicking on 'Create an Account' in the drop-down menu that appears. Then, obtain some Devnet NEON tokens for these accounts (up to 100 NEON per account) using the [NeonFaucet](../utilities/faucet).
@@ -111,7 +115,7 @@ Finally, copy the new accounts' private keys and paste them into the `truffle-co
 > **Note:** When adding the private keys to the configuration file, make sure to add the prefix **0x** to the key obtained via MetaMask.
 
 ### Step 3: Compile Contracts
-All of the contracts are located in the project's `contracts/` directory. Before these contracts can be run, they must first be compiled. To compile a Truffle project, run the following command:
+All of the contracts are located in the project's `contracts/` directory. Before these contracts can be run, they must first be compiled. To compile the project's contracts, run the following command:
 ```sh
 ./node_modules/.bin/truffle compile
 ```
@@ -223,3 +227,8 @@ If you need to run all migrations from the beginning, instead of running from th
 ```
 
 The full list of options that you can use for migrations can be found in the [truffle migrate](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#migrate) section of the Truffle documentation.
+
+### Step 6: Connect Project to MetaMask
+To import your project as an asset in MetaMask, follow the instructions [here](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask#h_01FWH492CHY60HWPC28RW0872H) and use the contract address from the previous step as the 'Token Contract Address' in MetaMask.
+
+Once you complete this final step, you will be able to see your new ERC-20 assets in the MetaMask profiles of the new test accounts.

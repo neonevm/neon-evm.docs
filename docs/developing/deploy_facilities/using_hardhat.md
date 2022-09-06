@@ -19,22 +19,10 @@ Also make sure that the following is true:
   * [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
   * Solana works in test mode and the proxy interacts with it through Neon EVM.
 
-## How to Use Hardhat
+## The Hardhat Configuration File
+To deploy a contract to the Neon EVM with Hardhat, some Neon-specific information must be specified in a configuration file. This configuration file is called `hardhat.config.js` and is located at the root of your project directory. This file is a JavaScript file and can execute any code necessary to create your configuration. Its file schema, variables, and other documentation can be found on the [official Hardhat website](https://hardhat.org/hardhat-runner/docs/config). Please note that the deployer wallet address needs to have enough NEON tokens to cover the gas cost of the deployment. NEON tokens for Devnet can be obtained using the [NeonFaucet](developing/utilities/faucet.md).
 
-### Step 1: Install Hardhat
-To install Hardhat, simply run the following command:
-
-```bash
-npm install --save-dev hardhat
-```
-
-### Step 2: Create a Project
-A Hardhat project on Neon can either be imported from an existing Hardhat project elsewhere, or created based on Hardhat's sample project. See below for descriptions of both options.
-
-#### Option A: Import an Existing Project
-Since Neon is an Ethereum-compatible virtual machine and RPC, migration of existing Hardhat projects onto Neon is easy and seamless. The only thing required is a correct **hardhat.config.js** file. In addition, the deployer wallet address needs to have enough NEON tokens to cover the gas cost of the deployment. NEON tokens for Devnet can be obtained using the [NeonFaucet](developing/utilities/faucet.md).
-
-To begin, import your project files into the project folder, and then add the following information to the **hardhat.config.js** configuration file:
+The following is a full example, configured for the example below, of the `hardhat.config.js` configuration file for connecting Hardhat to a devnet-proxy using the one-way library on Node.js:
 
 ##### hardhat.config.js
 ```js
@@ -42,15 +30,21 @@ require("@nomiclabs/hardhat-waffle");
 
 const proxy_url = 'https://devnet.neonevm.org';
 const network_id = 245022926;
-const deployerPrivateKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Specify your private key here (the corresponding wallet must have a non-zero balance of NEON tokens in order to pay for gas fees. Devnet NEON tokens can be obtained for free at https://neonfaucet.org/).
+
+// Private keys for test accounts
+// NOTE: Replace these placeholders with your own and make sure the accounts have non-zero NEON balances
+const privateKeys = [
+  "0xPLACEHOLDER1",
+  "0xPLACEHOLDER2"
+];
 
 module.exports = {
-  solidity: "0.8.7",
+  solidity: "0.8.4",
   defaultNetwork: 'neonlabs',
   networks: {
     neonlabs: {
       url: proxy_url,
-      accounts: [deployerPrivateKey],
+      accounts: privateKeys,
       network_id: network_id,
       chainId: network_id,
       allowUnlimitedContractSize: false,
@@ -73,108 +67,86 @@ The parameters for `module.exports` include:
 
 Note that `proxy_url`, `network_id`, and `chainId` can be retrieved from the RPC endpoints table and/or [chainlist.org](https://chainlist.org/).
 
-#### Option B: Create a New Project
-Creating a sample project is done by running the following command:
+## How to Use Hardhat: A Tutorial
+This section will describe, step by step, how to deploy a simple ERC-20 Neon contract to Hardhat. The example is located in [this repository](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-hardhat).
 
-```bash
-npx hardhat
+> **Note:** Although this tutorial uses the *Ubuntu* operating system, these instructions can be applied to other UNIX distros as well.  
+
+By the end of this tutorial, you will deploy a contract describing an ERC-20 token to the Neon Devnet. You will then test this contract by minting 10000 test tokens that are deposited to the first wallet specified in the configuration file (see above), and then transferred to the second wallet address.
+
+### Step 1: Installation
+> **Note:** This page is just a quickstart based on a specific example program. For more details on installing Hardhat, refer to the *[Hardhat documentation](https://hardhat.org/hardhat-runner/docs/getting-started#overview)*.
+
+Using Git, clone the example Hardhat project from the remote repository and navigate to it:
+```sh
+git clone https://github.com/neonlabsorg/examples.git
+cd examples/simple-erc20-hardhat
 ```
 
-This will result in the following output:
-
+Then, run the following command:
+```sh
+npm install
 ```
-888    888                      888 888               888
-888    888                      888 888               888
-888    888                      888 888               888
-8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
-888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
-888    888 .d888888 888    888  888 888  888 .d888888 888
-888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
-888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
+This will install all the necessary packages to continue with the example. These packages include the `Hardhat` library.
 
-👷 Welcome to Hardhat v2.9.9 👷‍
-
-? What do you want to do? …
-❯ Create a JavaScript project
-  Create a TypeScript project
-  Create an empty hardhat.config.js
-  Quit
+If the above command results in an error, run:
+```sh
+npm cache clear --force
+npm install
 ```
 
-To create a default project, select `Create a JavaScript project` or `Create a TypeScript project`, depending on what kind of project you need. These options will create some folders for the projects contracts (including a sample contract), tests, and scripts. They will also create a default hardhat.config.js file, which can be updated to include the information shown [above](using_hardhat#hardhatconfigjs).
+### Step 2: Set Up MetaMask Accounts
+To interact with the soon-to-be-deployed contracts, you'll need to create two new accounts in MetaMask. Before you begin, make sure that MetaMask is connected to the Neon Devnet.
 
-To start with an empty project folder, select the `Create an empty hardhat.config.js` option, which will create only an empty hardhat.config.js file. This file can be replaced with the configuration file shown [above](using_hardhat#hardhatconfigjs).
+In MetaMask, create two new accounts. This can be done by clicking on your current account's icon in the top right of the MetaMask extension pop-up, and then clicking on 'Create an Account' in the drop-down menu that appears. Then, obtain some Devnet NEON tokens for these accounts (up to 100 NEON per account) using the [NeonFaucet](../utilities/faucet).
 
-### Optional Step 2.5: Hello World Example Project
-This step will detail how to launch an example 'Hello World' to Neon with Hardhat. If you have a different project in mind, simply continue to Step 3. Make sure you chose Option B and created a JavaScript Project in Step 2 before completing this step.
+Finally, copy the new accounts' private keys and paste them into the `hardhat.config.js` file described above, replacing the placeholder text in lines 11 and 12 of that file. To obtain the private keys, click on the three vertical dots to the right of your currently displayed account name and wallet address. In this drop-down menu, click on 'Account Details', then on 'Export Private Key', and enter your password and click 'Confirm' to get access to the private key for that account.
 
-In the `contracts/` folder, replace any existing files with the following file and save it as `helloWorld.sol`:
+> **Note:** When adding the private keys to the configuration file, make sure to add the prefix **0x** to the key obtained via MetaMask.
 
-#### helloWorld.sol
-```
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.7;
-
-contract helloWorld {
-  string public text = "Hello World!";
-
-  function callHelloWorld() public view returns (string memory) {
-    return text;
-  }
-}
+### Step 3: Compile Contracts
+All of the contracts are located in the project's `contracts/` directory. Before these contracts can be run, they must first be compiled. To compile the project's contracts, run the following command:
+```sh
+./node_modules/.bin/hardhat compile
 ```
 
-In the `scripts/` folder, replace the content in `deploy.js` with the following:
-
-#### deploy.js
+After running this step, you should see output similar to the following:
 ```
-const hre = require("hardhat");
-
-async function main() {
-  const HelloWorld = await hre.ethers.getContractFactory("helloWorld");
-  await HelloWorld.deploy();
-}
-
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+Compiled 2 Solidity files successfully
 ```
 
-### Step 3: Compilation
-To compile your project, simply run:
+### Step 4: Run Tests
+Make sure to test your code before you migrate it to the network. All test files should be located under the `test/` directory.
 
-```bash
-npx hardhat compile
+To run all tests, simply run the command below:
+```sh
+./node_modules/.bin/hardhat test
 ```
 
-### Step 4: Deploy Contract
-To deploy your JavaScript project, run the following command from the project folder:
+This command compiles all the contracts in the `contracts/`, deploys them to the Neon Devnet, and runs all the tests in the `test/` directory. The output should look something like this:
+```
+  Testing TestERC20 contract
+    ✔ should successfully mint 10000 ERC20 in the first account (15967ms)
+    ✔ should transfer token correctly (31327ms)
 
-```bash
-npx hardhat run ./scripts/deploy.js
+
+  2 passing (53s)
 ```
 
-If your project is written in TypeScript, run the following command instead to deploy:
-
-```bash
-npx hardhat run ./scripts/deploy.ts
+### Step 5: Deploy Contracts
+To deploy the project's contracts, simply run the command below to run the deployment script in the `scripts/` directory:
+```sh
+./node_modules/.bin/hardhat run ./scripts/deploy.js
 ```
 
-Running the relevant command should result in output similar to the following:
-
+After running this command, you should see console output similar to the following:
 ```
-Deploying contracts with the account: 0xcB31Ce6E4Ff9E2C8f6CbB7044dd9529263a846De
-
-Contract address is: 0x66eCCEe29F6FbDb055379A557f8fb7716964dF1a
-
-Minting 100000000000 tokens...
-
-Balance of deployer is: BigNumber { value: "100000000000" }
+Deploying contracts with the account: 0xf71c4DACa893E5333982e2956C5ED9B648818376
+Contract address is:  0x49DCDEc367bba4271876259AE473890aa5AABc2e
+Minting  100000000000  tokens...
 ```
 
-### Step 5: Connect Project to MetaMask
+### Step 6: Connect Project to MetaMask
 To import your project as an asset in MetaMask, follow the instructions [here](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask#h_01FWH492CHY60HWPC28RW0872H) and use the contract address from the previous step as the 'Token Contract Address' in MetaMask.
 
-## Example Project
-An example Hardhat project can be found [here](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-hardhat).
+Once you complete this final step, you will be able to see your new ERC-20 assets in the MetaMask profiles of the new test accounts.
