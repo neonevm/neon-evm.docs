@@ -83,6 +83,7 @@ module.exports = {
               label: 'Oracles',
               items: [
                 'developing/integrate/oracles/integrating_pyth',
+                'developing/integrate/oracles/integrating_chainlink',
               ]
             },
             // 'developing/integrate/indexers',
