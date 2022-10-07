@@ -6,7 +6,7 @@ The Neon DAO model is based on the interplay and synergy of several decentralize
 
 The Neon DAO consists of the following Assemblies:
 
-- [Ecosystem Assembly](#ecosystem-assembly)
+- [Ecosystem Assembly and Foundation](#ecosystem-assembly)
 - [Treasury Watchdog](#treasury-watchdog)
 - [Development Assembly](#development-assembly)
 - [EVM Emergency Assembly](#evm-emergency-assembly)
@@ -27,6 +27,14 @@ Most Ecosystem Assembly proposals can reduced to distributing tokens from one tr
 * Depositing funds at an interest rate
 
 Like all Neon DAO Assemblies, the Ecosystem Assembly also allows for changing the voting parameters and permits users to monitor existing proposals by opting to receive notifications for new proposals and voting results.
+
+### Ecosystem Foundation
+The Ecosystem Foundation is a organization that acts as the Ecosystem Assembly's agent. As the Assembly's agent, the Foundation is responsible for required to implement Ecosystem Assembly proposals that cannot be done automatically. These responsibilities include:
+* Doing KYC and AML for contractors and grantees
+* Signing agreements with contractors on behalf of the Ecosystem Assembly
+* Bookkeeping and reporting this info to the Ecosystem 
+
+The Ecosystem Foundation also has the power to enact token transfers between different accounts, just like the Ecosystem Assembly. However, since it is not an Assembly and therefore is not subject to a formal proposal vetting and approval process, such a transfer may be made very quickly.
 
 ## Treasury Watchdog
 
