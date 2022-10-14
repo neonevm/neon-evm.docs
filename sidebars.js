@@ -83,6 +83,7 @@ module.exports = {
               label: 'Oracles',
               items: [
                 'developing/integrate/oracles/integrating_pyth',
+                'developing/integrate/oracles/integrating_chainlink',
               ]
             },
             // 'developing/integrate/indexers',
@@ -121,11 +122,29 @@ module.exports = {
       ]
     }, {
       type: 'category',
+      label: 'EVM Compatibility',
+      items: [
+        'evm_compatibility/json_rpc_api_methods',
+        // 'evm_compatibility/gas_metering',
+        {
+              type: 'category',
+              label: 'Architectural Limitations',
+              items: [
+    					'evm_compatibility/architectural_limitations/restriction_on_iterative_trx',
+    					'evm_compatibility/architectural_limitations/erc721_tokens',
+    					'evm_compatibility/architectural_limitations/precompiled_contracts',
+    					// 'evm_compatibility/architectural_limitations/gas_calculator',
+    					'evm_compatibility/architectural_limitations/unsupported_functions',
+    					'evm_compatibility/architectural_limitations/storage_size_for_account'
+    				]
+            }
+      ]
+    }, {
+      type: 'category',
       label: 'Architecture',
       items: [
         'architecture/neon_evm_arch',
         'architecture/eth_sol_solution',
-        { type: 'doc', label: 'EVM compatibility', id: 'architecture/evm_compatibility' },
         {
           type: 'category',
           label: 'Core Aspects',
@@ -136,19 +155,7 @@ module.exports = {
                    'architecture/core_aspects/proof-of-work',
                    'architecture/core_aspects/transaction',
                    'architecture/core_aspects/web3' ]
-        },
-        {
-              type: 'category',
-              label: 'Architectural Limitations',
-              items: [
-    					'design_proposals/accepted/restriction_on_iterative_trx',
-    					'design_proposals/accepted/erc721_tokens',
-    					'design_proposals/accepted/precompiled_contracts',
-    					'design_proposals/accepted/gas_calculator',
-    					'design_proposals/accepted/unsupported_functions',
-    					'design_proposals/accepted/storage_size_for_account'
-    				]
-            }
+        }
       ]
     },
     { type: 'category', label: 'FAQ', items: [

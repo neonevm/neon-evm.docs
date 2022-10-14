@@ -10,7 +10,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'throw', // options: throw, warn
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/fav_192.png',
+  favicon: 'img/favicon.png',
   organizationName: 'neonlabsorg', // Usually your GitHub org/user name.
   projectName: 'neon-evm.docs', // Usually your repo name.
   themeConfig: {
@@ -41,7 +41,7 @@ module.exports = {
       title: 'Neon Docs',
       logo: {
         alt: 'Neon EVM',
-        src: 'img/neon-logo.png',
+        src: 'img/logo.png',
       },
       items: [
         {

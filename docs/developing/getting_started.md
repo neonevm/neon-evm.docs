@@ -4,13 +4,18 @@ title: Getting Started
 
 *The purpose of this guide is to get you familiarized with the Neon EVM's high-level structure and to provide you with step-by-step instructions on how to set up your local Neon EVM development environment.*
 
-## Neon vs Ethereum
+## Reference
+If you are already familiar with Neon, make sure to check out the following tools and tutorials that will enhance you with your Neon experience:
 
-Ethereum is set to remain a booming blockchain ecosystem. The number of active dApps on Ethereum is hovering above 300, and the number of active users of these dApps is close to 6 million, with the number of transactions continuing to be on the rise. Ethereum’s popularity is not only thanks to its processing of smart contracts, but also its sophisticated infrastructure for application development.
+* Receive free NEON test tokens with the [Neon Faucet](https://neonfaucet.org/).
+* Browse Neon's blockchain transaction history with [NeonScan](https://neonscan.org/).
+* Transfer tokens to and from Neon using [NeonPass](https://neonpass.live/).
+* Set up a Neon [wallet](../wallet/metamask_setup).
 
-Solana is one of the most technically advanced and innovative blockchains, offering low gas fees and high throughput of transactions. Among these innovations is its Proof-of-Stake (PoS) consensus system, which is reinforced via a Proof-of-History protocol, a transaction parallelization technology that optimizes resources and ensures that Solana can scale horizontally across GPUs and SSDs, along with an optimized mempool system that speeds up throughput.
-
-The Neon EVM is a cross-chain solution that allows dApp developers to access the advantages of Solana to expand their services, to offer new products like arbitrage or high-frequency trading, grow their user base, and decrease costs where possible, including gas fees. Neon EVM enables full compatibility with Ethereum on Solana.
+For information on deploying dApps on Neon, check out the following resources:
+* [Using Remix](deploy_facilities/using_remix)
+* [Using Hardhat](deploy_facilities/using_hardhat)
+* [Using Truffle](deploy_facilities/using_truffle)
 
 ## Quick Start
 
@@ -23,16 +28,19 @@ Install MetaMask by following the setup instructions on the [Installing MetaMask
 There are two ways to connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster: using Chainlist.org or manually.
 
 #### Option A: Connect with Chainlist.org
-Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You should see `Neon EVM Devnet` and `Neon EVM MainNet`.  
+Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You should see `Neon EVM Devnet` and `Neon EVM Mainnet`.  
 
 ![](img/chainlist_neon.png)
 
 Select `Neon EVM Devnet` and click `Connect Wallet`. A MetaMask pop-up window will show. Click `Next` and then `Connect`. You can now access the [Solana cluster](https://docs.solana.com/clusters) and carry out transactions.
 
 #### Option B: Connect Manually with MetaMask
-Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#setting-up-an-rpc-network).
+Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#option-b-manual-configuration).
 
-## Deploying dApps
+### Step 3: Get NEON Devnet Tokens from the NeonFaucet
+NEON tokens for Devnet can be obtained using the [NeonFaucet](developing/utilities/faucet.md).
+
+### Step 4: Deploying dApps
 
 Deploying dApps on Neon is easy and you can do so with [Remix](https://remix-project.org/), [Truffle](https://trufflesuite.com/), and [Hardhat](https://hardhat.org/). 
 
