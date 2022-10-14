@@ -28,14 +28,14 @@ The Neon DAO consists of three (3) Departments that each carries out functions i
 
 The Ecosystem department is charged with the promotion of sustainable, long-term growth of the Neon ecosystem. As the collective owner of the Neon Treasury, its duties and responsibilties consist of distribution of funds for grants, security audits, bug bounties, and other ecosystem initiatives.
 
-Within the Ecosystem department, Ecosystem Assembly and Foundation work in collaboration to provide a frictionless experience for Ecosystem developers. 
+Within the Ecosystem department, Ecosystem Assembly and Foundation work in collaboration to provide a frictionless experience for Ecosystem developers. Ecosystem Assembly provides custodial services to the Foundation: it holds Treasury (and NEON token itself) and distributes funds in accordance with assembly decisions under the supervision of the Ecosystem Foundation, which assumes the role of an agent for the Ecosystem Assembly.
 
 ### Ecosystem Assembly
 
 The Ecosystem Assembly is the main part of the Neon DAO. Proposals submitted to this Assembly can distribute funds to and from Neon treasury accounts, user accounts, and escrow funds. It uses this power to incentivize Neon ecosystem projects.
 
 #### Usage Scenarios
-Most Ecosystem Assembly proposals can reduced to distributing tokens from one treasury account to another. The following are some examples:
+Most Ecosystem Assembly proposals deal with the matter of distributing tokens from one treasury account to another. The following are some examples:
 * Allocating tokens for the Grants budget
 * Allocating tokens for the Bug Bounty budget
 * Rewarding users with tokens, whether proactively or retroactively
@@ -45,18 +45,21 @@ Like all Neon DAO Assemblies, the Ecosystem Assembly also allows for changing th
 
 ### Ecosystem Foundation
 The Ecosystem Foundation is a organization that acts as the Ecosystem Assembly's agent. As the Assembly's agent, the Foundation is responsible for required to implement Ecosystem Assembly proposals that cannot be done automatically. These responsibilities include:
-* Doing KYC and AML for contractors and grantees
+* Performing necessary Know-Your-Customer (KYC) and Anti-Money Laundering (AML) processes for contractors and grantees
 * Signing agreements with contractors on behalf of the Ecosystem Assembly
-* Bookkeeping and reporting this info to the Ecosystem 
+* Process signed agreements with regards to acceptance and payments 
+* Bookkeeping and reporting pertinent information to the Ecosystem Assembly
 
 The Ecosystem Foundation also has the power to enact token transfers between different accounts, just like the Ecosystem Assembly. However, since it is not an Assembly and therefore is not subject to a formal proposal vetting and approval process, such a transfer may be made very quickly.
 
 ## Development
-As the owner of the Neon EVM program, the Development Assembly is the group that deals with the technical aspects of the Neon EVM.
+As the owner of the Neon EVM program, the Development Assembly is the group that deals with the technical aspects of the Neon EVM. In break-glass emergency scenarios, Emergency Engineers with a 2 out of N multisig setup may elect to stop the Neon EVM if deemed necessary by the Development Assembly. They are also tasked with restarting the EVM after the emergency has been addressed appropriately.
 
 ### Development Assembly
 
-The Development Assembly is responsible for overseeing upgrades to the Neon EVM, identifying and proritizing relevant feature upgrades, as well as for preventing funds from being maliciously withdrawn from dApps on Neon. When upgrading the Neon EVM, Development Assembly cannot change the source code. Instead, it loads an approved precompiled version of the EVM. It can also add and remove precompiled Neon EVM versions from its approved version list. The Development Assembly also has the power to appoint Emergency Engineers that have the power to upgrade the EVM to an approved version without the Assembly's approval.
+The Development Assembly is responsible for overseeing upgrades to the Neon EVM, identifying and proritizing relevant feature upgrades, appointing Emergency Engineers, as well as for preventing funds from being maliciously withdrawn from dApps on Neon. 
+
+When upgrading the Neon EVM, Development Assembly cannot change the source code. Instead, it loads an approved precompiled version of the EVM. It can also add and remove precompiled Neon EVM versions from its approved version list. The Development Assembly also has the power to appoint Emergency Engineers that have the power to upgrade the EVM to an approved version without the Assembly's approval.
 
 To prevent malicious withdrawals, the Development Assembly can either stop the Neon EVM via emergency mode or move it to maintenance mode in order to prevent the transfers from going through. Maintenance mode is when the EVM finalizes transactions that have started, but declines any new transactions, whereas emergency mode is when all transactions are declined.
 
