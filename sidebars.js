@@ -107,6 +107,7 @@ module.exports = {
       type: 'category',
       label: 'Governance',
       items: [
+        'governance/introduction/introduction',
         'governance/overview/overview',
         'governance/neon_daos/neon_daos',
         'governance/proposals/proposals',
