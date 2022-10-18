@@ -18,6 +18,8 @@ The Neon DAO model is based on the interplay and synergy of several decentralize
     - [Usage Scenarios](#usage-scenarios-2)
   - [EVM Emergency Assembly](#evm-emergency-assembly)
     - [Usage Scenarios](#usage-scenarios-3)
+- [DAO Parameters](#dao-parameters)
+- [Creation of New DAOs](#creation-of-new-daos)
 
 The Neon DAO consists of three (3) Departments that each carries out functions in an area of focus:
 - Ecosystem
@@ -82,6 +84,8 @@ Like all Neon DAO Assemblies, the Development Assembly also allows for changing 
 
 ## Security
 
+The Security department's primary focus, as its name implies, is to monitor and prevent attacks on Treasury accounts and the Neon EVM program.
+
 Within the Security department, the Treasury Watchdog and EVM Emergency Assembly provide additional assurances that attacks and other malicious actions may be monitored, detected, and rectified.
 
 ### Treasury Watchdog
@@ -119,3 +123,20 @@ Like all Neon DAO Assemblies, the Grants Assembly also allows for changing the v
 
 The Bug Bounty Committee, while not strictly a decentralized Assembly, is a critical component of Neon's governance structure. This committee, the members of which are limited to people invited by the Neon team, vote on the distribution of funds from the Bug Bounty Budget to deserving hackers who discover vulnerabilities in the Neon EVM. The funds themselves are released by the Grants Assembly. -->
 
+## DAO Parameters
+
+The parameters pertaining to the Neon governance framework may be adjusted and voted on by the community.
+
+The main goal, based on token distribution, the Governance parameters should be set to be sure that:
+
+1. All proposals the community at-large is interested in will be approved in a given timeframe
+    1. Every participant would prefer to vote with a weight less than a threshold
+    2. Owners of public sale tokens will not be able to block approval
+    3. Ideally, voting should be done without NeonLabs
+2. NeonLabs or investors can block any malicious proposal
+    1. Any malicious proposal can be blocked by any of top-4 main investors or us
+3. To speed up the proposal approval process, the top-4 investors (Three Arrows Capital, Solana Ventures, Solana Foundation) may be involved to vote or use NeonLabs tokens
+
+## Creation of New DAOs
+
+A new DAO within the Neon governance framework can be created only by users with more than 1 * 10^6 NEON tokens. 
