@@ -1,5 +1,5 @@
 ---
-title: Proposals
+title: Getting Involved
 ---
 
 ## Introduction

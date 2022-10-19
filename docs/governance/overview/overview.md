@@ -2,6 +2,20 @@
 title: Overview
 ---
 
+## Users will be able to...
+
+- Chose the right assembly to create a proposal or vote for the proposal
+- Find and understand voting parameters for each Assembly
+- Discuss initiatives on Forum
+- Deal with proposals:
+    - deposit/withdraw tokens, view locked tokens amount
+    - create, vote, execute Tx
+- Create proposal to
+    - transfer money
+    - update EVM
+
+## Principles and Objectives
+
 ## Principles and Objectives
 
 To ensure that the Neon DAO works smoothly and is effective at implementing the community's vision, there are a few guiding principles that people engaging with this DAO must follow. These include:
@@ -65,10 +79,9 @@ Below is a table of different proposal types that can be submitted to different 
 
 Assembly Name | Object of Proposal | Proposal Type
 :-|:-|:-
-Ecosystem Assembly, Treasury Watchdog | Treasury Accounts | Transferring tokens to accounts, including:<br />- Allocating budgets for the Grants Assembly and Bug Bounty Committee<br />- Rewards for community members
-Ecosystem Assembly | Transaction Fees | - Changing transaction fees on Neon
+Ecosystem Assembly | Treasury Accounts | Transferring tokens to accounts, including:<br />- Allocating budgets for the Grants Assembly and Bug Bounty Committee<br />- Rewards for community members
+Ecosystem Foundation | Transaction Fees | - Changing transaction fees on Neon version upgrades<br />- Upgrading EVM to approved versions<br />- Adding/removing Emergency Engineers<br />- Revoking upgrade authority from the "EVM Maintenance" contract  
 Treasury Watchdog | Ecosystem Assembly | - Preventing hostile proposals on the Ecosystem Assembly
-Development Assembly, EVM Emergency Assembly | EVM Maintenance contract | - Approving EVM version upgrades<br />- Upgrading EVM to approved versions<br />- Adding/removing Emergency Engineers<br />- Revoking upgrade authority from the "EVM Maintenance" contract
+Development Assembly | EVM Maintenance contract | - Approving EVM  
 EVM Emergency Assembly | Development Assembly | - Preventing hostile proposals on the Development Assembly
-Grants Assembly | Grants accounts | - Transfering tokens for grant initiatives to an escrow account<br />- Distributing tokens from escrow accounts to grantees<br />Pay from bug bounty account to a bug bounty hunter and Immunefi (for fees)
 All Assemblies | Governance | - Updating the Assembly's own Governance contract<br />- Changing its own voting parameters

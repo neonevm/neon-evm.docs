@@ -111,7 +111,7 @@ module.exports = {
         'governance/overview/overview',
         'governance/neon_daos/neon_daos',
         'governance/proposals/proposals',
-        'governance/using_governance_ui/using_governance_ui',
+        // 'governance/using_governance_ui/using_governance_ui',
         'governance/forum/forum',
       ]
     }, {
