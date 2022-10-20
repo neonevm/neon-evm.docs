@@ -2,69 +2,36 @@
 title: Overview
 ---
 
-## Users will be able to...
+## The Neon DAO
 
-- Chose the right assembly to create a proposal or vote for the proposal
-- Find and understand voting parameters for each Assembly
-- Discuss initiatives on Forum
-- Deal with proposals:
-    - deposit/withdraw tokens, view locked tokens amount
-    - create, vote, execute Tx
-- Create proposal to
-    - transfer money
-    - update EVM
+The Neon DAO is the name given to Neon's community governance structure. It is a collection of organizations that allow Neon community stakeholders to:
+  * Reach consensus on solving issues that cannot be fully covered by software algorithms
+  * Develop rules for the functioning of the Neon DAO, and record and store these rules on the blockchain
+  * Change the governance rules themselves through contractual amendments
 
-## Principles and Objectives
+As the body that represents the Neon community's decisions on key issues, its conclusions are binding on the Neon team, which promptly implements the desired changes.
 
-## Principles and Objectives
+## Neon DAO Organization
 
-To ensure that the Neon DAO works smoothly and is effective at implementing the community's vision, there are a few guiding principles that people engaging with this DAO must follow. These include:
+Neon is decentralized and its economy is fee-based, with NEON tokens being used for governance purposes. Following the same philosophy, the Neon DAO is itself handled by a decentralized protocol with a clear and user-friendly process for proposing and voting for protocol improvements. It is organized as a series of decentralized Assemblies that are each responsible for a different aspect of the decisionmaking process. These Assemblies are grouped into the following three Departments:
 
-* Respecting the rights of all Neon community members
-* Acting in good faith
-* Seeking to resolve disputes in a constructive and collaborative manner
-* Encouraging a diversity of perspectives
-* Promoting openness and transparency
+### Ecosystem Department
 
-There are also more concrete prohibitions on improper behavior that must be kept in mind, including that:
+The [Ecosystem Department](/docs/governance/neon_daos/#ecosystem-department) contains the Assemblies responsible for the promotion of Neon community initiatives and incentivizing long-term ecosystem growth. The use cases involving this Department include [rewarding users and teams for creating Neon ecosystem projects](/docs/governance/neon_daos/#usage-scenarios).
 
-* Members must not threaten other members.
-* No member should improperly influence the vote of another.
-* Members agree to hold software developers blameless for unintentional mistakes made by them in the expression of contractual intent, whether or not said mistakes were due to actual or perceived negligence.
+### Development Department
 
-In addition, the NEON DAO is transparent and flexibile. All users have access to all relevant information in order to make well-informed decisions, and the governance process is adaptable to the ever-evolving needs of the community.
+The [Development Department](/docs/governance/neon_daos/#development-department) contains the Assembly responsible for the technical aspects of the Neon EVM. An example of a use case involving this Department is [updating the Neon EVM version](/docs/governance/neon_daos/#usage-scenarios-1).
 
-## Governance on Neon: Organization
+### Security Department
 
-Neon is decentralized and its economy fee-based, with NEON tokens being used for governance purposes. Following the same philosophy, the Neon DAO is itself handled by a decentralized protocol with a clear and user-friendly process for proposing and voting for protocol improvements. It is organized as a series of decentralized Assemblies that are each responsible for a different aspect of the decisionmaking process. While each Assembly has different criteria for submitting proposals, eligibility for voting, and the scope of influence its decisions can have, they all follow the same basic formula, which is:
-
-* Eligible users submit a proposal.
-* Assembly members discuss, review, and revise the proposal on off-chain platforms.
-* The finalized proposal is taken to a simple "Accept"/"Reject" vote, and eligible voters can cast votes (in the form of NEON tokens) for their preferred option, with 1 NEON being equivalent to one vote.
-* If the proposal's "Accept" votes pass a certain threshold, the proposal is passed and is ready for implementation. Otherwise, the proposal fails.
-
-As mentioned, the decentralized aspect of Neon governance is only for the voting - the proposal discussion and review stage, on the other hand, must take place on another platform. 
+The [Security Department](/docs/governance/neon_daos/#security-department) contains the Assemblies responsible for monitoring activity in the other two Departments to stop malicious actors attempting to exploit the Neon DAO. A use case example involving this Department is [preventing the Neon EVM being updated with malicious code](/docs/governance/proposals/#preventing-evm-being-updated-with-malicious-code).
 
 For more details on Neon's Assemblies and the differences and interactions between them, see the [NEON Assemblies section](/docs/governance/neon_daos/).
 
-## Submitting and Evaluating Proposals
-
-Any Neon user can submit an idea for potential implementation by the DAO, which is called a **proposal**. Each proposal is included in the list of promising solutions (use cases) and discussed on the DAO forum. After a proposal is submitted, it goes through a formal life cycle of technical reviews, research, and discussions. The discussion stage allows management to exclude the implementation of inefficient or risky solutions in Neon.
-
-Proposals can affect both the management and technical processes of Neon. If this is a proposal to change the logic of system contracts or to improve the technical capabilities of Neon, this proposal must be tested on either Devnet or Testnet. Proposals for the implementation of new features associated with risk or high labor costs go through the following formal process:
-
-  * Substantiation of the need to implement this proposal, taking into account its labor intensity and relevance.
-  * Development of technical specifications for the implementation of this proposal.
-  * Appointment of a worker for the implementation of the proposal. The worker may be an individual, a group of individuals, or a third-party company.
-  * Verification and decision on acceptance of the work done.
-
-Stakeholders make the final decision to change the logic of system contracts, to implement new functionality associated with risks or high costs, and can also take action against community members whose actions may harm the development of Neon.
-
-Stakeholders make all decisions through voting using the Neon DAO application. Current proposals are displayed on the main page of the *Neon DAO* section, under the "How to Participate" heading.
-
 ## Governance on Neon: Technical Implementation
 
-The Neon Assemblies are built using the [SPL Governance program](https://github.com/solana-labs/solana-program-library/tree/master/governance) - a versatile DAO creation tool for the Solana blockchain.
+The Neon DAO's Assemblies are built using the [SPL Governance program](https://github.com/solana-labs/solana-program-library/tree/master/governance) - a versatile DAO creation tool for the Solana blockchain.
 
 This program allows for the customization of the following parameters:
 
