@@ -32,10 +32,18 @@ The Ecosystem Assembly is the most active Assembly in the Neon DAO. Proposals su
 
 #### Usage Scenarios
 Most Ecosystem Assembly proposals deal with the matter of distributing tokens from one treasury account to another. The following are some examples:
-* Allocating tokens for the Grants budget
-* Allocating tokens for the Bug Bounty budget
-* Rewarding users with tokens, whether proactively or retroactively
-* Depositing funds at an interest rate
+* Filling the Neon Treasury
+* Funding ecosystem initiatives via the Grants Budget
+* Funding white-hat hackers via the Bug Bounty Budget
+* Funding security audits via the Security Audit Budget
+
+A typical scenario, funding an ecosystem initiative, would have the proponent proceed as follows:
+1. Off-chain, discuss and evaluate the proper incentives to provide for the initiative.
+2. Create a proposal to transfer the agreed-upon funds from the Neon Treasury to the Grants Budget.
+3. The proposal is voted on and, if approved, leads to the transfer of funds to the Grants Budget.
+4. Projects and teams do eligible work and negotiates with the Ecosystem Foundation for approval and funding.
+5. Once the applicant team is vetted by the Ecosystem Foundation, the proponent would create a proposal to recompense the applicant for their work.
+5. The proposal is voted on and, if approved, leads to the transfer of funds from the Grants Budget to the applicant's desired accounts, pursuant to the agreements signed between them and the Ecosystem Foundation.
 
 Like all Neon DAO Assemblies, the Ecosystem Assembly also allows for changing the voting parameters and permits users to monitor existing proposals by opting to receive notifications for new proposals and voting results.
 

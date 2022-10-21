@@ -2,6 +2,16 @@
 title: Overview
 ---
 
+## Quick Links
+
+
+* [Choosing an Assembly](/docs/governance/neon_daos/#departments-overview)
+* [Creating Proposals](/docs/governance/proposals/#introduction)
+  * [Transfer Money](/docs/governance/neon_daos/#usage-scenarios)
+  * [Update EVM](/docs/governance/neon_daos/#usage-scenarios-1)
+* [Discussing Proposals](/docs/governance/proposals/#dao-forum)
+* [Voting](/docs/governance/proposals/#voting)
+
 ## The Neon DAO
 
 The Neon DAO is the name given to Neon's community governance structure. It is a collection of organizations that allow Neon community stakeholders to:
@@ -28,18 +38,6 @@ The [Development Department](/docs/governance/neon_daos/#development-department)
 The [Security Department](/docs/governance/neon_daos/#security-department) contains the Assemblies responsible for monitoring activity in the other two Departments to stop malicious actors attempting to exploit the Neon DAO. A use case example involving this Department is [preventing the Neon EVM being updated with malicious code](/docs/governance/proposals/#preventing-evm-being-updated-with-malicious-code).
 
 For more details on Neon's Assemblies and the differences and interactions between them, see the [NEON Assemblies section](/docs/governance/neon_daos/).
-
-## Governance on Neon: Technical Implementation
-
-The Neon DAO's Assemblies are built using the [SPL Governance program](https://github.com/solana-labs/solana-program-library/tree/master/governance) - a versatile DAO creation tool for the Solana blockchain.
-
-This program allows for the customization of the following parameters:
-
-* Pass threshold to accept a proposal
-* Voting period
-* Hold up period - the minimum time before executing an approved proposal
-* Vote weight calculation (e.g. percentage of total supply, based on vested tokens)
-* Whether to allow voting using a portion of vested tokens
 
 ## Quick Reference / Cheat Sheet
 Below is a table of different proposal types that can be submitted to different Assemblies, and what they affect:

@@ -112,6 +112,7 @@ module.exports = {
         'governance/neon_daos/neon_daos',
         'governance/proposals/proposals',
         // 'governance/using_governance_ui/using_governance_ui',
+        'governance/technical_implementation/technical_implementation',
       ]
     }, {
       type: 'category',
