@@ -4,15 +4,13 @@ title: Discussions and Proposals
 
 ## Introduction
 
-Any Neon user can submit an idea for potential implementation by the Neon DAO, which is called a **proposal**. Each proposal is included in the list of promising solutions (use cases) and discussed on the DAO forum. After a proposal is submitted, it goes through a formal life cycle of technical reviews, research, and discussions. The discussion stage allows management to exclude the implementation of inefficient or risky solutions in Neon. After the discussion stage, proposals are put to a vote by the Assembly. Proposals that are approved according to the rules of their Assembly are then automatically implemented by Neon.
-
-Current proposals are displayed on the main page of the *Neon DAO* section, under the "How to Participate" heading.
+Any Neon user can submit an idea for potential implementation by the Neon DAO. Each idea is included in the list of promising solutions and discussed on the DAO forum. After an idea is proposed, it goes through a formal life cycle of technical reviews, research, and discussions. This discussion stage allows management to exclude the implementation of inefficient or risky solutions in Neon. After the discussion stage, finalized ideas are reworked into concrete on-chain **proposals** and are put to a vote by the Assembly. Proposals that are approved according to the rules of their Assembly are then automatically implemented by Neon.
 
 ## DAO Forum
 
-The DAO Forum is a place where Neon developers and third-party teams can discuss and debate ideas and express and articulate their opinions on proposals. This forum is a vital part of the Neon DAO, because it provides transparency and accountability, fosters constructive discourse, and helps ensure the decentralization of the project. 
+The DAO Forum is a place where Neon developers and third-party teams can discuss and debate ideas and express and articulate their opinions in preparation for becoming proposals. This forum is a vital part of the Neon DAO, because it provides transparency and accountability, fosters constructive discourse, and helps ensure the decentralization of the project. 
 
-Proposals can affect both the management and technical processes of Neon. If this is a proposal to change the logic of system contracts or to improve the technical capabilities of Neon, this proposal must be tested on either Devnet or Testnet. Proposals for the implementation of new features associated with risk or high labor costs go through the following formal process:
+Potential proposals can affect both the management and technical processes of Neon. If this is a proposal to change the logic of system contracts or to improve the technical capabilities of Neon, the proposal contract must be tested on either Devnet or Testnet. Proposals for the implementation of new features associated with risk or high labor costs go through the following formal process:
 
   * Substantiation of the need to implement this proposal, taking into account its labor intensity and relevance.
   * Development of technical specifications for the implementation of this proposal.
@@ -35,10 +33,29 @@ The DAO Forum is not the place for general discussions, advertising, off-topic c
 
 5. Users are accountable for their actions. All users must be held accountable for their actions and decisions within the governance process. There must be mechanisms in place to ensure that users act in the best interests of the community.
 
+## Creating a Proposal
+
+Once an idea has reached its final form after discussions on the DAO Forum and the formal review process is complete, the proponent can create the actual proposal. The on-chain code to automatically implement the proposal that was tested and finalised on the DAO Forum is now ready to be included in a formal proposal on the Neon DAO website.
+
+To create a proposal, follow the following steps:
+
+1. On the Neon DAO website, select the Assembly for which the proposal is best suited.
+2. Connct your Solana wallet, with NEON tokens available, to the DAO website.
+3. Deposit the number of NEON tokens required by the Assembly for proposal submission.
+4. Create the proposal, with a link to the discussion on the DAO Forum.
+
+Current proposals are displayed on the main page of the *Neon DAO* section, under the "How to Participate" heading.
 
 ## Voting
 
-Once a proposal has reached its final form after discussions on the DAO Forum, it is ready to be put to a vote. The community of eligible voters in the relevant Assembly is then invited to cast their votes to either "Accept" or "Reject" this proposal. This is done by submitting NEON tokens to the desired option, with each NEON token being worth one vote.
+After a proposal is created, it is ready to be put to a vote. The community of eligible voters in the relevant Assembly is then invited to cast their votes to either "Accept" or "Reject" this proposal. This is done by submitting NEON tokens to the desired option, with each NEON token being worth one vote.
+
+To vote on a proposal, follow the following steps:
+
+1. On the Neon DAO website, select the Assembly for which the proposal is best suited.
+2. Connct your Solana wallet, with NEON tokens available, to the DAO website.
+3. Deposit the number of NEON tokens equivalent to the desired number of votes for your preferred option, whether it is to "Accept" or "Reject" the proposal.
+4. Click "Vote" to approve the transaction.
 
 Once the voting period is concluded, the votes are automatically counted. If the proposal's "Accept" votes pass the Assembly's required vote threshold, the proposal is passed and is ready for implementation. Otherwise, the proposal fails.
 
@@ -71,21 +88,11 @@ There are three main categories of "emergency scenarios" that could occur involv
 ### Stopping the EVM
 In most cases involving a malicious transaction, the transaction can be prevented by stopping the EVM. This can be accomplished in one of two ways.
 
-1. Via a proposal in the Development Assembly. This proposal must go through the standard proposal creation, voting, and acceptance process.
+1. Via a proposal in the Development Assembly. This proposal must go through the standard proposal creation, voting, and acceptance process. This path is rarely used, in favour of the Emergency Engineer option.
 2. Via the Emergency Engineer multisig. These engineers, specially selected beforehand by the Development Assembly, are ready to spring into action and stop or update the EVM in an emergency scenario, especially when a proposal in the Assembly would take too long.
 
 ### Preventing Money Being Stolen from Treasury Accounts
-This process, also known as "forking governance", is accomplished by abandoning the existing Ecosystem Assembly, now presumed to be compromised, and migrating the governance, treasury funds, and minting authority to a new set of Assemblies. This is accomplished by the following process:
-
-1. Transfer tokens from the Ecosystem Assembly Treasury to the Treasury Watchdog, or delegate authority over the Ecosystem Assembly tokens to the Treasury Watchdog. This is accomplished via the standard proposal acceptance process on the Ecosystem Assembly.
-2. Create a new Treasury Watchdog
-3. Create a proposal to give the old Treasury Watchdog power over everything the old Ecosystem Assembly did.
-4. Create a proposal to give the new Treasury Watchdog power over everything the old Treasury Watchdog did.
+This process, also known as "forking governance", is accomplished by abandoning the existing Ecosystem Assembly, now presumed to be compromised, and migrating the governance, treasury funds, and minting authority to a new set of Assemblies.
 
 ### Preventing EVM Being Updated with Malicious Code
-This process is, like the scenario above, known as "forking governance", and is accomplished by abandoning the existing Development Assembly, now presumed to be compromised, and migrating the governance, treasury funds, and minting authority to a new set of Assemblies. This is accomplished by the following process:
-
-1. Transfer tokens from the Development Assembly Treasury to the EVM Emergency Assembly, or delegate authority over the Ecosystem Assembly tokens to the EVM Emergency Assembly. This is accomplished via the standard proposal acceptance process on the Ecosystem Assembly.
-2. Create a new EVM Emergency Assembly
-3. Create a proposal to give the old EVM Emergency Assembly power over everything the old Development Assembly did.
-4. Create a proposal to give the new EVM Emergency Assembly power over everything the old EVM Emergency Assembly did.
+This process is, like the scenario above, known as "forking governance", and is accomplished by abandoning the existing Development Assembly, now presumed to be compromised, and migrating the governance, treasury funds, and minting authority to a new set of Assemblies.

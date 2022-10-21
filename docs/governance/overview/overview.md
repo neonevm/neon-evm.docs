@@ -5,12 +5,17 @@ title: Overview
 ## Quick Links
 
 
-* [Choosing an Assembly](/docs/governance/neon_daos/#departments-overview)
-* [Creating Proposals](/docs/governance/proposals/#introduction)
+* [Choosing an Assembly](/docs/governance/neon_daos/#focus-areas-overview)
+  * [Ecosystem Focus Area](/docs/governance/neon_daos/#ecosystem-focus-area)
+  * [Development Focus Area](/docs/governance/neon_daos/#development-focus-area)
+  * [Security Focus Area](/docs/governance/neon_daos/#security-focus-area)
+* [Discussing Ideas](/docs/governance/proposals/#dao-forum)
+* [Creating a Proposal](/docs/governance/proposals/#creating-a-proposal)
+* [Voting](/docs/governance/proposals/#voting)
+* Use Cases
   * [Transfer Money](/docs/governance/neon_daos/#usage-scenarios)
   * [Update EVM](/docs/governance/neon_daos/#usage-scenarios-1)
-* [Discussing Proposals](/docs/governance/proposals/#dao-forum)
-* [Voting](/docs/governance/proposals/#voting)
+
 
 ## The Neon DAO
 
@@ -23,19 +28,19 @@ As the body that represents the Neon community's decisions on key issues, its co
 
 ## Neon DAO Organization
 
-Neon is decentralized and its economy is fee-based, with NEON tokens being used for governance purposes. Following the same philosophy, the Neon DAO is itself handled by a decentralized protocol with a clear and user-friendly process for proposing and voting for protocol improvements. It is organized as a series of decentralized Assemblies that are each responsible for a different aspect of the decisionmaking process. These Assemblies are grouped into the following three Departments:
+Neon is decentralized and its economy is fee-based, with NEON tokens being used for governance purposes. Following the same philosophy, the Neon DAO is itself handled by a decentralized protocol with a clear and user-friendly process for proposing and voting for protocol improvements. It is organized as a series of decentralized Assemblies that are each responsible for a different aspect of the decisionmaking process. These Assemblies are grouped into the following three Focus Areas:
 
-### Ecosystem Department
+### Ecosystem Focus Area
 
-The [Ecosystem Department](/docs/governance/neon_daos/#ecosystem-department) contains the Assemblies responsible for the promotion of Neon community initiatives and incentivizing long-term ecosystem growth. The use cases involving this Department include [rewarding users and teams for creating Neon ecosystem projects](/docs/governance/neon_daos/#usage-scenarios).
+The [Ecosystem Focus Area](/docs/governance/neon_daos/#ecosystem-focus-area) contains the Assemblies responsible for the promotion of Neon community initiatives and incentivizing long-term ecosystem growth. The use cases involving this Focus Area include [rewarding users and teams for creating Neon ecosystem projects](/docs/governance/neon_daos/#usage-scenarios).
 
-### Development Department
+### Development Focus Area
 
-The [Development Department](/docs/governance/neon_daos/#development-department) contains the Assembly responsible for the technical aspects of the Neon EVM. An example of a use case involving this Department is [updating the Neon EVM version](/docs/governance/neon_daos/#usage-scenarios-1).
+The [Development Focus Area](/docs/governance/neon_daos/#development-focus-area) contains the Assembly responsible for the technical aspects of the Neon EVM. An example of a use case involving this Focus Area is [updating the Neon EVM version](/docs/governance/neon_daos/#usage-scenarios-1).
 
-### Security Department
+### Security Focus Area
 
-The [Security Department](/docs/governance/neon_daos/#security-department) contains the Assemblies responsible for monitoring activity in the other two Departments to stop malicious actors attempting to exploit the Neon DAO. A use case example involving this Department is [preventing the Neon EVM being updated with malicious code](/docs/governance/proposals/#preventing-evm-being-updated-with-malicious-code).
+The [Security Focus Area](/docs/governance/neon_daos/#security-focus-area) contains the Assemblies responsible for monitoring activity in the other two Focus Areas to stop malicious actors attempting to exploit the Neon DAO. A use case example involving this Focus Area is [preventing the Neon EVM being updated with malicious code](/docs/governance/proposals/#preventing-evm-being-updated-with-malicious-code).
 
 For more details on Neon's Assemblies and the differences and interactions between them, see the [NEON Assemblies section](/docs/governance/neon_daos/).
 

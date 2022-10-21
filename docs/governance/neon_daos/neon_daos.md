@@ -2,29 +2,32 @@
 title: Neon DAO Framework
 ---
 
-The Neon DAO model is based on the interplay and synergy of several decentralized Assemblies, organized into three Departments. In a nutshell, Assemblies are member-owned communities that serve as safe and effective venues for like-minded indivuals to constructively work together and engage in collective decision-making. While each Assembly has different criteria for submitting proposals, eligibility for voting, and the scope of influence its decisions can have, they all follow the same basic formula, which is as follows:
+The Neon DAO model is based on the interplay and synergy of several decentralized Assemblies, organized into three Focus Areas. In a nutshell, Assemblies are member-owned communities that serve as safe and effective venues for like-minded indivuals to constructively work together and engage in collective decision-making. While each Assembly has different criteria for submitting proposals, eligibility for voting, and the scope of influence its decisions can have, they all follow the same basic formula, which is as follows:
 
-* Eligible users submit a proposal, i.e. an idea for potential implementation by an Assembly.
+* Eligible users submit an idea for potential implementation by an Assembly.
 * Assembly members discuss, review, and revise the proposal on off-chain platforms including the DAO Forum.
-* The finalized proposal is taken to a simple "Accept"/"Reject" vote, and eligible voters can cast votes (in the form of NEON tokens) for their preferred option, with 1 NEON being equivalent to one vote.
+* The idea is finalized into a proposal which includes instructions to automatically implement the desired changes.
+* The proposal is taken to a simple "Accept"/"Reject" vote, and eligible voters can cast votes (in the form of NEON tokens) for their preferred option, with 1 NEON being equivalent to one vote.
 * If the proposal's "Accept" votes pass a certain threshold, the proposal is passed and is ready for implementation. Otherwise, the proposal fails.
 
-## Departments Overview
+## Focus Areas Overview
 
-The Neon DAO consists of three (3) Departments, each of which carries out functions in one area of focus:
+The Neon DAO consists of three (3) Focus Areas, each of which carries out functions in one area of focus:
 - Ecosystem
 - Development
 - Security
 
-The following is a diagram visualizing the relationships between the Neon DAO's Departments and their constituent assemblies:
+The following is a diagram visualizing the relationships between the Neon DAO's Focus Areas and their constituent Assemblies:
 
 ![](img/dao_organization.png)
 
-## Ecosystem Department
+The parameters pertaining to the Neon DAO governance framework may be adjusted and voted on by the community. These parameters can be found on the Neon DAO website.
 
-The Ecosystem Department is charged with the promotion of sustainable, long-term growth of the Neon ecosystem. As the collective owner of the Neon Treasury, its duties and responsibilties consist of distribution of funds for grants, security audits, bug bounties, and other ecosystem initiatives.
+## Ecosystem Focus Area
 
-Within the Ecosystem Department, the Ecosystem Assembly and Foundation work in collaboration to provide a frictionless experience for Ecosystem developers. The Ecosystem Assembly provides custodial services to the Foundation: it holds tokens in the Treasury (including the NEON token itself) and distributes funds in accordance with the Assembly's decisions. This is done under the supervision of the Ecosystem Foundation, which assumes the role of an agent for the Ecosystem Assembly.
+The Ecosystem Focus Area is charged with the promotion of sustainable, long-term growth of the Neon ecosystem. As the collective owner of the Neon Treasury, its duties and responsibilties consist of distribution of funds for grants, security audits, bug bounties, and other ecosystem initiatives.
+
+Within the Ecosystem Focus Area, the Ecosystem Assembly and Foundation work in collaboration to provide a frictionless experience for Ecosystem developers. The Ecosystem Assembly provides custodial services to the Foundation: it holds tokens in the Treasury (including the NEON token itself) and distributes funds in accordance with the Assembly's decisions. This is done under the supervision of the Ecosystem Foundation, which assumes the role of an agent for the Ecosystem Assembly.
 
 ### Ecosystem Assembly
 
@@ -56,22 +59,20 @@ The Ecosystem Foundation is a organization that acts as the Ecosystem Assembly's
 
 The Ecosystem Foundation also has the power to enact token transfers between different accounts, just like the Ecosystem Assembly. However, since it is not an Assembly and therefore is not subject to a formal proposal vetting and approval process, such a transfer may be made very quickly.
 
-## Development Department
-As the owner of the Neon EVM program, the Development Assembly is the only component of the Development Department. This Assembly is the group that deals with the technical aspects of the Neon EVM, and can stop the Neon EVM to prevent malicious transactions. In break-glass emergency scenarios, Emergency Engineers, appointed by the Development Assembly, may elect to stop the Neon EVM without the Assembly's approval.
+## Development Focus Area
+As the owner of the Neon EVM program, the Development Assembly is the only component of the Development Focus Area. This Assembly is the group that deals with the technical aspects of the Neon EVM, and can stop the Neon EVM to prevent malicious transactions. In break-glass emergency scenarios, Emergency Engineers, appointed by the Development Assembly, may elect to stop the Neon EVM without the Assembly's approval.
 
 ### Development Assembly
 
 The Development Assembly is responsible for overseeing upgrades to the Neon EVM, identifying and proritizing relevant feature upgrades, appointing Emergency Engineers, as well as for preventing funds from being maliciously withdrawn from dApps on Neon. 
 
-When upgrading the Neon EVM, Development Assembly cannot change the source code. Instead, it loads an approved precompiled version of the EVM. It can also add and remove precompiled Neon EVM versions from its approved version list. The Development Assembly also has the power to appoint Emergency Engineers that have the power to upgrade the EVM to an approved version without the Assembly's approval.
-
-To prevent malicious withdrawals, the Development Assembly can either stop the Neon EVM via emergency mode or move it to maintenance mode in order to prevent the transfers from going through. Maintenance mode is when the EVM finalizes transactions that have started, but declines any new transactions, whereas emergency mode is when all transactions are declined.
+When upgrading the Neon EVM, Development Assembly cannot change the source code. Instead, it loads an approved precompiled version of the EVM. It can also add and remove precompiled Neon EVM versions from its approved version list. The Development Assembly also appoints Emergency Engineers that have the power to upgrade the EVM to an approved version without the Assembly's approval. These Engineers can also stop and restart the Neon EVM in case of an emergency.
 
 #### Usage Scenarios
 The Development Assembly allows for proposals dealing with the following:
-* Approval of new EVM versions for any of the three modes (normal, maintenance, emergency). This allows the Assembly to later upgrade the EVM using these versions.
+* Approval of new EVM versions. This allows the Assembly to later upgrade the EVM using these versions.
 * Upgrading the EVM for approved EVM versions.
-* Adding or removing Emergency Engineer multisig private keys, allowing them to upgrade the EVM (to already approved EVM versions) without the Assembly's approval.
+* Adding or removing Emergency Engineer multisig private keys, allowing them to upgrade the EVM (to already approved EVM versions) without the Assembly's approval, as well as to start or stop the EVM in an emergency.
 * Revoking upgrade authority from the “EVM Maintenance” smart contract.
 * Updating the “EVM Maintenance” smart contract.
 
@@ -79,23 +80,23 @@ A typical scenario, updating the EVM version, would have the proponent proceed a
 1. Load the new EVM version byte code to the Solana buffer.
 2. Create a proposal to approve this version of the EVM.
 3. The proposal is voted on and, if approved, leads to the addition of the new EVM version to the 'approved' list.
-4. Create a proposal to upgrade the EVM for the relevant mode to this new version.
+4. Create a proposal to upgrade the EVM.
 5. The proposal is voted on and, if approved, leads to the upgrade of the EVM to the new version.
 
 Like all Neon DAO Assemblies, the Development Assembly also allows for changing the voting parameters and permits users to monitor existing proposals by opting to receive notifications for new proposals and voting results.
 
-## Security Department
+## Security Focus Area
 
-The Security Department's primary focus, as its name implies, is to monitor and prevent attacks on Treasury accounts and the Neon EVM program.
+The Security Focus Area's primary focus, as its name implies, is to monitor and prevent attacks on Treasury accounts and the Neon EVM program.
 
-Within the Security Department, the Treasury Watchdog and EVM Emergency Assembly provide additional assurances that attacks and other malicious actions may be monitored, detected, and rectified.
+Within the Security Focus Area, the Treasury Watchdog and EVM Emergency Assembly provide additional assurances that attacks and other malicious actions may be monitored, detected, and rectified.
 
 ### Treasury Watchdog
 
 The Treasury Watchdog is meant as a check on the Ecosystem Assembly, to make sure no malicious actors attempt to withdraw funds from any treasury wallets/accounts by taking advantage of the Ecosystem Assembly's decentralized nature. The Treasury Watchdog's main function is to identify malicious proposals that may target treasury accounts normally controlled by the Ecosystem Assembly. A Treasury Watchdog proposal to prevent such a withdrawal must be undertaken before or during the hold up period of the malicious Ecosystem Assembly proposal.
 
 #### Usage Scenarios
-A major scenario involving the Treasury Watchdog is when the Ecosystem Assembly must be abandoned due to being compromised, a process known as "forking governance". This process is described in detail on the [Discussions and Proposals page](/docs/governance/proposals/#preventing-money-being-stolen-from-treasury-accounts). 
+A major scenario involving the Treasury Watchdog is when the Ecosystem Assembly must be abandoned due to being compromised, a process known as "forking governance". This process is described on the [Discussions and Proposals page](/docs/governance/proposals/#preventing-money-being-stolen-from-treasury-accounts). 
 
 Like all Neon DAO Assemblies, the Treasury Watchdog also allows for changing the voting parameters and permits users to monitor existing proposals by opting to receive notifications for new proposals and voting results.
 
@@ -103,22 +104,6 @@ Like all Neon DAO Assemblies, the Treasury Watchdog also allows for changing the
 The EVM Emergency Assembly is meant as a check on the Development Assembly, to make sure no malicious actors attempt to submit a malicious upgrade to the Neon EVM by taking advantage of the Development Assembly's decentralized nature. The EVM Emergency Assembly's main function is to prevent the Neon EVM being upgraded with malicious code. An EVM Emergency Assembly proposal to prevent such a withdrawal must be undertaken before or during the hold up period of the malicious Development Assembly proposal.
 
 #### Usage Scenarios
-A major scenario involving the EVM Emergency Assembly is when the Development Assembly must be abandoned due to being compromised, a process also known as "forking governance". This process is described in detail on the [Discussions and Proposals page](/docs/governance/proposals/#preventing-evm-being-updated-with-malicious-code). 
+A major scenario involving the EVM Emergency Assembly is when the Development Assembly must be abandoned due to being compromised, a process also known as "forking governance". This process is described on the [Discussions and Proposals page](/docs/governance/proposals/#preventing-evm-being-updated-with-malicious-code). 
 
 Like all Neon DAO Assemblies, the EVM Emergency Assembly also allows for changing the voting parameters and permits users to monitor existing proposals by opting to receive notifications for new proposals and voting results.
-
-## Neon DAO Parameters
-
-The parameters pertaining to the Neon DAO governance framework may be adjusted and voted on by the community. However, the governance parameters should be set to ensure that:
-
-1. All proposals the community is interested in will be approved in a reasonable timeframe
-2. Every participant must vote with less NEON tokens than the Assembly's acceptance threshold
-    * Similarly, owners of tokens exclusively from the IDO will not be able to block approval
-4. Ideally, voting should be accomplished without Neon Labs' involvement
-5. However, Neon Labs or its investors can block any malicious proposal
-    * Any malicious proposal can be blocked by any of top-4 main investors or Neon Labs
-6. To speed up the proposal approval process, the top-4 investors (Three Arrows Capital, Solana Ventures, Solana Foundation) may be involved in the process
-
-## Creation of New Assemblies
-
-A new Assembly within the Neon governance framework can be created only by users with more than 1 * 10^6 NEON tokens. 
