@@ -1,5 +1,5 @@
 ---
-title: "Option 2: Local Proxy to Local Solana"
+title: "Local Proxy to Local Solana"
 ---
 
 This option will let you connect to Solana via a proxy, when **both** are hosted locally. This option can be useful for developers that want to debug their Solidity contracts by hosting a proxy and a Solana node locally.
