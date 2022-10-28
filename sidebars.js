@@ -77,38 +77,20 @@ module.exports = {
       }, {
         type: 'category',
         label: 'Learn',
-        items: [{
-          type: 'category',
-          label: 'Architecture',
-          items: [
-            'architecture/neon_evm_arch',
-            'architecture/eth_sol_solution',
-            {
-              type: 'category',
-              label: 'Core Aspects',
-              items: ['architecture/core_aspects/account',
-                'architecture/core_aspects/block',
-                'architecture/core_aspects/gas',
-                'architecture/core_aspects/proof-of-stake',
-                'architecture/core_aspects/proof-of-work',
-                'architecture/core_aspects/transaction',
-                'architecture/core_aspects/web3']
-            },
-          ]
-        },
-        'evm_compatibility/json_rpc_api_methods',
-      // 'evm_compatibility/gas_metering',
-      'developing/precompiles',
-      {
-        type: 'category', label: 'FAQ', items: [
-          'faq/what-is-neon',
-          'faq/how-does-neon-work',
-          'faq/how-use-neon',
-          'faq/why-choose-neon',
-          'faq/how-run-neon-evm',
-          'faq/couldnt-find-answer',
-        ]
-      }
+        items: [
+          'architecture/neon_evm_arch',
+          'architecture/eth_sol_solution',
+          {
+            type: 'category',
+            label: 'Core Aspects',
+            items: ['architecture/core_aspects/account',
+              'architecture/core_aspects/block',
+              'architecture/core_aspects/gas',
+              'architecture/core_aspects/proof-of-stake',
+              'architecture/core_aspects/proof-of-work',
+              'architecture/core_aspects/transaction',
+              'architecture/core_aspects/web3']
+          },
         ]
       }
     ]
@@ -150,6 +132,9 @@ module.exports = {
     type: 'category',
     label: 'EVM Compatibility',
     items: [
+      'evm_compatibility/json_rpc_api_methods',
+      // 'evm_compatibility/gas_metering',
+      'developing/precompiles',
       {
         type: 'category',
         label: 'Architectural Limitations',
@@ -163,25 +148,17 @@ module.exports = {
         ]
       }
     ]
-  }, {
-    type: 'category',
-    label: 'Architecture',
-    items: [
-      'architecture/neon_evm_arch',
-      'architecture/eth_sol_solution',
-      {
-        type: 'category',
-        label: 'Core Aspects',
-        items: ['architecture/core_aspects/account',
-          'architecture/core_aspects/block',
-          'architecture/core_aspects/gas',
-          'architecture/core_aspects/proof-of-stake',
-          'architecture/core_aspects/proof-of-work',
-          'architecture/core_aspects/transaction',
-          'architecture/core_aspects/web3']
-      }
-    ]
   },
+  {
+    type: 'category', label: 'FAQ', items: [
+      'faq/what-is-neon',
+      'faq/how-does-neon-work',
+      'faq/how-use-neon',
+      'faq/why-choose-neon',
+      'faq/how-run-neon-evm',
+      'faq/couldnt-find-answer',
+    ]
+  }
   ]
 };
 

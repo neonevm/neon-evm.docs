@@ -1,5 +1,5 @@
 ---
-title: How to Use Hardhat
+title: Deploying with Hardhat
 ---
 
 *This page outlines the steps for deploying and testing contracts in the Neon EVM using the Hardhat tool.*

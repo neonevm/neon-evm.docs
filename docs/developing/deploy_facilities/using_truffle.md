@@ -1,5 +1,5 @@
 ---
-title: How to Use Truffle
+title: Deploying with Truffle
 ---
 
 *This page outlines the steps for deploying and testing contracts in the Neon EVM using the Truffle tool. Truffle can be useful for those involved in the development and maintenance of the Neon EVM.*

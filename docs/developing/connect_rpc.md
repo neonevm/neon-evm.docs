@@ -9,136 +9,44 @@ At the end of this tutorial, your network configuration should assure the follow
   * Solana working in test mode (recommended) and the proxy interacting with it through the Neon EVM.
 
 ### Step 1: Connect MetaMask to the Neon EVM Devnet
-There are two ways to connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster: using Chainlist.org or manually.
-
-#### Option A: Connect with Chainlist.org
 Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You should see `Neon EVM Devnet` and `Neon EVM MainNet`.
 
 Select `Neon EVM Devnet` and click `Connect Wallet`. A MetaMask pop-up window will show. Click `Next` and then `Connect`. You can now access the [Solana cluster](https://docs.solana.com/clusters) and carry out transactions.
 
-#### Option B: Connect Manually with MetaMask
-Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#setting-up-an-rpc-network).
-
 ### Step 2: Choosing a Remote Proxy
 Before sending a transaction to the Neon EVM, users should choose the operator that is optimal for them to perform the transaction. The operator is not chosen directly, but through the proxies they serve.
 
-The Neon EVM provides users with a table containing the [RPC](about/terminology.md#remote-procedure-call-rpc) URLs of all available proxies, each served by a separate operator. Each URL corresponds to the operator's public key, which it uses to sign and send a transaction to the Neon EVM.
-
-The RPC proxy table, shown below, has the following columns:
+A table of RPC proxies operated by Neon Labs, shown below, has the following columns:
   * `Network (Chain ID)` — the Solana network and its identifier; the network determines what RPC URL proxy can be used.
   * `Operator name` — the name of the operator providing the proxy.
   * `RPC URL` — the address for interacting with the required proxy.
-  * `Public key` — the public key granting access to a network; this is either a public key of an authorized Neon EVM operator, or a developer key used to access only the Testnet or Devnet.
 
 <table>
     <tr>
         <th >Network (Chain ID)</th>
         <th>Operator name</th>
         <th>RPC URL</th>
-        <th>Public key</th>
     </tr>
     <tr>
-        <th rowspan="3">Mainnet Beta (245022934)</th>
+        <th>Mainnet (245022934)</th>
         <td><a href="https://neon-labs.org">Neon Labs</a></td>
-        <td>https://proxy.mainnet.neonlabs.org/solana</td>
-        <td>-</td>
+        <td>https://mainnet.neonevm.org</td>
     </tr>
     <tr>
-        <td><a href="https://rpcpool.com/#/">RPC Pool</a></td>
-        <td>-</td>
-        <td>NeoQM3utcHGxhKT41Nq81g8t4xGcPNFpkAgYj1N2N8v</td>
+        <th>Devnet (245022926)</th>
+        <td><a href="https://neon-labs.org">Neon Labs</a></td> 
+        <td>https://devnet.neonevm.org</td>
     </tr>
     <tr>
-        <td><a href="https://rbf.capital/">Rockaway Blockchain Fund</a></td>
-        <td>https://neon-proxy.rbf.systems</td>
-        <td>Gw3Xiwve6HdvpJeQguhwT23cpK9nRjSy1NpNYCFY4XU9</td>
-    </tr>
-    <tr>
-        <th rowspan="20">Devnet (245022926)</th>
-        <td rowspan="12"><a href="https://neon-labs.org">Neon Labs</a></td> 
-        <td rowspan="12">https://proxy.devnet.neonlabs.org/solana</td>
-        <td>Fg4uzL4QDfL6x56YFUcJBJSK3PqV4yXoFmXzZQkxn2DK</td>
-    </tr>
-    <tr><td>8Uh8Rp1FWBiaDejyrZZhRY448oeG7GwKUyPDufP2Xxu7</td></tr>
-    <tr><td>6ndMCacBc69VXqgNbcW3BLk2am9oeUDZa6SgBjHozDPd</td></tr>
-    <tr><td>GEsnEWcKapTk7cgRoixBvCDc7yYuhmoMjpJ2v7mvmsBZ</td></tr>
-    <tr><td>G5397iLxoKKYgMkFfkYBhJYEtErD7ygz8APmH59H8FM6</td></tr>
-    <tr><td>rDeo4nZPE2aWpBkqFXBH8ygh1cD63nEKZPiDrpmQad6</td></tr>
-    <tr><td>8hipwtwcmRH3iypYModkYFNXYGUEbxvpfqRhxPxx5Amx</td></tr>
-    <tr><td>4fvtx2gJYJVd4o6CQt8Bdnc7dg5p2cgnb8oNUs7BGdd5</td></tr>
-    <tr><td>9EMY6Xx18hN39CnzM6D5y9vuPa3YJ5ttbWRPJp3SX1Qk</td></tr>
-    <tr><td>EMgay3kYFzHSh9PruAeRHxuGmNdsRQ6yPxzSAtU7PF7N</td></tr>
-    <tr><td>4s5hHKLrfF7mcjfgwsRKdkubnC2VtswGpR2XGTCJaz3M</td></tr>
-    <tr><td>F3V1pCfk1ZNk7Sdyh9N1H5eMtJq9XfhHR83fF8qa41Vt</td></tr>
-    <tr>
-        <td><a href="https://rpcpool.com/#/">RPC Pool</a></td>
-        <td>-</td>
-        <td>NeoQM3utcHGxhKT41Nq81g8t4xGcPNFpkAgYj1N2N8v</td>
-    </tr>
-    <tr>
-        <td><a href="https://p2p.org">P2P</a></td>
-        <td>http://neon-proxy-devnet.solana.p2p.org</td>
-        <td>D1apcJxXxAS63cpbTidxjXku7cW2ELQQU9szMQracDSY</td>
-    </tr>
-    <tr>
-        <td><a href="https://rbf.capital/">Rockaway Blockchain Fund</a></td>
-        <td>-</td>
-        <td>Gw3Xiwve6HdvpJeQguhwT23cpK9nRjSy1NpNYCFY4XU9</td>
-    </tr>
-    <tr>
-        <td><a href="https://brightlystake.com">Brightlystake</a></td>
-        <td>http://65.21.110.127:9090/solana</td>
-        <td>2GDfarSJnNC6ii5tQVE9rBH81Ny35LxrSCZ7tFhktSqi</td>
-    </tr>
-    <tr>
-        <td><a href="https://stakeservice.com">Stake Service</a></td>
-        <td>http://65.108.79.46:9090/solana</td>
-        <td>4Mh3ik4iS6MBxHy1VBN89vBiiPRDkebtnybDWnfTtpfC</td>
-    </tr>
-    <tr>
-        <td>Think Network</td>
-        <td>http://194.149.135.44:9090/solana</td>
-        <td>CyepBgaNezMJgLjy6Zyz9ECUia33dwDi9aXtRsZEhWX1</td>
-    </tr>
-    <tr>
-        <td>NodesCrew</td>
-        <td>http://51.222.40.26:9090/solana</td>
-        <td>HN4FeaSXB8t3FDW85hRw8mK1hYETJGeqhkkxJr6j2GiV</td>
-    </tr>
-    <tr>
-        <td><a href="https://dsrvlabs.com">DSRV</a></td>
-        <td>http://neon-devnet.allthatnode.com:9090/solana</td>
-        <td>5kKd1iy6onhCkzDq6DBw6woHLas3fy6HX4Yz8t1VPc1r</td>
-    </tr>
-    <tr>
-        <th rowspan="13">Testnet (245022940)</th>
-        <td rowspan="11"><a href="https://neon-labs.org">Neon Labs</a></td>
-        <td rowspan="11">https://proxy.testnet.neonlabs.org/solana</td>
-        <td>EJUKLLjBMhFnkonfn7wcThnHyDewmhVmG9sEuVP9cvF8</td>
-    </tr>
-    <tr><td>6ndMCacBc69VXqgNbcW3BLk2am9oeUDZa6SgBjHozDPd</td></tr>
-    <tr><td>GEsnEWcKapTk7cgRoixBvCDc7yYuhmoMjpJ2v7mvmsBZ</td></tr>
-    <tr><td>G5397iLxoKKYgMkFfkYBhJYEtErD7ygz8APmH59H8FM6</td></tr>
-    <tr><td>rDeo4nZPE2aWpBkqFXBH8ygh1cD63nEKZPiDrpmQad6</td></tr>
-    <tr><td>8hipwtwcmRH3iypYModkYFNXYGUEbxvpfqRhxPxx5Amx</td></tr>
-    <tr><td>4fvtx2gJYJVd4o6CQt8Bdnc7dg5p2cgnb8oNUs7BGdd5</td></tr>
-    <tr><td>9EMY6Xx18hN39CnzM6D5y9vuPa3YJ5ttbWRPJp3SX1Qk</td></tr>
-    <tr><td>EMgay3kYFzHSh9PruAeRHxuGmNdsRQ6yPxzSAtU7PF7N</td></tr>
-    <tr><td>4s5hHKLrfF7mcjfgwsRKdkubnC2VtswGpR2XGTCJaz3M</td></tr>
-    <tr><td>F3V1pCfk1ZNk7Sdyh9N1H5eMtJq9XfhHR83fF8qa41Vt</td></tr>
-    <tr>
-        <td><a href="https://rpcpool.com/#/">RPC Pool</a></td>
-        <td>-</td>
-        <td>NeoQM3utcHGxhKT41Nq81g8t4xGcPNFpkAgYj1N2N8v</td>
-    </tr>
-    <tr>
-        <td><a href="https://rbf.capital/">Rockaway Blockchain Fund</a></td>
-        <td>-</td>
-        <td>Gw3Xiwve6HdvpJeQguhwT23cpK9nRjSy1NpNYCFY4XU9</td>
+        <th>Testnet (245022940)</th>
+        <td><a href="https://neon-labs.org">Neon Labs</a></td>
+        <td>https://testnet.neonevm.org	</td>
     </tr>
 </table>
 
 The proxy interacts with one EVM loader, which can be deployed in different Solana chains. This interaction allows the proxy to be used on different networks (Testnet, Devnet, Mainnet Beta).
+
+For a complete table of the [RPC](about/terminology.md#remote-procedure-call-rpc) URLs of all available proxies, see [here](/docs/clusters/neon_proxy_rpc_endpoints/).
 
 ### Step 3: Connecting to a Proxy
 
@@ -148,3 +56,6 @@ To connect to a proxy using Remix, Truffle, or Hardhat, check out the following 
 * [Using Hardhat](developing/deploy_facilities/using_hardhat.md)
 
 Please note that, for Truffle and Hardhat, you need to configure the configuration file by setting the either the `HDWalletProvider` provider (for Truffle) or the URL and the `network_id`/`chainId` to the RPC URL (and ID) selected from the table above. This is described in detail in the relevant tutorial sections.
+
+## Connecting Manually with MetaMask
+The above steps demonstrate how to connect to the Solana Devnet cluster via Chainlist. Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#setting-up-an-rpc-network).
