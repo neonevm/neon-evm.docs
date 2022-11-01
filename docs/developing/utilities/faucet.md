@@ -16,7 +16,7 @@ Go to the [NeonFaucet page](https://neonfaucet.org/) to request test tokens.
 Connect your MetaMask wallet:
 - Click on the `CONNECT WALLET` button to authorize the connection in the MetaMask pop-up.
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/connect_wallet.png)
 
@@ -24,7 +24,7 @@ Connect your MetaMask wallet:
 
 - In the MetaMask pop-up window, select one or more accounts and click `Next`.
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/metamask_next.png)
 
@@ -32,7 +32,7 @@ Connect your MetaMask wallet:
 
 - Сlick on the `Connect` button to confirm your selection.
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/confirm_connection.png)
 
@@ -40,7 +40,7 @@ Connect your MetaMask wallet:
 
 - In the form that appears, select the token and enter the amount of tokens you would like to request, and then click on the `SEND TEST TOKENS` button.
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](./images/get_tokens.png)
 

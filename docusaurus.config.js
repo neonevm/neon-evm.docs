@@ -1,131 +1,183 @@
+// @ts-check
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
-module.exports = {
-
+/** @type {import('@docusaurus/types').Config} */
+const config = {
   title: 'Neon Docs',
   tagline: 'Neon EVM is an open source project implementing the Ethereum virtual machine on Solana.',
-  url: 'https://docs.neon-labs.org', // !!! Path to the docs main page
+  url: 'https://docs.neon-labs.org',
   baseUrl: '/',
-  onBrokenLinks: 'throw', // options: throw, warn
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
-  organizationName: 'neonlabsorg', // Usually your GitHub org/user name.
-  projectName: 'neon-evm.docs', // Usually your repo name.
-  themeConfig: {
-    image: 'img/og_image.png',
-    algolia: {
-      apiKey: 'b42bf0be9b7f964aa534f802164b53f8',
-      appId: "IMU5IHYKIJ",
-      indexName: 'neon-labs',
-      contextualSearch: true,
-      placeholder: 'search something...',
-      algoliaOptions: { 'facetFilters': ["type:$TYPE"] },
-      debug: false,
-      dropdown: true
+  organizationName: 'neonlabsorg',
+  projectName: 'neon-evm.docs',
+  headTags: [
+    // <link rel="preconnect" href="https://fonts.googleapis.com">
+    { tagName: 'link', attributes: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
+    // <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin>
+    {
+      tagName: 'link',
+      attributes: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'true' }
     },
-    metadata: [
-      {
-        name: 'docsearch:language',
-        content: 'en'
-      }, {
-        name: 'docsearch:version',
-        content: 'current'
-      }, {
-        name: 'docsearch:docusaurus_tag',
-        content: 'docs-default-current'
+    // <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    {
+      tagName: 'link',
+      attributes: {
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap',
+        rel: 'stylesheet'
       }
-    ],
-    navbar: {
-      title: 'Neon Docs',
-      logo: {
-        alt: 'Neon EVM',
-        src: 'img/logo.png',
+    }
+  ],
+  themeConfig:
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      algolia: {
+        apiKey: 'b42bf0be9b7f964aa534f802164b53f8',
+        appId: 'IMU5IHYKIJ',
+        indexName: 'neon-labs',
+        contextualSearch: true,
+        placeholder: 'search something...',
+        algoliaOptions: { 'facetFilters': ['type:$TYPE'] },
+        debug: false,
+        dropdown: true
       },
-      items: [
+      metadata: [
         {
-          label: 'Develop',
-          position: 'left',
-          to: 'docs/developing/getting_started',
-        },
-        {
-          label: 'Operate',
-          position: 'left',
-          to: 'docs/operating/operator_guide',
-        },
-        {
-          label: 'Learn',
-          position: 'left',
-          to: 'docs/architecture/neon_evm_arch',
-        },
-        {
-          href: 'https://github.com/neonlabsorg',
-          label: 'GitHub',
-          position: 'right',
-        },
+          name: 'docsearch:language',
+          content: 'en'
+        }, {
+          name: 'docsearch:version',
+          content: 'current'
+        }, {
+          name: 'docsearch:docusaurus_tag',
+          content: 'docs-default-current'
+        }
       ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Introduction',
-              to: '/docs/about/introduction',
-            },
-          ],
+      navbar: {
+        title: 'NeonDocs',
+        logo: {
+          alt: 'Neon EVM',
+          src: 'img/logo.svg'
         },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Discord',
-              href: 'https://discord.com/invite/d9BhxNWTsj', // OK
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/neonlabsorg', // OK
-            },
-          ],
+        items: [
+          {
+            label: 'Quick start',
+            position: 'left',
+            to: '/docs/quick_start'
+          },
+          {
+            label: 'Operate',
+            position: 'left',
+            to: '/docs/operating/operator_guide'
+          },
+          {
+            label: 'Learn',
+            position: 'left',
+            to: '/docs/architecture/neon_evm_arch'
+          }
+          /*{
+            href: 'https://github.com/neonlabsorg',
+            label: 'GitHub',
+            position: 'right',
+          },*/
+        ]
+      },
+      footer: {
+        logo: {
+          alt: 'Neon EVM',
+          src: 'img/logo.svg'
         },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'NeonLabs.org',
-              to: 'https://neon-labs.org', // new
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/neonlabsorg', // OK
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Neon Labs`, // OK
-    },
-    prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
-    },
-  },
+        links: [
+          {
+            title: 'Get started',
+            items: [{
+              label: '🏓 Quick start',
+              to: '/docs'
+            }, {
+              label: '🔑 Set up Wallet',
+              to: 'docs/wallet/metamask_setup'
+            }, {
+              label: '🛰 Tokens Transferring',
+              to: 'docs/token_transferring/neonpass_overview'
+            }, {
+              label: '💬 FAQ',
+              to: '/docs/faq/what-is-neon'
+            }]
+          },
+          {
+            title: 'Docs',
+            items: [
+              {
+                label: 'Introduction',
+                to: '/docs/about/introduction'
+              }
+            ]
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Discord',
+                href: 'https://discord.com/invite/d9BhxNWTsj' // OK
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/neonlabsorg' // OK
+              }
+            ]
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'NeonLabs.org',
+                to: 'https://neon-labs.org' // new
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/neonlabsorg' // OK
+              }
+            ]
+          }
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} Neon Labs` // OK
+      },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme
+      }
+    }),
+
   presets: [
     [
       '@docusaurus/preset-classic',
-      {
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
         gtag: {
           trackingID: 'G-Y5QG48111W'
         },
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars.js')
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      },
-    ],
+          customCss: require.resolve('./src/css/custom.css')
+        }
+      })
+    ]
   ],
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [{ from: '/', to: '/docs/quick_start' }],
+        createRedirects(existingPath) {
+          console.log(existingPath);
+        }
+      }
+    ]
+  ]
 };
+
+module.exports = config;

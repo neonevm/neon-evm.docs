@@ -19,7 +19,7 @@ A browser that supports MetaMask must be installed on your device. You can use *
 ### Step 1
 Go to the MetaMask [download page](https://metamask.io/download.html). From there, select any platform you use and follow the instructions to load and install MetaMask on your device's browser. (Fig. 1 shows an example of installing MetaMask on the Chrome browser.)  
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](./img/metamask-1.png)
 
@@ -30,7 +30,7 @@ Fig. 1 — Loading MetaMask
 ### Step 2
 MetaMask is essentially a plugin in the form of an extension to a browser. Therefore, MetaMask can be added to your browser as an extension. In the window, as shown in Fig. 2, click `Add extension`.  
 
-<div class='neon-img-width-300' style={{textAlign: 'center'}}>
+<div className='neon-img-width-300' style={{textAlign: 'center'}}>
 
 ![](./img/metamask-2.png)
 
@@ -72,7 +72,7 @@ Select `Neon EVM Devnet` and click `Connect Wallet`. A MetaMask pop-up window wi
 #### Option B: Manual Configuration
 In MetaMask browser extension's upper-right corner, click the red apple view element. Select "Settings" from the dropdown menu to connect to the proxy server (Fig. 3).  
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](./img/metamask-3.png)
 
@@ -91,7 +91,7 @@ The dropdown menu elements:
 ### Step 5
 Click `Settings` in the dropdown menu. A window with the settings menu for selecting a network should open (Fig. 4).  
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](img/metamask-4.png)
 
@@ -102,7 +102,7 @@ Fig. 4 — Choosing a network
 ### Step 6
 Add a Network (Fig. 5).  
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](img/metamask-5.png)
 
@@ -124,7 +124,7 @@ Fill in the fields on the next page (Fig. 6):
 
 The wallet settings depend on the values given for the options mentioned above.  
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](img/metamask-6.png)
 

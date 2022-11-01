@@ -59,7 +59,7 @@ To deploy your smart contract on an Ethereum test network.
 **Step 1**  
 Visit [Remix](https://remix.ethereum.org/) and create a new file.  
 
-<div class='neon-img-width-300' style={{textAlign: 'center'}}>
+<div className='neon-img-width-300' style={{textAlign: 'center'}}>
 
 ![](images/depl-contr-1.png)
 
@@ -68,7 +68,7 @@ Visit [Remix](https://remix.ethereum.org/) and create a new file.
 **Step 2**  
 On the upper left part of the Remix interface, add the new file and enter the file name you want. In the new file, paste your smart contract code.  
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](images/depl-contr-2.png)
 
@@ -77,7 +77,7 @@ On the upper left part of the Remix interface, add the new file and enter the fi
 **Step 3**  
 Navigate to the compile icon on the left-hand side and click `Compile`.  
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](images/depl-contr-3.png)
 
@@ -89,7 +89,7 @@ You can select the "Auto compile" option so the contract will always be compiled
 **Step 4**  
 Navigate to the deploy icon and go to the transactions screen:
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](images/depl-contr-4.png)
 
@@ -102,7 +102,7 @@ The `Javascript VM` of the current environment will appear at the top of the pag
 Click `Deploy`. Your contract will appear at the bottom.  
 Click the arrow on the left to expand it so you can see the content of your contract.  
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](images/depl-contr-5.png)
 
