@@ -4,31 +4,42 @@ title: Overview
 
 ## Quick Links
 
-
 * [Choosing an Assembly](/docs/governance/neon_daos/#focus-areas-overview)
   * [Ecosystem Focus Area](/docs/governance/neon_daos/#ecosystem-focus-area)
   * [Development Focus Area](/docs/governance/neon_daos/#development-focus-area)
   * [Security Focus Area](/docs/governance/neon_daos/#security-focus-area)
-* [Discussing Ideas](/docs/governance/proposals/#dao-forum)
+* [Discussing on the DAO Forum](/docs/governance/proposals/#discussing-on-the-dao-forum)
 * [Creating a Proposal](/docs/governance/proposals/#creating-a-proposal)
 * [Voting](/docs/governance/proposals/#voting)
 * Use Cases
-  * [Transfer Money](/docs/governance/neon_daos/#usage-scenarios)
+  * [Transfer Funds](/docs/governance/neon_daos/#usage-scenarios)
   * [Update EVM](/docs/governance/neon_daos/#usage-scenarios-1)
-
 
 ## The Neon DAO
 
-The Neon DAO is the name given to Neon's community governance structure. It is a collection of organizations that allow Neon community stakeholders to:
-  * Reach consensus on solving issues that cannot be fully covered by software algorithms
-  * Develop rules for the functioning of the Neon DAO, and record and store these rules on the blockchain
-  * Change the governance rules themselves through contractual amendments
+The Neon DAO is a collection of community-led, community-driven organizations thatb foster and enhance decentralization, resilence, and self-sustainability for the Neon EVM platform and ecosystem. To do so, community members reach consensus on solving issues, develop rules for the functioning of the Neon DAO, and change the governance rules themselves through contractual amendments, if applicable.
 
-As the body that represents the Neon community's decisions on key issues, its conclusions are binding on the Neon team, which promptly implements the desired changes.
+The Neon DAO's Assemblies are built using [SPL Governance](https://github.com/solana-labs/solana-program-library/tree/master/governance), a versatile DAO creation tool for the Solana blockchain.
+
+## Voting Process Overview
+
+1. Any DAO participant may bring their ideas to the community via the Neon Forum on Discord. These ideas will be discussed on Discord and evaluated by the community to gauge whether there is enough will and consensus to effect changes to kick off the next stage. This stage can be considered as an **off-chain** governance voting. 
+2. If there is enough consensus for the idea to be discussed further, a DAO participant then creates an official proposal on Neon DAO. This is now on-chain governance territory, and the components for it are implemented on Solana.  
+3. Once the proposal has been made, DAO participants may temporarily lock up their NEON tokens and receive their respective voting rights to vote on the proposal. DAO participants vote on this proposal during a pre-defined voting period
+   * 1 NEON token = 1 vote
+   * A proposal is accepted if
+     1. The number of **"Yes"** votes exceeds a pre-determined threshold amount, x % (i.e., more than x % of all NEON token holders have voted "Yes" and
+     2. The number of **"Yes"** votes exceeds the number of **"No"** votes
+   * Otherwise, the proposal is rejected 
+4. Any DAO member can execute transactions in approved proposal during the **hold-up period**, which is the minimum time required to elapse before an approved proposal may be executed.
+
+All Neon DAO parameters, such as the pass threshold to accept a proposal, voting period, hold-up period, and the minimum token amount required to create a proposal, can be found in the Neon Governance UI.
+
+Learn more about the [voting process](/docs/governance/proposals/proposals.md).
 
 ## Neon DAO Organization
 
-Neon is decentralized and its economy is fee-based, with NEON tokens being used for governance purposes. Following the same philosophy, the Neon DAO is itself handled by a decentralized protocol with a clear and user-friendly process for proposing and voting for protocol improvements. It is organized as a series of decentralized Assemblies that are each responsible for a different aspect of the decisionmaking process. These Assemblies are grouped into the following three Focus Areas:
+Neon is decentralized and its economy is fee-based, with NEON tokens being used for governance purposes. Following the same philosophy, the Neon DAO is itself handled by a decentralized protocol with a clear and user-friendly process for proposing and voting for protocol improvements. It is organized as a series of decentralized **Assemblies** that are each responsible for a different aspect of the decisionmaking process. These Assemblies are grouped into the following three **Focus Areas**:
 
 ### Ecosystem Focus Area
 
