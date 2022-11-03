@@ -88,3 +88,16 @@ article {
 .menu__link {
   border-radius: 8px;
 }
+
+.sidebar-menu-title {
+  color: var(--ifm-color-primary);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.sidebar-menu-divider {
+  height: 50px;
+}

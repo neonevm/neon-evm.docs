@@ -77,7 +77,7 @@ The purpose of Governance UI is to:
 ### Posting an Article on the Neon Forum
 The first thing to do is to go to the [Neon forum](https://forum.neon-labs.org) and post an article describing your proposal. If you are not yet registered, you must do so. Then click `New Topic` and put your content in the pop-up window.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](./img/govern-ui-1.png)
 
@@ -87,7 +87,7 @@ The topic of your proposal should concern Neon EVM governance. Proposal content 
 
 Here is an example of the article "Execute new proposal" published on the forum:
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](./img/govern-ui-2.png)
 
@@ -104,7 +104,7 @@ The proposal should match the recommended template and contain the following fie
 
 Once the proposal is registered in Governance UI, a new line with data about it will appear in the list of [Governance Proposals](https://governance.neon-labs.org).
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](./img/govern-ui-3.png)
 
@@ -115,7 +115,7 @@ The page [Governance Proposals](https://governance.neon-labs.org) contains the l
 
 As an example, the following figure shows the page containing detailed information about the "Execute new proposal" with the status `Voting`.
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](./img/govern-ui-4.png)
 
@@ -151,7 +151,7 @@ If you are a stakeholder and you are allowed to vote, you should be here. Others
 
 You should first open the list of proposals to view their current status, and select the proposal with `Voting` that you wish to vote on or view. The voting progress page will open.
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](./img/govern-ui-5.png)
 
@@ -159,7 +159,7 @@ You should first open the list of proposals to view their current status, and se
 
 Then you should click `See in forum` to view the content of the proposal. To vote on the proposal, you must click `Cast your vote`. A pop-up box will appear.
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](./img/govern-ui-6.png)
 
