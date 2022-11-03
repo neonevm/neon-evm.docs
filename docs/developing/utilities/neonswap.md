@@ -32,7 +32,7 @@ As an example, this tutorial outlines an exchange of ETH tokens to USDT tokens.
 ### Step 1: Open the NeonSwap application and connect your wallet
 Go to the [NeonSwap](https://neonswap.live/) page to call the NeonSwap application. Before you can make a swap, you need to connect your wallet. Click `Connect Wallet` on the swap screen.
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](images/swap-erc20-1.png)
 
@@ -46,7 +46,7 @@ After connecting your wallet, you can begin setting up the exchange. You need to
 
 Click `Select a token` to open up a menu where you can select a token to exchange for.
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](images/swap-erc20-2.png)
 
@@ -57,7 +57,7 @@ The `Select a token` menu contains tokens deployed in the Neon EVM. If the token
 
 If you want to add a new token to the list, click `Manage` at the bottom of the box. The `Manage` tab will open on the screen. Add the address of the new token deployed in the Neon EVM network and click `Import`. (You can take a token's address from the [token-list](https://github.com/neonlabsorg/token-list/).)
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](images/swap-erc20-3.png)
 
@@ -75,7 +75,7 @@ If there are not enough tokens in the pool to exchange, NeonSwap will warn you b
 
 In our case, we want to exchange ETH tokens for USDT tokens. Let's specify the number of tokens to be exchanged as 10. Neon Swap will indicate the expected number of purchased USDT tokens, corresponding to 2.49176 at the exchange rate before our transaction.
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](images/swap-erc20-4.png)
 
@@ -94,7 +94,7 @@ Once you are ready to perform the exchange click `Swap`. A confirmation window w
 
 The request will open up a MetaMask window where you can confirm the transaction. You can see an estimate of how much gas you will pay. Click `Confirm` to send the transaction.
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](images/swap-erc20-5.png)
 
@@ -102,7 +102,7 @@ The request will open up a MetaMask window where you can confirm the transaction
 
 You can also check the result of the trade in the NeonSwap window. Click `Close` to complete the transaction.
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](images/swap-erc20-6.png)
 
@@ -110,7 +110,7 @@ You can also check the result of the trade in the NeonSwap window. Click `Close`
 
 Now you can open MetaMask, as well as the list of tokens, by clicking `Select a token` to make sure that the balances of tokens have changed to the expected values.
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](images/swap-erc20-7.png)
 
@@ -122,7 +122,7 @@ The transaction is complete, which means you have successfully swapped your ETH 
 
 Click the cogwheel icon. The window `Transaction Settings` will pop up on the screen to set up the advanced swap:
 
-<div class='neon-img-width-600' style={{textAlign: 'center'}}>
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
 ![](images/swap-erc20-8.png)
 

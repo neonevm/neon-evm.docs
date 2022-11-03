@@ -121,7 +121,7 @@ docker logs -f proxy
 
 Set up the "MetaMask" Chromium extension to connect to the proxy via Custom RPC at `http://localhost:9090/solana`. The following image describes how to set up the local Solana connection:  
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>  
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>  
 
 ![](../img/cluster-install-1.png)
 
@@ -131,7 +131,7 @@ Note: Once you create or import a new account in MetaMask, some NEON tokens will
 
 Open Remix (also in Chromium) and select `Injected Web3` environment. You can deploy EVM-wrapped smart contracts on Solana and input these instructions:  
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>  
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>  
 
 ![](../img/cluster-install-2.png)
 

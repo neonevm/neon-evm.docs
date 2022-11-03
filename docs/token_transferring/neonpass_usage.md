@@ -27,7 +27,7 @@ Transferring tokens using NeonPass occurs in three stages:
 
 Go to the [NeonPass](https://neonpass.live/) page in the browser to which the Phantom and MetaMask wallets are attached. Make sure that the icons of these wallets are displayed at the top right. By default, the direction of transferring tokens is set from `Solana` to `Neon`. If this is not the case, you have to click on the arrow icon to reverse the forwarding direction.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](img/transfer-spl-1.png)
 
@@ -35,7 +35,7 @@ Go to the [NeonPass](https://neonpass.live/) page in the browser to which the Ph
 
 Click `Connect Wallet` to connect your MetaMask wallet to the NeonPass app. The MetaMask window should pop up on the screen. Follow the login procedure to your wallet and make sure it is connected to Devnet. Also, make sure you have enough USDT tokens in your account to transfer (there are 987.9 USDT in our example) and have a non-zero NEON balance to pay the withdrawal approval fee. Upon successful connection of the MetaMask wallet to NeonPass and access to your account balance, the inscription `Connect Wallet` will change to the public key of your account in the Neon EVM.
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](img/transfer-spl-2.png)
 
@@ -43,7 +43,7 @@ Click `Connect Wallet` to connect your MetaMask wallet to the NeonPass app. The 
 
 On the NeonPass screen, click `Select a token`. In the list that appears, select the desired token symbol and specify the quantity to be sent. (In our example, it is 5 USDT.)
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](img/transfer-spl-3.png)
 
@@ -55,7 +55,7 @@ Click `Next` to continue the token transfer procedure and proceed to the Target 
 
 The `Target` windows will appear on the NeonPass screen. Click `Select Wallet` to connect your Phantom wallet to NeonPass.
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](img/transfer-spl-4.png)
 
@@ -65,7 +65,7 @@ The Phantom window should pop up on the screen. Follow the login procedure to yo
 
 Upon successful connection of the Phantom wallet to NeonPass and access to your account balance, the inscription `Select Wallet` will change to the public key of your account in Solana. This means that a user authorizes NeonPass to use this key to sign transactions. Phantom stores sets of account keys, but does not store any balances. To obtain balances, Phantom will refer to the Solana blockchain.
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](img/transfer-spl-5.png)
 
@@ -77,7 +77,7 @@ Click `Next` to continue the token transfer procedure and proceed to the Confirm
 
 Read the details of the upcoming transfer of tokens and click `Confirm`.
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](img/transfer-spl-6.png)
 
@@ -85,7 +85,7 @@ Read the details of the upcoming transfer of tokens and click `Confirm`.
 
 The MetaMask window will pop up on the NeonPass screen with the amount of fee charged for using gas in Neon EVM. The fee is paid in NEON tokens. If you agree with these terms, click `Confirm`. The transaction will be signed automatically with the public key of your Neon EVM account.
 
-<div class='neon-img-box-300' style={{textAlign: 'center'}}>
+<div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
 ![](img/transfer-spl-7.png)
 
@@ -93,7 +93,7 @@ The MetaMask window will pop up on the NeonPass screen with the amount of fee ch
 
 You should also approve the transaction in the Phantom window, which will display the amount transferred and fee charged in SOL tokens. The transaction will be signed automatically with the public key of your Solana account.
 
-<div class='neon-img-width-300' style={{textAlign: 'center'}}>
+<div className='neon-img-width-300' style={{textAlign: 'center'}}>
 
 ![](img/transfer-spl-8.png)
 
@@ -101,7 +101,7 @@ You should also approve the transaction in the Phantom window, which will displa
 
 You should receive a notification that the token transfer was successful. Open the `View on Solana Explorer` page to see the results of transferring funds using NeonPass.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](img/transfer-spl-9.png)
 
@@ -109,7 +109,7 @@ You should receive a notification that the token transfer was successful. Open t
 
 The `Token Balance Change` tab shows the change in balances upon completion of the procedure.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](img/transfer-spl-10.png)
 

@@ -1,5 +1,5 @@
 ---
-title: "Option 3: Local Proxy to Remote Solana"
+title: "Local Proxy to Remote Solana"
 ---
 
 ## Prerequisites

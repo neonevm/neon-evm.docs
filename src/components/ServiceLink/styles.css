@@ -1,0 +1,32 @@
+.service-link {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.service-link-icon {
+  width: 64px;
+}
+
+.service-link-content {
+  margin-left: 16px;
+}
+
+.service-link-content h4 {
+  margin-bottom: 0;
+}
+
+.service-link-content p {
+  color: var(--ifm-menu-color);
+  margin-bottom: 0;
+}
+
+.service-link-href {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}

@@ -1,0 +1,43 @@
+.form-feedback {
+  padding: 27px 30px;
+  border-radius: 8px;
+  background: var(--ifm-footer-background-color);
+}
+
+.form-feedback h3 {
+  margin-bottom: 16px;
+}
+
+.form-feedback label {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.form-feedback textarea {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 16px;
+  display: block;
+  border: none;
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color);
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 80px;
+  max-height: 250px;
+  padding: 10px;
+}
+
+.form-feedback button {
+  font-size: 16px;
+  line-height: 1px;
+  color: white;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 8px;
+  padding: 10px 30px;
+  height: 40px;
+}

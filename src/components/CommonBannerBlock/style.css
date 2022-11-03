@@ -1,0 +1,27 @@
+.common-banner {
+  display: flex;
+  padding: 25px 40px;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.common-banner p {
+  margin-bottom: 0;
+}
+
+[data-theme='dark'] .common-banner p {
+  color: #000;
+}
+
+.image {
+  margin-bottom: 20px;
+}
+
+.image img {
+  margin-bottom: 0;
+  vertical-align: top;
+}

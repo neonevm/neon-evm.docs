@@ -15,7 +15,7 @@ To connect Metamask to Solana's network via the Neon EVM.
 Open the https://chainlist.org/ web page. In the `Search Networks` field, type the NEON token symbol.
 The search will select three Neon EVM networks with their corresponding ChainIDs in which this token can be circulated.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](images/connect-metamask-1.png)
 
@@ -24,7 +24,7 @@ The search will select three Neon EVM networks with their corresponding ChainIDs
 ### Step 2
 In the upper right corner, click `Connect Wallet`. This field should display the address of your MetaMask wallet, which is accessible from your browser.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](images/connect-metamask-2.png)
 
@@ -35,7 +35,7 @@ Select the Neon EVM network to which you are going to connect your wallet to per
 
 Check that the data in the MetaMask fields that correspond to the network you need. Click `Approve` to complete the MetaMask connection to the Neon EVM network.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](images/connect-metamask-3.png)
 
@@ -44,7 +44,7 @@ Check that the data in the MetaMask fields that correspond to the network you ne
 The MetaMask window will display a list of your accounts. (In our case, this will be "Account 1".)
 
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](images/connect-metamask-4.png)
 
@@ -55,7 +55,7 @@ You can start performing all operations inherent in your wallet, including creat
 ### Step 4
 If you want to switch MetaMask to another network, you need to click `Add To MetaMask` on the new network and click `Switch network` in the MetaMask window.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](images/connect-metamask-5.png)
 
@@ -64,7 +64,7 @@ If you want to switch MetaMask to another network, you need to click `Add To Met
 ### Step 5
 You can close the browser window and reopen it at any time. Don't worry, your MetaMask will keep access to the connected network. To return to the Neon EVM network session, simply open the browser to which your wallet is attached and click on the MetaMask icon in the upper right corner.
 
-<div class='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
 ![](images/connect-metamask-6.png)
 
