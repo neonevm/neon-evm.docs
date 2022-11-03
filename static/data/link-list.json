@@ -1,0 +1,74 @@
+[
+  {
+    "id": 0,
+    "title": "Build dApps",
+    "items": [
+      {
+        "id": 0,
+        "icon": "/icons/rpc.svg",
+        "title": "Connect to Neon RPC",
+        "description": "Start building right now"
+      },
+      {
+        "id": 1,
+        "icon": "/icons/config.svg",
+        "title": "Configure & use devtools",
+        "description": "Hardhat, Truffle"
+      },
+      {
+        "id": 2,
+        "icon": "/icons/token.svg",
+        "title": "Get test tokens",
+        "description": "Airdrop test tokens"
+      },
+      {
+        "id": 3,
+        "icon": "/icons/daps.svg",
+        "title": "Deploy dApps",
+        "description": "Using Hardhat, Truffle, Remix"
+      },
+      {
+        "id": 4,
+        "icon": "/icons/sol.svg",
+        "title": "Use Solana native tokens",
+        "description": "Get access to Solana liquidity"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Use Tools",
+    "items": [
+      {
+        "id": 0,
+        "icon": "/icons/metamask.svg",
+        "title": "Metamask",
+        "description": "Connect to Neon network"
+      },
+      {
+        "id": 1,
+        "icon": "/icons/explorer.svg",
+        "title": "Block Explorer",
+        "description": "Check transaction status"
+      },
+      {
+        "id": 2,
+        "icon": "/icons/neonpass.svg",
+        "title": "NeonPass",
+        "description": "Transfer tokens Solana <> Neon"
+      },
+      {
+        "id": 3,
+        "icon": "/icons/faucet.svg",
+        "title": "NeonFaucet",
+        "description": "Airdrop test tokens"
+      },
+      {
+        "id": 4,
+        "icon": "/icons/indexing.svg",
+        "title": "Indexing Dashboard",
+        "description": "Analyze deployed contracts"
+      }
+    ]
+  }
+]
