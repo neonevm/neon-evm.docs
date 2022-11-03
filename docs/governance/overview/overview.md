@@ -2,22 +2,9 @@
 title: Overview
 ---
 
-## Quick Links
-
-* [Choosing an Assembly](/docs/governance/neon_daos/#focus-areas-overview)
-  * [Ecosystem Focus Area](/docs/governance/neon_daos/#ecosystem-focus-area)
-  * [Development Focus Area](/docs/governance/neon_daos/#development-focus-area)
-  * [Security Focus Area](/docs/governance/neon_daos/#security-focus-area)
-* [Discussing on the DAO Forum](/docs/governance/proposals/#discussing-on-the-dao-forum)
-* [Creating a Proposal](/docs/governance/proposals/#creating-a-proposal)
-* [Voting](/docs/governance/proposals/#voting)
-* Use Cases
-  * [Transfer Funds](/docs/governance/neon_daos/#usage-scenarios)
-  * [Update EVM](/docs/governance/neon_daos/#usage-scenarios-1)
-
 ## The Neon DAO
 
-The Neon DAO is a collection of community-led, community-driven organizations thatb foster and enhance decentralization, resilence, and self-sustainability for the Neon EVM platform and ecosystem. To do so, community members reach consensus on solving issues, develop rules for the functioning of the Neon DAO, and change the governance rules themselves through contractual amendments, if applicable.
+The Neon DAO is a collection of community-led, community-driven organizations that foster and enhance decentralization, resilence, and self-sustainability for the Neon EVM platform and ecosystem. To do so, community members reach consensus on solving issues, develop rules for the functioning of the Neon DAO, and change the governance rules themselves through contractual amendments, if applicable.
 
 The Neon DAO's Assemblies are built using [SPL Governance](https://github.com/solana-labs/solana-program-library/tree/master/governance), a versatile DAO creation tool for the Solana blockchain.
 
@@ -54,15 +41,3 @@ The [Development Focus Area](/docs/governance/neon_daos/#development-focus-area)
 The [Security Focus Area](/docs/governance/neon_daos/#security-focus-area) contains the Assemblies responsible for monitoring activity in the other two Focus Areas to stop malicious actors attempting to exploit the Neon DAO. A use case example involving this Focus Area is [preventing the Neon EVM being updated with malicious code](/docs/governance/proposals/#preventing-evm-being-updated-with-malicious-code).
 
 For more details on Neon's Assemblies and the differences and interactions between them, see the [NEON Assemblies section](/docs/governance/neon_daos/).
-
-## Quick Reference / Cheat Sheet
-Below is a table of different proposal types that can be submitted to different Assemblies, and what they affect:
-
-Assembly Name | Object of Proposal | Proposal Type
-:-|:-|:-
-Ecosystem Assembly | Treasury Accounts | Transferring tokens to accounts, including:<br />- Allocating budgets for the Grants Assembly and Bug Bounty Committee<br />- Rewards for community members
-Ecosystem Foundation | Transaction Fees | - Changing transaction fees on Neon version upgrades<br />- Upgrading EVM to approved versions<br />- Adding/removing Emergency Engineers<br />- Revoking upgrade authority from the "EVM Maintenance" contract  
-Treasury Watchdog | Ecosystem Assembly | - Preventing hostile proposals on the Ecosystem Assembly
-Development Assembly | EVM Maintenance contract | - Approving EVM  
-EVM Emergency Assembly | Development Assembly | - Preventing hostile proposals on the Development Assembly
-All Assemblies | Governance | - Updating the Assembly's own Governance contract<br />- Changing its own voting parameters
