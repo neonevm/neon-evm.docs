@@ -1,5 +1,5 @@
 ---
-title: Using ERC-20 Tokens
+title: ERC-20 Token List
 ---
 
 When performing operations on tokens in the Neon EVM, it is important to know which token symbol or address can be used. Having a list of possible tokens available, you can easily navigate when choosing the token you need.
