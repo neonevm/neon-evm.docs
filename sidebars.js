@@ -21,9 +21,14 @@ const sidebars = {
       id: 'quick_start'
     },
     {
-      type: 'doc',
+      type: 'category',
       label: '🧬 Neon EVM Overview',
-      id: 'architecture/neon_evm_arch'
+      items:
+        [
+          'about/why_neon',
+          'about/neon_ecosystem',
+          'about/how_it_works',
+        ]
     },
     {
       type: 'doc',
