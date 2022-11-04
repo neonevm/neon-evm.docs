@@ -63,7 +63,7 @@ const config = {
         },
         items: [
           {
-            label: 'Quick start',
+            label: 'Quick Start',
             position: 'left',
             to: '/docs/quick_start'
           },
@@ -93,10 +93,10 @@ const config = {
           {
             title: 'Get started',
             items: [
-              { label: '🏓 Quick start', to: '/docs/quick_start' },
+              { label: '🏓 Quick Start', to: '/docs/quick_start' },
               { label: '🧬 Neon EVM Overview', to: '/docs/architecture/neon_evm_arch' },
               { label: '🔑 Set up Wallet', to: '/docs/wallet/metamask_setup' },
-              { label: '🛰 Tokens Transferring', to: '/docs/token_transferring/neonpass_overview' },
+              { label: '🛰 Transfer Tokens', to: '/docs/token_transferring/neonpass_overview' },
               { label: '💬 FAQ', to: '/docs/faq/what-is-neon' }
             ]
           },

@@ -1,5 +1,5 @@
 ---
-title: Quick start
+title: Quick Start
 ---
 import {QuickStartList} from '@site/src/components/QuickStartList'
 import {CommonBannerBlock} from '@site/src/components/CommonBannerBlock'
