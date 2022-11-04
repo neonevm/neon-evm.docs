@@ -1,5 +1,5 @@
 ---
-title: Integrating Pyth
+title: Integrate Pyth
 ---
 
 ## Introduction
@@ -30,7 +30,7 @@ contract ExampleContract {
 
         return pyth.getCurrentPrice(priceID);
     }
-    
+
 }
 ```
 
