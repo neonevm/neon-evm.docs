@@ -12,7 +12,7 @@ Since the results depend on Neon's stability, a high level of coordination must 
 
 The Neon DAO model is based on the interplay and synergy of several decentralized Assemblies, organized into three Focus Areas. In a nutshell, Assemblies are member-owned communities that serve as safe and effective venues for like-minded indivuals to constructively work together and engage in collective decision-making. While each Assembly has different criteria for submitting proposals, eligibility for voting, and the scope of influence its decisions can have, they all follow the same basic formula as described in the [Voting Process Overview](/docs/governance/overview/#voting-process-overview).
 
-* An idea for potential implementation is brought to an Assembly within a Focus Area.
+* An idea for potential implementation is posted on the [Neon Forum](https://forum.neon-labs.org/), to the attention of the relevant Assembly/Assemblies.
 * Assembly participants discuss, review, and revise the proposed idea off-chain.
 * If a prelimiary consensus has been reached, the idea is fleshed out and finalized into a proposal, which includes instructions to automatically implement the desired changes.
 * The proposal is taken to a simple "Yes"/"No" vote, and eligible voters cast votes (in the form of NEON tokens) for their preferred option, with 1 NEON being equivalent to one vote.

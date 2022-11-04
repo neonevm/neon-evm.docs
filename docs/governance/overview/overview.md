@@ -10,7 +10,7 @@ The Neon DAO's Assemblies are built using [SPL Governance](https://github.com/so
 
 ## Voting Process Overview
 
-1. Any DAO participant may bring their ideas to the community via the Neon Forum on Discord. These ideas will be discussed on Discord and evaluated by the community to gauge whether there is enough will and consensus to effect changes to kick off the next stage. This stage can be considered as an **off-chain** governance voting. 
+1. Any DAO participant may bring their ideas to the community via the [Neon Forum](https://forum.neon-labs.org/). These ideas will be discussed on the Forum and evaluated by the community to gauge whether there is enough will and consensus to effect changes to kick off the next stage. This stage can be considered as an **off-chain** governance voting. 
 2. If there is enough consensus for the idea to be discussed further, a DAO participant then creates an official proposal on Neon DAO. This is now on-chain governance territory, and the components for it are implemented on Solana.  
 3. Once the proposal has been made, DAO participants may temporarily lock up their NEON tokens and receive their respective voting rights to vote on the proposal. DAO participants vote on this proposal during a pre-defined voting period
    * 1 NEON token = 1 vote
