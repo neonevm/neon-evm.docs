@@ -15,9 +15,9 @@ The Neon DAO's Assemblies are built using [SPL Governance](https://github.com/so
 3. Once the proposal has been made, DAO participants may temporarily lock up their NEON tokens and receive their respective voting rights to vote on the proposal. DAO participants vote on this proposal during a pre-defined voting period
    * 1 NEON token = 1 vote
    * A proposal is accepted if
-     1. The number of **"Yes"** votes exceeds a pre-determined threshold amount, x % (i.e., more than x % of all NEON token holders have voted "Yes" and
+     1. The number of **"Yes"** votes exceeds a pre-determined threshold amount, and
      2. The number of **"Yes"** votes exceeds the number of **"No"** votes
-   * Otherwise, the proposal is rejected 
+   * Otherwise, the proposal is rejected
 4. Any DAO member can execute transactions in approved proposal during the **hold-up period**, which is the minimum time required to elapse before an approved proposal may be executed.
 
 All Neon DAO parameters, such as the pass threshold to accept a proposal, voting period, hold-up period, and the minimum token amount required to create a proposal, can be found in the Neon Governance UI.

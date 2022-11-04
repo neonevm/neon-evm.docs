@@ -1,5 +1,5 @@
 ---
-title: Transferring SPL Tokens
+title: Transfer Solana Tokens
 ---
 
 ## Overview

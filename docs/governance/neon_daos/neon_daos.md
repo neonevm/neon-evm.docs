@@ -30,22 +30,20 @@ The following is a diagram visualizing the relationships between the Neon DAO's 
 
 The parameters pertaining to the Neon DAO governance framework may be adjusted and voted on by the community. These parameters can be found on the Governance UI.
 
-## Ecosystem Focus Area
-
-![](img/focus_areas.png)
+## Ecosystem
 
 The Ecosystem Focus Area is charged with the promotion of sustainable, long-term growth of the Neon ecosystem. As the collective owner of the Neon Treasury, its duties and responsibilties consist of distribution of funds for grants, security audits, bug bounties, and other ecosystem initiatives.
 
-Within the Ecosystem Focus Area, the Ecosystem Assembly and Foundation work in collaboration to provide a frictionless experience for Ecosystem developers. The Ecosystem Assembly provides custodial services to the Foundation: it holds tokens in the Treasury (including the NEON token itself) and distributes funds in accordance with the Assembly's decisions. This is done under the supervision of the Ecosystem Foundation, which assumes the role of an agent for the Ecosystem Assembly.
+Within the Ecosystem Focus Area, the Ecosystem Assembly and Foundation work in collaboration to provide a frictionless experience for Ecosystem developers. The Ecosystem Assembly provides custodial services to the Foundation: it holds tokens in the Treasury (including the NEON token itself) and distributes funds in accordance with the Assembly's decisions. This is done under the supervision of the Foundation, which assumes the role of an agent for the Ecosystem Assembly.
 
 A typical scenario, funding an ecosystem initiative, would have the proponent proceed as follows:
 1. During the off-chain stage, the Assembly discusses and evaluates the proper incentives to provide for the initiative in question.
 2. Create a proposal to
    * Transfer the agreed-upon funds from the Neon Treasury to the Grants Budget
-   * Delegate an allocation of the Grants Budget to be used by the Ecosystem Foundation
+   * Delegate an allocation of the Grants Budget to be used by the Foundation
 3. The proposal is voted on and, if approved, leads to the transfer of funds to the Grants Budget.
-4. Once the applicant team has been vetted by the Ecosystem Foundation, the proponent would create a proposal to compensate the applicant for their work.
-5. The proposal is voted on and, if approved, leads to the transfer of funds from the Grants Budget to the applicant's desired accounts, pursuant to the agreements signed between them and the Ecosystem Foundation.
+4. Once the applicant team has been vetted by the Foundation, the proponent would create a proposal to compensate the applicant for their work.
+5. The proposal is voted on and, if approved, leads to the transfer of funds from the Grants Budget to the applicant's desired accounts, pursuant to the agreements signed between them and the Foundation.
 
 ### Ecosystem Assembly
 
@@ -58,31 +56,21 @@ Most Ecosystem Assembly proposals deal with the matter of distributing tokens fr
 * Funding white-hat hackers via the Bug Bounty Budget
 * Funding security audits via the Security Audit Budget
 
-A typical scenario, funding an ecosystem initiative, would have the proponent proceed as follows:
-1. Off-chain, discuss and evaluate the proper incentives to provide for the initiative.
-2. Create a proposal to transfer the agreed-upon funds from the Neon Treasury to the Grants Budget.
-3. The proposal is voted on and, if approved, leads to the transfer of funds to the Grants Budget.
-4. Projects and teams do eligible work and negotiates with the Ecosystem Foundation for approval and funding.
-5. Once the applicant team is vetted by the Ecosystem Foundation, the proponent would create a proposal to recompense the applicant for their work.
-5. The proposal is voted on and, if approved, leads to the transfer of funds from the Grants Budget to the applicant's desired accounts, pursuant to the agreements signed between them and the Ecosystem Foundation.
-
-Like all Neon DAO Assemblies, the Ecosystem Assembly also allows for changing the voting parameters and permits users to monitor existing proposals by opting to receive notifications for new proposals and voting results.
-
-### Ecosystem Foundation
-The Ecosystem Foundation is a organization that acts as the Ecosystem Assembly's agent. As the Assembly's agent, the Foundation is responsible for required to implement Ecosystem Assembly proposals that cannot be done automatically. These responsibilities include:
+### Neon Foundation
+The Neon Foundation is a organization that acts as the Ecosystem Assembly's agent. As the Assembly's agent, the Foundation is responsible for required to implement Ecosystem Assembly proposals that cannot be done automatically. These responsibilities include:
 * Performing necessary Know-Your-Customer (KYC) and Anti-Money Laundering (AML) processes for contractors and grantees
 * Signing agreements with contractors on behalf of the Ecosystem Assembly
-* Process signed agreements with regards to acceptance and payments 
+* Process signed agreements with regards to acceptance and payments
 * Bookkeeping and reporting pertinent information to the Ecosystem Assembly
 
-The Ecosystem Foundation also has the power to enact token transfers between different accounts, just like the Ecosystem Assembly. However, since it is not an Assembly and therefore is not subject to a formal proposal vetting and approval process, such a transfer may be made very quickly.
+The Foundation also has the power to enact token transfers between different accounts, just like the Ecosystem Assembly. However, since it is not an Assembly and therefore is not subject to a formal proposal vetting and approval process, such a transfer may be made very quickly.
 
-## Development Focus Area
+## Development
 As the owner of the Neon EVM program, the Development Assembly is the only component of the Development Focus Area. This Assembly is the group that deals with the technical aspects of the Neon EVM, and can stop the Neon EVM to prevent malicious transactions. In break-glass emergency scenarios, Emergency Engineers, appointed by the Development Assembly, may elect to stop the Neon EVM without the Assembly's approval.
 
 ### Development Assembly
 
-The Development Assembly is responsible for overseeing upgrades to the Neon EVM, identifying and proritizing relevant feature upgrades, appointing Emergency Engineers, as well as for preventing funds from being maliciously withdrawn from dApps on Neon. 
+The Development Assembly is responsible for overseeing upgrades to the Neon EVM, identifying and proritizing relevant feature upgrades, appointing Emergency Engineers, as well as for preventing funds from being maliciously withdrawn from dApps on Neon.
 
 When upgrading the Neon EVM, Development Assembly cannot change the source code. Instead, it loads an approved precompiled version of the EVM. It can also add and remove precompiled Neon EVM versions from its approved version list. The Development Assembly also appoints Emergency Engineers that have the power to upgrade the EVM to an approved version without the Assembly's approval. These Engineers can also stop and restart the Neon EVM in case of an emergency.
 
@@ -95,13 +83,13 @@ The Development Assembly allows for proposals dealing with the following:
 A typical scenario, updating the EVM version, would have the proponent proceed as follows:
 1. Load the new EVM version byte code to the Solana buffer.
 2. Create a proposal to approve this version of the EVM and switch to it.
-3. The proposal is voted on and, if approved, leads to 
+3. The proposal is voted on and, if approved, leads to
    * Addition of the new EVM version to the list of approved versions
    * Upgrade of the EVM to the new version.
 
 Like all Neon DAO Assemblies, the Development Assembly also allows for changing the voting parameters and permits users to monitor existing proposals by opting to receive notifications for new proposals and voting results.
 
-## Security Focus Area
+## Security
 
 The Security Focus Area's primary focus, as its name implies, is to monitor and prevent attacks on Treasury accounts and the Neon EVM program.
 

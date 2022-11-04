@@ -1,11 +1,10 @@
 ---
-title: Integrating Chainlink
+title: Integrate Chainlink
 ---
 
 ## Introduction
 
-Chainlink Data Feeds are the quickest way to connect your smart contracts to the real-world data such as asset prices. It supports Neon EVM and
-is implemented as a smart contract making Chainlink Data Feeds from Solana network available on Neon EVM. The repo is available on GitHub at [hoodieshq/chainlink-neon](https://github.com/hoodieshq/chainlink-neon).
+Chainlink Data Feeds are the quickest way to connect your smart contracts to the real-world data such as asset prices. It supports Neon EVM and is implemented as a smart contract making Chainlink Data Feeds from Solana network available on Neon EVM. The repo is available on GitHub at [hoodieshq/chainlink-neon](https://github.com/hoodieshq/chainlink-neon).
 
 ## How to Use
 

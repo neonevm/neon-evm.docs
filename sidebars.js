@@ -17,13 +17,18 @@ const sidebars = {
     { type: 'html', value: '<h4 class="sidebar-menu-title">Get started</h4>' },
     {
       type: 'doc',
-      label: '🏓 Quick start',
+      label: '🏓 Quick Start',
       id: 'quick_start'
     },
     {
-      type: 'doc',
+      type: 'category',
       label: '🧬 Neon EVM Overview',
-      id: 'architecture/neon_evm_arch'
+      items:
+        [
+          'about/why_neon',
+          'about/neon_ecosystem',
+          'about/how_it_works',
+        ]
     },
     {
       type: 'doc',
@@ -31,11 +36,17 @@ const sidebars = {
       id: 'wallet/metamask_setup'
     },
     {
+      type: 'doc',
+      label: '🛰 Transfer  Tokens',
+      id: 'token_transferring/neonpass_usage',
+    },
+    {
       type: 'category',
-      label: '🛰 Tokens Transferring',
+      label: 'Tokens',
       items: [
-        'token_transferring/neonpass_overview',
-        'token_transferring/neonpass_usage'
+        'tokens/neon_token',
+        'tokens/gas_fees',
+        'tokens/token_list',
       ]
     },
     {
@@ -53,84 +64,54 @@ const sidebars = {
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Tools</h4>' },
     { type: 'link', label: 'NeonScan', href: 'https://neonscan.org/' },
-    { type: 'link', label: 'Indexing Dashboard', href: 'https://neon.aleph.cloud/' },
-    { type: 'link', label: 'NeonFaucet', href: 'https://neonfaucet.org/' },
     { type: 'link', label: 'NeonPass', href: 'https://neonpass.live/' },
-    {
-      type: 'category',
-      label: 'Using Neon Tools',
-      items: [
-        'developing/utilities/neonpass',
-        'developing/utilities/faucet'
-      ]
-    },
+    { type: 'link', label: 'NeonFaucet', href: 'https://neonfaucet.org/' },
+    { type: 'link', label: 'Indexing Dashboard', href: 'https://neon.aleph.cloud/' },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Developers</h4>' },
     {
       type: 'doc',
-      label: 'Getting Started',
-      id: 'developing/getting_started'
+      label: 'Connect to Neon RPC',
+      id: 'developing/connect_rpc'
+    },
+    {
+      type: 'doc',
+      label: 'Request Test Tokens',
+      id: 'developing/utilities/faucet'
     },
     {
       type: 'category',
-      label: 'About',
+      label: 'Configure Dev Tools',
       items: [
-        'about/introduction',
-        'about/terminology'
+        'developing/deploy_facilities/configure_hardhat',
+        'developing/deploy_facilities/configure_truffle',
       ]
     },
     {
       type: 'category',
-      label: 'Architecture',
+      label: 'Use Tokens',
       items: [
-        'architecture/neon_evm_arch',
-        'architecture/eth_sol_solution',
-        {
-          type: 'category',
-          label: 'Core Aspects',
-          items: [
-            'architecture/core_aspects/account',
-            'architecture/core_aspects/block',
-            'architecture/core_aspects/gas',
-            'architecture/core_aspects/proof-of-stake',
-            'architecture/core_aspects/proof-of-work',
-            'architecture/core_aspects/transaction',
-            'architecture/core_aspects/web3'
-          ]
-        }
-      ]
-    },
-    {
-      type: 'category',
-      label: 'Deploying dApps',
-      items: [
-        'developing/deploy_facilities/using_remix',
-        'developing/deploy_facilities/using_truffle',
-        'developing/deploy_facilities/using_hardhat',
         'developing/deploy_facilities/interacting_with_spl_tokens',
-        'developing/deploy_facilities/adding_new_tokens'
+        'tokens/token_list',
+        'developing/integrate/neon_transfer_sdk',
       ]
     },
     {
       type: 'category',
-      label: 'Integrating',
+      label: 'Integrate',
       items: [
-        'developing/integrate/neon_transfer_sdk',
-        {
-          type: 'category',
-          label: 'Wallets',
-          items: [
-            'developing/integrate/wallets/integrating_metamask_into_your_dapp'
-          ]
-        },
-        {
-          type: 'category',
-          label: 'Oracles',
-          items: [
-            'developing/integrate/oracles/integrating_pyth',
-            'developing/integrate/oracles/integrating_chainlink'
-          ]
-        }
+        'developing/integrate/oracles/integrating_chainlink',
+        'developing/integrate/oracles/integrating_pyth',
+        'developing/integrate/wallets/integrating_metamask_into_your_dapp',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Tutorials',
+      items: [
+        'developing/deploy_facilities/using_hardhat',
+        'developing/deploy_facilities/using_truffle',
+        'developing/deploy_facilities/using_remix',
       ]
     },
     {
@@ -138,38 +119,26 @@ const sidebars = {
       label: 'EVM Compatibility',
       items: [
         'evm_compatibility/json_rpc_api_methods',
-        // 'evm_compatibility/gas_metering',
-        {
-          type: 'category',
-          label: 'Architectural Limitations',
-          items: [
-            'evm_compatibility/architectural_limitations/restriction_on_iterative_trx',
-            'evm_compatibility/architectural_limitations/erc721_tokens',
-            'evm_compatibility/architectural_limitations/precompiled_contracts',
-            // 'evm_compatibility/architectural_limitations/gas_calculator',
-            'evm_compatibility/architectural_limitations/unsupported_functions',
-            'evm_compatibility/architectural_limitations/storage_size_for_account'
-          ]
-        }
+        'evm_compatibility/precompiles'
       ]
     },
     {
       type: 'category',
-      label: 'Environment',
+      label: 'Set up Neon EVM Locally',
       items: [
-        'clusters/solana_cluster',
-        'clusters/neon_proxy_rpc_endpoints'
-      ]
-    },
-    {
-      type: 'category',
-      label: 'Setting up Environment',
-      items: [
-        'developing/dev_environment/setting_up_the_dev_environment',
-        'developing/dev_environment/op1_remote_proxy_remote_solana',
+        //'developing/dev_environment/setting_up_the_dev_environment',
         'developing/dev_environment/op2_local_proxy_local_solana',
         'developing/dev_environment/op3_local_proxy_remote_solana',
-        'developing/dev_environment/faucet_and_test_suite_services'
+        //'developing/dev_environment/faucet_and_test_suite_services',
+        'clusters/solana_cluster',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Learn',
+      items: [
+        'architecture/neon_evm_arch',
+        'architecture/eth_sol_solution',
       ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
