@@ -17,7 +17,7 @@ const sidebars = {
     { type: 'html', value: '<h4 class="sidebar-menu-title">Get started</h4>' },
     {
       type: 'doc',
-      label: '🏓 Quick start',
+      label: '🏓 Quick Start',
       id: 'quick_start'
     },
     {
@@ -32,7 +32,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '🛰 Token Transferring',
+      label: '🛰 Transfer Tokens',
       items: [
         'token_transferring/neonpass_overview',
         'token_transferring/neonpass_usage',
