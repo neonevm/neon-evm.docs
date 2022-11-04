@@ -52,7 +52,7 @@ Select `Neon EVM Devnet` and click `Connect Wallet`. A MetaMask pop-up window wi
 Your MetaMask wallet has been successfully installed, configured, and is ready to use. Enjoy!
 
 #### Option B: Manual Configuration
-In MetaMask browser extension's upper-right corner, click the red apple view element. Select "Settings" from the dropdown menu to connect to the proxy server (Fig. 3).  
+In the MetaMask browser extension's upper-right corner, click the multicolored circle element in the top right. Select "Settings" from the dropdown menu to connect to the proxy server (Fig. 3).  
 
 <div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
@@ -62,10 +62,7 @@ Fig. 3 — Select "Settings" from the dropdown menu
 
 </div>
 
-At this point, a window with the settings menu should open (Fig. 4). Select "Network", and then "Add Network".
-
-### Step 5
-Click `Settings` in the dropdown menu. A window with the settings menu for selecting a network should open (Fig. 4).  
+At this point, a window with the settings menu for selecting a network should open (Fig. 4).  
 
 <div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
@@ -75,7 +72,6 @@ Fig. 4 — Choosing a network
 
 </div>
 
-### Step 6
 Add a Network (Fig. 5).  
 
 <div className='neon-img-box-600' style={{textAlign: 'center'}}>
@@ -86,27 +82,27 @@ Fig. 5 — The Networks menu
 
 </div>
 
-The new window contains the settings for six default subnets. You need to use these settings to connect to the desired proxy. Click `Add Network` in the top-right corner.  
+The new window contains the settings for six default subnets. You need to use these settings to connect to the desired proxy. Click `Add Network`.  
 
-### Step 7
-Fill in the fields on the next page (Fig. 4):  
-* `Network Name`: "Remote Proxy — Solana Devnet"
-* `New RPC URL`: https://devnet.neonevm.org
-* `Chain ID`: 245022926
-* `Currency Symbol`: NEON
-* `Block Explorer URL (optional)`: URL of the block browser
-
-> **Note:** The `Chain ID` is specified for [Devnet](https://docs.solana.com/clusters#devnet). To choose [Testnet](https://docs.solana.com/clusters#testnet) or [Mainnet](https://docs.solana.com/clusters#mainnet-beta) in this field, you need to specify the value *245022940* or *245022934*, respectively. The `New RPC URL` must also be changed to either https://testnet.neonevm.org for Testnet, or https://mainnet.neonevm.org for Mainnet.
-
-The wallet settings depend on the values given for the options mentioned above.  
+Fill in the fields on the next page (Fig. 6).
 
 <div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
-![](img/metamask-4.png)
+![](img/metamask-6.png)
 
 Fig. 6 — Fill in the fields
 
 </div>
+
+* `Network Name`: "Neon Devnet"
+* `New RPC URL`: https://proxy.devnet.neonlabs.org/solana
+* `Chain ID`: 245022926
+* `Currency Symbol`: NEON
+* `Block Explorer URL (optional)`: URL of the block browser
+
+> **Note:** The `Chain ID` is specified for [Devnet](https://docs.solana.com/clusters#devnet). To choose [Testnet](https://docs.solana.com/clusters#testnet) or [Mainnet](https://docs.solana.com/clusters#mainnet-beta) in this field, you need to specify the value *245022940* or *245022934*, respectively. The `New RPC URL` must also be changed to either https://proxy.testnet.neonlabs.org/solana for Testnet, or https://proxy.mainnet.neonlabs.org/solana for Mainnet.
+
+The wallet settings depend on the values given for the options mentioned above.
 
 Click `Save` to keep the settings.  
 Your MetaMask wallet has been successfully installed, configured, and is ready to use. Enjoy!
