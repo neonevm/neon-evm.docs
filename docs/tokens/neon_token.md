@@ -8,10 +8,10 @@ The NEON token is the native token of the Neon EVM. It is used as a:
 
 ## Token parameters
 Some properties of the NEON token include:
-* It can be divided into *Alans*, where 10<sup>18</sup> Alan = 10<sup>9</sup> GAlan = 1 NEON.
+* It can be divided into *Alans*, where 10<sup>18</sup> Alan = 10<sup>9</sup> Galan = 1 NEON.
 * No inflation or deflation rates.
 * Transaction Fees: 50% go to Solana Validators and 50% to the Neon DAO Treasury.
-* NEON is an SPL token on Solana and, at the same time, is a native token on the Neon EVM.
+* NEON is an SPL token on Solana and, at the same time, is a native token on the Neon EVM (like ETH on Ethereum).
 
 ## Utility
 The Neon token facilitates all payments for Neon EVM transactions, including the fee paid to Neon operators.
@@ -22,7 +22,7 @@ When a Neon user (i.e., an end-user of a dApp built on the Neon EVM) wants to ex
 
 The goal of this abstraction is to improve the user experience by simplifying the payment process for Neon transactions.
 
-For every iteration of a Neon transaction, the Neon operator will pay SOL tokens to the Solana leader (the validator that produces the block on Solana) and to the Neon DAO (specifically, the Neon DAO Treasury accounts). This latter payment is known as the Neon EVM platform fee.
+For every iteration of a Neon transaction, the Neon operator will pay SOL tokens to the Solana Validator and to the Neon DAO Treasury. This latter payment is known as the Neon EVM platform fee.
 
 In return, the Neon user pays the Neon operator in NEON tokens to cover the cost of the Solana validation fee, the Neon EVM platform fee, and the operator’s commission.
 

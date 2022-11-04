@@ -94,9 +94,9 @@ const config = {
             title: 'Get started',
             items: [
               { label: '🏓 Quick Start', to: '/docs/quick_start' },
-              { label: '🧬 Neon EVM Overview', to: '/docs/architecture/neon_evm_arch' },
+              { label: '🧬 Neon EVM Overview', to: '/docs/about/why_neon' },
               { label: '🔑 Set up Wallet', to: '/docs/wallet/metamask_setup' },
-              { label: '🛰 Transfer Tokens', to: '/docs/token_transferring/neonpass_overview' },
+              { label: '🛰 Transfer Tokens', to: '/docs/token_transferring/neonpass_usage' },
               { label: '💬 FAQ', to: '/docs/faq/what-is-neon' }
             ]
           },
@@ -104,38 +104,19 @@ const config = {
             title: 'Tools',
             items: [
               { label: 'NeonScan', href: 'https://neonscan.org/' },
-              { label: 'Indexing Dashboard', href: 'https://neon.aleph.cloud/' },
+              { label: 'NeonPass', href: 'https://neonpass.live/' },
               { label: 'NeonFaucet', href: 'https://neonfaucet.org/' },
-              { label: 'NeonPass', href: 'https://neonpass.live/' }
+              { label: 'Indexing Dashboard', href: 'https://neon.aleph.cloud/' },
             ]
           },
           {
             title: 'Developers',
-            // Getting Started
-            // About
-            // Architecture
-            // Deploying dApps
-            // Integrating
-            // EVM Compatibility
-            // Environment
-            // Setting up Environment
-
             items: [
-              { label: 'Getting Started', to: '/docs/developing/getting_started' },
-              { label: 'About', to: '/docs/about/introduction' },
-              { label: 'Architecture', to: '/docs/architecture/neon_evm_arch' },
-              { label: 'Deploying dApps', to: '/docs/developing/deploy_facilities/using_remix' },
-              { label: 'Integrating', to: '/docs/developing/integrate/neon_transfer_sdk' },
-              { label: 'EVM Compatibility', to: '/docs/evm_compatibility/json_rpc_api_methods' },
-              { label: 'Environment', to: '/docs/clusters/solana_cluster' },
-              { label: 'Setting up Environment', to: '/docs/developing/dev_environment/setting_up_the_dev_environment' },
-            ]
-          },
-          {
-            title: 'Operators',
-            items: [
-              { label: 'Operator Requirements', to: '/docs/operating/operator_requirements' },
-              { label: 'Running a Proxy server', to: '/docs/operating/operator_guide' },
+              { label: 'Tutorials', to: '/docs/developing/deploy_facilities/using_hardhat' },
+              { label: 'Connect to Neon RPC', to: '/docs/developing/connect_rpc' },
+              { label: 'Request Test Tokens', to: '/docs/developing/utilities/faucet' },
+              { label: 'Configure Dev Tools', to: '/docs/developing/deploy_facilities/configure_truffle' },
+              { label: 'Integrate', to: '/docs/developing/integrate/oracles/integrating_chainlink' },
             ]
           },
           {
@@ -144,12 +125,15 @@ const config = {
               { label: 'Overview', to: '/docs/governance/overview' },
               { label: 'Neon DAO Organization', to: '/docs/governance/neon_daos' },
               { label: 'Voting Process', to: '/docs/governance/proposals/' },
-              { label: 'Principles and Objectives', to: '/docs/governance/principles/' },
             ]
           },
           {
             title: 'Community',
             items: [
+              {
+                label: 'NeonLabs.org',
+                to: 'https://neon-labs.org' // new
+              },
               {
                 label: 'Discord',
                 href: 'https://discord.com/invite/d9BhxNWTsj' // OK
@@ -157,10 +141,6 @@ const config = {
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/neonlabsorg' // OK
-              },
-              {
-                label: 'NeonLabs.org',
-                to: 'https://neon-labs.org' // new
               },
               {
                 label: 'GitHub',

@@ -1,5 +1,5 @@
 ---
-title: Transferring Tokens Between Solana and EVMs
+title: Transfer Tokens Between Solana and EVMs
 ---
 
 The ERC-20 wrapper allows users to manipulate balances inside SPL tokens. The user runs an application inside the Neon EVM with logic that releases new coins. To transfer these coins to the outside world, they need to use the ERC-20 bridge implementation. Inside the Neon EVM, these coins will be blocked and transferred inside the SPL token to different addresses. They will become liquid inside Solana, but under a different token name, which is registered inside Solana.

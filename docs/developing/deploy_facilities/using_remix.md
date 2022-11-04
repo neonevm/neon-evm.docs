@@ -1,12 +1,12 @@
 ---
-title: Deploying with Remix
+title: Deploy with Remix
 ---
 
 *This tutorial will show you step by step how to use [Remix](about/terminology.md#remix) and [MetaMask](about/terminology.md#metamask) to create and deploy a simple smart contract on Solana. Although the instructions use Solana's [Devnet](https://docs.solana.com/clusters#devnet), they may also be applicable to Solana's [Testnet](https://docs.solana.com/clusters#testnet) or Solana's [Mainnet Beta](https://docs.solana.com/clusters#mainnet-beta).*
 
 ## Requirements
 Before you start, make sure that the following is true:
-  * MetaMask is installed on your device. To install MetaMask, follow [this guide](wallet/metamask_setup.md#installing-metamask). 
+  * MetaMask is installed on your device. To install MetaMask, follow [this guide](wallet/metamask_setup.md#installing-metamask).
   * MetaMask is configured for the Neon EVM.
 
 ## Network Configurations
@@ -86,7 +86,7 @@ Fig. 4 — Compilation details
 
 Interactions with Neon EVM are carried out through MetaMask. In the left sidebar menu, select `Deploy & run transactions`. The `DEPLOY & RUN TRANSACTIONS` menu will become active.
 
-Choose the `Injected Provider - Metamask` environment to connect Remix with an active account in MetaMask (Fig. 5). Make sure that your MetaMask wallet is set to display the Neon Devnet network before you do this step. 
+Choose the `Injected Provider - Metamask` environment to connect Remix with an active account in MetaMask (Fig. 5). Make sure that your MetaMask wallet is set to display the Neon Devnet network before you do this step.
 
 <div className='neon-img-width-600' style={{textAlign: 'center'}}>
 

@@ -14,11 +14,9 @@ On a high level, gas fee payments in the Neon EVM work as follows:
 
 ![](./img/payments-neon.png)
 
-Fig. 1 — Payments in Neon
-
 </div>
 
-As depicted in the diagram above, users of dApps built on the Neon EVM pay in NEON tokens for all the resources they consume, in addition to operator fees that differ between operators. Operators, however, use SOL to pay for the resources they consume. Specifically, operators pay Solana validators and governance fees in SOL. Operators pay the same amount for governance as they pay to Solana validators.
+As depicted in the diagram above, users of dApps built on the Neon EVM pay in NEON tokens for all the resources they consume, in addition to operator fees that differ between operators. Operators, however, use SOL to pay for the resources they consume. Specifically, operators pay Solana validators and governance fees in SOL. Operators pay the same amount for governance as they pay to Solana validators (for the signature validation).
 
 The gas fee that a user pays is calculated as **gas amount \* gas price**.
 
@@ -39,9 +37,9 @@ The **gas price** is the cost of 1 unit of gas in NEON. This price is calculated
 
 which can also be represented as:
 
-> (1 + Proxy Operator fee) \* SOL-to-NEON-rate GAlans
+> (1 + Proxy Operator fee) \* SOL-to-NEON-rate Galans
 
-This amount is usually displayed for users in GAlans (10<sup>-9</sup> NEONs).
+This amount is usually displayed for users in Galans (10<sup>-9</sup> NEONs).
 
 The final formula for the gas fee for a Neon transaction with N iterations and S newly allocated bytes is:
 
@@ -54,11 +52,11 @@ The following are some examples of gas fee calculation on Neon. They are all bas
 * The SOL price is $30 and the NEON price is $0.25
 * The SOL-to-NEON rate is therefore 120.
 * The Proxy Operator fee is 10%.
-* The gas price is therefore (1 + 10%) \* 120 \* 10<sup>-9</sup> NEON = 132 \* 10<sup>9</sup> Alan = 132 GAlan
+* The gas price is therefore (1 + 10%) \* 120 \* 10<sup>-9</sup> NEON = 132 \* 10<sup>9</sup> Alan = 132 Galan
 
 ### Example 1: A Normal Swap
 The gas amount in this case is 10 \* 2 \* 5,000 (computational cost + treasury) + 5 \* 6,960 (storage cost) ≈ 145,000 units
-The total gas fee is therefore 145,000 units \* 132 \* GAlan = 0.01914 NEON.
+The total gas fee is therefore 145,000 units \* 132 \* Galan = 0.01914 NEON.
 
 ### Exampe 2: Creating a New Account
 According to [Solana](https://docs.solana.com/storage_rent_economics), the rental cost for storage can be paid via one of two methods:
@@ -68,10 +66,10 @@ According to [Solana](https://docs.solana.com/storage_rent_economics), the renta
 To simplify the user experience, Neon charges two years' worth of rent deposits for each new account. Therefore, the gas cost of creating a new account is:
 > 0 \* 2 \* 5,000 (computational cost + treasury) + (128 + 71) \* 6960 (storage cost for the minimum Neon account size) ≈ 1,400,000 units
 
-Therefore, the total gas fee is 1,400,000 units \* 132 GAlan = 0.1848 NEON tokens.
+Therefore, the total gas fee is 1,400,000 units \* 132 Galan = 0.1848 NEON tokens.
 
 ### Example 3: A Simple NEON or ERC-20 Token Transfer
 In this case the gas amount is:
 > 1 \* 2 \* 5,000 (computational cost + treasury) + 0 \* 6,960 (storage cost in case the account exists) ≈ 10,000 units
 
-Therefore, the total gas fee is 10,000 units * 132 GAlan = 0.00132 NEON tokens.
+Therefore, the total gas fee is 10,000 units * 132 Galan = 0.00132 NEON tokens.
