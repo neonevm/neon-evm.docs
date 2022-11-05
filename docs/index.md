@@ -20,7 +20,3 @@ import {FeedbackForm} from '@site/src/components/FeedbackForm'
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 
 <ServiceLink title='Ask on Discord' description='Our 🛟 rescue team is ready to help' icon='/icons/discord.svg' link='https://discord.com/invite/d9BhxNWTsj' />
-
-<PageHelpful />
-
-<FeedbackForm />

@@ -20,11 +20,13 @@ We do not have strict hardware recommendations. The device specifications below 
 #### The specifications recommended for your Neon EVM proxy are:
 
 <table>
-<tr><th></th><th>Minimum</th><th>Optimal</th><th>Points</th></tr>
-<tr><th align="right">CPU cores</th><td align="center">8</td><td align="center">16</td><td> >=2.8 GHz</td></tr>
-<tr><th align="right">RAM GB</th><td align="center">16</td><td align="center">32</td><td></td></tr>
-<tr><th align="right">Disk GB</th><td colspan="2" align="center">100</td><td></td></tr>
-<tr><th align="right"><a href="">Operator keys</a></th><td align="center"> 10-20</td><td align="center"> >20</td><td></td></tr>
+  <tbody>
+    <tr><th></th><th>Minimum</th><th>Optimal</th><th>Points</th></tr>
+    <tr><th align="right">CPU cores</th><td align="center">8</td><td align="center">16</td><td> >=2.8 GHz</td></tr>
+    <tr><th align="right">RAM GB</th><td align="center">16</td><td align="center">32</td><td></td></tr>
+    <tr><th align="right">Disk GB</th><td colspan="2" align="center">100</td><td></td></tr>
+    <tr><th align="right"><a href="">Operator keys</a></th><td align="center"> 10-20</td><td align="center"> >20</td><td></td></tr>
+  </tbody>
 </table>
 
 > Do not use a public or shared Solana RPC node for your Neon EVM proxy. Use only a device that you control.

@@ -18,7 +18,7 @@ const sidebars = {
     {
       type: 'doc',
       label: '🏓 Quick Start',
-      id: 'quick_start'
+      id: 'index'
     },
     {
       type: 'category',
@@ -42,7 +42,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Tokens',
+      label: '🪙 Tokens',
       items: [
         'tokens/neon_token',
         'tokens/gas_fees',

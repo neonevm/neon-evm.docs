@@ -16,6 +16,14 @@ h3 {
   margin-bottom: 24px;
 }
 
+.quick-start-item:hover {
+  text-decoration: none;
+}
+
+.quick-start-item:hover .quick-start-title {
+  color: var(--ifm-color-primary);
+}
+
 .quick-start-icon {
   width: 40px;
 }
