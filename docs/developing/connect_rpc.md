@@ -18,6 +18,7 @@ A table of RPC proxies operated by Neon Labs, shown below, has the following col
   * `RPC URL` — the address for interacting with the required proxy.
 
 <table>
+  <tbody>
     <tr>
         <th>Network</th>
         <th>Operator name</th>
@@ -36,6 +37,7 @@ A table of RPC proxies operated by Neon Labs, shown below, has the following col
         <td>https://testnet.neonevm.org	</td>
         <th>245022940</th>
     </tr>
+  </tbody>
 </table>
 
 The proxy interacts with one EVM loader, which can be deployed in different Solana chains. This interaction allows the proxy to be used on different networks (Testnet, Devnet, Mainnet Beta).
