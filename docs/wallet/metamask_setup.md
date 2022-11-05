@@ -9,7 +9,7 @@ MetaMask is a convenient and fairly easy-to-use application for storing Ethereum
 ### Step 1: Install MetaMask
 Go to the MetaMask [download page](https://metamask.io/download.html). From there, select any platform you use and follow the instructions to load and install MetaMask on your device's browser.  
 
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center', width: 400, display: 'block', margin: 'auto'}}>
 
 ![](./img/metamask-1.png)
 
@@ -18,7 +18,7 @@ Go to the MetaMask [download page](https://metamask.io/download.html). From ther
 ### Step 2: Add the MetaMask Extension
 MetaMask is essentially a plugin in the form of an extension to a browser. Therefore, MetaMask can be added to your browser as an extension. In the window click `Add extension`.  
 
-<div className='neon-img-width-300' style={{textAlign: 'center'}}>
+<div className='neon-img-width-300' style={{textAlign: 'center', width: 400, display: 'block', margin: 'auto'}}>
 
 ![](./img/metamask-2.png)
 
@@ -46,7 +46,7 @@ Your MetaMask wallet has been successfully installed, configured, and is ready t
 #### Option B: Manual Configuration
 In the MetaMask browser extension's upper-right corner, click the multicolored circle element in the top right. Select "Settings" from the dropdown menu to connect to the proxy server.  
 
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center', width: 300, display: 'block', margin: 'auto'}}>
 
 ![](./img/metamask-3.png)
 
@@ -54,7 +54,7 @@ In the MetaMask browser extension's upper-right corner, click the multicolored c
 
 At this point, a window with the settings menu for selecting a network should open.  
 
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center', width: 300, display: 'block', margin: 'auto'}}>
 
 ![](img/metamask-4.png)
 
@@ -62,7 +62,7 @@ At this point, a window with the settings menu for selecting a network should op
 
 Add a Network.  
 
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center', width: 300, display: 'block', margin: 'auto'}}>
 
 ![](img/metamask-5.png)
 
@@ -72,19 +72,19 @@ The new window contains the settings for six default subnets. You need to use th
 
 Fill in the fields on the next page.
 
-<div className='neon-img-box-300' style={{textAlign: 'center',}}>
+<div className='neon-img-box-300' style={{textAlign: 'center', width: 300, display: 'block', margin: 'auto'}}>
 
 ![](img/metamask-6.png)
 
 </div>
 
-* `Network Name`: "Neon Devnet"
+* `Network Name`: "Neon EVM DevNet"
 * `New RPC URL`: https://devnet.neonevm.org
 * `Chain ID`: 245022926
 * `Currency Symbol`: NEON
 * `Block Explorer URL (optional)`: https://devnet.neonscan.org
 
-> **Note:** The `Chain ID` is specified for [Devnet](https://docs.solana.com/clusters#devnet). To choose [Testnet](https://docs.solana.com/clusters#testnet) or [Mainnet](https://docs.solana.com/clusters#mainnet-beta) in this field, you need to specify the value *245022940* or *245022934*, respectively. The `New RPC URL` must also be changed to either https://testnet.neonevm.org for Testnet, or https://mainnet.neonevm.org	for Mainnet.
+> **Note:** The `Chain ID` is specified for [Devnet](https://docs.solana.com/clusters#devnet). To choose [Testnet](https://docs.solana.com/clusters#testnet) or [Mainnet](https://docs.solana.com/clusters#mainnet-beta) in this field, you need to specify the value *245022940* or *245022934*, respectively. The `New RPC URL` must also be changed to either https://testnet.neonevm.org for Testnet, or https://mainnet.neonevm.org for Mainnet.
 
 The wallet settings depend on the values given for the options mentioned above.
 
