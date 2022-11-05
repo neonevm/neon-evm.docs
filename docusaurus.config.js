@@ -14,14 +14,11 @@ const config = {
   organizationName: 'neonlabsorg',
   projectName: 'neon-evm.docs',
   headTags: [
-    // <link rel="preconnect" href="https://fonts.googleapis.com">
     { tagName: 'link', attributes: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
-    // <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin>
     {
       tagName: 'link',
       attributes: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'true' }
     },
-    // <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     {
       tagName: 'link',
       attributes: {
@@ -65,7 +62,7 @@ const config = {
           {
             label: 'Quick Start',
             position: 'left',
-            to: '/docs/quick_start'
+            to: '/docs'
           },
           {
             label: 'Operate',
@@ -93,9 +90,10 @@ const config = {
           {
             title: 'Get started',
             items: [
-              { label: '🏓 Quick Start', to: '/docs/quick_start' },
+              { label: '🏓 Quick Start', to: '/docs' },
               { label: '🧬 Neon EVM Overview', to: '/docs/about/why_neon' },
               { label: '🔑 Set up Wallet', to: '/docs/wallet/metamask_setup' },
+              { label: '🪙 Tokens', to: '/docs/tokens/neon_token' },
               { label: '🛰 Transfer Tokens', to: '/docs/token_transferring/neonpass_usage' },
               { label: '💬 FAQ', to: '/docs/faq/what-is-neon' }
             ]
@@ -103,7 +101,7 @@ const config = {
           {
             title: 'Tools',
             items: [
-              { label: 'NeonScan', href: 'https://neonscan.org/' },
+              { label: 'BlockExplorer', href: 'https://neonscan.org/' },
               { label: 'NeonPass', href: 'https://neonpass.live/' },
               { label: 'NeonFaucet', href: 'https://neonfaucet.org/' },
               { label: 'Indexing Dashboard', href: 'https://neon.aleph.cloud/' },
@@ -112,11 +110,22 @@ const config = {
           {
             title: 'Developers',
             items: [
-              { label: 'Tutorials', to: '/docs/developing/deploy_facilities/using_hardhat' },
               { label: 'Connect to Neon RPC', to: '/docs/developing/connect_rpc' },
               { label: 'Request Test Tokens', to: '/docs/developing/utilities/faucet' },
-              { label: 'Configure Dev Tools', to: '/docs/developing/deploy_facilities/configure_truffle' },
+              { label: 'Configure Dev Tools', to: '/docs/developing/deploy_facilities/configure_hardhat' },
+              { label: 'Use Tokens', to: '/docs/developing/deploy_facilities/interacting_with_spl_tokens' },
               { label: 'Integrate', to: '/docs/developing/integrate/oracles/integrating_chainlink' },
+              { label: 'Tutorials', to: '/docs/developing/deploy_facilities/using_hardhat' },
+              { label: 'EVM Compatibility', to: '/docs/evm_compatibility/json_rpc_api_methods' },
+              { label: 'Set up Neon EVM Locally', to: '/docs/developing/dev_environment/op2_local_proxy_local_solana' },
+              { label: 'Learn', to: '/docs/architecture/neon_evm_arch' },
+            ]
+          },
+          {
+            title: 'Operators',
+            items: [
+              { label: 'Operator Requirements', to: '/docs/operating/operator_requirements' },
+              { label: 'Running a Proxy server', to: '/docs/operating/operator_guide' },
             ]
           },
           {
@@ -124,30 +133,10 @@ const config = {
             items: [
               { label: 'Overview', to: '/docs/governance/overview' },
               { label: 'Neon DAO Organization', to: '/docs/governance/neon_daos' },
-              { label: 'Voting Process', to: '/docs/governance/proposals/' },
+              { label: 'Voting Process', to: '/docs/governance/proposals' },
+              { label: 'Principles and Objectives', to: '/docs/governance/principles' },
             ]
           },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'NeonLabs.org',
-                to: 'https://neon-labs.org' // new
-              },
-              {
-                label: 'Discord',
-                href: 'https://discord.com/invite/d9BhxNWTsj' // OK
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/neonlabsorg' // OK
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/neonlabsorg' // OK
-              }
-            ]
-          }
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Neon Labs` // OK
       },
@@ -178,7 +167,7 @@ const config = {
     [
       '@docusaurus/plugin-client-redirects',
       {
-        redirects: [{ from: '/', to: '/docs/quick_start' }],
+        redirects: [{ from: '/', to: '/docs' }],
         createRedirects(existingPath) {
           console.log(existingPath);
         }

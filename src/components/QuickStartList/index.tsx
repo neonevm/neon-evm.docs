@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import linkList from '@site/static/data/link-list.json';
+import Link from '@docusaurus/Link';
 import './styles.css';
 
 export interface QuickStartData {
@@ -17,16 +18,18 @@ export interface QuickStartListData {
 }
 
 export function QuickStartItem({ data }: { data: QuickStartData }) {
+
+
   return <>
-    <div className={'quick-start-item'}>
+    <Link className={'quick-start-item'} to={data.url}>
       <div className={'quick-start-icon'}>
         <img src={data.icon} alt='' />
       </div>
       <div className={'quick-start-content'}>
         <div className={'quick-start-title'}>{data.title}</div>
-        <div className={'quick-start-description'}>{data.description}</div>
+        <span className={'quick-start-description'}>{data.description}</span>
       </div>
-    </div>
+    </Link>
   </>;
 }
 
