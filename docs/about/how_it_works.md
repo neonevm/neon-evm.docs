@@ -2,6 +2,12 @@
 title: How it works
 ---
 
+<div className='neon-img-box-300' style={{textAlign: 'center', width: 900, display: 'block', margin: 'auto'}}>
+
+![](img/how_it_works.png)
+
+</div>
+
 1. User send signed Ethereum-like Tx (using Ethereum-compatible wallet) to Neon RPC end-point ([How to Connect to Neon RPC](/docs/wallet/metamask_setup))
 2. Neon Proxy
    * estimate gas usage for execute transaction
