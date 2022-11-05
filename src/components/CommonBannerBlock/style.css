@@ -7,6 +7,12 @@
   border-radius: 8px;
   text-align: center;
   margin-bottom: 80px;
+  color: #000;
+}
+
+.common-banner:hover {
+  color: #000;
+  text-decoration: none;
 }
 
 .common-banner p {

@@ -101,10 +101,10 @@ const config = {
           {
             title: 'Tools',
             items: [
-              { label: 'BlockExplorer', href: 'https://neonscan.org/' },
-              { label: 'NeonPass', href: 'https://neonpass.live/' },
-              { label: 'NeonFaucet', href: 'https://neonfaucet.org/' },
-              { label: 'Indexing Dashboard', href: 'https://neon.aleph.cloud/' },
+              { label: 'BlockExplorer', to: 'https://neonscan.org/' },
+              { label: 'NeonPass', to: 'https://neonpass.live/' },
+              { label: 'NeonFaucet', to: 'https://neonfaucet.org/' },
+              { label: 'Indexing Dashboard', to: 'https://neon.aleph.cloud/' },
             ]
           },
           {
