@@ -67,12 +67,7 @@ const config = {
           {
             label: 'Tutorials',
             position: 'left',
-            to: '/docs/operating/operator_guide'
-          },
-          {
-            label: 'DAO voting',
-            position: 'left',
-            to: '/docs/architecture/neon_evm_arch'
+            to: '/docs/developing/deploy_facilities/using_hardhat'
           }
         ]
       },
