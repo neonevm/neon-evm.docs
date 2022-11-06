@@ -65,12 +65,12 @@ const config = {
             to: '/docs/quick_start'
           },
           {
-            label: 'Operate',
+            label: 'Tutorials',
             position: 'left',
             to: '/docs/operating/operator_guide'
           },
           {
-            label: 'Learn',
+            label: 'DAO voting',
             position: 'left',
             to: '/docs/architecture/neon_evm_arch'
           }
@@ -88,7 +88,7 @@ const config = {
               { label: '🏓 Quick Start', to: '/docs/quick_start' },
               { label: '🧬 Neon EVM Overview', to: '/docs/about/why_neon' },
               { label: '🔑 Set up Wallet', to: '/docs/wallet/metamask_setup' },
-              { label: '🪙 Tokens', to: '/docs/tokens/neon_token' },
+              { label: '💰 Tokens', to: '/docs/tokens/neon_token' },
               { label: '🛰 Transfer Tokens', to: '/docs/token_transferring/neonpass_usage' },
               { label: '💬 FAQ', to: '/docs/faq/what-is-neon' }
             ]
@@ -99,7 +99,7 @@ const config = {
               { label: 'BlockExplorer', to: 'https://neonscan.org/' },
               { label: 'NeonPass', to: 'https://neonpass.live/' },
               { label: 'NeonFaucet', to: 'https://neonfaucet.org/' },
-              { label: 'NeonAnalytics', to: 'https://neon.aleph.cloud/' },
+              { label: 'NeonAnalytics', to: 'https://neon.aleph.cloud/' }
             ]
           },
           {
@@ -107,20 +107,32 @@ const config = {
             items: [
               { label: 'Connect to Neon RPC', to: '/docs/developing/connect_rpc' },
               { label: 'Request Test Tokens', to: '/docs/developing/utilities/faucet' },
-              { label: 'Configure Dev Tools', to: '/docs/developing/deploy_facilities/configure_hardhat' },
-              { label: 'Use Tokens', to: '/docs/developing/deploy_facilities/interacting_with_spl_tokens' },
-              { label: 'Integrate', to: '/docs/developing/integrate/oracles/integrating_chainlink' },
+              {
+                label: 'Configure Dev Tools',
+                to: '/docs/developing/deploy_facilities/configure_hardhat'
+              },
+              {
+                label: 'Use Tokens',
+                to: '/docs/developing/deploy_facilities/interacting_with_spl_tokens'
+              },
+              {
+                label: 'Integrate',
+                to: '/docs/developing/integrate/oracles/integrating_chainlink'
+              },
               { label: 'Tutorials', to: '/docs/developing/deploy_facilities/using_hardhat' },
               { label: 'EVM Compatibility', to: '/docs/evm_compatibility/json_rpc_api_methods' },
-              { label: 'Set up Neon EVM Locally', to: '/docs/developing/dev_environment/op2_local_proxy_local_solana' },
-              { label: 'Learn', to: '/docs/architecture/neon_evm_arch' },
+              {
+                label: 'Set up Neon EVM Locally',
+                to: '/docs/developing/dev_environment/op2_local_proxy_local_solana'
+              },
+              { label: 'Learn', to: '/docs/architecture/neon_evm_arch' }
             ]
           },
           {
             title: 'Operators',
             items: [
               { label: 'Operator Requirements', to: '/docs/operating/operator_requirements' },
-              { label: 'Running a Proxy server', to: '/docs/operating/operator_guide' },
+              { label: 'Running a Proxy server', to: '/docs/operating/operator_guide' }
             ]
           },
           {
@@ -129,9 +141,9 @@ const config = {
               { label: 'Overview', to: '/docs/governance/overview' },
               { label: 'Neon DAO Organization', to: '/docs/governance/neon_daos' },
               { label: 'Voting Process', to: '/docs/governance/proposals' },
-              { label: 'Principles and Objectives', to: '/docs/governance/principles' },
+              { label: 'Principles and Objectives', to: '/docs/governance/principles' }
             ]
-          },
+          }
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Neon Labs` // OK
       },
@@ -156,6 +168,16 @@ const config = {
           customCss: require.resolve('./src/css/custom.css')
         }
       })
+    ]
+  ],
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          { from: '/docs', to: '/docs/quick_start' }
+        ]
+      }
     ]
   ]
 };

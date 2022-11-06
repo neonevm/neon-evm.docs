@@ -25,7 +25,7 @@ function Footer() {
           <div className='footer__title'>{links.title}</div>
           <ul className='footer__items clean-list'>
             {links.items.map((link, key) => <li className='footer__item' key={key}>
-                <Link className='footer__link-item' to={link.to}>{link.label}</Link>
+                <Link className='footer__link-item' to={link.to} dangerouslySetInnerHTML={{__html: link.label}}></Link>
               </li>
             )}
           </ul>
