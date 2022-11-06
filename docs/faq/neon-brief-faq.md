@@ -31,7 +31,7 @@ Neon EVM is unique in combining the powerful technical advantages of Solana with
 
 The following tools are available on Neon:
 * [NeonScan](https://neonscan.org/) - Neon EVM’s block explorer
-* [NeonPass](https://neonscan.org/) - A utility for transferring SPL tokens between Solana and Neon
+* [NeonPass](https://neonpass.live/) - A utility for transferring SPL tokens between Solana and Neon
 * [Neon Faucet](https://neonfaucet.org/) - Where tokens for the Neon Devnet may be retrieved for testing and experimental purposes
 * [Neon Analytics](https://neon.aleph.cloud/) - A data-rich dashboard built on [Aleph](https://aleph.im/)
 
@@ -59,4 +59,4 @@ You can see the list of projects that are being built in Neon [here](https://doc
 
 ### Where can I see a list of upcoming events involving Neon?
 
-Upcoming events in the Neon community are listed on our [events page](https://docs.neon-labs.org/docs/about/neon_ecosystem). You can also sign up for Neon’s newsletter to stay in the loop. If an in-person Neon event is happening near you, why not come and say hello?
+Upcoming events in the Neon community are listed on our [events page](https://neon-labs.org/events). You can also sign up for Neon’s newsletter to stay in the loop. If an in-person Neon event is happening near you, why not come and say hello?
