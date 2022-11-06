@@ -11,11 +11,19 @@ import {FeedbackForm} from '@site/src/components/FeedbackForm'
 
 <QuickStartList/>
 
-<CommonBannerBlock title='Learn about Neon' description='Read Neon ecosystem<br /> basics and start using it'
+### Learn about Neon
+
+<CommonBannerBlock description='Read Neon ecosystem<br /> basics and start using it'
   icon='/img/learn.svg' to='/docs/about/neon_ecosystem' background='#ECFFF8' />
-<CommonBannerBlock title='Join Neon Governance' description='Start influencing on Neon’s ecosystem<br /> development by participating in Voting'
+
+### Join Neon Governance
+
+<CommonBannerBlock description='Start influencing on Neon’s ecosystem<br /> development by participating in Voting'
   icon='/img/governance.svg' to='/docs/governance/overview' background='#FFF1FA' />
-<CommonBannerBlock title='Become an Operator' description='Learn Technical Requirements and<br /> how to run & operate Neon Proxy'
+
+### Become an Operator
+
+<CommonBannerBlock description='Learn Technical Requirements and<br /> how to run & operate Neon Proxy'
   icon='/img/proxy.svg' to='/docs/operating/operator_requirements' background='#F7F0FF' imageStyle={{marginTop: '-35px'}} />
 
 ### Help & Support

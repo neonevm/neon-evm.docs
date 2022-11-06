@@ -74,11 +74,6 @@ const config = {
             position: 'left',
             to: '/docs/architecture/neon_evm_arch'
           }
-          /*{
-            href: 'https://github.com/neonlabsorg',
-            label: 'GitHub',
-            position: 'right',
-          },*/
         ]
       },
       footer: {
