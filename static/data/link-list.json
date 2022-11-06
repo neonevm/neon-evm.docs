@@ -75,7 +75,7 @@
       {
         "id": 4,
         "icon": "/icons/indexing.svg",
-        "title": "Indexing Dashboard",
+        "title": "NeonAnalytics",
         "description": "Analyze deployed contracts",
         "url": "https://neon.aleph.cloud/"
       }
