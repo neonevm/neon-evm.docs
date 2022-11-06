@@ -104,7 +104,7 @@ const config = {
               { label: 'BlockExplorer', to: 'https://neonscan.org/' },
               { label: 'NeonPass', to: 'https://neonpass.live/' },
               { label: 'NeonFaucet', to: 'https://neonfaucet.org/' },
-              { label: 'Indexing Dashboard', to: 'https://neon.aleph.cloud/' },
+              { label: 'NeonAnalytics', to: 'https://neon.aleph.cloud/' },
             ]
           },
           {

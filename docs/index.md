@@ -11,15 +11,15 @@ import {FeedbackForm} from '@site/src/components/FeedbackForm'
 
 <QuickStartList/>
 
-<CommonBannerBlock title='Learn about Neon' description='Read Neon ecosystem<br /> basics and start using it' 
-  icon='/img/learn.svg' to='/docs/about/why_neon' background='#ECFFF8' />
-<CommonBannerBlock title='Join Neon Governance' description='Start influencing on Neon’s ecosystem<br /> development by participating in Voting' 
+<CommonBannerBlock title='Learn about Neon' description='Read Neon ecosystem<br /> basics and start using it'
+  icon='/img/learn.svg' to='/docs/about/neon_ecosystem' background='#ECFFF8' />
+<CommonBannerBlock title='Join Neon Governance' description='Start influencing on Neon’s ecosystem<br /> development by participating in Voting'
   icon='/img/governance.svg' to='/docs/governance/overview' background='#FFF1FA' />
-<CommonBannerBlock title='Become an Operator' description='Learn Technical Requirements and<br /> how to run & operate Neon Proxy' 
+<CommonBannerBlock title='Become an Operator' description='Learn Technical Requirements and<br /> how to run & operate Neon Proxy'
   icon='/img/proxy.svg' to='/docs/operating/operator_requirements' background='#F7F0FF' imageStyle={{marginTop: '-35px'}} />
 
 ### Help & Support
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+Feel free to reach out to us in our Discord community.
 
 <ServiceLink title='Ask on Discord' description='Our 🛟 rescue team is ready to help' icon='/icons/discord.svg' link='https://discord.com/invite/d9BhxNWTsj' />

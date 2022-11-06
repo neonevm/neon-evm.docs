@@ -50,23 +50,16 @@ const sidebars = {
       ]
     },
     {
-      type: 'category',
+      type: 'doc',
       label: '💬 FAQ',
-      items: [
-        'faq/what-is-neon',
-        'faq/how-does-neon-work',
-        'faq/how-use-neon',
-        'faq/why-choose-neon',
-        'faq/how-run-neon-evm',
-        'faq/couldnt-find-answer'
-      ]
+      id: 'faq/neon-brief-faq',
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Tools</h4>' },
     { type: 'link', label: 'NeonScan', href: 'https://neonscan.org/' },
     { type: 'link', label: 'NeonPass', href: 'https://neonpass.live/' },
     { type: 'link', label: 'NeonFaucet', href: 'https://neonfaucet.org/' },
-    { type: 'link', label: 'Indexing Dashboard', href: 'https://neon.aleph.cloud/' },
+    { type: 'link', label: 'NeonAnalytics', href: 'https://neon.aleph.cloud/' },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Developers</h4>' },
     {
