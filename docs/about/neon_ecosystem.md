@@ -1,14 +1,18 @@
 ---
-title: Neon Ecosystem
+title: Quick Look at Neon EVM
 ---
 
-<div className='neon-img-box-300' style={{textAlign: 'center', width: 800, display: 'block', margin: 'auto'}}>
+<div className='neon-img-box-300' style={{textAlign: 'center', width: 700, display: 'block', margin: 'auto'}}>
 
 ![](img/neon_ecosystem.png)
 
 </div>
 
 ## Neon EVM core
+
+**​​Neon EVM** facilitates the usage of Ethereum tooling by dApp developers to scale and access liquidity on Solana. Neon EVM offers Ethereum ecosystem dApp developers increased throughput and swift block time on Solana, with low gas prices and no need for changing code – anyone can run Ethereum contracts on Solana with Neon EVM.
+
+**Ethereum Tooling**: [Metamask](/docs/wallet/metamask_setup), [Hardhat](/docs/developing/deploy_facilities/using_hardhat), [Truffle](/docs/developing/deploy_facilities/using_truffle), [Remix](/docs/developing/deploy_facilities/using_remix)
 
 **Neon EVM program** is a smart contract on the Solana blockchain. This allows Neon EVM to receive Ethereum-like transactions and process them on Solana according to Ethereum rules. Ethereum transactions going through Neon EVM, called Neon Transactions, are used as inputs for the targeted Neon Clients.
 
@@ -20,6 +24,7 @@ The [NEON token](/docs/tokens/neon_token) is used to pay the [gas fees](/docs/to
 **Tokens** - on Neon EVM you can use
 * [NEON token](/docs/tokens/neon_token) as a gas
 * [ERC-20 with SPL](/docs/developing/deploy_facilities/interacting_with_spl_tokens) under the hood
+* [NeonPass](/docs/token_transferring/neonpass_usage) to transfer tokens between Solana and Neon EVM
 
 
 ## Integrations

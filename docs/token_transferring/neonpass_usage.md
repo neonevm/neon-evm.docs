@@ -25,7 +25,7 @@ Transferring tokens using NeonPass occurs in three stages:
 
 ### The Source Stage
 
-Go to the [NeonPass](https://neonpass.live/) page in the browser to which the Phantom and MetaMask wallets are attached. Make sure that the icons of these wallets are displayed at the top right. By default, the direction of transferring tokens is set from `Solana` to `Neon`. If this is not the case, you have to click on the arrow icon to reverse the forwarding direction.
+Go to the [NeonPass](https://neonpass.live/) page in the browser to which the Phantom and MetaMask wallets are attached.
 
 <div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
@@ -33,7 +33,11 @@ Go to the [NeonPass](https://neonpass.live/) page in the browser to which the Ph
 
 </div>
 
-Click `Connect Wallet` to connect your MetaMask wallet to the NeonPass app. The MetaMask window should pop up on the screen. Follow the login procedure to your wallet and make sure it is connected to Devnet. Also, make sure you have enough USDT tokens in your account to transfer (there are 987.9 USDT in our example) and have a non-zero NEON balance to pay the withdrawal approval fee. Upon successful connection of the MetaMask wallet to NeonPass and access to your account balance, the inscription `Connect Wallet` will change to the public key of your account in the Neon EVM.
+1. Make sure that the icons of these wallets are displayed at the top right.
+2. By default, the direction of transferring tokens is set from `Solana` to `Neon`. If this is not the case, you have to click on the arrow icon to reverse the forwarding direction.
+3. Click `Connect Wallet` to connect your MetaMask wallet to the NeonPass app. The MetaMask window should pop up on the screen. Follow the login procedure to your wallet and make sure it is connected to Devnet. Also, make sure you have enough USDT tokens in your account to transfer (there are 987.9 USDT in our example) and have a non-zero NEON balance to pay the withdrawal approval fee.
+
+Upon successful connection of the MetaMask wallet to NeonPass and access to your account balance, the inscription `Connect Wallet` will change to the public key of your account in the Neon EVM.
 
 <div className='neon-img-box-300' style={{textAlign: 'center'}}>
 

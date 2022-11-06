@@ -35,7 +35,7 @@ After that, you should see your wallet linked to your account.
 There are two ways to connect MetaMask to a remote Neon proxy.
 
 #### Option A: Automatic Setup with Chainlist.org
-Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You should see `Neon EVM Devnet` and `Neon EVM Mainnet`.  
+Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar, toggle "Testnets". You should see `Neon EVM Devnet` and `Neon EVM Mainnet`.  
 
 ![](../developing/img/chainlist_neon.png)
 

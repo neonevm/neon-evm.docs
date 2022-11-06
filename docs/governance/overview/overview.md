@@ -28,6 +28,12 @@ Learn more about the [voting process](/docs/governance/proposals/proposals.md).
 
 Neon is decentralized and its economy is fee-based, with NEON tokens being used for governance purposes. Following the same philosophy, the Neon DAO is itself handled by a decentralized protocol with a clear and user-friendly process for proposing and voting for protocol improvements. It is organized as a series of decentralized **Assemblies** that are each responsible for a different aspect of the decisionmaking process. These Assemblies are grouped into the following three **Focus Areas**:
 
+<div className='neon-img-box-600' style={{textAlign: 'center', width: 700, display: 'block', margin: 'auto'}}>
+
+![](img/dao_organization.png)
+
+</div>
+
 ### Ecosystem Focus Area
 
 The [Ecosystem Focus Area](/docs/governance/neon_daos/#ecosystem-focus-area) contains the Assemblies responsible for the promotion of Neon community initiatives and incentivizing long-term ecosystem growth. The use cases involving this Focus Area include [rewarding users and teams for creating Neon ecosystem projects](/docs/governance/neon_daos/#usage-scenarios).

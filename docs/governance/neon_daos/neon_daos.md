@@ -26,7 +26,7 @@ The Neon DAO consists of three (3) Focus Areas, each of which carries out functi
 
 The following is a diagram visualizing the relationships between the Neon DAO's Focus Areas and their constituent Assemblies:
 
-<div className='neon-img-box-600' style={{textAlign: 'center', width: 400, display: 'block', margin: 'auto'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center', width: 700, display: 'block', margin: 'auto'}}>
 
 ![](img/dao_organization.png)
 
