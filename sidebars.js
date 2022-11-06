@@ -18,7 +18,7 @@ const sidebars = {
     {
       type: 'doc',
       label: '🏓 Quick Start',
-      id: 'index'
+      id: 'quick_start'
     },
     {
       type: 'category',

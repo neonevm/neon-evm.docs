@@ -6,8 +6,18 @@
   margin-bottom: 50px;
 }
 
+.service-link:hover .service-link-icon {
+  transform: scale(1.1);
+}
+
+
+.service-link:hover .service-link-content h4 {
+  color: var(--ifm-color-primary);
+}
+
 .service-link-icon {
   width: 64px;
+  transition: all 0.3s ease;
 }
 
 .service-link-content {
@@ -16,6 +26,7 @@
 
 .service-link-content h4 {
   margin-bottom: 0;
+  transition: all 0.3s ease;
 }
 
 .service-link-content p {
