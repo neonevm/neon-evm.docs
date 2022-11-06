@@ -10,7 +10,7 @@ This guide assumes proficiency in JavaScript.
 
 ## Full JavaScript Code
 
-This code is also available on [CodeSandbox](https://codesandbox.io/s/lucid-mountain-c41v4o?file=/src/App.js:0-1038).
+This code is also available on [CodeSandbox](https://codesandbox.io/s/autumn-sky-0gkxs4).
 
 ```javascript
 import detectEthereumProvider from "@metamask/detect-provider";

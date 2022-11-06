@@ -30,4 +30,4 @@ import {FeedbackForm} from '@site/src/components/FeedbackForm'
 
 Feel free to reach out to us in our Discord community.
 
-<ServiceLink title='Ask on Discord' description='Our 🛟 rescue team is ready to help' icon='/icons/discord.svg' link='https://discord.com/invite/d9BhxNWTsj' />
+<ServiceLink title='Ask on Discord' description='Our 🧰 rescue team is ready to help' icon='/icons/discord.svg' link='https://discord.com/invite/d9BhxNWTsj' />
