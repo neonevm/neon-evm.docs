@@ -62,7 +62,7 @@ const config = {
           {
             label: 'Quick Start',
             position: 'left',
-            to: '/docs'
+            to: '/docs/quick_start'
           },
           {
             label: 'Operate',
@@ -74,11 +74,6 @@ const config = {
             position: 'left',
             to: '/docs/architecture/neon_evm_arch'
           }
-          /*{
-            href: 'https://github.com/neonlabsorg',
-            label: 'GitHub',
-            position: 'right',
-          },*/
         ]
       },
       footer: {
@@ -90,7 +85,7 @@ const config = {
           {
             title: 'Get started',
             items: [
-              { label: '🏓 Quick Start', to: '/docs' },
+              { label: '🏓 Quick Start', to: '/docs/quick_start' },
               { label: '🧬 Neon EVM Overview', to: '/docs/about/why_neon' },
               { label: '🔑 Set up Wallet', to: '/docs/wallet/metamask_setup' },
               { label: '🪙 Tokens', to: '/docs/tokens/neon_token' },
@@ -161,17 +156,6 @@ const config = {
           customCss: require.resolve('./src/css/custom.css')
         }
       })
-    ]
-  ],
-  plugins: [
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [{ from: '/', to: '/docs' }],
-        createRedirects(existingPath) {
-          console.log(existingPath);
-        }
-      }
     ]
   ]
 };

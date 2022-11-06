@@ -14,10 +14,15 @@ h3 {
   display: flex;
   flex-flow: row;
   margin-bottom: 24px;
+  transition: all 0.3s ease;
 }
 
 .quick-start-item:hover {
   text-decoration: none;
+}
+
+.quick-start-item:hover .quick-start-icon {
+  transform: scale(1.1);
 }
 
 .quick-start-item:hover .quick-start-title {
@@ -26,6 +31,7 @@ h3 {
 
 .quick-start-icon {
   width: 40px;
+  transition: all 0.3s ease;
 }
 
 .quick-start-icon img {
@@ -41,6 +47,7 @@ h3 {
   font-size: 15px;
   line-height: 20px;
   color: var(--docsearch-text-color);
+  transition: all 0.3s ease;
 }
 
 .quick-start-description {

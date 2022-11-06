@@ -12,15 +12,12 @@ export interface CommonBannerBlockProps {
 }
 
 export const CommonBannerBlock = (props: CommonBannerBlockProps) => {
-  const { title, description, icon, background, to, imageStyle } = props;
+  const { description, icon, background, to, imageStyle } = props;
 
-  return <>
-    <h2>{title}</h2>
-    <Link className={'common-banner'} style={{ background }} to={to}>
-      <div className={'image'}>
-        <img src={icon} alt={icon} style={imageStyle} />
-      </div>
-      <p dangerouslySetInnerHTML={{ __html: description }}></p>
-    </Link>
-  </>;
+  return <Link className={'common-banner'} style={{ background }} to={to}>
+    <div className={'image'}>
+      <img src={icon} alt={icon} style={imageStyle} />
+    </div>
+    <p dangerouslySetInnerHTML={{ __html: description }}></p>
+  </Link>;
 };
