@@ -21,7 +21,7 @@ const sidebars = {
     },
     {
       type: 'doc',
-      label: '🔑 Set up Wallet',
+      label: '🔑 Set Up Wallet',
       id: 'wallet/metamask_setup'
     },
     {
@@ -80,7 +80,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Integrate',
+      label: 'Integrations',
       items: [
         'developing/integrate/oracles/integrating_chainlink',
         'developing/integrate/oracles/integrating_pyth',
@@ -132,7 +132,7 @@ const sidebars = {
     },
     {
       type: 'doc',
-      label: 'Running a Proxy server',
+      label: 'Running a Proxy Server',
       id: 'operating/operator_guide'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },

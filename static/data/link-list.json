@@ -13,7 +13,7 @@
       {
         "id": 1,
         "icon": "/icons/config.svg",
-        "title": "Configure & use devtools",
+        "title": "Configure & use dev tools",
         "description": "Hardhat, Truffle",
         "url": "/docs/developing/deploy_facilities/configure_hardhat"
       },
@@ -47,8 +47,8 @@
       {
         "id": 0,
         "icon": "/icons/metamask.svg",
-        "title": "Metamask",
-        "description": "Connect to Neon network",
+        "title": "MetaMask",
+        "description": "Connect to the Neon network",
         "url": "/docs/wallet/metamask_setup"
       },
       {
