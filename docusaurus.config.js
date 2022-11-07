@@ -82,7 +82,7 @@ const config = {
             items: [
               { label: '🏓 Quick Start', to: '/docs/quick_start' },
               { label: '🧬 Neon EVM Overview', to: '/docs/about/why_neon' },
-              { label: '🔑 Set up Wallet', to: '/docs/wallet/metamask_setup' },
+              { label: '🔑 Set Up Wallet', to: '/docs/wallet/metamask_setup' },
               { label: '💰 Tokens', to: '/docs/tokens/neon_token' },
               { label: '🛰 Transfer Tokens', to: '/docs/token_transferring/neonpass_usage' },
               { label: '💬 FAQ', to: '/docs/faq/what-is-neon' }
@@ -115,19 +115,13 @@ const config = {
                 to: '/docs/developing/integrate/oracles/integrating_chainlink'
               },
               { label: 'Tutorials', to: '/docs/developing/deploy_facilities/using_hardhat' },
-              { label: 'EVM Compatibility', to: '/docs/evm_compatibility/json_rpc_api_methods' },
-              {
-                label: 'Set up Neon EVM Locally',
-                to: '/docs/developing/dev_environment/op2_local_proxy_local_solana'
-              },
-              { label: 'Learn', to: '/docs/architecture/neon_evm_arch' }
             ]
           },
           {
             title: 'Operators',
             items: [
               { label: 'Operator Requirements', to: '/docs/operating/operator_requirements' },
-              { label: 'Running a Proxy server', to: '/docs/operating/operator_guide' }
+              { label: 'Running a Proxy Server', to: '/docs/operating/operator_guide' }
             ]
           },
           {

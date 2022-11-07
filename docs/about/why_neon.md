@@ -2,7 +2,7 @@
 title: Why Neon EVM
 ---
 
-*Neon EVM is viable solution for anyone who is looking to scale Ethereum dApps on Solana in a developer-friendly manner and get access the growing Solana Ecosystem*
+*Neon EVM is a solution for anyone looking to scale Ethereum dApps on Solana in a developer-friendly manner and get access the growing Solana Ecosystem.*
 
 ## Neon EVM
 

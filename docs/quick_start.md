@@ -7,23 +7,22 @@ import {ServiceLink} from '@site/src/components/ServiceLink'
 import {PageHelpful} from '@site/src/components/PageHelpful'
 import {FeedbackForm} from '@site/src/components/FeedbackForm'
 
-*Neon EVM is viable solution for anyone who is looking to scale Ethereum dApps on Solana in a developer-friendly manner and get access the growing Solana Ecosystem*
+*Neon EVM is a solution for anyone looking to scale Ethereum dApps on Solana in a developer-friendly manner and get access the growing Solana Ecosystem.*
 
 <QuickStartList/>
 
 ### Learn about Neon
 
-<CommonBannerBlock description='Read Neon ecosystem<br /> basics and start using it'
+<CommonBannerBlock description='Read about the basics of the Neon ecosystem'
   icon='/img/learn.svg' to='/docs/about/neon_ecosystem' background='#ECFFF8' />
 
 ### Join Neon Governance
-
-<CommonBannerBlock description='Start influencing on Neon’s ecosystem<br /> development by participating in Voting'
+<CommonBannerBlock description='Influence Neon’s ecosystem development<br /> by casting your vote'
   icon='/img/governance.svg' to='/docs/governance/overview' background='#FFF1FA' />
 
 ### Become an Operator
 
-<CommonBannerBlock description='Learn Technical Requirements and<br /> how to run & operate Neon Proxy'
+<CommonBannerBlock description='Learn technical requirements and<br /> how to run and operate Neon Proxy'
   icon='/img/proxy.svg' to='/docs/operating/operator_requirements' background='#F7F0FF' imageStyle={{marginTop: '-35px'}} />
 
 ### Help & Support
