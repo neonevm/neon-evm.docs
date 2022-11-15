@@ -50,7 +50,7 @@ The final formula for the gas fee for a Neon transaction with N iterations and S
 ## Examples
 The following are some examples of gas fee calculation on Neon. They are all based on the following assumptions:
 * The SOL price is $30 and the NEON price is $0.25
-* The SOL-to-NEON rate is therefore 120.
+* The SOL-to-NEON rate is therefore 30 / 0.25 = 120.
 * The Proxy Operator fee is 10%.
 * The gas price is therefore (1 + 10%) \* 120 \* 10<sup>-9</sup> NEON = 132 \* 10<sup>9</sup> Alan = 132 Galan
 
