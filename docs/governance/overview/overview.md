@@ -10,17 +10,17 @@ The Neon DAO's Assemblies are built using [SPL Governance](https://github.com/so
 
 ## Voting Process Overview
 
-1. Any DAO participant may bring their ideas to the community via the Neon Forum on Discord. These ideas will be discussed on Discord and evaluated by the community to gauge whether there is enough will and consensus to effect changes to kick off the next stage. This stage can be considered as an **off-chain** governance voting.
-2. If there is enough consensus for the idea to be discussed further, a DAO participant then creates an official proposal on Neon DAO. This is now on-chain governance territory, and the components for it are implemented on Solana.  
-3. Once the proposal has been made, DAO participants may temporarily lock up their NEON tokens and receive their respective voting rights to vote on the proposal. DAO participants vote on this proposal during a pre-defined voting period
+1. Any DAO participant may bring their ideas to the community via the Neon Forum on Discord. These ideas will be discussed on Discord and evaluated by the community to gauge whether there is enough will and consensus to effect the changes and kick off the next stage. This stage can be considered an example of **off-chain** governance.
+2. If there is enough support for the idea to be discussed further, a DAO participant creates an official proposal on the Neon DAO. The idea now enters on-chain governance territory, and the components for it are implemented on Solana.  
+3. Once the proposal has been made, DAO participants may temporarily lock up their NEON tokens and receive their respective voting rights to vote on the proposal. DAO participants vote on this proposal during a pre-defined voting period. Voting works as follows:
    * 1 NEON token = 1 vote
    * A proposal is accepted if
-     1. The number of **"Yes"** votes exceeds a pre-determined threshold amount, and
-     2. The number of **"Yes"** votes exceeds the number of **"No"** votes
+     1. The number of **"Accept"** votes exceeds a pre-determined threshold amount, and
+     2. The number of **"Accept"** votes exceeds the number of **"Reject"** votes
    * Otherwise, the proposal is rejected
-4. Any DAO member can execute transactions in approved proposal during the **hold-up period**, which is the minimum time required to elapse before an approved proposal may be executed.
+4. Any DAO member can execute an approved proposal after the **hold-up period** has passed.
 
-All Neon DAO parameters, such as the pass threshold to accept a proposal, voting period, hold-up period, and the minimum token amount required to create a proposal, can be found in the Neon Governance UI.
+All Neon DAO parameters, such as the pass threshold to accept a proposal, voting period, hold-up period, and the minimum token amount required to create a proposal, can be found on the Neon Governance UI.
 
 Learn more about the [voting process](/docs/governance/proposals/proposals.md).
 
@@ -28,7 +28,7 @@ Learn more about the [voting process](/docs/governance/proposals/proposals.md).
 
 Neon is decentralized and its economy is fee-based, with NEON tokens being used for governance purposes. Following the same philosophy, the Neon DAO is itself handled by a decentralized protocol with a clear and user-friendly process for proposing and voting for protocol improvements. It is organized as a series of decentralized **Assemblies** that are each responsible for a different aspect of the decisionmaking process. These Assemblies are grouped into the following three **Focus Areas**:
 
-<div className='neon-img-box-600' style={{textAlign: 'center', width: 700, display: 'block', margin: 'auto'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
 
 ![](img/dao_organization.png)
 
