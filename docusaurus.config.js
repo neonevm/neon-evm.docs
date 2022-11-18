@@ -78,7 +78,7 @@ const config = {
         },
         links: [
           {
-            title: 'Get started',
+            title: 'Getting Started',
             items: [
               { label: '🏓 Quick Start', to: '/docs/quick_start' },
               { label: '🧬 Neon EVM Overview', to: '/docs/about/why_neon' },

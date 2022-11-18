@@ -36,11 +36,7 @@ The DAO Forum is not the place for general discussions, advertising, off-topic c
 
 ## Measures Against Abuse and Misuse
 
-Like any governance system, the Neon DAO faces the risk of malicious actors being involved, which could jeopardize the Neon ecosystem as well as treasury or user funds if their subversive proposals are erronously passed. To reduce this risk, the Neon DAO has implemented defensive measures in three key areas, corresponding to stages along the process of a proposal becoming implemented. These areas are:
-
-* Limiting the number of proposals
-* Detecting malicious proposals
-* Cancelling malicious proposals
+Like any governance system, the Neon DAO faces the risk of malicious actors being involved, which could jeopardize the Neon ecosystem as well as treasury or user funds if their subversive proposals are erronously passed. To reduce this risk, the Neon DAO has implemented defensive measures in several key areas, corresponding to stages along the process of a proposal becoming implemented. These areas include limiting the number of proposals, detecting malicious proposals, and cancelling malicious proposals.
 
 ### Limiting the Number of Proposals
 Malicious actors have an easier time pushing through one of their proposals if they can submit as many proposals as they like. To prevent this, the Neon DAO's Assemblies have protections in place to limit the number of proposals an Assembly can accept from a given user. These measures include:

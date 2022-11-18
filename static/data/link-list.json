@@ -7,34 +7,34 @@
         "id": 0,
         "icon": "/icons/rpc.svg",
         "title": "Connect to Neon RPC",
-        "description": "Start building right now",
+        "description": "Start building right away",
         "url": "/docs/developing/connect_rpc"
       },
       {
         "id": 1,
         "icon": "/icons/config.svg",
-        "title": "Configure & use dev tools",
-        "description": "Hardhat, Truffle",
+        "title": "Configure & Use Devtools",
+        "description": "Hardhat and Truffle",
         "url": "/docs/developing/deploy_facilities/configure_hardhat"
       },
       {
         "id": 2,
         "icon": "/icons/token.svg",
-        "title": "Get test tokens",
-        "description": "Airdrop test tokens",
+        "title": "Get Test Tokens",
+        "description": "Interact with dApps at no cost",
         "url": "/docs/developing/utilities/faucet"
       },
       {
         "id": 3,
         "icon": "/icons/daps.svg",
         "title": "Deploy dApps",
-        "description": "Using Hardhat, Truffle, Remix",
+        "description": "Using Hardhat, Truffle, and Remix",
         "url": "/docs/developing/deploy_facilities/using_remix"
       },
       {
         "id": 4,
         "icon": "/icons/sol.svg",
-        "title": "Use Solana native tokens",
+        "title": "Use Solana-Native Tokens",
         "description": "Get access to Solana liquidity",
         "url": "/docs/developing/deploy_facilities/interacting_with_spl_tokens"
       }

@@ -14,8 +14,8 @@ The Neon DAO model is based on the interplay and synergy of several decentralize
 
 * An idea for potential implementation is brought to an Assembly within a Focus Area.
 * Assembly participants discuss, review, and revise the proposed idea off-chain.
-* If a prelimiary consensus has been reached, the idea is fleshed out and finalized into a proposal, which includes instructions to automatically implement the desired changes.
-* The proposal is taken to a simple "Yes"/"No" vote, and eligible voters cast votes (in the form of NEON tokens) for their preferred option, with 1 NEON being equivalent to one vote.
+* If a preliminary consensus has been reached, the idea is fleshed out and finalized into a proposal, which includes instructions to automatically implement the desired changes.
+* The proposal is taken to a simple "Accept"/"Reject" vote, and eligible voters cast votes (in the form of NEON tokens) for their preferred option, with 1 NEON being equivalent to one vote.
 
 ## Focus Areas Overview
 
@@ -26,7 +26,7 @@ The Neon DAO consists of three (3) Focus Areas, each of which carries out functi
 
 The following is a diagram visualizing the relationships between the Neon DAO's Focus Areas and their constituent Assemblies:
 
-<div className='neon-img-box-600' style={{textAlign: 'center', width: 700, display: 'block', margin: 'auto'}}>
+<div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
 
 ![](img/dao_organization.png)
 
@@ -38,35 +38,36 @@ The parameters pertaining to the Neon DAO governance framework may be adjusted a
 
 The Ecosystem Focus Area is charged with the promotion of sustainable, long-term growth of the Neon ecosystem. As the collective owner of the Neon Treasury, its duties and responsibilties consist of distribution of funds for grants, security audits, bug bounties, and other ecosystem initiatives.
 
-Within the Ecosystem Focus Area, the Ecosystem Assembly and Foundation work in collaboration to provide a frictionless experience for Ecosystem developers. The Ecosystem Assembly provides custodial services to the Foundation, informs Foundation on decisions taken and let's Foundation distribute funds based on its own legal assessment of counterparties.
-
-A typical scenario, funding an ecosystem initiative, would have the proponent proceed as follows:
-1. During the off-chain stage, the Assembly discusses and evaluates the proper incentives to provide for the initiative in question.
-2. Create a proposal to
-   * Transfer the agreed-upon funds from the Neon Treasury to the one of Budget account
-   * Delegate an allocation of the part of Budget account to be used by the Foundation
-3. The proposal is voted on and, if approved, leads to the transfer of funds to the Budget account.
+Within the Ecosystem Focus Area, the Ecosystem Assembly and Foundation work in collaboration to provide a frictionless experience for Ecosystem developers. The Ecosystem Assembly provides custodial services to the Foundation, informs the Foundation on decisions taken, and lets the Foundation distribute funds based on its own legal assessment of potential grantees.
 
 ### Ecosystem Assembly
 
-The Ecosystem Assembly is the most active Assembly in the Neon DAO.  Most Ecosystem Assembly proposals deal with the matter of distributing tokens from one treasury account to another. The following are some examples:
-* Evaluates and votes on proposals for funds distribution
-* Informs Foundation on decisions taken and let's Foundation distribute funds based on its own legal assessment of counterparties
+The Ecosystem Assembly is the most active Assembly in the Neon DAO. Most Ecosystem Assembly proposals deal with the matter of distributing tokens from one treasury account to another. The following are some examples:
+* Evaluating and voting on proposals for distribution of funds
+* Informing the Foundation on decisions taken, and letting the Foundation distribute funds based on its own legal assessment of potential grantees
+
+#### Usage Scenarios
+A typical scenario, funding an ecosystem initiative, would proceed as follows:
+1. During the off-chain stage, the Assembly discusses and evaluates the proper incentives to provide for the initiative in question.
+2. The proponent of the idea then creates a proposal to
+   * Transfer the agreed-upon funds from the Neon Treasury to one of the Budget accounts
+   * Delegate an allocation of part of the Budget account to be used by the Foundation
+3. The proposal is voted on and, if approved, leads to the transfer of funds to the Budget account.
 
 ### Neon Foundation
-The Neon Foundation is an organization that responsible for implementing Ecosystem Assembly proposals. These responsibilities include:
+The Neon Foundation is an organization that is responsible for implementing Ecosystem Assembly proposals. These responsibilities include:
 * Performing necessary Know-Your-Customer (KYC) and Anti-Money Laundering (AML) processes for contractors and grantees
 * Signing agreements with contractors
-* Process signed agreements with regards to acceptance and payments
+* Processing signed agreements with regards to acceptance and payments
 
 ## Development
-As the owner of the Neon EVM program, the Development Assembly is the only component of the Development Focus Area. This Assembly is the group that deals with the technical aspects of the Neon EVM, and can upgrade Neon EVM version. In break-glass emergency scenarios, Emergency Engineers, appointed by the Development Assembly, may elect to stop the Neon EVM without the Assembly's approval.
+As the owner of the Neon EVM program, the Development Assembly is the only component of the Development Focus Area. This Assembly is the group that deals with the technical aspects of the Neon EVM, and can upgrade the Neon EVM version. In break-glass emergency scenarios, Emergency Engineers, appointed by the Development Assembly, may elect to stop the Neon EVM without the Assembly's approval.
 
 ### Development Assembly
 
 The Development Assembly is responsible for overseeing upgrades to the Neon EVM, identifying and prioritizing relevant feature upgrades, appointing Emergency Engineers, as well as for preventing funds from being maliciously withdrawn from dApps on Neon.
 
-When upgrading the Neon EVM, Development Assembly can add and remove precompiled Neon EVM versions from its approved version list. The Development Assembly also appoints Emergency Engineers that have the power to upgrade the EVM to an approved version without the Assembly's approval. These Engineers can also stop and restart the Neon EVM in case of an emergency.
+When upgrading the Neon EVM, the Development Assembly can add and remove precompiled Neon EVM versions from its approved version list. The Development Assembly also appoints Emergency Engineers that have the power to upgrade the EVM to an approved version without the Assembly's approval. These Engineers can also stop and restart the Neon EVM in case of an emergency.
 
 #### Usage Scenarios
 The Development Assembly allows for proposals dealing with the following:

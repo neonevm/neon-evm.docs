@@ -15,7 +15,7 @@ It is **strongly recommended** to follow the [consumer best practices](https://d
 To consume prices, you need to look up the price feed ID for the token symbol you are interested in.
 The Pyth Network website lists the NEON price feed IDs for [devnet](https://pyth.network/developers/price-feed-ids/#neon-evm-devnet) and [mainnet](https://pyth.network/developers/price-feed-ids/#neon-evm-mainnet).
 
-```solidity
+```javascript
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity ^0.8.0;
 

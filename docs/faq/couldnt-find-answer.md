@@ -1,5 +1,5 @@
 ---
-title: I couldn't find an answer to my issue
+title: I couldn't find an answer to my question
 ---
 
 I have a question about the Neon EVM that is not answered in the FAQ. What do I do?

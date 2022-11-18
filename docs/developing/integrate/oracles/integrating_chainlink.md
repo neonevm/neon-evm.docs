@@ -4,19 +4,19 @@ title: Integrate Chainlink
 
 ## Introduction
 
-Chainlink Data Feeds are the quickest way to connect your smart contracts to the real-world data such as asset prices. It supports Neon EVM and is implemented as a smart contract making Chainlink Data Feeds from Solana network available on Neon EVM. The repo is available on GitHub at [hoodieshq/chainlink-neon](https://github.com/hoodieshq/chainlink-neon).
+[Chainlink Data Feeds](https://data.chain.link/) are the quickest way to connect your smart contracts to real-world data, such as asset prices. It supports Neon EVM and is implemented as a smart contract making Chainlink Data Feeds from Solana network available on Neon EVM. You can learn more from the [hoodieshq/chainlink-neon](https://github.com/hoodieshq/chainlink-neon) repo.
 
 ## How to Use
 
-Once deployed, the contract implements [`AggregatorV3Interface`](https://docs.chain.link/docs/price-feeds-api-reference/#aggregatorv3interface) according to the best practices of the Chainlink Data Feeds
+Once deployed, the contract implements [`AggregatorV3Interface`](https://docs.chain.link/docs/price-feeds-api-reference/#aggregatorv3interface) in accordance with the best practices of the Chainlink Data Feeds
 usage. Follow the official Chainlink documentation to get the [latest](https://docs.chain.link/docs/get-the-latest-price/) or [historical](https://docs.chain.link/docs/historical-price-data/) prices from the data feeds.
 
+Below is an example
 
 ```js
-
 // Consuming data example using JavaScript
 
-// Input is expected to be passed via ENV variables for the sake of brevity.
+// Input is expected to be passed via environment variables for the sake of brevity
 // `ORACLE_ADDRESS` – deployed address of the contract
 // `ROUND` – identifier of the round.
 
