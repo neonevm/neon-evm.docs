@@ -130,6 +130,16 @@ const sidebars = {
     { type: 'html', value: '<h4 class="sidebar-menu-title">Operators</h4>' },
     {
       type: 'doc',
+      label: 'Operate a Neon Proxy',
+      id: 'operating/overview/introduction'
+    },
+    {
+      type: 'doc',
+      label: 'Running neon-proxy with Kubernetes',
+      id: 'operating/installation/installation'
+    },
+    {
+      type: 'doc',
       label: 'Operator Requirements',
       id: 'operating/operator_requirements'
     },

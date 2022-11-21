@@ -121,6 +121,7 @@ const config = {
           {
             title: 'Operators',
             items: [
+              { label: 'Operate a Neon Proxy', to: '/docs/operating/overview/introduction' },
               { label: 'Operator Requirements', to: '/docs/operating/operator_requirements' },
               { label: 'Running a Proxy Server', to: '/docs/operating/operator_guide' }
             ]

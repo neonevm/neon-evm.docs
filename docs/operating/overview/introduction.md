@@ -1,0 +1,21 @@
+---
+title: Operate a Neon Proxy
+---
+
+*This guide is for people who want to register with Neon EVM as a proxy operator for processing transactions on Solana. It is assumed the reader has prior experience compiling Solana-based blockchain nodes, or has worked as blockchain validators.*
+
+## Introduction
+Ethereum users have the opportunity to run their smart contract-based applications on Solana via Neon EVM. Smart contracts generate transactions in accordance with the Ethereum rules and submit them to Neon EVM. Since the structures of Ethereum and Solana transactions differ from each other, Neon EVM contains special proxy servers that are responsible for converting and executing transactions in Solana. These servers are configured and maintained by Neon EVM proxy operators.
+
+This guide contains a list of the proxy operator's duties, as well as instructions to ensure the successful operation of a proxy and the successful execution of transactions.
+
+## Duties of a Proxy Operator
+A proxy operator's main task is to install software on a server to accept a transaction formed according to Ethereum rules, and to ensure its execution in Solana. This involves:
+ * Configuring a proxy server to perform the following operations:
+    * Receiving requests over Web3 API protocol.
+    * Shaping responses using Web3 API protocol.
+    * Converting transactions to the Solana format.
+ * Connecting a proxy server to a Solana cluster RPC endpoint.
+ * Successfully executing transactions.
+
+> All operations related to the execution of transactions on Solana are performed by the software installed on your node.
