@@ -12,10 +12,12 @@ This guide contains a list of the proxy operator's duties, as well as instructio
 ## Duties of a Proxy Operator
 A proxy operator's main task is to install software on a server to accept a transaction formed according to Ethereum rules, and to ensure its execution in Solana. This involves:
  * Configuring a proxy server to perform the following operations:
-    * Receiving requests over Web3 API protocol.
-    * Shaping responses using Web3 API protocol.
-    * Converting transactions to the Solana format.
- * Connecting a proxy server to a Solana cluster RPC endpoint.
- * Successfully executing transactions.
+    * Receiving requests over Web3 API protocol
+    * Shaping responses using Web3 API protocol
+    * Converting transactions to the Solana format
+ * Connecting a proxy server to a Solana cluster RPC endpoint
+ * Successfully executing transactions
 
-> All operations related to the execution of transactions on Solana are performed by the software installed on your node.
+:::note
+All operations related to the execution of transactions on Solana are performed by the software installed on your node.
+:::

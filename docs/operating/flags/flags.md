@@ -9,7 +9,7 @@ When spinning up your own Neon proxy, there are some flags that can be used. Thi
 
 * `-f` - Variables file
 * `-i` - Initialize setup 
-* `-r` - Read-only mode
+* `-r` - Read-only mode. This means that no operator keys are required
 * `-S` - `SOLANA_URL`
 * `-s` - `PP_SOLANA_URL`
 * `-e` - Set environment (`"devnet"`, `"testnet"`, or `"mainnet"`)
