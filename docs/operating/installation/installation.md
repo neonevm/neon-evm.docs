@@ -7,6 +7,25 @@ import TabItem from '@theme/TabItem';
 
 ## Operator Requirements
 
+### Balance Recommendations
+
+First, you must be **registered** in Solana, which involves creating an account with a balance for storing SOL tokens, and getting the account's public and private keys.
+
+There is no strict minimum amount of SOL tokens required to run as an operator on the Neon EVM. However, you should take into account the fact that you will need SOL tokens to create accounts for new users, deploy contracts, and execute transactions.
+
+In addition to the balance for storing SOL tokens, an operator must also have the `NEON_TOKEN_MINT` balance for storing value tokens. These tokens are used to pay funds from users to an operator for the successful execution of transactions. Depending on the chosen configuration, specific values for `NEON_TOKEN_MINT` are described in the table below.
+
+CONFIG | NEON_TOKEN_MINT
+:-|:-
+devnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
+testnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
+local | HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
+
+To create the `NEON_TOKEN_MINT` balance, you can use the following command:
+```bash
+spl-token -u <Solana RPC node URL> create-account <NEON_TOKEN_MINT>
+```
+
 ### Kubernetes
 
 Our operators are based on three kind of kubernetes providers: 
@@ -200,10 +219,15 @@ Learn more about how to root token and unseal key work together [here](https://d
 * `VAULT_HA_REPLICAS` - specifies the number of replicas of vault pods inside your cluster
 
 ### Running `neon-proxy.sh`
+```bash
+./neon-proxy.sh -i -f config.ini
+```
+
+For a list of flags for `neon-proxy.sh`, see the [Command-Line Flags section](operating/../../flags/flags.md).
 
 Once Kubernetes pulls the necessary images, your Neon proxy will start, displaying a myriad of information, such as the network environment, namespace, keys information, Solana URL, and more.
 
-## Examples
+## Walkthroughs
 
 ### Fresh installation in read-only mode without keys
 

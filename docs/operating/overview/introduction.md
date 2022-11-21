@@ -10,7 +10,7 @@ Ethereum users have the opportunity to run their smart contract-based applicatio
 This guide contains a list of the proxy operator's duties, as well as instructions to ensure the successful operation of a proxy and the successful execution of transactions.
 
 ## Duties of a Proxy Operator
-A proxy operator's main task is to install software on a server to accept a transaction formed according to Ethereum rules, and to ensure its execution in Solana. This involves:
+A proxy operator's main task is to install software on a server in order to accept a transaction formed according to Ethereum rules, and to ensure its execution in Solana. This involves:
  * Configuring a proxy server to perform the following operations:
     * Receiving requests over Web3 API protocol
     * Shaping responses using Web3 API protocol
