@@ -140,6 +140,11 @@ const sidebars = {
     },
     {
       type: 'doc',
+      label: 'Command Line Flags',
+      id: 'operating/flags/flags'
+    },
+    {
+      type: 'doc',
       label: 'Operator Requirements',
       id: 'operating/operator_requirements'
     },

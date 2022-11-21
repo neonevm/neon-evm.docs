@@ -53,7 +53,8 @@ git clone https://github.com/neonlabsorg/infrastructure-kubernetes.git
 cd infrastructure-kubernetes/
 ```
 
-It will deploy the following:
+:::info
+The scripts in [neonlabsorg/infrastructure-kubernetes](https://github.com/neonlabsorg/infrastructure-kubernetes) will deploy the following:
 1. The `neon-proxy` namespace 
 2. The `proxy-svc` Proxy service  
 3. The `indexersvc` Indexer service  
@@ -62,16 +63,72 @@ It will deploy the following:
 6. Loki (tool for log collection from all applications inside the cluster)
 7. Grafana (visualization tool for monitoring metrics)
 
-Next, copy and set environment variables:
+For the database service, there are two options available, both of which will be described in detail in the following section.
+:::
+
+Next, copy the configuration file into `config.ini`:
 ```bash
 cp config.ini.sample config.ini
 ```
 
+This is where you configure various aspects of how you wish to run your proxy. Open it with your text editor of choice.
+
 ### Configuration
 
-`config.ini` contains environment variables.
+`config.ini` contains environment variables that dictate how the services within the proxy are run. It is organized into the following sections:
+* [`General`](#general)
+* `Solana`
+* `Proxy`
+* [`Postgres`](#postgres)
+* `Vault`
+* `Prometheus`
+* `Grafana`
 
-`P_ENV` decides which environment you will connect to: devnet, testnet, or mainnet.
+#### `General`
+
+* `P_ENV` - decides which environment you will connect to: `devnet`, `testnet`, or `mainnet`.
+* `INGRESS_ENABLED` - enables/disables the ingress for the cluster
+* `VAULT_ENABLED` - enables/disables [Hashicorp Vault](https://www.vaultproject.io/) container inside your cluster as a service
+* `NEON_PROXY_ENABLED` - enables/disables neonlabs proxy container
+* `POSTGRES_ENABLED` - enables/disables local Postgresql pods (see the [`Postgres` section](#postgres))
+* `CLUSTER_TYPE` - indicates the Kubernetes provider used. Options are `"eks"`, `"gke"` or `"localhost"` (see the [Kubernetes section](#kubernetes))
+* `NAMESPACE` - indicates the namespace that the proxy will be deployed inside the cluster. Default is `neon-proxy`
+* `KEY_DIR` - path to the directory containing your neon-labs operator keys, relative to the current directory
+* `KEY_MASK` - regular expression that finds your operator key JSON files
+
+#### `Solana`
+The proxy database is based on [Postgres](https://www.postgresql.org/). For database, we have two options:
+
+Here you need to set your ***neon_evm*** host or;
+
+| CONFIG | SOLANA_URL | NEON_CLIT_TIMEOUT | CANCEL_TIMEOUT | 
+| --- | --- | --- | --- |
+| devnet | https://api.devnet.solana.com/ | 10 | 60 (slot) | 
+| testnet | https://api.testnet.solana.com/ | 15 | 60 (slot) | 
+| local | http://localhost:8899 | 1 | 10 (slot) | 
+
+#### `Postgres`
+The proxy database is based on [Postgres](https://www.postgresql.org/). For database, we have two options:
+
+##### Option 1: Run Postgres database inside Kubernetes as a pod
+To run the Postgresql database inside Kubernetes as a pod, simply set 
+
+```bash
+POSTGRES_ENABLED="true"
+```
+
+##### Option 2: Run your own external Postgres database
+Alternatively, you can use your external database from the Kubernetes cluster to your own PostgreSQL database such as RDS(AWS), CloudSQL(GCP) or other bare metal or Virtual Machine-based installation. (Recommended for production)  and then set the following to point to your Postgres database:
+```bash
+POSTGRES_ENABLED="false" # Set this to false to use your own Postgres database
+POSTGRES_HOST="postgres" # Replace with hostname
+POSTGRES_DB="neon-db" # Replace with name of database
+POSTGRES_USER="neon-proxy" # Replace with database username
+```
+
+### Running `neon-proxy.sh`
+
+Once Kubernetes pulls the necessary images, your Neon proxy will start, displaying a myriad of information, such as the chain specification, node name, role, genesis state, and more:
 
 ## Examples
 
