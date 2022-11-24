@@ -15,7 +15,7 @@ Neon EVM is a smart contract on Solana acting as the Ethereum Virtual Machine. I
 
 ### How can I start building on Neon?
 
-To begin building on Neon, follow our [Quick Start Guide](https://docs.neon-labs.org/docs). Porting and deploying your existing EVM contracts onto Neon using Truffle, Remix, or Hardhat is also an easy and seamless process.
+To begin building on Neon, follow our [Quick Start Guide](https://docs.neon-labs.org/docs/quick_start). Porting and deploying your existing EVM contracts onto Neon using Truffle, Remix, or Hardhat is also an easy and seamless process.
 
 ### Why is Neon good for Ethereum dApps?
 
