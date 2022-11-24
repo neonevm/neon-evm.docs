@@ -1,13 +1,7 @@
-.hoverable {
-  filter: brightness(2);
-}
-
 .tooltip-container {
-  max-width: 370px;
   pointer-events: auto !important;
-  background: rgba(91, 89, 89, 0.22) !important;
+  max-width: 370px;
   opacity: 1 !important;
-  border: 1px solid #929292 !important;
   backdrop-filter: blur(11px) !important;
   border-radius: 10px !important;
 }
@@ -17,6 +11,10 @@
   backdrop-filter: blur(11px) !important;
 }
 
+.tooltip-container:before {
+  display: none !important;
+}
+
 
 .tooltip-container:hover {
    visibility: visible !important;
@@ -24,4 +22,10 @@
 
 .link {
   text-decoration: underline;
+}
+
+.link-image {
+  width: 12px;
+  height: 12px;
+  stroke: #DF42AB;
 }
