@@ -21,24 +21,24 @@ In addition to NEON and wNEON tokens, below are some common tokens that are depl
 
 |Token|Mainnet Address                           |
 |-----|:-----------------------------------------|
-|USDC |0x341b332b35441c37c1211f02F2C03c1516ac3AC8|
-|USDT |0x5EE2CDe31b5d88A0574DAD2B4bb6A073A5b228a8|
-|wSOL |0x16869acc45BA20abEFB2DdE2096F66373fDe364F|
+|USDC |Comming soon...                           |
+|USDT |Comming soon...                           |
+|wSOL |Comming soon...                           |
   </TabItem>
   <TabItem value="devnet" label="Devnet">
 
 |Token|Devnet Address                            |
 |-----|:-----------------------------------------|
-|USDT |0x5EFc3A6eD6FDA49702ffb1c65FB433387892b96d|
-|wDAI |0x583E3F2A7a2F78F0ed2bB177563C3D26769e52Ea|
-|USDC |0x8A56FA4d0768c5f15C88E40D4256F41819AbaD56|
-|ETH  |0x20e78b0F0B2bc466F06cb1EBD2D00E7CDD503839|
-|wBTC |0x680dab473Bc8316cD3DE0024AE86fbCdF5211597|
-|AAVE |0xBdd4cDAf6c9bbb6979d043512e7940f869B06b8C|
-|wCRV |0xf45c9FBef4B7e8487173550D66bDE9Cf8990B23b|
-|SUSHI|0xC2bbccFC86436B0e25DF31714C4712E3B5e06061|
-|wBAL |0x5739b129e69e7FB16e52d11B9EF50A6eFdc3cec9|
-|wSOL |0xeFAB85fb00dd005d08C6759c4799cdeD1399243E|  
+|USDT |0xAA24A5A5E273EFAa64a960B28de6E27B87FfDFfc|
+|wDAI |0x4954cd6230C19e63B7c7b131760Ef0C0c424321C|
+|USDC |0xC659B2633Ed725e5346396a609d8f31794d6ac50|
+|ETH  |0x90306D9492eB658e47A64Ef834e76c81A0242598|
+|wBTC |0x07A274154D79C23d5cd7ba78a243645E419CDd46|
+|AAVE |0xAb94bD2221cAc77FEbDB0B979Eb8839Ed7dDB981|
+|wCRV |0xcd7cD0Fe96D89aA98F1cB8f17cD31dCb6eA90D0d|
+|SUSHI|0x74bcA1362b31d52198E102d9E5f5B9af360D6750|
+|wBAL |0x4C694ac087B2D1DFcB7e868af6C0561f070B7f6C|
+|wSOL |Not available (missed MetaPlesk metadata) |  
   </TabItem>
 
 <TabItem value="testnet" label="Testnet">
