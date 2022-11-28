@@ -1,3 +1,18 @@
 .scalable {
   cursor: pointer;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.scalable:hover {
+  animation: circle .3s linear forwards;
+}
+
+@keyframes circle {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
 }
