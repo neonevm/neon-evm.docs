@@ -28,7 +28,7 @@
         "id": 3,
         "icon": "/icons/daps.svg",
         "title": "Deploy dApps",
-        "description": "Using Hardhat, Truffle, and Remix",
+        "description": "Using Hardhat, Truffle, Remix & Brownie",
         "url": "/docs/developing/deploy_facilities/using_remix"
       },
       {
