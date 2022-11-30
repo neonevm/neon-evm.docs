@@ -1,5 +1,5 @@
 ---
-title: Running neon-proxy with Kubernetes
+title: Run neon-proxy with Kubernetes
 ---
 
 import Tabs from '@theme/Tabs';
@@ -38,6 +38,8 @@ This means that the following components need to be **installed** on your device
 * [Helm 3](https://helm.sh/docs/intro/install/), Kubernetes' package manager
 * [kubectl](https://kubernetes.io/docs/reference/kubectl/), a command-line tool for Kubernetes' control plane
 * [jq](https://stedolan.github.io/jq/), a command-line JSON processor
+
+To set up Kubernetes with k0s, refer to [this guide](/docs/operating/installation/setup_kubernetes).
 
 ### Hardware Recommendations
 
