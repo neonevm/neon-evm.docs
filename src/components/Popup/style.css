@@ -6,6 +6,7 @@
   border: 1px solid #929292 !important;
   backdrop-filter: blur(11px) !important;
   position: relative;
+  pointer-events: none !important;
 }
 
 .tooltip-container span, .tooltip-container p {

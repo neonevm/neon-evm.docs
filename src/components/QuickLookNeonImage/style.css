@@ -16,3 +16,10 @@
     transform: scale(1.05);
   }
 }
+
+.image-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
