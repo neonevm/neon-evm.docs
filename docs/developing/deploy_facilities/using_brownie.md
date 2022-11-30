@@ -2,7 +2,7 @@
 title: Deploy with Brownie
 ---
 
-*This page outlines the steps for deploying and testing contracts in the Neon EVM using [Brownie](https://eth-brownie.readthedocs.io/en/stable/), a Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine.*
+*This page outlines the steps for deploying and testing contracts in the Neon EVM using [Brownie](https://eth-brownie.readthedocs.io/en/stable/).*
 
 Before beginning the tutorial below, make sure that you have [Brownie](https://eth-brownie.readthedocs.io/en/stable/install.html) installed. To check, simply run in your command-line tool
 
@@ -29,19 +29,14 @@ cd examples/simple-spl-erc20-brownie
 
 ### Step 2: Configuration
 
-Run the following command to import [`network-config.yaml`](https://github.com/neonlabsorg/examples/blob/main/simple-spl-erc20-brownie/network-config.yaml), the network configuration file for Neon Devnet
+[`brownie-config.yaml`](https://github.com/neonlabsorg/examples/blob/main/simple-spl-erc20-brownie/brownie-config.yaml) is Brownie's configuration file. You can learn more about how to configure Brownie [here](/docs/developing/deploy_facilities/configure_brownie).
+
+This first line in `brownie-config.yaml` means that the `.env` file, if it exists, will be loaded by Brownie.
 ```bash
-brownie networks import ./network-config.yaml
+dotenv: .env # top-level key
 ```
 
-[`brownie-config.yaml`](https://github.com/neonlabsorg/examples/blob/main/simple-spl-erc20-brownie/brownie-config.yaml) is Brownie's configuration file. You can learn all about it [here](https://eth-brownie.readthedocs.io/en/stable/config.html). It contains `networks` information, which corresponds to what's under `networks` in [`network-config.yaml`](https://github.com/neonlabsorg/examples/blob/main/simple-spl-erc20-brownie/network-config.yaml). 
-
-This following line means that the `.env` file, if it exists, will be loaded by Brownie.
-```bash
-dotenv: .env
-```
-
-Let's create it and edit it with your favorite text editor
+`.env` specifies environment variables that will be used by Brownie. Let's create this file and edit it with your favorite text editor
 ```bash
 touch .env
 subl .env # or any editor of choice
@@ -55,9 +50,9 @@ export ACC2=0x......... # recipient account address
 ```
 
 #### Faucet
-Add your faucet URL to the `.env` file
+Add your faucet URL to the `.env` file. This is the URL from which the contract code will request NEON tokens. You can use the [official Neon faucet URL](https://neonfaucet.org/), or your own faucet URL if you have one
 ```bash
-export FAUCET_URL={your faucet URL}
+export FAUCET_URL=https://neonfaucet.org/ # or a URL to your own faucet
 ```
 
 ### Step 3: Compilation and Deployment

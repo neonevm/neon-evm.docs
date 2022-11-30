@@ -67,6 +67,7 @@ const sidebars = {
       items: [
         'developing/deploy_facilities/configure_hardhat',
         'developing/deploy_facilities/configure_truffle',
+        'developing/deploy_facilities/configure_brownie',
       ]
     },
     {
