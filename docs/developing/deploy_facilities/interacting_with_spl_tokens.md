@@ -4,72 +4,21 @@ title: ERC-20 for SPL Tokens
 
 The ERC-20 SPL wrapper contract provides access to native Solana tokens registered in the SPL token contract, through the ERC-20 interface. This allows Solana applications to interact with EVM (Solidity, Vyper, etc.) bytecode contracts. The ERC-20 SPL wrapper can also be used to transfer funds in Solana tokens using Ethereum wallets such as MetaMask.
 
-To transfer ERC-20 (add neonpass description here)
+To transfer ERC-20 tokens from Neon to SPL tokens on Solana and vice versa, a tool must exist to wrap and unwrap SPL tokens to and from the ERC-20 standard. [NeonPass](https://neonpass.live/) is an open-source service that does exactly that, and is designed to transfer tokens between Solana and the Neon EVM. For more information on how to use this functionality within a codebase, see the [Neon Transfer SDK](/docs/developing/integrate/neon_transfer_sdk) page.
+
+To function properly, the ERC-20 SPL wrapper relies on accurate and up-to-date information about the existing SPL tokens available on Solana. It therefore harnesses Metaplex's [Token Metadata](https://docs.metaplex.com/programs/token-metadata/overview) program to feed this data to the contract, ensuring that the wrapper has accurate information about the names, symbols, and addresses of all SPL tokens.
 
 The contract is implemented in Rust as part of the Neon EVM program, and is accessible via two wrappers written in Solidity: one for direct interaction, and the other for interaction using a factory.
 
 Source code:
   * [Rust source code](https://github.com/neonlabsorg/neon-evm/blob/c43345d7abf7af14aa840e6b15c0fc64b084bb2c/evm_loader/program/src/precompile_contracts.rs#L106)
-  * [Solidity direct wrapper source code](https://github.com/neonlabsorg/neon-evm/blob/develop/evm_loader/solidity/erc20_for_spl.sol)
   * [Solidity factory wrapper source code](https://github.com/neonlabsorg/neon-evm/blob/develop/evm_loader/solidity/erc20_for_spl_factory.sol)
-
-## Direct Wrapper
-
-### Contract Interface
-
-```solidity
-interface ERC20ForSpl {
-    function name() public view returns (string memory);
-    function symbol() public view returns (string memory);
-    function decimals() public view returns (uint8);
-    function totalSupply() public view returns (uint256);
-    function balanceOf(address who) public view returns (uint256);
-    function allowance(address owner, address spender) public view returns (uint256);
-    function approve(address spender, uint256 amount) public returns (bool);
-    function transfer(address to, uint256 amount) public returns (bool);
-    function transferFrom(address from, address to, uint256 amount) public returns (bool);
-    function burn(uint256 amount) public returns (bool);
-    function burnFrom(address from, uint256 amount) public returns (bool);
-    function approveSolana(bytes32 spender, uint64 amount) public returns (bool);
-    function transferSolana(bytes32 to, uint64 amount) public returns (bool);
-    function claim(bytes32 from, uint64 amount) external returns (bool);
-    function claimTo(bytes32 from, address to, uint64 amount) public returns (bool)
-
-    event Transfer(address indexed from, address indexed to, uint256 amount);
-    event Approval(address indexed owner, address indexed spender, uint256 amount);
-
-    event ApprovalSolana(address indexed owner, bytes32 indexed spender, uint64 amount);
-    event TransferSolana(address indexed from, bytes32 indexed to, uint64 amount);
-}
-```
-
-The purpose of each function in the ERC20ForSpl interface is detailed below:
-  * `decimals()` — Returns the number of decimals used to get its user representation. For example, if `decimals` equals 2, a balance of 505 tokens should be displayed to a user as 5,05 (505 / 10 * 2).
-
-  * `totalSupply()` — Returns the amount of tokens in existence.
-
-  * `balanceOf(address account)` — Returns the amount of tokens owned by the `account`.
-
-  * `allowance(address owner, address spender)` — Returns the remaining number of tokens that a `spender` will be allowed to spend on behalf of the `owner` through `​​​​​​​transferFrom`​​​​​​​. This is zero by default.
-
-  * `transfer(address recipient, uint256 amount)` — Sends the specified `amount` of tokens from the caller's account balance to the `recipient's` account balance.
-
-  * `approve(address spender, uint256 amount)` — Sets an `amount` as the spender's allowance over the caller's tokens.
-
-  * `transferFrom(address sender, address recipient, uint256 amount)` — Transfers the `amount` of tokens from the `sender` to the `recipient`.
-
-  * `approveSolana(bytes32 spender, uint64 value)` — Allows ***Solana*** user `spender` to withdraw from the caller's account multiple times up to the `value` amount. Only one Solana `spender` can exists at the time. Translates into SPL token `Approve` instruction.
-
-### Restrictions
-
-According to the SPL token structure, an unsigned 64-bit floating point number is used to store the balance; in ERC-20, it's an unsigned 256-bit floating point number. Based on the unsigned 64-bit floating point standard, the maximum balance and transfer amount is (2^64-1)/(10^9), with 9 decimals of accuracy.
-
-### Example
+  * [Solidity direct wrapper source code](https://github.com/neonlabsorg/neon-evm/blob/develop/evm_loader/solidity/erc20_for_spl.sol)
 
 ## Factory Wrapper
 
 ### Contract Interface
-Deploying ERC-20 tokens on Neon is much simpler when using the factory method. There are only three relevant public functions, which are intuitive and take care of a lot of detailed execution "behind the scenes".
+Deploying ERC-20 tokens on Neon is very simple when using the factory method. There are only three relevant public functions, which are intuitive and take care of a lot of detailed execution "behind the scenes".
 
 ```solidity
 interface ERC20ForSplFactory {
@@ -126,3 +75,57 @@ main().catch((error) => {
   process.exitCode = 1;
 });
 ```
+
+## Direct Wrapper
+
+### Contract Interface
+Interacting with the ERC-20 SPL wrapper contract more directly requires the use of the non-factory ERC20ForSpl interface. This interface has a variety of public functions, allowing the user to get and manipulate granular information related to wrapped tokens and their users. The following function description will explain only the more important functions in the interface.
+
+```solidity
+interface ERC20ForSpl {
+    function name() public view returns (string memory);
+    function symbol() public view returns (string memory);
+    function decimals() public view returns (uint8);
+    function totalSupply() public view returns (uint256);
+    function balanceOf(address who) public view returns (uint256);
+    function allowance(address owner, address spender) public view returns (uint256);
+    function approve(address spender, uint256 amount) public returns (bool);
+    function transfer(address to, uint256 amount) public returns (bool);
+    function transferFrom(address from, address to, uint256 amount) public returns (bool);
+    function burn(uint256 amount) public returns (bool);
+    function burnFrom(address from, uint256 amount) public returns (bool);
+    function approveSolana(bytes32 spender, uint64 amount) public returns (bool);
+    function transferSolana(bytes32 to, uint64 amount) public returns (bool);
+    function claim(bytes32 from, uint64 amount) external returns (bool);
+    function claimTo(bytes32 from, address to, uint64 amount) public returns (bool)
+
+    event Transfer(address indexed from, address indexed to, uint256 amount);
+    event Approval(address indexed owner, address indexed spender, uint256 amount);
+
+    event ApprovalSolana(address indexed owner, bytes32 indexed spender, uint64 amount);
+    event TransferSolana(address indexed from, bytes32 indexed to, uint64 amount);
+}
+```
+
+The purpose of each of the major functions in the ERC20ForSpl interface is detailed below:
+  * `decimals()` — Returns the number of decimals used to get its user representation. For example, if `decimals` returns 2, a balance of 505 tokens should be displayed to a user as 5,05 (505 / 10 * 2).
+
+  * `totalSupply()` — Returns the amount of tokens in existence.
+
+  * `balanceOf(address account)` — Returns the amount of tokens owned by the `account`.
+
+  * `transfer(address recipient, uint256 amount)` — Sends the specified `amount` of tokens from the caller's account balance to the `recipient`'s account balance.
+
+  * `approve(address spender, uint256 amount)` — Sets an `amount` as the spender's allowance over the caller's tokens.
+
+  * `transferFrom(address sender, address recipient, uint256 amount)` — Transfers the `amount` of tokens from the `sender` to the `recipient`.
+
+  * `allowance(address owner, address spender)` — Returns the remaining number of tokens that a `spender` will be allowed to spend on behalf of the `owner` via `​​​​​​​transferFrom()`​​​​​​​. This is zero by default.
+
+  * `approveSolana(bytes32 spender, uint64 value)` — Allows ***Solana*** user `spender` to withdraw from the caller's account up to the `value` amount. Only one Solana `spender` can exist at a time. This is the SPL token equivalent of the `approve()` function.
+
+### Restrictions
+
+According to the SPL token structure, an unsigned 64-bit floating point number is used to store the balance; in ERC-20, it's an unsigned 256-bit floating point number. Based on the unsigned 64-bit floating point standard, the maximum balance and transfer amount is (2^64-1)/(10^9), with 9 decimals of accuracy.
+
+### Example
