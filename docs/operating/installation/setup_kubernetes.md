@@ -4,7 +4,7 @@ title: Set up Kubernetes with k0s
 
 *This page, based on k0s's [Quick Start Guide](https://docs.k0sproject.io/v1.21.2+k0s.0/install/#install-k0s), outlines the steps for setting up Kubernetes with k0s for the purpose of running neon-proxy later on.*
 
-[k0s](https://k0sproject.io/) is an all-inclusive [Kubernetes](https://kubernetes.io/) distribution that offers an easy, smooth way to create Kubernetes clusters ready for production usage. k0s fits well in any cloud environment on any system that includes the Linux kernel.
+[k0s](https://k0sproject.io/) is an all-inclusive [Kubernetes](https://kubernetes.io/) distribution that offers an easy, smooth way to create Kubernetes clusters ready for production usage. k0s fits well in any cloud environment on any system that includes the Linux kernel. Please note that this tutorial has been written for **Debian/Ubuntu**, but it can be used for any Linux running one of the supported init systems: Systemd or OpenRC.
 
 ## Prerequisites
 Before you start, verify that your environment meets the [system requirements for k0s](https://docs.k0sproject.io/v1.21.2+k0s.0/system-requirements/).
