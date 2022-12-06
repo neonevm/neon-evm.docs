@@ -14,7 +14,7 @@
         "id": 1,
         "icon": "/icons/config.svg",
         "title": "Configure & Use Devtools",
-        "description": "Hardhat and Truffle",
+        "description": "Hardhat, Truffle, and Brownie",
         "url": "/docs/developing/deploy_facilities/configure_hardhat"
       },
       {
