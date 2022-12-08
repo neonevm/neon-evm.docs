@@ -5,7 +5,7 @@
   right: 32px;
   width: 300px;
   border-radius: 8px;
-  background: var(--ifm-color-emphasis-200);;
+  background: var(--ifm-hover-overlay);
   padding: 20px;
   box-shadow: var(--ifm-global-shadow-lw);
 }
@@ -57,7 +57,7 @@
 }
 
 [data-theme='dark'] .cookie-banner {
-  background: var(--ifm-color-emphasis-300);
+  background: #242526;
 }
 
 [data-theme='dark'] .cookie-banner .description {
