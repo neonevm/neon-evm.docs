@@ -1,12 +1,21 @@
 
 .cookie-banner {
   position: fixed;
-  bottom: 70px;
+  bottom: 20px;
   right: 32px;
   width: 300px;
   border-radius: 8px;
   background: var(--ifm-color-emphasis-200);;
   padding: 20px;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+@media (max-width: 490px) {
+  .cookie-banner {
+    width: calc(100% - 40px);
+    left: 20px;
+    right: 20px;
+  }
 }
 
 .cookie-banner .title {
