@@ -102,6 +102,7 @@ const sidebars = {
       type: 'category',
       label: 'EVM Compatibility',
       items: [
+        'evm_compatibility/overview',
         'evm_compatibility/json_rpc_api_methods',
         'evm_compatibility/precompiles'
       ]
