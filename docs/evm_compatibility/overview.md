@@ -8,15 +8,13 @@ Neon EVM is designed to be compatible with the [Ethereum Virtual Machine (EVM)](
 Coming from Ethereum, your Solidity smart contracts, development and deployment tools, and standard practices can be moved over to Neon EVM with minimal changes. Neon EVM accounts follow [Ethereum's account standards](https://ethereum.org/en/developers/docs/accounts/). All [Ethereum opcodes](https://www.evm.codes/?fork=merge) are represented verbatim on Neon EVM. 
 
 ## JSON RPC API
-Neon EVM has its own set of JSON RPC API methods.
-<!-- https://docs.neon-labs.org/docs/evm_compatibility/json_rpc_api_method -->
+Neon EVM has its own set of [JSON RPC API methods](./json_rpc_api_methods). They are based on the Ethereum Client API, the Web3 Module API, and the Net Module API.
 
 ## Precompiles
-There are certain limitations on some precompiled contracts on Neon EVM.
-<!-- https://docs.neon-labs.org/docs/evm_compatibility/precompiles -->
+Neon supports all precompiled contracts defined on [evm.code](https://www.evm.codes/precompiled?fork=merge) that provide more advanced functionalities, but there are [certain limitations](./precompiles#limitations) on some precompiled contracts on Neon EVM.
 
 ## Gas Calculation
-The mechanism of gas consumption and calculation of gas fees on Neon EVM differ from Ethereum.
+The mechanism of gas consumption and calculation of gas fees on Neon EVM differ from Ethereum. You can learn more about the NEON token and how gas fees work on Neon EVM [here](../../docs/tokens/gas_fees.md).
 <!-- https://docs.neon-labs.org/docs/tokens/gas_fees -->
 
 ## Other Neon-Specific Limitations
