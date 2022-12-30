@@ -11,8 +11,8 @@ title: 'Basic: Local Build in Read-Only Mode'
 |Component|Requirement                           |
 |-----|:-----------------------------------------|
 |Operating System | Linux (Ubuntu/CentOS recommended) |
-|CPU | 4 vCPU |
-|RAM | 8 GB |
+|CPU | 8 vCPU |
+|RAM | 16 GB |
 |Storage | 500 GB |
 
 ### Software Requirements
