@@ -67,6 +67,7 @@ const sidebars = {
       items: [
         'developing/deploy_facilities/configure_hardhat',
         'developing/deploy_facilities/configure_truffle',
+        'developing/deploy_facilities/configure_brownie',
       ]
     },
     {
@@ -94,12 +95,14 @@ const sidebars = {
         'developing/deploy_facilities/using_hardhat',
         'developing/deploy_facilities/using_truffle',
         'developing/deploy_facilities/using_remix',
+        'developing/deploy_facilities/using_brownie',
       ]
     },
     {
       type: 'category',
       label: 'EVM Compatibility',
       items: [
+        'evm_compatibility/overview',
         'evm_compatibility/json_rpc_api_methods',
         'evm_compatibility/precompiles'
       ]

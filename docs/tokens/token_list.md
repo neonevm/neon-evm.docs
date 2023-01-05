@@ -29,6 +29,7 @@ In addition to NEON and wNEON tokens, below are some common tokens that are depl
 
 |Token|Devnet Address                            |
 |-----|:-----------------------------------------|
+|WNEON|0x11adC2d986E334137b9ad0a0F290771F31e9517F|
 |USDT |0xAA24A5A5E273EFAa64a960B28de6E27B87FfDFfc|
 |wDAI |0x4954cd6230C19e63B7c7b131760Ef0C0c424321C|
 |USDC |0xC659B2633Ed725e5346396a609d8f31794d6ac50|
