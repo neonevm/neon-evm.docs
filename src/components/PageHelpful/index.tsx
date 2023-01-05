@@ -7,7 +7,14 @@ export const PageHelpful = (props) => {
 
   const handleSubmit = (type: 'yes' | 'no'): void => {
     if (!disabled) {
-      console.log(type); // todo: send event to ga
+      if ('gtag' in window) {
+        try {
+          const gtag = window['gtag'] as any;
+          gtag('event', 'PAGE_HELPFUL_FEEDBACK', { value: type });
+        } catch (e) {
+          console.log(e);
+        }
+      }
       setDisabled(true);
     }
   };

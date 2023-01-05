@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
-import {useWindowSize} from '@docusaurus/theme-common';
-import {useDoc} from '@docusaurus/theme-common/internal';
+import { useWindowSize } from '@docusaurus/theme-common';
+import { useDoc } from '@docusaurus/theme-common/internal';
 import DocItemPaginator from '@theme/DocItem/Paginator';
 import DocVersionBanner from '@theme/DocVersionBanner';
 import DocVersionBadge from '@theme/DocVersionBadge';
@@ -11,11 +11,14 @@ import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
 import DocItemContent from '@theme/DocItem/Content';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import styles from './styles.module.css';
+import { PageHelpful } from '@site/src/components/PageHelpful';
+
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
+
 function useDocTOC() {
-  const {frontMatter, toc, metadata} = useDoc();
+  const { frontMatter, toc, metadata } = useDoc();
   const windowSize = useWindowSize();
   const hidden = frontMatter.hide_table_of_contents;
   const canRender = !hidden && toc.length > 0;
@@ -28,13 +31,14 @@ function useDocTOC() {
     hidden,
     mobile,
     desktop,
-    metadata,
+    metadata
   };
 }
-export default function DocItemLayout({children}) {
+
+export default function DocItemLayout({ children }) {
   const docTOC = useDocTOC();
   return (
-    <div className="row">
+    <div className='row'>
       <div className={clsx('col', !docTOC.hidden && styles.docItemCol)}>
         <DocVersionBanner />
         <div className={styles.docItemContainer}>
@@ -44,12 +48,12 @@ export default function DocItemLayout({children}) {
             {docTOC.mobile}
             <DocItemContent>{children}</DocItemContent>
             <DocItemFooter />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, harum?
+            <PageHelpful />
           </article>
           <DocItemPaginator />
         </div>
       </div>
-      {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
+      {docTOC.desktop && <div className='col col--3'>{docTOC.desktop}</div>}
     </div>
   );
 }
