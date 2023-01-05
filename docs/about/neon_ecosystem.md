@@ -1,12 +1,10 @@
 ---
 title: Quick Look at Neon EVM
 ---
+import { QuickLookNeonImage } from '@site/src/components/QuickLookNeonImage'
 
-<div className='neon-img-box-300' style={{textAlign: 'center', width: 700, display: 'block', margin: 'auto'}}>
+<QuickLookNeonImage/>
 
-![](img/neon_ecosystem.png)
-
-</div>
 
 ## Neon EVM Core
 
