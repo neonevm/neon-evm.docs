@@ -31,6 +31,7 @@ const config = {
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/og_image.png',
+      cookieBanner: {},
       algolia: {
         apiKey: 'b42bf0be9b7f964aa534f802164b53f8',
         appId: 'IMU5IHYKIJ',
