@@ -1,165 +1,145 @@
 ---
-title: Using Truffle
+title: Deploy with Truffle
 ---
 
-*This page outlines a methodology for deploying and testing contracts in Neon EVM using the Truffle tool. This technique can be useful for personnel involved in the development and maintenance of Neon EVM.*
+*This page outlines the steps for deploying and testing contracts in the Neon EVM using the Truffle tool. Truffle can be useful for those involved in the development and maintenance of the Neon EVM.*
 
-It should be noted that Ethereum contracts can also be successfully deployed in Neon EVM using Remix in manual mode. However, since Remix does not have as many capabilities, it turned out to be not as convenient for software development, and therefore we wanted to provide developers with a more advanced methodology using Truffle.
+Before beginning the tutorial below, make sure that you have properly [configured Truffle](configure_truffle) for the Neon EVM.
 
-## The Goal
-Our main goal with Truffle is to make it easier for developers to deploy and debug contracts in Neon EVM.
+## How to Use Truffle: A Tutorial
+The example this tutorial is based on is located in [this repository](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-truffle).
 
-With Truffle, you get:
-  * A simple setting of configuration parameters.
-  * An easy process of deploying and debugging contracts in the network.
-  * Automated deployment and running of tests.
+By the end of this tutorial, you will deploy a contract describing an ERC-20 token to the Neon Devnet, and subsequently mint 1 test token that is deposited to the first wallet specified in the configuration file (see above).
 
-## Installation
+### Step 1: Installation
+> **Note:** This page is just a quickstart based on a specific example program. For more details on installing Truffle, refer to the *[Truffle documentation](https://www.trufflesuite.com/docs/truffle/getting-started/installation)*.
 
-### Requirements for your device
-The following software must be installed on your device:
-  * NodeJS v8.9.4 or later
-  * Web3 v1.2.0 or later
-
-> **Note:** Although this tutorial uses the Ubuntu platform, the instructions provided can be applied to other Linux platforms.
-
-### Installing Truffle
-
-If Truffle is already installed on your device, you can skip this section and move on to the next one. For those just getting started, you need to go through this section.
-
-> **Note:** This page is just a quickstart. To go into more detail, you can read the *[Truffle documentation](https://www.trufflesuite.com/docs/truffle/getting-started/installation)*.
-
-Create a new directory for your Truffle project:
+Using Git, clone the example Truffle project from the remote repository and navigate to it:
 ```sh
-$ mkdir <project name>
-$ cd <project name>
+git clone https://github.com/neonlabsorg/examples.git
+cd examples/simple-erc20-truffle
 ```
 
-Install Truffle:
+Then, run the following command:
 ```sh
-$ npm install truffle
+npm install
 ```
+This will install all the necessary packages to continue with the example. These packages include the `Truffle` and `HDWalletProvider` libraries.
 
-Initialize the project directory by running the following command:
+If the above command results in an error, run:
 ```sh
-$ truffle init
+npm cache clear --force
+npm install
 ```
 
-Once this operation is completed, you will have a project structure with the following items:
-  * `contracts/` — Directory for Solidity contracts
-  * `migrations/` — Directory for scriptable deployment files
-  * `test/` — Directory for test files for testing your contracts
-  * `truffle-config.js` — Truffle configuration file
+### Step 2: Set Up MetaMask Accounts
+To interact with the soon-to-be-deployed contracts, you'll need to create two new accounts in MetaMask. Before you begin, make sure that MetaMask is connected to the Neon Devnet.
 
-You can run `truffle compile`, `truffle migrate` and `truffle test` to compile your contracts, deploy them to the network, and run their associated unit tests.
+In MetaMask, create two new accounts. This can be done by clicking on your current account's icon in the top right of the MetaMask extension pop-up, and then clicking on 'Create an Account' in the drop-down menu that appears. Then, obtain some Devnet NEON tokens for these accounts (up to 100 NEON per account) using the [NeonFaucet](../utilities/faucet).
 
-### Installation of the HDWalletProvider library
+Finally, copy the new accounts' private keys and paste them into the `truffle-config.js` file described above, replacing the placeholder text in lines 11 and 12 of that file. To obtain the private keys, click on the three vertical dots to the right of your currently displayed account name and wallet address. In this drop-down menu, click on 'Account Details', then on 'Export Private Key', and enter your password and click 'Confirm' to get access to the private key for that account.
 
-HD Wallet-enabled Web3 provider (HDWalletProvider) is a standalone library. One of its functions is signing transactions with private keys. Since the Neon EVM proxy does not store private keys, it cannot sign transactions. Therefore, during debugging contracts, the HDWalletProvider library is used to sign transactions for addresses derived from a *12* or *24* word mnemonic.
+> **Note:** When adding the private keys to the configuration file, make sure to add the prefix **0x** to the key obtained via MetaMask.
 
-By default, the Truffle installation does not provide the HDWalletProvider library. If during the installation of Truffle none of the applications required the HDWalletProvider library to be installed, you need to install it separately.
-
-Install the HDWalletProvider library:
+### Step 3: Compile Contracts
+All of the contracts are located in the project's `contracts/` directory. Before these contracts can be run, they must first be compiled. To compile the project's contracts, run the following command:
 ```sh
-$ npm install @truffle/hdwallet-provider
+./node_modules/.bin/truffle compile
 ```
 
-> **Note:** To go into much detail here, you can see the *[official documentation](https://www.npmjs.com/package/@truffle/hdwallet-provider)*.
+After running this step, you should see output similar to the following:
+```
+Compiling your contracts...
+===========================
+✔ Fetching solc version list from solc-bin. Attempt #1
+✔ Downloading compiler. Attempt #1.
+✔ Fetching solc version list from solc-bin. Attempt #1
+> Compiling ./contracts/ERC20.sol
+> Compiling ./contracts/IERC20.sol
+> Artifacts written to /tmp/test--947955-ciBGiafT1chM
+> Compiled successfully using:
+   - solc: 0.8.16+commit.07a7930e.Emscripten.clang
+```
 
-## Connecting Truffle to a Proxy
+For the first run, all contracts will be compiled. During subsequent runs, only contracts that have changed since the last compilation will be compiled again.
 
-To connect Truffle to a proxy on `node.js`, the `eth_accounts` method from the [Ethereum JSON RPC API](https://eth.wiki/json-rpc/API) set is required. This method allows serving a list of *20* byte addresses owned by a client. Since the Neon EVM proxy does not support the `eth_accounts` method required to connect Truffle, the HDWalletProvider library is used to function as this method. The connection is configured in `truffle-config.js`.
+### Step 4: Run Tests
+Make sure to test your code before you migrate it to the network. All test files should be located under the `test/` directory.
 
-The configuration file is publicly available, and therefore the `word mnemonic` and `private key` contained in the file are also publicly available. This makes it possible for the library to use this data. HDWalletProvider obtains `word mnemonic` or `private key` from the configuration file and uses this data to sign transactions before sending them to the proxy.
-
-This method of configuration is convenient for debug mode, but not suitable for work in real conditions. Since the development process uses "test" wallets, this data is not of any value.
-
-> **Note:** We strongly recommend using Truffle in Neon EVM only for developing or testing contracts.
-
-## Configuration
-Your configuration file is called `truffle-config.js` and is located at the root of your project directory. This file is a JavaScript file and can execute any code necessary to create your configuration.
-
-## Compiling Contracts
-All of your contracts are located in your project's `contracts/` directory. To compile a Truffle project, change to the root of the directory where the project is located and run the following command:
+To run all tests, simply run the command below. Make sure to specify the **neonlabs** network to deploy to with the `--network` option.
 ```sh
-$ truffle compile
+./node_modules/.bin/truffle test --network neonlabs
 ```
 
-Upon first run, all contracts will be compiled. Upon subsequent runs, only contracts that have changed since the last compilation will be compiled again.
+This command compiles all the contracts in the `contracts/`, deploys them to the Neon Devnet, and runs all the tests in the `test/` directory. The output should look something like this:
+```
+Compiling your contracts...
+===========================
+✔ Fetching solc version list from solc-bin. Attempt #1
+✔ Fetching solc version list from solc-bin. Attempt #1
+> Everything is up to date, there is nothing to compile.
 
-If you want to re-compile all contracts, run the above command with the `--all` option:
+
+  Contract: TestERC20
+    ✓ should successfully mint 10000 ERC20 in the first account (5288ms)
+    ✓ should transfer token correctly (7335ms)
+
+
+  2 passing (13s)
+```
+
+### Step 5: Run Migrations
+Migrations are a set of managed deployment scripts used to deploy contracts to the network. These scripts, which are JavaScript files, are contained in the project's `migrations/` directory.
+
+To run migrations to deploy the contracts, run the `migrate` command. Make sure to specify the **neonlabs** network to deploy to with the `--network` option.
 ```sh
-$ truffle compile --all
+./node_modules/.bin/truffle migrate --network neonlabs
 ```
 
-## Running Migrations
-Migration is used to deploy your contracts to the network. This operation is performed using JavaScript files contained in the `migration/` directory. Migrations are simply a set of managed deployment scripts.
-
-Run migrations to deploy contracts:
-```sh
-$ truffle migrate
+After running this command, you should see console output similar to the following:
 ```
-This will run all migrations located within the `migrations/` directory. If your migrations were previously run successfully, truffle migrate will start execution from the last migration that was run, running only newly created migrations. If no new migrations exist, truffle migrate won't perform any action.
-
-If you need to run all migrations from the beginning, instead of running from the last completed migration, you can use the `--reset` option:
-```sh
-$ truffle migrate --reset
-```
-
-The full set of options that you can use during running migrations are listed in the page with [truffle migrate](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#migrate) command.
-
-## Testing Contracts
-All test files should be located in the `test/` directory.
-
-To run all tests by default, simply run:
-```sh
-$ truffle test
-```
-
-To run only one file from the entire test suite or a specific file that is not in `test/`, you need to specify the full name of that file:
-```sh
-$ truffle test <./path/file.js>
-```
-
-The full set of options that you can use during testing are listed in the page with the [truffle test](https://www.trufflesuite.com/docs/truffle/reference/truffle-commands#test) command.
+Compiling your contracts...
+===========================
+✔ Fetching solc version list from solc-bin. Attempt #1
+✔ Fetching solc version list from solc-bin. Attempt #1
+> Everything is up to date, there is nothing to compile.
 
 
-## Example of Configuration File Settings
-The example of the configuration file for connecting Truffle to a devnet-proxy using the one-way library on Node.js:
-```js
-const Web3 = require("web3");
-const HDWalletProvider = require("@truffle/hdwallet-provider");
+Starting migrations...
+======================
+> Network name:    'neonlabs'
+> Network id:      245022926
+> Block gas limit: 260057650590124 (0xec8563e271ac)
 
-Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.prototype.send
 
-const provider = new Web3.providers.HttpProvider("https://proxy.devnet.neonlabs.org/solana");
+1_erc20.js
+==========
 
-const privateKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // Specify your private key here
+   Deploying 'ERC20'
+   -----------------
+   > transaction hash:    0x54db68667335ab2c6e8aeee1080b30ac39209186e2f0c12dba97b7130d923382
+   > Blocks: 11           Seconds: 4
+   > contract address:    0x7364DA3a4989898Ac2d466611Ce4b957885DF7B8
+   > block number:        158638454
+   > block timestamp:     1661872308
+   > account:             0xf71c4DACa893E5333982e2956C5ED9B648818376
+   > balance:             8.205758048453800748
+   > gas used:            43936740 (0x29e6be4)
+   > gas price:           137.5017384 gwei
+   > value sent:          0 ETH
+   > total cost:          6.041378129628816 ETH
 
-module.exports = {
-  networks: {
-    neonlabs: {
-      provider: () => {
-        return new HDWalletProvider(
-          privateKey,
-          provider,
-        );
-      },
-      from: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx", // Specify public key corresponding to private key defined above
-      network_id: "*",
-      gas: 3000000000,
-      gasPrice: 443065000000,
-    }
-  }
-};
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     6.041378129628816 ETH
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          6.041378129628816 ETH
 ```
 
-> **Note:** If both mnemonic and private keys are provided, the mnemonic is used.
+### Step 6: Connect Project to MetaMask
+To import your project as an asset in MetaMask, follow the instructions [here](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask#h_01FWH492CHY60HWPC28RW0872H) and use the contract address from the previous step as the 'Token Contract Address' in MetaMask.
 
-Use next command to deploy contracts using **neonlabs** network:
-```sh
-truffle migrate --network neonlabs
-```
-
-## Example Project
-You can obtain example Truffle project from here: https://github.com/neonlabsorg/examples/tree/main/simple-erc20-truffle
+Once you complete this final step, you will be able to see your new ERC-20 assets in the MetaMask profiles of the new test accounts.

@@ -162,8 +162,13 @@ The blockchain algorithm for time synchronization. Instead of using the traditio
 
 ---  
 
+### Proof-of-Stake (PoS)
+Proof-of-Stake is a method of cryptocurrency protection in which the probability of forming the next block on the blockchain depends on the existing stake of the participant and not on powerful equipment, as is the case with Proof-of-Work (PoW).  
+
+---  
+
 ### Public key
-A publicly available key that is required for users to receive  transactions into their account. A public key can be inferred from a signature.  
+A publicly available key that is required for users to receive transactions into their account. A public key can be inferred from a signature.  
 
 ---  
 

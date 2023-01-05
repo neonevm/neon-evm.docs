@@ -2,27 +2,52 @@
 title: Getting Started
 ---
 
-*The purpose of this guide is to familiarize you with the structure of Neon EVM, and to provide step-by-step instructions to set up your local Neon EVM development environment.*
+*The purpose of this guide is to get you familiarized with the Neon EVM's high-level structure and to provide you with step-by-step instructions on how to set up your local Neon EVM development environment.*
 
-## Setting Up the Development Environment
+## Reference
 
-As a developer, you should begin by exploring the Neon EVM framework and setting up your local development environment.
-Depending on your purposes, there are several ways to do it:
+If you are already familiar with Neon, make sure to check out the following tools and tutorials that will enhance your Neon experience:
 
-[🔘 Choosing a Neon Proxy](developing/dev_environment/choosing_proxy.md) — Describes how to connect to an existing Neon Proxy.  
-[🔘 Connecting to the Neon Proxy](developing/dev_environment/connect_to_solana_via_proxy.md) — Describes how to connect to the Solana cluster via a local or remote proxy server.  
-[🔘 Setting up a local Solana cluster](developing/dev_environment/solana_cluster/cluster_installation.md) — Describes how to install, configure, and test the local Solana cluster with Neon EVM onboard.  
+* Receive free NEON test tokens with the [Neon Faucet](/docs/developing/utilities/faucet).
+* Browse Neon's blockchain transaction history with [NeonScan](https://neonscan.org/).
+* Transfer tokens to and from Neon using [NeonPass](/docs/developing/utilities/neonpass).
+* Set up a [Neon wallet](/docs/wallet/metamask_setup).
 
-## Deploying dApps
+For information on deploying dApps on Neon, check out the following resources:
+* [Using Remix](developing/deploy_facilities/using_remix.md)
+* [Using Hardhat](developing/deploy_facilities/using_hardhat.md)
+* [Using Truffle](developing/deploy_facilities/using_truffle.md)
+
+## Quick Start
+
+To get started quickly with Neon, follow the steps below. 
+
+### Step 1: Install MetaMask
+Install MetaMask by following the setup instructions on the [Installing MetaMask](wallet/metamask_setup.md#installing-metamask) page.
+
+### Step 2: Connect MetaMask to the Neon EVM Devnet
+There are two ways to connect to the Solana [Devnet](https://docs.solana.com/clusters#devnet) cluster: using Chainlist.org or manually.
+
+#### Option A: Connect with Chainlist.org
+Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You should see `Neon EVM Devnet` and `Neon EVM Mainnet`.  
+
+![](img/chainlist_neon.png)
+
+Select `Neon EVM Devnet` and click `Connect Wallet`. A MetaMask pop-up window will show. Click `Next` and then `Connect`. You can now access the [Solana cluster](https://docs.solana.com/clusters) and carry out transactions.
+
+#### Option B: Connect Manually with MetaMask
+Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#option-b-manual-configuration).
+
+### Step 3: Get NEON Devnet Tokens from the NeonFaucet
+NEON tokens for Devnet can be obtained using the [NeonFaucet](developing/utilities/faucet.md).
+
+### Step 4: Deploying dApps
+
+Deploying dApps on Neon is easy and you can do so with [Remix](https://remix-project.org/), [Truffle](https://trufflesuite.com/), and [Hardhat](https://hardhat.org/). 
 
 [🔘 Using Remix](developing/deploy_facilities/using_remix.md) — Example of deploying smart contracts using Remix.  
 [🔘 Using Truffle](developing/deploy_facilities/using_truffle.md) — Example of deploying smart contracts using Truffle.  
 [🔘 Using Hardhat](developing/deploy_facilities/using_hardhat.md) — Example of deploying smart contracts using Hardhat.  
-
-## Neon EVM Architecture
-
-[🔘 Ethereum and Solana capabilities in a single solution](architecture/eth_sol_solution.md) — Describes a unique solution that allows Ethereum users to use the key features of Solana and vice versa.  
-[🔘 Overview of Neon EVM architecture](architecture/neon_evm_arch.md) — Describes the architectural solutions built into Neon EVM that enable fast transaction processing for Ethereum users.  
 
 ## Fundamental Topics
 
@@ -32,4 +57,6 @@ If you are new to Neon EVM development, we recommend starting from the very begi
 [🔘 Ethereum account](architecture/core_aspects/account.md) — An entity with an ETH balance that can send transactions on Ethereum.  
 [🔘 Ethereum transaction](architecture/core_aspects/transaction.md) — A cryptographically signed instruction from an account.  
 [🔘 Block](architecture/core_aspects/block.md) — A special structure for recording a group of transactions in blockchain systems.  
-[🔘 Gas](architecture/core_aspects/gas.md) — Computational power represented in tokens. Required to process transactions.
+[🔘 Gas](architecture/core_aspects/gas.md) — Computational power represented in tokens. Required to process transactions.  
+[🔘 Ethereum and Solana capabilities in a single solution](architecture/eth_sol_solution.md) — Describes a unique solution that allows Ethereum users to use the key features of Solana and vice versa.  
+[🔘 Overview of Neon EVM architecture](architecture/neon_evm_arch.md) — Describes the architectural solutions built into Neon EVM that enable fast transaction processing for Ethereum users.  

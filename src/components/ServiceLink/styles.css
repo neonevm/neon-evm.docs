@@ -1,0 +1,43 @@
+.service-link {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.service-link:hover .service-link-icon {
+  transform: scale(1.1);
+}
+
+
+.service-link:hover .service-link-content h4 {
+  color: var(--ifm-color-primary);
+}
+
+.service-link-icon {
+  width: 64px;
+  transition: all 0.3s ease;
+}
+
+.service-link-content {
+  margin-left: 16px;
+}
+
+.service-link-content h4 {
+  margin-bottom: 0;
+  transition: all 0.3s ease;
+}
+
+.service-link-content p {
+  color: var(--ifm-menu-color);
+  margin-bottom: 0;
+}
+
+.service-link-href {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}

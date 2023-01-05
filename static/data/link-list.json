@@ -1,0 +1,84 @@
+[
+  {
+    "id": 0,
+    "title": "Build dApps",
+    "items": [
+      {
+        "id": 0,
+        "icon": "/icons/rpc.svg",
+        "title": "Connect to Neon RPC",
+        "description": "Start building right away",
+        "url": "/docs/developing/connect_rpc"
+      },
+      {
+        "id": 1,
+        "icon": "/icons/config.svg",
+        "title": "Configure & Use Devtools",
+        "description": "Hardhat, Truffle, and Brownie",
+        "url": "/docs/developing/deploy_facilities/configure_hardhat"
+      },
+      {
+        "id": 2,
+        "icon": "/icons/token.svg",
+        "title": "Get Test Tokens",
+        "description": "Interact with dApps at no cost",
+        "url": "/docs/developing/utilities/faucet"
+      },
+      {
+        "id": 3,
+        "icon": "/icons/daps.svg",
+        "title": "Deploy dApps",
+        "description": "Using Hardhat, Truffle, Remix & Brownie",
+        "url": "/docs/developing/deploy_facilities/using_remix"
+      },
+      {
+        "id": 4,
+        "icon": "/icons/sol.svg",
+        "title": "Use Solana-Native Tokens",
+        "description": "Get access to Solana liquidity",
+        "url": "/docs/developing/deploy_facilities/interacting_with_spl_tokens"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Use Tools",
+    "items": [
+      {
+        "id": 0,
+        "icon": "/icons/metamask.svg",
+        "title": "MetaMask",
+        "description": "Connect to the Neon network",
+        "url": "/docs/wallet/metamask_setup"
+      },
+      {
+        "id": 1,
+        "icon": "/icons/explorer.svg",
+        "title": "Block Explorer",
+        "description": "Check transaction status",
+        "url": "https://neonscan.org/"
+      },
+      {
+        "id": 2,
+        "icon": "/icons/neonpass.svg",
+        "title": "NeonPass",
+        "description": "Transfer tokens Solana <> Neon",
+        "url": "https://neonpass.live/"
+      },
+      {
+        "id": 3,
+        "icon": "/icons/faucet.svg",
+        "title": "NeonFaucet",
+        "description": "Airdrop test tokens",
+        "url": "https://neonfaucet.org/"
+      },
+      {
+        "id": 4,
+        "icon": "/icons/indexing.svg",
+        "title": "NeonAnalytics",
+        "description": "Analyze deployed contracts",
+        "url": "https://neon.aleph.cloud/"
+      }
+    ]
+  }
+]
