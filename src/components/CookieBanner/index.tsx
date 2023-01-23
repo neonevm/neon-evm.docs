@@ -8,6 +8,14 @@ export const CookieBanner = () => {
 
   useEffect(() => {
     const storageAccepted = localStorage.getItem('cookies:accepted') === 'true'
+    const isPostponeExpired = localStorage.getItem('cookies:expire')
+      ? Math.abs(Number(localStorage.getItem('cookies:expire')) - new Date().getTime()) / (60 * 60 * 1000) > 24
+      : false
+
+    if(isPostponeExpired) {
+      setAccepted(false)
+      return
+    }
 
     if (storageAccepted) {
       setAccepted(storageAccepted)
@@ -17,6 +25,12 @@ export const CookieBanner = () => {
   useEffect(() => {
     localStorage.setItem('cookies:accepted', accepted ? 'true' : 'false')
   }, [accepted])
+
+  const postponeCookies = () => {
+    localStorage.setItem('cookies:expire', new Date().getTime().toString())
+
+    setAccepted(true)
+  }
 
   if (!cookieBanner || accepted) {
     return null
@@ -31,7 +45,8 @@ export const CookieBanner = () => {
         If you continue browsing, we consider that you have accepted <a href='https://neon-labs.org/cookie-policy' target='_blank'>cookies policy</a>.
       </p>
       <div className='actions'>
-        <button onClick={() => setAccepted(true)}>Accept</button>
+        <button className='main' onClick={() => setAccepted(true)}>Accept</button>
+        <button className='secondary' onClick={postponeCookies}>Ask me later</button>
       </div>
     </div>
   </>

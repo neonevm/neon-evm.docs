@@ -42,7 +42,6 @@
 
 .cookie-banner .actions button {
   background: none;
-  color: var(--ifm-color-primary);
   border: none;
   padding: 0;
   cursor: pointer;
@@ -50,6 +49,10 @@
   font-weight: 700;
   width: fit-content;
   text-align: left;
+}
+
+.cookie-banner .actions button.main {
+  color: var(--ifm-color-primary);
 }
 
 .cookie-banner .actions button.secondary {
