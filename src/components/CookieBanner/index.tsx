@@ -11,17 +11,11 @@ export const CookieBanner = () => {
     if (!expire) {
       return false;
     }
-    return Math.abs(Number(expire) - new Date().getTime()) / (60 * 60 * 1000) > 24;
+    return Date.now() - Number(expire) > 24 * 60 * 60 * 1000
   }
 
   useEffect(() => {
-    if(isPostponeExpired()) {
-      setAccepted(false)
-    } else {
-      const storageAccepted = localStorage.getItem('cookies:accepted') === 'true'
-
-      setAccepted(storageAccepted)
-    }
+    setAccepted(!isPostponeExpired() && localStorage.getItem('cookies:accepted') === 'true')
   }, [])
 
   useEffect(() => {
