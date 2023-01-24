@@ -9,16 +9,16 @@ import CloseSvg from '@site/static/icons/close.svg';
 const items = [
   {
     id: 'neon-token',
-    offset: { x: 90, y: 150 },
-    content: <p>The
+    content: <p>The&nbsp;
       <Link className={'link'} to={'/docs/tokens/neon_token'}>
         NEON token <LinkSvg className={'link-image'} />
       </Link> is used to pay the <Link className={'link'} to={'/docs/tokens/gas_fees'}>
         gas fees <LinkSvg className={'link-image'} />
-      </Link> required for transaction execution Neon Proxy is an essential tool for packaging a
+      </Link> required for transaction execution <strong>Neon Proxy</strong> is an essential tool for packaging a
       Neon transaction into a Solana transaction. It improves the user experience for operators
       in the Neon ecosystem, and it allows Ethereum dApps to be ported to Neon with virtually no
       code or configuration changes, as all the “translating” is handled by the proxy.
+      <br />
       <br />
       <strong>Neon operators</strong> run Neon Proxy servers, which helps facilitate seamless
       execution of Ethereum-like transactions on Solana. This allows Ethereum dApps to be ported to
@@ -27,7 +27,6 @@ const items = [
   },
   {
     id: 'evm-program',
-    offset: { x: 120, y: 170 },
     content: <p>
       <strong>The Neon EVM program</strong> is a smart contract on
       the Solana blockchain. This allows Neon EVM to receive Ethereum-like transactions and
@@ -37,7 +36,6 @@ const items = [
   },
   {
     id: 'neon-evm',
-    offset: { x: 120, y: -10 },
     content: <p>
       <strong>Neon EVM</strong> facilitates the usage of Ethereum tooling
       by dApp developers to scale and access liquidity on Solana.
@@ -49,7 +47,6 @@ const items = [
   },
   {
     id: 'tracing-api',
-    offset: { x: 120, y: 0 },
     content: <p>
       <strong>Tracing API</strong> is an extension for Neon Proxy. For historical requests,
       Neon Labs implemented a Tracing API to help developers better test,
@@ -66,7 +63,6 @@ const items = [
   },
   {
     id: 'oracles',
-    offset: { x: 20, y: 150 },
     content: <span>
       <strong>Oracles </strong> provide a way for the decentralized Web3 ecosystem to access price
       feeds and other external (off-chain) data sources. Neon EVM supports querying data from Solana
@@ -88,7 +84,6 @@ const items = [
   },
   {
     id: 'tokens',
-    offset: { x: 30, y: 100 },
     content: <span>
       <strong>Tokens — </strong> on Neon EVM you can use:
       <ul className='list'>
@@ -113,7 +108,6 @@ const items = [
   },
   {
     id: 'tooling',
-    offset: { x: 35, y: 50 },
     content: <p>
       <strong>Ethereum Tooling: </strong>
       <Link className={'link'} to={'/docs/wallet/metamask_setup'}>
@@ -157,7 +151,7 @@ export function QuickLookNeonImage() {
   return <>
     <div className={`image-container`}>
       <SVGImage setAnchorId={setAnchorId} setIsOpen={setIsOpen} isOpen={isOpen} />
-      <Tooltip anchorId={anchorId} isOpen={isOpen} className={`tooltip-container`}>
+      <Tooltip place={'bottom'} offset={-20} anchorId={anchorId} isOpen={isOpen} className={`tooltip-container`}>
         <a onClick={close} className={`tooltip-close`}><CloseSvg /></a>
         <Content />
       </Tooltip>
