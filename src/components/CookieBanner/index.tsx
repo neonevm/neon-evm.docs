@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import './styles.css';
 
 const COOKIES_EXPIRE = 'cookies:expire';
@@ -8,9 +8,11 @@ export const CookieBanner = () => {
   const [show, setShow] = useState(false);
 
   const isPostponeExpired = useMemo<boolean>(() => {
-    const expire = localStorage.getItem(COOKIES_EXPIRE);
-    if (typeof expire === 'string') {
-      return Math.abs(Number(expire) - new Date().getTime()) / 36e5 > 24;
+    if (typeof window !== 'undefined') {
+      const expire = localStorage.getItem(COOKIES_EXPIRE);
+      if (typeof expire === 'string') {
+        return Math.abs(Number(expire) - new Date().getTime()) / 36e5 > 24;
+      }
     }
     return true;
   }, []);
@@ -19,17 +21,17 @@ export const CookieBanner = () => {
     setShow(isPostponeExpired && !JSON.parse(localStorage.getItem(COOKIES_ACCEPTED)));
   }, [isPostponeExpired]);
 
-  const acceptCookies = () => {
+  const acceptCookies = useCallback(() => {
     setShow(false);
     localStorage.setItem(COOKIES_ACCEPTED, 'true');
     localStorage.removeItem(COOKIES_EXPIRE);
-  };
+  }, []);
 
-  const postponeCookies = () => {
+  const postponeCookies = useCallback(() => {
     setShow(false);
     localStorage.setItem(COOKIES_ACCEPTED, 'false');
     localStorage.setItem(COOKIES_EXPIRE, new Date().getTime().toString());
-  };
+  }, []);
 
   if (show) {
     return <>
