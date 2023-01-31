@@ -49,14 +49,22 @@
   font-weight: 700;
   width: fit-content;
   text-align: left;
+  transition: color .3s ease;
 }
 
 .cookie-banner .actions button.main {
   color: var(--ifm-color-primary);
 }
 
+.cookie-banner .actions button.main:hover {
+  color: var(--ifm-color-primary-darkest);
+}
+
 .cookie-banner .actions button.secondary {
   color: var(--ifm-menu-color);
+}
+.cookie-banner .actions button.secondary:hover {
+  color: #000000;
 }
 
 [data-theme='dark'] .cookie-banner {
