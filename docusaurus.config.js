@@ -85,7 +85,7 @@ const config = {
               { label: '🧬 Neon EVM Overview', to: '/docs/about/why_neon' },
               { label: '🔑 Set Up Wallet', to: '/docs/wallet/metamask_setup' },
               { label: '💰 Tokens', to: '/docs/tokens/neon_token' },
-              { label: '🛰 Transfer Tokens', to: '/docs/token_transferring/neonpass_usage' },
+              { label: '🛰 Move Tokens Between Neon EVM and Solana', to: '/docs/token_transferring/neonpass_usage' },
               { label: '💬 FAQ', to: '/docs/faq/what-is-neon' }
             ]
           },

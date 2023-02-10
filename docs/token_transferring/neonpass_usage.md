@@ -1,21 +1,19 @@
 ---
-title: Transfer Solana Tokens
+title: Move Tokens Between Neon EVM and Solana
 ---
 
 ## Overview
-This guide provides instructions on how to transfer ERC-20 tokens between Solana and Neon EVM using NeonPass. You can do it in any direction, i.e. transfer tokens from Solana to Neon EVM or withdraw them back. However, you need to keep in mind that each transaction in Neon EVM or Solana will be charged a fee in the form of NEON or SOL tokens, respectively. For example, withdrawing tokens from Neon EVM to Solana requires 2 transactions: one for Neon EVM (requires a fee in NEON) and another for Solana (requires a fee in SOL). Therefore, you will have to pay two fees.
+This guide shows you how to transfer ERC-20 tokens between Solana and Neon EVM using [NeonPass](https://neonpass.live/). You can transfer tokens in either direction, but each transaction will incur a gas fee in either NEON or SOL tokens, depending on the source network. For example, moving tokens from Neon EVM to Solana requires two transactions, one for Neon EVM (which requires a fee in NEON) and another for Solana (which requires a fee in SOL).
 
-Before you start transferring ERC-20 tokens, you have to fulfill the following requirements:
-  * On a source side, you should already have an account with the balance of tokens that will be transferred.
-  * NeonPass uses [MetaMask](about/terminology.md#metamask) and [Phantom](about/terminology.md#phantom), two popular non-custodial browser based wallets.
-  * The NeonPass application is deployed in the browser to which your wallets are attached.
+To transfer ERC-20 tokens, you must:
+* Have an account on the source network with the necessary token balance. This means that:
+  * When transferring from Neon EVM to Solana, make sure your Neon EVM account has enough NEON and the token being moved to complete the transfer and cover the gas fee.
+  * When transferring from Solana to Neon EVM, make sure your Solana account has enough SOL and the token being moved to complete the transfer and cover the gas fee.
+* Use non-custodial browser-based wallet applications [MetaMask](https://metamask.io/) and [Phantom](https://phantom.app/), which are currently supported by NeonPass.
+* Access the NeonPass page using a browser where your wallet applications are attached.
 
-## Procedure
-This procedure presents the example of transferring NEON tokens from Neon EVM to Solana in Devnet. The task is to transfer 42 NEON from Neon EVM to Solana.
-
-Initial conditions:
-  * Your Neon EVM account contains a non-zero NEON balance to send, as well as enough to pay the withdrawal approval fee.
-  * Your Solana account contains a non-zero SOL-balance to pay the fee.
+## Tutorial: Moving Tokens From Neon EVM to Solana
+The following is an example of transferring NEON tokens from Neon EVM to Solana on Devnet.
 
 ### 1. Connect Wallets
 Go to the [NeonPass](https://neonpass.live/) page in the browser to which the Phantom and MetaMask wallets are attached.
@@ -26,12 +24,12 @@ Go to the [NeonPass](https://neonpass.live/) page in the browser to which the Ph
 
 </div>
 
-1. Make sure that the icons of these wallets are displayed at the top right.
-2. By default, the direction of transferring tokens is set  to be from `Solana` to `Neon`. For this tutorial, click on the arrow icon to reverse the forwarding direction.
+1. Make sure that the icons of these wallet extensions are displayed in the browser. For Chrome, they are in the top right corner.
+2. By default, the direction of transferring tokens is set to be from `Solana` to `Neon`. For this tutorial, click on the arrow icon to reverse the forwarding direction so that it is from `Neon` to `Solana`.
 3. Click `Connect Wallet` to connect your Phantom wallet to the NeonPass app. The Phantom window should pop up on the screen. Follow the login procedure to your wallet and make sure it is connected to Devnet. Also, make sure you have a non-zero SOL balance to pay the withdrawal approval fee.
-4. Click `Connect Wallet` to connect your MetaMask wallet to the NeonPass app. The MetaMask window should pop up on the screen. Follow the login procedure to your wallet and make sure it is connected to Devnet. Also, make sure you have enough NEON tokens in your account to transfer (there are 142 NEON in our example) and have a non-zero NEON balance to pay the withdrawal approval fee.
+4. Click `Connect Wallet` to connect your MetaMask wallet to the NeonPass app. The MetaMask window should pop up on the screen. Follow the login procedure to your wallet and make sure it is connected to Devnet. Also, make sure you have enough NEON tokens in your account to transfer and have a non-zero NEON balance to pay the withdrawal approval fee.
 
-After successfully connecting your MetaMask and Phantom wallets to NeonPass, the `Connect Wallet` text will change to the name of the chain (Solana or Neon), and the public key of your accounts will be displayed above.
+After successfully connecting your MetaMask and Phantom wallets to NeonPass, the `Connect Wallet` text will change to the name of the network (Solana or Neon), and the public key of your accounts will be displayed above.
 
 ### 2. Select Token
 On the NeonPass screen, click `Choose token`. In the list that appears, select the desired token symbol and specify the quantity to be sent (in our example, it is 42 NEON).
@@ -42,25 +40,29 @@ On the NeonPass screen, click `Choose token`. In the list that appears, select t
 
 </div>
 
-### 3. Approve Transaction and Transfer
-Click `Transfer` to begin the token transfer procedure. The transaction must then be confirmed in both the MetaMask and Phantom wallet windows which will pop up.
+### 3. Approve Transaction and Complete Transfer
+Click `Transfer` to begin the token transfer procedure. The transaction must then be confirmed in both the MetaMask and Phantom wallet windows which will pop up. Verify the transaction details and approve it if you wish to proceed. A loading screen will appear after you approve.
 
-You should then receive a notification that the token transfer was successful. Open the `View on Solana Explorer` page to see the results of transferring funds using NeonPass.
-
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
-
-![](img/transfer-spl-9.png)
-
-</div>
-
-The `Token Balance Change` tab shows the change in balances upon completion of the procedure.
+After the transaction has been processed successfully, you will see the following screen indicating that the transfer is complete.
 
 <div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](img/transfer-spl-10.png)
+![](img/transfer_complete.png)
 
 </div>
 
-## Conclusion
+Click on `View on Neon Explorer` and confirm on NeonScan that the tokens have been moved. In this case, 42 NEON was transferred out of the origin wallet.
 
-We examined the use of NeonPass on Devnet using the example of transferring NEON tokens from Neon EVM to Solana. The procedure for reverse transferring tokens from Solana to Neon EVM using NeonPass is not much different from the one given, and therefore we will not explain it here. The main difference will be only in the order of connecting wallets to NeonPass.
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
+
+![](img/confirmation_transfer_neonscan.png)
+
+</div>
+
+Let's also check the destination Solana wallet address on [Solana Explorer](https://explorer.solana.com/) to see if the 42 NEON tokens have been transferred, and indeed they have. 
+
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
+
+![](img/confirmation_transfer_solana.png)
+
+</div>
