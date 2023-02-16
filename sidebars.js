@@ -130,13 +130,32 @@ const sidebars = {
     { type: 'html', value: '<h4 class="sidebar-menu-title">Operators</h4>' },
     {
       type: 'doc',
-      label: 'Operator Requirements',
-      id: 'operating/operator_requirements'
+      label: 'Operate a Neon Proxy',
+      id: 'operating/overview/introduction'
+    },
+    {
+      type: 'category',
+      label: 'Run neon-proxy',
+      items: [
+        'operating/basic',
+        'operating/enhanced',
+        'operating/enterprise',
+      ]
     },
     {
       type: 'doc',
-      label: 'Running a Proxy Server',
-      id: 'operating/operator_guide'
+      label: 'Set up Kubernetes with k0s',
+      id: 'operating/installation/setup_kubernetes'
+    },
+    {
+      type: 'doc',
+      label: 'Run neon-proxy with Kubernetes',
+      id: 'operating/installation/installation'
+    },
+    {
+      type: 'doc',
+      label: 'Command Line Flags',
+      id: 'operating/flags/flags'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Governance</h4>' },

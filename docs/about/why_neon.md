@@ -27,7 +27,7 @@ Ethereum is set to remain a booming blockchain ecosystem. The number of active d
 Solana is one of the most technically advanced and innovative blockchains, offering low gas fees and high throughput of transactions. Among these innovations is its Proof-of-Stake (PoS) consensus system, which is reinforced via a Proof-of-History protocol, a transaction parallelization technology that optimizes resources and ensures that Solana can scale horizontally across GPUs and SSDs, along with an optimized mempool system that speeds up throughput.
 
 * parallel execution of transactions
-* low gas fee - number from site
-* high transaction speed - number from site
+* low gas fee - 0.000015 SOL / tx
+* high transaction speed - 2,000+ tps
 * access to the growing Solana Ecosystem
 * uses Solana consensus mechanism and state, no additional validators

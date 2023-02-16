@@ -55,8 +55,8 @@ The following are some examples of gas fee calculation on Neon. They are all bas
 * The gas price is therefore (1 + 10%) \* 120 \* 10<sup>-9</sup> NEON = 132 \* 10<sup>9</sup> Alan = 132 Galan
 
 ### Example 1: A Normal Swap
-The gas amount in this case is 10 \* 2 \* 5,000 (computational cost + treasury) + 5 \* 6,960 (storage cost) ≈ 145,000 units
-The total gas fee is therefore 145,000 units \* 132 \* Galan = 0.01914 NEON.
+The gas amount in this case is 10 \* 2 \* 5,000 (computational cost + treasury) + 5 \* 6,960 (storage cost) ≈ 134,800 units
+The total gas fee is therefore 134,800 units \* 132 \* Galan = 0.01779 NEON.
 
 ### Exampe 2: Creating a New Account
 According to [Solana](https://docs.solana.com/storage_rent_economics), the rental cost for storage can be paid via one of two methods:
