@@ -39,7 +39,7 @@ In addition to NEON and wNEON tokens, below are some common tokens that are depl
 |wCRV |0x6BA61a7dd0b67A8c3403800Fe951065A6D0f4735|
 |SUSHI|0x9A0717142D72Bb398851A4453a7D5Dc5E5e26Cc0|
 |wBAL |0x347b2f26e5900Cb4749A5A9bd97e1a7bF42eaf0f|
-|wSOL |Not available (missed MetaPlesk metadata) |  
+|wSOL |0x302882E0c607c58018be3BB186b0aA0aC4F90136|  
   </TabItem>
 
 <TabItem value="testnet" label="Testnet">
