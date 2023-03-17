@@ -82,7 +82,7 @@ To vote on a proposal, follow the following steps:
 3. A prompt by your wallet application will ask if you to approve the voting transaction. If you have verified its details and wish to continue, approve it, then wait a few moments for the transaction to process.
 5. You have now cast your vote on this proposal. 
 
-Once the voting period is concluded, the votes are automatically counted. If the proposal's "Accept" votes pass the Assembly's required vote threshold, the proposal is passed and is ready for implementation. Otherwise, the proposal fails.
+Once the voting period is concluded, the votes are automatically counted. If the proposal's "Accept" votes pass the Assembly's required vote threshold ("Vote tipping point" in the image below), the proposal is passed and is ready for implementation. Otherwise, the proposal fails.
 
 ![](./img/new_gov_ui_voting_tipping_point.png)
 
