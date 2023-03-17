@@ -2,13 +2,15 @@
 title: Voting Process
 ---
 
+*Note: The screenshots (and the wallet addresses, token balances, and proposals) on this page are for illustrative and instructional purposes **only**. *
+
 ## Introduction
 
 Any Neon user can submit an idea for potential implementation by the Neon DAO. Each idea is included in the list of promising solutions and discussed on the DAO forum. After an idea is proposed, it goes through a formal life cycle of technical reviews, research, and discussions. This discussion stage allows management to exclude the implementation of inefficient or risky solutions in Neon. After the discussion stage, finalized ideas are reworked into concrete on-chain **proposals** and are put to a vote by the Assembly. Proposals that are approved according to the rules of their Assembly are then automatically implemented by Neon.
 
 ## Discussing on the DAO Forum
 
-The DAO Forum is a place where Neon developers and third-party teams can discuss and debate ideas and express and articulate their opinions in preparation for becoming proposals. This forum is a vital part of the Neon DAO, because it provides transparency and accountability, fosters constructive discourse, and helps ensure the decentralization of the project. 
+The DAO Forum is a place where Neon stakeholders, community members, developers, and third-party teams can discuss and debate ideas and express and articulate their opinions in preparation for becoming proposals. This forum is a vital part of the Neon DAO, as it provides transparency and accountability, fosters constructive discourse, and helps ensure the decentralization of the project. 
 
 Potential proposals can affect both the management and technical processes of Neon. If this is a proposal to change the logic of system contracts or to improve the technical capabilities of Neon, the proposal contract must be tested on either Devnet or Testnet. Proposals for the implementation of new features associated with risk or high labor costs go through the following formal process:
 
@@ -17,22 +19,50 @@ Potential proposals can affect both the management and technical processes of Ne
   * Appointment of a worker for the implementation of the proposal. The worker may be an individual, a group of individuals, or a third-party company.
   * Verification and decision on acceptance of the work done.
 
-All these details are discussed, revised, and debated civilly on the DAO Forum.
+All these details are discussed, revised, and debated civilly on the DAO Forum. To learn more about expectations on governance participants and discourse, refer to the [Principles and Objectives](/docs/governance/principles) section.
 
+## Connecting Wallet
+
+:::tip
+Interacting with Neon Governance requires the use of NEON tokens. Make sure you are connecting a wallet account **with NEON tokens available**.
+:::
+
+1. Click on "Connect" to connect your Solana wallet to the DAO website.
+   ![](./img/new_gov_ui_before_wallet.jpeg)
+2. Select the wallet application that you are using from the list.
+   ![](./img/new_gov_ui_wallet_connect.png)
+3. If you wish to continue, respond to your wallet application's prompt to allow connecting.
+4. Confirm that you see your wallet address show up.
+   ![](./img/new_gov_ui_wallet_balance.png)
+
+You are now ready to interact with the Neon Governance UI.
 
 ## Creating a Proposal
+Once an idea has reached its final form after discussions on the DAO Forum and the formal review process is complete, the proponent can create the actual proposal. The on-chain code to automatically implement the proposal that was tested and finalized on the DAO Forum is now ready to be included in a formal proposal on the Neon DAO website.
 
-Once an idea has reached its final form after discussions on the DAO Forum and the formal review process is complete, the proponent can create the actual proposal. The on-chain code to automatically implement the proposal that was tested and finalised on the DAO Forum is now ready to be included in a formal proposal on the Neon DAO website.
+Before proceeding, please make sure [your wallet is connected](#connecting-wallet).
 
-To create a proposal, follow the following steps:
+To create a proposal, follow the steps below.
 
-1. On the Neon DAO website, select the Assembly for which the proposal is best suited.
-2. Connct your Solana wallet, with NEON tokens available, to the DAO website.
-3. Deposit the number of NEON tokens required by the Assembly for proposal submission.
-4. Create the proposal, with a link to the discussion on the DAO Forum.
-
-Current proposals are displayed on the main page of the *Neon DAO* section, under the "How to Participate" heading.
-
+1. On the Neon DAO website, select the Governance topic for which the proposal is best suited.
+  ![](./img/new_gov_ui_governance_topic.jpeg)
+2. Click on the "Add new proposal" button.
+  ![](./img/new_gov_ui_add_new_proposal.jpeg)
+3. In the "Add new proposal" popup, enter the name of your proposal and a description with a link to a relevant [GitHub Gist](https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists), if applicable. Click on "Add proposal".
+  ![](./img/new_gov_ui_new_proposal_popup.png)
+4. A transaction prompt will be displayed by your wallet application. If you have verified its details and wish to continue, approve it, then wait a few moments for the transaction to process.
+5. After the transaction has been processed, you will see your proposal in the list of proposals. In this case, we created a proposal called `[Test] Test Proposal 2`.
+  ![](./img/new_gov_ui_list_after_new_proposal.png) 
+  Click on your proposal to see its details. This new proposal will be in the `Draft` state by default.
+  ![](./img/new_gov_ui_new_proposal_page.png)
+  You can then sign off on your proposal by clicking on the "Sign off" button. Click "Sign off" in the pop up that follows.
+  ![](./img/new_gov_ui_sign_off_popup.png)
+6. A prompt by your wallet application will ask if you to approve the sign off transaction. If you have verified its details and wish to continue, approve it, then wait a few moments for the transaction to process.
+7. After the sign off transaction has been processed, your proposal is now signed off by you and put forth to the community for a vote. Your proposal is now in the `Voting` state and the "Voting Time Left" clock has started counting down.
+  ![](./img/new_gov_ui_signed_off_proposal.png)
+8. Share the proposal link URL to the DAO Forum and elsewhere for the Neon community to vote on it.
+9. (Optional) Alternatively, if you wish to cancel this proposal for whatever reason, click on the "Cancel proposal" button, click "Yes, Cancel" in the pop up that follows, and approve the cancel transaction.
+  ![](./img/new_gov_ui_cancel_proposal.png)
 
 ## Voting
 
@@ -40,12 +70,21 @@ After a proposal is created, it is ready to be put to a vote. The community of e
 
 To vote on a proposal, follow the following steps:
 
-1. On the Neon DAO website, select the Assembly for which the proposal is best suited.
-2. Connct your Solana wallet, with NEON tokens available, to the DAO website.
-3. Deposit the number of NEON tokens equivalent to the desired number of votes for your preferred option, whether it is to "Accept" or "Reject" the proposal.
-4. Click "Vote" to approve the transaction.
+1. You might have been given a link to a proposal that is in the `Voting` state, or you might have clicked on a proposal in the `Voting` stage from the list of proposals. Either way, tou should see a proposal page like this:
+  ![](./img/new_gov_ui_proposal_voting.png)
+2. Click on "Positive" or "Negative" depending on whether you are in favor of or against the proposal.
+     1. If you choose "Positive", you will see a pop up as follows.
+    ![](./img/new_gov_ui_positive_popup.png)
+     2. If you choose "Negative", you will see a pop up very similar to the pop up above.
+    ![](./img/new_gov_ui_negative_popup.png)
+     3. You can then choose/customize the percentage of your NEON tokens you would like to commit for this vote
+     4. Click "Confirm" once you are happy with your ballot.
+3. A prompt by your wallet application will ask if you to approve the voting transaction. If you have verified its details and wish to continue, approve it, then wait a few moments for the transaction to process.
+5. You have now cast your vote on this proposal. 
 
 Once the voting period is concluded, the votes are automatically counted. If the proposal's "Accept" votes pass the Assembly's required vote threshold, the proposal is passed and is ready for implementation. Otherwise, the proposal fails.
+
+![](./img/new_gov_ui_voting_tipping_point.png)
 
 <!-- ------------------------ -->
 <!-- Below should be merged as soon as the Governance UI is ready -->

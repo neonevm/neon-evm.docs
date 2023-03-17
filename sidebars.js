@@ -138,19 +138,13 @@ const sidebars = {
       label: 'Run neon-proxy',
       items: [
         'operating/basic',
-        'operating/enhanced',
-        'operating/enterprise',
+        'operating/enhanced'
       ]
     },
     {
       type: 'doc',
       label: 'Set up Kubernetes with k0s',
       id: 'operating/installation/setup_kubernetes'
-    },
-    {
-      type: 'doc',
-      label: 'Run neon-proxy with Kubernetes',
-      id: 'operating/installation/installation'
     },
     {
       type: 'doc',
