@@ -139,7 +139,7 @@ const sidebars = {
       label: 'Run neon-proxy',
       items: [
         'operating/basic',
-        'operating/enhanced'
+        'operating/enhanced',
       ]
     },
     {
