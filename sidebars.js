@@ -16,7 +16,7 @@ const sidebars = {
         [
           'about/why_neon',
           'about/neon_ecosystem',
-          'about/how_it_works'
+          'about/how_it_works',
         ]
     },
     {
@@ -27,7 +27,7 @@ const sidebars = {
     {
       type: 'doc',
       label: '🛰 Transfer  Tokens',
-      id: 'token_transferring/neonpass_usage'
+      id: 'token_transferring/neonpass_usage',
     },
     {
       type: 'category',
@@ -35,7 +35,7 @@ const sidebars = {
       items: [
         'tokens/neon_token',
         'tokens/gas_fees',
-        'tokens/token_list'
+        'tokens/token_list',
       ]
     },
     {
@@ -50,7 +50,7 @@ const sidebars = {
     { type: 'link', label: 'NeonFaucet', href: 'https://neonfaucet.org/' },
     { type: 'link', label: 'NeonAnalytics', href: 'https://neon.aleph.cloud/' },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Developers</h4>' }
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Developers</h4>' },
     {
       type: 'doc',
       label: 'Connect to Neon RPC',
@@ -67,7 +67,7 @@ const sidebars = {
       items: [
         'developing/deploy_facilities/configure_hardhat',
         'developing/deploy_facilities/configure_truffle',
-        'developing/deploy_facilities/configure_brownie'
+        'developing/deploy_facilities/configure_brownie',
       ]
     },
     {
@@ -76,7 +76,7 @@ const sidebars = {
       items: [
         'developing/deploy_facilities/interacting_with_spl_tokens',
         'tokens/token_list',
-        'developing/integrate/neon_transfer_sdk'
+        'developing/integrate/neon_transfer_sdk',
       ]
     },
     {
@@ -86,7 +86,7 @@ const sidebars = {
         'developing/integrate/protocols/integrating_walletconnect',
         'developing/integrate/oracles/integrating_chainlink',
         'developing/integrate/oracles/integrating_pyth',
-        'developing/integrate/wallets/integrating_metamask_into_your_dapp'
+        'developing/integrate/wallets/integrating_metamask_into_your_dapp',
       ]
     },
     {
@@ -96,7 +96,7 @@ const sidebars = {
         'developing/deploy_facilities/using_hardhat',
         'developing/deploy_facilities/using_truffle',
         'developing/deploy_facilities/using_remix',
-        'developing/deploy_facilities/using_brownie'
+        'developing/deploy_facilities/using_brownie',
       ]
     },
     {
@@ -116,7 +116,7 @@ const sidebars = {
         'developing/dev_environment/op2_local_proxy_local_solana',
         'developing/dev_environment/op3_local_proxy_remote_solana',
         //'developing/dev_environment/faucet_and_test_suite_services',
-        'clusters/solana_cluster'
+        'clusters/solana_cluster',
       ]
     },
     {
@@ -124,7 +124,7 @@ const sidebars = {
       label: 'Learn',
       items: [
         'architecture/neon_evm_arch',
-        'architecture/eth_sol_solution'
+        'architecture/eth_sol_solution',
       ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
