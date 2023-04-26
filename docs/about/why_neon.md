@@ -2,7 +2,7 @@
 title: Why Neon EVM?
 proofedDate: 20230426
 iterationBy: HB
-approvedBy: 
+approvedBy: na
 ---
 
 *Neon EVM is a low-friction solution to scale Ethereum dApps on Solana.*
@@ -11,13 +11,13 @@ approvedBy:
 
 Neon EVM is a fully compatible Ethereum environment solution built on the Solana blockchain. The platform allows developers to deploy Ethereum dApps without undertaking any reconfiguration. 
 
-> No code changes required.
+> No code changes required: Ethereum developers can build without Rust.
 
 Neon EVM enables Solidity- and Vyper-based dApps to tap into Solana’s network benefits: low fees, high transaction speeds, and parallel transaction execution capabilities.
 
 From a developer’s perspective, this means creating Solana-compatible contracts using tools you’re familiar with from the Ethereum ecosystem. 
 
-Neon EVM makes the key Ethereum dApp tools compatible with Solana, including Solidity, MetaMask, Remix, and Truffle. The solution allows any Ethereum application to run on Solana without any changes to its codebase, including Uniswap, SushiSwap, 0x, and MakerDAO. 
+Neon EVM makes the key Ethereum dApp tools compatible with Solana, including Vyper, Solidity, [MetaMask](/docs/wallet/metamask_setup), [Hardhat](/docs/developing/deploy_facilities/using_hardhat), [Truffle](/docs/developing/deploy_facilities/using_truffle), and [Remix](/docs/developing/deploy_facilities/using_remix). The solution allows any Ethereum application to run on Solana without any changes to its codebase, this includes Uniswap, SushiSwap, 0x, and MakerDAO. 
 
 
 ### Who uses Neon EVM?
@@ -26,7 +26,7 @@ Neon EVM serves any developers or product teams who wish that their dApp could r
 
 ## The best from Ethereum
 
-Ethereum has firmly established itself as a significant blockchain ecosystem, providing a robust settlement layer. However, Ethereum's gas prices and transaction speeds create such challenges for dApps that an entire L2 and rollup ecosystem has erupted to address the issues.
+Ethereum has firmly established itself as a significant blockchain ecosystem, providing a robust settlement layer. However, Ethereum's gas prices and transaction speeds create such challenges for dApps that an entire L2 and rollup ecosystem has erupted to address these issues.
 
 Neon EVM offers a better solution: by bringing Solana's sophisticated and low-cost transaction capabilities to Ethereum builders.
 
@@ -45,7 +45,7 @@ Solana is one of the most technically advanced and innovative blockchains: offer
 Solana offers developers:
 
 * Parallel execution of transactions (txs)
-* Low gas fee - 0.000015 SOL/tx
-* High transaction speed - 2,000+ tps
-* Access to the growing Solana Ecosystem
-* Solana's consensus mechanism and state, no additional validators
+* Low gas fees: 0.000015 SOL/tx
+* High transaction speed: 2,000+ tps
+* Access to the growing Solana ecosystem
+* Solana's consensus mechanism and state, with no additional validators
