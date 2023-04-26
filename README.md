@@ -23,3 +23,39 @@ yarn build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+
+
+
+
+
+
+
+
+
+
+
+
+## QA layer: Vale
+
+Vale is a linting tool for spelling, grammar, and style.
+
+If you want to move fast there is a [decent intro](https://passo.uno/posts/first-steps-with-the-vale-prose-linter/) to the tooling. And, [vale's own docs](https://vale.sh/docs/vale-cli/installation/).
+
+### Vale control file
+
+The control file, vale.ini allows customization.
+
+This file is set to lint Markdown files, as per `[*.md]`. 
+
+### Linting
+
+Linting may either be local (with vale installed via the CLI), or on a webhook action in GitHub or the like. 
+
+### Local lint
+
+Local installation and CLI linting is recommended for documentarians:
+
+You can either lint **all** Markdown files with `vale .`, or you can name a specific file to lint, e.g. `readme.md`.
+
+
