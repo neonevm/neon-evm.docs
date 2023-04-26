@@ -3,6 +3,7 @@ title: Neon ecosystem
 proofedDate: na
 iterationBy: HB
 approvedBy: na
+comment: pls confirm Neon EVM interacts with Solana nodes (multiple) not singular (TW update text)
 ---
 
 <div className='neon-img-box-300' style={{textAlign: 'center', width: 700, display: 'block', margin: 'auto'}}>
@@ -11,7 +12,7 @@ approvedBy: na
 
 </div>
 
-**Neon EVM** is the solution that makes Solana's throughput, swift block speeds, and low gas prices available to Ethereum contracts. Neon EVM interacts directly with a Solana node to carry out txs on Solana. The service is made up of three main components:
+**Neon EVM** is the solution that makes Solana's throughput, swift block speeds, and low gas prices available to Ethereum contracts. Neon EVM interacts directly with Solana nodes to carry out txs on Solana. The service is made up of three main components:
 
 - Neon DAO
 - Neon EVM
@@ -47,27 +48,31 @@ Owners of the Neon token may engage in the Neon DAO activities.
 
 ### Neon Operators
 
-**Neon operators** run Neon Proxy servers to facilitate the seamless execution of Ethereum-like transactions on Solana. This allows Ethereum dApps to be ported to Neon with no code change.
+**Neon operators** run Neon Proxy servers to facilitate the seamless execution of Ethereum-like transactions on Solana. It is this proxy services that allows Ethereum dApps to be ported to Neon with no code changes.
+
+## Native tools
+
+### NeonScan
+
+[NeonScan](https://neonscan.org/) provides a block explorer and analytics platform to examine Neon transactions within Solana.
+
+### Tracing API
+
+Neon's Tracing API is an extension for Neon Proxy. It assists developers to test, debug, and understand their smart contracts on Neon EVM. The API provides a full externality trace on any Neon transactions executed on the Solana blockchain. 
+
+The Tracing API supports a rerun of historic transactions, runs transactions on historic states, and analyzes the state of the Solana blockchain after the execution of each instruction. 
+
+> More details are available in [our blog](https://medium.com/neon-labs/neon-proxy-tracing-api-fdb3842a80fa)
+
+* [ERC-20 with SPL](/docs/developing/deploy_facilities/interacting_with_spl_tokens) under the hood
+* [NeonPass](/docs/token_transferring/neonpass_usage) to transfer tokens between Solana and Neon EVM
+
+### NeonPass
+
+
 
 ## Integrations
 
 **Oracles** provide a way for the decentralized Web3 ecosystem to access price feeds and other external (off-chain) data sources. Neon EVM supports querying data from Solana deployed Oracles:  
 * [Chainlink](/docs/developing/integrate/oracles/integrating_chainlink)
 * [Pyth](/docs/developing/integrate/oracles/integrating_pyth)
-
-## Native tools
-
-### NeonScan
-
-[NeonScan](https://neonscan.org/) provides a block explorer <!-- Solana explorer?? --> and analytics platform for the Neon ecosystem.
-
-### Tracing API
-
-Neon's Tracing API is an extension for Neon Proxy. It assists developers to test, debug, and understand their smart contracts on Neon EVM. The API provides a full externality trace on any transaction executed on the chain <!-- we do not have a blockchain -- so on Solana or "transaction executed by an Operator" -->. 
-
-The Tracing API supports a rerun of historic transactions, runs transactions on historic states, and analyzes the state of the blockchain <!-- ditto no chain, so Solana state?? --> after the execution of each instruction. 
-
-> More details are available in [our blog](https://medium.com/neon-labs/neon-proxy-tracing-api-fdb3842a80fa)
-
-* [ERC-20 with SPL](/docs/developing/deploy_facilities/interacting_with_spl_tokens) under the hood
-* [NeonPass](/docs/token_transferring/neonpass_usage) to transfer tokens between Solana and Neon EVM
