@@ -1,6 +1,12 @@
 ---
 title: Why should I choose Neon?
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comments: na
 ---
+
 
 * [What are the main advantages of the Neon EVM?](#what-are-the-main-advantages-of-the-neon-evm)
 * [How are the costs of the Neon EVM so low while maintaining a high transaction throughput?](#how-are-the-costs-of-the-neon-evm-so-low-while-maintaining-a-high-transaction-throughput)

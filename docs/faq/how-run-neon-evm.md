@@ -1,6 +1,12 @@
 ---
 title: How can I run Neon EVM?
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comments: na
 ---
+
 
 * [Where can I find the Testnet RPC and ChainID?](#where-can-i-find-the-testnet-rpc-and-chainid)
 * [Will the Mainnet addresses for USDC/USDT/BTC/ETH be the same as they are in Testnet?](#will-the-mainnet-addresses-for-usdcusdtbtceth-be-the-same-as-they-are-in-testnet)

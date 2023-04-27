@@ -1,7 +1,13 @@
 ---
 title: FAQ
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comments: na
 ---
-*This section contains answers to frequently asked questions (FAQs). All questions are divided into groups based on category*
+
+This page provides answers to frequently asked questions (FAQs).
 
 ## Technology
 

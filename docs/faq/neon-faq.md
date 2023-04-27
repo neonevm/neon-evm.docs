@@ -1,6 +1,12 @@
 ---
 title: FAQ Categories
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comments: na
 ---
+
 
 *This section contains answers to frequently asked questions (FAQs). All questions are divided into groups based on their focus:*
 
