@@ -1,5 +1,10 @@
 ---
 title: Introduction
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comments: 
 ---
 
 *The Neon EVM is an [Ethereum virtual machine](https://ethereum.org/en/developers/docs/evm/) on Solana that enables dApp developers to use Ethereum tooling to scale and get access to liquidity on Solana.*
