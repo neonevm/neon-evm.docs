@@ -2,7 +2,9 @@
 title: Why Neon EVM?
 proofedDate: 20230426
 iterationBy: HB
+includedInSite: true
 approvedBy: na
+comments: na
 ---
 
 *Neon EVM is a low-friction solution to scale Ethereum dApps on Solana.*
