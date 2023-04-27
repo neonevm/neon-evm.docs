@@ -98,5 +98,5 @@ Oracles enable the decentralized Web3 ecosystem to access price feeds and other 
 
 ### Wallets
 
-Neon EVM is supported by both MetaMask and Phantom non-custodial wallets.
+Neon EVM is supported by the MetaMask non-custodial wallet.
 

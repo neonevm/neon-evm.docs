@@ -1,13 +1,19 @@
 ---
 title: 'Self-Managed: Build with Your Own k8s Cluster'
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comments: na
 ---
+
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ## Who Should Use This Guide
 
-This guide provides instructions on how to run a self-managed instance of `neon-proxy` that offers more flexibility, configurability, and control for its operator. It is designed for
+This guide provides instructions on how to run a self-managed instance of `neon-proxy` that offers more flexibility, configurability, and control for its operator. It is designed for:
 * More **advanced** operators who would like to build their own Kubernetes clusters from scratch and run neon-proxy on them
 * **Enterprise** operators with cluster solutions on-premise or with third-party public cloud providers such as AWS, Google Cloud, and Microsoft Azure
 
@@ -235,7 +241,7 @@ Learn more about how to root token and unseal key work together [here](https://d
 ./neon-proxy.sh -i -f config.ini
 ```
 
-For a list of flags for `neon-proxy.sh`, see the [Command-Line Flags section](operating/../../flags/flags.md).
+For a list of flags for `neon-proxy.sh`, see the [Command-Line Flags](operating/flags/flags.md).
 
 Once Kubernetes pulls the necessary images, your Neon proxy will start, displaying a myriad of information, such as the network environment, namespace, keys information, Solana URL, and more.
 
