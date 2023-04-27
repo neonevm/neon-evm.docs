@@ -1,5 +1,10 @@
 ---
 title: Integrate WalletConnect
+proofedDate: 20230427
+iterationBy: HB
+includedInSite: true
+approvedBy: na
+comment: TODO suggest a boilerplate ReactApp such as codepen be setup as an example to refer to -- this will then allow better support at Step 4 " connect your preferred wallet with Neon EVM DevNet within the WalletConnect interface. " to be included rather than just alluded to
 ---
 
 import Tabs from '@theme/Tabs';
@@ -24,7 +29,7 @@ Web3Modal is a library that allows users to connect to any dApp via the WalletCo
 
 ## Get Started
 
-### Step 1: create a project 
+### Step 1: Create a project 
 
 Log into [WalletConnect Cloud](https://cloud.walletconnect.com/) to create a new project and copy the Project ID. 
  
