@@ -1,5 +1,5 @@
 ---
-title: Integrate MetaMask into Your DApp
+title: Integrate MetaMask into your dApp
 ---
 
 ## Introduction
