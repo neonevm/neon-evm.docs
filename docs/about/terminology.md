@@ -1,5 +1,10 @@
 ---
 title: Terminology
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comments: 
 ---
 
 ### Application Binary Interface (ABI)

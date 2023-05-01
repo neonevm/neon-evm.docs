@@ -8,8 +8,8 @@ This option will let you connect to Solana via a proxy, when **both** are hosted
 [Docker](https://docs.docker.com/get-docker/) must be already installed on your device. `docker-compose` v1.29 is recommended.
 
 ## Network Configuration
-  * Both the Solana node and the proxy are hosted locally.
-  * The proxy interacts with the Solana node through the Neon EVM.
+  * Both the Solana node and the proxy are hosted locally
+  * The proxy interacts with the Solana node through the Neon EVM
 
 ## Setting up Local Proxy and Local Solana Node
 

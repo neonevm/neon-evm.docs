@@ -1,0 +1,10 @@
+message: "'%s' left in text"
+link: https://github.com/platformsh/platformsh-docs/blob/main/styles/Platform/todo.yml
+extends: existence
+ignorecase: true
+level: warning
+tokens:
+  - XXX
+  - FIXME
+  - TODO
+  - WIP

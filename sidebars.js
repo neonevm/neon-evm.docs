@@ -83,6 +83,7 @@ const sidebars = {
       type: 'category',
       label: 'Integrations',
       items: [
+        'developing/integrate/protocols/integrating_walletconnect',
         'developing/integrate/oracles/integrating_chainlink',
         'developing/integrate/oracles/integrating_pyth',
         'developing/integrate/wallets/integrating_metamask_into_your_dapp',
@@ -138,7 +139,7 @@ const sidebars = {
       label: 'Run neon-proxy',
       items: [
         'operating/basic',
-        'operating/enhanced',
+        'operating/enhanced'
       ]
     },
     {

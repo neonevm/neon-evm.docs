@@ -1,5 +1,10 @@
 ---
 title: What is Neon?
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comments: na
 ---
 
 * [What is Neon?](#what-is-neon)

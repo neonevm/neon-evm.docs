@@ -1,0 +1,98 @@
+[Aa]dd-ons
+[Aa]llowlist
+Ansible
+[Bb]undler
+[Cc]rypto community
+Cloud9
+DeFi platform
+[Dd]issalowlist
+[Dd]ocumentarian
+ESLint
+[Ff]ailover
+gcc
+gif
+Gitter
+Grammarly
+GraphQL
+[Hh]ackathon
+Hardhat
+HODLing
+iPhone
+JavaScript
+jBehave
+jpg
+jQuery
+K8s
+Kubernetes
+lamports
+[Ll]inter?
+MakerDAO
+Markdown
+Merkel-Patricia Trie
+MetaMask
+Neon
+NEON token
+NeonAnalytics
+NeonDAO
+NeonPass
+NeonFaucet
+NeonScan
+NeonSwap
+Neon Web3 Proxy
+Nginx
+Novell
+npx
+npm
+Ohloh
+OpenZeppelin
+Oxfam
+pip3
+Proof-of-History (PoH)
+Proof-of-Stake (PoS)
+png
+pytest
+React.js
+readline
+rst
+Sealevel
+S-trx
+S-trexes
+Solana cluster
+Solana Mainnet
+Solana Program Library (SPL)
+Solidity
+Solaris
+SPL token
+sourcecode
+sudo
+SushiSwap
+styleguide
+sudoing
+Supertest
+Tendermint
+traceroute
+toctree
+toolchain
+Turing-complete
+TypeScript
+Unicode
+Uniswap
+Webpack
+WebDriver
+Visa?
+VS Code
+Vue
+Vyper
+WCAG
+webserver
+wget
+web3.js
+whitepaper
+wrapper
+Xcode
+zk-SNARK
+zk-STARK
+
+
+# Below is for plurals of the above (tested, fails, fix=?)
+(?-i)[A-Z]{2,}s
