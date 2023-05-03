@@ -29,9 +29,9 @@ The Ethereum API passes the tx to the Neon Proxy via the [Neon API service](http
 
    > 2.1 The Neon Proxy processes the request, providing:
    > - Gas usage estimate for tx execution
-   > - Smart contract initiation: wrapping the Ethereum-like tx as a Solana tx
+   > - Broadcast initiation: wrapping the Ethereum-like tx as a Solana tx
    
-   > 2.2. The Neon Proxy passes the wrapped tx to Neon's smart contract hosted on Solana. This results in the following:
+   > 2.2. The Neon Proxy passes the wrapped tx to the Neon EVM program hosted on Solana. This results in the following:
    > - A Solana receipt
    > - A corresponding Neon EVM receipt
      
