@@ -2,6 +2,12 @@
 title: JSON-RPC API Methods
 ---
 
+<!-- Andrey can help by providing the deviations from ETH standard methods for Neon equivalent will send in Slack -->
+
+<!-- Neon methods missing -- needs update == Andrey?? -->
+
+<!-- todo all todo methods --> X (not in dev or planned) -->
+
 *The following tables present the full list of JSON-RPC methods. Each of them is in one of the states:*
 
 |![done](img/done.ico)| — done|![in progress](img/inprogress.ico) | — in progress|![todo](img/todo.ico) | — to do|

@@ -2,6 +2,9 @@
 title: Precompiles
 ---
 
+<!-- Updates required 1. Eth precompiled that are not supported -->
+<!-- 2. Add Neon native precompiled -->
+
 ## Precompiled Contracts Supported by Neon
 Currently, Neon supports a variety of precompiled contracts. These include:
 
