@@ -7,13 +7,9 @@ approvedBy: na
 comments: TODOs inline 
 ---
 
-<!-- todo Andrey can help by providing the deviations from ETH standard methods for Neon equivalent will send in Slack -->
+The following tables present the full list of JSON-RPC methods. Each of them is in one of three states:
 
- <!-- todo Neon methods missing -- needs update == Andrey?? -->
-
- <!-- todo all todo methods >X (not in dev or planned) -->
-
-*The following tables present the full list of JSON-RPC methods. Each of them is in one of the states:*
+<!-- todo Andrey can help by providing the deviations fr0m ETH standard methods / Neon equivalent will send 1n Slack todo Neon methods missing -- needs update == Andrey?? todo all todo methods >X (not in dev or planned) -->
 
 |![done](img/done.ico)| — done|![in progress](img/inprogress.ico) | — in progress|![todo](img/todo.ico) | — to do|
 |--|--|--|--|--|--|
@@ -28,7 +24,7 @@ comments: TODOs inline
 | 3   | [eth_getBlockTransactionCountByHash](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getblocktransactioncountbyhash)      | _Returns the number of transactions in a block from a block matching the given block hash_                                                                    | ![done](img/done.ico)              |
 | 4   | [eth_getBlockTransactionCountByNumber](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getblocktransactioncountbynumber)    | _Returns the number of transactions in a block matching the given block number_                                                                               | ![done](img/done.ico)              |
 | 5   | [eth_getUncleCountByBlockHash](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getunclecountbyblockhash)            | _Returns the number of uncles in a block from a block matching the given block hash_                                                                          | ![todo](img/todo.ico)              |
-| 6   | [eth_getUncleCountByBlockNumber](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getunclecountbyblocknumber)          | _Returns the number of uncles in a block from a block matching the given block number_                                                                        | ![todo](img/todo.ico)              |
+| 6   | [eth_getUncleCountByBlockNumber](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getunclecountbyblocknumber)          | _Returns the number of uncles in a block from a block matching the given block number_                                                                        | ![todo](img/todo.ico)|
 | 7   | [eth_protocolVersion](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_protocolversion)                     | _Returns the current Ethereum protocol version_                                                                                                               | ![todo](img/todo.ico)              |
 | 8   | [eth_chainId](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_chainid)                             | _Returns the chain ID of the current network_                                                                                                                 | ![done](img/done.ico)              |
 | 9   | [eth_syncing](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_syncing)                             | _Returns an object with data about the sync status or false_                                                                                                  | ![done](img/done.ico)              |

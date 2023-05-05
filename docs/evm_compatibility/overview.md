@@ -4,10 +4,10 @@ proofedDate: na
 iterationBy: HB
 includedInSite: true
 approvedBy: na
-comments: TODOs inline 
+comments: #1 we need a page on the not supported OpCodes Anton will send by slack #2 Requires supported precompiles Anton can provide by slack + explanation of WHY they are not supported #3 Requires a list of native precomiled contracts Anton can provide by slack
 ---
 
-TL;DR
+## TL;DR
 
 - Apply (most of) Ethereum's standard JSON RPC API methods
 - Direct the calls to Neon's Proxy
@@ -30,8 +30,6 @@ Solidity or Vyper smart contracts, standard development and deployment tools and
 
 >  A subset of  [Ethereum OpCodes](https://ethereum.github.io/yellowpaper/paper.pdf) are represented verbatim on Neon EVM. 
  
- <!-- we need a page on the not supported OpCodes Anton will send by slack-->
-
 - Apply Ethereum's standard JSON RPC API based on the Ethereum Client API, the Web3 Module API, and the Net Module API
 
 > See the [supported JSON RPC API methods](./json_rpc_api_methods).
@@ -43,23 +41,22 @@ Interoperability between Solana and Ethereum EVMs does require certain adaptatio
 ### Precompiles
 Neon supports all precompiled contracts defined on [evm.code](https://www.evm.codes/precompiled?fork=merge) that provide more advanced functionalities, with [certain limitations](./precompiles#limitations) on some precompiled contracts on Neon EVM.
 
-<!-- Requires a list Anton can provide by slack + explanation of WHY they are not supported-->
 
 Neon also supports native precompiled contracts that are available to our users.
 
- <!-- Requires a list Anton can provide by slack -->
 
 ### Gas calculation
 The mechanism of gas consumption and calculation of gas fees on Neon EVM differ from Ethereum. Gas fees on Neon EVM are much cheaper than on Ethereum. 
 
-<!-- Oleg could provide metrics on one transfer -- ?? once mainnet launched can we compare Neon + Solana to L2 and Rollups Yuri has for tx such as transfers and swaps -->
+<!-- Oleg could provide metrics on one transfer. Once mainnet launched can we compare Neon + Solana to L2 and Rollups Yuri has for tx such as transfers and swaps -->
 
 > Learn more about the [NEON token and how gas fees work on Neon EVM](../../docs/tokens/gas_fees.md).
 
 Several Solana-specific differences also impact smart contract development.
 
 ### Upper limit on number of Accounts
-Neon EVM uses [Solana Transaction V2](https://docs.solana.com/proposals/transactions-v2): limiting the maximum number of accounts used in a single transaction to 64. Solana requires that all accounts used in a transaction be specified in order to ensure parallel execution of transactions.
+<!-- link to solana tx renamed and relinked -->
+Neon EVM uses [Solana Transaction V0](https://docs.solana.com/developing/versioned-transactions): limiting the maximum number of accounts used in a single transaction to 64. Solana requires that all accounts used in a transaction be specified in order to ensure parallel execution of transactions.
 
 <!-- go deeper on HOW to modify the contract to constrain account numbers Anton will pass in slack
   -->
@@ -71,10 +68,11 @@ To avoid the occurrence of a heap overflow error, it is recommended that you red
 - the call stack
 - contract size
 
-<!-- Can we support users further on HOW to reduce heap size? -->
- <!-- Can we show logs ?screenshot and name of service? to demonstrate when the issue is heap size? == detection method ?? Oleg should be able to provide -->
+<!-- support users further on HOW to reduce heap size?
 
- <!-- Support address?? IF users are experiencing such issues, reach out to Yuri sending address -->
+Can we show logs ?screenshot and name of service? to demonstrate when the issue is heap size? == detection method ?? Oleg should be able to provide
+
+  Support address 1F users are experiencing such issues, reach out to Yuri sending address -->
 
 
 ### Limitation on `block.timestamp` / `block.number` Usage

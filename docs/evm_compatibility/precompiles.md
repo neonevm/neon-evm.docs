@@ -7,8 +7,6 @@ approvedBy: na
 comments: TODOs inline 
 ---
 
-<!-- Updates required 1. Eth precompiled that are not supported -->
- <!-- 2. Add Neon native precompiled -->
 
 ## Precompiled Contracts Supported by Neon
 Currently, Neon supports a variety of precompiled contracts. These include:
@@ -23,3 +21,5 @@ However, there are some precompiled contracts that Neon does not support. Contra
 * bn256Pairing — Elliptic curve pairing operations to perform zkSTARKs verification within the block gas limit.
 
 The Neon EVM requires the implementation of system calls in Solana for these contracts.
+
+<!-- Updates required Eth precompiled that are not supported && Add Neon native precompiled -->
