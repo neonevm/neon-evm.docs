@@ -69,7 +69,7 @@ export SOLANA_URL=http://api.devnet.solana.com/
 export PROXY_VERSION=latest
 ```
 
-3. Download the `docker-compose` [file](https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/proxy/docker-compose-remote-solana.yml). This file should be placed in the same folder with the `keys/` directory.
+3. Download the `docker-compose` [file](https://github.com/neonlabsorg/proxy-model.py/blob/develop/docker-compose/docker-compose-remote-solana.yml). This file should be placed in the same folder with the `keys/` directory.
 ```bash
 wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/proxy/docker-compose-remote-solana.yml
 ```
