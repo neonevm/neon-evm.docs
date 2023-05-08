@@ -1,5 +1,5 @@
 ---
-title: Integrate WalletConnect
+title: WalletConnect
 proofedDate: 20230427
 iterationBy: HB
 includedInSite: true

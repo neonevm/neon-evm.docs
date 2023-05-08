@@ -1,5 +1,5 @@
 ---
-title: EVM Compatibility Overview
+title: Overview
 proofedDate: na
 iterationBy: HB
 includedInSite: true

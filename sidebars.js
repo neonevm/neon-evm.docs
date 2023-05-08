@@ -10,23 +10,13 @@ const sidebars = {
       id: 'quick_start'
     },
     {
-      type: 'category',
-      label: '🧬 Neon EVM Overview',
-      items:
-        [
-          'about/why_neon',
-          'about/neon_ecosystem',
-          'about/how_it_works',
-        ]
-    },
-    {
       type: 'doc',
-      label: '🔑 Set Up Wallet',
+      label: '🔑 Connect Wallet',
       id: 'wallet/metamask_setup'
     },
     {
       type: 'doc',
-      label: '🛰 Transfer  Tokens',
+      label: '🛰 Transfer Tokens',
       id: 'token_transferring/neonpass_usage',
     },
     {
@@ -50,16 +40,11 @@ const sidebars = {
     { type: 'link', label: 'NeonFaucet', href: 'https://neonfaucet.org/' },
     { type: 'link', label: 'NeonAnalytics', href: 'https://neon.aleph.cloud/' },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Developers</h4>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Develop</h4>' },
     {
       type: 'doc',
       label: 'Connect to Neon RPC',
       id: 'developing/connect_rpc'
-    },
-    {
-      type: 'doc',
-      label: 'Request Test Tokens',
-      id: 'developing/utilities/faucet'
     },
     {
       type: 'category',
@@ -74,14 +59,15 @@ const sidebars = {
       type: 'category',
       label: 'Use Tokens',
       items: [
+        'developing/utilities/faucet',      
         'developing/deploy_facilities/interacting_with_spl_tokens',
         'tokens/token_list',
-        'developing/integrate/neon_transfer_sdk',
-      ]
+        'developing/integrate/neon_transfer_sdk'
+        ]
     },
     {
       type: 'category',
-      label: 'Integrations',
+      label: 'Integrate',
       items: [
         'developing/integrate/protocols/integrating_walletconnect',
         'developing/integrate/oracles/integrating_chainlink',
@@ -91,7 +77,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Tutorials',
+      label: 'Deploy Contracts',
       items: [
         'developing/deploy_facilities/using_hardhat',
         'developing/deploy_facilities/using_truffle',
@@ -101,17 +87,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'EVM Compatibility',
-      items: [
-        'evm_compatibility/overview',
-        'evm_compatibility/json_rpc_api_methods',
-        'evm_compatibility/opcodes'
-,        'evm_compatibility/precompiles'
-      ]
-    },
-    {
-      type: 'category',
-      label: 'Set up Neon EVM Locally',
+      label: 'Set up Local Neon EVM',
       items: [
         //'developing/dev_environment/setting_up_the_dev_environment',
         'developing/dev_environment/op2_local_proxy_local_solana',
@@ -120,16 +96,38 @@ const sidebars = {
         'clusters/solana_cluster',
       ]
     },
-    {
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Learn</h4>' },
+        {
       type: 'category',
-      label: 'Learn',
+      label: '🧬 Neon EVM Overview',
+      items:
+        [
+          'about/why_neon',
+          'about/neon_ecosystem',
+          'about/how_it_works',
+        ]
+    },
+      {
+      type: 'doc',
+      id: 'architecture/neon_evm_arch'
+    },
+    {
+      type: 'doc',
+      id: 'architecture/eth_sol_solution'
+    },
+        {
+      type: 'category',
+      label: 'EVM Compatibility',
       items: [
-        'architecture/neon_evm_arch',
-        'architecture/eth_sol_solution',
+        'evm_compatibility/overview',
+        'evm_compatibility/json_rpc_api_methods',
+        'evm_compatibility/opcodes'
+,        'evm_compatibility/precompiles'
       ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Operators</h4>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Operate</h4>' },
     {
       type: 'doc',
       label: 'Operate a Neon Proxy',
@@ -137,7 +135,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Run neon-proxy',
+      label: 'Run Neon Proxy',
       items: [
         'operating/basic',
         'operating/enhanced'
@@ -154,7 +152,7 @@ const sidebars = {
       id: 'operating/flags/flags'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Governance</h4>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Govern</h4>' },
     {
       type: 'doc',
       label: 'Overview',
