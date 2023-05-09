@@ -1,5 +1,10 @@
 ---
 title: Neon and Ethereum Gas Calculators Give Different Results
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 ### Problem

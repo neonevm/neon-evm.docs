@@ -1,5 +1,10 @@
 ---
 title: Neon DAO Organization
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: TODO requires overhaul
 ---
 
 ## Neon is Governed by the Community, For the Community

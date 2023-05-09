@@ -1,5 +1,10 @@
 ---
 title: Integrate Pyth
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 ## Introduction

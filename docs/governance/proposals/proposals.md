@@ -1,5 +1,10 @@
 ---
 title: Voting Process
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: todo requires overhaul
 ---
 
 *Note: The screenshots (and the wallet addresses, token balances, and proposals) on this page are for illustrative and instructional purposes **only**. *

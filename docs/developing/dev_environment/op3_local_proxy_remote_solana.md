@@ -1,5 +1,10 @@
 ---
 title: "Local Proxy to Remote Solana"
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 ## Prerequisites

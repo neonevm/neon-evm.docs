@@ -1,5 +1,10 @@
 ---
 title: EVM Compatibility Overview
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 TL;DR

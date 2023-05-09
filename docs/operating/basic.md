@@ -1,5 +1,10 @@
 ---
 title: 'Basic: Local Build in Read-Only Mode'
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 *This guide sets you up with a functional, running neon-proxy on your local machine with `docker-compose` in a matter of minutes with minimal user input required.* 

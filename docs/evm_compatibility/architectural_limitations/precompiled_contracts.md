@@ -1,5 +1,10 @@
 ---
 title: Precompiled Contracts That Can't Be Used in Solana
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 ### Problem

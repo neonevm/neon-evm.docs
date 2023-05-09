@@ -1,3 +1,12 @@
+---
+title: unassigned6
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
+---
+
 # How To Install the MetaMask Wallet
 
 ### Goal

@@ -1,5 +1,10 @@
 ---
 title: NeonSwap
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 ## The Goal

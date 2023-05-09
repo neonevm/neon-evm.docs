@@ -1,5 +1,10 @@
 ---
 title: Overview
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: requires overhaul
 ---
 
 ## The Neon DAO
