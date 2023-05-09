@@ -1,5 +1,10 @@
 ---
 title: ERC-20 Token List
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: TODO This page is used in two places from the menu. Is this deliberate?
 ---
 
 import Tabs from '@theme/Tabs';

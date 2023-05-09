@@ -1,5 +1,10 @@
 ---
 title: Quick Start
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 import {QuickStartList} from '@site/src/components/QuickStartList'
 import {CommonBannerBlock} from '@site/src/components/CommonBannerBlock'
