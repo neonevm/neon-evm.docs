@@ -1,5 +1,10 @@
 ---
 title: Web3 concept
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 **Web2** refers to the version of the internet most of us know today: an internet dominated by companies that provide services in exchange for your personal data.  

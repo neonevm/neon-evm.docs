@@ -1,5 +1,10 @@
 ---
 title: Unsupported Tokens in the Neon EVM
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 ### Problem

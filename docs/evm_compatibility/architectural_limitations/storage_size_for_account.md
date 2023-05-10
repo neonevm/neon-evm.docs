@@ -1,5 +1,10 @@
 ---
 title: Storage Size Limit for an Account
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 ### Problem

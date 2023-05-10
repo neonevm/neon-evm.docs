@@ -1,5 +1,10 @@
 ---
 title: (Optional) Setting up Faucet and Full Test Suite Services
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 *This **optional** step-by-step guide describes how to set up faucet and full test suite services. It assumes that a proxy and a connection to a Solana cluster have already been established, either locally or remotely.*

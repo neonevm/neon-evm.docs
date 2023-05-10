@@ -1,5 +1,10 @@
 ---
 title: Deploy with Hardhat
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 *This page outlines the steps for deploying and testing contracts in the Neon EVM using the Hardhat tool.*

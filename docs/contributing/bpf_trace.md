@@ -1,5 +1,10 @@
 ---
 title: BPF Trace
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 *During the runtime, the BPF interpreter can be configured to log a trace message for each BPF instruction executed. This can be very helpful for things like pinpointing the runtime context leading up to a memory access violation.*

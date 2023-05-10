@@ -1,3 +1,12 @@
+---
+title: unassigned3
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
+---
+
 # How to Deploy an Ethereum Contract
 
 ## Goal

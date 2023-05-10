@@ -1,5 +1,10 @@
 ---
 title: Neon DAO Organization
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: TODO requires overhaul
 ---
 import dao from '@site/static/img/doc-images/governance/dao_organization.png';
 

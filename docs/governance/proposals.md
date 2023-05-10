@@ -1,5 +1,10 @@
 ---
 title: Voting Process
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: todo requires overhaul
 ---
 
 import govern1 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_before_wallet.jpeg';

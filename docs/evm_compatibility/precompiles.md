@@ -1,5 +1,10 @@
 ---
 title: Precompiles
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 ## Precompiled Contracts Supported by Neon
