@@ -1,6 +1,9 @@
 ---
-title: Overview
+title: DAO Overview
 ---
+
+import dao from '@site/static/img/doc-images/governance/dao_organization.png';
+
 
 ## The Neon DAO
 
@@ -22,7 +25,7 @@ The Neon DAO's Assemblies are built using [SPL Governance](https://github.com/so
 
 All Neon DAO parameters, such as the pass threshold to accept a proposal, voting period, hold-up period, and the minimum token amount required to create a proposal, can be found on the Neon Governance UI.
 
-Learn more about the [voting process](/docs/governance/proposals/proposals.md).
+Learn more about the [voting process](/docs/governance/proposals.md).
 
 ## Neon DAO Organization
 
@@ -30,9 +33,10 @@ Neon is decentralized and its economy is fee-based, with NEON tokens being used 
 
 <div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
 
-![](img/dao_organization.png)
+<img src={dao} />
 
 </div>
+
 
 ### Ecosystem Focus Area
 
