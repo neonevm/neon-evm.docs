@@ -1,5 +1,5 @@
 ---
-title: Integrate Chainlink
+title: Chainlink
 ---
 
 ## Introduction

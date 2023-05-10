@@ -1,6 +1,12 @@
 ---
 title: I couldn't find an answer to my question
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comments: na
 ---
+
 
 I have a question about the Neon EVM that is not answered in the FAQ. What do I do?
 

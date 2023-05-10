@@ -1,28 +1,55 @@
 ---
 title: EVM Compatibility Overview
+comment: 404 on page -- see inline
 ---
 
-Neon EVM is designed to be compatible with the [Ethereum Virtual Machine (EVM)](https://ethereum.org/en/developers/docs/evm/) to provide a as seamless of a developer experience as possible, with some notable differences and considerations. 
+TL;DR
 
-## Shared Features
-Coming from Ethereum, your Solidity smart contracts, development and deployment tools, and standard practices can be moved over to Neon EVM with almost no code changes. Neon EVM accounts follow [Ethereum's account standards](https://ethereum.org/en/developers/docs/accounts/). All [Ethereum opcodes](https://www.evm.codes/?fork=merge) are represented verbatim on Neon EVM. 
+- Apply (most of) Ethereum's standard JSON RPC API methods
+- Direct the calls to Neon's Proxy
+- There are some differences and limitations to consider
 
-### JSON RPC API
-Neon EVM follows Ethereum's standard RPC API and a list of all the JSON RPC API methods that Neon EVM supports can be found [here](./json_rpc_api_methods). They are based on the Ethereum Client API, the Web3 Module API, and the Net Module API.
+## Introduction
+
+Interacting with Neon EVM is essentially the same as interacting with the [Ethereum Virtual Machine (EVM)](https://ethereum.org/en/developers/docs/evm/).
+
+Neon EVM provides a proxy service that accepts [Ethereum's standard RPC API](https://ethereum.github.io/execution-apis/api-documentation/). Your dAPP can apply familiar methods: with your calls directed to the Neon Proxy rather than an Ethereum L1 node.
+
+In this way, Neon EVM provides a seamless developer experience. Note that there are some differences and considerations. 
+
+## Shared standards and features
+
+Solidity or Vyper smart contracts, standard development and deployment tools and practices can all be applied on Neon EVM with almost no code changes:
+
+- Neon EVM accounts follow [Ethereum's account standards](https://ethereum.org/en/developers/docs/accounts/) 
+
+> All [Ethereum opcodes](https://www.evm.codes/?fork=merge) are represented verbatim on Neon EVM. 
+
+- Apply Ethereum's standard JSON RPC API based on the Ethereum Client API, the Web3 Module API, and the Net Module API
+
+> See the [supported JSON RPC API methods and the backlog](./json_rpc_api_methods).
+
+## Notable differences
+
+Interoperability between Solana and Ethereum EVMs does require certain adaptations. In addition to Solana-specific restrictions, two major differences include:
 
 ### Precompiles
-Neon supports all precompiled contracts defined on [evm.code](https://www.evm.codes/precompiled?fork=merge) that provide more advanced functionalities, but there are [certain limitations](./precompiles#limitations) on some precompiled contracts on Neon EVM.
+Neon supports all precompiled contracts defined on [evm.code](https://www.evm.codes/precompiled?fork=merge) that provide more advanced functionalities, with [certain limitations](./precompiles#limitations) on some precompiled contracts on Neon EVM.
 
-## Gas Calculation
-The mechanism of gas consumption and calculation of gas fees on Neon EVM differ from Ethereum. Gas fees on Neon EVM are much cheaper than on Ethereum. You can learn more about the NEON token and how gas fees work on Neon EVM [here](../../docs/tokens/gas_fees.md).
+### Gas calculation
+The mechanism of gas consumption and calculation of gas fees on Neon EVM differ from Ethereum. Gas fees on Neon EVM are much cheaper than on Ethereum. 
 
-## Other Neon-Specific Limitations
+> Learn more about the [NEON token and how gas fees work on Neon EVM](../../docs/tokens/gas_fees.md).
 
-### Number of Accounts
-Solana requires that all accounts used in a transaction be specified in order to ensure parallel execution of transactions. Using [Solana Transaction V2](https://docs.solana.com/proposals/transactions-v2), up to 64 accounts can be used in a single transaction. As Neon EVM uses Solana Transaction V2, it has the same limitation: the maximum number of accounts used in a single transaction is 64.
+Several Solana-specific differences also impact smart contract development.
 
-### Heap Size
-Ethereum-like transactions are executed by Neon EVM inside [Solana's Berkeley Packet Filter (BPF)](https://docs.solana.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf). The BPF has a limit on heap memory of 256 KB. Consequently, the size of the heap allocated to a contract call, is limited to the same 256 KB.
+### Upper limit on number of Accounts
+Neon EVM uses [Solana Transaction V2](https://docs.solana.com/proposals/transactions-v2): limiting the maximum number of accounts used in a single transaction to 64. Solana requires that all accounts used in a transaction be specified in order to ensure parallel execution of transactions. 
+
+<!-- todo fix the 404 above -->
+
+### Heap size
+Ethereum-like transactions are executed by Neon EVM inside [Solana's Berkeley Packet Filter (BPF)](https://docs.solana.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf). The BPF has heap memory limit of 256 KB. Consequently, the size of the heap allocated to a contract call, is limited to the same 256 KB.
 
 To avoid the occurrence of a heap overflow error, it is recommended that you:
 * Reduce the size of the call stack

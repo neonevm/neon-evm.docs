@@ -2,7 +2,7 @@
 title: Connect to Neon RPC
 ---
 
-This tutorial will give an overview of how to connect to a Neon RPC, resulting in a network confirguation where Neon is connected to a remote Neon Proxy and to remote Solana.
+This tutorial will give an overview of how to connect to a Neon RPC, resulting in a network configuration where Neon is connected to a remote Neon Proxy and to remote Solana.
 
 ## Connecting MetaMask to Neon EVM
 Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You should see `Neon EVM Devnet` and `Neon EVM MainNet`.
@@ -51,7 +51,7 @@ To connect to a proxy using Remix, Truffle, or Hardhat, check out the following 
 * [Using Truffle](developing/deploy_facilities/using_truffle.md)
 * [Using Hardhat](developing/deploy_facilities/using_hardhat.md)
 
-Please note that, for Truffle and Hardhat, you need to configure the configuration file by setting the either the `HDWalletProvider` provider (for Truffle) or the URL and the `network_id`/`chainId` to the RPC URL (and ID) selected from the table above. This is described in detail in the relevant tutorial sections.
+Please note that, for Truffle and Hardhat, you need to configure the configuration file by setting either the `HDWalletProvider` provider (for Truffle) or the URL and the `network_id`/`chainId` to the RPC URL (and ID) selected from the table above. This is described in detail in the relevant tutorial sections.
 
 ## Connecting Manually with MetaMask
 The above steps demonstrate how to connect to the Solana Devnet cluster via Chainlist. Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#setting-up-an-rpc-network).

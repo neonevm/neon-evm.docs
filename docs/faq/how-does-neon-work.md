@@ -1,5 +1,10 @@
 ---
 title: How does Neon work?
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comments: na
 ---
 
 * [How does Neon the EVM interact with Solana?](#how-does-the-neon-evm-interact-with-solana)
