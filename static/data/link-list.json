@@ -71,13 +71,6 @@
         "title": "NeonFaucet",
         "description": "Airdrop test tokens",
         "url": "https://neonfaucet.org/"
-      },
-      {
-        "id": 4,
-        "icon": "/icons/indexing.svg",
-        "title": "NeonAnalytics",
-        "description": "Analyze deployed contracts",
-        "url": "https://neon.aleph.cloud/"
       }
     ]
   }
