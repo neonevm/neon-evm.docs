@@ -1,5 +1,5 @@
 ---
-title: Integrate MetaMask into your dApp
+title: MetaMask
 proofedDate: na
 iterationBy: na
 includedInSite: true

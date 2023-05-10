@@ -1,5 +1,5 @@
 ---
-title: Integrate Pyth
+title: Pyth
 proofedDate: na
 iterationBy: na
 includedInSite: true

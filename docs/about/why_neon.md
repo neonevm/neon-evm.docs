@@ -3,23 +3,33 @@ title: Why Neon EVM?
 proofedDate: 20230426
 iterationBy: HB
 includedInSite: true
-approvedBy: na
+approvedBy: YYY
 comments: na
 ---
 
+import infographic from '@site/static/img/doc-images/about/infographic.png';
+
 *Neon EVM is a low-friction solution to scale Ethereum dApps on Solana.*
+
+
+<div className='neon-img-box-300' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
+
+<img src={infographic} />
+
+
+</div>
 
 ## Neon EVM
 
 Neon EVM is a fully compatible Ethereum environment solution built on the Solana blockchain. The platform allows developers to deploy Ethereum dApps without undertaking any reconfiguration. 
 
-> No code changes required: Ethereum developers can build without Rust.
+> Minimal reconfiguration required: Ethereum developers can build without Rust.
 
 Neon EVM enables Solidity- and Vyper-based dApps to tap into Solana’s network benefits: low fees, high transaction speeds, and parallel transaction execution capabilities.
 
-From a developer’s perspective, this means creating Solana-compatible contracts using tools you’re familiar with from the Ethereum ecosystem. 
+From a developer’s perspective, this means creating Solana-compatible contracts using tools you’re familiar with from the Ethereum Ecosystem. 
 
-Neon EVM makes the key Ethereum dApp tools compatible with Solana, including Vyper, Solidity, [MetaMask](/docs/wallet/metamask_setup), [Hardhat](/docs/developing/deploy_facilities/using_hardhat), [Truffle](/docs/developing/deploy_facilities/using_truffle), and [Remix](/docs/developing/deploy_facilities/using_remix). The solution allows any Ethereum application to run on Solana without any changes to its codebase, this includes Uniswap, SushiSwap, 0x, and MakerDAO. 
+Neon EVM makes the key Ethereum dApp tools compatible with Solana, including Vyper, Solidity, [MetaMask](/docs/wallet/metamask_setup), [Hardhat](/docs/developing/deploy_facilities/using_hardhat), [Truffle](/docs/developing/deploy_facilities/using_truffle), and [Remix](/docs/developing/deploy_facilities/using_remix). The solution allows any Ethereum application to run on Solana with minimal reconfiguration required, this includes Uniswap, SushiSwap, 0x, and MakerDAO. 
 
 
 ### Who uses Neon EVM?
@@ -37,7 +47,7 @@ With Neon EVM, developers retain:
 * Familiar languages: Solidity, Vyper
 * Well-known Ethereum tools: MetaMask, Hardhat, Truffle, Remix, etc.
 * Ethereum RPC API compatibility
-* Ethereum Accounts, Signatures, Token standards (ERC-20, ERC-721)
+* Ethereum Accounts, Signatures, Token standards (ERC-20 and ERC-721)
 
 
 ## The best from Solana
@@ -49,5 +59,5 @@ Solana offers developers:
 * Parallel execution of transactions (txs)
 * Low gas fees: 0.000015 SOL/tx
 * High transaction speed: 2,000+ tps
-* Access to the growing Solana ecosystem
+* Access to the growing Solana Ecosystem
 * Solana's consensus mechanism and state, with no additional validators
