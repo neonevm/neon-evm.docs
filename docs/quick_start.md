@@ -13,7 +13,6 @@ import {PageHelpful} from '@site/src/components/PageHelpful'
 import {FeedbackForm} from '@site/src/components/FeedbackForm'
 
 *Neon EVM is a synergetic solution for anyone looking to scale Ethereum dApps on Solana in a developer-friendly manner and tap into Solana's vibrant ecosystem.*
-
 <QuickStartList/>
 
 ### Learn about Neon
