@@ -1,5 +1,10 @@
 ---
 title: Connect to Neon RPC
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 This tutorial will give an overview of how to connect to a Neon RPC, resulting in a network configuration where Neon is connected to a remote Neon Proxy and to remote Solana.

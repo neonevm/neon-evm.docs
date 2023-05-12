@@ -1,5 +1,10 @@
 ---
 title: NeonPass Overview
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 [NeonPass](https://neonpass.live/) is an open-source service designed to transfer tokens between Solana and the Neon EVM, and provides users with the following features:

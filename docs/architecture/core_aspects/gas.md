@@ -1,5 +1,10 @@
 ---
 title: Gas
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 Gas is required for the Ethereum network. This is the fuel that allows it to work, just as a car needs gasoline to run.  

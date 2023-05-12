@@ -3,13 +3,15 @@ title: How It Works
 proofedDate: 20230427
 iterationBy: HB
 includedInSite: true
-approvedBy: na
+approvedBy: YYY
 comments: #1 TODO see inline comment 2.3
 ---
 
+import architecture from '@site/static/img/doc-images/about/how-it-works.png';
+
 <div className='neon-img-box-300' style={{textAlign: 'center', width: 900, display: 'block', margin: 'auto'}}>
 
-![](img/how_it_works.png)
+<img src={architecture} />
 
 </div>
 
@@ -29,9 +31,9 @@ The Ethereum API passes the tx to the Neon Proxy via the [Neon API service](http
 
    > 2.1 The Neon Proxy processes the request, providing:
    > - Gas usage estimate for tx execution
-   > - Smart contract initiation: wrapping the Ethereum-like tx as a Solana tx
+   > - Broadcast initiation: wrapping the Ethereum-like tx as a Solana tx
    
-   > 2.2. The Neon Proxy passes the wrapped tx to Neon's smart contract hosted on Solana. This results in the following:
+   > 2.2. The Neon Proxy passes the wrapped tx to the Neon EVM program hosted on Solana. This results in the following:
    > - A Solana receipt
    > - A corresponding Neon EVM receipt
      

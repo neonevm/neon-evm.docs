@@ -1,5 +1,10 @@
 ---
 title: Neon Proxy RPC Endpoints
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 *The lookup table containing the URLs of all available proxies in the Neon EVM.*

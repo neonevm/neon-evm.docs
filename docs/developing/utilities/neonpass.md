@@ -1,5 +1,10 @@
 ---
 title: NeonPass
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 NeonPass is an open-source service designed to transfer tokens between Solana and the Neon EVM.

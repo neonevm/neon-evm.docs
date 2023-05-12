@@ -1,5 +1,10 @@
 ---
 title: Ethereum transaction
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 An Ethereum transaction is a cryptographically signed instruction from an account. The account initiates a transaction to update the state of the Ethereum network. An Ethereum transaction refers to an action initiated by an external account, i.e. an account managed by a person, not a contract.  

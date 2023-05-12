@@ -1,5 +1,10 @@
 ---
 title: Migrating dApps to the Neon EVM
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 *The purpose of this document is to demonstrate to Ethereum users how easily their dApps can be ported to the Neon EVM. Using [Neon Swap](about/terminology.md#neonswap) as an example, we wil show you how to run dApps on [Solana](https://docs.solana.com/introduction) without any software code changes.*
