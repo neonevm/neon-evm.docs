@@ -1,5 +1,10 @@
 ---
 title: Testing Contracts
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 *This guide describes how to build and configure the Neon EVM to run integration tests on it.*  

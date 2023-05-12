@@ -1,6 +1,12 @@
 ---
 title: Neon DAO Organization
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: TODO requires overhaul
 ---
+import dao from '@site/static/img/doc-images/governance/dao_organization.png';
 
 ## Neon is Governed by the Community, For the Community
 
@@ -28,7 +34,7 @@ The following is a diagram visualizing the relationships between the Neon DAO's 
 
 <div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
 
-![](img/dao_organization.png)
+<img src={dao} />
 
 </div>
 

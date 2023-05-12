@@ -1,5 +1,10 @@
 ---
 title: Block
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 *Blocks are batches of transactions with a hash of the previous block in the chain. Hashes link blocks together (in a chain) because they are cryptographically derived from the block data. One change in any block in history will invalidate all the following blocks. This feature protects the blocks in a chain from tampering.*  

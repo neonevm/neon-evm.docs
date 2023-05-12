@@ -1,5 +1,10 @@
 ---
 title: Principles and Objectives
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 ## Principles

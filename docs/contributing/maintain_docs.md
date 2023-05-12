@@ -1,5 +1,10 @@
 ---
 title: Maintaining Docs
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 ## Summary of Neon EVM Documentation

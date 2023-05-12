@@ -1,5 +1,10 @@
 ---
 title: Operate a Neon Proxy
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 import Tabs from '@theme/Tabs';

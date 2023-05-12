@@ -1,5 +1,10 @@
 ---
 title: Setting up the Development Environment
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 As a new, aspiring Neon developer, your first step of exploring the Neon EVM framework is to set up your development environment. As mentioned in the Introduction, you need to have a [**proxy**](architecture/neon_evm_arch.md/#neon-web3-proxy-proxy), which wraps Ethereum-like transactions into Solana transactions and sends them, and a **Solana cluster**, where the resulting transactions are executed.

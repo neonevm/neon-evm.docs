@@ -1,6 +1,10 @@
 ---
 title: EVM Compatibility Overview
-comment: 404 on page -- see inline
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 404 being dealt with on link-fixer branch??
 ---
 
 TL;DR

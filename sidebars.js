@@ -103,10 +103,8 @@ const sidebars = {
       type: 'category',
       label: 'Set up Local Neon EVM',
       items: [
-        //'developing/dev_environment/setting_up_the_dev_environment',
         'developing/dev_environment/op2_local_proxy_local_solana',
         'developing/dev_environment/op3_local_proxy_remote_solana',
-        //'developing/dev_environment/faucet_and_test_suite_services',
         'clusters/solana_cluster',
       ]
     },
@@ -152,29 +150,29 @@ const sidebars = {
     {
       type: 'doc',
       label: 'Command Line Flags',
-      id: 'operating/flags/flags'
+      id: 'operating/flags'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Govern</h4>' },
     {
       type: 'doc',
       label: 'Overview',
-      id: 'governance/overview/overview'
+      id: 'governance/overview'
     },
     {
       type: 'doc',
       label: 'Neon DAO Organization',
-      id: 'governance/neon_daos/neon_daos'
+      id: 'governance/neon_daos'
     },
     {
       type: 'doc',
       label: 'Voting Process',
-      id: 'governance/proposals/proposals'
+      id: 'governance/proposals'
     },
     {
       type: 'doc',
       label: 'Principles and Objectives',
-      id: 'governance/principles/principles'
+      id: 'governance/principles'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' }
   ]

@@ -1,5 +1,10 @@
 ---
 title: Restriction on Iterative Transactions
+proofedDate: na
+iterationBy: na
+includedInSite: false
+approvedBy: na
+comment: 
 ---
 
 Executing a transaction in iterative mode is a sequence of actions, each of which is performed by a separate account specified in it. The list of accounts is specified by the creator of the transaction.

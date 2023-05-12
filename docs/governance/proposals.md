@@ -1,6 +1,32 @@
 ---
 title: Voting Process
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: todo requires overhaul
 ---
+
+import govern1 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_before_wallet.jpeg';
+import govern2 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_wallet_connect.png';
+import govern3 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_wallet_balance.png';
+import govern4 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_governance_topic.jpeg';
+import govern5 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_add_new_proposal.jpeg';
+import govern6 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_new_proposal_popup.png';
+import govern7 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_list_after_new_proposal.png';
+import govern8 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_new_proposal_page.png';
+import govern9 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_sign_off_popup.png';
+import govern10 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_signed_off_proposal.png';
+
+import govern11 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_cancel_proposal.png';
+
+import govern12 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_proposal_voting.png';
+import govern13 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_positive_popup.png';
+import govern14 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_negative_popup.png';
+import govern15 from '@site/static/img/doc-images/governance/proposals/new_gov_ui_voting_tipping_point.png';
+
+<!-- import govern16 from '@site/static/img/doc-images/governance/proposals/govern-ui-1.png'; -->
+
 
 *Note: The screenshots (and the wallet addresses, token balances, and proposals) on this page are for illustrative and instructional purposes **only**. *
 
@@ -19,7 +45,7 @@ Potential proposals can affect both the management and technical processes of Ne
   * Appointment of a worker for the implementation of the proposal. The worker may be an individual, a group of individuals, or a third-party company.
   * Verification and decision on acceptance of the work done.
 
-All these details are discussed, revised, and debated civilly on the DAO Forum. To learn more about expectations on governance participants and discourse, refer to the [Principles and Objectives](/docs/governance/principles) section.
+All these details are discussed, revised, and debated civilly on the DAO Forum. To learn more about expectations on governance participants and discourse, refer to the [Principles and Objectives](principles.md) section.
 
 ## Connecting Wallet
 
@@ -28,12 +54,17 @@ Interacting with Neon Governance requires the use of NEON tokens. Make sure you 
 :::
 
 1. Click on "Connect" to connect your Solana wallet to the DAO website.
-   ![](./img/new_gov_ui_before_wallet.jpeg)
+
+> <img src={govern1} />
+
 2. Select the wallet application that you are using from the list.
-   ![](./img/new_gov_ui_wallet_connect.png)
+
+> <img src={govern2} />
+
 3. If you wish to continue, respond to your wallet application's prompt to allow connecting.
 4. Confirm that you see your wallet address show up.
-   ![](./img/new_gov_ui_wallet_balance.png)
+
+> <img src={govern3} />
 
 You are now ready to interact with the Neon Governance UI.
 
@@ -45,24 +76,39 @@ Before proceeding, please make sure [your wallet is connected](#connecting-walle
 To create a proposal, follow the steps below.
 
 1. On the Neon DAO website, select the Governance topic for which the proposal is best suited.
-  ![](./img/new_gov_ui_governance_topic.jpeg)
+
+> <img src={govern4} />
+
 2. Click on the "Add new proposal" button.
-  ![](./img/new_gov_ui_add_new_proposal.jpeg)
+
+> <img src={govern5} />
+
 3. In the "Add new proposal" popup, enter the name of your proposal and a description with a link to a relevant [GitHub Gist](https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists), if applicable. Click on "Add proposal".
-  ![](./img/new_gov_ui_new_proposal_popup.png)
+
+> <img src={govern6} />
+ 
 4. A transaction prompt will be displayed by your wallet application. If you have verified its details and wish to continue, approve it, then wait a few moments for the transaction to process.
 5. After the transaction has been processed, you will see your proposal in the list of proposals. In this case, we created a proposal called `[Test] Test Proposal 2`.
-  ![](./img/new_gov_ui_list_after_new_proposal.png) 
+
+> <img src={govern7} />
+
   Click on your proposal to see its details. This new proposal will be in the `Draft` state by default.
-  ![](./img/new_gov_ui_new_proposal_page.png)
-  You can then sign off on your proposal by clicking on the "Sign off" button. Click "Sign off" in the pop up that follows.
-  ![](./img/new_gov_ui_sign_off_popup.png)
+
+> <img src={govern8} />
+
+You can then sign off on your proposal by clicking on the "Sign off" button. Click "Sign off" in the pop up that follows.
+
+> <img src={govern9} />
+
 6. A prompt by your wallet application will ask if you to approve the sign off transaction. If you have verified its details and wish to continue, approve it, then wait a few moments for the transaction to process.
 7. After the sign off transaction has been processed, your proposal is now signed off by you and put forth to the community for a vote. Your proposal is now in the `Voting` state and the "Voting Time Left" clock has started counting down.
-  ![](./img/new_gov_ui_signed_off_proposal.png)
+
+> <img src={govern10} />
+
 8. Share the proposal link URL to the DAO Forum and elsewhere for the Neon community to vote on it.
 9. (Optional) Alternatively, if you wish to cancel this proposal for whatever reason, click on the "Cancel proposal" button, click "Yes, Cancel" in the pop up that follows, and approve the cancel transaction.
-  ![](./img/new_gov_ui_cancel_proposal.png)
+
+> <img src={govern11} />
 
 ## Voting
 
@@ -71,12 +117,20 @@ After a proposal is created, it is ready to be put to a vote. The community of e
 To vote on a proposal, follow the following steps:
 
 1. You might have been given a link to a proposal that is in the `Voting` state, or you might have clicked on a proposal in the `Voting` stage from the list of proposals. Either way, tou should see a proposal page like this:
-  ![](./img/new_gov_ui_proposal_voting.png)
+
+> <img src={govern12} />
+
 2. Click on "Positive" or "Negative" depending on whether you are in favor of or against the proposal.
      1. If you choose "Positive", you will see a pop up as follows.
-    ![](./img/new_gov_ui_positive_popup.png)
+
+     > <img src={govern13} />
+
+    <!-- ![](./img/new_gov_ui_positive_popup.png) -->
      2. If you choose "Negative", you will see a pop up very similar to the pop up above.
-    ![](./img/new_gov_ui_negative_popup.png)
+
+      > <img src={govern14} />
+
+    <!-- ![](./img/new_gov_ui_negative_popup.png) -->
      3. You can then choose/customize the percentage of your NEON tokens you would like to commit for this vote
      4. Click "Confirm" once you are happy with your ballot.
 3. A prompt by your wallet application will ask if you to approve the voting transaction. If you have verified its details and wish to continue, approve it, then wait a few moments for the transaction to process.
@@ -84,7 +138,9 @@ To vote on a proposal, follow the following steps:
 
 Once the voting period is concluded, the votes are automatically counted. If the proposal's "Accept" votes pass the Assembly's required vote threshold ("Vote tipping point" in the image below), the proposal is passed and is ready for implementation. Otherwise, the proposal fails.
 
-![](./img/new_gov_ui_voting_tipping_point.png)
+> <img src={govern15} />
+
+<!-- ![](./img/new_gov_ui_voting_tipping_point.png) -->
 
 <!-- ------------------------ -->
 <!-- Below should be merged as soon as the Governance UI is ready -->

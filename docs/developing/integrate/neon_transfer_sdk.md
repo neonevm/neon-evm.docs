@@ -1,8 +1,12 @@
 ---
 title: Neon Transfer SDK
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: todo this requires overhaul
 ---
 
----
 **NOTE**
 
 The package is tested on [NeonPass](https://neonpass.live/) codebase, which use react hooks arch.
