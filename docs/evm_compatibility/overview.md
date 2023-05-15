@@ -44,7 +44,7 @@ The mechanism of gas consumption and calculation of gas fees on Neon EVM differ 
 Several Solana-specific differences also impact smart contract development.
 
 ### Upper limit on number of Accounts
-Neon EVM uses Solana Transaction V0: limiting the maximum number of accounts to 32 used in a single transaction unless you extend with [lookup tables](https://docs.solana.com/developing/lookup-tables). Solana requires that all accounts used in a transaction be specified in order to ensure parallel execution of transactions. 
+Neon EVM uses Solana Transaction V0 with an extension via [account lookup tables](https://docs.solana.com/developing/lookup-tables): this limits the maximum number of accounts to 64 in a single transaction. Solana requires that all accounts used in a transaction be specified in order to ensure parallel execution of transactions. 
 
 ### Heap size
 Ethereum-like transactions are executed by Neon EVM inside [Solana's Berkeley Packet Filter (BPF)](https://docs.solana.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf). The BPF has heap memory limit of 256 KB. Consequently, the size of the heap allocated to a contract call, is limited to the same 256 KB.
