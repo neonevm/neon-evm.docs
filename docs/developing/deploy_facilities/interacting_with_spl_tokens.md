@@ -89,7 +89,7 @@ _mint_authority – address of mint/freeze authority Neon account
 </Tabs>
 
 
-### Contract interface
+### Contract Interface
 
 ```solidity
 interface IERC20 {
