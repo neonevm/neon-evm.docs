@@ -8,17 +8,88 @@ comments:
 boilerPlatable: yes -- we could have an item providing demo
 ---
 
-The ERC-20 SPL wrapper contract provides access to native Solana tokens registered in the SPL token contract, through the ERC-20 interface.
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-This allows Solana applications to interact with EVM (Solidity, Vyper, etc.) bytecode contracts. The ERC-20 SPL wrapper can also be used to transfer funds in Solana tokens using Ethereum wallets such as MetaMask.
+The ERC-20 SPL wrapper contract provides access to native Solana tokens, i.e. those registered in the SPL token contract, through the ERC-20 interface. 
 
-The contract is implemented in Rust as part of the Neon EVM program.
+This allows Solana liquidity to be available to EVM (Solidity, Vyper, etc.) bytecode contracts, i.e. this ERC-20 SPL wrapper allows Ethereum wallets such as MetaMask to transact with SPL tokens.
 
-Source code:
-  * [Rust source code](https://github.com/neonlabsorg/neon-evm/blob/c43345d7abf7af14aa840e6b15c0fc64b084bb2c/evm_loader/program/src/precompile_contracts.rs#L106)
-  * [Solidity wrapper source code](https://github.com/neonlabsorg/neon-evm/blob/6ac1734658f0fdcac09092bd98979d4f6fe4530d/evm_loader/solidity/erc20_for_spl.sol#LL12C11-L12C11)
+:::info
+To be able to use an SPL token from a Solana account balance, it must be transferred to a NeonEVM account via [NeonPass](/docs/token_transferring/neonpass_usage).
+:::
 
-### Contract Interface
+Two contracts are available on Neon EVM that enable SPL tokens to be transacted as ERC-20 compliant. It's vital that you understand which to use:
+
+## ERC-20-for-SPL
+The [ERC-20-for-SPL contract](https://github.com/neonlabsorg/neon-evm/blob/c33b34bb624234955d88bf98a4ad1c95ddd453dc/evm_loader/solidity/erc20_for_spl.sol#L12) works with a precompiled contract within Neon EVM which can call the SPL token program. This enables you to utilize existing SPL tokens e.g. SOL or NEON, as wSOL or wNEON, respectively, via the ERC-20 interface, i.e. this contract assigns the [ERC-20 standard](https://eips.ethereum.org/EIPS/eip-20) to the token.
+
+
+## ERC-20-for-SPL-Mintable
+The [ERC-20-for-SPL-Mintable](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl.sol#LL203C1-L203C1) contract has two additional methods that enable you to use the Neon EVM to mint a new SPL token and wrap it as ERC-20-compatible. This contract creates a new SPL token using Solana's Token Program and provides mint and freeze authority to the Neon account specified in the constructor.
+
+| Contract            | Usage                                | Account requirements                               | Mint tx signed by                                                    |
+| ------------------- | ----------------------------------- | ------------------------------------------ | -------------------------------------------------------------------- |
+| ERC20ForSpl         | Wrap Solana-minted token | 1\. Neon Account<br></br>2\. Existing SPL token | Signed by the Solana account private key (via linked Phantom wallet) |
+| ERC20ForSplMintable | Mint a token on Solana   | 1\. Neon Account                           | Signed by the Neon account private key (via linked MetaMask wallet)  |
+
+
+
+<Tabs>
+ <TabItem value="Constructor non-mintable" label="ERC20ForSpl Constructor" default>
+
+```
+constructor(
+     bytes32 _tokenMint
+)
+Arguments:
+_tokenMint – address of SPL token account
+Constructor signature for Mintable token is:
+constructor(
+<!--      string memory _name,
+     string memory _symbol, Is this to be removed for non-mintable?? -->
+     uint8 _decimals,
+     address _mint_authority
+)
+Arguments:
+_name – string representing full name of the token 
+_symbol – string representing shorten symbol of the token 
+_decimals – decimals of new token
+_mint_authority – address of mint/freeze authority Neon account
+```
+ </TabItem>
+<TabItem value="Constructor mintable" label="ERC20ForSplMintable Constructor">
+
+Note that before setting up this contract, you must register the token's [Metaplex metadata](https://docs.metaplex.com/programs/token-metadata/overview).
+
+``` 
+constructor(
+     string memory _name,
+     string memory _symbol,
+     bytes32 _tokenMint
+)
+Arguments:
+_name – string representing full name of the token 
+_symbol – string representing shorten symbol of the token 
+_tokenMint – address of SPL token account
+Constructor signature for mintable token is:
+constructor(
+     string memory _name,
+     string memory _symbol,
+     uint8 _decimals,
+     address _mint_authority
+)
+Arguments:
+_name – string representing full name of the token 
+_symbol – string representing shorten symbol of the token 
+_decimals – decimals of new token
+_mint_authority – address of mint/freeze authority Neon account 
+```
+ </TabItem>
+</Tabs>
+
+
+### Contract interface
 
 ```solidity
 interface IERC20 {
@@ -59,7 +130,7 @@ The purpose of each function in the IERC20 interface is detailed below:
 
 According to the SPL token structure, an unsigned 64-bit floating point number is used to store the balance; in ERC-20, it's an unsigned 256-bit floating point number. Based on the unsigned 64-bit floating point standard, the maximum balance and transfer amount is (2^64-1)/(10^9), with 9 decimals of accuracy.
 
-### Finding the Token Account Address
+### Find the Token Account Address
 
 The token account for a given wallet address is a program-derived account consisting of the following constants: the Ethereum wallet address itself, the ERC-20 contract address, and the token mint.
 
@@ -74,7 +145,7 @@ fn token_address(owner: &H160, contract: &H160, mint: &Pubkey, neon_evm: &Pubkey
 }
 ```
 
-### Creating the Token Account
+### Create the Token Account
 
 Accounts hold token balances and are created using the `ERC20CreateTokenAccount` instruction.
 
