@@ -27,7 +27,7 @@ import {FeedbackForm} from '@site/src/components/FeedbackForm'
 ### Become an Operator
 
 <CommonBannerBlock description='Learn technical requirements and<br /> how to run and operate Neon Proxy'
-  icon='/img/proxy.svg' to='/docs/operating/operator_requirements' background='#F7F0FF' imageStyle={{marginTop: '-35px'}} />
+  icon='/img/proxy.svg' to='/docs/operating/operator-introduction' background='#F7F0FF' imageStyle={{marginTop: '-35px'}} />
 
 ### Help & Support
 

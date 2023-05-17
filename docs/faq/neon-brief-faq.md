@@ -66,3 +66,7 @@ You can see the list of projects that are being built in Neon [here](https://doc
 ### Where can I see a list of upcoming events involving Neon?
 
 Upcoming events in the Neon community are listed on our [events page](https://neon-labs.org/events). You can also sign up for Neon’s newsletter to stay in the loop. If an in-person Neon event is happening near you, why not come and say hello?
+
+## What next?
+
+If you still have a question about the Neon EVM that is not answered in the FAQ, please join us on our [Discord server](https://discord.gg/neonevm). Our team will be glad to help you.

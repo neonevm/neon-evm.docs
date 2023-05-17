@@ -48,7 +48,6 @@ const sidebars = {
     { type: 'link', label: 'NeonScan', href: 'https://neonscan.org/' },
     { type: 'link', label: 'NeonPass', href: 'https://neonpass.live/' },
     { type: 'link', label: 'NeonFaucet', href: 'https://neonfaucet.org/' },
-    { type: 'link', label: 'NeonAnalytics', href: 'https://neon.aleph.cloud/' },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Develop</h4>' },
     {
@@ -132,7 +131,7 @@ const sidebars = {
     {
       type: 'doc',
       label: 'Operate a Neon Proxy',
-      id: 'operating/overview/introduction'
+      id: 'operating/operator-introduction'
     },
     {
       type: 'category',
