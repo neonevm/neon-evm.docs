@@ -1,5 +1,10 @@
 ---
 title: "Configure Brownie"
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 [Brownie](https://eth-brownie.readthedocs.io/en/stable/) is a Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine.

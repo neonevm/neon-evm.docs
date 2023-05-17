@@ -1,5 +1,10 @@
 ---
 title: Set up Kubernetes with k0s
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 *This page, based on k0s's [Quick Start Guide](https://docs.k0sproject.io/v1.21.2+k0s.0/install/#install-k0s), outlines the steps for setting up Kubernetes with k0s for the purpose of running neon-proxy later on.*

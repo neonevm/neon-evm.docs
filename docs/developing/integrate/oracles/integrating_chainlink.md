@@ -1,5 +1,10 @@
 ---
-title: Integrate Chainlink
+title: Chainlink
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 ## Introduction

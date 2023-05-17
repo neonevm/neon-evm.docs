@@ -1,5 +1,10 @@
 ---
 title: ERC-20 Token List
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: TODO This page is used in two places from the menu. Is this deliberate?
 ---
 
 import Tabs from '@theme/Tabs';
@@ -30,16 +35,16 @@ In addition to NEON and wNEON tokens, below are some common tokens that are depl
 |Token|Devnet Address                            |
 |-----|:-----------------------------------------|
 |WNEON|0x11adC2d986E334137b9ad0a0F290771F31e9517F|
-|USDT |0x0e6915Fd79863816e7949ebA5dC45d1E2D09a215|
-|wDAI |0xCDa62E8333EB3BBCf384164496F18397BB79be4C|
-|USDC |0x4F6B3c357c439E15FB61c1187cc5E28eC72bBc55|
-|ETH  |0xF8fe59a3a47Cfd968f96dB0a6af55309cb551c66|
-|wBTC |0xd191D1372F598da7b3c25e53f369B00e9c3f80bD|
-|AAVE |0xA7046cee4441e1771073afA42E56993113fD2633|
-|wCRV |0x6BA61a7dd0b67A8c3403800Fe951065A6D0f4735|
-|SUSHI|0x9A0717142D72Bb398851A4453a7D5Dc5E5e26Cc0|
-|wBAL |0x347b2f26e5900Cb4749A5A9bd97e1a7bF42eaf0f|
-|wSOL |Not available (missed MetaPlesk metadata) |  
+|USDT |0x6eEf939FC6e2B3F440dCbB72Ea81Cd63B5a519A5|
+|wDAI |0xC989FfF9d02C459117A2EaBb8dA3f03DFd9045DE|
+|USDC |0x512E48836Cd42F3eB6f50CEd9ffD81E0a7F15103|
+|ETH  |0x46E986B5b0f87F1026ff52Ce20340467199F891D|
+|wBTC |0x2B86AEf728405F8F6597e5896a1844E36ddE77aD|
+|AAVE |0x10D486dD3B38a304cF61e8dA70ADED03D9a7787A|
+|wCRV |0x4cfb9dffB6998fB74c89a094E3A8373EA3C081ff|
+|SUSHI|0x72a3DD8111813d9B29ACAB4b90622Ba95BDF1414|
+|wBAL |0x7047dcc44E38798AC0CB9DE465609A7dd95d04dC|
+|wSOL |0xc7Fc9b46e479c5Cb42f6C458D1881e55E6B7986c|  
   </TabItem>
 
 <TabItem value="testnet" label="Testnet">

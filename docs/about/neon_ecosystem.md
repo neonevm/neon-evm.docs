@@ -6,15 +6,14 @@ includedInSite: true
 approvedBy: YYY
 comment: #2 TODO Tracer API needs internal linking to replace Medium article 
 ---
+<!-- import { QuickLookNeonImage } from '@site/src/components/QuickLookNeonImage' -->
+<!-- <QuickLookNeonImage/> -->
 
 import ecosystem from '@site/static/img/doc-images/about/neon-ecosystem.png';
 
 
-<div className='neon-img-box-300' style={{textAlign: 'center', width: 800, display: 'block', margin: 'auto'}}>
-
-<img src={ecosystem} />
-
-
+<div className='neon-img-box-300' style={{textAlign: 'center', maxWidth: 800, display: 'block', margin: 'auto'}}>
+    <img src={ecosystem} />
 </div>
 
 
