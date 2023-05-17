@@ -15,8 +15,8 @@ The contract is implemented in Rust as part of the Neon EVM program.
 
 Source code:
   * [Rust source code](https://github.com/neonlabsorg/neon-evm/blob/c43345d7abf7af14aa840e6b15c0fc64b084bb2c/evm_loader/program/src/precompile_contracts.rs#L106)
-  * [Solidity wrapper source code](https://github.com/neonlabsorg/neon-evm/blob/develop/evm_loader/solidity/contracts/erc20_wrapper.sol)
-<!-- broken link above -- is this the fix https://github.com/neonlabsorg/neon-evm/blob/develop/evm_loader/solidity/erc20_for_spl.sol-->
+  * [Solidity wrapper source code](https://github.com/neonlabsorg/neon-evm/blob/6ac1734658f0fdcac09092bd98979d4f6fe4530d/evm_loader/solidity/erc20_for_spl.sol#LL12C11-L12C11)
+
 ### Contract Interface
 
 ```solidity
