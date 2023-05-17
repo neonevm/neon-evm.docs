@@ -132,7 +132,7 @@ const sidebars = {
     {
       type: 'doc',
       label: 'Operate a Neon Proxy',
-      id: 'operating/overview/introduction'
+      id: 'operating/operator-introduction'
     },
     {
       type: 'category',
