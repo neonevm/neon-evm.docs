@@ -2,7 +2,7 @@
 title: Operator Requirements
 proofedDate: na
 iterationBy: na
-includedInSite: false
+includedInSite: true
 approvedBy: na
 comments: HB not sure how this page is being used in site map -- renders without sidebar TODO fix 
 ---
