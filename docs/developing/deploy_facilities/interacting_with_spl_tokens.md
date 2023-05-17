@@ -5,6 +5,7 @@ iterationBy: na
 includedInSite: true
 approvedBy: na
 comments: #1 TODO update text #fix broken link -- see inline comment
+boilerPlatable: yes -- we could have an item providing demo
 ---
 
 The ERC-20 SPL wrapper contract provides access to native Solana tokens registered in the SPL token contract, through the ERC-20 interface.
