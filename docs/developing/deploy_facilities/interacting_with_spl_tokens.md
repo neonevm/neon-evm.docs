@@ -5,7 +5,7 @@ iterationBy: na
 includedInSite: true
 approvedBy: na
 comments:
-boilerPlatable: yes -- we could have an item providing demo
+boilerPlatable: TODO we could have an item providing demo
 ---
 
 import Tabs from '@theme/Tabs';
