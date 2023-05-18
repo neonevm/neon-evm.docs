@@ -15,6 +15,12 @@ This page describes the ERC-20 SPL wrapper contract: the ERC-20 Factory Contract
 
 This allows Solana liquidity to be available to EVM (Solidity, Vyper, etc.) bytecode contracts, i.e. this ERC-20 SPL wrapper allows Ethereum wallets such as MetaMask to transact with SPL tokens. 
 
+|Location|Address|
+|:-------|:-------|
+|Devnet| 0xF6b17787154C418d5773Ea22Afc87A95CAA3e957|
+|Mainnet| 0x6B226a13F5FE3A5cC488084C08bB905533804720|
+
+
 :::info
 To be able to use an SPL token from a Solana account balance, it must be transferred to a Neon EVM account via the [NeonPass SDK](/docs/developing/integrate/neon_transfer_sdk).
 :::
@@ -58,7 +64,7 @@ According to the SPL token structure, an unsigned 64-bit floating point number i
 
 ## Notes on variants in outcome
 
-Depending on how you set up the ERC-20 Factory Contract will determine the constructor's variables:
+How you set up the ERC-20 Factory Contract will determine the contract deployed and the constructor's variables:
 
 <Tabs>
  <TabItem value="Constructor non-mintable" label="ERC20ForSpl Constructor" default>
