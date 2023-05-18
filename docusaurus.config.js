@@ -33,9 +33,9 @@ const config = {
       image: 'img/og_image.png',
       cookieBanner: {},
       algolia: {
-        apiKey: 'b42bf0be9b7f964aa534f802164b53f8',
-        appId: 'IMU5IHYKIJ',
-        indexName: 'neon-labs',
+        apiKey: 'f091c9673db5f9d6b08e940901f8ede5',
+        appId: '879GT1L978',
+        indexName: 'neonfoundation',
         contextualSearch: true,
         placeholder: 'search something...',
         algoliaOptions: { 'facetFilters': ['type:$TYPE'] },
