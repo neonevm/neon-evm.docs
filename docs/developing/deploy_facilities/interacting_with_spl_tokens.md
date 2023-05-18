@@ -21,22 +21,25 @@ To be able to use an SPL token from a Solana account balance, it must be transfe
 
 ## ERC-20 Factory Contract
 
-The [ERC-20-for-SPL Factory Contract](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol) provides a method to access a list of deployed contracts on the Neon EVM and to issue and register a new ERC-20-for-SPL contract. Once registered, these contracts are then deployed on any instance of Neon EVM and be available on the system-wide registry.
+The [ERC-20-for-SPL Factory Contract](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol) provides a method to access a list of deployed contracts on the Neon EVM and to issue and register a new ERC-20-for-SPL contract. Once registered, these contracts are then deployed to Neon EVM and are available on the system-wide registry.
+
+:::info
+Two addresses of the deployed contract will registered: Devnet and Mainnet.
+::: 
 
 Depending on the method called and the arguments passed to this contract, two variants of the deployment may be created and registered: 
 
-## ERC-20-for-SPL
+### ERC-20-for-SPL
 
 The [ERC-20-for-SPL variant](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol#L17) works with a precompiled contract within Neon EVM which can call the SPL token program. This enables you to utilize existing SPL tokens e.g. SOL or NEON, as wSOL or wNEON, respectively, via the ERC-20 interface, i.e. this contract assigns the to the token.
 
+:::info
+Note that before setting up the ERC-20 Factory Contract to construct an ERC-20-for-SPL, you must register the token's existing [Metaplex metadata](https://docs.metaplex.com/programs/token-metadata/overview).
+:::
 
-## ERC-20-for-SPL-Mintable
+### ERC-20-for-SPL-Mintable
 
 The [ERC-20-for-SPL-Mintable variant](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol#LL35C1-L35C1) has two additional methods that enable you to use the Neon EVM to mint a new SPL token and wrap it as ERC-20-compatible. When the ERC-20 Factory Contract is constructed to this variant, it creates a new SPL token using Solana's Token Program and provides mint and freeze authority to the Neon account specified in the constructor.
-
-:::info
-Note that before setting up the ERC-20 Factory Contract to construct an ERC-20-for-SPL-Mintable, you must register the token's [Metaplex metadata](https://docs.metaplex.com/programs/token-metadata/overview).
-:::
 
 ## Contract signing
 
