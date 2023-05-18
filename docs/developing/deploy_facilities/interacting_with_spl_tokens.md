@@ -16,7 +16,7 @@ The ERC-20 SPL wrapper contract provides access to native Solana tokens, i.e. th
 This allows Solana liquidity to be available to EVM (Solidity, Vyper, etc.) bytecode contracts, i.e. this ERC-20 SPL wrapper allows Ethereum wallets such as MetaMask to transact with SPL tokens.
 
 :::info
-To be able to use an SPL token from a Solana account balance, it must be transferred to a NeonEVM account via [NeonPass](/docs/token_transferring/neonpass_usage).
+To be able to use an SPL token from a Solana account balance, it must be transferred to a NeonEVM account via the [NeonPass SDK](/docs/developing/integrate/neon_transfer_sdk).
 :::
 
 Two contracts are available on Neon EVM that enable SPL tokens to be transacted as ERC-20 compliant. It's vital that you understand which to use:
