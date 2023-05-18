@@ -116,4 +116,4 @@ When a proxy is deployed, it generates a wallet containing a key pair. If you do
   * `~/.config/solana/id.json` — absolute path to your key pair file stored locally
   * `--name proxy` — specifies the proxy name
 
-If you are not registered as an operator, you can only use test public keys. A list of available public keys is accessible in the [Neon Proxy RPC Endpoints](clusters/neon_proxy_rpc_endpoints.md) section. You do not need to specify the key using the `-v` flag, since it is already hard-coded into the Devnet/Testnet containers.
+<!-- retired to retire linked page If you are not registered as an operator, you can only use test public keys. A list of available public keys is accessible in the  {Neon Proxy RPC Endpoints} (clusters/neon_proxy_rpc_endpoints.md) section. You do not need to specify the key using the `-v` flag, since it is already hard-coded into the Devnet/Testnet containers. -->
