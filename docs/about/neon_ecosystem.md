@@ -34,7 +34,7 @@ The **Neon EVM program** is a smart contract on the Solana blockchain. The Neon 
 
 ## Neon Proxy
 
-It's the Neon Proxy that allows Ethereum dApps to be ported to Neon with minimal reconfiguration. Neon Proxy packages a Neon transaction into a Solana transaction. The proxy is provided as a containerized solution that's intuitive for [Operators](/docs/operating/overview/introduction). 
+It's the Neon Proxy that allows Ethereum dApps to be ported to Neon with minimal reconfiguration. Neon Proxy packages a Neon transaction into a Solana transaction. The proxy is provided as a containerized solution that's intuitive for [Operators](/docs/operating/operator-introduction). 
 
 > **Neon Operators** run Neon Proxy servers to facilitate the seamless execution of Ethereum-like transactions on Solana. It is this proxy service that allows Ethereum dApps to be ported to Neon with minimal reconfiguration. Operators accept payment in NEON and make payments within the Solana Ecosystem in SOL.
 

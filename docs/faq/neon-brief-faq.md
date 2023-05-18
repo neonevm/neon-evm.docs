@@ -39,7 +39,6 @@ The following tools are available on Neon:
 * [NeonScan](https://neonscan.org/) - Neon EVM’s block explorer
 * [NeonPass](https://neonpass.live/) - A utility for transferring SPL tokens between Solana and Neon
 * [Neon Faucet](https://neonfaucet.org/) - Where tokens for the Neon Devnet may be retrieved for testing and experimental purposes
-* [Neon Analytics](https://neon.aleph.cloud/) - A data-rich dashboard built on [Aleph](https://aleph.im/)
 
 ### How do I transfer SPL tokens between Solana and Neon?
 

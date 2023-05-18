@@ -4,7 +4,7 @@ proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: 
+comment: checking this is on link-fixer branch
 ---
 
 A Solana cluster is a set of independently owned computers working together to verify the output of user-submitted programs. A Solana cluster can be utilized any time a user wants to preserve an immutable record of events in time or programmatic interpretations of those events. 
