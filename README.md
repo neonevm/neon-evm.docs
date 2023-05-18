@@ -24,6 +24,8 @@ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
+> Note that the build gives more verbose warnings than the localhost server (with base commands). So, `yarn clear` followed by `yarn build` should warn on all internal bust links.
+
 ## Control image sizes
 
 Docusaurus provides certain [controls for static assets](https://docusaurus.io/docs/static-assets). Either the default location must be used for image location (static/img), or this must be configured and the configured location applied. Ad hoc placement of images is not supported.
