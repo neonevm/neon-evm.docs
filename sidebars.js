@@ -146,16 +146,6 @@ const sidebars = {
       label: 'Set up Kubernetes with k0s',
       id: 'operating/installation/setup_kubernetes'
     },
-    {
-      type: 'doc',
-      label: 'Command Line Flags',
-      id: 'operating/flags'
-    },
-    {
-      type: 'doc',
-      label: 'Endpoints',
-      id: 'clusters/neon_proxy_rpc_endpoints',
-    },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Govern</h4>' },
     {
