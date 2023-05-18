@@ -13,34 +13,33 @@ import TabItem from '@theme/TabItem';
 
 This page describes the ERC-20 SPL wrapper contract: the ERC-20 Factory Contract. This contract provides access to native Solana tokens, i.e. those registered in the SPL token contract, through the [ERC-20 standard interface](https://eips.ethereum.org/EIPS/eip-20). 
 
-This allows Solana liquidity to be available to EVM (Solidity, Vyper, etc.) bytecode contracts, i.e. this ERC-20 SPL wrapper allows Ethereum wallets such as MetaMask to transact with SPL tokens.
+This allows Solana liquidity to be available to EVM (Solidity, Vyper, etc.) bytecode contracts, i.e. this ERC-20 SPL wrapper allows Ethereum wallets such as MetaMask to transact with SPL tokens. 
 
 :::info
-To be able to use an SPL token from a Solana account balance, it must be transferred to a NeonEVM account via the [NeonPass SDK](/docs/developing/integrate/neon_transfer_sdk).
+To be able to use an SPL token from a Solana account balance, it must be transferred to a Neon EVM account via the [NeonPass SDK](/docs/developing/integrate/neon_transfer_sdk).
 :::
-
 
 ## ERC-20 Factory Contract
 
-The [ERC-20-for-SPL Factory Contract](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol) provies an interace for developers to handle SPL tokens as ERC-20 compliant.
+The [ERC-20-for-SPL Factory Contract](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol) provides a method to access a list of deployed contracts on the Neon EVM and to issue and register a new ERC-20-for-SPL contract. Once registered, these contracts are then deployed on any instance of Neon EVM and be available on the system-wide registry.
 
-Depending on the variable passed to this contract, two variant outputs may be produced: 
-
-<!-- 2 variants may be constructed depending on how the user populates the variables in the factory contract >> this contract is the main entry point NOT the 2 items below -->
+Depending on the method called and the arguments passed to this contract, two variants of the deployment may be created and registered: 
 
 ## ERC-20-for-SPL
-The [ERC-20-for-SPL variant](https://github.com/neonlabsorg/neon-evm/blob/c33b34bb624234955d88bf98a4ad1c95ddd453dc/evm_loader/solidity/erc20_for_spl.sol#L12) works with a precompiled contract within Neon EVM which can call the SPL token program. This enables you to utilize existing SPL tokens e.g. SOL or NEON, as wSOL or wNEON, respectively, via the ERC-20 interface, i.e. this contract assigns the to the token.
+
+The [ERC-20-for-SPL variant](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol#L17) works with a precompiled contract within Neon EVM which can call the SPL token program. This enables you to utilize existing SPL tokens e.g. SOL or NEON, as wSOL or wNEON, respectively, via the ERC-20 interface, i.e. this contract assigns the to the token.
 
 
 ## ERC-20-for-SPL-Mintable
-The [ERC-20-for-SPL-Mintable variant](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl.sol#LL203C1-L203C1) has two additional methods that enable you to use the Neon EVM to mint a new SPL token and wrap it as ERC-20-compatible. When the ERC-20 Factory Contract is constructed to this variant, it creates a new SPL token using Solana's Token Program and provides mint and freeze authority to the Neon account specified in the constructor.
+
+The [ERC-20-for-SPL-Mintable variant](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol#LL35C1-L35C1) has two additional methods that enable you to use the Neon EVM to mint a new SPL token and wrap it as ERC-20-compatible. When the ERC-20 Factory Contract is constructed to this variant, it creates a new SPL token using Solana's Token Program and provides mint and freeze authority to the Neon account specified in the constructor.
 
 :::info
 Note that before setting up the ERC-20 Factory Contract to construct an ERC-20-for-SPL-Mintable, you must register the token's [Metaplex metadata](https://docs.metaplex.com/programs/token-metadata/overview).
 :::
 
-
 ## Contract signing
+
 Depending on which output you need to be constructed, you will sign with different accounts, as shown in the table:
 
 
