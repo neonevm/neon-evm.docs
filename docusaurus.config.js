@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Neon Docs',
   tagline: 'Neon EVM is an open source project implementing the Ethereum virtual machine on Solana.',
-  url: 'https://docs.neon-labs.org',
+  url: 'https://docs.neonfoundation.io',
   baseUrl: '/',
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
@@ -33,12 +33,12 @@ const config = {
       image: 'img/og_image.png',
       cookieBanner: {},
       algolia: {
-        apiKey: 'f091c9673db5f9d6b08e940901f8ede5',
-        appId: '879GT1L978',
-        indexName: 'neonfoundation',
+        apiKey: 'b42bf0be9b7f964aa534f802164b53f8',
+        appId: 'IMU5IHYKIJ',
+        indexName: 'neon-labs',
         contextualSearch: true,
         placeholder: 'search something...',
-        algoliaOptions: { 'facetFilters': ['type:$TYPE'] },
+        algoliaOptions: { facetFilters: ['type:$TYPE'] },
         debug: false,
         dropdown: true
       },
@@ -95,7 +95,7 @@ const config = {
             items: [
               { label: 'BlockExplorer', to: 'https://neonscan.org/' },
               { label: 'NeonPass', to: 'https://neonpass.live/' },
-              { label: 'NeonFaucet', to: 'https://neonfaucet.org/' },
+              { label: 'NeonFaucet', to: 'https://neonfaucet.org/' }
             ]
           },
           {
@@ -115,7 +115,7 @@ const config = {
                 label: 'Integrate',
                 to: '/docs/developing/integrate/oracles/integrating_chainlink'
               },
-              { label: 'Tutorials', to: '/docs/developing/deploy_facilities/using_hardhat' },
+              { label: 'Tutorials', to: '/docs/developing/deploy_facilities/using_hardhat' }
             ]
           },
           {
