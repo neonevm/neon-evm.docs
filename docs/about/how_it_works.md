@@ -25,7 +25,7 @@ Effecting a user-initiated transaction (tx) from an Ethereum dApp on Solana requ
 
 > See [How to Connect to the Neon RPC](/docs/wallet/metamask_setup) via an Ethereum-compatible wallet.
 
-The Ethereum API passes the tx to the Neon Proxy via the [Neon API service](https://docs.neon-labs.org/docs/developing/connect_rpc).
+The Ethereum API passes the tx to the Neon Proxy via the [Neon API service](docs/developing/connect_rpc).
 
 2. This request is received by the Neon Proxy.
 
