@@ -1,6 +1,6 @@
 # Documentation
 
-[Docs](https://docs.neon-labs.org/) are built using [Docusaurus 2](https://docusaurus.io/).
+[Docs](https://docs.neonfoundation.io/) are built using [Docusaurus 2](https://docusaurus.io/).
 
 ### Installation
 
