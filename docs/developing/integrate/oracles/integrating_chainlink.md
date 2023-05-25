@@ -9,9 +9,31 @@ comment:
 
 ## Introduction
 
-[Chainlink Data Feeds](https://data.chain.link/) are the quickest way to connect your smart contracts to real-world data, such as asset prices. It supports Neon EVM and is implemented as a smart contract making Chainlink Data Feeds from Solana network available on Neon EVM. You can learn more from the [hoodieshq/chainlink-neon](https://github.com/hoodieshq/chainlink-neon) repo.
+[Chainlink Data Feeds](https://data.chain.link/) are the quickest way to connect your smart contracts to oracle data such as asset prices. 
+
+Chainlink is implemented as a smart contract on Neon EVM making Chainlink Data Feeds from the Solana network available for smart contracts to consume. 
+
+
+Each Chainlink feed is available via its own contract. To use a feed, you create a "hybrid" smart contract, i.e. you build the integration with the feed contract into your own smart contact and deploy that. Learn more from [Chainlink's documentation](https://docs.chain.link/data-feeds/solana).
+
+
+## Deployed feeds
+
+|Currency pair|Chainlink contract feed address|
+|:----:|:-----:|
+|BTC/USD|0x878738FdbCC9Aa39Ce68Fa3B0B0B93426EcB6417|
+|ETH/USD|0x7235B04963600fA184f6023696870F49d014416d|
+|LINK/USD:0xc75E93c4593c23A50cff935F8916774e02c506C7|
+|SOL/USD|0xec852B2A009f49E4eE4ffEddeDcF81a1AD1bbD6d|
+|USDC/USD|0xedc0d80E85292fEf5B0946DEc957563Ceb7C8e6c|
+|USDT/USD|0xE69C1E63ef3E95bE56A50f326aC97Bb7994890aD|
+
+<!-- 
+The following is advice on deploying the Chainlink contract NOT deploying a hybrid contract setup to consume chainlink feeds -- yes?
 
 ## How to Use
+
+You can learn more from the [hoodieshq/chainlink-neon](https://github.com/hoodieshq/chainlink-neon) repo.
 
 Once deployed, the contract implements [`AggregatorV3Interface`](https://docs.chain.link/docs/price-feeds-api-reference/#aggregatorv3interface) in accordance with the best practices of the Chainlink Data Feeds
 usage. Follow the official Chainlink documentation to get the [latest](https://docs.chain.link/docs/get-the-latest-price/) or [historical](https://docs.chain.link/docs/historical-price-data/) prices from the data feeds.
@@ -58,3 +80,4 @@ contract.methods.getRoundData(process.env.ROUND).call()
 ```sh
 $ FEED_ADDRESS=<address> truffle migrate --network <network>
 ```
+ -->

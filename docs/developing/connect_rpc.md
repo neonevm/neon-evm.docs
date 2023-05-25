@@ -7,49 +7,41 @@ approvedBy: na
 comment: 
 ---
 
-This tutorial will give an overview of how to connect to a Neon RPC, resulting in a network configuration where Neon is connected to a remote Neon Proxy and to remote Solana.
+import chainlist_raw from '@site/static/img/doc-images/developing/chainlist/chainlist.png';
 
-## Connecting MetaMask to Neon EVM
-Go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar. You should see `Neon EVM Devnet` and `Neon EVM MainNet`.
+This tutorial provides an overview of how to connect to a Neon RPC. You will:
+- [Select a Neon Proxy](https://chainlist.org/?chain=245022926&testnets=true&search=Neon)
+- Connect an EVM-compatible wallet to that Proxy
 
-Select, for instance, `Neon EVM Devnet` and click `Connect Wallet`. A MetaMask pop-up window will show. Click `Next` and then `Connect`. You can now access the [Solana cluster](https://docs.solana.com/clusters) and carry out transactions.
+> The [Proxy Operator you choose](#choose-a-remote-proxy) is responsible for settling your Neon transactions on Solana
 
-## Choosing a Remote Proxy
-Before sending a transaction to the Neon EVM, users should choose the operator that is optimal for them to perform the transaction. The operator is not chosen directly, but through the proxies they serve.
+## Connect MetaMask to Neon EVM
 
-A table of RPC proxies operated by Neon Labs, shown below, has the following columns:
-  * `Network (Chain ID)` — the Solana network and its identifier; the network determines what RPC URL proxy can be used.
-  * `Operator name` — the name of the operator providing the proxy.
-  * `RPC URL` — the address for interacting with the required proxy.
+1.1 Visit [Neon's Chainlist](https://chainlist.org/?chain=245022926&testnets=true&search=Neon) page.
 
-<table>
-  <tbody>
-    <tr>
-        <th>Network</th>
-        <th>Operator name</th>
-        <th>RPC URL</th>
-        <th>Chain ID</th>
-    </tr>
-    <tr>
-        <th>Devnet</th>
-        <td><a href="https://neon-labs.org">Neon Labs</a></td>
-        <td>https://devnet.neonevm.org</td>
-        <th>245022926</th>
-    </tr>
-    <tr>
-        <th>Testnet</th>
-        <td><a href="https://neon-labs.org">Neon Labs</a></td>
-        <td>https://testnet.neonevm.org	</td>
-        <th>245022940</th>
-    </tr>
-  </tbody>
-</table>
+1.2 Expand the card for the network of your choice. 
 
-The proxy interacts with one EVM loader, which can be deployed in different Solana chains. This interaction allows the proxy to be used on different networks (Testnet, Devnet, Mainnet Beta).
+> <img src={chainlist_raw} width="450" />
 
-For a complete table of the RPC go to [Chainlist](https://chainlist.org/) and type `Neon` in the search bar.
+Notice, that should several Proxy Operators offer public RPC endpoints, you may now select which you want.
 
-## Connecting Dev tools to Neon EVM
+1.3 Select Proxy Operator
+
+> See the section below to understand more about [choosing a Proxy](#choose-a-remote-proxy).
+
+1.4 Connect your wallet
+
+**** 
+
+
+## Choose a Remote Proxy
+
+Before sending a transaction to the Neon EVM, users should choose the Operator that is optimal for them to perform the transaction. The Operator is not chosen directly, but through the proxies they serve.
+
+The Proxy interacts with one EVM loader, which can be deployed in different Solana chains. This interaction allows the proxy to be used on different networks (Testnet, Devnet, Mainnet Beta).
+
+
+## Connect Dev tools to Neon EVM
 
 To connect to a proxy using Remix, Truffle, or Hardhat, check out the following resources:
 * [Using Remix](developing/deploy_facilities/using_remix.md)
@@ -58,5 +50,5 @@ To connect to a proxy using Remix, Truffle, or Hardhat, check out the following 
 
 Please note that, for Truffle and Hardhat, you need to configure the configuration file by setting either the `HDWalletProvider` provider (for Truffle) or the URL and the `network_id`/`chainId` to the RPC URL (and ID) selected from the table above. This is described in detail in the relevant tutorial sections.
 
-## Connecting Manually with MetaMask
-The above steps demonstrate how to connect to the Solana Devnet cluster via Chainlist. Alternatively, you can connect to the Neon EVM Devnet [manually via MetaMask](wallet/metamask_setup.md#setting-up-an-rpc-network).
+## Connect Manually with MetaMask
+The above steps demonstrate how to connect to the Solana cluster via Chainlist. Alternatively, you can connect to the Neon EVM [manually via MetaMask](wallet/metamask_setup.md#setting-up-an-rpc-network).
