@@ -5,7 +5,7 @@ iterationBy: na
 includedInSite: true
 approvedBy: na
 comments:
-boilerPlatable: TODO we could have an item providing demo
+boilerPlatable: TODO we could have an item providing demo TODO see inline todos && this probably needs to become a folder with the subtopics
 ---
 
 import Tabs from '@theme/Tabs';
@@ -13,9 +13,12 @@ import TabItem from '@theme/TabItem';
 
 This page describes the ERC-20 SPL wrapper contract: the ERC-20 Factory Contract. This contract provides access to native Solana tokens, i.e. those registered in the SPL token contract, through the [ERC-20 standard interface](https://eips.ethereum.org/EIPS/eip-20). 
 
+<!-- 
+todo provide userguide to explain how to return ERC-20-interface contract addresses for existing SPL-as-ERC-20 tokens -->
+
 This allows Solana liquidity to be available to EVM (Solidity, Vyper, etc.) bytecode contracts, i.e. this ERC-20 SPL wrapper allows Ethereum wallets such as MetaMask to transact with SPL tokens. 
 
-|Location|Address|
+|Location|Factory Contract address|
 |:-------|:-------|
 |Devnet| 0xF6b17787154C418d5773Ea22Afc87A95CAA3e957|
 |Mainnet| 0x6B226a13F5FE3A5cC488084C08bB905533804720|
@@ -120,3 +123,12 @@ _mint_authority – address of mint/freeze authority Neon account
 <!-- ## Notes on usage
 
 The ERC-20 Factory Contract is provided as a basic toolkit under ** lisence. You are invited to adapt this to your needs as required. -->
+
+<!-- todo this probably needs its own page
+Understand accounts: Solana vs. Neon EVM
+Now that we understand how SPL and ERC-20 tokens become compatible with Neon EVM, let’s take a look at how a dApp can access account balances. Firstly, it is important to understand the two different account types. There are standard Solana “Associated Token Accounts”, which hold a user’s SPL tokens natively, and Neon EVM Token Accounts “packed” in an ERC-20-for-SPL interface within Neon EVM. 
+
+These Neon EVM ERC-20-for-SPL Token Accounts are specialized Solana accounts instantiated in the Neon ecosystem. These accounts can interact with Solidity dApps and are similar in structure to Associated Token Accounts in the broader Solana environment. They store tokens associated with a user’s Neon EVM-facing EVM-compatible wallet, e.g. MetaMask.
+
+If you want to learn more about the utility token NEON, see our previous article. To join the community and have access to experts who can answer your questions, find us on ****.
+ -->
