@@ -19,6 +19,8 @@ Each Chainlink feed is available via its own contract. To use a feed, you create
 
 ## Deployed feeds
 
+The Chainlink controller contract is deployed on [Devnet](https://devnet.neonscan.org/address/0x878738FdbCC9Aa39Ce68Fa3B0B0B93426EcB6417). This contract implements the [`AggregatorV3Interface`](https://docs.chain.link/docs/price-feeds-api-reference/#aggregatorv3interface) to support the following feeds:
+
 ### Devnet
 
 |Currency pair|Chainlink contract feed address|
@@ -30,8 +32,9 @@ Each Chainlink feed is available via its own contract. To use a feed, you create
 |USDC/USD|0xedc0d80E85292fEf5B0946DEc957563Ceb7C8e6c|
 |USDT/USD|0xE69C1E63ef3E95bE56A50f326aC97Bb7994890aD|
 
+
 <!-- 
-The following is advice on deploying the Chainlink contract NOT deploying a hybrid contract setup to consume chainlink feeds -- yes?
+The following is advice on deploying the Chainlink contract NOT deploying a hybrid contract setup to consume chainlink feeds. This may be of use to NLabs devs, but is not end-user material:
 
 ## How to Use
 
