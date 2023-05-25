@@ -19,6 +19,8 @@ Each Chainlink feed is available via its own contract. To use a feed, you create
 
 ## Deployed feeds
 
+### Devnet
+
 |Currency pair|Chainlink contract feed address|
 |:----:|:-----:|
 |BTC/USD|0x878738FdbCC9Aa39Ce68Fa3B0B0B93426EcB6417|
