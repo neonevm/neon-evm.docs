@@ -5,7 +5,6 @@ iterationBy: na
 includedInSite: true
 approvedBy: na
 comment: TODO source of truth for https://github.com/neonlabsorg/token-list/blob/17a7b46f5786f3ae05e68db927e6629ba397459e/tokenlist.json needs programmatic update from this page -- want to include bridger info too when that applies -- is this possible? NB only full code block results in copy option -- tried this in HTML table and it is not compatible
->>>>>>> main
 ---
 
 import Tabs from '@theme/Tabs';
