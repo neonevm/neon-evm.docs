@@ -17,7 +17,7 @@ Neon EVM is an Ethereum Virtual Machine operating as a smart contract on Solana.
 
 ### How does Neon EVM Work?
 
-Neon EVM is a smart contract on Solana acting as the Ethereum Virtual Machine. It is compiled into Berkeley Packet Filter bytecode, a format that can be executed on Solana. This allows Neon EVM to receive Solana transactions that contain wrapped Ethereum-like transactions and process them on Solana according to Ethereum rules. Get more details [here](https://docs.neon-labs.org/docs/about/how_it_works).
+Neon EVM is a smart contract on Solana acting as the Ethereum Virtual Machine. It is compiled into Berkeley Packet Filter bytecode, a format that can be executed on Solana. This allows Neon EVM to receive Solana transactions that contain wrapped Ethereum-like transactions and process them on Solana according to Ethereum rules. Get more details [here](https://docs.neonfoundation.io/docs/about/how_it_works).
 
 ### How can I start building on Neon?
 
@@ -60,7 +60,7 @@ Feel free to reach out to us in our [Discord community](https://discord.com/invi
 
 ### Where can I see a list of projects in the ecosystem?
 
-You can see the list of projects that are being built in Neon [here](https://docs.neon-labs.org/docs/about/neon_ecosystem).
+You can see the list of projects that are being built in Neon [here](https://docs.neonfoundation.io/docs/about/neon_ecosystem).
 
 ### Where can I see a list of upcoming events involving Neon?
 

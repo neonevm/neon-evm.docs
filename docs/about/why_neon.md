@@ -61,3 +61,9 @@ Solana offers developers:
 * High transaction speed: 2,000+ tps
 * Access to the growing Solana Ecosystem
 * Solana's consensus mechanism and state, with no additional validators
+
+## Public and audited
+
+Not only is Neon EVM available on [GitHub](https://github.com/neonevm/neon-evm) for interested parties to examine and review, it has also passed [several audits](https://github.com/neonevm/neon-evm/tree/develop/audit). So too has the DAO governance protocol undergone [several successful audits](https://github.com/neonevm/neon-spl-governance/tree/main/audit).
+
+
