@@ -11,18 +11,20 @@ boilerPlatable: TODO we could have an item providing demo TODO see inline todos 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This page describes the ERC-20 SPL wrapper contract: the ERC-20 Factory Contract. This contract provides access to native Solana tokens, i.e. those registered in the SPL token contract, through the [ERC-20 standard interface](https://eips.ethereum.org/EIPS/eip-20). 
+This page describes the ERC-20 SPL interface contract: the ERC-20 Factory Contract. This contract provides access to native Solana tokens, i.e. those registered in the SPL token contract, through the [ERC-20 standard interface](https://eips.ethereum.org/EIPS/eip-20). 
 
 <!-- 
 todo provide userguide to explain how to return ERC-20-interface contract addresses for existing SPL-as-ERC-20 tokens -->
 
-This allows Solana liquidity to be available to EVM (Solidity, Vyper, etc.) bytecode contracts, i.e. this ERC-20 SPL interface allows Ethereum wallets such as MetaMask to transact with SPL tokens. Two addresses of the deployed contract are registered: Devnet and Mainnet:
+This allows Solana liquidity to be available to EVM bytecode contracts (Solidity, Vyper, etc.), i.e. this ERC-20 SPL interface allows Ethereum wallets such as MetaMask to transact with SPL tokens. The contract is deployed on Devnet and Mainnet:
+
 
 |Location|Factory Contract address|
 |:-------|:-------|
 |Devnet| 0xF6b17787154C418d5773Ea22Afc87A95CAA3e957|
 |Mainnet| 0x6B226a13F5FE3A5cC488084C08bB905533804720|
 
+<!-- should be Shadow Mainnet? -->
 
 :::info
 To be able to use an SPL token from a Solana account balance, it must be transferred to a Neon EVM account via the [NeonPass SDK](/docs/developing/integrate/neon_transfer_sdk).
@@ -44,7 +46,7 @@ Note that before setting up the ERC-20 Factory Contract to construct an ERC-20-f
 
 ### ERC-20-for-SPL-Mintable
 
-The [ERC-20-for-SPL-Mintable variant](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol#LL35C1-L35C1) has two additional methods that enable you to use the Neon EVM to mint a new SPL token and wrap it as ERC-20-compatible. When the ERC-20 Factory Contract is constructed to this variant, it creates a new SPL token using Solana's Token Program and provides mint and freeze authority to the Neon account specified in the constructor.
+The [ERC-20-for-SPL-Mintable variant](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol#LL35C1-L35C1) has two additional methods that enable you to use the Neon EVM to mint a new SPL token and register it to the interface to be ERC-20-compatible. When the ERC-20 Factory Contract is constructed to this variant, it creates a new SPL token using Solana's Token Program and provides mint and freeze authority to the Neon account specified in the constructor.
 
 
 ## Contract signing
@@ -52,10 +54,10 @@ The [ERC-20-for-SPL-Mintable variant](https://github.com/neonlabsorg/neon-evm/bl
 Depending on which output you need to be constructed, you will sign with different accounts, as shown in the table:
 
 
-| Contract            | Usage                                | Account requirements                               | Mint tx signed by                                                    |
-| ------------------- | ----------------------------------- | ------------------------------------------ | -------------------------------------------------------------------- |
-| ERC-20-For-Spl         | Wrap Solana-minted token | 1\. Neon Account<br></br>2\. Existing SPL token | Signed by the Solana account private key (via linked Phantom wallet) |
-| ERC-20-ForSpl-Mintable | Mint a token on Solana   | 1\. Neon Account                           | Signed by the Neon account private key (via linked MetaMask wallet)  |
+| Contract            | Usage                                | Requirements                               |tx signed by                                                    |
+| :-----:------------------- | ----------------------------------- | ------------------------------------------ | -------------------------------------------------------------------- |
+| ERC-20-For-Spl         | Provide interface for Solana-minted token | 1\. Neon Account<br></br>2\. Existing SPL token | Signed by the Solana account private key (via linked Phantom wallet) <br></br>3\. Solana account & wallet|
+| ERC-20-ForSpl-Mintable | Mint a token on Solana & provide interface  | 1\. Neon Account                           | Signed by the Neon account private key (via linked MetaMask wallet)  |
 
 
 ## Restrictions
@@ -67,7 +69,7 @@ According to the SPL token structure, an unsigned 64-bit floating point number i
 How you set up the ERC-20 Factory Contract will determine the contract deployed and the constructor's variables:
 
 <Tabs>
- <TabItem value="Constructor non-mintable" label="ERC20ForSpl Constructor" default>
+ <TabItem value="Constructor non-mintable" label="ERC20-For-Spl Constructor" default>
 
 ```
 constructor(
@@ -89,7 +91,7 @@ _decimals – decimals of new token
 _mint_authority – address of mint/freeze authority Neon account
 ```
  </TabItem>
-<TabItem value="Constructor mintable" label="ERC20ForSplMintable Constructor">
+<TabItem value="Constructor mintable" label="ERC20-For-Spl-Mintable Constructor">
 
 ``` 
 constructor(

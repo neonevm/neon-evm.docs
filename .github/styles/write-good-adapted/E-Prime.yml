@@ -4,7 +4,6 @@ ignorecase: true
 level: suggestion
 tokens:
   - am
-  - are
   - aren't
   - been
   - being
@@ -23,4 +22,3 @@ tokens:
   - what's
   - where's
   - who's
-  - you're
