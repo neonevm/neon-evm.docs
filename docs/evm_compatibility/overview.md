@@ -23,7 +23,7 @@ In this way, Neon EVM provides a seamless developer experience. Note that there 
 
 ## Shared standards and features
 
-Solidity or Vyper smart contracts, standard development and deployment tools and practices can all be applied on Neon EVM with almost no code changes:
+Solidity or Vyper smart contracts, standard development and deployment tools and practices can all be applied on Neon EVM with minimal reconfiguration of the code:
 
 - Neon EVM accounts follow [Ethereum's account standards](https://ethereum.org/en/developers/docs/accounts/) 
 
