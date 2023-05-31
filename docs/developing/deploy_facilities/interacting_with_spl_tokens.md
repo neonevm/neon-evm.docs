@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 This page describes the ERC-20 SPL interface contract: the ERC-20 Factory Contract. This contract provides access to native Solana tokens, i.e. those registered in the SPL token contract, through the [ERC-20 standard interface](https://eips.ethereum.org/EIPS/eip-20). 
 
 <!-- 
-todo provide userguide to explain how to return ERC-20-interface contract addresses for existing SPL-as-ERC-20 tokens -->
+todo provide userguide to explain how to return ERC-20-interface contract addresses for existing SPL-as-ERC-20 tokens : this is the item in the code https://github.com/neonlabsorg/neon-evm/blob/769e831889bb8564ac061c7fcdd3774fefe01273/evm_loader/solidity/erc20_for_spl_factory.sol#L8-L15 below is the address -->
 
 This allows Solana liquidity to be available to EVM bytecode contracts (Solidity, Vyper, etc.), i.e. this ERC-20 SPL interface allows Ethereum wallets such as MetaMask to transact with SPL tokens. The contract is deployed on Devnet and Mainnet:
 
@@ -23,8 +23,6 @@ This allows Solana liquidity to be available to EVM bytecode contracts (Solidity
 |:-------|:-------|
 |Devnet| 0xF6b17787154C418d5773Ea22Afc87A95CAA3e957|
 |Mainnet| 0x6B226a13F5FE3A5cC488084C08bB905533804720|
-
-<!-- should be Shadow Mainnet? -->
 
 :::info
 To be able to use an SPL token from a Solana account balance, it must be transferred to a Neon EVM account via the [NeonPass SDK](/docs/developing/integrate/neon_transfer_sdk).
