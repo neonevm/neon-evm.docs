@@ -4,7 +4,7 @@ proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: 
+comment: TODO -- update to tell user Step 4 Connect MM to Proxy is binding a MM WalletID to a Neon Account ID -- this allows signing with a Neon Account
 ---
 
 MetaMask is a convenient and fairly easy-to-use application for storing Ethereum addresses and private keys. This tutorial will guide you, step by step, in installing MetaMask on your device and connecting the wallet to the Neon Devnet environment.  

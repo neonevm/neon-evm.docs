@@ -95,7 +95,7 @@ const sidebars = {
         'developing/deploy_facilities/using_hardhat',
         'developing/deploy_facilities/using_truffle',
         'developing/deploy_facilities/using_remix',
-        'developing/deploy_facilities/using_brownie',
+        'developing/deploy_facilities/using_brownie'
       ]
     },
     {
@@ -104,7 +104,7 @@ const sidebars = {
       items: [
         'developing/dev_environment/op2_local_proxy_local_solana',
         'developing/dev_environment/op3_local_proxy_remote_solana',
-        'clusters/solana_cluster',
+        'clusters/solana_cluster'
       ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
@@ -115,6 +115,7 @@ const sidebars = {
       items: [
         'evm_compatibility/overview',
         'evm_compatibility/json_rpc_api_methods',
+        'evm_compatibility/opcodes',
         'evm_compatibility/precompiles'
       ]
     },
