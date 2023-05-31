@@ -45,7 +45,7 @@ Neon also supports native precompiled contracts that are available to our users.
 
 
 ### Gas calculation
-The mechanism of gas consumption and calculation of gas fees on Neon EVM differ from Ethereum. Gas fees on Neon EVM are much cheaper than on Ethereum. 
+The mechanism of gas consumption and calculation of gas fees on Neon EVM differ from Ethereum. Gas fees on Neon EVM are much cheaper than on Ethereum because Solana is the settlement layer. 
 
 <!-- Oleg could provide metrics on one transfer. Once mainnet launched can we compare Neon + Solana to L2 and Rollups Yuri has for tx such as transfers and swaps -->
 
