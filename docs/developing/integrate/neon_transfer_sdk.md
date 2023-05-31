@@ -4,7 +4,7 @@ proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: todo this requires overhaul
+comment: todo this requires overhaul 
 ---
 
 This page provides you with the information required to pass tokens between Solana and Neon EVM programmatically. 
@@ -12,7 +12,7 @@ This page provides you with the information required to pass tokens between Sola
 ## TL;DR
 
 - The tool is available as an npm package
-- The package provides the same function as the [NeonPass UI](do this link)
+- The package provides the same function as the [NeonPass UI](https://devnet.neonpass.live)
 
 ## Introduction
 
