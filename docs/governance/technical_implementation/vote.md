@@ -10,6 +10,15 @@ reference:
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import appDownload from '@site/static/img/doc-images/governance/appDownload.png';
+import hardwareWallet from '@site/static/img/doc-images/governance/hardwareWallet.png';
+import squadsConnectWallet from '@site/static/img/doc-images/governance/squads-connect-wallet.png';
+import squadsSelectPhantom from '@site/static/img/doc-images/governance/squads-select-phantom.png';
+import squads5owners from '@site/static/img/doc-images/governance/squads-5-owners.png';
+import vaultDash from '@site/static/img/doc-images/governance/squads-vault-dash.png';
+import vaultDashSend from '@site/static/img/doc-images/governance/squads-vault-dash-send.png';
+import txSend from '@site/static/img/doc-images/governance/txSend.png';
+
 
 ## TL:DR
 
@@ -61,11 +70,11 @@ Ledger maintains and curates their [documents](https://support.ledger.com/hc/en-
 
 > Select “Mac app” from the dropdown menu after you click on the “Download” button.
 
-> ![screenshot of Ledger app download](/img/doc-images/governance/app-download.png)
+> <img src={appDownload} width="250" />
 
 1.3 When your Ledger wallet is sufficiently charged and displays "Welcome to Ledger Nano S Plus Press right button to continue." 
 
-> ![Charged Ledger wallet ready to configure](/img/doc-images/governance/hardwareWallet.png)
+> <img src={hardwareWallet} width="350" />
 
 > Press the right physical button to navigate through the on-screen instructions, and then press both buttons simultaneously to choose the option **Set up as new device”**. 
 
@@ -103,23 +112,27 @@ Your device will display **”Processing”** and then **Your device is now read
 
 <!-- todo Yuri thinks there should be a mainnet url -->
 
-> ![](/img/doc-images/governance/squads-connect-wallet.png)
+> <img src={squadsConnectWallet} width="250" /> 
 
 > Please do take care to read the Terms of Service and Squads Disclaimer first.
 
 4.2 Select “Phantom” from the list of wallet applications.
 
-> ![squads select Phantom wallet](/img/doc-images/governance/squads-select-phantom.png)
+> <img src={squadsSelectPhantom} width="200" /> 
 
 > You will now see a list of Vaults/Squads your wallet address is a signatory of. 
 
-> Example Squads
+:::note 
+
+Example Squads Dash
 > In the following example, the Squad dashboard shows a Vault with 5 owners.
-> ![Squads dash](/img/doc-images/governance/squads-5-owners.png)
-> Clicking on the Vault drills the dash down to show the details for this Vault. Find out more about Vaults in the [Squads documentation](https://docs.squads.so/squads-v3-docs/navigating-your-squad/transactions). Take some time to familiarize yourself with this interface.
+> <img src={squads5owners} width="600" /> 
+> Clicking on the Vault drills the dash down to show the details for this Vault. 
+> <img src={vaultDash} width="600" /> 
 
+:::
 
-![vault dashboard](/img/doc-images/governance/squads-vault-dash.png)
+Find out more about Vaults in the [Squads documentation](https://docs.squads.so/squads-v3-docs/navigating-your-squad/transactions). Take some time to familiarize yourself with this interface.
 
 ## Step 5: Transfer assets using MultiSig on Squads
 
@@ -128,9 +141,9 @@ Due to the custody policy applied by the MultiSig wallet, you must both create *
 
 ### 5.1 Create a transaction
 
-a. Click on **Send** button
+a. Click on the **Send** button
 
->  ![vault dashboard send](/img/doc-images/governance/squads-vault-dash.png)
+> <img src={vaultDashSend} width="600" /> 
 
 b. Configure this transaction:
 
@@ -141,21 +154,25 @@ b. Configure this transaction:
 
 c. Click **Send**.
 
+> <img src={txSend} width="300" /> 
+
 ### 5.2 Approve a transaction
 
-> A MultiSig wallet applies a threshold policy to allow greater controls and security over transactions. While you may set up a MultiSig wallet to behave like a single-signature wallet by creating a threshold of "1 of 1", this is ill advised. The following step provides your recently created transaction with an approval which will count toward the customized threshold for this Vault. Remember, you have connected your hardware wallet and Phantom wallet to manage your approval process, expect to use both to achieve the next step.
+A MultiSig wallet applies a threshold policy to allow greater controls and security over transactions. While you may set up a MultiSig wallet to behave like a single-signature wallet by creating a threshold of "1 of 1", this is ill advised. The following step provides your recently created transaction with an approval which will count toward the customized threshold for this Vault. Remember, you have connected your hardware wallet and Phantom wallet to manage your approval process, expect to use both to achieve the next step.
 
 
 a. Click the **Transactions** tab on the left-hand side of the dash.
+<br></br>
+
 b. Click on your newly created tx which has **Active** status. 
 
 > ![active tx squads dash](/img/doc-images/governance/active-tx.png)
 
-> Under the “Results” section you will see a number for “Confirmed” and a number for “Rejected”. When the transaction is first created, both numbers should be 0. 
+Under the “Results” section you will see a number for “Confirmed” and a number for “Rejected”. When the transaction is first created, both numbers should be 0. 
 
 c. Click **Confirm** to vote for the transaction, and “Reject” to vote against it.
 
-![confirm tx](/img/doc-images/governance/confirm-tx.png)
+> ![confirm tx](/img/doc-images/governance/confirm-tx.png)
 
 Squads will prompt you to approve the transaction using your Phantom wallet extension. 
 
