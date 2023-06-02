@@ -1,7 +1,7 @@
 ---
 title: Vote
-proofedDate: na
-iterationBy: na
+proofedDate: 20230602
+iterationBy: HB
 includedInSite: false
 approvedBy: na
 comments: todo in place todo throttle image sizes
@@ -23,7 +23,7 @@ import confirmTx from '@site/static/img/doc-images/governance/confirm-tx.png';
 import approveTx from '@site/static/img/doc-images/governance/approve-tx.png';
 import execute from '@site/static/img/doc-images/governance/execute-tx.png';
 
-## TL:DR
+## TL;DR
 
 Managing MultiSig for the DAO requires:
 
@@ -71,7 +71,7 @@ Ledger maintains and curates their [documents](https://support.ledger.com/hc/en-
 
 1.2 Download the Ledger Live Mac app from [https://www.ledger.com/start](https://www.ledger.com/start). 
 
-> Select “Mac app” from the dropdown menu after you click on the “Download” button.
+> Select “Mac app” from the dropdown menu after you click **Download**.
 
 > <img src={appDownload} width="250" />
 
@@ -85,7 +85,7 @@ Ledger maintains and curates their [documents](https://support.ledger.com/hc/en-
 
 1.5 After you have confirmed your PIN code, your 24-word recovery phrase will now be displayed word by word on the Ledger device screen. The recovery phrase is the **only** backup of your private key and is crucial for accessing your wallet. It will be displayed only **once**, so it's vital to **write it down and store it in a secure location**.
 
-> Please make doubly sure to
+> Ensure you:
 >
 > - Remember your PIN code
 > - Store your 24-word recovery phrase in a safe and secure place
@@ -107,11 +107,11 @@ Your device will display **”Processing”** and then **Your device is now read
 
 3.2 Next, connect your Ledger wallet as per [Ledger's documentation](https://support.ledger.com/hc/en-us/articles/4408131265169-Set-up-and-use-Phantom-to-access-your-Ledger-Solana-SOL-account?docs=true)
 
-> Please make sure to remember the password you set up for Phantom.
+> Ensure you remember the password you set up for Phantom.
 
 ## Step 4: Access your squad on Squads
 
-4.1 To access Squads on DevNet, go to [https://devnet.squads.so/connect-squad](https://devnet.squads.so/connect-squad). Click on **Connect wallet**, then **Agree and continue** when prompted to acknowledge terms and conditions.
+4.1 To access Squads on DevNet, go to [https://devnet.squads.so/connect-squad](https://devnet.squads.so/connect-squad). Click on **Connect wallet**, then **Agree and continue** when prompted to acknowledge the terms and conditions.
 
 <!-- todo Yuri thinks there should be a mainnet url -->
 
@@ -123,7 +123,7 @@ Your device will display **”Processing”** and then **Your device is now read
 
 > <img src={squadsSelectPhantom} width="200" /> 
 
-> You will now see a list of Vaults/Squads your wallet address is a signatory of. 
+> A list of Vaults/Squads your wallet address is a signatory of is now available. 
 
 :::note 
 
@@ -161,15 +161,15 @@ c. Click **Send**.
 
 ### 5.2 Approve a transaction
 
-A MultiSig wallet applies a threshold policy to allow greater controls and security over transactions. While you may set up a MultiSig wallet to behave like a single-signature wallet by creating a threshold of "1 of 1", this is ill advised. The following step provides your recently created transaction with an approval which will count toward the customized threshold for this Vault. Remember, you have connected your hardware wallet and Phantom wallet to manage your approval process, expect to use both to achieve the next step.
+A MultiSig wallet applies a threshold policy to allow greater control and security over transactions. While you may set up a MultiSig wallet to behave like a single-signature wallet by creating a threshold of "1 of 1", this is ill-advised. The following step provides your recently created transaction with an approval which will count toward the customized threshold for this Vault. Remember, you have connected your hardware wallet and Phantom wallet to manage your approval process; expect to use both to achieve the next step.
 
 a. Click the **Transactions** tab on the left-hand side of the dash.
 
-b. Click on your newly created tx which has **Active** status. 
+b. Click on your newly created tx, which has **Active** status. 
 
 > <img src={activeTx} width="400" /> 
 
-Under the **Results** section you will see a number for *Confirmed* and a number for *Rejected*. When the transaction is first created, both numbers should be 0. 
+Under the **Results** section, you will see a number for *Confirmed* and a number for *Rejected*. When the transaction is first created, both numbers should be 0. 
 
 c. Click **Confirm** to vote for the transaction, and **Reject** to vote against it.
 
@@ -187,7 +187,9 @@ To verify the transaction details on the Ledger device, connect your Ledger hard
 
 ### 5.3 Execute a transaction
 
-Once the minimum threshold of signatures is collected, the transaction may be executed and the assets will be sent.
+Once the minimum threshold of signatures is collected, the transaction may be executed, and the assets will be transferred.
+
+<!-- in some multisigs there is no need to execute -- ruleset is to execute once threshold is met pls verify this is valid -->
 
 > Note that the previous step allowed the transaction to be signed. Initiating the "execute" allows this signed tx to be broadcast to the Solana network.
 
@@ -197,11 +199,11 @@ a. Click **Execute**.
 
 Congratulations, your signed tx is now broadcast.
 
-> Should your transaction be rejected (i.e. if the minimum threshold of votes against the tx was met), then the transaction enters the Cancelled status and will not be signed, and therefore, never executed.
+> Should your transaction be rejected (i.e. if the minimum threshold of votes against the tx was met), then the transaction enters the Cancelled status and will not be signed and, therefore, never executed.
 
 
 ## (Optional) Step 6: Verify the transaction
 
-You can either monitor the MultiSig wallet using a Solana block explorer, such as [Solana Explorer](https://explorer.solana.com/) and [Solscan](https://solscan.io/). Alternatively, you may verify in the Squads Vault that the assets transferred successfully.
+You can either monitor the MultiSig wallet using a Solana block explorer, such as [Solana Explorer](https://explorer.solana.com/) or [Solscan](https://solscan.io/). Alternatively, you may verify in the Squads Vault that the assets transferred successfully.
 
 
