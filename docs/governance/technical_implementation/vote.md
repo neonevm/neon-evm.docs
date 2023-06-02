@@ -142,7 +142,7 @@ Find out more about Vaults in the [Squads documentation](https://docs.squads.so/
 Due to the custody policy applied by the MultiSig wallet, you must both create *and* approve a transaction.
 
 
-### 5.1 Create a transaction
+### 5.1 Create transaction
 
 a. Click on the **Send** button
 
@@ -159,7 +159,7 @@ c. Click **Send**.
 
 > <img src={txSend} width="300" /> 
 
-### 5.2 Approve a transaction
+### 5.2 Approve transaction
 
 A MultiSig wallet applies a threshold policy to allow greater control and security over transactions. While you may set up a MultiSig wallet to behave like a single-signature wallet by creating a threshold of "1 of 1", this is ill-advised. The following step provides your recently created transaction with an approval which will count toward the customized threshold for this Vault. Remember, you have connected your hardware wallet and Phantom wallet to manage your approval process; expect to use both to achieve the next step.
 
@@ -185,7 +185,7 @@ To verify the transaction details on the Ledger device, connect your Ledger hard
 
 > Remember, a transaction request won't be signed until approvals are provided by other parties and the minimum threshold specified in the MultiSig wallet is met. In this example, the threshold is 3, so 2 or more signatures are required to execute this transaction.
 
-### 5.3 Execute a transaction
+### 5.3 Execute transaction
 
 Once the minimum threshold of signatures is collected, the transaction may be executed, and the assets will be transferred.
 
@@ -202,7 +202,7 @@ Congratulations, your signed tx is now broadcast.
 > Should your transaction be rejected (i.e. if the minimum threshold of votes against the tx was met), then the transaction enters the Cancelled status and will not be signed and, therefore, never executed.
 
 
-## (Optional) Step 6: Verify the transaction
+## (Optional) Step 6: Verify transaction
 
 You can either monitor the MultiSig wallet using a Solana block explorer, such as [Solana Explorer](https://explorer.solana.com/) or [Solscan](https://solscan.io/). Alternatively, you may verify in the Squads Vault that the assets transferred successfully.
 
