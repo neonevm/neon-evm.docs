@@ -18,7 +18,10 @@ import squads5owners from '@site/static/img/doc-images/governance/squads-5-owner
 import vaultDash from '@site/static/img/doc-images/governance/squads-vault-dash.png';
 import vaultDashSend from '@site/static/img/doc-images/governance/squads-vault-dash-send.png';
 import txSend from '@site/static/img/doc-images/governance/txSend.png';
-
+import activeTx from '@site/static/img/doc-images/governance/active-tx.png';
+import confirmTx from '@site/static/img/doc-images/governance/confirm-tx.png';
+import approveTx from '@site/static/img/doc-images/governance/approve-tx.png';
+import execute from '@site/static/img/doc-images/governance/execute-tx.png';
 
 ## TL:DR
 
@@ -160,31 +163,29 @@ c. Click **Send**.
 
 A MultiSig wallet applies a threshold policy to allow greater controls and security over transactions. While you may set up a MultiSig wallet to behave like a single-signature wallet by creating a threshold of "1 of 1", this is ill advised. The following step provides your recently created transaction with an approval which will count toward the customized threshold for this Vault. Remember, you have connected your hardware wallet and Phantom wallet to manage your approval process, expect to use both to achieve the next step.
 
-
 a. Click the **Transactions** tab on the left-hand side of the dash.
-<br></br>
 
 b. Click on your newly created tx which has **Active** status. 
 
-> ![active tx squads dash](/img/doc-images/governance/active-tx.png)
+> <img src={activeTx} width="400" /> 
 
-Under the “Results” section you will see a number for “Confirmed” and a number for “Rejected”. When the transaction is first created, both numbers should be 0. 
+Under the **Results** section you will see a number for *Confirmed* and a number for *Rejected*. When the transaction is first created, both numbers should be 0. 
 
-c. Click **Confirm** to vote for the transaction, and “Reject” to vote against it.
+c. Click **Confirm** to vote for the transaction, and **Reject** to vote against it.
 
-> ![confirm tx](/img/doc-images/governance/confirm-tx.png)
+> <img src={confirmTx} width="400" /> 
 
 Squads will prompt you to approve the transaction using your Phantom wallet extension. 
 
 d. Click **Approve**. 
 
-> ![approve tx](/img/doc-images/governance/approve-tx.png)
+> <img src={approveTx} width="200" /> 
 
 To verify the transaction details on the Ledger device, connect your Ledger hardware wallet to the computer and open the Solana app. Approve the transaction using the physical buttons on the device.
 
-> Remember, a transaction request wont be signed until approvals are provided by other parties and the minimum threshold specified in the MultiSig wallet is met. In this example, the threshold is 3, so 2 or more signatures are required to execute this transaction.
+> Remember, a transaction request won't be signed until approvals are provided by other parties and the minimum threshold specified in the MultiSig wallet is met. In this example, the threshold is 3, so 2 or more signatures are required to execute this transaction.
 
-### 5.2 Execute a transaction
+### 5.3 Execute a transaction
 
 Once the minimum threshold of signatures is collected, the transaction may be executed and the assets will be sent.
 
@@ -192,13 +193,12 @@ Once the minimum threshold of signatures is collected, the transaction may be ex
 
 a. Click **Execute**.
 
-> ![execute tx](/img/doc-images/governance/execute-tx.png)
+> <img src={execute} width="500" /> 
 
 Congratulations, your signed tx is now broadcast.
 
 > Should your transaction be rejected (i.e. if the minimum threshold of votes against the tx was met), then the transaction enters the Cancelled status and will not be signed, and therefore, never executed.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c450bdf-2737-4add-b3c2-f8572b9f32fe/Untitled.png)
 
 ## (Optional) Step 6: Verify the transaction
 
