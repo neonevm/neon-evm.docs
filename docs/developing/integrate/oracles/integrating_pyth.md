@@ -11,7 +11,7 @@ comment:
 
 - First call `pyth.updatePriceFeeds`
 - Next call `pyth.getPrice`
-- Find token addresses on [Devnet](https://pyth.network/developers/price-feed-ids/#neon-evm-devnet) and [Mainnet](https://pyth.network/developers/price-feed-ids/#neon-evm-mainnet)
+- Find price feed addresses on [Devnet](https://pyth.network/developers/price-feed-ids/#neon-evm-devnet) and [Mainnet](https://pyth.network/developers/price-feed-ids/#neon-evm-mainnet)
 
 ## Introduction
 
