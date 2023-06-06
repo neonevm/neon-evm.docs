@@ -115,9 +115,10 @@ With the required Docker images built, you can now run `docker-compose` with `su
 ```bash
 sudo SOLANA_URL="https://api.devnet.solana.com" REVISION="v0.14.5" docker-compose -f docker-compose-operator-ro.yaml up -d
 ```
-where
+where:
 
 * `SOLANA_URL` is your RPC endpoint of choice.
+* `REVISION` is the version of choice or `"stable"` to use the stable version
 
 <!-- retired to retire linked page
  and can be found in {the RPC endpoints table}(/docs/clusters/neon_proxy_rpc_endpoints.md)
