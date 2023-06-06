@@ -15,7 +15,7 @@ comment:
 
 ## Introduction
 
-[Pyth](https://pyth.network/) is an open-source real-time on-chain market data feed. To use Pyth prices, you must call the function `getPriceFeedsUpdateData`, which submits the price update data to the Pyth contract in your target chain. 
+[Pyth](https://pyth.network/) is an open-source real-time on-chain market data feed. To use Pyth prices, you must call the function `updatePriceFeeds `, which submits the price update data to the Pyth contract in your target chain. 
 
 > Your contract interacts with the Pyth contract to request a data refresh. This interaction also provides an opportunity to validate that the updates you received are authentic.
 
