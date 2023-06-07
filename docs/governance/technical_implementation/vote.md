@@ -22,21 +22,23 @@ import activeTx from '@site/static/img/doc-images/governance/active-tx.png';
 import confirmTx from '@site/static/img/doc-images/governance/confirm-tx.png';
 import approveTx from '@site/static/img/doc-images/governance/approve-tx.png';
 import execute from '@site/static/img/doc-images/governance/execute-tx.png';
+import delegatedTx from '@site/static/img/doc-images/governance/delegated-create-tx.png';
+
 
 ## TL;DR
 
-Managing MultiSig for the DAO requires:
+Managing a MultiSig wallet to engage in the Neon DAO requires you to:
 
-- Setting up a Ledger hardware wallet
-- Installing the Solana app on a Ledger hardware wallet
-- Setting blind signing
-- Installing Phantom
-- Connecting Ledger to Phantom
-- Transfer of assets using MultiSig
+- Set up a Ledger hardware wallet
+- Instal the Solana app on a Ledger hardware wallet
+- Set blind signing
+- Install Phantom
+- Connect Ledger to Phantom
+- Transfer assets using MultiSig
 
 ## Introduction
 
-This tutorial covers setting up a Ledger wallet to apply MultiSig signing for the purposes of voting in the Neon DAO. This MultiSig is managed by the web app Squads. Squads provides a user-friendly interface for managing MultiSig wallets on the Solana blockchain. It allows multiple parties to manage a single address by requiring a specified number of signatures to complete a transaction.
+This tutorial covers setting up a Ledger wallet to apply MultiSig signing for the purposes of voting in the Neon DAO. This MultiSig is managed by the web app *Squads*. Squads provides a user-friendly interface for managing MultiSig wallets on the Solana blockchain. It allows multiple parties to manage a single address by requiring a specified number of signatures to complete a transaction.
 
 > Learn [more about Squads](https://squads.medium.com/squads-101-the-two-types-of-squads-34b67d1a6641).
 
@@ -111,15 +113,18 @@ Your device will display **”Processing”** and then **Your device is now read
 
 ## Step 4: Access your squad on Squads
 
-4.1 To access Squads on DevNet, go to [https://devnet.squads.so/connect-squad](https://devnet.squads.so/connect-squad). Click on **Connect wallet**, then **Agree and continue** when prompted to acknowledge the terms and conditions.
+4.1 Access Squads on:
 
-<!-- todo Yuri thinks there should be a mainnet url -->
+- [Devnet](https://devnet.squads.so/connect-squad) 
+- [Mainnet](https://v3.squads.so/connect-squad). 
+
+4.2 Click on **Connect wallet**, then **Agree and continue** when prompted to acknowledge the terms and conditions.
 
 > <img src={squadsConnectWallet} width="250" /> 
 
 > Please do take care to read the Terms of Service and Squads Disclaimer first.
 
-4.2 Select “Phantom” from the list of wallet applications.
+4.3 Select “Phantom” from the list of wallet applications.
 
 > <img src={squadsSelectPhantom} width="200" /> 
 
@@ -141,66 +146,81 @@ Find out more about Vaults in the [Squads documentation](https://docs.squads.so/
 
 Due to the custody policy applied by the MultiSig wallet, you must both create *and* approve a transaction.
 
+The flow is slightly different from the perspective of the account owner vs. a delegated owner. Choose the path that applies to you.
 
-### 5.1 Create transaction
+<Tabs>
+  <TabItem value="Account owner" label="Account owner" default>
 
-a. Click on the **Send** button
+  **5.1 Create transaction**
 
-> <img src={vaultDashSend} width="600" /> 
+  a. Within the **Vault** tab, click on the **Send** button.
 
-b. Configure this transaction:
+  > <img src={vaultDashSend} width="600" /> 
 
-- Asset: the asset type to be sent
-- Amount: the amount of assets to be sent
-- To address: recipient of the assets
-- (Optional): Description
+  b. Configure this transaction:
 
-c. Click **Send**.
+  - Asset: the asset type to be sent
+  - Amount: the amount of assets to be sent
+  - To address: recipient of the assets
+  - (Optional): description
 
-> <img src={txSend} width="300" /> 
+  c. Click **Send**.
 
-### 5.2 Approve transaction
+  > <img src={txSend} width="300" /> 
 
-A MultiSig wallet applies a threshold policy to allow greater control and security over transactions. While you may set up a MultiSig wallet to behave like a single-signature wallet by creating a threshold of "1 of 1", this is ill-advised. The following step provides your recently created transaction with an approval which will count toward the customized threshold for this Vault. Remember, you have connected your hardware wallet and Phantom wallet to manage your approval process; expect to use both to achieve the next step.
+  **5.2 Approve transaction**
 
-a. Click the **Transactions** tab on the left-hand side of the dash.
+  A MultiSig wallet applies a threshold policy to allow greater control and security over transactions. While you may set up a MultiSig wallet to behave like a single-signature wallet by creating a threshold of "1 of 1", this is ill-advised. The following step provides your recently created transaction with an approval which will count toward the customized threshold for this Vault. Remember, you have connected your hardware wallet and Phantom wallet to manage your approval process; expect to use both to achieve the next step.
 
-b. Click on your newly created tx, which has **Active** status. 
+  a. Click the **Transactions** tab on the left-hand side of the dash.
 
-> <img src={activeTx} width="400" /> 
+  b. Click on your newly created tx, which has **Active** status. 
 
-Under the **Results** section, you will see a number for *Confirmed* and a number for *Rejected*. When the transaction is first created, both numbers should be 0. 
+  > <img src={activeTx} width="400" /> 
 
-c. Click **Confirm** to vote for the transaction, and **Reject** to vote against it.
+  Under the **Results** section, you will see a number for *Confirmed* and a number for *Rejected*. When the transaction is first created, both numbers should be 0. 
 
-> <img src={confirmTx} width="400" /> 
+  c. Click **Confirm** to vote for the transaction, and **Reject** to vote against it.
 
-Squads will prompt you to approve the transaction using your Phantom wallet extension. 
+  > <img src={confirmTx} width="400" /> 
 
-d. Click **Approve**. 
+  Squads will prompt you to approve the transaction using your Phantom wallet extension. 
 
-> <img src={approveTx} width="200" /> 
+  d. Click **Approve**. 
 
-To verify the transaction details on the Ledger device, connect your Ledger hardware wallet to the computer and open the Solana app. Approve the transaction using the physical buttons on the device.
+  > <img src={approveTx} width="200" /> 
 
-> Remember, a transaction request won't be signed until approvals are provided by other parties and the minimum threshold specified in the MultiSig wallet is met. In this example, the threshold is 3, so 2 or more signatures are required to execute this transaction.
+  To verify the transaction details on the Ledger device, connect your Ledger hardware wallet to the computer and open the Solana app. Approve the transaction using the physical buttons on the device.
 
-### 5.3 Execute transaction
+  > Remember, a transaction request won't be signed until approvals are provided by other parties and the minimum threshold specified in the MultiSig wallet is met. In this example, the threshold is 3, so 2 or more signatures are required to execute this transaction.
 
-Once the minimum threshold of signatures is collected, the transaction may be executed, and the assets will be transferred.
+  **5.3 Execute transaction**
 
-<!-- in some multisigs there is no need to execute -- ruleset is to execute once threshold is met pls verify this is valid -->
+  Once the minimum threshold of signatures is collected, the transaction may be executed, and the assets will be transferred.
 
-> Note that the previous step allowed the transaction to be signed. Initiating the "execute" allows this signed tx to be broadcast to the Solana network.
+  > Note that the previous step allowed the transaction to be signed. Initiating the "execute" allows this signed transaction to be broadcast to the Solana network.
 
-a. Click **Execute**.
+  a. Click **Execute**.
 
-> <img src={execute} width="500" /> 
+  > <img src={execute} width="500" /> 
 
-Congratulations, your signed tx is now broadcast.
+  Congratulations, your signed tx is now broadcast.
 
-> Should your transaction be rejected (i.e. if the minimum threshold of votes against the tx was met), then the transaction enters the Cancelled status and will not be signed and, therefore, never executed.
+  > Should your transaction be rejected (i.e. if the minimum threshold of votes against the transaction was met), then the transaction enters the **Cancelled** status and will not be signed and, therefore, never executed.
 
+</TabItem>
+<TabItem value="Delegated account" label="Delegated account" default>
+
+  While an account owner may create a transaction and broadcast that for votes, as a delegate you must create a proposal first.
+
+  **5.1 Create proposal**
+
+  a. Within the **TX Builder** tab, click on the **Create transaction** button.
+
+  > <img src={delegatedTx} width="500" /> 
+
+</TabItem>
+</Tabs>
 
 ## (Optional) Step 6: Verify transaction
 
