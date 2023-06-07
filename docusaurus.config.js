@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Neon Docs',
   tagline: 'Neon EVM is an open source project implementing the Ethereum virtual machine on Solana.',
-  url: 'https://docs.neon-labs.org',
+  url: 'https://docs.neonfoundation.io',
   baseUrl: '/',
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
@@ -31,13 +31,14 @@ const config = {
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/og_image.png',
+      cookieBanner: {},
       algolia: {
         apiKey: 'b42bf0be9b7f964aa534f802164b53f8',
         appId: 'IMU5IHYKIJ',
         indexName: 'neon-labs',
         contextualSearch: true,
         placeholder: 'search something...',
-        algoliaOptions: { 'facetFilters': ['type:$TYPE'] },
+        algoliaOptions: { facetFilters: ['type:$TYPE'] },
         debug: false,
         dropdown: true
       },
@@ -94,8 +95,7 @@ const config = {
             items: [
               { label: 'BlockExplorer', to: 'https://neonscan.org/' },
               { label: 'NeonPass', to: 'https://neonpass.live/' },
-              { label: 'NeonFaucet', to: 'https://neonfaucet.org/' },
-              { label: 'NeonAnalytics', to: 'https://neon.aleph.cloud/' }
+              { label: 'NeonFaucet', to: 'https://neonfaucet.org/' }
             ]
           },
           {
@@ -115,14 +115,13 @@ const config = {
                 label: 'Integrate',
                 to: '/docs/developing/integrate/oracles/integrating_chainlink'
               },
-              { label: 'Tutorials', to: '/docs/developing/deploy_facilities/using_hardhat' },
+              { label: 'Tutorials', to: '/docs/developing/deploy_facilities/using_hardhat' }
             ]
           },
           {
             title: 'Operators',
             items: [
               { label: 'Operate a Neon Proxy', to: '/docs/operating/overview/introduction' },
-              { label: 'Command Line Flags', to: '/docs/operating/flags/flags' },
               { label: 'Operator Requirements', to: '/docs/operating/operator_requirements' },
               { label: 'Running a Proxy Server', to: '/docs/operating/operator_guide' }
             ]

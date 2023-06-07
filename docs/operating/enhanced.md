@@ -1,6 +1,5 @@
 ---
 title: 'Self-Managed: Build with Your Own k8s Cluster'
-
 proofedDate: na
 iterationBy: na
 includedInSite: true
@@ -242,7 +241,8 @@ Learn more about how to root token and unseal key work together [here](https://d
 ./neon-proxy.sh -i -f config.ini
 ```
 
-For a list of flags for `neon-proxy.sh`, see the [Command-Line Flags](operating/flags/flags.md).
+<!-- retired to retire linked page 
+For a list of flags for `neon-proxy.sh`, see the Command-Line Flags (operating/flags.md). -->
 
 Once Kubernetes pulls the necessary images, your Neon proxy will start, displaying a myriad of information, such as the network environment, namespace, keys information, Solana URL, and more.
 

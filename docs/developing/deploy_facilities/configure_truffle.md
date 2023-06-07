@@ -1,5 +1,10 @@
 ---
 title: "Configure Truffle"
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 The main goal in using Truffle is to make it easier for developers to deploy and debug contracts in Neon EVM.

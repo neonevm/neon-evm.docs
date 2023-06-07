@@ -1,5 +1,10 @@
 ---
 title: JSON-RPC API Methods
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 *The following tables present the full list of JSON-RPC methods. Each of them is in one of the states:*

@@ -13,11 +13,11 @@ This page provides answers to frequently asked questions (FAQs).
 
 ### What is Neon EVM?
 
-Neon EVM is an Ethereum Virtual Machine operating as a smart contract on Solana. It gives developers the power to directly deploy Ethereum dApps with no code change while benefiting from Solana's technical advantages, and is built with security, decentralization, and sustainability top of mind.
+Neon EVM is an Ethereum Virtual Machine operating as a smart contract on Solana. It gives developers the power to directly deploy Ethereum dApps with minimal code reconfiguration while benefiting from Solana's technical advantages, and is built with security, decentralization, and sustainability top of mind.
 
 ### How does Neon EVM Work?
 
-Neon EVM is a smart contract on Solana acting as the Ethereum Virtual Machine. It is compiled into Berkeley Packet Filter bytecode, a format that can be executed on Solana. This allows Neon EVM to receive Solana transactions that contain wrapped Ethereum-like transactions and process them on Solana according to Ethereum rules. Get more details [here](https://docs.neon-labs.org/docs/about/how_it_works).
+Neon EVM is a smart contract on Solana acting as the Ethereum Virtual Machine. It is compiled into Berkeley Packet Filter bytecode, a format that can be executed on Solana. This allows Neon EVM to receive Solana transactions that contain wrapped Ethereum-like transactions and process them on Solana according to Ethereum rules. Get more details [here](https://docs.neonfoundation.io/docs/about/how_it_works).
 
 ### How can I start building on Neon?
 
@@ -39,7 +39,6 @@ The following tools are available on Neon:
 * [NeonScan](https://neonscan.org/) - Neon EVM’s block explorer
 * [NeonPass](https://neonpass.live/) - A utility for transferring SPL tokens between Solana and Neon
 * [Neon Faucet](https://neonfaucet.org/) - Where tokens for the Neon Devnet may be retrieved for testing and experimental purposes
-* [Neon Analytics](https://neon.aleph.cloud/) - A data-rich dashboard built on [Aleph](https://aleph.im/)
 
 ### How do I transfer SPL tokens between Solana and Neon?
 
@@ -61,8 +60,12 @@ Feel free to reach out to us in our [Discord community](https://discord.com/invi
 
 ### Where can I see a list of projects in the ecosystem?
 
-You can see the list of projects that are being built in Neon [here](https://docs.neon-labs.org/docs/about/neon_ecosystem).
+You can see the list of projects that are being built in Neon [here](https://docs.neonfoundation.io/docs/about/neon_ecosystem).
 
 ### Where can I see a list of upcoming events involving Neon?
 
 Upcoming events in the Neon community are listed on our [events page](https://neon-labs.org/events). You can also sign up for Neon’s newsletter to stay in the loop. If an in-person Neon event is happening near you, why not come and say hello?
+
+## What next?
+
+If you still have a question about the Neon EVM that is not answered in the FAQ, please join us on our [Discord server](https://discord.gg/neonevm). Our team will be glad to help you.

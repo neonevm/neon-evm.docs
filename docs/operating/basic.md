@@ -1,5 +1,10 @@
 ---
 title: 'Basic: Local Build in Read-Only Mode'
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 *This guide sets you up with a functional, running neon-proxy on your local machine with `docker-compose` in a matter of minutes with minimal user input required.* 
@@ -110,9 +115,14 @@ With the required Docker images built, you can now run `docker-compose` with `su
 ```bash
 sudo SOLANA_URL="https://api.devnet.solana.com" REVISION="v0.14.5" docker-compose -f docker-compose-operator-ro.yaml up -d
 ```
-where
-* `SOLANA_URL` is your RPC endpoint of choice and can be found in [the RPC endpoints table](/docs/clusters/neon_proxy_rpc_endpoints.md)
+where:
+
+* `SOLANA_URL` is your RPC endpoint of choice.
 * `REVISION` is the version of choice or `"stable"` to use the stable version
+
+<!-- retired to retire linked page
+ and can be found in {the RPC endpoints table}(/docs/clusters/neon_proxy_rpc_endpoints.md)
+* `REVISION` is the version of choice or `"stable"` to use the stable version -->
 
 ### Database
 The Docker Composer will use your local disk as storage for the proxy's PostgreSQL database:

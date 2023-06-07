@@ -1,5 +1,10 @@
 ---
 title: EVM Compatibility Overview
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 404 being dealt with on link-fixer branch??
 ---
 
 TL;DR
@@ -18,7 +23,7 @@ In this way, Neon EVM provides a seamless developer experience. Note that there 
 
 ## Shared standards and features
 
-Solidity or Vyper smart contracts, standard development and deployment tools and practices can all be applied on Neon EVM with almost no code changes:
+Solidity or Vyper smart contracts, standard development and deployment tools and practices can all be applied on Neon EVM with minimal reconfiguration of the code:
 
 - Neon EVM accounts follow [Ethereum's account standards](https://ethereum.org/en/developers/docs/accounts/) 
 
@@ -43,7 +48,7 @@ The mechanism of gas consumption and calculation of gas fees on Neon EVM differ 
 Several Solana-specific differences also impact smart contract development.
 
 ### Upper limit on number of Accounts
-Neon EVM uses [Solana Transaction V2](https://docs.solana.com/proposals/transactions-v2): limiting the maximum number of accounts used in a single transaction to 64. Solana requires that all accounts used in a transaction be specified in order to ensure parallel execution of transactions. 
+Neon EVM uses Solana Transaction V0 with an extension via [account lookup tables](https://docs.solana.com/developing/lookup-tables): this limits the maximum number of accounts to 64 in a single transaction. Solana requires that all accounts used in a transaction be specified in order to ensure parallel execution of transactions. 
 
 ### Heap size
 Ethereum-like transactions are executed by Neon EVM inside [Solana's Berkeley Packet Filter (BPF)](https://docs.solana.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf). The BPF has heap memory limit of 256 KB. Consequently, the size of the heap allocated to a contract call, is limited to the same 256 KB.

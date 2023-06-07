@@ -1,5 +1,10 @@
 ---
 title: The Neon Token
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 The NEON token is the native token of the Neon EVM. It is used as a:
