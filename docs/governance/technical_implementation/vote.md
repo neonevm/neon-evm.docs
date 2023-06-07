@@ -23,18 +23,18 @@ import confirmTx from '@site/static/img/doc-images/governance/confirm-tx.png';
 import approveTx from '@site/static/img/doc-images/governance/approve-tx.png';
 import execute from '@site/static/img/doc-images/governance/execute-tx.png';
 import delegatedTx from '@site/static/img/doc-images/governance/delegated-create-tx.png';
+import delegatedTransfer from '@site/static/img/doc-images/governance/delegated-tx-transfer.png';
+import delegatedProposal from '@site/static/img/doc-images/governance/delegated-proposal.png';
 
 
 ## TL;DR
 
 Managing a MultiSig wallet to engage in the Neon DAO requires you to:
 
-- Set up a Ledger hardware wallet
-- Instal the Solana app on a Ledger hardware wallet
+- Set up a Ledger hardware wallet with the Solana app
 - Set blind signing
-- Install Phantom
-- Connect Ledger to Phantom
-- Transfer assets using MultiSig
+- Install and connect Phantom
+- Transfer assets using MultiSig: i.e. set up, vote on, and execute transactions
 
 ## Introduction
 
@@ -54,8 +54,10 @@ We used a Ledger Nano S Plus, but the steps for Ledger Nano X are identical.
 
 - It's strongly recommended that you use the Chromium-based browsers, Chrome or Brave
 
+## Set up wallets and transact
 
-## Step 1: Configure your Ledger wallet
+
+#### Step 1: Configure your Ledger wallet
 
 <Tabs>
   <TabItem value="Ledger" label="Ledger's configuration guide" default>
@@ -96,14 +98,14 @@ Your device will display **”Processing”** and then **Your device is now read
   </TabItem>
 </Tabs>
 
-## Step 2: Install the Solana app on your Ledger and enable blind signing
+#### Step 2: Install the Solana app on your Ledger and enable blind signing
 
 2.1 Install the Solana app on your Ledger hardware wallet by following the steps outlined in Ledger's official tutorial: [https://support.ledger.com/hc/en-us/articles/360016265659-Solana-SOL-?support=true](https://support.ledger.com/hc/en-us/articles/360016265659-Solana-SOL-?support=true)
 
 > Ensure that blind signing is enabled during the installation process. **Blind signing** allows you to sign transactions without revealing the contents to the other parties involved in a MultiSig wallet.
 > If you miss this step, enable it as per [Ledger's documentation](https://support.ledger.com/hc/en-us/articles/4499092909085-Allowing-blind-signing-in-the-Solana-SOL-app?support=true).
 
-## Step 3: Install the Phantom wallet and connect Ledger to Phantom
+#### Step 3: Install the Phantom wallet and connect Ledger to Phantom
 
 3.1 Install the Phantom wallet on your browser by visiting the Phantom website: [https://phantom.app/](https://phantom.app/).
 
@@ -111,7 +113,7 @@ Your device will display **”Processing”** and then **Your device is now read
 
 > Ensure you remember the password you set up for Phantom.
 
-## Step 4: Access your squad on Squads
+#### Step 4: Access your squad on Squads
 
 4.1 Access Squads on:
 
@@ -142,16 +144,16 @@ Example Squads Dash
 
 Find out more about Vaults in the [Squads documentation](https://docs.squads.so/squads-v3-docs/navigating-your-squad/transactions). Take some time to familiarize yourself with this interface.
 
-## Step 5: Transfer assets using MultiSig on Squads
+#### Step 5: Create a transfer proposal
 
 Due to the custody policy applied by the MultiSig wallet, you must both create *and* approve a transaction.
 
-The flow is slightly different from the perspective of the account owner vs. a delegated owner. Choose the path that applies to you.
+This step covers creating a transaction, note that the flow is slightly different from the perspective of the account owner vs. a delegated owner. Choose the path that applies to you.
 
 <Tabs>
   <TabItem value="Account owner" label="Account owner" default>
 
-  **5.1 Create transaction**
+  **Create transaction**
 
   a. Within the **Vault** tab, click on the **Send** button.
 
@@ -168,62 +170,80 @@ The flow is slightly different from the perspective of the account owner vs. a d
 
   > <img src={txSend} width="300" /> 
 
-  **5.2 Approve transaction**
-
-  A MultiSig wallet applies a threshold policy to allow greater control and security over transactions. While you may set up a MultiSig wallet to behave like a single-signature wallet by creating a threshold of "1 of 1", this is ill-advised. The following step provides your recently created transaction with an approval which will count toward the customized threshold for this Vault. Remember, you have connected your hardware wallet and Phantom wallet to manage your approval process; expect to use both to achieve the next step.
-
-  a. Click the **Transactions** tab on the left-hand side of the dash.
-
-  b. Click on your newly created tx, which has **Active** status. 
-
-  > <img src={activeTx} width="400" /> 
-
-  Under the **Results** section, you will see a number for *Confirmed* and a number for *Rejected*. When the transaction is first created, both numbers should be 0. 
-
-  c. Click **Confirm** to vote for the transaction, and **Reject** to vote against it.
-
-  > <img src={confirmTx} width="400" /> 
-
-  Squads will prompt you to approve the transaction using your Phantom wallet extension. 
-
-  d. Click **Approve**. 
-
-  > <img src={approveTx} width="200" /> 
-
-  To verify the transaction details on the Ledger device, connect your Ledger hardware wallet to the computer and open the Solana app. Approve the transaction using the physical buttons on the device.
-
-  > Remember, a transaction request won't be signed until approvals are provided by other parties and the minimum threshold specified in the MultiSig wallet is met. In this example, the threshold is 3, so 2 or more signatures are required to execute this transaction.
-
-  **5.3 Execute transaction**
-
-  Once the minimum threshold of signatures is collected, the transaction may be executed, and the assets will be transferred.
-
-  > Note that the previous step allowed the transaction to be signed. Initiating the "execute" allows this signed transaction to be broadcast to the Solana network.
-
-  a. Click **Execute**.
-
-  > <img src={execute} width="500" /> 
-
-  Congratulations, your signed tx is now broadcast.
-
-  > Should your transaction be rejected (i.e. if the minimum threshold of votes against the transaction was met), then the transaction enters the **Cancelled** status and will not be signed and, therefore, never executed.
+ 
 
 </TabItem>
 <TabItem value="Delegated account" label="Delegated account" default>
 
-  While an account owner may create a transaction and broadcast that for votes, as a delegate you must create a proposal first.
+  While an account owner may create a transaction and broadcast that for votes, as a delegate you must create a proposal first. For this tutorial, we will select to **Transfer** from **Token Program** template.
 
-  **5.1 Create proposal**
+  **Create proposal**
 
-  a. Within the **TX Builder** tab, click on the **Create transaction** button.
+  a. Within the **TX Builder** tab, click on the **Create transaction** button or select from the templates available in the dashboard: we will select the **Token Program** template. 
 
   > <img src={delegatedTx} width="500" /> 
+
+  b. Choose the **Transfer** instruction from the list.
+
+  > <img src={delegatedTransfer} width="500" /> 
+
+  c. Configure this transaction proposal:
+
+  > Note, the Token Program works with the DAO token, i.e. NEON, therefore, the token is already identified.
+
+  - Amount: the amount of the asset to be sent, detailed to the required decimal places
+  - Source: account holding the tokens to be transferred
+  - Destination: recipient of the assets
+
+  > <img src={delegatedProposal} width="500" /> 
+
+  d. Click **Save draft**.
+
+  e. You may either **Run Simulation** to verify the transaction is executable, or **Initate Transaction**.
 
 </TabItem>
 </Tabs>
 
-## (Optional) Step 6: Verify transaction
 
-You can either monitor the MultiSig wallet using a Solana block explorer, such as [Solana Explorer](https://explorer.solana.com/) or [Solscan](https://solscan.io/). Alternatively, you may verify in the Squads Vault that the assets transferred successfully.
+## Vote
 
+A MultiSig wallet applies a threshold policy to allow greater control and security over transactions. While you may set up a MultiSig wallet to behave like a single-signature wallet by creating a threshold of "1 of 1", this is ill-advised. The following steps provides a recently created transaction with an approval which will count toward the customized threshold for this Vault. Remember, you have connected your hardware wallet and Phantom wallet to manage your approval process; expect to use both to achieve the next step.
+
+a. From the **Transactions** tab, select the **Active** proposal you are interested in. 
+
+> <img src={activeTx} width="400" /> 
+
+Under the **Results** section, you will see a number for *Confirmed* and a number for *Rejected*. When the transaction is first created, both numbers should be 0. 
+
+b. Click **Confirm** to vote for the transaction, and **Reject** to vote against it.
+
+> <img src={confirmTx} width="400" /> 
+
+Squads will prompt you to approve the transaction using your Phantom wallet extension. 
+
+c. Click **Approve**. 
+
+> <img src={approveTx} width="200" /> 
+
+To verify the transaction details on the Ledger device, connect your Ledger hardware wallet to the computer and open the Solana app. Approve the transaction using the physical buttons on the device.
+
+> Remember, a transaction request won't be signed until approvals are provided by other parties and the minimum threshold specified in the MultiSig wallet is met. In this example, the threshold is 3, so 2 or more signatures are required to execute this transaction.
+
+## Execute a transaction
+
+Once the minimum threshold of signatures is collected, the transaction may be executed, and the assets will be transferred.
+
+> Note that the previous step allowed the transaction to be signed. Initiating the "execute" allows this signed transaction to be broadcast to the Solana network.
+
+a. Click **Execute**.
+
+> <img src={execute} width="500" /> 
+
+Congratulations, your signed tx is now broadcast.
+
+> Should your transaction be rejected (i.e. if the minimum threshold of votes against the transaction was met), then the transaction enters the **Cancelled** status and will not be signed and, therefore, never executed.
+
+## Verify transaction
+
+If you wish to verify a transaction, you can either monitor the MultiSig wallet using a Solana block explorer, such as [Solana Explorer](https://explorer.solana.com/) or [Solscan](https://solscan.io/). Alternatively, you may verify in the Squads Vault that the assets transferred successfully.
 
