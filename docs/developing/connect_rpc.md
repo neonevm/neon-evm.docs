@@ -9,7 +9,19 @@ comment:
 
 import chainlist_raw from '@site/static/img/doc-images/developing/chainlist/chainlist-raw-2.png';
 
-This tutorial provides an overview of how to connect to a Neon RPC via Chainlink. You will connect an EVM-compatible wallet to a network and accept the default Proxy.
+## TL;DR
+
+RPC endpoints are available on [Chainlist](https://chainlist.org/?chain=245022926&testnets=true&search=Neon+EVM).
+
+:::info
+
+Neon EVM is in *closed* beta on Mainnet
+
+:::
+
+## Introduction
+
+This tutorial explains how to connect to a Neon RPC via Chainlink. You may connect an EVM-compatible wallet to a network and accept the default Proxy. Alternatively, you can mannually setup your Proxy Operator.
 
 > The [Proxy Operator you choose](#choose-a-remote-proxy) is responsible for settling your Neon transactions on Solana. Chainlink will assign a default, but you can edit this later.
 
@@ -22,13 +34,15 @@ To connect an EVM-compatible wallet such as MetaMask to Neon EVM:
 
 With most wallets, simply click "Approve" to connect your wallet.
 
-> Chainlink assigned their default Proxy; you can reconfigure this.
+> Chainlink assigns their default Proxy; you can reconfigure this.
 
 
 ## Choose a remote Proxy
-Before sending a transaction to the Neon EVM, users should choose the Operator that's optimal for them to perform transactions. The Operator is not chosen directly, but through the proxies they serve. Selecting the RPC address an Operator provides assigns your transactions to that Operator.
+Before sending a transaction to the Neon EVM, users should choose the Operator that's optimal for them to perform transactions. 
 
-One Proxy may be available on different networks (currently, Testnet, Devnet, and Mainnet Beta). The Proxy interacts with one EVM loader, which can be deployed in different Solana chains. 
+> Selecting the RPC address an Operator provides assigns your transactions to that Operator.
+
+One Proxy may be available on different networks (currently, Testnet, Devnet, and Mainnet beta). The Proxy interacts with one EVM loader, which can be deployed in different Solana chains. 
 
 To view the available RPC endpoints, expand the card details of the network of your choice. 
 
