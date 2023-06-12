@@ -25,6 +25,7 @@ The Chainlink controller contract is deployed on Devnet. This contract implement
 <Tabs>
 
   <TabItem value="Mainnet" label="Mainnet">
+
 |Currency pair|Chainlink contract feed address|
 |:----:|:-----:|
 |AVAX/USD|0x1d6E632542B7E405FAA8D26C4805C981260A9e70|
@@ -40,7 +41,8 @@ The Chainlink controller contract is deployed on Devnet. This contract implement
 |USDC/USD|0x8cb22a71AD5ef0384B85FF08Ba1343ec71880C35|
 |USDT/USD|0xba92eACD3fb46661E130577cD03fa32E6D4D757a|
 
-      </TabItem>
+
+</TabItem>
   <TabItem value="Devnet" label="Devnet" default> 
 
 |Currency pair|Chainlink contract feed address|
