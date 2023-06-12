@@ -40,9 +40,9 @@ Managing a MultiSig wallet to engage in the Neon DAO requires you to:
 
 This tutorial covers setting up a Ledger wallet to apply MultiSig signing for the purposes of voting in the Neon DAO. This MultiSig is managed by the web app *Squads*. Squads provides a user-friendly interface for managing MultiSig wallets on the Solana blockchain. It allows multiple parties to manage a single address by requiring a specified number of signatures to complete a transaction.
 
-> Learn [more about Squads](https://squads.medium.com/squads-101-the-two-types-of-squads-34b67d1a6641).
-
 Within Squads the lifecycle of a transaction is creation, approval/rejection, and, if approved, execution.
+
+> Learn [more about Squads](https://squads.medium.com/squads-101-the-two-types-of-squads-34b67d1a6641).
 
 ## Prerequisites
 
@@ -90,6 +90,7 @@ Ledger maintains and curates their [documents](https://support.ledger.com/hc/en-
 1.4 Press the right or left button to select the first digit of your PIN code, and then press both buttons to enter a digit.
 
 1.5 After you have confirmed your PIN code, your 24-word recovery phrase is displayed word by word on the Ledger device screen. The recovery phrase is the **only** backup of your private key and is crucial for accessing your wallet. It will be displayed only **once**, so it's vital to **write it down and store it in a secure location**.
+
 
 > Ensure you:
 >
@@ -148,7 +149,12 @@ Find out more about Vaults in the [Squads documentation](https://docs.squads.so/
 
 #### Step 5: Create a transfer proposal
 
+
 This next step covers creating a transaction, note that the flow is slightly different from the perspective of the account owner vs. a delegated owner. Choose the path that applies to you.
+
+Due to the custody policy applied by the MultiSig wallet, you must both create *and* approve a transaction.
+
+This step covers creating a transaction, note that the flow is slightly different from the perspective of the account owner vs. a delegated owner. Choose the path that applies to you.
 
 <Tabs>
   <TabItem value="Account owner" label="Account owner" default>
@@ -165,7 +171,6 @@ This next step covers creating a transaction, note that the flow is slightly dif
   - Amount: the amount of assets to be sent
   - To address: recipient of the assets
   - (Optional): description
-
 
   c. Click **Send**.
 
