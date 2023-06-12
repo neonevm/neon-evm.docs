@@ -4,7 +4,7 @@ proofedDate: 20230602
 iterationBy: HB
 includedInSite: false
 approvedBy: na
-comments: todo in place todo throttle image sizes
+comments: 
 boilerPlatable: no
 reference: 
 ---
@@ -29,7 +29,7 @@ import delegatedProposal from '@site/static/img/doc-images/governance/delegated-
 
 ## TL;DR
 
-Managing a MultiSig wallet to engage in the Neon DAO requires you to:
+To manage a MultiSig wallet to engage in the Neon DAO you must:
 
 - Set up a Ledger hardware wallet with the Solana app
 - Set blind signing
@@ -61,6 +61,9 @@ We used a Ledger Nano S Plus, but the steps for Ledger Nano X are identical.
 
 #### Step 1: Configure your Ledger wallet
 
+Ledger maintains and curates their to provide you the best support possible. However, if you want to stay here, you are welcome to follow the Neon Guide.
+
+
 <Tabs>
   <TabItem value="Ledger" label="Ledger's configuration guide" default>
 
@@ -69,13 +72,12 @@ See Ledger's [configuration guide](https://support.ledger.com/hc/en-us/articles/
   </TabItem>
   <TabItem value="Neon" label="Neon Guide">
 
-Ledger maintains and curates their [documents](https://support.ledger.com/hc/en-us/articles/4416927988625-Set-up-your-Ledger-Nano-S-Plus-?docs=true) to provide you the best support possible. If you want to stay here, you are welcome to follow the Neon Guide.
 
 > Be aware, we don't maintain and curate guides to partner interfaces following testing.
 
 1.1 Unbox and charge your Ledger hardware wallet by connecting it to your computer with a USB-C cable.
 
-1.2 Download the Ledger Live Mac app from [https://www.ledger.com/start](https://www.ledger.com/start). 
+1.2 Download the Ledger Live Mac app from [https://www.ledger.com/start](www.ledger.com/start). 
 
 > Select “Mac app” from the dropdown menu after you click **Download**.
 
@@ -103,7 +105,7 @@ Your device will display **”Processing”** and then **Your device is now read
 
 #### Step 2: Install the Solana app on your Ledger and enable blind signing
 
-2.1 Install the Solana app on your Ledger hardware wallet by following the steps outlined in Ledger's official tutorial: [https://support.ledger.com/hc/en-us/articles/360016265659-Solana-SOL-?support=true](https://support.ledger.com/hc/en-us/articles/360016265659-Solana-SOL-?support=true)
+2.1 Install the Solana app on your Ledger hardware wallet by following the steps outlined in [Ledger's official tutorial](https://support.ledger.com/hc/en-us/articles/360016265659-Solana-SOL-?support=true)
 
 > Ensure that blind signing is enabled during the installation process. **Blind signing** allows you to sign transactions without revealing the contents to the other parties involved in a MultiSig wallet.
 > If you miss this step, enable it as per [Ledger's documentation](https://support.ledger.com/hc/en-us/articles/4499092909085-Allowing-blind-signing-in-the-Solana-SOL-app?support=true).
