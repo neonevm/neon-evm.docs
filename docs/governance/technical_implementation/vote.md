@@ -42,6 +42,8 @@ This tutorial covers setting up a Ledger wallet to apply MultiSig signing for th
 
 > Learn [more about Squads](https://squads.medium.com/squads-101-the-two-types-of-squads-34b67d1a6641).
 
+Within Squads the lifecycle of a transaction is creation, approval/rejection, and, if approved, execution.
+
 ## Prerequisites
 
 - Ledger Nano S Plus or Ledger Nano X
@@ -87,7 +89,7 @@ Ledger maintains and curates their [documents](https://support.ledger.com/hc/en-
 
 1.4 Press the right or left button to select the first digit of your PIN code, and then press both buttons to enter a digit.
 
-1.5 After you have confirmed your PIN code, your 24-word recovery phrase will now be displayed word by word on the Ledger device screen. The recovery phrase is the **only** backup of your private key and is crucial for accessing your wallet. It will be displayed only **once**, so it's vital to **write it down and store it in a secure location**.
+1.5 After you have confirmed your PIN code, your 24-word recovery phrase is displayed word by word on the Ledger device screen. The recovery phrase is the **only** backup of your private key and is crucial for accessing your wallet. It will be displayed only **once**, so it's vital to **write it down and store it in a secure location**.
 
 > Ensure you:
 >
@@ -146,9 +148,7 @@ Find out more about Vaults in the [Squads documentation](https://docs.squads.so/
 
 #### Step 5: Create a transfer proposal
 
-Due to the custody policy applied by the MultiSig wallet, you must both create *and* approve a transaction.
-
-This step covers creating a transaction, note that the flow is slightly different from the perspective of the account owner vs. a delegated owner. Choose the path that applies to you.
+This next step covers creating a transaction, note that the flow is slightly different from the perspective of the account owner vs. a delegated owner. Choose the path that applies to you.
 
 <Tabs>
   <TabItem value="Account owner" label="Account owner" default>
@@ -165,6 +165,7 @@ This step covers creating a transaction, note that the flow is slightly differen
   - Amount: the amount of assets to be sent
   - To address: recipient of the assets
   - (Optional): description
+
 
   c. Click **Send**.
 
