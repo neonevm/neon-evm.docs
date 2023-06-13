@@ -4,20 +4,22 @@ proofedDate: na
 iterationBy: HB
 includedInSite: true
 approvedBy: na
-comments: #1 we need a page on the not supported OpCodes Anton will send by slack #2 Requires supported precompiles Anton can provide by slack + explanation of WHY they are not supported #3 Requires a list of native precomiled contracts Anton can provide by slack [actually, the yellow paper https://ethereum.github.io/yellowpaper/paper.pdf is not a great source for the opcodes -- using docs instead]
+comments: 
 ---
 
 ## TL;DR
 
-- Apply (most of) Ethereum's standard JSON RPC API methods
-- Direct the calls to Neon Proxy
-- Solana and Ethereum differ: consider those differences the limitations they enforce
+- Apply (most of) Ethereum's standard [JSON RPC API methods](/docs/evm_compatibility/json_rpc_api_methods)
+- Direct the calls to a [Neon RPC](/docs/developing/connect_rpc) via a Proxy Operator
+- Solana and Ethereum differ: consider those differences and the limitations they enforce
 
 ## Introduction
 
-Interacting with Neon EVM is essentially the same as interacting with the [Ethereum Virtual Machine (EVM)](https://ethereum.org/en/developers/docs/evm/).
+Interacting with Neon EVM is essentially the same as interacting with any [Ethereum Virtual Machine (EVM)](https://ethereum.org/en/developers/docs/evm/).
 
-Neon EVM provides a proxy service that accepts [Ethereum's standard RPC API](https://ethereum.github.io/execution-apis/api-documentation/). Your dApp can apply familiar methods: with your calls directed to the [Neon Proxy](../about/neon_ecosystem#neon-proxy) rather than an Ethereum L1 node.
+Neon EVM provides a proxy service that accepts [Ethereum's standard RPC API methods](https://ethereum.github.io/execution-apis/api-documentation/). 
+
+> Your dApp can apply familiar methods: with your calls directed to the [Neon Proxy](../about/neon_ecosystem#neon-proxy) rather than an Ethereum L1 node.
 
 In this way, Neon EVM provides a seamless developer experience. Note that there are some differences and considerations due to some signigicant differences between Solana transaction requirements and the equivalent in EVM. 
 
@@ -35,41 +37,112 @@ Solidity or Vyper smart contracts, standard development and deployment tools and
 
 ## Notable differences
 
-Interoperability between Solana and Ethereum EVMs does require certain adaptations. In addition to Solana-specific restrictions, two major differences include:
+Interoperability between Solana and Ethereum EVMs requires certain adaptations. In addition to Solana-specific restrictions, two major differences include:
 
 ### Precompiles
 Neon supports all precompiled contracts defined on [evm.code](https://www.evm.codes/precompiled?fork=merge) that provide more advanced functionalities, with [certain limitations](./precompiles#limitations) on some precompiled contracts on Neon EVM.
 
-
 Neon also supports native precompiled contracts that are available to our users.
 
+<!-- todo once we have the details on this can link to page -->
 
 ### Gas calculation
 The mechanism of gas consumption and calculation of gas fees on Neon EVM differ from Ethereum. Gas fees on Neon EVM are much cheaper than on Ethereum because Solana is the settlement layer. 
 
-<!-- Oleg could provide metrics on one transfer. Once mainnet launched can we compare Neon + Solana to L2 and Rollups Yuri has for tx such as transfers and swaps -->
-
 > Learn more about the [NEON token and how gas fees work on Neon EVM](../../docs/tokens/gas_fees.md).
 
-Several Solana-specific differences also impact smart contract development.
+### Reentrancy-safe approaches
+
+:::caution
+
+Due to the difference in how gas is calculated in Neon EVM, Solidity's transfer() and send() are NOT reentrancy safe methods.
+:::
+
+Hardcoding gas is one method that programmers may apply to prevent reentrancy attacks. Within the Ethereum/Solidity ecosystem, it is possible to default gas to 2300 gwei by using `transfer()`and `send()`. However, since gas costs are now variable, these methods are [no longer advised](https://consensys.net/diligence/blog/2019/09/stop-using-soliditys-transfer-now/).
+
+### Storage
+
+Several Solana-specific differences also impact smart contract development. In Ethereum EVMs, there are two types of accounts, both of which are associated with a storage map which can be used to read and write arbitrary data:
+
+- Basic accounts store an account balance
+- Code accounts store EVM code
+
+Solana’s Sealevel also provides two accounts which are assigned up to 256 consecutive storage slots; but they have different purposes: 
+
+ - Executable
+
+ > Executable accounts provide immutable storage of executable byte code or an (immutable) proxy address of an account which stores mutable executable byte code.
+
+ - Non-executable
+
+> Since executable accounts are immutable, their application state is stored in non-executable accounts.
+
+The differences go deeper still. In an Ethereum EVM, contracts can only read and write their own storage. In Sealevel, any account’s data can be read or written to by a contract. However, the runtime enforces that only an account’s “owner” is allowed to modify it. Changes by any other programs will be reverted and cause the transaction to fail.
+
+:::info
+
+Learn more in the [Solana wiki](https://solana.wiki/docs/).
+
+:::
+
+### Account mapping
+
+Each Ethereum account involved in a transaction must be mapped to a corresponding Solana account. Any call made to the Ethereum account (e.g. to read balance, execute a transaction, etc.) requires that the Solana account is included to make use of the storage provided.
+
+<!-- based on item in Slack https://neonlabsworkspace.slack.com/archives/C03CQ8A6WTT/p1683107335962669 >> not sure that this is functional end user support as it stands -->
+
+When a contract requires storage slots within Solana, they may create Solana accounts and access these random addresses. However, this must be done with an awareness of the upper limit on the number of accounts, as per the next section. 
+
 
 ### Upper limit on number of accounts
-<!-- link to solana tx renamed and relinked -->
 Neon EVM uses [Solana Transaction V0](https://docs.solana.com/developing/versioned-transactions): limiting the maximum number of accounts used in a single transaction to 64. Solana requires that all accounts used in a transaction be specified in order; to ensure parallel execution of transactions.
 
 <!-- go deeper on HOW to modify the contract to constrain account numbers Anton will pass in slack
   -->
 
+By constructing the contract logic differently, fixed-Sized values and arrays can fit into a significantly smaller number of accounts.
+
+```Solidity
+ /*1 account: */
+uint256[] list;
+...
+
+for (uint256 i = 0; i < 32; i++) {
+   list[i] = i;
+}
+```
+
+```Solidity
+/* 32 accounts: */
+mapping(uint256 => uint256) map;
+...
+
+for (uint256 i = 0; i < 32; i++) {
+   map[i] = i;
+}
+```
+
+<!-- todo looks like these code snippets will benefit from some better commentary -->
+
 ### Heap size
-Ethereum-like transactions are executed by Neon EVM inside [Solana's Berkeley Packet Filter (BPF)](https://docs.solana.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf). The BPF has heap memory limit of 256 KB. Consequently, the size of the heap allocated to a contract call, is limited to the same 256 KB.
+Ethereum-like transactions are executed by Neon EVM inside [Solana's Berkeley Packet Filter (BPF)](https://docs.solana.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf). The BPF has heap memory limit of 256 KB, i.e. the size of the heap allocated to a contract call, is limited to 256 KB.
 
-To avoid the occurrence of a heap overflow error, it's recommended that you reduce the size of the:
-- call stack
-- contract
+Consider the following techniques if you need to troubleshoot a heap overflow error:
 
-<!-- support users further on HOW to reduce heap size?
+- Transactions: reduce the calldata size
+- Deploying/calling contracts, reduce the:
+	- Call depth
+	- Contract binary size
+	- Size of the function/constructor arguments
+- Event emission
+	- Use indexed parameters
+	- Avoid strings, arrays, and mappings
+- Returning values from a function
+	- Don't return data you don't use!
+	- Avoid strings, arrays, and mappings
+- Local variables: avoid strings, arrays, and mappings
 
-Can we show logs ?screenshot and name of service? to demonstrate when the issue is heap size? == detection method ?? Oleg should be able to provide -->
+<!-- todo How do users know when the issue is a heap overflow error? Can we show logs ?screenshot and name of service? to demonstrate when the issue is heap size? == detection method ?? Oleg should be able to provide -->
 
 
 ### Limitation on `block.timestamp` / `block.number` usage
@@ -82,6 +155,7 @@ function create_new_element_timestamp() external {
 	test_mapping[block_timestamp] = 100;
 }
 ```
+
 
 ## Support
 
