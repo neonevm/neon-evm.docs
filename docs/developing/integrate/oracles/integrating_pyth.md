@@ -1,47 +1,75 @@
 ---
 title: Pyth
-proofedDate: na
-iterationBy: na
+proofedDate: 20230606
+iterationBy: HB
 includedInSite: true
 approvedBy: na
 comment: 
 ---
 
+## TL;DR
+
+- First call `pyth.updatePriceFeeds`
+- Next call `pyth.getPrice`
+- Find price feed addresses on [Devnet](https://pyth.network/developers/price-feed-ids/#neon-evm-devnet) and [Mainnet](https://pyth.network/developers/price-feed-ids/#neon-evm-mainnet)
+
 ## Introduction
 
-[Pyth](https://pyth.network/) is an open-source real-time on-chain market data feed. It supports Neon EVM and its repo is maintained by Pyth on GitHub at [pyth-network/pyth-neon](https://github.com/pyth-network/pyth-neon).
+[Pyth](https://pyth.network/) is an open-source real-time on-chain market data feed. To use Pyth prices, you must call the function `updatePriceFeeds `, which submits the price update data to the Pyth contract in your target chain. 
 
-This guide contains a smart contract making Pyth price feeds available on Neon EVM.
+> Your contract interacts with the Pyth contract to request a data refresh. This interaction also provides an opportunity to validate that the updates you received are authentic.
 
-It is **strongly recommended** to follow the [consumer best practices](https://docs.pyth.network/consumers/best-practices) when consuming Pyth data.
+Next, your contract should query the Pyth Contract that holds this updated data for the token prices you require. The price feed IDs are available for Neon EVM:
+- [Pyth on Devnet](https://pyth.network/developers/price-feed-ids/#neon-evm-devnet)
+- [Pyth on Mainnet](https://pyth.network/developers/price-feed-ids/#neon-evm-mainnet)
 
-## How to Use
 
-To consume prices, you need to look up the price feed ID for the token symbol you are interested in.
-The Pyth Network website lists the NEON price feed IDs for [devnet](https://pyth.network/developers/price-feed-ids/#neon-evm-devnet) and [mainnet](https://pyth.network/developers/price-feed-ids/#neon-evm-mainnet).
+## How to integrate with the Pyth contract
 
-```javascript
-// SPDX-License-Identifier: Apache-2.0
+Because Pyth is an on-demand oracle, you must first retrieve the price feeds before calling the token's price based on the price feed ID for the token symbol/s you are interested in.
+
+Let's examine an extract of a swap function (for the full contract, [see Pyth's example](https://github.com/pyth-network/pyth-crosschain/blob/main/target_chains/ethereum/examples/oracle_swap/contract/src/OracleSwap.sol)):
+
+```SOL showLineNumbers
+SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import "@pythnetwork/pyth-sdk-solidity/PythStructs.sol";
-
-contract ExampleContract {
-
-    function getBTCUSDPrice() public returns (PythStructs.Price memory) {
-
-        // The NEON Devnet price feed ID of BTC/USD
-        bytes32 priceID = 0xf9c0172ba10dfa4d19088d94f5bf61d3b54d5bd7483a322a982e1373ee8ea31b;
-
-        return pyth.getCurrentPrice(priceID);
-    }
-
-}
+function swap(
+        bool isBuy,
+        uint size,
+        bytes[] calldata pythUpdateData
+    ) external payable {
+    // Ensure the contract on Neon EVM has the current data.
+        uint updateFee = pyth.getUpdateFee(pythUpdateData);
+        pyth.updatePriceFeeds{value: updateFee}(pythUpdateData);
+    // Retrieve the token price for the tokens you need.
+        PythStructs.Price memory currentBasePrice = pyth.getPrice(
+            baseTokenPriceId
+        );
+        PythStructs.Price memory currentQuotePrice = pyth.getPrice(
+            quoteTokenPriceId
+        );
 ```
 
-### How to Deploy
+Line 7 refreshes the data held by the Pyth contract, and line 13-15 retrieves the first of the token prices required for the swap logic.
+
+## Considerations for using Pyth on Neon EVM
+
+Pyth maintains the contracts on Neon EVM, with the repo maintained by Pyth on GitHub at [pyth-network/pyth-neon](https://github.com/pyth-network/pyth-neon).
+
+It's **strongly recommended** that you follow the [consumer best practices](https://docs.pyth.network/consumers/best-practices) when consuming Pyth data.
+
+:::note
+While Pyth provides a sane default for the staleness threshold and a fallback process if feed data is stale, users may configure this functionality.
+:::
+
+## What next?
+
+To learn more about Pyth's architecture, see their video: [How to use Pyth's on-demand model](https://www.youtube.com/watch?v=qdwrs23Qc9g).
+
+<!-- ### How to Deploy to Neon EVM
 
 1. Create a `.secret` file containing the private key or mnemonic of the account you want to use to deploy the
    contracts.
 2. (Optional) Edit `truffle-config.js` to add the NEON network you want to deploy to.
-3. Run `truffle migrate --network neon_devnet`
+3. Run `truffle migrate --network neon_devnet` -->

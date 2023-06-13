@@ -64,6 +64,9 @@ Solana offers developers:
 
 ## Public and audited
 
-Not only is Neon EVM available on [GitHub](https://github.com/neonevm/neon-evm) for interested parties to examine and review, it has also passed [several audits](https://github.com/neonevm/neon-evm/tree/develop/audit). So too has the DAO governance protocol undergone [several successful audits](https://github.com/neonevm/neon-spl-governance/tree/main/audit).
+Not only is Neon EVM available on [GitHub](https://github.com/neonevm/neon-evm) for interested parties to examine and review, it has also passed several audits, such as:
+- [Neon EVM audit](https://github.com/neonevm/neon-evm/tree/develop/audit)
+- [Neon Proxy audit](https://github.com/neonevm/proxy-model.py/tree/develop/audit)
+- [DAO governance protocol audit](https://github.com/neonevm/neon-spl-governance/tree/main/audit)
 
 
