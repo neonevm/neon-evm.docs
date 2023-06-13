@@ -35,7 +35,8 @@ const sidebars = {
       items: [
         'tokens/neon_token',
         'tokens/gas_fees',
-        'tokens/token_list',
+        'tokens/gasless',        
+        'tokens/token_list'
       ]
     },
     {
