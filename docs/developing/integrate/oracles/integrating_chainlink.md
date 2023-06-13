@@ -6,6 +6,8 @@ includedInSite: true
 approvedBy: na
 comment: todo boilerplate as Remix link also
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## Introduction
 
@@ -20,7 +22,28 @@ Each Chainlink feed is available via its own contract. To use a feed, you create
 
 The Chainlink controller contract is deployed on Devnet. This contract implements the [`AggregatorV3Interface`](https://docs.chain.link/docs/price-feeds-api-reference/#aggregatorv3interface) to support the following feeds:
 
-### Devnet
+<Tabs>
+
+  <TabItem value="Mainnet" label="Mainnet">
+
+|Currency pair|Chainlink contract feed address|
+|:----:|:-----:|
+|AVAX/USD|0x1d6E632542B7E405FAA8D26C4805C981260A9e70|
+|BTC/USD|0x002A8368a4fd76C1809765ea66a9AFa3D424d8e0|
+|BNB/USD|0x3c864365f961f1fb31a6682EB388E84832fd159C|
+|DAI/USD|0xa13Cbd21e5De770Bb9104B951B0b0a876c46ef85|
+|ETH/USD|0xC55B1E0c36A69e2b40BD16759434B071F4bBe8df|
+|LINK/USD|0x22eE81bFA94049c9d880e81c5d40b12423307DFb|
+|MATIC/USD|0x5864ccda29c78845460639021287c3f192350816|
+|OP/USD|0x996c00D1E9DDA20a6d0B7dd516394D5978AC0B92|
+|SOL/USD|0x76721563EC3CF5fB94737Eb583F38f3cD166C7Bb|
+|SRM/USD|0xd010175e4eA718569A105FCbeAa8db44c590730E|
+|USDC/USD|0x8cb22a71AD5ef0384B85FF08Ba1343ec71880C35|
+|USDT/USD|0xba92eACD3fb46661E130577cD03fa32E6D4D757a|
+
+
+</TabItem>
+  <TabItem value="Devnet" label="Devnet" default> 
 
 |Currency pair|Chainlink contract feed address|
 |:----:|:-----:|
@@ -30,6 +53,9 @@ The Chainlink controller contract is deployed on Devnet. This contract implement
 |SOL/USD|0xec852B2A009f49E4eE4ffEddeDcF81a1AD1bbD6d|
 |USDC/USD|0xedc0d80E85292fEf5B0946DEc957563Ceb7C8e6c|
 |USDT/USD|0xE69C1E63ef3E95bE56A50f326aC97Bb7994890aD|
+
+  </TabItem>
+</Tabs>
 
 ## Boilerplate contract
 

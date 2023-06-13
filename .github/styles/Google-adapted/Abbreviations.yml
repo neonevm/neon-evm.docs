@@ -33,7 +33,10 @@ exceptions:
   - DOM
   - DPI
   - EVM
+  - ERC
   - ERC-20
+  - ERC20ForSpl
+  - ERC20ForSplMintable
   - ERC-721
   - FAQ
   - GCC
@@ -81,6 +84,7 @@ exceptions:
   - REPL
   - REST
   - R&D
+  - RPC
   - RSA
   - SCM
   - SCSS

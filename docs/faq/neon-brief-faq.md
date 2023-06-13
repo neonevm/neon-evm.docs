@@ -13,7 +13,7 @@ This page provides answers to frequently asked questions (FAQs).
 
 ### What is Neon EVM?
 
-Neon EVM is an Ethereum Virtual Machine operating as a smart contract on Solana. It gives developers the power to directly deploy Ethereum dApps with no code change while benefiting from Solana's technical advantages, and is built with security, decentralization, and sustainability top of mind.
+Neon EVM is an Ethereum Virtual Machine operating as a smart contract on Solana. It gives developers the power to directly deploy Ethereum dApps with minimal code reconfiguration while benefiting from Solana's technical advantages, and is built with security, decentralization, and sustainability top of mind.
 
 ### How does Neon EVM Work?
 

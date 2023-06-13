@@ -165,6 +165,11 @@ const sidebars = {
     },
     {
       type: 'doc',
+      label: 'Sign Votes',
+      id: 'governance/technical_implementation/vote'
+    },
+    {
+      type: 'doc',
       label: 'Principles and Objectives',
       id: 'governance/principles'
     },

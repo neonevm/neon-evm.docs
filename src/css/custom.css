@@ -111,3 +111,9 @@ img {
   max-width: 100%!important;
   height: auto!important;
 }
+
+.coin-icon {
+  min-width: 24px!important;
+  height: 24px!important;
+  vertical-align: middle;
+}
