@@ -34,8 +34,7 @@ const sidebars = {
       label: '💰 Tokens',
       items: [
         'tokens/neon_token',
-        'tokens/gas_fees',
-        'tokens/gasless',        
+        'tokens/gas_fees',      
         'tokens/token_list'
       ]
     },
@@ -56,10 +55,15 @@ const sidebars = {
       label: 'Connect to Neon RPC',
       id: 'developing/connect_rpc'
     },
-        {
+    {
       type: 'doc',
       label: 'Request Test Tokens',
       id: 'developing/utilities/faucet'
+    },
+    {
+      type: 'doc',
+      label: 'Gasless transactions',
+      id: 'developing/gasless'
     },
     {
       type: 'category',
