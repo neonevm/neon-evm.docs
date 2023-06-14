@@ -25,11 +25,15 @@ In this way, Neon EVM provides a seamless developer experience. Note that there 
 
 ## Shared standards and features
 
-Solidity or Vyper smart contracts, standard development and deployment tools and practices can all be applied on Neon EVM with minimal reconfiguration of the code:
+Solidity or Vyper smart contracts, standard development and deployment tools and practices can all be applied on Neon EVM with minimal reconfiguration of the code.
 
 - Neon EVM accounts follow [Ethereum's account standards](https://ethereum.org/en/developers/docs/accounts/) 
 
 >  The majority of [Ethereum OpCodes](https://ethereum.org/en/developers/docs/evm/opcodes) are represented verbatim on Neon EVM. Learn about stacks: 41, 44, 45, and 48 [OpCodes](opcodes).
+
+- Neon EVM supports type 0 / legacy transaction requests
+
+> An Ethereum transaction request is either formed as an EIP-1559 transaction or a legacy transaction. For now, the Neon EVM accepts the legacy/type 0 and type 1 transaction formats.
  
 - Apply Ethereum's standard JSON RPC API based on the Ethereum Client API, the Web3 Module API, and the Net Module API
 
@@ -91,7 +95,7 @@ Each Ethereum account involved in a transaction must be mapped to a correspondin
 
 <!-- based on item in Slack https://neonlabsworkspace.slack.com/archives/C03CQ8A6WTT/p1683107335962669 >> not sure that this is functional end user support as it stands -->
 
-When a contract requires storage slots within Solana, they may create Solana accounts and access these random addresses. However, this must be done with an awareness of the upper limit on the number of accounts, as per the next section. 
+When a contract requires storage slots within Solana, it may create Solana accounts and access these random addresses. However, this must be done with an awareness of the upper limit on the number of accounts, as per the next section. 
 
 
 ### Upper limit on number of accounts
@@ -100,7 +104,7 @@ Neon EVM uses [Solana Transaction V0](https://docs.solana.com/developing/version
 <!-- go deeper on HOW to modify the contract to constrain account numbers Anton will pass in slack
   -->
 
-By constructing the contract logic differently, fixed-Sized values and arrays can fit into a significantly smaller number of accounts.
+By constructing the contract logic differently, fixed-sized values and arrays can fit into a significantly smaller number of accounts.
 
 ```Solidity
  /*1 account: */
