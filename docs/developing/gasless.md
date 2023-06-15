@@ -1,10 +1,10 @@
 ---
 title: Gasless transactions
 proofedDate: na
-iterationBy: na
+iterationBy: HB
 includedInSite: true
 approvedBy: na
-comment: There are code examples (React>> https://codesandbox.io/s/t3fid3) and 
+comment: 
 ---
 
 ## TL;DR
