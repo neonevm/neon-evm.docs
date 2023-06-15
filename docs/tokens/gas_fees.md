@@ -30,7 +30,7 @@ The **gas amount** is the amount of computational resources, such as CPU time an
 * The **computational cost**, which is 5,000 units for each transaction (Solana charges 5,000 lamports for the signature validation for each transaction). This amount goes to Solana validator. This computational cost is **doubled** to give the same amount of gas fees to the **DAO Treasury**.
 * The **storage cost**, which is 6,960 units for each newly allocated byte (Solana charges 6,960 lamports for each byte), while re-use of existing or already-allocated storage is free.
 
-For example, for a Neon transaction with N iterations and S newly allocated bytes, the gas amount will be
+For example, for a Neon transaction with N iterations and S newly allocated bytes, the gas amount will be:
 
 > 2 \* computational cost + storage cost
 
