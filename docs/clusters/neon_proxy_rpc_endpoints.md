@@ -2,7 +2,7 @@
 title: Neon Proxy RPC Endpoints
 proofedDate: na
 iterationBy: na
-includedInSite: false
+includedInSite: true
 approvedBy: na
 comment: FIX -- this does not render well!
 ---
@@ -17,7 +17,7 @@ This page provides lookup tables containing the URLs of all available proxies in
 |RPC Pool|-|NeoQM3utcHGxhKT41Nq81g8t4xGcPNFpkAgYj1N2N8v|
 |Rockaway Blockchain Fund|https://neon-proxy.rbf.systems |Gw3Xiwve6HdvpJeQguhwT23cpK9nRjSy1NpNYCFY4XU9|
 
-### Network: Devnet/Chain ID: 245022934
+### Network: Devnet/Chain ID: 245022926
 
 |Operator name |RPC URL|Public key|
 |:--|:--|:--|
