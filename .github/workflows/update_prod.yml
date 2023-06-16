@@ -25,10 +25,10 @@ jobs:
       - name: Deploy to s3
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --acl public-read --delete
+          args: --delete
         env:
-          AWS_S3_BUCKET: ${{secrets.PROD_AWS_S3_BUCKET}}
-          AWS_ACCESS_KEY_ID: ${{secrets.PROD_AWS_ACCESS_KEY_ID}}
-          AWS_SECRET_ACCESS_KEY: ${{secrets.PROD_AWS_SECRET_ACCESS_KEY}}
-          AWS_REGION: ${{secrets.PROD_AWS_REGION}}
+          AWS_S3_BUCKET: ${{vars.DOCS_PROD_S3_BUCKET}}
+          AWS_ACCESS_KEY_ID: ${{secrets.DOCS_PROD_AWS_ACCESS_KEY_ID}}
+          AWS_SECRET_ACCESS_KEY: ${{secrets.DOCS_PROD_AWS_SECRET_ACCESS_KEY}}
+          AWS_REGION: ${{vars.DOCS_PROD_S3_REGION}}
           SOURCE_DIR: "build"
