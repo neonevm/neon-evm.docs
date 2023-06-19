@@ -9,9 +9,9 @@ comment:
 
 *This guide sets you up with a functional, running neon-proxy on your local machine with `docker-compose` in a matter of minutes with minimal user input required.* 
 
-## Operator Requirements
+## Operator requirements
 
-### Hardware Requirements
+### Hardware requirements
 
 |Component|Requirement                           |
 |-----|:-----------------------------------------|
@@ -20,13 +20,13 @@ comment:
 |RAM | 16 GB |
 |Storage | 500 GB |
 
-### Software Requirements
+### Software requirements
 
 Make sure the following components are **installed** on your device prior to proceeding:
 * [Docker Engine](https://docs.docker.com/engine/install/)
 * [Docker Compose](https://docs.docker.com/compose/install/) > [v2.12.1](https://docs.docker.com/compose/release-notes/#2121)
 
-## Install and Run Read-Only Proxy Locally
+## Install and run read-only proxy locally
 
 This part consists of three components: `evm_loader`, `neon_test_invoke_program`, and `proxy`, each of which produces a Docker image of the same name.
 
@@ -110,7 +110,7 @@ export PROXY_LOG_CFG=log_cfg.json
 docker build --build-arg NEON_EVM_COMMIT=$NEON_EVM_COMMIT --build-arg PROXY_REVISION=$PROXY_REVISION --build-arg PROXY_LOG_CFG=$PROXY_LOG_CFG --tag neonlabsorg/proxy:v0.14.5 .
 ```
 
-### Run proxy in Read-Only Mode
+### Run Proxy in read-only mode
 With the required Docker images built, you can now run `docker-compose` with `sudo` to run the proxy in read-only mode
 ```bash
 sudo SOLANA_URL="https://api.devnet.solana.com" REVISION="v0.14.5" docker-compose -f docker-compose-operator-ro.yaml up -d
@@ -138,7 +138,7 @@ volumes:
     driver: local
 ```
 
-### Environment Variables
+### Environment variables
 Some container environments need attention for production, such as:
 
 ```yaml
@@ -169,7 +169,7 @@ The `EVM_LOADER` environment variable's values are:
 |Devnet | eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU |
 |Testnet | eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU |
 
-### Execute the Install Script and Monitor Logs
+### Execute the install script and monitor logs
 
 Run the install script
 ```bash
