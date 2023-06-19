@@ -140,6 +140,10 @@ const sidebars = {
         'operating/basic',
         'operating/enhanced'
       ]
+    },    {
+      type: 'doc',
+      label: 'Configure fees & gas',
+      id: 'operating/transaction-gas'
     },
     {
       type: 'doc',

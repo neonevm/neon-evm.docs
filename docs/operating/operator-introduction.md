@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 ## Introduction
 Ethereum dApps may run their smart contract-based applications on Solana via Neon EVM. Modified smart contracts generate transactions in accordance with the Ethereum rules. These are submitted to the Neon EVM and broadcast as Neon transactions. Since the structures of Ethereum and Solana transactions differ from each other, Neon EVM contains special Proxy servers that are responsible for converting and executing transactions in Solana. These servers are configured and maintained by Neon EVM Proxy Operators.
 
-This guide contains a list of the Proxy Operator's duties, as well as instructions to ensure the successful operation of a proxy and the successful execution of transactions.
+This page introduces the Proxy Operator's duties, and the following pages provide instructions to ensure the successful operation of a Proxy; including the successful execution of transactions.
 
 ## Duties of a Proxy Operator
 A Proxy Operator's main task is to install software on a server in order to provide an RPC endpoint to accept transactions formed according to Ethereum rules, and ensures their execution in Solana. 
