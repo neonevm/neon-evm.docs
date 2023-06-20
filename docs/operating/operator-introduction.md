@@ -21,18 +21,17 @@ This page introduces the Proxy Operator's duties, and the following pages provid
 A Proxy Operator's main task is to install software on a server in order to provide an RPC endpoint to accept transactions formed according to Ethereum rules, and ensures their execution in Solana. 
 
 This involves:
- * Configuring a proxy server to perform the following operations:
+ * Configuring at least [2 instances of the proxy server](#redundancy) to perform the following operations:
     * Receive requests over Web3 API protocol
     * Shape responses using Web3 API protocol
-    * Convert transactions to the Solana format
- * Connect a proxy server to a Solana cluster RPC endpoint
+ * Connect a Proxy server to a Solana cluster RPC endpoint
  * Successfully execute transactions
 
 :::note
 All operations related to the execution of transactions on Solana are performed by the software installed on your node.
 :::
 
-## Proxy requirements
+### Hardware requirements
 
 Please make sure you have hardware that meets the corresponding minimum requirements before proceeding.
 
@@ -56,3 +55,11 @@ Please make sure you have hardware that meets the corresponding minimum requirem
 |Storage | 1 TB |
   </TabItem>
 </Tabs>
+
+### Redundancy
+
+To provide fault tolerant (24x7) Neon Proxy availability, the Neon team recommends that Neon Operators run two instances of the Neon Proxy, each with the same number of [Neon Operator keys](accounts#the-operator-key). This maintains the service even if one of the servers should fail. Each Neon Proxy can process 350 TPS. 
+
+> For example, if the Neon Operator has 40 keys, our recommendation is to run each instance of the Neon Proxy with 20 keys. 
+
+As a Kubernetes service, Neon Proxy instances will rebalance user requests and user transactions.

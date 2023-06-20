@@ -1,5 +1,5 @@
 ---
-title: Transaction gas
+title: Fees & Gas
 proofedDate: na
 iterationBy: na
 includedInSite: true
@@ -14,7 +14,7 @@ Operators:
 - [Configure the Operator fee](#gas-price-the-operator-fee)
 - [Configure oracle price sources](#calculation-configuration)
 - [May reject transactions based on gas price](#minimum-gas-price)
-- [Can set gas to zero for test networks](#zero-gas-price-for-testing)
+- [Can set gas to zero for testing](#zero-gas-price-for-testing)
 - Must configure the Proxy to accept no-fee transactions
 
 <!-- Is this last item valid? Operators need to accept request to provide gasless (0 gas fee transaction). Is this handled by the Proxy without any configuration? -->

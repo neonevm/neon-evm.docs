@@ -138,17 +138,18 @@ const sidebars = {
       label: 'Run Neon Proxy',
       items: [
         'operating/basic',
-        'operating/enhanced'
+        'operating/enhanced',
+        'operating/installation/setup_kubernetes'
       ]
-    },    {
-      type: 'doc',
-      label: 'Configure fees & gas',
-      id: 'operating/transaction-gas'
-    },
+    },    
     {
-      type: 'doc',
-      label: 'Set up Kubernetes with k0s',
-      id: 'operating/installation/setup_kubernetes'
+      type: 'category',
+      label: 'Configuration',
+      items: [
+        'operating/transaction-gas',
+        'operating/accounts',
+        'operating/configuration'
+      ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Govern</h4>' },

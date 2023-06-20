@@ -1,10 +1,10 @@
 ---
-title: Neon Proxy Configuration
+title: Variable Configuration
 proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: 
+comment: Do the API calls belong here too? https://www.notion.so/neonlabs/Neon-Specific-API-methods-3402baaad8fa4daeb12642495cf85eb3
 ---
 
 ## Configuration of Neon Proxy
@@ -19,3 +19,5 @@ The following variables may be configured to customize your Neon Proxy implement
 |`PRX_PP_SOLANA_URL`|[HTTP/S address of the Solana network with the main Pyth oracle contract](transaction-gas#calculation-configuration)|
 |`PRX_PYTH_MAPPING_ACCOUNT`|[Solana address of the Pyth mapping account](transaction-gas#calculation-configuration)|
 |`PRX_UPDATE_PYTH_MAPPING_PERIOD_SEC`|[Time period to reread the Pyth mapping account](transaction-gas#calculation-configuration)|
+
+
