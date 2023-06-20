@@ -26,11 +26,18 @@ The Operator key is an account that is whitelisted by the Neon EVM. Neon Proxy c
 
 > Neon DAO provides the governance to determine the whitelist.
 
+:::info
+
+Operator keys should be spread [evenly between Proxy instances](operator-introduction#redundancy).
+
+:::
+
 ## Holder accounts
 
-Holder accounts are a crucial element of Neon EVM. Neon Proxy creates holder accounts with [rent-exempt balances](https://docs.solana.com/ru/developing/programming-model/accounts#rent) on start. The number of holder accounts created determines the TPS provided to users and can be configured with `PRX_PERM_ACCOUNT_LIMIT`. 
+[Holder accounts](/docs/architecture/solana-accounts/#holder-accounts) are a crucial element of Neon EVM. Neon Proxy creates holder accounts with [rent-exempt balances](https://docs.solana.com/ru/developing/programming-model/accounts#rent) on start. The number of holder accounts created determines the TPS provided to users and can be configured with `PRX_PERM_ACCOUNT_LIMIT`. 
 
 You may retrieve a list of Neon Operator key accounts and attached holder accounts (see [**Retrieve your balance**](#query-balance), below).
+
 
 ## Account balance
 
@@ -46,9 +53,76 @@ Best practice is to use the dedicated script (wip: coming soon!) to automaticall
 
 :::
 
+Solana requires SOLs on the balance of any account, and the balance depends on the size of the account. So, the Neon Operator needs SOLs in place for Neon Proxy to create the holder accounts.
+
+The number of required SOLs depends on:
+
+- The size of the [holder account](/docs/architecture/solana-accounts/#holder-account-size)
+- The number of holder accounts 
+
+> Remember, the number of holder accounts correlates with the the TPS of the Neon Proxy instance.
+
+
+<Tabs>
+	<TabItem value="cost1" label="Solana standard rent" default>
+
+For a rent-exempt account of 262,144 bytes, Solana requires:
+- Solana rent 262144
+- Rent per byte-year: 0.00000348 SOL
+- Rent per epoch: 0.004997815 SOL
+- Rent-exempt minimum: 1.82541312 SOL
+
+</TabItem>
+<TabItem value="calculate" label="Calculate SOL balance required" default>
+
+To calculate the number of SOLs required by the Neon Operator, use the next formula:
+
+- The TPS depends on the finalization time of the Solana, which is equal to 32 Solana blocks because the content of the holder account should be kept till the Neon transaction finalization
+- The Solana block time is 400 ms. So in 1 second, Solana produces 1 / 0.4 = 2.5 blocks.
+
+The formula to calculate the number of holder accounts and required SOLs.
+
+```bash
+Number-of-Holders = TPS / Solana-Blocks-per-Sec * Solana-Blocks-for-Finalization
+- Solana-Blocks-per-Second = 2.5 (see above)
+- Solana-Blocks-for-Finalization = 32 (see above)
+
+SOLs-for-Holders = Rent-Exempt-Balance * Number-of-Holders
+- Rent-Exempt-Balance = 1.82541312 SOL (see above)
+
+Number-of-Holders-per-Operator-key = Number-of-Holders / Number-of-Operator-keys
+```
+
+For example, for 100 TPS and 40 Neon Operator keys:
+
+```bash
+Number-of-Holders = 100 / 2.5 * 32 = 1280
+SOLs-for-Holders = 1.82541312 * 1280 = 2336.5287936 SOL
+Number-of-Holders-per-Operator-key = 1280 / 40 = 32
+```
+
+For example, for 50 TPS and 40 Neon Operator keys:
+
+```bash
+Number-of-Holders = 50 / 2.5 * 32 = 640
+SOLs-for-Holders = 1.82541312 * 640 = 1168,2643968 SOL
+Number-of-Holders-per-Operator-key = 640 / 40 = 16
+```
+
+The Neon team recommendations are to provide:
+
+- The number of Neon Operator keys = 40 (should be included in the whitelist in the NeonEVM program by the Neon Governance)
+- The number of holders per Neon Operator key = 32 (to provide 100 TPS, the Neon Operator should setup PRX_PERM_ACCOUNT_LIMIT = 32)
+- The Neon Operator should have 2336.5287936 SOL on the balance of Neon Operator keys, or 2336.5287936 / 40 = 58,41321984 SOLs on each Neon Operator key at the start
+- The Neon Operator should have 200 SOLs available per month to process Neon transactions. That means the total balance on each Neon Operator key will be = 58,41321984 + 200 / 40 = 63,41321984 SOLs
+
+</TabItem>
+</Tabs>
+
+
 ### Query balance
 
-You may query your balance visually or programmatically.
+You may query your account balances visually or programmatically.
 
 <Tabs>
 	<TabItem value="View" label="View your balance" default>

@@ -118,14 +118,15 @@ const sidebars = {
         'evm_compatibility/precompiles'
       ]
     },
-      {
-      type: 'doc',
-      id: 'architecture/neon_evm_arch'
-    },
-    {
-      type: 'doc',
-      id: 'architecture/eth_sol_solution'
-    },
+     {
+      type: 'category',
+      label: 'Neon EVM Architecture',
+      items: [
+        'architecture/neon_evm_arch',
+        'architecture/eth_sol_solution',
+        'architecture/solana-accounts'
+      ]
+    },   
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Operate</h4>' },
     {
