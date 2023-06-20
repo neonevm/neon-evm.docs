@@ -83,7 +83,7 @@ Number-of-Holders = TPS / Solana-Blocks-per-Sec * Solana-Blocks-for-Finalization
 - Solana-Blocks-for-Finalization = 32 (see above)
 
 SOLs-for-Holders = Rent-Exempt-Balance * Number-of-Holders
-- Rent-Exempt-Balance = 1.82541312 SOL (see Solana standar rent calcs below)
+- Rent-Exempt-Balance = 1.82541312 SOL (see Solana standard rent calcs in the tab above)
 
 Number-of-Holders-per-Operator-key = Number-of-Holders / Number-of-Operator-keys
 :::
@@ -97,7 +97,6 @@ The following tabs provide worked examples of this formula:
 - SOLs-for-Holders = 1.82541312 * 1280 = 2336.5287936 SOL
 - Number-of-Holders-per-Operator-key = 1280 / 40 = 32
 
-
 </TabItem>
 <TabItem value="50TPS" label="50 TPS, 40 keys" default>
 
@@ -107,7 +106,6 @@ The following tabs provide worked examples of this formula:
 - Number-of-Holders-per-Operator-key = 640 / 40 = 16
 
 </TabItem>
-
 </Tabs>
 
 
