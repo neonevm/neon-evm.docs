@@ -11,7 +11,7 @@ comment:
 
 Operators: 
 
-- [Configure `PRX_OPERATOR_FEE`](#gas-price-the-operator-fee)
+- [Configure the Operator fee](#gas-price-the-operator-fee)
 - [Set up price sources by network](#calculation-configuration)
 - [May reject transactions based on gas price](#minimum-gas-price)
 - [Can set gas to zero for test networks](#zero-gas-price-for-testing)
