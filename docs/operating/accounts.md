@@ -49,7 +49,7 @@ The Neon Operator maintains a balance of SOLs in the account associated with eac
 Solana requires SOLs on the balance of any account, and the balance depends on the size of the account. We recommend maintaining a balance of 100—200 SOLs in Neon Operator key accounts.
 
 :::info
-The Neon team recommends providing:
+The Neon team recommends:
 
 - The number of Neon Operator keys = 40 
 - The number of holder accounts per Neon Operator key = 32 
