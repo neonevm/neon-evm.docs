@@ -26,6 +26,17 @@ This command generates static content into the `build` directory and can be serv
 
 > Note that the build gives more verbose warnings than the localhost server (with base commands). So, `yarn clear` followed by `yarn build` should warn on all internal bust links.
 
+
+## Use single source content
+
+> I have not got this working yet
+
+See [the docs](https://docusaurus.io/docs/next/markdown-features/react#markdown-and-jsx-interoperability)
+
+```console
+yarn add raw-loader
+```
+
 ## Control image sizes
 
 Docusaurus provides certain [controls for static assets](https://docusaurus.io/docs/static-assets). Either the default location must be used for image location (static/img), or this must be configured and the configured location applied. Ad hoc placement of images is not supported.
@@ -59,4 +70,17 @@ Local installation and CLI linting is recommended for documentarians:
 You can either lint **all** Markdown files with `vale .`, or you can name a specific file to lint, e.g. `vale readme.md` or `vale {path-to-doc.docname.md`.
 
 
+### Tabs boilerplate
+
+<Tabs>
+	<TabItem value="View" label="View your balance" default>
+
+************
+
+</TabItem>
+<TabItem value="Retrieve" label="Retrieve your balance" default>
+
+	*********
+</TabItem>
+</Tabs>
 
