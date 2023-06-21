@@ -1,0 +1,1 @@
+Useful for testing basic markdown link before testing snippet link.

@@ -4,10 +4,17 @@ proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: 
+comment: Attempt to single source based on these docs failing to understand https://docusaurus.io/docs/next/markdown-features/react#markdown-and-jsx-interoperability -- need some help
 ---
 
-## Key Takeaways
+<!-- 
+import PartialExample from `docs/single-source-snippets/_gas-price.md`
+
+<PartialExample name="Sebastien" />
+
+this is a test item to use single source content  -->
+
+## Key takeaways
 
 The NEON token is used to pay the “gas fees” required for transaction execution. The gas fee is the amount of NEON tokens that a user needs to pays for a transaction to execute it successfully.
 
@@ -21,10 +28,9 @@ On a high level, gas fee payments in the Neon EVM work as follows:
 
 </div>
 
-As depicted in the diagram above, users of dApps built on the Neon EVM pay in NEON tokens for all the resources they consume, in addition to operator fees that differ between operators. Operators, however, use SOL to pay for the resources they consume. Specifically, operators pay Solana validators and governance fees in SOL. Operators pay the same amount for governance as they pay to Solana validators (for the signature validation).
+As depicted in the diagram above, users of dApps built on the Neon EVM pay in NEON tokens for all the resources they consume, in addition to Operator fees that differ between Operators. Operators, however, use SOL to pay for the resources they consume. Specifically, operators pay Solana validators and governance fees in SOL. Operators pay the same amount for governance as they pay to Solana validators (for the signature validation).
 
 The gas fee that a user pays is calculated as **gas amount \* gas price**.
-
 
 The **gas amount** is the amount of computational resources, such as CPU time and storage, used to execute the transaction. The gas amount is calculated mainly in accordance with Solana's rules (in fact, 1 gas unit = 1 lamport) as a sum of the following amounts:
 * The **computational cost**, which is 5,000 units for each transaction (Solana charges 5,000 lamports for the signature validation for each transaction). This amount goes to Solana validator. This computational cost is **doubled** to give the same amount of gas fees to the **DAO Treasury**.
@@ -51,6 +57,7 @@ The final formula for the gas fee for a Neon transaction with N iterations and S
 > “Gas amount” \* “Gas price”
 
 > = [ N \* 2 \* 5,000 + S \* 6,960 ] \* (1 + Proxy Operator fee) \* SOL-to-NEON-rate
+
 
 ## Examples
 The following are some examples of gas fee calculation on Neon. They are all based on the following assumptions:

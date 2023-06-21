@@ -119,14 +119,15 @@ const sidebars = {
         'evm_compatibility/precompiles'
       ]
     },
-      {
-      type: 'doc',
-      id: 'architecture/neon_evm_arch'
-    },
-    {
-      type: 'doc',
-      id: 'architecture/eth_sol_solution'
-    },
+     {
+      type: 'category',
+      label: 'Neon EVM Architecture',
+      items: [
+        'architecture/neon_evm_arch',
+        'architecture/eth_sol_solution',
+        'architecture/solana-accounts'
+      ]
+    },   
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Operate</h4>' },
     {
@@ -139,13 +140,18 @@ const sidebars = {
       label: 'Run Neon Proxy',
       items: [
         'operating/basic',
-        'operating/enhanced'
+        'operating/enhanced',
+        'operating/installation/setup_kubernetes'
       ]
-    },
+    },    
     {
-      type: 'doc',
-      label: 'Set up Kubernetes with k0s',
-      id: 'operating/installation/setup_kubernetes'
+      type: 'category',
+      label: 'Configuration',
+      items: [
+        'operating/transaction-gas',
+        'operating/accounts',
+        'operating/configuration'
+      ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Govern</h4>' },

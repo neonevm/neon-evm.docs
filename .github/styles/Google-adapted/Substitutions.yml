@@ -113,6 +113,7 @@ swap:
   make sure: ensure
   '(?:Meta Mask|Meta mask|Meta-Mask|meta mask|meta-mask|metaMask)': MetaMask
   '(?:multi sig|multi-sig)': multisig
+  '(?:NeonEVM|NoenEVM)': Neon EVM
   '(?:Neon foundation|Noen foundation|Noen Foundation)': Neon Foundation
   '(?:Neon labs|Noen Labs|Noen labs)': Neon Labs
   network IP address: internal IP address
