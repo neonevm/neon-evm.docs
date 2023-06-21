@@ -61,7 +61,7 @@ This file is set to lint Markdown files, as per `[*.md]`.
 
 ### Linting
 
-Linting may either be local (with vale installed via the CLI), or on a webhook action in GitHub or the like. 
+Linting may either be local (with vale installed via the CLI) or on a webhook action in GitHub or the like. 
 
 ### Local lint
 
