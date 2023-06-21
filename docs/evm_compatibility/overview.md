@@ -7,6 +7,9 @@ approvedBy: na
 comments: 
 ---
 
+import heap from '@site/static/img/doc-images/evm-compat/heap-overflow-error.png';
+
+
 ## TL;DR
 
 - Apply (most of) Ethereum's standard [JSON RPC API methods](/docs/evm_compatibility/json_rpc_api_methods)
@@ -44,6 +47,7 @@ Solidity or Vyper smart contracts, standard development and deployment tools and
 Interoperability between Solana and Ethereum EVMs requires certain adaptations. In addition to Solana-specific restrictions, two major differences include:
 
 ### Precompiles
+
 Neon supports all precompiled contracts defined on [evm.code](https://www.evm.codes/precompiled?fork=merge) that provide more advanced functionalities, with [certain limitations](./precompiles#limitations) on some precompiled contracts on Neon EVM.
 
 Neon also supports native precompiled contracts that are available to our users.
@@ -51,6 +55,7 @@ Neon also supports native precompiled contracts that are available to our users.
 <!-- todo once we have the details on this can link to page -->
 
 ### Gas calculation
+
 The mechanism of gas consumption and calculation of gas fees on Neon EVM differ from Ethereum. Gas fees on Neon EVM are much cheaper than on Ethereum because Solana is the settlement layer. 
 
 > Learn more about the [NEON token and how gas fees work on Neon EVM](../../docs/tokens/gas_fees.md).
@@ -83,26 +88,20 @@ Solana’s Sealevel also provides two accounts which are assigned up to 256 cons
 
 The differences go deeper still. In an Ethereum EVM, contracts can only read and write their own storage. In Sealevel, any account’s data can be read or written to by a contract. However, the runtime enforces that only an account’s “owner” is allowed to modify it. Changes by any other programs will be reverted and cause the transaction to fail.
 
-:::info
-
-Learn more in the [Solana wiki](https://solana.wiki/docs/).
-
-:::
-
-### Account mapping
-
-Each Ethereum account involved in a transaction must be mapped to a corresponding Solana account. Any call made to the Ethereum account (e.g. to read balance, execute a transaction, etc.) requires that the Solana account is included to make use of the storage provided.
-
-<!-- based on item in Slack https://neonlabsworkspace.slack.com/archives/C03CQ8A6WTT/p1683107335962669 >> not sure that this is functional end user support as it stands -->
-
-When a contract requires storage slots within Solana, it may create Solana accounts and access these random addresses. However, this must be done with an awareness of the upper limit on the number of accounts, as per the next section. 
-
 
 ### Upper limit on number of accounts
-Neon EVM uses [Solana Transaction V0](https://docs.solana.com/developing/versioned-transactions): limiting the maximum number of accounts used in a single transaction to 64. Solana requires that all accounts used in a transaction be specified in order; to ensure parallel execution of transactions.
 
-<!-- go deeper on HOW to modify the contract to constrain account numbers Anton will pass in slack
-  -->
+When a contract requires storage slots within Solana, it may create Solana accounts and access these random addresses. However, this must be done with an awareness of the upper limit on the number of accounts. 
+
+Neon EVM uses [Solana Transaction V0](https://docs.solana.com/developing/versioned-transactions): limiting the maximum number of accounts used in a single transaction to 64. Solana requires that all accounts used in a transaction be specified in order; to enable parallel execution of transactions.
+
+
+:::info
+Each Ethereum account involved in a transaction must be mapped to a corresponding Solana account. Any call made to the Ethereum account (e.g. to read balance, execute a transaction, etc.) requires that the Solana account is included to make use of the storage provided.
+
+:::
+<!-- based on item in Slack https://neonlabsworkspace.slack.com/archives/C03CQ8A6WTT/p1683107335962669  -->
+<!-- go deeper on HOW to modify the contract to constrain account numbers -->
 
 By constructing the contract logic differently, fixed-sized values and arrays can fit into a significantly smaller number of accounts.
 
@@ -126,10 +125,18 @@ for (uint256 i = 0; i < 32; i++) {
 }
 ```
 
-<!-- todo looks like these code snippets will benefit from some better commentary -->
+<!-- todo looks like these code snippets will benefit at least a sentence to explain list vs map which is better and why -->
 
 ### Heap size
 Ethereum-like transactions are executed by Neon EVM inside [Solana's Berkeley Packet Filter (BPF)](https://docs.solana.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf). The BPF has heap memory limit of 256 KB, i.e. the size of the heap allocated to a contract call, is limited to 256 KB.
+
+:::info
+
+This [Neon transaction](https://neonscan.org/tx/0x6bdc50921eaa8981e2f534e09139840fd176bf092bd835393ee4bab998409c0a) failed due to a heap overflow error. By viewing the [transaction on Sol scan](https://solscan.io/tx/3fuTXn8SiAwTrpG96VmhvuHQe9tssFv7y2yHFynVpM4d51uBZerehxZebPTFvKLs8b2wmnXmhxu5yhAwWdnUJLVC?cluster=devnet) you can access the log for the final (failing) transactions and view the "out of memory" errors.
+
+<img src={heap} width="450" />
+
+:::
 
 Consider the following techniques if you need to troubleshoot a heap overflow error:
 
@@ -146,8 +153,6 @@ Consider the following techniques if you need to troubleshoot a heap overflow er
 	- Avoid strings, arrays, and mappings
 - Local variables: avoid strings, arrays, and mappings
 
-<!-- todo How do users know when the issue is a heap overflow error? Can we show logs ?screenshot and name of service? to demonstrate when the issue is heap size? == detection method ?? Oleg should be able to provide -->
-
 
 ### Limitation on `block.timestamp` / `block.number` usage
 Time-related methods in addresses for mapping indexes, namely `block.timestamp` and `block.number`, behave differently from Ethereum and developers are **strongly cautioned** against using them when developing on Neon EVM. 
@@ -160,7 +165,6 @@ function create_new_element_timestamp() external {
 }
 ```
 
-
 ## Support
 
-Should you require further advice to help troubleshoot, create a ticket in the support-tickets channel in Neon Lab's [Discord](https://discord.gg/neonevm).
+Should you require further advice to help troubleshoot, create a ticket in the support-tickets channel in [Neon's Discord](https://discord.gg/neonevm).
