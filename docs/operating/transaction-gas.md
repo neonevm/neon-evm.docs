@@ -17,7 +17,7 @@ Operators:
 - [Can set gas to zero for testing](#zero-gas-price-for-testing)
 - Must configure the Proxy to accept no-fee transactions
 
-<!-- wip Support needed for last item>> Operators need to accept request to provide gasless (0 gas fee transaction). Is this handled by the Proxy without any configuration? -->
+<!-- wip Support needed for last item>> Operators need to accept request to provide no-fee transaction. Is this handled by the Proxy without any configuration? -->
 
 ## The Neon Operator economy
 
