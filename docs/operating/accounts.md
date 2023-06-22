@@ -37,7 +37,7 @@ Operator keys should be spread [evenly between Proxy instances](operator-introdu
 
 [Holder accounts](/docs/architecture/solana-accounts/#holder-accounts) are a crucial element of Neon EVM. Neon Proxy creates holder accounts with [rent-exempt balances](https://docs.solana.com/ru/developing/programming-model/accounts#rent) on start. The number of holder accounts created determines the TPS provided to users and can be configured with `PRX_PERM_ACCOUNT_LIMIT`. 
 
-You may retrieve a list of Neon Operator key accounts and attached holder accounts (see [**Retrieve your balance**](#query-balance), below).
+You may retrieve a list of Neon Operator key accounts and attached holder accounts (see [**Retrieve your balance**](#query-balance) below).
 
 
 ## Account balance
@@ -64,7 +64,7 @@ The number of required SOLs depends on:
 - The size of the [holder account](/docs/architecture/solana-accounts/#holder-account-size)
 - The number of holder accounts 
 
-> Remember, the number of holder accounts correlates with the the TPS of the Neon Proxy instance.
+> Remember, the number of holder accounts correlates with the TPS of the Neon Proxy instance.
 
 
 <Tabs>
