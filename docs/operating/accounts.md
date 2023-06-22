@@ -1,6 +1,6 @@
 ---
 title: Accounts & Payment
-proofedDate: na
+proofedDate: 20230622
 iterationBy: na
 includedInSite: true
 approvedBy: na
@@ -203,7 +203,7 @@ Neon provides a docker compose file to add SOLs to your accounts. This is not re
 
 :::caution
 
-Best practice is to use the dedicated script (wip: coming soon!) to automatically transfer SOLs to your Neon Operator key accounts when the balance becomes too low. This security measure avoids storing excessive SOLs in Neon Operator key accounts, to protect them from a malicious user. The potential vulnerability arises because the Neon Proxy has access to Neon Operator keys. Therefore, should a hacker gain access to the Neon Operator server they may get access to the Neon Proxy configuration with the Neon Operator keys.
+Best practice is to use the dedicated script (wip: coming soon!) to automatically transfer SOLs to your Neon Operator key accounts when the balance becomes too low. This security measure avoids storing excessive SOLs in Neon Operator key accounts, to protect them from a malicious user. The potential vulnerability arises because the Neon Proxy has access to Neon Operator keys. Therefore, should a hacker gain access to the Neon Operator server, they may get access to the Neon Proxy configuration with the Neon Operator keys.
 
 :::
 
@@ -221,7 +221,7 @@ The Neon Proxy checks existing holder account requirements and creates holder ac
 
 But, if you want to decrease the number of holder accounts, you can delete holder accounts by address, and withdraw SOLs from their balance back to the linked Operator key account with the following commands:
 
-To get the list of existing Holder accounts:
+To get the list of existing holder accounts:
 
 ```bash
 docker exec -ti proxy ./proxy-cli.sh holder-account list
