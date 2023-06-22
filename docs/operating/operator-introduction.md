@@ -63,3 +63,5 @@ To provide fault tolerant (24x7) Neon Proxy availability, the Neon team recommen
 > For example, if the Neon Operator has 40 keys, our recommendation is to run each instance of the Neon Proxy with 20 keys. 
 
 As a Kubernetes service, Neon Proxy instances will rebalance user requests and user transactions.
+
+<!-- verify -->
