@@ -1,6 +1,6 @@
 ---
 title: Fees & Gas
-proofedDate: na
+proofedDate: 20230622
 iterationBy: na
 includedInSite: true
 approvedBy: na
@@ -29,7 +29,7 @@ The Neon EVM calculates gas usage by tracking the SOL spent by the Neon Operator
 
 ### Pass on gas savings
 
-Because the Neon EVM operates on Solana, not Ethereum it takes advantage of Solana’s inexpensive transaction costs and favourable approach to only charge for storage allocation. This contrasts with Ethereum, where calculations require much more gas, and gas is charged for every change in data stored in Ethereum. As a result, gas usage on Solana is much cheaper than on Ethereum, and the Neon EVM passes these savings on to users.
+Because the Neon EVM operates on Solana, not Ethereum, it takes advantage of Solana’s inexpensive transaction costs and favorable approach to only charge for storage allocation. This contrasts with Ethereum, where calculations require much more gas, and gas is charged for every change in data stored in Ethereum. As a result, gas usage on Solana is much cheaper than on Ethereum, and the Neon EVM passes these savings on to users.
 
 
 ## Gas price: the Operator fee
@@ -62,24 +62,23 @@ An Operator has two options:
 
 > For example, by setting the gas price minimum to 65 Galans, Neon Proxy rejects transactions with a gas price of less than 65.
 
-If a transaction request arrives with a gas price below that of the Operator costs + Operator fee, but with a gas price larger than the designated `PRX_MINIMAL_GAS_PRICE`, the Neon Proxy accepts the transaction into mempool. 
+If a transaction request arrives with a gas price below that of the Operator cost + Operator fee, but with a gas price larger than the designated `PRX_MINIMAL_GAS_PRICE`, the Neon Proxy accepts the transaction into mempool. 
 
-The Neon transaction will only be executed when the gas price covers Operator costs + Operator fee. If the number of transactions in the mempool grows to the `PRX_MEMPOOL_CAPACITY` (by default =4096), Neon Proxy removes the transaction with the smallest gas price from the mempool to accept transactions with the higher gas price. Therefore, it's not critical to set the `PRX_MINIMAL_GAS_PRICE` to a small value. 
+The Neon transaction will only be executed when the gas price covers Operator cost + Operator fee. If the number of transactions in the mempool grows to the `PRX_MEMPOOL_CAPACITY` (by default = 4096), Neon Proxy removes the transaction with the smallest gas price from the mempool to accept transactions with the higher gas price. Therefore, it's not critical to set the `PRX_MINIMAL_GAS_PRICE` to a small value. 
 
 
-## Calculation configuration
+## Gas price: oracle configuration
 
-The Neon Proxy has several settings accommodate the calculation of gas-price on your required network:
+The Neon Proxy has several settings that accommodate the calculation of gas-price on your required network:
 
 - `PRX_PP_SOLANA_URL`: the HTTP/S address of the Solana node (Devnet/Mainnet) that provides the Pyth data account that supplies $NEON and $SOL prices
 - `PRX_PYTH_MAPPING_ACCOUNT`: the Solana address of the Pyth mapping account; select the address on (https://pyth.network/developers/accounts) based on the type of network (Devnet/Mainnet)
-- `PRX_UPDATE_PYTH_MAPPING_PERIOD_SEC`: the time period to reread the Pyth mapping account. The Neon Proxy reads the Pyth mapping account at the start, gets the addresses of $NEON and $SOL accounts, and rechecks the address from the Pyth Mapping account only after `UPDATE_PYTH_MAPPING_PERIOD_SEC`. It is recommend to set this generously (e.g. 1/3/10 hours), because the price feed accounts don’t change often.
-- `PRX_MINIMAL_GAS_PRICE`: the minimum gas price to accept transactions into the mempool for on-chain execution
-> Let's take a closer look at the minimum gas price variable.
+- `PRX_UPDATE_PYTH_MAPPING_PERIOD_SEC`: the time period to reread the Pyth mapping account. The Neon Proxy reads the Pyth mapping account at the start, gets the addresses of $NEON and $SOL accounts, and rechecks the address from the Pyth Mapping account only after `UPDATE_PYTH_MAPPING_PERIOD_SEC`. We recommend setting this generously (e.g. 1/3/10 hours), because the price feed accounts don’t change often.
+
 
 ## Zero gas price for testing
 
-On Devnet test NEON is availiable, however, for beta Mainnet testing purposes, the Neon Proxy can be configured to accept transactions with a 0 gas price (a balance of SOL is available to cover the transaction fees on Solana). 
+When testing on Devnet you can use test NEON; however, for beta Mainnet testing purposes, the Neon Proxy can be configured to accept transactions with a 0 gas price (a balance of SOL is maintained by Neon to cover the transaction fees on Solana). 
 
 To enable this configuration, the Neon Operator should set up the following parameters:
 
