@@ -228,11 +228,16 @@ docker exec -ti proxy ./proxy-cli.sh holder-account list
 
 ```
 
+<!-- k8 alt? -->
+
+
 To delete a specified account:
 
 ```bash
 docker exec -ti proxy ./proxy-cli.sh holder-account delete <holder-address>
 ```
+<!-- k8 alt? -->
+
 
 ### Withdraw NEON
 
@@ -244,6 +249,7 @@ To get the list of Neon accounts, run the following command:
 ```bash
 docker exec -ti proxy ./proxy-cli.sh neon-account list
 ```
+<!-- k8 alt? -->
 
 Alternatively, you may retrieve a structured JSON output with more detailed account information by using:
 
