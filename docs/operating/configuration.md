@@ -4,7 +4,7 @@ proofedDate: 20230622
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: Do the API calls belong here too? https://www.notion.so/neonlabs/Neon-Specific-API-methods-3402baaad8fa4daeb12642495cf85eb3
+comment: Need a location for the API calls https://www.notion.so/neonlabs/Neon-Specific-API-methods-3402baaad8fa4daeb12642495cf85eb3
 ---
 
 ## Configuration of Neon Proxy
