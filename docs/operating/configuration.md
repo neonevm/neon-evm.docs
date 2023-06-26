@@ -14,10 +14,10 @@ The following variables may be configured to customize your Neon Proxy implement
 |Variable|Description/Link                         |
 |-----|:-----------------------------------------|
 |`PRX_PERM_ACCOUNT_LIMIT` |[Sets number of holder accounts / TPS](accounts#holder-accounts) to provide 100 TPS, PRX_PERM_ACCOUNT_LIMIT = 32|
-|`PRX_MINIMAL_GAS_PRICE`| [Hard set for minimum gas price for tx](transaction-gas#minimum-gas-price)|
+|`PRX_MINIMAL_GAS_PRICE`| [Hard set for minimum gas price to tx to mempool](transaction-gas#minimum-gas-price)|
 |`PRX_OPERATOR_FEE`|Sets [Operator fee](transaction-gas#gas-price-the-operator-fee) as a fraction of 100%, 0.1 = 10% fee|
-|`PRX_PP_SOLANA_URL`|[HTTP/S address of the Solana network with the main Pyth oracle contract](transaction-gas#calculation-configuration)|
-|`PRX_PYTH_MAPPING_ACCOUNT`|[Solana address of the Pyth mapping account](transaction-gas#calculation-configuration)|
+|`PRX_PP_SOLANA_URL`|[HTTP/S address of the Solana network with the main Pyth oracle contract](transaction-gas#calculation-configuration), e.g. this [Devnet](https://api.devnet.solana.com) address|
+|`PRX_PYTH_MAPPING_ACCOUNT`|[Solana address of the Pyth mapping account](transaction-gas#calculation-configuration), e.g. this Devnet address `BmA9Z6FjioHJPpjT39QazZyhDRUdZy2ezwx4GiDdE2u2` as per the Pyth account data page, [pyth.network/developers/accounts](https://pyth.network/developers/accounts?cluster=devnet)|
 |`PRX_UPDATE_PYTH_MAPPING_PERIOD_SEC`|[Time period to reread the Pyth mapping account](transaction-gas#calculation-configuration)|
 |`PRX_HOLDER_SIZE`|[Holder account](/docs/architecture/solana-accounts/#holder-account-size) size. Defaults to 262,144 bytes|
 |`FAUCET_URL`|For use in Devnet and Testnet: URL to the faucet service for distributing NEON tokens to the users|
