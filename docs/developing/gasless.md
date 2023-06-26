@@ -9,7 +9,7 @@ comment:
 
 ## TL;DR
 
-- You may arrange a starter pack of gasless transactions within Neon EVM
+- You may arrange a starter pack of gasless transactions within Neon EVM from info@neonevm.org
 
 ## Introduction
 
@@ -45,7 +45,7 @@ A code example is provided below to demonstrate how to make a request for the us
 
 ## How do I arrange to have gasless transactions?
 
-If you are interested in a starter pack, then reach out to ***** .
+If you are interested in a starter pack, then reach out to info@neonevm.org.
 
 You may be wondering does "N" stand for? The minimum number of gasless transactions is 3 per novel Neon Account (i.e. per end user). However, favoured partners may negotiate better deals.
 
@@ -53,6 +53,8 @@ You may be wondering does "N" stand for? The minimum number of gasless transacti
 ## Request gasless transactions
 
 The following is an extract from a [boilerplate React App](https://codesandbox.io/s/t3fid3?file=/src/hooks/useEthereumTransaction.ts:937-1484) setup to undertake a [Neon swap](https://thirdweb.com/neon-evm-devnet/0xF3eBc32292F4BbFB83DECB97Eb42d95da968f775/sources).
+
+<!-- We have a new link for the React App, but it still reveals devs real name!! https://codesandbox.io/s/stupefied-leavitt-d7p4r9 -->
 
 ```JavaScript
 	try 
