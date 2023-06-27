@@ -163,14 +163,22 @@ const config = {
   ],
   plugins: [
     [
-      '@docusaurus/plugin-client-redirects',
+       'docusaurus-plugin-openapi-docs',
       {
-        redirects: [
-          { from: '/docs', to: '/docs/quick_start' }
+        id: "apiDocs",
+        docsPluginId: "classic",
+        config: {
+          petstore: { // Note: petstore key is treated as the <id> and can be used to specify an API doc instance when using CLI commands
+            specPath: "src/specs/openapi.yaml", // Path to designated spec file
+            outputDir: "docs/api", // Output directory for generated .mdx docs
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          },
+        }
+      },
         ]
-      }
     ]
-  ]
 };
 
 module.exports = config;

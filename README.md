@@ -37,6 +37,17 @@ See [the docs](https://docusaurus.io/docs/next/markdown-features/react#markdown-
 yarn add raw-loader
 ```
 
+## Render API docs
+
+Trying: https://github.com/PaloAltoNetworks/docusaurus-openapi-docs
+
+`yarn add docusaurus-plugin-openapi-docs`
+
+`yarn add docusaurus-theme-openapi-docs`
+
+
+
+
 ## Control image sizes
 
 Docusaurus provides certain [controls for static assets](https://docusaurus.io/docs/static-assets). Either the default location must be used for image location (static/img), or this must be configured and the configured location applied. Ad hoc placement of images is not supported.
