@@ -9,7 +9,9 @@ comments: TODOs inline
 
 This page presents the full list of JSON-RPC methods. Each of them is in one of three states:
 
-<!-- todo Andrey can help by providing the deviations fr0m ETH standard methods / Neon equivalent will send 1n Slack todo Neon methods missing -- needs update == Andrey?? -->
+<!-- todo Andrey can help by providing the deviations fr0m ETH standard methods / Neon equivalent will send 1n Slack todo Neon methods missing -- needs update == Andrey?? 
+
+Split this into standard ETH-supported methods // Not supported methods // AND a Neon EVM specific table https://www.notion.so/neonlabs/Neon-Specific-API-methods-3402baaad8fa4daeb12642495cf85eb3 -->
 
 |![done](img/done.ico)| — done|![in progress](img/inprogress.ico) | — in progress|![not supported](img/false-copy.png) | — not supported|
 |--|--|--|--|--|--|
