@@ -45,9 +45,11 @@ Trying: https://github.com/PaloAltoNetworks/docusaurus-openapi-docs
 
 `yarn add docusaurus-theme-openapi-docs`
 
+`yarn docusaurus gen-api-docs all`
 
+success to here -- creates .api.mdx file
 
-
+ 
 ## Control image sizes
 
 Docusaurus provides certain [controls for static assets](https://docusaurus.io/docs/static-assets). Either the default location must be used for image location (static/img), or this must be configured and the configured location applied. Ad hoc placement of images is not supported.

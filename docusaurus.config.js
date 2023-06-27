@@ -95,14 +95,19 @@ const config = {
             items: [
               { label: 'BlockExplorer', to: 'https://neonscan.org/' },
               { label: 'NeonPass', to: 'https://neonpass.live/' },
-              { label: 'NeonFaucet', to: 'https://neonfaucet.org/' }            ]
+              { label: 'NeonFaucet', to: 'https://neonfaucet.org/' }            
+              { label: 'API', to: '/docs/api/delete-user' }            
+              ]
           },
           {
             title: 'Developers',
             items: [
               { label: 'Connect to Neon RPC', to: '/docs/developing/connect_rpc' },
               { label: 'Request Test Tokens', to: '/docs/developing/utilities/faucet' },
-              { label: 'Configure Dev Tools', to: '/docs/api/add-pet.api/'},
+              {
+                label: 'Configure Dev Tools',
+                to: '/docs/developing/deploy_facilities/configure_hardhat'
+              },
               {
                 label: 'Use Tokens',
                 to: '/docs/developing/deploy_facilities/interacting_with_spl_tokens'
