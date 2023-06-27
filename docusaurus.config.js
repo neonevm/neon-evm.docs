@@ -95,18 +95,14 @@ const config = {
             items: [
               { label: 'BlockExplorer', to: 'https://neonscan.org/' },
               { label: 'NeonPass', to: 'https://neonpass.live/' },
-              { label: 'NeonFaucet', to: 'https://neonfaucet.org/' }
-            ]
+              { label: 'NeonFaucet', to: 'https://neonfaucet.org/' }            ]
           },
           {
             title: 'Developers',
             items: [
               { label: 'Connect to Neon RPC', to: '/docs/developing/connect_rpc' },
               { label: 'Request Test Tokens', to: '/docs/developing/utilities/faucet' },
-              {
-                label: 'Configure Dev Tools',
-                to: '/docs/developing/deploy_facilities/configure_hardhat'
-              },
+              { label: 'Configure Dev Tools', to: '/docs/api/add-pet.api/'},
               {
                 label: 'Use Tokens',
                 to: '/docs/developing/deploy_facilities/interacting_with_spl_tokens'
@@ -177,8 +173,19 @@ const config = {
           },
         }
       },
+        ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          { from: '/docs', to: '/docs/quick_start' }
         ]
+      }
     ]
+    ],
+  themes: [
+  "docusaurus-theme-openapi-docs"
+  ], // Allows use of @theme/ApiItem and other components
 };
 
 module.exports = config;
