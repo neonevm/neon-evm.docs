@@ -63,3 +63,27 @@ To provide fault tolerant (24x7) Neon Proxy availability, the Neon team recommen
 > For example, if the Neon Operator has 40 keys, our recommendation is to run each instance of the Neon Proxy with 20 keys. 
 
 As a Kubernetes service, Neon Proxy instances will rebalance user requests and user transactions.
+
+## Testing
+
+Running a local node of Solana, Proxy, and the Neon EVM supports users who are interested in testing, developing, and learning how to interact with Neon EVM. Whether you wish to deploy smart contracts, conduct transactions, or interact with the deployed NeonEVM smart contract, running a local Proxy solution will assist. 
+
+To use Neon EVM's Mainnet entry point to Proxy, you must be on the allowlist, *whereas* running your own local installation does not require approval. 
+
+While Solana does not recommend running a Solana instance from a container, it does work and is useful for testing. Running Solana in a container also allows users to quickly reset the Solana state and retrieve the hardware space claimed by the node.
+
+There are several options available to developers who wish to test transactions on Neon EVM.
+
+## 1. Local Neon Proxy to local Solana
+
+[This page](basic.md) provides a walk-through for option 1.
+
+## 2. Local Neon Proxy to remote Solana
+
+It is also possible to run Neon Proxy locally and configure it to use a public RPC endpoint to access Solana.
+
+## 3. Remote Neon Proxy to remote Solana
+
+Most dApps will use this service model to process their transactions via Neon EVM.
+
+> Prior to Neon EVM's Mainnet launch, options 2 and 3 are available for Solana's Testnet and Devnet.

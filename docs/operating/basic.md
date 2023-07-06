@@ -1,11 +1,160 @@
 ---
-title: 'Basic: Local Build in Read-Only Mode'
+title: Proxy local testing
 proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
 comment: 
 ---
+
+import stats from '@site/static/img/doc-images/operating/proxy-local/docker-stats.png';
+import network from '@site/static/img/doc-images/operating/proxy-local/mm-manual-network-add.png;
+import network2 from '@site/static/img/doc-images/operating/proxy-local/network.png;
+import nmap from '@site/static/img/doc-images/operating/proxy-local/nmap-local-host2.png;
+
+
+
+## Prerequisites
+
+- Ubuntu/Intel
+> This tutorial presents a flow using an Intel chip with Ubuntu (as of the time of writing, the Solana image does not support alternative operating systems).
+- Browser supporting a MetaMask wallet 
+> [This tutorial uses Brave](https://brave.com/linux/)
+- [Docker compose](https://docs.docker.com/compose/install/) v>[2.12.1](https://docs.docker.com/compose/release-notes/#2121)
+- 1 Terabyte or more to run the Solana standalone node
+> Solana provides further details on the [recommended minimum requirements](https://docs.solana.com/ru/running-validator/validator-reqs).
+- nmap (or equivalent)
+
+
+### Step 1: Clone a local copy of the code
+
+Clone the Neon Proxy for Solana: https://github.com/neonlabsorg/proxy-model.py and change directory (`cd`) into the folder.
+
+### Step 2: Configure environment variables
+
+Set the following variables to "latest" to work with the Docker image's latest settings. Run the commands: 
+
+```bash
+export NEON_EVM_COMMIT=latest; export REVISION=latest; export FAUCET_COMMIT=latest
+```
+
+### Step 3: Run the required Docker containers
+
+Working at the root folder of the proxy-model.py codebase:
+
+3.1 Pull the Docker image:
+
+```bash
+docker-compose -f ./docker-compose/docker-compose-test.yml pull
+```
+
+3.2 Start the proxy with:
+
+```bash
+docker-compose -f ./docker-compose/docker-compose-test.yml up
+```
+
+> Let's check the status of our containers with: 
+> 
+> ```bash
+> docker stats
+> ```
+>
+> <div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
+> > <img src={stats} />
+
+Congratulations, you are now running Neon EVM deployed to a single, local node of Solana.
+
+Tip: 
+
+> When you are at the point where you are willing to lose your data, then free your disk space and close the instance by running:
+> `docker-compose -f ./docker-compose/docker-compose-test.yml down`
+
+### Step 4: Set up MetaMask wallet to run with the local proxy
+
+Set up your MetaMask wallet with the proxy:
+
+Tip: 
+> Run nmap, or equivalent, to view the ports the services are running on:
+> 
+> ```bash
+> nmap localhost
+> ```
+> The port 9090 is our proxy and 3333 is our faucet.
+
+4.1 From your browser's MetaMask extension, set the localhost as a network within the MetaMask wallet, click: **Settings** > **Networks** > **Add a Network** > **Add a network manually**
+
+> <div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
+> > <img src={network} /> 
+
+<!-- ![](../assets//proxy-local/mm-manual-network-add.png) -->
+
+4.2 Fill out the following fields:
+- **Network name**: Neon Localhost
+- **New RPC URL**: http://localhost:9090/solana
+- **Chain ID**: 111
+- **Currency symbol**: NEON
+
+Then click **Save**.
+
+> <div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
+> > <img src={network2} /> 
+
+
+<!-- ![](../assets//proxy-local/network.png) -->
+
+
+### Step 5: Use the faucet to populate your wallet with NEON tokens
+
+5.1 Copy your account address from your MetaMask wallet and update the following script to use your address:
+
+<!-- Consider adding this .sh file to the proxy-model repo, why we going to leave our reader to create a file when we can provide it? -->
+
+file: drop_neons.sh
+
+```bash
+#!/usr/bin/env bash
+
+if [ -z "$1" ]; then
+  echo "Usage: drop_neons.sh <wallet-address>"
+  exit 1
+fi
+
+/usr/bin/curl --location --request POST 'http://localhost:3333/request_neon' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "wallet": "'${1}'",
+  "amount": 1000
+}'
+```
+
+5.2 From your terminal, at the file location run `sh ./drop_neons.sh {wallet address}`.
+
+<!-- May be necessary to #chmod +x drop_neons.sh on this file -->
+
+## What next?
+
+Congratulations you can now deploy and test smart contracts on the NeonEVM. See our article demonstrating how to deploy a contract via the Remix IDE. 
+
+<!-- link to article required external == https://docs.neonfoundation.io/docs/developing/deploy_facilities/using_remix -->
+
+### Gotchas
+
+- It is recommended that you have a couple of terabytes of free space! Should you want to run your node with persistent data, the space requirements will grow.
+- The MetaMask Wallet may not update automatically; reselect **Neon Localhost**to force a refresh after using the faucet
+> <div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
+> > <img src={nmap} /> 
+<!-- ![](../assets//proxy-local/nmap-local-host2.png) -->
+- It is only possible to set up the localhost network in the MetaMask wallet while the proxy service is running.
+- If you are following best practice, and add your [user to the `docker` group](https://docs.docker.com/engine/install/linux-postinstall/) to avoid running Docker as root, then restart to apply the update.
+
+<!-- I did this on docker-compose 1.29.2 no problem -->
+
+
+<!--
+
+What follows is the original page content -- not deleting as there are hints at environment variables that should be supported
+
 
 *This guide sets you up with a functional, running neon-proxy on your local machine with `docker-compose` in a matter of minutes with minimal user input required.* 
 
@@ -190,3 +339,5 @@ Commitment: confirmed
 ```
 
 Voila, the endpoint [http://127.0.0.1:9090/solana](http://127.0.0.1:9090/solana) can be now accessed with your local MetaMask for testing purposes.
+
+-->
