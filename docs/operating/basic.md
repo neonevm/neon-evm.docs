@@ -1,17 +1,19 @@
 ---
 title: Proxy local testing
-proofedDate: na
+proofedDate: 20230706
 iterationBy: na
 includedInSite: true
 approvedBy: na
 comment: 
 ---
 
-import stats from '@site/static/img/doc-images/operating/proxy-local/docker-stats.png';
-import network from '@site/static/img/doc-images/operating/proxy-local/mm-manual-network-add.png;
-import network2 from '@site/static/img/doc-images/operating/proxy-local/network.png;
-import nmap from '@site/static/img/doc-images/operating/proxy-local/nmap-local-host2.png;
-
+import stats from '@site/static/img/doc-images/operating/local-proxy/docker-stats2.png';
+import network from '@site/static/img/doc-images/operating/local-proxy/mm-manual-network-add.png';
+import network2 from '@site/static/img/doc-images/operating/local-proxy/network.png';
+import nmap from '@site/static/img/doc-images/operating/local-proxy/nmap-local-host.png'; 
+import update from '@site/static/img/doc-images/operating/local-proxy/mmw_update.png'; 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 
 ## Prerequisites
@@ -19,18 +21,18 @@ import nmap from '@site/static/img/doc-images/operating/proxy-local/nmap-local-h
 - Ubuntu/Intel
 > This tutorial presents a flow using an Intel chip with Ubuntu (as of the time of writing, the Solana image does not support alternative operating systems).
 - Browser supporting a MetaMask wallet 
-> [This tutorial uses Brave](https://brave.com/linux/)
+> [This tutorial uses Brave](https://brave.com/linux/).
 - [Docker compose](https://docs.docker.com/compose/install/) v>[2.12.1](https://docs.docker.com/compose/release-notes/#2121)
 - 1 Terabyte or more to run the Solana standalone node
 > Solana provides further details on the [recommended minimum requirements](https://docs.solana.com/ru/running-validator/validator-reqs).
 - nmap (or equivalent)
 
 
-### Step 1: Clone a local copy of the code
+## Step 1: Clone a local copy of the code
 
 Clone the Neon Proxy for Solana: https://github.com/neonlabsorg/proxy-model.py and change directory (`cd`) into the folder.
 
-### Step 2: Configure environment variables
+## Step 2: Configure environment variables
 
 Set the following variables to "latest" to work with the Docker image's latest settings. Run the commands: 
 
@@ -38,7 +40,7 @@ Set the following variables to "latest" to work with the Docker image's latest s
 export NEON_EVM_COMMIT=latest; export REVISION=latest; export FAUCET_COMMIT=latest
 ```
 
-### Step 3: Run the required Docker containers
+## Step 3: Run the Docker container
 
 Working at the root folder of the proxy-model.py codebase:
 
@@ -54,23 +56,42 @@ docker-compose -f ./docker-compose/docker-compose-test.yml pull
 docker-compose -f ./docker-compose/docker-compose-test.yml up
 ```
 
+
+<Tabs>
+  <TabItem value="View" label="Code" default>
+
 > Let's check the status of our containers with: 
 > 
 > ```bash
 > docker stats
 > ```
 >
-> <div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
-> > <img src={stats} />
+
+</TabItem>
+<TabItem value="Retrieve" label="Outcome" default>
+
+<div className='neon-img-box-300' style={{textAlign: 'center', width: 900, display: 'block', margin: 'auto'}}>
+
+<img src={stats} />
+
+</div>
+</TabItem>
+</Tabs>
+
+
+
 
 Congratulations, you are now running Neon EVM deployed to a single, local node of Solana.
 
-Tip: 
+:::tip
 
 > When you are at the point where you are willing to lose your data, then free your disk space and close the instance by running:
-> `docker-compose -f ./docker-compose/docker-compose-test.yml down`
+> ```bash
+> docker-compose -f ./docker-compose/docker-compose-test.yml down
+> ```
+:::
 
-### Step 4: Set up MetaMask wallet to run with the local proxy
+## Step 4: Set up MetaMask wallet to run with the local proxy
 
 Set up your MetaMask wallet with the proxy:
 
@@ -82,12 +103,23 @@ Tip:
 > ```
 > The port 9090 is our proxy and 3333 is our faucet.
 
-4.1 From your browser's MetaMask extension, set the localhost as a network within the MetaMask wallet, click: **Settings** > **Networks** > **Add a Network** > **Add a network manually**
+<Tabs>
+  <TabItem value="View" label="4.1" default>
 
-> <div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
-> > <img src={network} /> 
+From your browser's MetaMask extension, set the localhost as a network within the MetaMask wallet, click: **Settings** > **Networks** > **Add a Network** > **Add a network manually**
 
-<!-- ![](../assets//proxy-local/mm-manual-network-add.png) -->
+</TabItem>
+<TabItem value="Retrieve" label="Show" default>
+
+<div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
+<img src={network} />
+</div>
+</TabItem>
+</Tabs>
+
+
+<Tabs>
+  <TabItem value="View" label="4.2" default>
 
 4.2 Fill out the following fields:
 - **Network name**: Neon Localhost
@@ -95,16 +127,20 @@ Tip:
 - **Chain ID**: 111
 - **Currency symbol**: NEON
 
-Then click **Save**.
+And click **Save**.
 
-> <div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
-> > <img src={network2} /> 
+</TabItem>
+<TabItem value="Retrieve" label="Show" default>
+<div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
+<img src={network2} />  
+
+</div>
+
+</TabItem>
+</Tabs>
 
 
-<!-- ![](../assets//proxy-local/network.png) -->
-
-
-### Step 5: Use the faucet to populate your wallet with NEON tokens
+## Step 5: Use the faucet to populate your wallet with NEON tokens
 
 5.1 Copy your account address from your MetaMask wallet and update the following script to use your address:
 
@@ -132,23 +168,33 @@ fi
 
 <!-- May be necessary to #chmod +x drop_neons.sh on this file -->
 
-## What next?
 
-Congratulations you can now deploy and test smart contracts on the NeonEVM. See our article demonstrating how to deploy a contract via the Remix IDE. 
-
-<!-- link to article required external == https://docs.neonfoundation.io/docs/developing/deploy_facilities/using_remix -->
-
-### Gotchas
+## Gotchas
 
 - It is recommended that you have a couple of terabytes of free space! Should you want to run your node with persistent data, the space requirements will grow.
-- The MetaMask Wallet may not update automatically; reselect **Neon Localhost**to force a refresh after using the faucet
+- The MetaMask Wallet may not update automatically:
+> <Tabs>
+>  <TabItem value="View" label="Reselect " default>
+> <b>Neon Localhost</b> to force a refresh after using the faucet
+> </TabItem>
+> <TabItem value="Retrieve" label="Show" default>
 > <div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
-> > <img src={nmap} /> 
-<!-- ![](../assets//proxy-local/nmap-local-host2.png) -->
+<img src={update} />  
+</div>
+> </TabItem>
+> </Tabs> 
+
 - It is only possible to set up the localhost network in the MetaMask wallet while the proxy service is running.
-- If you are following best practice, and add your [user to the `docker` group](https://docs.docker.com/engine/install/linux-postinstall/) to avoid running Docker as root, then restart to apply the update.
+- If you are following best practice, and adding your [user to the `docker` group](https://docs.docker.com/engine/install/linux-postinstall/) to avoid running Docker as root or sudo, then restart to apply the update.
 
 <!-- I did this on docker-compose 1.29.2 no problem -->
+
+## What next?
+
+Congratulations you can now deploy and test smart contracts on the NeonEVM. Consider:
+- [Deploying a contract](../developing/deploy_facilities/using_remix) via the Remix IDE
+- [Understanding how to configure your self-managed Proxy](enhanced.md#configuration)
+
 
 
 <!--
@@ -273,7 +319,7 @@ where:
  and can be found in {the RPC endpoints table}(/docs/clusters/neon_proxy_rpc_endpoints.md)
 * `REVISION` is the version of choice or `"stable"` to use the stable version -->
 
-### Database
+<!-- ### Database
 The Docker Composer will use your local disk as storage for the proxy's PostgreSQL database:
 ```yaml
 volumes:
