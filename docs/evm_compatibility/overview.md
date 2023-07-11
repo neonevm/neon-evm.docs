@@ -4,7 +4,7 @@ proofedDate: na
 iterationBy: HB
 includedInSite: true
 approvedBy: na
-comments: 
+comments: Missing -- details of tracer for source of historical data. Where in docs can this live?
 ---
 
 import heap from '@site/static/img/doc-images/evm-compat/heap-overflow-error.png';
@@ -155,6 +155,7 @@ Consider the following techniques if you need to troubleshoot a heap overflow er
 
 
 ### Limitation on `block.timestamp` / `block.number` usage
+
 Time-related methods in addresses for mapping indexes, namely `block.timestamp` and `block.number`, behave differently from Ethereum and developers are **strongly cautioned** against using them when developing on Neon EVM. 
 
 The following code snippet is correct on Ethereum, but is **not** correct on Neon, due to the usage of `block.timestamp`.
