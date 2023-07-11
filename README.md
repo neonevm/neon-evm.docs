@@ -61,7 +61,7 @@ This file is set to lint Markdown files, as per `[*.md]`.
 
 ### Linting
 
-Linting may either be local (with vale installed via the CLI), or on a webhook action in GitHub or the like. 
+Linting may either be local (with vale installed via the CLI) or on a webhook action in GitHub or the like. 
 
 ### Local lint
 
@@ -83,4 +83,10 @@ You can either lint **all** Markdown files with `vale .`, or you can name a spec
 	*********
 </TabItem>
 </Tabs>
+
+### Code boilerplates
+
+[codesandbox](https://codesandbox.io/dashboard/recent?workspace=6715f772-9c64-4139-8c8d-a18fe3f51a91) setup for grammarly@neonlabs.org
+
+with authentication via [GitHub](https://github.com/anonNeon)
 

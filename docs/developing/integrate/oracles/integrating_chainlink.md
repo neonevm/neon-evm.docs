@@ -60,6 +60,8 @@ The Chainlink controller contract is deployed on Devnet. This contract implement
 
 ## Boilerplate contract
 
+[View in Remix](https://remix.ethereum.org/#url=https://github.com/neonevm/neon-evm.docs/blob/main/docs/code-samples/chainlink-btc-usd-pricefeed.sol&lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.18+commit.87f61d96.js)
+
 ```Solidity
 SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
