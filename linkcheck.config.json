@@ -1,0 +1,10 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^(?!\\b(http|https)\\b.*$).*"
+    },
+    {
+      "pattern": "^http://localhost"
+    }
+  ]
+}

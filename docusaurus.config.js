@@ -9,7 +9,7 @@ const config = {
   url: 'https://docs.neonfoundation.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.png',
   organizationName: 'neonlabsorg',
   projectName: 'neon-evm.docs',
