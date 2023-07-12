@@ -8,7 +8,7 @@ const config = {
   tagline: 'Neon EVM is an open source project implementing the Ethereum virtual machine on Solana.',
   url: 'https://docs.neonfoundation.io',
   baseUrl: '/',
-  onBrokenLinks: 'ignore',
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
   organizationName: 'neonlabsorg',
