@@ -23,10 +23,11 @@ jobs:
           yarn clear
           yarn build
       - name: Check external links
-        run: yarn serve &
-      - uses: filiph/linkcheck@2.0.23
-        with:
-          arguments: http://localhost:3000/
+        run: |
+          yarn serve &
+          docker run --net=host \
+          -v ${GITHUB_WORKSPACE}/linkcheck_skip.txt:/app/skip_file \
+          --rm tennox/linkcheck :3000 -e -d --skip-file /app/skip_file
       - name: Deploy to s3
         uses: jakejarvis/s3-sync-action@master
         with:
