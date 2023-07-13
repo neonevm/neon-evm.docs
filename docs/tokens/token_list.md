@@ -16,7 +16,11 @@ To use SPL or ERC-20 tokens from a Neon account, you need to transact via the to
 
 <!-- When performing operations on tokens in the Neon EVM, it is important to know which token symbol or address can be used. Having a list of possible tokens available, you can easily navigate when choosing the token you need. -->
 
-For the most up-to-date list of tokens whose contracts are deployed in Neon EVM and are available, see the [neonlabsorg/token-list](https://github.com/neonlabsorg/token-list/) repository, or call the list with the [Factory contract](docs/developing/deploy_facilities/interacting_with_spl_tokens.md).
+For the most up-to-date list of tokens whose contracts are deployed in Neon EVM and are available, call the list with the [Factory contract](docs/developing/deploy_facilities/interacting_with_spl_tokens.md).
+
+<!-- todo problem >> the repo is set to private, so end user does not have this option!
+  For the most up-to-date list of tokens whose contracts are deployed in Neon EVM and are available, see the [neonlabsorg/token-list](https://github.com/neonlabsorg/token-list/) repository, or call the list with the [Factory contract](docs/developing/deploy_facilities/interacting_with_spl_tokens.md). 
+-->
 
 ## Token list: NeonPass-supported tokens
 
