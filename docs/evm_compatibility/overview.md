@@ -43,7 +43,7 @@ Neon supports all precompiled contracts defined on [evm.code](https://www.evm.co
 ### Gas calculation
 The mechanism of gas consumption and calculation of gas fees on Neon EVM differ from Ethereum. Gas fees on Neon EVM are much cheaper than on Ethereum. 
 
-> Learn more about the [NEON token and how gas fees work on Neon EVM](../../docs/tokens/gas_fees.md).
+> Learn more about the [NEON token and how gas fees work on Neon EVM](../../docs/tokens/gas_fees.mdx).
 
 Several Solana-specific differences also impact smart contract development.
 
