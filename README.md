@@ -29,7 +29,8 @@ This command generates static content into the `build` directory and can be serv
 
 ## Use single source content
 
-> I have not got this working yet
+> Both files must be .mdx (the single source item AND the file that imports the item)
+> See docs/tokens/gas_fees.mdx for a working example
 
 See [the docs](https://docusaurus.io/docs/next/markdown-features/react#markdown-and-jsx-interoperability)
 
