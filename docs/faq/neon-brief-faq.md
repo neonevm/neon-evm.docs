@@ -52,20 +52,18 @@ You can view our roadmap  on our [Home Page](https://neon-labs.org/).
 
 ### How can I join the Neon community?
 
-The Neon community is an exciting one to join! Check out our [community page](https://neon-labs.org/community) and join any platform that interest you.
-
-### How can I help support Neon?
-
-Feel free to reach out to us in our [Discord community](https://discord.com/invite/ApZRBDqYcN).
+Neon has an active community: check out our [community page](https://neonevm.org/community) and join any platform that interests you.
 
 ### Where can I see a list of projects in the ecosystem?
 
 You can see the list of projects that are being built in Neon [here](https://docs.neonfoundation.io/docs/about/neon_ecosystem).
 
-### Where can I see a list of upcoming events involving Neon?
+<!-- ### Where can I see a list of upcoming events involving Neon?
 
-Upcoming events in the Neon community are listed on our [events page](https://neon-labs.org/events). You can also sign up for Neon’s newsletter to stay in the loop. If an in-person Neon event is happening near you, why not come and say hello?
+Upcoming events in the Neon community are listed on our [events page](https://neon-labs.org/events). You can also sign up for Neon’s newsletter to stay in the loop. If an in-person Neon event is happening near you, why not come and say hello? -->
 
 ## What next?
 
 If you still have a question about the Neon EVM that is not answered in the FAQ, please join us on our [Discord server](https://discord.gg/neonevm). Our team will be glad to help you.
+
+> Discord [invite link](https://discord.com/invite/ApZRBDqYcN)
