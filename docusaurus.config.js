@@ -27,6 +27,7 @@ const config = {
       }
     }
   ],
+  themes: ["docusaurus-json-schema-plugin"],
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

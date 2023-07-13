@@ -34,7 +34,7 @@ const sidebars = {
       label: '💰 Tokens',
       items: [
         'tokens/neon_token',
-        'tokens/gas_fees',      
+        'tokens/gas_fees',
         'tokens/token_list'
       ]
     },
@@ -131,7 +131,7 @@ const sidebars = {
         'architecture/eth_sol_solution',
         'architecture/solana-accounts'
       ]
-    },   
+    },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Operate</h4>' },
     {
@@ -147,7 +147,7 @@ const sidebars = {
         'operating/enhanced',
         'operating/installation/setup_kubernetes'
       ]
-    },    
+    },
     {
       type: 'category',
       label: 'Configuration',
