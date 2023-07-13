@@ -14,9 +14,15 @@
     },
     {
       "pattern": "^https://mainnet.neonevm.org"
+    },
+    {
+      "pattern": "^https://support.ledger.com/hc/en-us/articles/"
+    },
+    {
+      "pattern": "^https://support.metamask.io/hc/en-us/articles/"
     }
   ],
   "aliveStatusCodes": [
-    200, 206, 403
+    200, 206
   ]
 }
