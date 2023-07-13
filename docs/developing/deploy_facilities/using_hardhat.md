@@ -89,6 +89,6 @@ Minting  100000000000  tokens...
 ```
 
 ### Step 6: Connect Project to MetaMask
-To import your project as an asset in MetaMask, follow the instructions [here](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask#h_01FWH492CHY60HWPC28RW0872H) and use the contract address from the previous step as the 'Token Contract Address' in MetaMask.
+To import your project as an asset in MetaMask, follow the instructions [here](https://support.metamask.io/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask#h_01FWH492CHY60HWPC28RW0872H) and use the contract address from the previous step as the 'Token Contract Address' in MetaMask.
 
 Once you complete this final step, you will be able to see your new ERC-20 assets in the MetaMask profiles of the new test accounts.

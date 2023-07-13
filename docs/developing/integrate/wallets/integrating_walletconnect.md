@@ -20,12 +20,18 @@ import connected from '@site/static/img/doc-images/developing/integrate/protocol
 
 This guide lays out a step-by-step process to configure a React or HTML dApp on NeonEVM using WalletConnect's [Web3Modal SDK](https://docs.walletconnect.com/2.0/web3modal/about).
 
-Web3Modal is a library that allows users to connect to any dApp via the WalletConnect interface. Check out its code on [GitHub](https://github.com/WalletConnect/web3modal). Web3Modal supports:
+Web3Modal is a library that allows users to connect to any dApp via the WalletConnect interface. 
 
-- [React](https://docs.walletconnect.com/2.0/web3modal/react/installation)
-- [HTML](https://docs.walletconnect.com/2.0/web3modal/html-js/installation)
-- [Standalone sign](https://docs.walletconnect.com/2.0/web3modal/advanced/standalone/sign/installation) / [Standalone auth](https://docs.walletconnect.com/2.0/web3modal/advanced/standalone/auth/installation)
+:::info
 
+Check out Web3Modal code on [GitHub](https://github.com/WalletConnect/web3modal). 
+
+Web3Modal supports:
+
+- [React](https://docs.walletconnect.com/2.0/reactnative/walletconnectmodal/about)
+- [HTML](https://docs.walletconnect.com/2.0/web/web3modal/html/wagmi/installation)
+
+:::
 
 ## Get Started
 

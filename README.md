@@ -47,7 +47,15 @@ Using the default location:
 2. Reference the image and the size required, e.g.
 `<img src={myimage} width="450" />`
 
-## QA layer: Vale
+## QA layer
+
+## External and internal links
+
+The repo provides a QA action run to build and validate the docs. This step includes verifying internal and external links.
+
+> To use links to internal pages such as Notion, that public users do not have access to (e.g. in the metadata), it is necessary to comment out the URL.
+
+## Vale
 
 Vale is a linting tool for spelling, grammar, and style.
 
@@ -61,7 +69,7 @@ This file is set to lint Markdown files, as per `[*.md]`.
 
 ### Linting
 
-Linting may either be local (with vale installed via the CLI) or on a webhook action in GitHub or the like. 
+Linting with Vale may either be local (with Vale installed via the CLI) or on a webhook action in GitHub or the like. 
 
 ### Local lint
 
