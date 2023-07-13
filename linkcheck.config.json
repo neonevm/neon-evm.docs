@@ -5,6 +5,18 @@
     },
     {
       "pattern": "^http://localhost"
+    },
+    {
+      "pattern": "^https://devnet.neonevm.org"
+    },
+    {
+      "pattern": "^https://testnet.neonevm.org"
+    },
+    {
+      "pattern": "^https://mainnet.neonevm.org"
     }
+  ],
+  "aliveStatusCodes": [
+    200, 206, 403
   ]
 }
