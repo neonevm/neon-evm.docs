@@ -78,7 +78,7 @@ See Ledger's [configuration guide](https://support.ledger.com/hc/en-us/articles/
 
 1.1 Unbox and charge your Ledger hardware wallet by connecting it to your computer with a USB-C cable.
 
-1.2 Download the Ledger Live Mac app from [https://www.ledger.com/start](www.ledger.com/start). 
+1.2 Download the Ledger Live Mac app from [https://www.ledger.com/start](https://www.ledger.com/start). 
 
 > Select “Mac app” from the dropdown menu after you click **Download**.
 
