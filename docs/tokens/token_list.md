@@ -5,7 +5,7 @@ iterationBy: na
 includedInSite: true
 approvedBy: na
 updateDetails: This source provides the NeonPass-supported tokens https://github.com/neonlabsorg/neonpass-ui/blob/5588478e7d421d07dd21b8440e6e0d6dd91d5fca/src/token-transfer/services/tokens-list.service.ts#L175-L184 HOWEVER not clear on the token naming (e.g. what is W_BTC? also not clear on which chain this applies to also not clear how bridger is identified -- what would SOETH look like compared to WETH -- sollet vs wormhole wrapped ETH?)
-comment: TODO source of truth for https://github.com/neonlabsorg/token-list/blob/17a7b46f5786f3ae05e68db927e6629ba397459e/tokenlist.json needs programmatic update from this page -- want to include bridger info too when that applies -- is this possible? NB only full code block results in copy option -- tried this in HTML table and it is not compatible
+comment: TODO source of truth for <!-- https://github.com/neonlabsorg/token-list/blob/17a7b46f5786f3ae05e68db927e6629ba397459e/tokenlist.json --> needs programmatic update from this page -- want to include bridger info too when that applies -- is this possible? NB only full code block results in copy option -- tried this in HTML table and it is not compatible
 ---
 
 import Tabs from '@theme/Tabs';
