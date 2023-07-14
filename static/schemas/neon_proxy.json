@@ -2,6 +2,7 @@
   "type": "object",
   "description": "Neon Proxy RPC Request",
   "items":false,
+<<<<<<< HEAD
   "properties":[
     {
       "type":"string",
@@ -36,4 +37,28 @@
       "description":"The type of street"
     }
   ]
+=======
+  "properties": {
+    "jsonrpc": {
+      "type":"string",
+      "value": "2.0",
+      "description":"json rpc version"
+    },
+    "method": {
+      "type":"string",
+      "value": "neon_proxyVersion",
+      "description":"The method name"
+    },
+    "params": {
+      "type": "array",
+      "value": [],
+      "description": "Description for params array"
+    },
+    "id": {
+      "type": "number",
+      "value": 1,
+      "description": "Description for id field"
+    }
+  }
+>>>>>>> 458354f1b17dc80e47cc9602bf5f31d3f4d9a0a2
 }
