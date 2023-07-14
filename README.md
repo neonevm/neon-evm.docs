@@ -99,3 +99,10 @@ You can either lint **all** Markdown files with `vale .`, or you can name a spec
 
 with authentication via [GitHub](https://github.com/anonNeon)
 
+## API documentation
+
+Neon EVM provides several JSON RPC endpoints to the public. These need to be documented.
+
+Tooling selected: https://jy95.github.io/docusaurus-json-schema-plugin/boxFileSchema
+
+
