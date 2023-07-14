@@ -1,0 +1,30 @@
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "NEON_ACCOUNT_SEED_VERSION": "3",
+        "NEON_ADDITIONAL_FEE": "0",
+        "NEON_CHAIN_ID": "245022926",
+        "NEON_COMPUTE_BUDGET_HEAP_FRAME": "262144",
+        "NEON_COMPUTE_BUDGET_UNITS": "500000",
+        "NEON_EVM_STEPS_LAST_ITERATION_MAX": "1",
+        "NEON_EVM_STEPS_MIN": "500",
+        "NEON_GAS_LIMIT_MULTIPLIER_NO_CHAINID": "1000",
+        "NEON_HOLDER_MSG_SIZE": "950",
+        "NEON_OPERATOR_PRIORITY_SLOTS": "16",
+        "NEON_PAYMENT_TO_DEPOSIT": "5000",
+        "NEON_PAYMENT_TO_TREASURE": "5000",
+        "NEON_PKG_VERSION": "0.15.13",
+        "NEON_POOL_COUNT": "128",
+        "NEON_POOL_SEED": "treasury_pool",
+        "NEON_REQUEST_UNITS_ADDITIONAL_FEE": "0",
+        "NEON_REVISION": "9a4bbf29359e752336c0a1ff5fcb03e3ad303b7a",
+        "NEON_STATUS_NAME": "WORK",
+        "NEON_STORAGE_ENTRIES_IN_CONTRACT_ACCOUNT": "64",
+        "NEON_TOKEN_MINT": "89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g",
+        "NEON_TOKEN_MINT_DECIMALS": "9",
+        "NEON_TREASURY_POOL_COUNT": "128",
+        "NEON_TREASURY_POOL_SEED": "treasury_pool",
+        "NEON_EVM_ID": "eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU"
+    }
+}

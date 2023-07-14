@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "description": "Neon Proxy RPC neon_cliVersion request",
+  "items":false,
+  "properties": {
+    "jsonrpc": {
+      "type":"string",
+      "value": "2.0",
+      "description":"json rpc version"
+    },
+    "method": {
+      "type":"string",
+      "value": "neon_cliVersion",
+      "description":"The method name"
+    },
+    "params": {
+      "type": "array",
+      "value": [],
+      "description": "Description for params array"
+    },
+    "id": {
+      "type": "number",
+      "value": 1,
+      "description": "Description for id field"
+    }
+  }
+}

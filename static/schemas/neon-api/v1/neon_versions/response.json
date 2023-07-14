@@ -1,0 +1,10 @@
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "proxy": "Neon-proxy/v0.15.26-e902265cdc5eb7bc69cddb0b4eed859fab660a06",
+        "evm": "Neon/v0.15.13-9a4bbf29359e752336c0a1ff5fcb03e3ad303b7a",
+        "cli": "Neon-cli/v0.15.13-9a4bbf29359e752336c0a1ff5fcb03e3ad303b7a",
+        "solana": "Solana/v1.14.18"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "jsonrpc": "2.0", 
+    "id": 64,
+    "method": "neon_gasPrice", 
+    "params": [{
+      "from": "0x348ee8817eA227e52e233668874fA609aA51C83D",
+			"nonce": "0x0"
+    }]
+}

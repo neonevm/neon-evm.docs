@@ -1,0 +1,9 @@
+{
+		"jsonrpc": "2.0", 
+		"method": "neon_getLogs", 
+		"id": 64,
+		"params": [{
+				"fromBlock": "earliest", 
+				"toBlock": "latest"
+		}] 
+}

@@ -4,19 +4,209 @@ proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: Needs version control process -- just tabs v1 v2?
+comment: Needs version control process -- just tabs v1 v2 ...?
 ---
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import JSONSchemaViewer from "@theme/JSONSchemaViewer";
-import Neon_Proxy from "@site/static/schemas/neon_proxy.json";
 import CodeBlock from '@theme/CodeBlock';
+import neon_proxyVersion_request from "@site/static/schemas/neon-api/v1/neon_proxyVersion/request.json";
+import neon_evmVersion_request from "@site/static/schemas/neon-api/v1/neon_evmVersion/request.json";
+import neon_cliVersion_request from "@site/static/schemas/neon-api/v1/neon_cliVersion/request.json";
+import neon_getEvmParams_request from "@site/static/schemas/neon-api/v1/neon_getEvmParams/request.json";
+import neon_versions_request from "@site/static/schemas/neon-api/v1/neon_versions/request.json";
+import neon_solanaVersion_request from "@site/static/schemas/neon-api/v1/neon_solanaVersion/request.json";
+import neon_gasPrice_request from "@site/static/schemas/neon-api/v1/neon_gasPrice/request.json";
+import neon_getLogs_request from "@site/static/schemas/neon-api/v1/neon_getLogs/request.json";
+import neon_getTransactionReceipt_request from "@site/static/schemas/neon-api/v1/neon_getTransactionReceipt/request.json";
+import neon_getSolanaTransactionByNeonTransaction_request from "@site/static/schemas/neon-api/v1/neon_getSolanaTransactionByNeonTransaction/request.json";
+import neon_emulate_request from "@site/static/schemas/neon-api/v1/neon_emulate/request.json";
+import neon_proxyVersion_response from "@site/static/schemas/neon-api/v1/neon_proxyVersion/response.json";
+import neon_evmVersion_response from "@site/static/schemas/neon-api/v1/neon_evmVersion/response.json";
+import neon_cliVersion_response from "@site/static/schemas/neon-api/v1/neon_cliVersion/response.json";
+import neon_getEvmParams_response from "@site/static/schemas/neon-api/v1/neon_getEvmParams/response.json";
+import neon_versions_response from "@site/static/schemas/neon-api/v1/neon_versions/response.json";
+import neon_solanaVersion_response from "@site/static/schemas/neon-api/v1/neon_solanaVersion/response.json";
+import neon_gasPrice_response from "@site/static/schemas/neon-api/v1/neon_gasPrice/response.json";
+import neon_getLogs_response from "@site/static/schemas/neon-api/v1/neon_getLogs/response.json";
+import neon_getTransactionReceipt_response from "@site/static/schemas/neon-api/v1/neon_getTransactionReceipt/response.json";
+import neon_getSolanaTransactionByNeonTransaction_response from "@site/static/schemas/neon-api/v1/neon_getSolanaTransactionByNeonTransaction/response.json";
+import neon_emulate_response from "@site/static/schemas/neon-api/v1/neon_emulate/response.json";
 
 
-## Neon Proxy Schema
 
-<JSONSchemaViewer schema={ Neon_Proxy } />
+## Neon API service
 
-## JSON
+Neon provides several endpoints to assist our users. This page provides the information you need to interact with these services.
 
-<CodeBlock language="json">{JSON.stringify(Neon_Proxy, null, 2)}</CodeBlock>
+<!-- ### Authentication -->
+
+<!-- wip -- are keys needed? IPs on an allowlist? -->
+
+The following services are available in Neon API V1:
+
+### Version information
+
+- [neon_cliVersion](#get-the-neon-cli-version): returns the current version of Neon EVM CLI used by the Neon Proxy
+- [neon_evmVersion](#get-the-neon-evm-version): returns the current version of the NeonEVM program deployed on the Solana
+- [neon_getEvmParams](#get-the-neon-evm-program-version): returns parameters of the NeonEVM program deployed on the Solana
+- [neon_proxyVersion](#get-the-neon-proxy-version): returns the current version of the Neon Proxy
+- [neon_solanaVersion](#get-the-solana-version): returns the version of the Solana node the Neon Proxy runs on
+- [neon_versions](get-the-neon-platform-components): returns a list of components provided by the current Neon Platform
+
+### Gas price information
+
+- [neon_gasPrice](#get-neon-gas-price-data): returns data on gas price
+
+### Neon transaction data
+
+- [neon_getLogs](#get-transaction-logs): returns transaction log data
+- [neon_getTransactionReceipt](#get-transaction-receipt): returns transaction receipt data
+- [neon_getSolanaTransactionByNeonTransaction](#get-solana-transactions): returns a list of Solana transactions that correspond to a given Neon transaction
+- [neon_emulate](#emulate-a-neon-transaction): returns details of an emultated transaction
+
+
+## Neon API specifications
+
+All API calls use the `POST` method to any public RPC endpoint.
+
+<!-- Is this true -- is there a dedicated neon-managed endpoint or can any Proxy-hosted endpoint act as an entry point?  -->
+
+### Get the Neon CLI version 
+
+The `neon_cliVersion` method returns the current version of the Neon EVM-CLI used by the Neon Proxy.
+
+#### Request
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_cliVersion_request } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_proxyVersion_request, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+#### Response
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_cliVersion_response } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_cliVersion_response, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+#### Get the Neon EVM version
+
+The `neon_evmVersion` method returns the current version of the NeonEVM program deployed on Solana.
+
+#### Request
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_evmVersion_request } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_evmVersion_request, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+#### Response
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_evmVersion_response } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_evmVersion_response, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+
+#### Get the Neon EVM program version 
+
+The `neon_getEvmParams` method returns parameters of the Neon EVM program deployed on the Solana
+
+#### Get the Neon Proxy version
+
+The `neon_proxyVersion` method returns the current version of the Neon Proxy.
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_proxyVersion_request } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_proxyVersion_request, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+
+
+
+#### Get the Solana version 
+
+`neon_solanaVersion`
+
+returns the version of the Solana node the Neon Proxy runs on
+
+
+#### Get the Neon Platform components 
+
+`neon_versions`
+
+returns a list of components provided by the current Neon Platform
+
+#### Get Neon Gas price data 
+
+`neon_gasPrice`
+
+returns data on gas price
+
+#### Get transaction logs 
+
+`neon_getLogs`
+
+returns transaction log data
+
+#### Get transaction receipt 
+
+`neon_getTransactionReceipt`
+
+returns transaction receipt data
+
+#### Get Solana transactions 
+
+`neon_getSolanaTransactionByNeonTransaction`
+
+returns a list of Solana transactions that correspond to a given Neon transaction
+
+#### Emulate a Neon transaction 
+
+`neon_emulate`
+
+returns details of an emultated transaction
+
+
 
