@@ -48,6 +48,7 @@ const sidebars = {
     { type: 'link', label: 'NeonScan', href: 'https://neonscan.org/' },
     { type: 'link', label: 'NeonPass', href: 'https://neonpass.live/' },
     { type: 'link', label: 'NeonFaucet', href: 'https://neonfaucet.org/' },
+    { type: 'doc', label: 'NeonAPI', id: 'api/neon-api' },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Develop</h4>' },
     {
