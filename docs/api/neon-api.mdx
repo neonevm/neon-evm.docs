@@ -72,7 +72,7 @@ All API calls use the `POST` method to any public RPC endpoint.
 
 <!-- Is this true -- is there a dedicated neon-managed endpoint or can any Proxy-hosted endpoint act as an entry point?  -->
 
-### Get the Neon CLI version 
+### Get the Neon CLI version
 
 The `neon_cliVersion` method returns the current version of the Neon EVM CLI used by the Neon Proxy.
 
@@ -143,7 +143,7 @@ The `neon_evmVersion` method returns the current version of the NeonEVM program 
 </Tabs>
 
 
-#### Get the Neon EVM program version 
+#### Get the Neon EVM program version
 
 The `neon_getEvmParams` method returns parameters of the Neon EVM program deployed on the Solana.
 
@@ -202,7 +202,7 @@ The `neon_proxyVersion` method returns the current version of the Neon Proxy.
 <Tabs>
 	<TabItem value="Schema" label="Schema" default>
 
-<JSONSchemaViewer schema={ neon_proxyVersion_response } />
+<JSONSchemaViewer schema={ neon_proxyVersion_response } viewerOptions={{ showExamples: true }} />
 
 </TabItem>
 <TabItem value="Json" label="JSON" default>
@@ -214,7 +214,7 @@ The `neon_proxyVersion` method returns the current version of the Neon Proxy.
 
 
 
-#### Get the Solana version 
+#### Get the Solana version
 
 The `neon_solanaVersion` method returns the version of the Solana node that the Neon Proxy is running on.
 
@@ -248,7 +248,7 @@ The `neon_solanaVersion` method returns the version of the Solana node that the 
 </TabItem>
 </Tabs>
 
-#### Get the Neon Platform components 
+#### Get the Neon Platform components
 
 The `neon_versions` method returns a list of components provided by the current Neon Platform.
 
@@ -283,7 +283,7 @@ The `neon_versions` method returns a list of components provided by the current 
 </TabItem>
 </Tabs>
 
-#### Get Neon Gas price data 
+#### Get Neon Gas price data
 
 The `neon_gasPrice` method returns data on gas price.
 
@@ -317,7 +317,7 @@ The `neon_gasPrice` method returns data on gas price.
 </TabItem>
 </Tabs>
 
-#### Get transaction logs 
+#### Get transaction logs
 
 The `neon_getLogs` method returns transaction log data.
 
@@ -351,7 +351,7 @@ The `neon_getLogs` method returns transaction log data.
 </TabItem>
 </Tabs>
 
-#### Get transaction receipt 
+#### Get transaction receipt
 
 The `neon_getTransactionReceipt` method returns transaction receipt data.
 
@@ -386,7 +386,7 @@ The `neon_getTransactionReceipt` method returns transaction receipt data.
 </Tabs>
 
 
-#### Get Solana transactions 
+#### Get Solana transactions
 
 The `neon_getSolanaTransactionByNeonTransaction` method returns a list of Solana transactions that correspond to a given Neon transaction.
 
@@ -421,7 +421,7 @@ The `neon_getSolanaTransactionByNeonTransaction` method returns a list of Solana
 </Tabs>
 
 
-#### Emulate a Neon transaction 
+#### Emulate a Neon transaction
 
 The `neon_emulate` method returns details of an emultated transaction.
 
