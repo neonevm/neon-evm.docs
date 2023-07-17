@@ -106,3 +106,4 @@ Neon EVM provides several JSON RPC endpoints to the public. These need to be doc
 Tooling selected: https://jy95.github.io/docusaurus-json-schema-plugin/boxFileSchema
 
 
+Probably easiest to write spec up as yaml and convert to json ([for example](https://www.json2yaml.com/)) after.

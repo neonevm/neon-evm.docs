@@ -1,5 +1,24 @@
 {
-    "jsonrpc": "2.0",
-    "id": 1,
-    "result": "Neon-proxy/v0.15.24-bd1e874ae49416819de6c36af9eca7e0440776ae"
+  "type": "object",
+  "description": "Response to request for Neon Proxy version",
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "default": "2.0",
+      "description": "The JSON RPC version"
+    },
+    "result": {
+      "type": "string",
+      "examples": [
+        "Neon-proxy/v0.15.24-bd1e874ae49416819de6c36af9eca7e0440776ae",
+        "another example"
+      ],
+      "description": "Proxy version number and ***"
+    },
+    "id": {
+      "type": "number",
+      "const": 1,
+      "description": "What is this ID?? wip"
+    }
+  }
 }

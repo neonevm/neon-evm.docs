@@ -1,27 +1,21 @@
 {
   "type": "object",
-  "description": "Neon Proxy RPC Request",
-  "items":false,
+  "description": "POST request to get Neon Proxy version",
   "properties": {
     "jsonrpc": {
-      "type":"string",
-      "value": "2.0",
-      "description":"json rpc version"
+      "type": "string",
+      "default": "2.0",
+      "description": "The JSON RPC version"
     },
     "method": {
-      "type":"string",
-      "value": "neon_proxyVersion",
-      "description":"The method name"
-    },
-    "params": {
-      "type": "array",
-      "value": [],
-      "description": "Description for params array"
+      "type": "string",
+      "const": "neon_proxyVersion",
+      "description": "The method name"
     },
     "id": {
       "type": "number",
-      "value": 1,
-      "description": "Description for id field"
+      "const": 1,
+      "description": "What is this ID?? wip"
     }
   }
 }

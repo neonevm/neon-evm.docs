@@ -45,20 +45,20 @@ Neon provides several endpoints to assist our users. This page provides the info
 
 The following services are available in Neon API V1:
 
-### Version information
+### 1. Version information
 
 - [neon_cliVersion](#get-the-neon-cli-version): returns the current version of Neon EVM CLI used by the Neon Proxy
 - [neon_evmVersion](#get-the-neon-evm-version): returns the current version of the NeonEVM program deployed on the Solana
 - [neon_getEvmParams](#get-the-neon-evm-program-version): returns parameters of the NeonEVM program deployed on the Solana
 - [neon_proxyVersion](#get-the-neon-proxy-version): returns the current version of the Neon Proxy
 - [neon_solanaVersion](#get-the-solana-version): returns the version of the Solana node the Neon Proxy runs on
-- [neon_versions](get-the-neon-platform-components): returns a list of components provided by the current Neon Platform
+- [neon_versions](#get-the-neon-platform-components): returns a list of components provided by the current Neon Platform
 
-### Gas price information
+### 2. Gas price information
 
 - [neon_gasPrice](#get-neon-gas-price-data): returns data on gas price
 
-### Neon transaction data
+### 3. Neon transaction data
 
 - [neon_getLogs](#get-transaction-logs): returns transaction log data
 - [neon_getTransactionReceipt](#get-transaction-receipt): returns transaction receipt data
@@ -74,7 +74,9 @@ All API calls use the `POST` method to any public RPC endpoint.
 
 ### Get the Neon CLI version 
 
-The `neon_cliVersion` method returns the current version of the Neon EVM-CLI used by the Neon Proxy.
+The `neon_cliVersion` method returns the current version of the Neon EVM CLI used by the Neon Proxy.
+
+<!-- should "used by" be "compatible with"? is it 1:! CLI with Proxy version? -->
 
 #### Request
 
@@ -143,11 +145,44 @@ The `neon_evmVersion` method returns the current version of the NeonEVM program 
 
 #### Get the Neon EVM program version 
 
-The `neon_getEvmParams` method returns parameters of the Neon EVM program deployed on the Solana
+The `neon_getEvmParams` method returns parameters of the Neon EVM program deployed on the Solana.
+
+#### Request
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_getEvmParams_request } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_getEvmParams_request, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+#### Response
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_getEvmParams_response } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_getEvmParams_response, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
 
 #### Get the Neon Proxy version
 
 The `neon_proxyVersion` method returns the current version of the Neon Proxy.
+
+
+#### Request
 
 <Tabs>
 	<TabItem value="Schema" label="Schema" default>
@@ -162,51 +197,263 @@ The `neon_proxyVersion` method returns the current version of the Neon Proxy.
 </TabItem>
 </Tabs>
 
+#### Response
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_proxyVersion_response } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_proxyVersion_response, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
 
 
 
 #### Get the Solana version 
 
-`neon_solanaVersion`
+The `neon_solanaVersion` method returns the version of the Solana node that the Neon Proxy is running on.
 
-returns the version of the Solana node the Neon Proxy runs on
+#### Request
 
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_solanaVersion_request } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_solanaVersion_request, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+#### Response
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_solanaVersion_response } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_solanaVersion_response, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
 
 #### Get the Neon Platform components 
 
-`neon_versions`
+The `neon_versions` method returns a list of components provided by the current Neon Platform.
 
-returns a list of components provided by the current Neon Platform
+
+#### Request
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_versions_request } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_versions_request, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+#### Response
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_versions_response } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_versions_response, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
 
 #### Get Neon Gas price data 
 
-`neon_gasPrice`
+The `neon_gasPrice` method returns data on gas price.
 
-returns data on gas price
+#### Request
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_gasPrice_request } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_gasPrice_request, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+#### Response
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_gasPrice_response } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_gasPrice_response, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
 
 #### Get transaction logs 
 
-`neon_getLogs`
+The `neon_getLogs` method returns transaction log data.
 
-returns transaction log data
+#### Request
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_getLogs_request } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_getLogs_request, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+#### Response
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_getLogs_response } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_getLogs_response, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
 
 #### Get transaction receipt 
 
-`neon_getTransactionReceipt`
+The `neon_getTransactionReceipt` method returns transaction receipt data.
 
-returns transaction receipt data
+#### Request
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_getTransactionReceipt_request } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_getTransactionReceipt_request, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+#### Response
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_getTransactionReceipt_response } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_getTransactionReceipt_response, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
 
 #### Get Solana transactions 
 
-`neon_getSolanaTransactionByNeonTransaction`
+The `neon_getSolanaTransactionByNeonTransaction` method returns a list of Solana transactions that correspond to a given Neon transaction.
 
-returns a list of Solana transactions that correspond to a given Neon transaction
+#### Request
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_getSolanaTransactionByNeonTransaction_request } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_getSolanaTransactionByNeonTransaction_request, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+#### Response
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_getSolanaTransactionByNeonTransaction_response } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_getSolanaTransactionByNeonTransaction_response, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
 
 #### Emulate a Neon transaction 
 
-`neon_emulate`
+The `neon_emulate` method returns details of an emultated transaction.
 
-returns details of an emultated transaction
+#### Request
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_emulate_request } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_emulate_request, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+#### Response
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_emulate_response } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_emulate_response, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
 
 
 
