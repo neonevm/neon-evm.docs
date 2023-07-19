@@ -77,7 +77,7 @@ The Neon Proxy has several settings accommodate the calculation of gas-price on 
 - `PRX_MINIMAL_GAS_PRICE`: the minimum gas price to accept transactions into the mempool for on-chain execution
 > Let's take a closer look at the minimum gas price variable.
 
-## Zero gas price for testing
+<!-- ## Zero gas price for testing
 
 On Devnet test NEON is availiable, however, for beta Mainnet testing purposes, the Neon Proxy can be configured to accept transactions with a 0 gas price (a balance of SOL is available to cover the transaction fees on Solana). 
 
@@ -88,3 +88,4 @@ To enable this configuration, the Neon Operator should set up the following para
 - PRX_MINIMAL_GAS_PRICE = 0
 
 As a result, the Neon Proxy returns the 0 gas price and accepts Neon transactions with the 0 gas price.
+ -->

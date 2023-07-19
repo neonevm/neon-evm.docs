@@ -29,7 +29,7 @@ The following tables provide the addresses of ERC-20 interface contracts for the
 ## ERC-20 interface addresses on Neon
 
 <Tabs>
-  <TabItem value="mainnet" label="Mainnet Beta" default>
+  <TabItem value="mainnet" label="Mainnet" default>
 
 **Chain ID: 245022934**
 
