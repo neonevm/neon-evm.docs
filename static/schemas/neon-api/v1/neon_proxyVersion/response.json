@@ -10,8 +10,7 @@
     "result": {
       "type": "string",
       "examples": [
-        "Neon-proxy/v0.15.24-bd1e874ae49416819de6c36af9eca7e0440776ae",
-        "another example"
+        "Neon-proxy/v0.15.24-bd1e874ae49416819de6c36af9eca7e0440776ae"
       ],
       "description": "Proxy version number and ***"
     },
