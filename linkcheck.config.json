@@ -1,0 +1,28 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^(?!\\b(http|https)\\b.*$).*"
+    },
+    {
+      "pattern": "^http://localhost"
+    },
+    {
+      "pattern": "^https://devnet.neonevm.org"
+    },
+    {
+      "pattern": "^https://testnet.neonevm.org"
+    },
+    {
+      "pattern": "^https://mainnet.neonevm.org"
+    },
+    {
+      "pattern": "^https://support.ledger.com/hc/en-us/articles/"
+    },
+    {
+      "pattern": "^https://support.metamask.io/hc/en-us/articles/"
+    }
+  ],
+  "aliveStatusCodes": [
+    200, 206
+  ]
+}

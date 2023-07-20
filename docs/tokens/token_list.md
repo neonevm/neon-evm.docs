@@ -4,8 +4,8 @@ proofedDate: 20230526
 iterationBy: na
 includedInSite: true
 approvedBy: na
-updateDetails: This source provides the NeonPass-supported tokens https://github.com/neonlabsorg/neonpass-ui/blob/5588478e7d421d07dd21b8440e6e0d6dd91d5fca/src/token-transfer/services/tokens-list.service.ts#L175-L184 HOWEVER not clear on the token naming (e.g. what is W_BTC? also not clear on which chain this applies to also not clear how bridger is identified -- what would SOETH look like compared to WETH -- sollet vs wormhole wrapped ETH?)
-comment: TODO source of truth for https://github.com/neonlabsorg/token-list/blob/17a7b46f5786f3ae05e68db927e6629ba397459e/tokenlist.json needs programmatic update from this page -- want to include bridger info too when that applies -- is this possible? NB only full code block results in copy option -- tried this in HTML table and it is not compatible
+updateDetails: This source provides the NeonPass-supported tokens <!-- https://github.com/neonlabsorg/neonpass-ui/blob/5588478e7d421d07dd21b8440e6e0d6dd91d5fca/src/token-transfer/services/tokens-list.service.ts#L175-L184 --> HOWEVER not clear on the token naming (e.g. what is W_BTC? also not clear on which chain this applies to also not clear how bridger is identified -- what would SOETH look like compared to WETH -- sollet vs wormhole wrapped ETH?)
+comment: TODO source of truth for <!-- https://github.com/neonlabsorg/token-list/blob/17a7b46f5786f3ae05e68db927e6629ba397459e/tokenlist.json --> needs programmatic update from this page -- want to include bridger info too when that applies -- is this possible? NB only full code block results in copy option -- tried this in HTML table and it is not compatible
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,7 +16,11 @@ To use SPL or ERC-20 tokens from a Neon account, you need to transact via the to
 
 <!-- When performing operations on tokens in the Neon EVM, it is important to know which token symbol or address can be used. Having a list of possible tokens available, you can easily navigate when choosing the token you need. -->
 
-For the most up-to-date list of tokens whose contracts are deployed in Neon EVM and are available, see the [neonlabsorg/token-list](https://github.com/neonlabsorg/token-list/) repository, or call the list with the [Factory contract](docs/developing/deploy_facilities/interacting_with_spl_tokens.md).
+For the most up-to-date list of tokens whose contracts are deployed in Neon EVM and are available, call the list with the [Factory contract](docs/developing/deploy_facilities/interacting_with_spl_tokens.md).
+
+<!-- todo problem >> the repo is set to private, so end user does not have this option!
+  For the most up-to-date list of tokens whose contracts are deployed in Neon EVM and are available, see the [neonlabsorg/token-list](https://github.com/neonlabsorg/token-list/) repository, or call the list with the [Factory contract](docs/developing/deploy_facilities/interacting_with_spl_tokens.md). 
+-->
 
 ## Token list: NeonPass-supported tokens
 
@@ -25,7 +29,7 @@ The following tables provide the addresses of ERC-20 interface contracts for the
 ## ERC-20 interface addresses on Neon
 
 <Tabs>
-  <TabItem value="mainnet" label="Mainnet Beta" default>
+  <TabItem value="mainnet" label="Mainnet" default>
 
 **Chain ID: 245022934**
 
