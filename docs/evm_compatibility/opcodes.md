@@ -10,12 +10,14 @@ comments:
 Neon EVM supports the majority of the [Ethereum OpCodes](https://ethereum.org/en/developers/docs/evm/opcodes/) verbatim. This page presents those OpCodes that are *not* supported verbatim as they're adapted for use in the Neon EVM.
 
 
-|Stack|Name|Description|
+|Stack|Name|Description|Value|
 |--|--|--|
-|41|COINBASE|always returns zero|
-|44|PREVRANDAO (FKA DIFFICULTY)|always returns zero|
-|45|GASLIMIT|always returns U256::MAX|
-|48|BASEFEE|always returns zero|
+|41|COINBASE|always returns zero|0x41|
+|44|PREVRANDAO (FKA DIFFICULTY)|always returns zero|0x44|
+|45|GASLIMIT|always returns U256::MAX|0x45|
+|48|BASEFEE|always returns zero|0x48|
+<!-- |5A|GAS|?What is different?|0x5a| -->
+
 
 
 
