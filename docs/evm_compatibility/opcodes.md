@@ -16,6 +16,8 @@ Neon EVM supports the majority of the [Ethereum OpCodes](https://ethereum.org/en
 |44|PREVRANDAO (FKA DIFFICULTY)|always returns zero|
 |45|GASLIMIT|always returns U256::MAX|
 |48|BASEFEE|always returns zero|
+|5A|GAS|returns the gas limit in the transaction instead of remaining gas|
+
 
 
 
