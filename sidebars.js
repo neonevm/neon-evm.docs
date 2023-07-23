@@ -185,6 +185,11 @@ const sidebars = {
       label: 'Principles and Objectives',
       id: 'governance/principles'
     },
+    {
+      type: 'doc',
+      label: 'Command Line Utilities',
+      id: 'governance/command_line'
+    },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' }
   ]
 };
