@@ -32,8 +32,8 @@ In addition to the balance for storing SOL tokens, an operator must also have th
 CONFIG | NEON_TOKEN_MINT
 :-|:-
 devnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
-testnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
 local | HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
+<!-- testnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g -->
 
 To create the `NEON_TOKEN_MINT` balance, you can use the following command:
 ```bash

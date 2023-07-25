@@ -13,11 +13,6 @@ import chainlist_raw from '@site/static/img/doc-images/developing/chainlist/chai
 
 RPC endpoints are available on [Chainlist](https://chainlist.org/?chain=245022926&testnets=true&search=Neon+EVM).
 
-:::info
-
-Neon EVM is in *closed* beta on Mainnet
-
-:::
 
 ## Introduction
 
@@ -42,7 +37,7 @@ Before sending a transaction to the Neon EVM, users should choose the Operator t
 
 > Selecting the RPC address an Operator provides assigns your transactions to that Operator.
 
-One Proxy may be available on different networks (currently, Testnet, Devnet, and Mainnet beta). The Proxy interacts with one EVM loader, which can be deployed in different Solana chains. 
+One Proxy may be available on different networks (i.e. Devnet and Mainnet). The Proxy interacts with one EVM loader, which can be deployed in different Solana chains. 
 
 To view the available RPC endpoints, expand the card details of the network of your choice. 
 
@@ -63,3 +58,7 @@ To connect to a Proxy using Remix, Truffle, or Hardhat, check out the following 
 * [Using Hardhat](developing/deploy_facilities/using_hardhat.md)
 
 Please note that, for Truffle and Hardhat, you need to set up the configuration file by setting either the `HDWalletProvider` provider (for Truffle) or the URL and the `network_id`/`chainId` to the RPC URL (and ID) selected from Chainlink. This is described in detail in the relevant tutorial sections.
+
+## What next?
+
+If you wish to transact via your RPC, then checkout the [supported RPC API methods](/docs/evm_compatibility/json_rpc_api_methods).
