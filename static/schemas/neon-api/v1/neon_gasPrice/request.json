@@ -1,9 +1,42 @@
 {
-    "jsonrpc": "2.0", 
-    "id": 64,
-    "method": "neon_gasPrice", 
-    "params": [{
-      "from": "0x348ee8817eA227e52e233668874fA609aA51C83D",
-			"nonce": "0x0"
-    }]
+  "type": "object",
+  "description": "POST request to get transaction gas price",
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "default": "2.0",
+      "description": "The JSON RPC version"
+    },
+    "method": {
+      "type": "string",
+      "const": "neon_gasPrice",
+      "description": "The method name"
+          },
+    "id": {
+      "type": "number",
+      "examples": [
+        "OpEgqw7r98qwerqwehkjhwe8"
+      ],
+      "description": "End-user provided identifier for the request; returned with payload"
+    },
+    "params": {
+      "type": "array",
+      "items": {
+        "from": {
+          "type": "string",
+          "examples": [
+            "0x348ee8817eA227e52e233668874fA609aA51C83D"
+          ],
+          "description": "Wallet address that signed the tx request"
+        },
+        "nonce": {
+          "type": "string",
+          "examples": [
+            0
+          ],
+          "description": "Identifier associated with the tx request to which the gas calculation should apply"
+        }
+      }
+    }
+  }
 }

@@ -4,7 +4,7 @@ proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: Needs version control process -- just tabs v1 v2 ...?
+comment: Needs version control process -- just tabs v1 v2 ...? will we use semantic versioning https://semver.org/spec/v2.0.0.html // todo BUG The UX is not great with tabs -- menu bar unable to locate heading items within the currently-unsued tab ONLY once that tab is entered does menu work. Is this worth investing in FE fix OR do I have to flatten?
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -43,16 +43,26 @@ Neon provides several endpoints to assist our users. This page provides the info
 
 <!-- wip -- are keys needed? IPs on an allowlist? -->
 
+## Neon API specifications
+
+All API calls use the `POST` method to any public RPC endpoint.
+
+<!-- Is this true -- is there a dedicated neon-managed endpoint or can any Proxy-hosted endpoint act as an entry point?  -->
+
+## API services
+
 The following services are available in Neon API V1:
 
 ### 1. Version information
 
-- [neon_cliVersion](#get-the-neon-cli-version): returns the current version of Neon EVM CLI used by the Neon Proxy
-- [neon_evmVersion](#get-the-neon-evm-version): returns the current version of the NeonEVM program deployed on the Solana
-- [neon_getEvmParams](#get-the-neon-evm-program-version): returns parameters of the NeonEVM program deployed on the Solana
-- [neon_proxyVersion](#get-the-neon-proxy-version): returns the current version of the Neon Proxy
-- [neon_solanaVersion](#get-the-solana-version): returns the version of the Solana node the Neon Proxy runs on
-- [neon_versions](#get-the-neon-platform-components): returns a list of components provided by the current Neon Platform
+- [neon_versions](#get-the-neon-platform-component-versions): returns a list of components provided by the current Neon Platform
+- Alternatively, request each component's version individually:
+	- [neon_cliVersion](#get-the-neon-cli-version): returns the current version of Neon EVM CLI used by the Neon Proxy
+	- [neon_evmVersion](#get-the-neon-evm-version): returns the current version of the Neon EVM program deployed on the Solana
+	- [neon_getEvmParams](#get-the-neon-evm-program-version): returns parameters of the Neon EVM program deployed on the Solana
+	- [neon_proxyVersion](#get-the-neon-proxy-version): returns the current version of the Neon Proxy
+	- [neon_solanaVersion](#get-the-solana-version): returns the version of the Solana node the Neon Proxy runs on
+
 
 ### 2. Gas price information
 
@@ -66,11 +76,49 @@ The following services are available in Neon API V1:
 - [neon_emulate](#emulate-a-neon-transaction): returns details of an emultated transaction
 
 
-## Neon API specifications
+## Get versions
 
-All API calls use the `POST` method to any public RPC endpoint.
+<Tabs>
+	<TabItem value="View" label="Get all version data" default>
 
-<!-- Is this true -- is there a dedicated neon-managed endpoint or can any Proxy-hosted endpoint act as an entry point?  -->
+### Get the Neon Platform component versions
+
+The `neon_versions` method returns a list of all the components and their version as provided by the current Neon Platform.
+
+
+#### Request
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_versions_request } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_versions_request, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+#### Response
+
+<Tabs>
+	<TabItem value="Schema" label="Schema" default>
+
+<JSONSchemaViewer schema={ neon_versions_response } />
+
+</TabItem>
+<TabItem value="Json" label="JSON" default>
+
+<CodeBlock language="json">{JSON.stringify(neon_versions_response, null, 2)}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+
+</TabItem>
+<TabItem value="Retrieve" label="Get individual version data" default>
 
 ### Get the Neon CLI version
 
@@ -108,7 +156,8 @@ The `neon_cliVersion` method returns the current version of the Neon EVM CLI use
 </TabItem>
 </Tabs>
 
-#### Get the Neon EVM version
+
+### Get the Neon EVM version
 
 The `neon_evmVersion` method returns the current version of the NeonEVM program deployed on Solana.
 
@@ -143,7 +192,7 @@ The `neon_evmVersion` method returns the current version of the NeonEVM program 
 </Tabs>
 
 
-#### Get the Neon EVM program version
+### Get the Neon EVM program version
 
 The `neon_getEvmParams` method returns parameters of the Neon EVM program deployed on the Solana.
 
@@ -177,7 +226,7 @@ The `neon_getEvmParams` method returns parameters of the Neon EVM program deploy
 </TabItem>
 </Tabs>
 
-#### Get the Neon Proxy version
+### Get the Neon Proxy version
 
 The `neon_proxyVersion` method returns the current version of the Neon Proxy.
 
@@ -212,9 +261,7 @@ The `neon_proxyVersion` method returns the current version of the Neon Proxy.
 </TabItem>
 </Tabs>
 
-
-
-#### Get the Solana version
+### Get the Solana version
 
 The `neon_solanaVersion` method returns the version of the Solana node that the Neon Proxy is running on.
 
@@ -248,42 +295,15 @@ The `neon_solanaVersion` method returns the version of the Solana node that the 
 </TabItem>
 </Tabs>
 
-#### Get the Neon Platform components
-
-The `neon_versions` method returns a list of components provided by the current Neon Platform.
-
-
-#### Request
-
-<Tabs>
-	<TabItem value="Schema" label="Schema" default>
-
-<JSONSchemaViewer schema={ neon_versions_request } />
-
-</TabItem>
-<TabItem value="Json" label="JSON" default>
-
-<CodeBlock language="json">{JSON.stringify(neon_versions_request, null, 2)}</CodeBlock>
-
 </TabItem>
 </Tabs>
 
-#### Response
 
-<Tabs>
-	<TabItem value="Schema" label="Schema" default>
+## Get Neon Gas price
 
-<JSONSchemaViewer schema={ neon_versions_response } />
+Neon Gas price may be requested for an individual account or for all accounts, depending on the parameters passed.
 
-</TabItem>
-<TabItem value="Json" label="JSON" default>
-
-<CodeBlock language="json">{JSON.stringify(neon_versions_response, null, 2)}</CodeBlock>
-
-</TabItem>
-</Tabs>
-
-#### Get Neon Gas price data
+<!-- accounts is the term used in the Notion page -- however does this make sense? A tx incurs a fee -- not sure that account is accurate -->
 
 The `neon_gasPrice` method returns data on gas price.
 
@@ -317,7 +337,9 @@ The `neon_gasPrice` method returns data on gas price.
 </TabItem>
 </Tabs>
 
-#### Get transaction logs
+## Get transaction data
+
+### Get transaction logs
 
 The `neon_getLogs` method returns transaction log data.
 
@@ -351,7 +373,7 @@ The `neon_getLogs` method returns transaction log data.
 </TabItem>
 </Tabs>
 
-#### Get transaction receipt
+### Get transaction receipt
 
 The `neon_getTransactionReceipt` method returns transaction receipt data.
 
@@ -386,7 +408,7 @@ The `neon_getTransactionReceipt` method returns transaction receipt data.
 </Tabs>
 
 
-#### Get Solana transactions
+### Get Solana transactions
 
 The `neon_getSolanaTransactionByNeonTransaction` method returns a list of Solana transactions that correspond to a given Neon transaction.
 

@@ -1,5 +1,31 @@
 {
-  "jsonrpc": "2.0",
-  "id": 64,
-  "result": "0x10c4cf9e80"
+  "type": "object",
+  "description": "Response to request for transaction gas price",
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "default": "2.0",
+      "description": "The JSON RPC version",
+      "id": {
+        "type": "number",
+        "examples": [
+          "OpEgqw7r98qwerqwehkjhwe8"
+        ],
+        "description": "End-user provided identifier for the request"
+      },
+      "result": {
+        "type": "number",
+        "format": "hex",
+        "examples": [
+          "0x10c4cf9e80"
+        ],
+        "description": "Gas fee as hexidecimal value in NEON (for versions x-y)"
+      }
+    }
+  },
+  "required": [
+    "jsonrpc",
+    "result",
+    "id"
+  ]
 }

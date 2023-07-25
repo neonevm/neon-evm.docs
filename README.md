@@ -48,6 +48,47 @@ Using the default location:
 2. Reference the image and the size required, e.g.
 `<img src={myimage} width="450" />`
 
+## Tabs boilerplate
+
+1. Import the required components
+
+```
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+```
+
+2. Create the tabs
+
+<Tabs>
+	<TabItem value="View" label="View your balance" default>
+
+************
+
+</TabItem>
+<TabItem value="Retrieve" label="Retrieve your balance" default>
+
+	*********
+</TabItem>
+</Tabs>
+
+## Code boilerplates
+
+[codesandbox](https://codesandbox.io/dashboard/recent?workspace=6715f772-9c64-4139-8c8d-a18fe3f51a91) setup for grammarly@neonlabs.org
+
+with authentication via [GitHub](https://github.com/anonNeon)
+
+## API documentation
+
+Neon EVM provides several JSON RPC endpoints to the public. These need to be documented.
+
+Tooling selected: https://jy95.github.io/docusaurus-json-schema-plugin/boxFileSchema
+
+
+Probably easiest to write spec up as yaml and convert to json ([for example](https://www.json2yaml.com/)) after.
+
+JSON schema details https://json-schema.org/understanding-json-schema/reference/generic.html
+OR https://json-schema.org/understanding-json-schema/UnderstandingJSONSchema.pdf
+
 ## QA layer
 
 ## External and internal links
@@ -79,31 +120,3 @@ Local installation and CLI linting is recommended for documentarians:
 You can either lint **all** Markdown files with `vale .`, or you can name a specific file to lint, e.g. `vale readme.md` or `vale {path-to-doc.docname.md`.
 
 
-### Tabs boilerplate
-
-<Tabs>
-	<TabItem value="View" label="View your balance" default>
-
-************
-
-</TabItem>
-<TabItem value="Retrieve" label="Retrieve your balance" default>
-
-	*********
-</TabItem>
-</Tabs>
-
-### Code boilerplates
-
-[codesandbox](https://codesandbox.io/dashboard/recent?workspace=6715f772-9c64-4139-8c8d-a18fe3f51a91) setup for grammarly@neonlabs.org
-
-with authentication via [GitHub](https://github.com/anonNeon)
-
-## API documentation
-
-Neon EVM provides several JSON RPC endpoints to the public. These need to be documented.
-
-Tooling selected: https://jy95.github.io/docusaurus-json-schema-plugin/boxFileSchema
-
-
-Probably easiest to write spec up as yaml and convert to json ([for example](https://www.json2yaml.com/)) after.
