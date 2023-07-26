@@ -39,15 +39,21 @@ import neon_emulate_response from "@site/static/schemas/neon-api/v1/neon_emulate
 
 Neon provides several endpoints to assist our users. This page provides the information you need to interact with these services.
 
-<!-- ### Authentication -->
+## Authentication
 
-<!-- wip -- are keys needed? IPs on an allowlist? -->
+No authentication is required. All publically-available JSON RPC endpoints are listed on [Chainlist](https://chainlist.org/?chain=245022926&testnets=true&search=Neon+EVM).
 
 ## Neon API specifications
 
-All API calls use the `POST` method to any public RPC endpoint.
+All API calls use the `POST` method.
 
-<!-- Is this true -- is there a dedicated neon-managed endpoint or can any Proxy-hosted endpoint act as an entry point?  -->
+For example, the following request returns the current Neon Proxy version:
+
+```bash
+curl -X POST https://neon-proxy-mainnet.solana.p2p.org \
+-H "Content-Type: application/json" \
+-d '{"jsonrpc":"2.0","method":"neon_proxyVersion","id":1}'
+```
 
 ## API services
 
@@ -66,7 +72,7 @@ The following services are available in Neon API V1:
 
 ### 2. Gas price information
 
-- [neon_gasPrice](#get-neon-gas-price-data): returns data on gas price
+- [neon_gasPrice](#get-neon-gas-price): returns data on gas price
 
 ### 3. Neon transaction data
 
@@ -76,7 +82,14 @@ The following services are available in Neon API V1:
 - [neon_emulate](#emulate-a-neon-transaction): returns details of an emultated transaction
 
 
+
 ## Get versions
+
+:::info
+
+Select the tab that applies according to whether you wish to retrieve all the version data or granular information.
+
+:::
 
 <Tabs>
 	<TabItem value="View" label="Get all version data" default>
