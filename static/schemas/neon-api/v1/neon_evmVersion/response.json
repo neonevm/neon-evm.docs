@@ -1,5 +1,25 @@
 {
-    "jsonrpc": "2.0",
-    "id": 1,
-    "result": "Neon/v0.15.13-9a4bbf29359e752336c0a1ff5fcb03e3ad303b7a"
+  "type": "object",
+  "description": "Response to request for Neon EVM version",
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "default": "2.0",
+      "description": "The JSON RPC version"
+    },
+    "result": {
+      "type": "string",
+      "examples": [
+        "Neon/v0.15.13-9a4bbf29359e752336c0a1ff5fcb03e3ad303b7a"
+      ],
+      "description": "EVM version number and ***"
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "K827qw7r98qwerqwehkjhwe8"
+      ],
+      "description": "End-user provided identifier for the request"
+    }
+  }
 }

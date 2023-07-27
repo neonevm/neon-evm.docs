@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "description": "POST request to get transaction gas price",
+  "description": "POST request to get transaction gas price. The payload returned depends on how you form the request using the `params` object. While each property is optional individually, an empty array is not processed. Two permutations of possible request structures are provided, more are supported.",
   "required": [
     "jsonrpc",
     "method",
@@ -23,40 +23,46 @@
       "examples": [
         "OpEgqw7r98qwerqwehkjhwe8"
       ],
-      "description": "End-user provided identifier for the request; returned with payload"
+      "description": "End-user provided identifier for the request; returned with payload."
     },
     "params": {
       "oneOf": [
         {
           "type": "object",
-          "description": "test description1",
+          "description": "Exclude `from` address to retrieve common gas price for all accounts.",
           "properties": {
             "from": {
               "type": "string",
-              "description": "Account tx request originates from",
-              "example": "0x348ee8817eA227e52e233668874fA609aA51C83D"
+              "description": "Optional. Account tx request originates from. If not provided, request retrieves common gas price for all accounts.",
+              "examples": [
+                "0x348ee8817eA227e52e233668874fA609aA51C83D"
+              ]
+            },
+            "nonce": {
+              "type": "number",
+              "format": "hexadecimal",
+              "description": "Optional. Requires `from` property.  If `from` is provided but `nonce` is not provided, Neon Proxy uses the transaction counter providing the state of the `from` account as the nonce for the request.",
+              "examples": [
+                "0x0"
+              ]
             },
             "full": {
               "type": "boolean",
-              "description": "Switch to determine verbose or light response",
-              "example": "true"
+              "description": "Optional. Switch to determine verbose or light response.",
+              "examples": [
+                true, false
+              ]
             }
           }
         },
         {
           "type": "object",
-          "description": "test description2",
+          "description": "This request returns verbose details for all accounts.",
           "properties": {
-            "from": {
-              "type": "string",
-              "description": "Account tx request originates from",
-              "example": "0x348ee8817eA227e52e233668874fA609aA51C83D"
-            },
-            "nonce": {
-              "type": "number",
-              "format": "hex",
-              "description": "Identifier associated with the tx request to which the gas calculation should apply",
-              "example": "true"
+            "full": {
+              "type": "boolean",
+              "description": "Switch to determine verbose or light response.",
+              "example": true
             }
           }
         }

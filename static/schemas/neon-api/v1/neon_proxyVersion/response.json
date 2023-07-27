@@ -15,8 +15,10 @@
       "description": "Proxy version number and ***"
     },
     "id": {
-      "type": "number",
-      "const": 1,
+      "type": "string",
+       "examples": [
+        "K827qw7r98qwerqwehkjhwe8"
+      ],
       "description": "What is this ID?? wip"
     }
   }

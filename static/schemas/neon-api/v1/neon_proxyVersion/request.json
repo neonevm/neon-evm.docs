@@ -1,10 +1,15 @@
 {
   "type": "object",
   "description": "POST request to get Neon Proxy version",
+  "required": [
+    "jsonrpc",
+    "method",
+    "id"
+  ],
   "properties": {
     "jsonrpc": {
       "type": "string",
-      "default": "2.0",
+      "default value": "2.0",
       "description": "The JSON RPC version"
     },
     "method": {
@@ -13,9 +18,11 @@
       "description": "The method name"
     },
     "id": {
-      "type": "number",
-      "const": 1,
-      "description": "What is this ID?? wip"
+      "type": "string",
+      "examples": [
+        "U18N7qw7r98qwerqwehkjhwe8"
+      ],
+      "description": "End-user provided identifier for the request; returned with payload"
     }
   }
 }

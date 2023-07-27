@@ -7,15 +7,13 @@
       "default": "2.0",
       "description": "The JSON RPC version",
       "id": {
-        "type": "number",
-        "examples": [
-          "OpEgqw7r98qwerqwehkjhwe8"
-        ],
+        "type": "string",
+        "default": "OpEgqw7r98qwerqwehkjhwe8",
         "description": "End-user provided identifier for the request"
       },
       "result": {
         "type": "number",
-        "format": "hex",
+        "format": "hexadecimal",
         "examples": [
           "0x10c4cf9e80"
         ],
