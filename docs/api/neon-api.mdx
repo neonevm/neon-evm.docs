@@ -55,6 +55,8 @@ curl -X POST https://neon-proxy-mainnet.solana.p2p.org \
 -d '{"jsonrpc":"2.0","method":"neon_proxyVersion","id":1}'
 ```
 
+<!-- probably a good idea to provide all of the following as a single page specification (similar to a swagger file) see the docs for the standard https://spec.open-rpc.org/ -->
+
 ## API services
 
 The following services are available in Neon API V1:
@@ -87,7 +89,7 @@ The following services are available in Neon API V1:
 
 :::info
 
-Select the tab that applies according to whether you wish to retrieve all the version data or granular information.
+Select the tab that applies according to whether you wish to retrieve all the version data in one call or request granular information.
 
 :::
 
@@ -96,8 +98,12 @@ Select the tab that applies according to whether you wish to retrieve all the ve
 
 ### Get the Neon Platform component versions
 
-The `neon_versions` method returns a list of all the components and their version as provided by the current Neon Platform.
+The `neon_versions` method returns a list of all the components and their version as provided by the current Neon Proxy.
 
+<!-- should probably tab the request and responses as per the following example BUT this will make working the page clunky -- so saving it for the end -->
+
+<Tabs>
+	<TabItem value="View" label="Request" default>
 
 #### Request
 
@@ -114,6 +120,10 @@ The `neon_versions` method returns a list of all the components and their versio
 </TabItem>
 </Tabs>
 
+</TabItem> 
+
+<TabItem value="Retrieve" label="Response" default>
+
 #### Response
 
 <Tabs>
@@ -129,6 +139,8 @@ The `neon_versions` method returns a list of all the components and their versio
 </TabItem>
 </Tabs>
 
+</TabItem>
+</Tabs>
 
 </TabItem>
 <TabItem value="Retrieve" label="Get individual version data" default>
