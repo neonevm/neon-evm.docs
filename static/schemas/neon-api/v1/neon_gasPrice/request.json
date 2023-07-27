@@ -1,6 +1,12 @@
 {
   "type": "object",
   "description": "POST request to get transaction gas price",
+  "required": [
+    "jsonrpc",
+    "method",
+    "id",
+    "params"
+  ],
   "properties": {
     "jsonrpc": {
       "type": "string",
@@ -11,7 +17,7 @@
       "type": "string",
       "const": "neon_gasPrice",
       "description": "The method name"
-          },
+    },
     "id": {
       "type": "number",
       "examples": [
@@ -20,23 +26,41 @@
       "description": "End-user provided identifier for the request; returned with payload"
     },
     "params": {
-      "type": "array",
-      "items": {
-        "from": {
-          "type": "string",
-          "examples": [
-            "0x348ee8817eA227e52e233668874fA609aA51C83D"
-          ],
-          "description": "Wallet address that signed the tx request"
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "test description1",
+          "properties": {
+            "from": {
+              "type": "string",
+              "description": "Account tx request originates from",
+              "example": "0x348ee8817eA227e52e233668874fA609aA51C83D"
+            },
+            "full": {
+              "type": "boolean",
+              "description": "Switch to determine verbose or light response",
+              "example": "true"
+            }
+          }
         },
-        "nonce": {
-          "type": "string",
-          "examples": [
-            0
-          ],
-          "description": "Identifier associated with the tx request to which the gas calculation should apply"
+        {
+          "type": "object",
+          "description": "test description2",
+          "properties": {
+            "from": {
+              "type": "string",
+              "description": "Account tx request originates from",
+              "example": "0x348ee8817eA227e52e233668874fA609aA51C83D"
+            },
+            "nonce": {
+              "type": "number",
+              "format": "hex",
+              "description": "Identifier associated with the tx request to which the gas calculation should apply",
+              "example": "true"
+            }
+          }
         }
-      }
+      ]
     }
   }
 }
