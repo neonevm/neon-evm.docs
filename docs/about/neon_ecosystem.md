@@ -95,11 +95,11 @@ Neon EVM is supported by the MetaMask non-custodial wallet.
 
 Neon EVM integrates with the popular WalletConnect protocol that provides a decentralized standard to connect Web3 wallets and dApps.
 
-### Tracing API
+### Tracer API
 
-Neon's Tracing API is an extension for Neon Proxy. It assists developers to test, debug, and understand the behavior of their smart contracts on Neon EVM. The API provides a full externality trace on any Neon transactions executed on the Solana blockchain. 
+Neon's Tracer API is an extension for Neon Proxy. It assists developers to test, debug, and understand the behavior of their smart contracts on Neon EVM. The API provides a full externality trace on any Neon transactions executed on the Solana blockchain. 
 
-The Tracing API supports a rerun of historical transactions, runs transactions on historical states, and analyzes the state of the Solana blockchain after the execution of each instruction. 
+The Tracer API supports a rerun of historical transactions, runs transactions on historical states, and analyzes the state of the Solana blockchain after the execution of each instruction. 
 
 > More details are available in [our blog](https://medium.com/neon-labs/neon-proxy-tracing-api-fdb3842a80fa).
 
