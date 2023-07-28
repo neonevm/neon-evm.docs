@@ -10,17 +10,15 @@ comment:
 import chainlist_raw from '@site/static/img/doc-images/developing/chainlist/chainlist-raw-2.png';
 
 ## TL;DR
-
 RPC endpoints are available on [Chainlist](https://chainlist.org/?chain=245022926&testnets=true&search=Neon+EVM).
 
 
 ## Introduction
+This tutorial explains how to connect to a Neon RPC via Chainlist. You may connect an EVM-compatible wallet to a network and accept the default Proxy. Alternatively, you can mannually setup your Proxy Operator.
 
-This tutorial explains how to connect to a Neon RPC via Chainlink. You may connect an EVM-compatible wallet to a network and accept the default Proxy. Alternatively, you can mannually setup your Proxy Operator.
+> The [Proxy Operator you choose](#choose-a-remote-proxy) is responsible for settling your Neon transactions on Solana. Chainlist will assign a default, but you can edit this later.
 
-> The [Proxy Operator you choose](#choose-a-remote-proxy) is responsible for settling your Neon transactions on Solana. Chainlink will assign a default, but you can edit this later.
-
-## Connect via Chainlink
+## Connect via Chainlist
 To connect an EVM-compatible wallet such as MetaMask to Neon EVM:  
 
 1.1 Visit [Neon's Chainlist](https://chainlist.org/?chain=245022926&testnets=true&search=Neon+EVM) page.
@@ -29,7 +27,7 @@ To connect an EVM-compatible wallet such as MetaMask to Neon EVM:
 
 With most wallets, simply click "Approve" to connect your wallet.
 
-> Chainlink assigns their default Proxy; you can reconfigure this.
+> Chainlist assigns their default Proxy; you can reconfigure this.
 
 
 ## Choose a remote Proxy
@@ -57,7 +55,7 @@ To connect to a Proxy using Remix, Truffle, or Hardhat, check out the following 
 * [Using Truffle](developing/deploy_facilities/using_truffle.md)
 * [Using Hardhat](developing/deploy_facilities/using_hardhat.md)
 
-Please note that, for Truffle and Hardhat, you need to set up the configuration file by setting either the `HDWalletProvider` provider (for Truffle) or the URL and the `network_id`/`chainId` to the RPC URL (and ID) selected from Chainlink. This is described in detail in the relevant tutorial sections.
+Please note that, for Truffle and Hardhat, you need to set up the configuration file by setting either the `HDWalletProvider` provider (for Truffle) or the URL and the `network_id`/`chainId` to the RPC URL (and ID) selected from Chainlist. This is described in detail in the relevant tutorial sections.
 
 ## What next?
 
