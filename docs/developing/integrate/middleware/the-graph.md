@@ -1,6 +1,6 @@
 ---
 title: The Graph
-proofedDate: na
+proofedDate: 20230728
 iterationBy: na
 includedInSite: true
 approvedBy: na
@@ -15,7 +15,7 @@ comment: original item https://medium.com/neon-labs/the-graph-on-neon-evm-enabli
 
 > `yarn global add @graphprotocol/graph-cli` or `npm install -g @graphprotocol/graph-cli`
 
-- Send request info@neonevm.org to be added to the allowlist for The Graph endpoints:
+- Send a request to info@neonevm.org to be added to the allowlist for The Graph endpoints:
     - IPFS: https://ipfs.neonevm.org
     - Graph UI: https://thegraph.neonevm.org
     - Deployment: https://thegraph.neonevm.org/deploy
@@ -32,7 +32,7 @@ The standard flow is where the end user deploys and collects data from their own
 3. [Configure your subgraph.yaml](#subgraph-overview) to collect data on events emitted by contract with value and block number from previous step
 4. [Deploy your subgraph](#deploy-your-subgraph)
 
- The Graph is highly customizable and supports other flows, for example it allows you to monitor [public contracts](#public-contracts) too. 
+ The Graph is highly customizable and supports other flows; for example, it allows you to monitor [public contracts](#public-contracts) too. 
 
 ::: 
 
@@ -42,7 +42,7 @@ The standard flow is where the end user deploys and collects data from their own
 
 ## Neon EVM-specific deviations
 
-On the Solana blockchain, data accounts are used to temporarily store data, with a history of days. While on the Ethereum blockchain, data is stored within smart contracts. Neon EVM offers an intermediate approach by storing Solana account data for an extended period to support tracing services.
+On the Solana blockchain, data accounts are used to temporarily store data with a history of days. While on the Ethereum blockchain, data is stored within smart contracts. Neon EVM offers an intermediate approach by storing Solana account data for an extended period to support tracing services.
 
 This means that The Graph may not be able to acquire all data according to the block number assigned. It is important that end users consider what data they wish to extract and store from the API service provided by their subgraph for future use.
 
@@ -59,9 +59,9 @@ Subgraphs map 1:1 with a dApp to provide Graph nodes with the information and lo
 
 ### Subgraph overview
 
-We need to create a subgraph to source data from the contract/s of interest that will constantly observe the blockchain using [your chosen Neon RPC](https://chainlist.org/?chain=245022926&testnets=true&search=Neon+EVM) for your events on interest. When one of these events is detected, the Graph node will extract the event log data and begin to process the information using a WebAssembly script defined in the subgraph.
+We need to create a subgraph to source data from the contract/s of interest that will constantly observe the blockchain using [your chosen Neon RPC](https://chainlist.org/?chain=245022926&testnets=true&search=Neon+EVM) for your events of interest. When one of these events is detected, the Graph node will extract the event log data and begin to process the information using a WebAssembly script defined in the subgraph.
 
-The script uses a GraphQL schema file in the subgraph to produce records, called entities, that represent metadata related to your query. These entities are stored on a database so they may be queried by API requests.
+The script uses a GraphQL schema file in the subgraph to produce records, called entities, that represent metadata related to your query. These entities are stored on a database, so they may be queried by API requests.
 
 A subgraph is created using three main components: 
 - Subgraph manifest
