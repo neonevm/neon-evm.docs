@@ -55,7 +55,7 @@ const sidebars = {
       label: 'Get Started',
       id: 'developing/get-started'
     },
-        {
+    {
       type: 'doc',
       label: 'Connect to Neon RPC',
       id: 'developing/connect_rpc'
