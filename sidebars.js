@@ -52,6 +52,11 @@ const sidebars = {
     { type: 'html', value: '<h4 class="sidebar-menu-title">Develop</h4>' },
     {
       type: 'doc',
+      label: 'Get Started',
+      id: 'developing/get-started'
+    },
+        {
+      type: 'doc',
       label: 'Connect to Neon RPC',
       id: 'developing/connect_rpc'
     },
