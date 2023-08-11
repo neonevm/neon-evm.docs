@@ -10,7 +10,6 @@ comment:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-See the [Truffle tutorial](/docs/developing/deploy_facilities/using_truffle).
 
 :::note
 Just in case you are not using our #ai-support channel in Discord to accelerate your access to the documentation, here is a bare bones Get Started.
