@@ -33,7 +33,7 @@ Solidity or Vyper smart contracts, standard development and deployment tools and
 
 - Neon EVM accounts follow [Ethereum's account standards](https://ethereum.org/en/developers/docs/accounts/) 
 
->  The majority of [Ethereum OpCodes](https://ethereum.org/en/developers/docs/evm/opcodes) are represented verbatim on Neon EVM. Learn about those [OpCodes that behave differently](opcodes).
+>  Only a few [OpCodes](#opcodes) are not handled verbatim.
 
 - Neon EVM supports type 0 / legacy transaction requests
 
@@ -54,6 +54,10 @@ Neon supports all precompiled contracts defined on [evm.code](https://www.evm.co
 Neon also supports native precompiled contracts that are available to our users.
 
 <!-- todo once we have the details on this can link to page -->
+
+### Opcodes
+
+While the majority of OpCodes are supported verbatim, there are some that are handled differently. Learn about those [variant OpCodes](opcodes).
 
 ### Gas calculation
 
