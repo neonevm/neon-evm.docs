@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 
 :::note
-Just in case you are not using our #ai-support channel in Discord to accelerate your access to the documentation, here is a bare bones Get Started.
+This is a bare bones Get Started; alternatively browse the full support available here.
 ::: 
 
 ## Get test NEON for Neon Devnet
@@ -108,7 +108,7 @@ See the [Truffle tutorial](https://docs.neonfoundation.io/docs/developing/deploy
 </TabItem>
 <TabItem value="Foundry" label="Foundry" default>
 
-Foundry doesn’t have a config file like Hardhat or Truffle to configure the network settings. Rather, the RPC endpoint and the private key are specified in the command line when passing foundry commands. See the [Foundry tutorial](https://github.com/sukanyaparashar/simple-erc20-foundry).
+Foundry doesn’t have a config file like Hardhat or Truffle to configure the network settings. Rather, the RPC endpoint and the private key are specified in the command line when passing foundry commands. See the [Foundry tutorial](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-foundry).
 
 </TabItem>
 </Tabs>
