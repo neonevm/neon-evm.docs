@@ -81,6 +81,9 @@ You can either lint **all** Markdown files with `vale .`, or you can name a spec
 
 ### Tabs boilerplate
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 <Tabs>
 	<TabItem value="View" label="View your balance" default>
 
