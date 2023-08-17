@@ -120,3 +120,26 @@ Local installation and CLI linting is recommended for documentarians:
 You can either lint **all** Markdown files with `vale .`, or you can name a specific file to lint, e.g. `vale readme.md` or `vale {path-to-doc.docname.md`.
 
 
+### Tabs boilerplate
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+	<TabItem value="View" label="View your balance" default>
+
+************
+
+</TabItem>
+<TabItem value="Retrieve" label="Retrieve your balance" default>
+
+	*********
+</TabItem>
+</Tabs>
+
+### Code boilerplates
+
+[codesandbox](https://codesandbox.io/dashboard/recent?workspace=6715f772-9c64-4139-8c8d-a18fe3f51a91) setup for grammarly@neonlabs.org
+
+with authentication via [GitHub](https://github.com/anonNeon)
+

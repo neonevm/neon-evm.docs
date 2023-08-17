@@ -53,6 +53,11 @@ const sidebars = {
     { type: 'html', value: '<h4 class="sidebar-menu-title">Develop</h4>' },
     {
       type: 'doc',
+      label: 'Get Started',
+      id: 'developing/get-started'
+    },
+    {
+      type: 'doc',
       label: 'Connect to Neon RPC',
       id: 'developing/connect_rpc'
     },
@@ -91,7 +96,8 @@ const sidebars = {
         'developing/integrate/wallets/integrating_metamask_into_your_dapp',
         'developing/integrate/wallets/integrating_walletconnect',
         'developing/integrate/oracles/integrating_chainlink',
-        'developing/integrate/oracles/integrating_pyth'
+        'developing/integrate/oracles/integrating_pyth',
+        'developing/integrate/middleware/the-graph'      
       ]
     },
     {

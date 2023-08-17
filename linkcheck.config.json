@@ -20,6 +20,15 @@
     },
     {
       "pattern": "^https://support.metamask.io/hc/en-us/articles/"
+    },
+    {
+      "pattern": "^https://ipfs.neonevm.org"
+    },
+    {
+      "pattern": "^https://thegraph.neonevm.org/deploy"
+    },
+    {
+      "pattern": "^https://thegraph.neonevm.org/index-node/graphql"
     }
   ],
   "aliveStatusCodes": [

@@ -38,6 +38,8 @@ Please make sure you have hardware that meets the corresponding minimum requirem
 <Tabs>
   <TabItem value="basic" label="Basic" default>
 
+For testing, the minimum recommended hardware is:
+
 |Component|Requirement                           |
 |-----|:-----------------------------------------|
 |Operating System | Linux (Ubuntu/CentOS recommended) |
@@ -46,6 +48,8 @@ Please make sure you have hardware that meets the corresponding minimum requirem
 |Storage | 500 GB |
   </TabItem>
   <TabItem value="self-managed" label="Self-Managed">
+
+To provide a public Proxy service, the minimum recommended hardware is:
 
 |Component|Requirement                           |
 |-----|:-----------------------------------------|
