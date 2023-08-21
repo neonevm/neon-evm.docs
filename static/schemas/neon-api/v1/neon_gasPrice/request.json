@@ -29,6 +29,7 @@
       "oneOf": [
         {
           "type": "object",
+          "title": "Filter request",
           "description": "Exclude `from` address to retrieve common gas price for all accounts.",
           "properties": {
             "from": {
@@ -48,7 +49,7 @@
             },
             "full": {
               "type": "boolean",
-              "description": "Optional. Switch to determine verbose or light response.",
+              "description": "Optional. Switch to determine verbose or light response. For verbose, use `true`.",
               "examples": [
                 true, false
               ]
@@ -57,11 +58,12 @@
         },
         {
           "type": "object",
-          "description": "This request returns verbose details for all accounts.",
+          "title": "All accounts",
+          "description": "This request returns the details for all accounts.",
           "properties": {
             "full": {
               "type": "boolean",
-              "description": "Switch to determine verbose or light response.",
+              "description": "Switch to determine verbose or light response. For verbose, use `true`.",
               "example": true
             }
           }

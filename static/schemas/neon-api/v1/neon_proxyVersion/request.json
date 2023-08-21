@@ -1,10 +1,8 @@
 {
   "type": "object",
-  "description": "POST request to get Neon Proxy version",
+  "description": "NOT CURRENT  POST request to get Neon Proxy version",
   "required": [
-    "jsonrpc",
-    "method",
-    "id"
+    "method"
   ],
   "properties": {
     "jsonrpc": {

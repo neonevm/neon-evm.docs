@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "description": "Response to request for Neon Proxy version",
+  "description": "NOT CURRENT Response to request for Neon Proxy version",
   "properties": {
     "jsonrpc": {
       "type": "string",
@@ -9,9 +9,7 @@
     },
     "result": {
       "type": "string",
-      "examples": [
-        "Neon-proxy/v0.15.24-bd1e874ae49416819de6c36af9eca7e0440776ae"
-      ],
+      "example": "Neon-proxy/v0.15.24-bd1e874ae49416819de6c36af9eca7e0440776ae",
       "description": "Proxy version number and ***"
     },
     "id": {

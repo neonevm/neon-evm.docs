@@ -56,7 +56,7 @@ const config = {
         }
       ],
       navbar: {
-        title: 'NeonDocs',
+        title: 'Neon EVM Docs',
         logo: {
           alt: 'Neon EVM',
           src: 'img/logo.svg'
