@@ -59,7 +59,7 @@ curl -X POST https://neon-proxy-mainnet.solana.p2p.org \
 -d '{"method":"neon_proxyVersion"}'
 ```
 
-<!-- Retiring the full version 
+<!-- Retiring the full version
 ```bash
 curl -X POST https://neon-proxy-mainnet.solana.p2p.org \
 -H "Content-Type: application/json" \
@@ -103,7 +103,7 @@ The `neon_versions` method returns a list of all the components and their versio
 - `neon_proxyVersion` returns the current version of the Neon Proxy
 - `neon_solanaVersion` returns the version of the Solana node the Neon Proxy runs on
 
-The [JSON](#get-version-request-as-json) and examples demonstrate the verbose request. 
+The [JSON](#get-version-request-as-json) and examples demonstrate the verbose request.
 
 <JSONSchemaViewer schema={ neon_versions_request } />
 
@@ -137,7 +137,7 @@ Neon Gas price may be requested for an individual account or for all accounts, d
 <Tabs>
 	<TabItem value="RSchema" label="Request" default>
 
-The [JSON](#get-neon-gas-price-request-as-json) for this request schema is available below. 
+The [JSON](#get-neon-gas-price-request-as-json) for this request schema is available below.
 
 <JSONSchemaViewer schema={ neon_gasPrice_request } />
 
@@ -149,7 +149,7 @@ The [JSON](#get-neon-gas-price-request-as-json) for this request schema is avail
 
 <TabItem value="Schema" label="Response" default>
 
-The [JSON](#get-neon-gas-price-request-as-json) for this response schema is available below. 
+The [JSON](#get-neon-gas-price-request-as-json) for this response schema is available below.
 
 <JSONSchemaViewer schema={ neon_gasPrice_response } />
 
@@ -299,7 +299,3 @@ The `neon_emulate` method returns details of an emultated transaction.
 
 </TabItem>
 </Tabs>
-
-
-
-
