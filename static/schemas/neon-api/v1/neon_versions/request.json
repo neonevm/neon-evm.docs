@@ -23,9 +23,7 @@
     },
     "id": {
       "type": "string",
-      "examples": [
-        "K827qw7r98qwerqwehkjhwe8"
-      ],
+      "example": "K827qw7r98qwerqwehkjhwe8",
       "description": "End-user provided identifier for the request; returned with payload."
     }
   }

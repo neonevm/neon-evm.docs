@@ -5,21 +5,17 @@
     "jsonrpc": {
       "type": "string",
       "default": "2.0",
-      "description": "The JSON RPC version"
+      "description": "The JSON RPC version."
     },
     "result": {
       "type": "string",
-      "examples": [
-        "Neon-proxy/v0.15.24-bd1e874ae49416819de6c36af9eca7e0440776ae"
-      ],
+      "example": "Neon-proxy/v0.15.24-bd1e874ae49416819de6c36af9eca7e0440776ae",
       "description": "Proxy version number and the Git commit hash."
     },
     "id": {
       "type": "string",
-      "examples": [
-        "U18N7qw7r98qwerqwehkjhwe8"
-      ],
-      "description": "End-user provided identifier for the request"
+      "example": "U18N7qw7r98qwerqwehkjhwe8",
+      "description": "End-user provided identifier for the request."
     }
   },
   "required": [

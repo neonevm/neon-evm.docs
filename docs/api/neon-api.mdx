@@ -10,30 +10,35 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import JSONSchemaViewer from "@theme/JSONSchemaViewer";
 import CodeBlock from '@theme/CodeBlock';
-import neon_proxyVersion_request from "@site/static/schemas/neon-api/v1/neon_proxyVersion/request.json";
-import neon_evmVersion_request from "@site/static/schemas/neon-api/v1/neon_evmVersion/request.json";
-import neon_cliVersion_request from "@site/static/schemas/neon-api/v1/neon_cliVersion/request.json";
-import neon_getEvmParams_request from "@site/static/schemas/neon-api/v1/neon_getEvmParams/request.json";
 import neon_versions_request from "@site/static/schemas/neon-api/v1/neon_versions/request.json";
-import neon_solanaVersion_request from "@site/static/schemas/neon-api/v1/neon_solanaVersion/request.json";
+
 import neon_gasPrice_request from "@site/static/schemas/neon-api/v1/neon_gasPrice/request.json";
 import neon_getLogs_request from "@site/static/schemas/neon-api/v1/neon_getLogs/request.json";
 import neon_getTransactionReceipt_request from "@site/static/schemas/neon-api/v1/neon_getTransactionReceipt/request.json";
 import neon_getSolanaTransactionByNeonTransaction_request from "@site/static/schemas/neon-api/v1/neon_getSolanaTransactionByNeonTransaction/request.json";
-import neon_emulate_request from "@site/static/schemas/neon-api/v1/neon_emulate/request.json";
-import neon_proxyVersion_response from "@site/static/schemas/neon-api/v1/neon_proxyVersion/response.json";
-import neon_evmVersion_response from "@site/static/schemas/neon-api/v1/neon_evmVersion/response.json";
-import neon_cliVersion_response from "@site/static/schemas/neon-api/v1/neon_cliVersion/response.json";
-import neon_getEvmParams_response from "@site/static/schemas/neon-api/v1/neon_getEvmParams/response.json";
 import neon_versions_response from "@site/static/schemas/neon-api/v1/neon_versions/response.json";
-import neon_solanaVersion_response from "@site/static/schemas/neon-api/v1/neon_solanaVersion/response.json";
+import neon_emulate_request from "@site/static/schemas/neon-api/v1/neon_emulate/request.json";
 import neon_gasPrice_response from "@site/static/schemas/neon-api/v1/neon_gasPrice/response.json";
 import neon_getLogs_response from "@site/static/schemas/neon-api/v1/neon_getLogs/response.json";
 import neon_getTransactionReceipt_response from "@site/static/schemas/neon-api/v1/neon_getTransactionReceipt/response.json";
 import neon_getSolanaTransactionByNeonTransaction_response from "@site/static/schemas/neon-api/v1/neon_getSolanaTransactionByNeonTransaction/response.json";
 import neon_emulate_response from "@site/static/schemas/neon-api/v1/neon_emulate/response.json";
 
-<!-- useful for testing my example issue <JSONSchemaViewer schema={ neon_proxyVersion_response } /> -->
+<!-- redundant if I can use the method as enums
+
+import neon_proxyVersion_request from "@site/static/schemas/neon-api/v1/neon_proxyVersion/request.json";
+import neon_evmVersion_request from "@site/static/schemas/neon-api/v1/neon_evmVersion/request.json";
+import neon_cliVersion_request from "@site/static/schemas/neon-api/v1/neon_cliVersion/request.json";
+import neon_getEvmParams_request from "@site/static/schemas/neon-api/v1/neon_getEvmParams/request.json";
+import neon_solanaVersion_request from "@site/static/schemas/neon-api/v1/neon_solanaVersion/request.json";
+import neon_proxyVersion_response from "@site/static/schemas/neon-api/v1/neon_proxyVersion/response.json";
+import neon_evmVersion_response from "@site/static/schemas/neon-api/v1/neon_evmVersion/response.json";
+import neon_cliVersion_response from "@site/static/schemas/neon-api/v1/neon_cliVersion/response.json";
+import neon_getEvmParams_response from "@site/static/schemas/neon-api/v1/neon_getEvmParams/response.json";
+import neon_solanaVersion_response from "@site/static/schemas/neon-api/v1/neon_solanaVersion/response.json";
+
+-->
+
 
 ## Neon API service
 
@@ -105,7 +110,7 @@ The `neon_versions` method returns a list of all the components and their versio
 
 The [JSON](#get-version-request-as-json) and examples demonstrate the verbose request.
 
-<JSONSchemaViewer schema={ neon_versions_request } />
+<JSONSchemaViewer schema={ neon_versions_request } viewerOptions={{ showExamples: true }} />
 
 #### Get version request as JSON
 
@@ -117,7 +122,7 @@ The [JSON](#get-version-request-as-json) and examples demonstrate the verbose re
 
 The [JSON](#get-version-request-as-json) and examples demonstrate the verbose response.
 
-<JSONSchemaViewer schema={ neon_versions_response } />
+<JSONSchemaViewer schema={ neon_versions_response } viewerOptions={{ showExamples: true }} />
 
 #### Get version response as JSON
 
@@ -139,7 +144,7 @@ Neon Gas price may be requested for an individual account or for all accounts, d
 
 The [JSON](#get-neon-gas-price-request-as-json) for this request schema is available below.
 
-<JSONSchemaViewer schema={ neon_gasPrice_request } />
+<JSONSchemaViewer schema={ neon_gasPrice_request } viewerOptions={{ showExamples: true }} />
 
 #### Get Neon Gas price request as JSON
 
@@ -151,7 +156,7 @@ The [JSON](#get-neon-gas-price-request-as-json) for this request schema is avail
 
 The [JSON](#get-neon-gas-price-request-as-json) for this response schema is available below.
 
-<JSONSchemaViewer schema={ neon_gasPrice_response } />
+<JSONSchemaViewer schema={ neon_gasPrice_response } viewerOptions={{ showExamples: true }} />
 
 #### Get Neon Gas price response as JSON
 
@@ -171,7 +176,7 @@ The `neon_getLogs` method returns transaction log data.
 <Tabs>
 	<TabItem value="Schema" label="Schema" default>
 
-<JSONSchemaViewer schema={ neon_getLogs_request } />
+<JSONSchemaViewer schema={ neon_getLogs_request } viewerOptions={{ showExamples: true }} />
 
 </TabItem>
 <TabItem value="Json" label="JSON" default>
@@ -186,7 +191,7 @@ The `neon_getLogs` method returns transaction log data.
 <Tabs>
 	<TabItem value="Schema" label="Schema" default>
 
-<JSONSchemaViewer schema={ neon_getLogs_response } />
+<JSONSchemaViewer schema={ neon_getLogs_response } viewerOptions={{ showExamples: true }} />
 
 </TabItem>
 <TabItem value="Json" label="JSON" default>
@@ -205,7 +210,7 @@ The `neon_getTransactionReceipt` method returns transaction receipt data.
 <Tabs>
 	<TabItem value="Schema" label="Schema" default>
 
-<JSONSchemaViewer schema={ neon_getTransactionReceipt_request } />
+<JSONSchemaViewer schema={ neon_getTransactionReceipt_request } viewerOptions={{ showExamples: true }} />
 
 </TabItem>
 <TabItem value="Json" label="JSON" default>
@@ -220,7 +225,7 @@ The `neon_getTransactionReceipt` method returns transaction receipt data.
 <Tabs>
 	<TabItem value="Schema" label="Schema" default>
 
-<JSONSchemaViewer schema={ neon_getTransactionReceipt_response } />
+<JSONSchemaViewer schema={ neon_getTransactionReceipt_response } viewerOptions={{ showExamples: true }} />
 
 </TabItem>
 <TabItem value="Json" label="JSON" default>
@@ -240,7 +245,7 @@ The `neon_getSolanaTransactionByNeonTransaction` method returns a list of Solana
 <Tabs>
 	<TabItem value="Schema" label="Schema" default>
 
-<JSONSchemaViewer schema={ neon_getSolanaTransactionByNeonTransaction_request } />
+<JSONSchemaViewer schema={ neon_getSolanaTransactionByNeonTransaction_request } viewerOptions={{ showExamples: true }} />
 
 </TabItem>
 <TabItem value="Json" label="JSON" default>
@@ -255,7 +260,7 @@ The `neon_getSolanaTransactionByNeonTransaction` method returns a list of Solana
 <Tabs>
 	<TabItem value="Schema" label="Schema" default>
 
-<JSONSchemaViewer schema={ neon_getSolanaTransactionByNeonTransaction_response } />
+<JSONSchemaViewer schema={ neon_getSolanaTransactionByNeonTransaction_response } viewerOptions={{ showExamples: true }} />
 
 </TabItem>
 <TabItem value="Json" label="JSON" default>
@@ -275,7 +280,7 @@ The `neon_emulate` method returns details of an emultated transaction.
 <Tabs>
 	<TabItem value="Schema" label="Schema" default>
 
-<JSONSchemaViewer schema={ neon_emulate_request } />
+<JSONSchemaViewer schema={ neon_emulate_request } viewerOptions={{ showExamples: true }} />
 
 </TabItem>
 <TabItem value="Json" label="JSON" default>
@@ -290,7 +295,7 @@ The `neon_emulate` method returns details of an emultated transaction.
 <Tabs>
 	<TabItem value="Schema" label="Schema" default>
 
-<JSONSchemaViewer schema={ neon_emulate_response } />
+<JSONSchemaViewer schema={ neon_emulate_response } viewerOptions={{ showExamples: true }} />
 
 </TabItem>
 <TabItem value="Json" label="JSON" default>
