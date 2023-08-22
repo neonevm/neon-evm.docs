@@ -1,26 +1,34 @@
 {
   "type": "object",
-  "description": "Response to request for Neon Proxy version.",
+  "description": "Response to request for current versions.",
+  "required": [
+    "method",
+    "jsonrpc",
+    "id",
+    "result"
+  ],
   "properties": {
     "jsonrpc": {
       "type": "string",
       "default": "2.0",
       "description": "The JSON RPC version."
     },
-    "result": {
-      "type": "string",
-      "example": "Neon-proxy/v0.15.24-bd1e874ae49416819de6c36af9eca7e0440776ae",
-      "description": "Proxy version number and the Git commit hash."
-    },
     "id": {
       "type": "string",
-      "example": "U18N7qw7r98qwerqwehkjhwe8",
-      "description": "End-user provided identifier for the request."
+      "example": "K827qw7r98qwerqwehkjhwe8",
+      "description": "End-user provided identifier for the request; returned with payload."
+    },
+    "result": {
+      "type": "string",
+      "description": "Version and Git commit hash. Result depends on method passed in the request.",
+      "examples": [
+        {
+          "proxy": "Neon-proxy/v0.15.26-e902265cdc5eb7bc69cddb0b4eed859fab660a06",
+          "evm": "Neon/v0.15.13-9a4bbf29359e752336c0a1ff5fcb03e3ad303b7a",
+          "cli": "Neon-cli/v0.15.13-9a4bbf29359e752336c0a1ff5fcb03e3ad303b7a",
+          "solana": "Solana/v1.14.18"
+        }
+      ]
     }
-  },
-  "required": [
-    "jsonrpc",
-    "result",
-    "id"
-  ]
+  }
 }
