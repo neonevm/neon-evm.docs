@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "description": "Not current: Response to request for transaction gas price",
+  "description": "Response to request for transaction gas price",
   "required": [
     "jsonrpc",
     "id",
