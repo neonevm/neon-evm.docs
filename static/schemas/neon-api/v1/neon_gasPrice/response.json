@@ -1,29 +1,57 @@
 {
   "type": "object",
-  "description": "Response to request for transaction gas price",
+  "description": "Not current: Response to request for transaction gas price",
+  "required": [
+    "jsonrpc",
+    "id",
+    "result"
+  ],
   "properties": {
     "jsonrpc": {
       "type": "string",
       "default": "2.0",
-      "description": "The JSON RPC version",
-      "id": {
-        "type": "string",
-        "default": "OpEgqw7r98qwerqwehkjhwe8",
-        "description": "End-user provided identifier for the request"
-      },
-      "result": {
-        "type": "number",
-        "format": "hexadecimal",
-        "examples": [
-          "0x10c4cf9e80"
-        ],
-        "description": "Gas fee as hexidecimal value in NEON (for versions x-y)"
-      }
+      "description": "The JSON RPC version"
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "OpEgqw7r98qwerqwehkjhwe8"
+      ],
+      "description": "End-user provided identifier for the request"
+    },
+    "result": {
+      "type": "number",
+      "format": "hexadecimal",
+      "examples": [
+        "0x10c4cf9e80"
+      ],
+      "description": "Gas fee as hexadecimal value in NEON (for versions x-y)"
     }
   },
-  "required": [
-    "jsonrpc",
-    "result",
-    "id"
+  "examples": [
+    {
+      "title": "Simple response",
+      "jsonrpc": "2.0",
+      "id": "8423kljlj439",
+      "result": "0x10c4cf9e80"
+    },
+    {
+      "title": "Detailed response",
+      "jsonrpc": "2.0",
+      "id": "6423kljlj439",
+      "result": {
+        "gas_price": "0x0",
+        "suggested_gas_price": "0x10c2c383c6",
+        "min_acceptable_gas_price": "0x3b9aca00",
+        "min_executable_gas_price": "0x109c1bb304",
+        "min_wo_chainid_acceptable_gas_price": "0x2540be400",
+        "allow_underpriced_tx_wo_chainid": true,
+        "accept_reverted_tx_into_mempool": false,
+        "sol_price_usd": "0x656",
+        "neon_price_usd": "0x19",
+        "operator_fee": "0x3e8",
+        "gas_price_slippage": "0x64"
+      }
+    }
   ]
 }

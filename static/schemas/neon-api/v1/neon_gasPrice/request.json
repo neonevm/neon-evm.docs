@@ -2,9 +2,7 @@
   "type": "object",
   "description": "POST request to get transaction gas price. The payload returned depends on how you form the request using the `params` object. While each property is optional individually, an empty array is not processed. Two permutations of possible request structures are provided, more are supported.",
   "required": [
-    "jsonrpc",
     "method",
-    "id",
     "params"
   ],
   "properties": {
