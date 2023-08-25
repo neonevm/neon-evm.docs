@@ -129,7 +129,7 @@ Linting with Vale may either be local (with Vale installed via the CLI) or on a 
 
 Local installation and CLI linting is recommended for documentarians:
 
-You can either lint **all** Markdown files with `vale .`, or you can name a specific file to lint, e.g. `vale readme.md` or `vale {path-to-doc.docname.md`.
+You can either lint **all** Markdown files with `vale .`, or you can name a specific file to lint, e.g. `vale readme.md` or `vale {path-to-doc}/docname.md`, e.g. `vale docs/about/why_neon.md`
 
 
 ### Tabs boilerplate
