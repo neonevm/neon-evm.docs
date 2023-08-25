@@ -8,7 +8,7 @@
 yarn install
 ```
 
-### Local Development
+### Local development
 
 ```console
 yarn start
