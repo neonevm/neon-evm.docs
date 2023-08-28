@@ -20,7 +20,7 @@ The [Proxy local testing tutorial](/docs/operating/basic) describes how to perfo
   * Solana [Testnet](https://docs.solana.com/clusters#testnet)/[Devnet](https://docs.solana.com/clusters#devnet)/[Mainnet](https://docs.solana.com/clusters#mainnet-beta) is used, and the Proxy interacts with it through Neon EVM.
 
 ## Set up a local Proxy
-First, set up and host a Proxy locally as per the following steps. After executing these commands, the Proxy will be available at `http://localhost:9090/solana`. This address and port are set by default.
+First, set up and host a Proxy locally as per the following steps. After executing these commands, the Proxy is available at `http://localhost:9090/solana`. This address and port are set by default.
 
 ### Step 1: Docker
 Docker images themselves are never "started" and never "running". The `docker run` command takes the Docker image as a template and produces a container from it. Before starting your Proxy container, you need to start service containers.
@@ -41,8 +41,8 @@ sudo systemctl start docker
 ```
 :::
 
-### Step 2: Run the Database, Indexer, and Proxy Services
-In this step, you will create the services necessary for the function of the Proxy (including database and indexer services), as well as the Proxy service itself. These services, the functions of which are described below, will be created from a docker-compose.yml file.
+### Step 2: Run the Database, Indexer, and Proxy services
+In this step, you will create the services necessary for the function of the Proxy (including Database and Indexer services), as well as the Proxy service itself. These services, whose functions follow, are controlled by a docker-compose.yml file.
 
 #### Database Services
 This container aims to handle the database that stores all the relevant Ethereum processing metadata linked to each other: **`transactions`**, **`blocks`**, **`receipts`**, **`accounts`**, etc. This data is consumed by the **Indexer** service.
@@ -51,16 +51,16 @@ Currently, Neon EVM proxies are hard coded to work with PostgreSQL. To connect t
 
 > Only authorized Operators can change the settings of these parameters. Learn more about [operating a Neon Proxy](/docs/operating/operator-introduction.md)
 
-#### Indexer Service
-The indexer service indexes all the relevant Ethereum processing metadata consisting of **`signatures`**, **`transactions`**, **`blocks`**, **`receipts`**, **`accounts`**, etc. It gathers all this data from the Solana blockchain, filtering them by the EVM contract address. It enables us to provide our users with the Ethereum API.
+#### Indexer service
+The Indexer service indexes all the relevant Ethereum processing metadata consisting of **`signatures`**, **`transactions`**, **`blocks`**, **`receipts`**, **`accounts`**, etc. It gathers all this data from the Solana blockchain, filtering them by the EVM contract address. It enables us to provide our users with the Ethereum API.
 
-#### Proxy Service
+#### Proxy service
 The Proxy service is a core service that allows Ethereum-like transactions to be processed on Solana, taking full advantage of Solana-native functionality, including the ability to execute transactions in parallel.
 
 The Neon EVM address is registered inside `neonlabsorg/proxy`, so the Proxy knows which Neon EVM is running in the Solana cluster. After executing this command, the Proxy will be available at `http://localhost:9090/solana`. This address and port are set by default.
 
-#### Create and Run Services with Docker Compose
-In order to create and run these services, 
+#### Create and run services with Docker Compose
+In order to create and run these services: 
 
 1. Create a "keys" folder and put your allowlisted key into it. Note that the file with the Operator key should be named `id.json`.
 ```bash
@@ -107,7 +107,7 @@ Creating proxy ... done
 
 ## Connect to a Solana cluster RPC endpoint
 
-A Proxy connects to a public [Solana cluster RPC endpoint](https://docs.solana.com/cluster/rpc-endpoints) depending on the `SOLANA_URL` value set. The table below shows the *endpoint* value that is set automatically based on the value of the `CONFIG` flag.
+A Proxy connects to a public [Solana cluster RPC endpoint](https://docs.solana.com/cluster/rpc-endpoints) depending on the `SOLANA_URL` value set. The following table shows the *endpoint* value that's set automatically based on the value of the `CONFIG` flag.
 
 ### RPC endpoints
 CONFIG | RPC Endpoint
@@ -116,9 +116,9 @@ Devnet | `https://api.devnet.solana.com`
 Testnet | `https://api.testnet.solana.com`
 Mainnet | `https://api.mainnet-beta.solana.com`
 
-To use a different endpoint, you need to specify the variable `-e SOLANA_URL='http://<Solana node RPC endpoint>'` on the command line. For example, in order to use devnet, add the flag `-e SOLANA_URL='https://api.devnet.solana.com'`.
+To use a different endpoint, you need to specify the variable `-e SOLANA_URL='http://<Solana node RPC endpoint>'` on the command line. For example, to use Devnet, add the flag `-e SOLANA_URL='https://api.devnet.solana.com'`.
 
-When a Proxy is deployed, it generates a wallet containing a key pair. If you do not need the new wallet and want to use the keys you already have, you need to specify the path to your wallet on the command line.
+When a Proxy is deployed, it generates a wallet containing a key pair. If you don't need the new wallet and want to use the keys you already have, you need to specify the path to your wallet on the command line.
 
 **Command Line Options**
   * `~/.config/solana/id.json` — absolute path to your key pair file stored locally
