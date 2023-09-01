@@ -4,7 +4,7 @@ proofedDate: 20230828
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: Local to local was updated -- todo verify this page; may need update also e.g. instruction says For Devnet/Testnet, it should be `eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU` but are Devnet and Testnet not two different entities?
+comment: 
 ---
 
 :::info
@@ -69,8 +69,9 @@ mv {PATH_TO_WHITELISTED_KEYS} keys/
 ```
 
 2. Set the following environment variables
-   - `EVM_LOADER`
-     - For Devnet/Testnet, it should be `eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU`
+   - `EVM_LOADER`, i.e. the contract address for Neon EVM
+     - For Devnet/Testnet, use: `eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU`
+     - For Mainnet, use: `NeonVMyRX5GbCrsAHnUwx1nYYoJAtskU1bWUo6JGNyG`
    - `SOLANA_URL`
      - Refer to the [RPC Endpoints table](#rpc-endpoints)
    - `PROXY_VERSION`
