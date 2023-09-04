@@ -13,7 +13,9 @@ The [Proxy local testing tutorial](/docs/operating/basic) describes how to perfo
 
 
 ## Prerequisites
-[Docker](https://docs.docker.com/get-docker/); `docker-compose` v1.29 is recommended.
+- [Docker](https://docs.docker.com/get-docker/); `docker-compose` v1.29 is recommended.
+- Operator keys. Test [public keys are available](https://github.com/neonlabsorg/neon-evm/tree/develop/evm_loader/program/config).
+
 
 ## Network configuration
   * The target Solana cluster is accessed via the locally-hosted Proxy.
