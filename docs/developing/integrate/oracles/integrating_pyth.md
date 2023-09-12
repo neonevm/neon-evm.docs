@@ -57,7 +57,7 @@ Line 7 refreshes the data held by the Pyth contract, and line 13-15 retrieves th
 
 Pyth maintains the contracts on Neon EVM, with the repo maintained by Pyth on GitHub at [pyth-network/pyth-neon](https://github.com/pyth-network/pyth-neon).
 
-It's **strongly recommended** that you follow the [consumer best practices](https://docs.pyth.network/consumers/best-practices) when consuming Pyth data.
+It's **strongly recommended** that you follow the [consumer best practices](https://docs.pyth.network/documentation/pythnet-price-feeds/best-practices) when consuming Pyth data.
 
 :::note
 While Pyth provides a sane default for the staleness threshold and a fallback process if feed data is stale, users may configure this functionality.

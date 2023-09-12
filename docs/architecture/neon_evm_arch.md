@@ -54,7 +54,7 @@ A proxy converts N-tx into transactions under Solana rules. N-tx is signed by a 
 
 More details on how the proxy converts a N-tx to multiple S-txs can be found [here](https://neonlabsorg.medium.com/neon-web3-proxy-facilitating-seamless-transactions-on-neon-evm-b33c2041aa08).
 
-Below is a list of the main Neon Web3 Proxy features that are implemented in the Neon EVM Testnet:
+Below is a list of the main Neon Web3 Proxy features that are implemented in the Neon EVM:
   * Receiving requests over Web3 API protocol
   * Shaping responses using Web3 API protocol
   * Packaging a Neon transaction into a Solana transaction. The Solana transaction contains the following information:
@@ -79,7 +79,7 @@ Governance participants perform the following functions:
   * Changing settings parameters such as the fee value, opening a new balance, the Mn value and the maximum number of iterations.  
 
 
-### ERC-20 TKN
+### ERC-20 token
 This is a contract based on the ERC-20 standard token. An ERC-20 token shows user balances for a certain ticker. After an account (user-acc) selects a type of token, this contract becomes blocked.  
 
 ### SPL Token

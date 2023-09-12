@@ -34,8 +34,8 @@ const sidebars = {
       label: '💰 Tokens',
       items: [
         'tokens/neon_token',
-        'tokens/gas_fees',
-        'tokens/token_list',
+        'tokens/gas_fees',      
+        'tokens/token_list'
       ]
     },
     {
@@ -52,13 +52,23 @@ const sidebars = {
     { type: 'html', value: '<h4 class="sidebar-menu-title">Develop</h4>' },
     {
       type: 'doc',
+      label: 'Get Started',
+      id: 'developing/get-started'
+    },
+    {
+      type: 'doc',
       label: 'Connect to Neon RPC',
       id: 'developing/connect_rpc'
     },
-        {
+    {
       type: 'doc',
       label: 'Request Test Tokens',
       id: 'developing/utilities/faucet'
+    },
+    {
+      type: 'doc',
+      label: 'Gasless transactions',
+      id: 'developing/gasless'
     },
     {
       type: 'category',
@@ -85,7 +95,8 @@ const sidebars = {
         'developing/integrate/wallets/integrating_metamask_into_your_dapp',
         'developing/integrate/wallets/integrating_walletconnect',
         'developing/integrate/oracles/integrating_chainlink',
-        'developing/integrate/oracles/integrating_pyth'
+        'developing/integrate/oracles/integrating_pyth',
+        'developing/integrate/middleware/the-graph'      
       ]
     },
     {
@@ -95,7 +106,7 @@ const sidebars = {
         'developing/deploy_facilities/using_hardhat',
         'developing/deploy_facilities/using_truffle',
         'developing/deploy_facilities/using_remix',
-        'developing/deploy_facilities/using_brownie',
+        'developing/deploy_facilities/using_brownie'
       ]
     },
     {
@@ -104,7 +115,7 @@ const sidebars = {
       items: [
         'developing/dev_environment/op2_local_proxy_local_solana',
         'developing/dev_environment/op3_local_proxy_remote_solana',
-        'clusters/solana_cluster',
+        'clusters/solana_cluster'
       ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
@@ -115,6 +126,7 @@ const sidebars = {
       items: [
         'evm_compatibility/overview',
         'evm_compatibility/json_rpc_api_methods',
+        'evm_compatibility/opcodes',
         'evm_compatibility/precompiles'
       ]
     },
@@ -178,6 +190,11 @@ const sidebars = {
       type: 'doc',
       label: 'Principles and Objectives',
       id: 'governance/principles'
+    },
+    {
+      type: 'doc',
+      label: 'Command Line Utilities',
+      id: 'governance/command_line'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' }
   ]

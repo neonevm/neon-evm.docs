@@ -4,7 +4,7 @@ proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comments: na
+comments: todo -- it may be more appropriate to have 1 page detailing all the environment variables common to both local and "enhanced" Proxy as they are the same tooling simply run in different environments
 ---
 
 
@@ -13,11 +13,11 @@ import TabItem from '@theme/TabItem';
 
 ## Who Should Use This Guide
 
-This guide provides instructions on how to run a self-managed instance of `neon-proxy` that offers more flexibility, configurability, and control for its operator. It is designed for:
-* More **advanced** operators who would like to build their own Kubernetes clusters from scratch and run neon-proxy on them
+This guide provides instructions on how to run a self-managed instance of Neon Proxy that offers more flexibility, configurability, and control for its Operator. It is designed for:
+* More **advanced** operators who would like to build their own Kubernetes clusters from scratch and run Neon Proxy on them
 * **Enterprise** operators with cluster solutions on-premise or with third-party public cloud providers such as AWS, Google Cloud, and Microsoft Azure
 
-Please note that operating a self-managed neon-proxy requires certain technical expertise and a solid understanding of network and security protocols. The operator is responsible for ensuring the security and reliability of the proxy and the Kubernetes cluster it runs on, and will be well-advised to invest time and resources into managing and maintaining them.
+Please note that operating a self-managed Neon Proxy requires certain technical expertise and a solid understanding of network and security protocols. The operator is responsible for ensuring the security and reliability of the proxy and the Kubernetes cluster it runs on, and will be well-advised to invest time and resources into managing and maintaining them.
 
 ## Operator Requirements
 
@@ -32,8 +32,8 @@ In addition to the balance for storing SOL tokens, an operator must also have th
 CONFIG | NEON_TOKEN_MINT
 :-|:-
 devnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
-testnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g
 local | HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
+<!-- testnet | 89dre8rZjLNft7HoupGiyxu3MNftR577ZYu8bHe2kK7g -->
 
 To create the `NEON_TOKEN_MINT` balance, you can use the following command:
 ```bash
@@ -108,11 +108,11 @@ Next, copy the configuration file into `config.ini`:
 cp config.ini.sample config.ini
 ```
 
-This is where you configure various aspects of how you wish to run your proxy. Open it with your text editor of choice.
+This is where you configure various aspects of how you wish to run your Proxy. Open it with your text editor of choice.
 
 ### Configuration
 
-`config.ini` contains environment variables that dictate how the services within the proxy are run. It is organized into the following sections:
+`config.ini` contains environment variables that dictate how the services within the Proxy are run. It is organized into the following sections:
 * [`General`](#general)
 * [`Solana`](#solana)
 * [`Proxy`](#proxy)
@@ -125,16 +125,16 @@ This is where you configure various aspects of how you wish to run your proxy. O
 * `P_ENV` - specifies the Neon network environment you will connect to: `devnet`, `testnet`, or `mainnet`.
 * `INGRESS_ENABLED` - enables/disables the ingress for the cluster
 * `VAULT_ENABLED` - enables/disables [Hashicorp Vault](https://www.vaultproject.io/) container inside your cluster as a service
-* `NEON_PROXY_ENABLED` - enables/disables neonlabs proxy container
+* `NEON_PROXY_ENABLED` - enables/disables Neon Proxy container
 * `POSTGRES_ENABLED` - enables/disables local Postgresql pods (see the [`Postgres` section](#postgres))
 * `CLUSTER_TYPE` - specifies the Kubernetes provider used. Options are `"eks"`, `"gke"` or `"localhost"` (see the [Kubernetes section](#kubernetes))
-* `NAMESPACE` - specifies the namespace that the proxy will be deployed inside the cluster. Default is `neon-proxy`
+* `NAMESPACE` - specifies the namespace that the Proxy will be deployed inside the cluster. Default is `neon-proxy`
 * `KEY_DIR` - path to the directory containing your neon-labs operator keys, relative to the current directory
 * `KEY_MASK` - regular expression that finds your operator key JSON files
 
 #### `Solana`
 
-* `SOLANA_URL` - specifies the Solana URL RPC endpoint that a proxy is connecting to
+* `SOLANA_URL` - specifies the Solana URL RPC endpoint that a Proxy is connecting to
   * The public Solana endpoints have upper-bound limits for requests per minute (60)
   * It is best for the operator to use their **own** Solana node running on their infrastructure
   * For each endpoint's timeout values, see:
@@ -148,12 +148,12 @@ This is where you configure various aspects of how you wish to run your proxy. O
 
 #### `Proxy`
 
-* `PROXY_VER` - specifies the proxy/docker image version
+* `PROXY_VER` - specifies the Proxy/Docker image version
 * `PROXY_COUNT` - specifies the the number of pods that you need to host in your cluster namespace
 * `PROXY_COUNT` - specifies the number of keys that each pod will use from Hashicorp Vault
 * `PROXY_HOST` - if you want to use an ingress to serve your own DNS name inside the cluster, set this variable to point to the host
 * `PRX_FAUCET_URL` - specifies the internal name inside your namespace that calls the faucet application (only applicable to local development and devnet)
-* `PRX_PROXY_URL` - specifies the address of local neon-proxy that resides inside in your namespace service
+* `PRX_PROXY_URL` - specifies the address of local Neon Proxy that resides inside in your namespace service
 * `PRX_LOG_NEON_CLI_DEBUG` - enables/disables debugging information in Neon CLI logs
 * `PRX_PYTH_MAPPING_ACCOUNT` - specifies a [Pyth Network](https://pyth.network/) account
 * `PRX_MINIMAL_GAS_PRICE` - specifies the lowest fee for gas price
@@ -166,8 +166,8 @@ This is where you configure various aspects of how you wish to run your proxy. O
     | devnet | eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU | 
     | testnet | eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU | 
     | local | N/A | 
-* `PRX_NEON_CLI_TIMEOUT` - sets the timeout limit for proxy to Solana cluster connectivity
-* `PRX_CONFIRM_TIMEOUT` - sets the confirm timeout for proxy to Solana cluster connectivity
+* `PRX_NEON_CLI_TIMEOUT` - sets the timeout limit for Proxy to Solana cluster connectivity
+* `PRX_CONFIRM_TIMEOUT` - sets the confirm timeout for Proxy to Solana cluster connectivity
 
 #### `Indexer`
 
@@ -175,7 +175,7 @@ This is where you configure various aspects of how you wish to run your proxy. O
 * `IDX_LOG_FULL_OBJECT_INFO`
 
 #### `Postgres`
-The proxy database is based on [Postgres](https://www.postgresql.org/). For database, we have two options in terms of connectivity:
+The Proxy database is based on [Postgres](https://www.postgresql.org/). For database, we have two options in terms of connectivity:
 
 ##### Option 1: Run Postgres database locally inside Kubernetes as a pod
 To run the Postgresql database inside Kubernetes as a cluster pod ([StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)) with local storage, simply set 
@@ -224,7 +224,7 @@ The vault component, built on [HashiCorp Vault](https://www.vaultproject.io/), s
 * `VAULT_UNSEAL_KEY` - specifies the unseal key, which is a key for unsealing a vault and encrypting the root key
 
 :::caution
-Upon the **first** installation of neon-proxy, a `vault-keys.json` file is generated, and it contains the values for `VAULT_ROOT_TOKEN` and `VAULT_UNSEAL_KEY`. Please make sure to **safeguard** them in a **secure** place and manner. These will be re-used in the future.
+Upon the **first** installation of Neon Proxy, a `vault-keys.json` file is generated, and it contains the values for `VAULT_ROOT_TOKEN` and `VAULT_UNSEAL_KEY`. Please make sure to **safeguard** them in a **secure** place and manner. These will be re-used in the future.
 
 For subsequent installations/updates, please uncomment these two variables in `config.ini` and set their values accordingly.
 

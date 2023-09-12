@@ -8,8 +8,8 @@ const config = {
   tagline: 'Neon EVM is an open source project implementing the Ethereum virtual machine on Solana.',
   url: 'https://docs.neonfoundation.io',
   baseUrl: '/',
-  onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.png',
   organizationName: 'neonlabsorg',
   projectName: 'neon-evm.docs',
@@ -80,14 +80,14 @@ const config = {
         },
         links: [
           {
-            title: 'Getting Started',
+            title: 'Get Started',
             items: [
               { label: '🏓 Quick Start', to: '/docs/quick_start' },
               { label: '🧬 Neon EVM Overview', to: '/docs/about/why_neon' },
               { label: '🔑 Set Up Wallet', to: '/docs/wallet/metamask_setup' },
               { label: '💰 Tokens', to: '/docs/tokens/neon_token' },
               { label: '🛰 Transfer Tokens', to: '/docs/token_transferring/neonpass_usage' },
-              { label: '💬 FAQ', to: '/docs/faq/what-is-neon' }
+              { label: '💬 FAQ', to: '/docs/faq/neon-brief-faq' }
             ]
           },
           {
@@ -99,7 +99,7 @@ const config = {
             ]
           },
           {
-            title: 'Developers',
+            title: 'Develop',
             items: [
               { label: 'Connect to Neon RPC', to: '/docs/developing/connect_rpc' },
               { label: 'Request Test Tokens', to: '/docs/developing/utilities/faucet' },
@@ -119,15 +119,14 @@ const config = {
             ]
           },
           {
-            title: 'Operators',
+            title: 'Operate',
             items: [
-              { label: 'Operate a Neon Proxy', to: '/docs/operating/overview/introduction' },
-              { label: 'Operator Requirements', to: '/docs/operating/operator_requirements' },
-              { label: 'Running a Proxy Server', to: '/docs/operating/operator_guide' }
+              { label: 'Operate a Neon Proxy', to: '/docs/operating/operator-introduction' },
+              { label: 'Run a Proxy Server', to: '/docs/operating/basic' }
             ]
           },
           {
-            title: 'Governance',
+            title: 'Govern',
             items: [
               { label: 'Overview', to: '/docs/governance/overview' },
               { label: 'Neon DAO Organization', to: '/docs/governance/neon_daos' },
