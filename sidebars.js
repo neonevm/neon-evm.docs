@@ -34,7 +34,7 @@ const sidebars = {
       label: '💰 Tokens',
       items: [
         'tokens/neon_token',
-        'tokens/gas_fees',      
+        'tokens/gas_fees',
         'tokens/token_list'
       ]
     },
@@ -85,7 +85,7 @@ const sidebars = {
       items: [
         'developing/deploy_facilities/interacting_with_spl_tokens',
         'tokens/token_list',
-        'developing/integrate/neon_transfer_sdk'
+        'developing/integrate/neon_transfer'
         ]
     },
     {
@@ -96,7 +96,7 @@ const sidebars = {
         'developing/integrate/wallets/integrating_walletconnect',
         'developing/integrate/oracles/integrating_chainlink',
         'developing/integrate/oracles/integrating_pyth',
-        'developing/integrate/middleware/the-graph'      
+        'developing/integrate/middleware/the-graph'
       ]
     },
     {
@@ -138,7 +138,7 @@ const sidebars = {
         'architecture/eth_sol_solution',
         'architecture/solana-accounts'
       ]
-    },   
+    },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Operate</h4>' },
     {
@@ -154,7 +154,7 @@ const sidebars = {
         'operating/enhanced',
         'operating/installation/setup_kubernetes'
       ]
-    },    
+    },
     {
       type: 'category',
       label: 'Configuration',
