@@ -42,7 +42,7 @@ The following tools are available on Neon:
 
 ### How do I transfer SPL tokens between Solana and Neon?
 
-[NeonPass](https://neonpass.live/) is an open-source service that facilitates token transfers between Solana and Neon EVM, including the NEON SPL token. To use NeonPass, you must have access to two wallets: a Solana wallet, such as [Phantom](https://phantom.app/), and an EVM wallet, such as [MetaMask](https://metamask.io/) for Neon.
+[NeonPass](/docs/token_transferring/neonpass_usage) is an open-source service that facilitates token transfers between Solana and Neon EVM, including the NEON SPL token. To use NeonPass, you must have access to two wallets: a Solana wallet, such as [Phantom](https://phantom.app/), and an EVM wallet, such as [MetaMask](https://metamask.io/).
 
 ### What is Neon's Roadmap?
 
@@ -64,6 +64,6 @@ Upcoming events in the Neon community are listed on our [events page](https://ne
 
 ## What next?
 
-If you still have a question about the Neon EVM that is not answered in the FAQ, please join us on our [Discord server](https://discord.gg/neonevm). Our team will be glad to help you.
+If you still have a question about the Neon EVM that is not answered in the FAQ, please join us on our [Discord server](https://discord.gg/neonevm). Our AI support channel `#ai-support` will answer your questions day or night. If the AI is not smart enough, don't worry, our support team will be glad to help you.
 
 > Discord [invite link](https://discord.com/invite/ApZRBDqYcN)
