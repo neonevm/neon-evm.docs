@@ -67,4 +67,25 @@
   color: #fff;
 }
 
+.cookie-banner button.main {
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+}
+
+.cookie-banner button.secondary {
+  color: var(--ifm-menu-color);
+  font-weight: bold;
+}
+
+.cookie-banner button.main:hover, button.secondary:hover {
+  cursor: pointer;
+}
+
+.cookie-banner button, button:focus, button:active {
+  outline: none;
+  background: transparent;
+  border: none;
+}
+
+
 

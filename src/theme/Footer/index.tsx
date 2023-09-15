@@ -8,7 +8,7 @@ import Twitter from '@site/static/icons/s-twitter.svg';
 import Youtube from '@site/static/icons/s-youtube.svg';
 import './styles.css';
 
-import CookieBanner from '@site/src/components/CookieBanner';
+import CookieComponent from '@site/src/components/CookieBanner/cookie';
 
 function Footer() {
   const { footer } = useThemeConfig();
@@ -18,7 +18,7 @@ function Footer() {
   }
 
   return <footer className='footer'>
-    <CookieBanner />
+    <CookieComponent />
     <div className={'container container-fluid'}>
       <div className={'row footer__links'}>
         <div className='col footer__logo'>
