@@ -6,6 +6,7 @@ includedInSite: true
 approvedBy: na
 comment: 
 ---
+import image1 from '@site/static/img/doc-images/neonpass/NeonPass.png';
 
 ## TL;DR
 
@@ -26,6 +27,9 @@ On Solana, SPL assets are stored within Solana Associated Token Accounts. For an
 ### Moving SPL tokens between Neon EVM and Solana
 
 This transfer of SPL tokens between account types is a very different approach to that provided by blockchain Bridges. Bridges lock the assets on the source blockchain and mint corresponding assets on the target blockchain. NeonPass moves tokens *between* accounts. Move an SPL token into your EVM-based wallet such as MetaMask and, under the hood, the source account is your Solana Associated Token Account, and the target is your Neon EVM ERC-20 Token Account that stores the assets associated with your EVM-based wallet.
+
+
+<img src={image1} style={{ display: 'block', margin: '10px auto' }} />
 
 This transfer process also works in reverse. Neon EVM assets can be unpackaged into the SPL standard and transferred back to the Associated Solana Token Account. This allows the assets to seamlessly transition between Neon EVM and Solana accounts within Solana’s L1 Blockchain. 
 

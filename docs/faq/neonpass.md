@@ -23,6 +23,7 @@ No. The term wrapped is associated with the common practice of locking assets on
 ### What are the different accounts types in Solana and Neon EVM?
 Solana has Associated Token Accounts (not to be confused with Solana User Accounts) which manage tokens. These token accounts are owned by the Solana Token Program, the default program in Solana Blockchain. This provides authority to the User Solana Account according to the relationship between tokens and user accounts defined by the Associated Token Program, one of Solana’s default programs.
 
+
 Neon EVM ERC-20 Token Accounts are not the same as Neon EVM’s User Accounts, i.e., those EVM-based wallet accounts. The former are created within the Neon EVM ecosystem to store the assets associated with users’ Neon EVM-facing wallet accounts. 
 
 
