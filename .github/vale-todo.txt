@@ -1,0 +1,15 @@
+TODO: add to vale
+
+Indexer as proper noun
+Database suggestion -- if active component of the system, then proper noun
+
+
+Kill first-person rule from Google adapted
+
+Drop one of these triggers (only needs 1)
+   
+ 119:149  warning     Consider using 'to' instead of  write-good-adapted.exchange  
+                      'in order to'. This makes it                                 
+                      simpler and clearer.                                         
+ 119:149  warning     Use 'to' instead of 'in order   Google-adapted.Substitutions 
+                      to'.                 

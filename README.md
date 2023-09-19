@@ -85,12 +85,12 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-	<TabItem value="View" label="View your balance" default>
+	<TabItem value="Opt1" label="First option" default>
 
 ************
 
 </TabItem>
-<TabItem value="Retrieve" label="Retrieve your balance" default>
+<TabItem value="Opt2" label="Second option" default>
 
 	*********
 </TabItem>
