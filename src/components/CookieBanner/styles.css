@@ -34,6 +34,10 @@
   text-decoration: underline;
 }
 
+.cookie-banner .description a:hover {
+  color: var(--ifm-color-primary-lightest);
+}
+
 .cookie-banner .actions {
   display: grid;
   grid-template-columns: fit-content(200px) auto;
@@ -79,6 +83,14 @@
 
 .cookie-banner button.main:hover, button.secondary:hover {
   cursor: pointer;
+}
+
+.cookie-banner button.main:hover {
+  color: var(--ifm-color-primary-lightest);
+}
+
+.cookie-banner button.secondary:hover {
+  color: var(--ifm-menu-color-hover);
 }
 
 .cookie-banner button, button:focus, button:active {
