@@ -110,13 +110,9 @@ const sidebars = {
       ]
     },
     {
-      type: 'category',
+      type: 'doc',
       label: 'Set up Local Neon EVM',
-      items: [
-        'developing/dev_environment/op2_local_proxy_local_solana',
-        'developing/dev_environment/op3_local_proxy_remote_solana',
-        'clusters/solana_cluster'
-      ]
+      id: 'developing/dev_environment/local_proxy_remote_solana'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Learn</h4>' },
