@@ -14,7 +14,7 @@ The [Proxy local testing tutorial](/docs/operating/basic) describes how to perfo
 
 ## Prerequisites
 - [Docker](https://docs.docker.com/get-docker/); `docker-compose` v1.29 is recommended.
-- Operator keys. Test [public keys are available](https://github.com/neonlabsorg/neon-evm/tree/develop/evm_loader/program/config).
+- Operator keys. Test [public keys are available](https://github.com/neonlabsorg/proxy-model.py/tree/develop/proxy/operator-keypairs).
 
 
 ## Network configuration
