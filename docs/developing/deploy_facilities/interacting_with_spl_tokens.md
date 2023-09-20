@@ -25,7 +25,7 @@ This allows Solana liquidity to be available to EVM bytecode contracts (Solidity
 |Mainnet| 0x6B226a13F5FE3A5cC488084C08bB905533804720|
 
 :::info
-To be able to use an SPL token from a Solana account balance, it must be transferred to a Neon EVM account via the [NeonPass SDK](/docs/developing/integrate/neon_transfer_sdk).
+To be able to use an SPL token from a Solana account balance, it must be transferred to a Neon EVM account via [NeonPass](/docs/developing/integrate/neon_transfer).
 :::
 
 ## ERC-20 Factory Contract
