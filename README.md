@@ -78,7 +78,7 @@ Linting with Vale may either be local (with Vale installed via the CLI) or on a 
 
 Local installation and CLI linting is recommended for documentarians:
 
-You can either lint **all** Markdown files with `vale .`, or you can name a specific file to lint, e.g. `vale readme.md` or `vale {path-to-doc.docname.md`.
+You can either lint **all** Markdown files with `vale .`, or you can name a specific file to lint, i.e. `vale readme.md` or `vale {path-to-doc.docname.md}`, e.g. `vale docs/faq/fees.md`.
 
 
 ### Tabs boilerplate
@@ -103,4 +103,12 @@ import TabItem from '@theme/TabItem';
 [codesandbox](https://codesandbox.io/dashboard/recent?workspace=6715f772-9c64-4139-8c8d-a18fe3f51a91) setup for grammarly@neonlabs.org
 
 with authentication via [GitHub](https://github.com/anonNeon)
+
+## TODO
+
+Create plugin to convert -- to emdash
+
+https://docusaurus.io/docs/next/markdown-features/plugins#creating-new-rehyperemark-plugins
+
+
 
