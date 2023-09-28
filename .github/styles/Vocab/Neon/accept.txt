@@ -10,6 +10,7 @@ DeFi platform
 ESLint
 Ethereum
 [Ff]ailover
+Galan
 gcc
 gif
 Gitter
@@ -31,6 +32,7 @@ MakerDAO
 Markdown
 Merkel-Patricia Trie
 MetaMask
+N-tx
 Neon
 NEON
 NEON token
@@ -57,7 +59,7 @@ React.js
 readline
 rst
 Sealevel
-S-trx
+S-tx
 S-trexes
 Solana
 Solana cluster
