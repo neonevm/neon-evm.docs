@@ -102,3 +102,11 @@ import TabItem from '@theme/TabItem';
 
 with authentication via [GitHub](https://github.com/anonNeon)
 
+
+## Troubleshooting
+
+You pull main and can no longer build. Don't fret, someone probably change a dependency do:
+`npm install`
+and then build or serve and see if that fixes it
+
+
