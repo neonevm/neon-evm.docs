@@ -4,6 +4,7 @@ proofedDate: 20230427
 iterationBy: HB
 includedInSite: true
 approvedBy: YYY
+links: The ecosystem image links to /docs/tokens/neon_token and /docs/tokens/gas_fees
 comment: #2 TODO Tracer API needs internal linking to replace Medium article todo we have more wallets than just MetaMask -- perhaps add an FAQ and link there? TODO what was the outcome of Anton not wanting to use BPF?
 ---
 import {ImgTheme} from '@site/src/components/ImageTheme';
@@ -30,12 +31,13 @@ The **Neon EVM program** is a smart contract on the Solana blockchain. The Neon 
 
 ## Neon Proxy
 
-It's the Neon Proxy that allows Ethereum dApps to be ported to Neon with minimal reconfiguration. Neon Proxy packages a Neon transaction into a Solana transaction. The proxy is provided as a containerized solution that's intuitive for [Operators](/docs/operating/operator-introduction).
+It's the Neon Proxy that allows Ethereum dApps to be ported to Neon with minimal reconfiguration. Neon Proxy packages a EVM transaction into a Solana transaction. The Proxy is provided as a containerized solution that's intuitive for [Operators](/docs/operating/operator-introduction).
 
-> **Neon Operators** run Neon Proxy servers to facilitate the seamless execution of Ethereum-like transactions on Solana. It is this proxy service that allows Ethereum dApps to be ported to Neon with minimal reconfiguration. Operators accept payment in NEON and make payments within the Solana Ecosystem in SOL.
+:::info
+**Neon Operators** run Neon Proxy servers to facilitate the seamless execution of Ethereum-like transactions on Solana. It is this proxy service that allows Ethereum dApps to be ported to Neon with minimal reconfiguration. Operators accept payment in NEON (although the roadmap will expand the options) and make payments within the Solana Ecosystem in SOL.
+:::
 
-
-### The NEON Token
+### The NEON token
 
 The NEON token is a utility token with 2 functions:
 
@@ -103,6 +105,5 @@ The Tracer API supports a rerun of historical transactions, runs transactions on
 
 Various tools such as:
 - [Hardhat](/docs/developing/deploy_facilities/using_hardhat)
-- [Truffle](/docs/developing/deploy_facilities/using_truffle)
-- [Remix](/docs/developing/deploy_facilities/using_remix).
+- [Remix](/docs/developing/deploy_facilities/using_remix)
 
