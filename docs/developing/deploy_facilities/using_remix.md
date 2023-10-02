@@ -7,7 +7,7 @@ approvedBy: na
 comment: 
 ---
 
-*This tutorial will show you step by step how to use [Remix](about/terminology.md#remix) and [MetaMask](about/terminology.md#metamask) to create and deploy a simple smart contract on Solana. Although the instructions use Solana's [Devnet](https://docs.solana.com/clusters#devnet), they may also be applicable to Solana's [Testnet](https://docs.solana.com/clusters#testnet) or Solana's [Mainnet Beta](https://docs.solana.com/clusters#mainnet-beta).*
+*This tutorial demonstrates step by step how to use Remix and MetaMask to create and deploy a simple smart contract on Solana. Although the instructions use Solana's [Devnet](https://docs.solana.com/clusters#devnet), they may also be applicable to Solana's [Testnet](https://docs.solana.com/clusters#testnet) or Solana's [Mainnet Beta](https://docs.solana.com/clusters#mainnet-beta).*
 
 ## Requirements
 Before you start, make sure that the following is true:

@@ -60,7 +60,7 @@ swap:
   cryptobots: CryptoBots
   Cryptobots: CryptoBots
   curated roles: predefined roles
-  devnet: DevNet
+  '(?:dev net|Dev net|Dev-net|DevNet)': Devnet|Proper noun for named devnet (and sentence start)
   DAPP|DApp: dApp
   data are: data is
   deselect: clear
@@ -108,7 +108,7 @@ swap:
   '(?:log into|Log into|login to|Login to)': log in to
   long press: touch & hold
   '(?:mac OS|macos|Mac OS|Mac os)': macOS
-  '(?:main net|Main net|main-net|Main-net)': MainNet|PascalCase for named mainnet (and sentence start)
+  '(?:main net|Main net|main-net|Main-net|MainNet)': Mainnet|Proper noun for named mainnet (and sentence start)
   '(?:market-makers|Market-makers)': market makers|Market makers
   make sure: ensure
   '(?:Meta Mask|Meta mask|Meta-Mask|meta mask|meta-mask|metaMask)': MetaMask
@@ -145,16 +145,17 @@ swap:
   static IP address: static external IP address
   stylesheet: style sheet
   synch: sync
+  '(?:test net|Test net|Test-net|Test-net)': Testnet|Proper noun for named testnet (and sentence start)
   tablename: table name
   tablet: device
   touch: tap
   TX: tx
-  url:  URL
+  url: URL
   usecase: use case
   U.S.: US
   U.S.A.: USA
   '(?:validity rollup|validity Rollup)': Validity Rollup
   World Wide Web: web
-  web3: Web3
+  '(?:web3|web 3|Web 3)': Web3
   '(?:ZK Rollup|ZK rollup|ZK-Rollup|zk rollup|zk-rollup)': ZK-rollup
 
