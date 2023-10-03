@@ -42,6 +42,16 @@ const config = {
         debug: false,
         dropdown: true
       },
+      zoom: {
+        selector: '.image-zoom > img',
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(27, 27, 29)'
+        },
+        config: {
+          margin: 60
+        }
+      },
       metadata: [
         {
           name: 'docsearch:language',
@@ -161,6 +171,7 @@ const config = {
     ]
   ],
   plugins: [
+    require.resolve('docusaurus-plugin-image-zoom'),
     [
       '@docusaurus/plugin-client-redirects',
       {

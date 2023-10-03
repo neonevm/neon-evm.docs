@@ -23,7 +23,7 @@ Interacting with Neon EVM is essentially the same as interacting with any [Ether
 
 Neon EVM provides a proxy service that accepts [Ethereum's standard RPC API methods](https://ethereum.github.io/execution-apis/api-documentation/). 
 
-> Your dApp can apply familiar methods: with your calls directed to the [Neon Proxy](../about/neon_ecosystem#neon-proxy) rather than an Ethereum L1 node.
+> Your dApp can apply familiar methods: with your calls directed to the [Neon Proxy](../about/neon_ecosystem.mdx#neon-proxy) rather than an Ethereum L1 node.
 
 In this way, Neon EVM provides a seamless developer experience. Note that there are some differences and considerations due to some signigicant differences between Solana transaction requirements and the equivalent in EVM. 
 
