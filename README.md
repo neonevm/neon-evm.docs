@@ -50,8 +50,6 @@ Using the default location:
 
 ## QA layer
 
-Neon EVM follows the Google Developer's Style Guide with some tweaks. We use US English and maintain a list of preferred variants (e.g. dApp) and legal guiderails.
-
 ## External and internal links
 
 The repo provides a QA action run to build and validate the docs. This step includes verifying internal and external links.
@@ -60,13 +58,13 @@ The repo provides a QA action run to build and validate the docs. This step incl
 
 ## Vale
 
-Vale is a linting tool for spelling, grammar, and style. 
+Vale is a linting tool for spelling, grammar, and style.
 
 If you want to move fast there is a [decent intro](https://passo.uno/posts/first-steps-with-the-vale-prose-linter/) to the tooling. And, [vale's own docs](https://vale.sh/docs/vale-cli/installation/).
 
 ### Vale control file
 
-The control file, vale.ini allows customization. 
+The control file, vale.ini allows customization.
 
 This file is set to lint Markdown files, as per `[*.md]`. 
 
@@ -78,7 +76,7 @@ Linting with Vale may either be local (with Vale installed via the CLI) or on a 
 
 Local installation and CLI linting is recommended for documentarians:
 
-You can either lint **all** Markdown files with `vale .`, or you can name a specific file to lint, i.e. `vale readme.md` or `vale {path-to-doc.docname.md}`, e.g. `vale docs/faq/fees.md`.
+You can either lint **all** Markdown files with `vale .`, or you can name a specific file to lint, e.g. `vale readme.md` or `vale {path-to-doc.docname.md`.
 
 
 ### Tabs boilerplate
@@ -104,16 +102,10 @@ import TabItem from '@theme/TabItem';
 
 with authentication via [GitHub](https://github.com/anonNeon)
 
-## TODO
-
-Create plugin to convert -- to emdash
-
-https://docusaurus.io/docs/next/markdown-features/plugins#creating-new-rehyperemark-plugins
-
 
 ## Troubleshooting
 
-You pull main and can no longer build. Don't fret, someone probably changed a dependency do:
+You pull main and can no longer build. Don't fret, someone probably change a dependency do:
 `npm install`
 and then build or serve and see if that fixes it
 

@@ -4,7 +4,7 @@ proofedDate: 20230427
 iterationBy: HB
 includedInSite: true
 approvedBy: YYY
-comment: #2 TODO Tracer API needs internal linking to replace Medium article todo Ecosystem is out of date e.g. Ledger wallet
+comment: #2 TODO Tracer API needs internal linking to replace Medium article 
 ---
 <!-- import { QuickLookNeonImage } from '@site/src/components/QuickLookNeonImage' -->
 <!-- <QuickLookNeonImage/> -->
