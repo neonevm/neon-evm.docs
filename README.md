@@ -111,4 +111,10 @@ Create plugin to convert -- to emdash
 https://docusaurus.io/docs/next/markdown-features/plugins#creating-new-rehyperemark-plugins
 
 
+## Troubleshooting
+
+You pull main and can no longer build. Don't fret, someone probably changed a dependency do:
+`npm install`
+and then build or serve and see if that fixes it
+
 
