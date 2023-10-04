@@ -34,4 +34,4 @@ jobs:
           SOURCE_DIR: "build"
       - name: Algolia Reindex
         run: |
-          echo "${{ github.repository }}"
+          curl -H "Content-Type: application/json" -X POST --user ${{secrets.CRAWLER_USER_ID}}:${{secrets.CRAWLER_API_KEY}} "https://crawler.algolia.com/api/1/crawlers/${{vars.CRAWLER_ID}}/reindex"
