@@ -32,3 +32,6 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{secrets.DOCS_PROD_AWS_SECRET_ACCESS_KEY}}
           AWS_REGION: ${{vars.DOCS_PROD_S3_REGION}}
           SOURCE_DIR: "build"
+      - name: Algolia Reindex
+        run: |
+          echo "${{ github.repository }}"
