@@ -95,7 +95,7 @@ Fill in the fields on the next page.
 * `Currency Symbol`: NEON
 * `Block Explorer URL (optional)`: https://devnet.neonscan.org
 
-> **Note:** The `Chain ID` is specified for [Devnet](https://docs.solana.com/clusters#devnet). To choose [Testnet](https://docs.solana.com/clusters#testnet) or [Mainnet](https://docs.solana.com/clusters#mainnet-beta) in this field, you need to specify the value *245022940* or *245022934*, respectively. The `New RPC URL` must also be changed to either https://testnet.neonevm.org for Testnet, or https://mainnet.neonevm.org for Mainnet.
+> **Note:** The `Chain ID` is specified for [Devnet](https://docs.solana.com/clusters#devnet). To choose [Testnet](https://docs.solana.com/clusters#testnet) or [Mainnet](https://docs.solana.com/clusters#mainnet-beta) in this field, you need to specify the value *245022940* or *245022934*, respectively. The `New RPC URL` must also be changed to either https://testnet.neonevm.org for Testnet, or select an RPC endpoint for Mainnet from [Chainlist](https://chainlist.org/?chain=245022926&testnets=true&search=Neon+EVM).
 
 The wallet settings depend on the values given for the options mentioned above.
 
