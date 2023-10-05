@@ -91,7 +91,7 @@ Tooling selected: https://jy95.github.io/docusaurus-json-schema-plugin/boxFileSc
 
 Probably easiest to write spec up as yaml and convert to json ([for example](https://www.json2yaml.com/)) after.
 
-> JSON schema details https://spec.open-rpc.org/ or https://json-schema.org/understanding-json-schema/reference/generic.html
+> JSON schema details https://spec.open-rpc.org/ or https://json-schema.org/understanding-json-schema/reference
 OR https://json-schema.org/understanding-json-schema/UnderstandingJSONSchema.pdf
 
 Tooling that supports Open RPC https://open-rpc.org/developers
