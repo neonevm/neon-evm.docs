@@ -138,12 +138,12 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-	<TabItem value="View" label="View your balance" default>
+	<TabItem value="Opt1" label="First option" default>
 
 ************
 
 </TabItem>
-<TabItem value="Retrieve" label="Retrieve your balance" default>
+<TabItem value="Opt2" label="Second option" default>
 
 	*********
 </TabItem>
@@ -154,4 +154,12 @@ import TabItem from '@theme/TabItem';
 [codesandbox](https://codesandbox.io/dashboard/recent?workspace=6715f772-9c64-4139-8c8d-a18fe3f51a91) setup for grammarly@neonlabs.org
 
 with authentication via [GitHub](https://github.com/anonNeon)
+
+
+## Troubleshooting
+
+You pull main and can no longer build. Don't fret, someone probably changed a dependency do:
+`npm install`
+and then build or serve and see if that fixes it
+
 

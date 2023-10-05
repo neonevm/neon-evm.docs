@@ -47,7 +47,7 @@ For example:
 - $NEON = $0.25
 - $SOL = $10
 - PRX_OPERATOR_FEE = "1"
-- Gas price = 10 / 0.25 * (1 + 1) = 80 Galans
+- Gas price = 10 / 0.25 * (1 + 1) = 80 Galan
 
 Neon recommends that Neon Operators should initially set `PRX_OPERATOR_FEE` to “1.0” for Mainnet launch. This allows Operators to cover their hardware costs while transaction demands are low. As demand grows, Operators may adjust their fees in response.
 
@@ -60,7 +60,7 @@ An Operator has two options:
 - **Recommended**: set up the `PRX_MINIMAL_GAS_PRICE` to 1 as per the default value in EVMs
 - Set up the `PRX_MINIMAL_GAS_PRICE` to reject low offers 
 
-> For example, by setting the gas price minimum to 65 Galans, Neon Proxy rejects transactions with a gas price of less than 65.
+> For example, by setting the gas price minimum to 65 Galan, Neon Proxy rejects transactions with a gas price of less than 65.
 
 If a transaction request arrives with a gas price below that of the Operator costs + Operator fee, but with a gas price larger than the designated `PRX_MINIMAL_GAS_PRICE`, the Neon Proxy accepts the transaction into mempool. 
 
