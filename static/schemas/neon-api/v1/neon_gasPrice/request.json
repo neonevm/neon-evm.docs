@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "description": "POST request to get transaction gas price. The payload returned depends on how you form the request using the `params` object. While each property is optional individually, an empty array is not processed. Two permutations of possible request structures are provided, more are supported.",
+  "description": "POST request to get transaction gas price. The payload returned depends on how you form the request using the `params` object. While each property is optional individually, an empty array is not processed. Two example permutations of possible request structures are provided; more are supported.",
   "required": [
     "method",
     "params"
@@ -9,12 +9,12 @@
     "jsonrpc": {
       "type": "string",
       "default": "2.0",
-      "description": "The JSON RPC version"
+      "description": "The JSON RPC version."
     },
     "method": {
       "type": "string",
       "const": "neon_gasPrice",
-      "description": "The method name"
+      "description": "The method name."
     },
     "id": {
       "type": "number",
@@ -40,7 +40,7 @@
             "nonce": {
               "type": "number",
               "format": "hexadecimal",
-              "description": "Optional. Requires `from` property.  If `from` is provided but `nonce` is not provided, Neon Proxy uses the transaction counter providing the state of the `from` account as the nonce for the request.",
+              "description": "Optional. Requires `from` property. If `from` is provided but `nonce` is not provided, Neon Proxy uses the transaction counter providing the state of the `from` account as the nonce for the request. If nonce is absent from the request, the Proxy accesses the value of the nonce from the state.",
               "examples": [
                 "0x0"
               ]
@@ -49,7 +49,8 @@
               "type": "boolean",
               "description": "Optional. Switch to determine verbose or light response. For verbose, use `true`.",
               "examples": [
-                true, false
+                true,
+                false
               ]
             }
           }
