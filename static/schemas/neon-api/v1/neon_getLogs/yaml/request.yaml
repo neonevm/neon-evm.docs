@@ -1,0 +1,44 @@
+type: object
+description: POST request to get detailed information around trasaction execution.
+required:
+  - method
+  - jsonrpc
+  - params
+  - id
+properties:
+  jsonrpc:
+    type: string
+    default: '2.0'
+    description: The JSON RPC version.
+  method:
+	  type: string
+	  default: 'neon_getLogs'
+  	description: The method name.
+  id:
+    type: string
+    examples: 
+			- P927qw7r98qwerqwehkjhwe8
+    description: End-user provided identifier for the request; returned with payload.
+  params:
+  	type: array
+    items:
+    	properties:
+    		fromBlock:
+          type: string
+    			description: Search criteria for log request. Either as hexadecimal block number, or using the tags as per the examples.
+    			examples: 
+            - pending
+    				- earliest
+            - latest
+            - safe
+            - finalized
+    		toBlock:
+          type: string
+    			description: Final (inclusive) block for log request.
+    			examples: 
+          examples: 
+            - pending
+            - earliest
+            - latest
+            - safe
+            - finalized

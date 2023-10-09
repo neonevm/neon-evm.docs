@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "description": "POST request to get current versions.",
+  "description": "POST request to get current versions for the Proxy tech stack.",
   "required": [
     "method"
   ],
