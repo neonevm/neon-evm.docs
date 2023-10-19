@@ -31,24 +31,16 @@
         "properties": {
           "fromBlock": {
             "type": "string",
-            "description": "Search criteria for log request. Either as hexadecimal block number, or using the tags as per the examples.",
+            "description": "Start point for search criteria for log request. Either as hexadecimal block number, or using one of the following tags, pending, earliest, latest, safe, finalized.",
             "examples": [
-              "pending",
-              "earliest",
-              "latest",
-              "safe",
-              "finalized"
+              "pending"
             ]
           },
           "toBlock": {
             "type": "string",
-            "description": "Final (inclusive) block for log request.",
+            "description": "End point for search criteria for log request. Final (inclusive) block for log request.  Either as hexadecimal block number, or using one of the following tags, pending, earliest, latest, safe, finalized.",
             "examples": [
-              "pending",
-              "earliest",
-              "latest",
-              "safe",
-              "finalized"
+              "latest"
             ]
           }
         }

@@ -1,5 +1,5 @@
 type: object
-description: POST request to get detailed information around trasaction execution.
+description: POST request to get detailed information around trasaction execution. While each paramater property is optional individually, an empty array is not processed.
 required:
   - method
   - jsonrpc
@@ -25,20 +25,27 @@ properties:
     	properties:
     		fromBlock:
           type: string
-    			description: Search criteria for log request. Either as hexadecimal block number, or using the tags as per the examples.
+    			description: Start point for search criteria for log request. Either as hexadecimal block number, or using one of the following tags, pending, earliest, latest, safe, finalized. Don't use with `blockHash`.
     			examples: 
             - pending
-    				- earliest
-            - latest
-            - safe
-            - finalized
     		toBlock:
           type: string
-    			description: Final (inclusive) block for log request.
+    			description: Stop point for search criteria for log request. Final (inclusive) block for log request. Either as hexadecimal block number, or using one of the following tags, pending, earliest, latest, safe, finalized. Don't use with `blockHash`.
     			examples: 
-          examples: 
-            - pending
-            - earliest
             - latest
-            - safe
-            - finalized
+        address:
+          type: string
+          format: hexadecimal
+          description: Contract address or a list of addresses from which logs should originate. *** comma-delimited list? If this is a list, should this property be an array rather than an item wip?
+          examples:
+            - ***
+        topics:
+          type: array
+          format: string
+          description: An array of 32 byte `DATA` topics. Topics are order-dependent. Each topic can also be an array of `DATA` with "or" options (see https://docs.alchemy.com/docs/deep-dive-into-eth_getlogs).
+          examples: 
+            - *** 
+        blockHash:
+          type: string
+          format: hexadecimal
+          description: As per EIP-234, `blockHash` is a filter option that restricts the logs returned to the block number referenced in the `blockHash`. Using the `blockHash` field is equivalent to setting the `fromBlock` and `toBlock` to the block number that the `blockHash` references. If `blockHash` is present in the filter criteria, neither `fromBlock` nor `toBlock` is allowed.
