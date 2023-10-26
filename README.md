@@ -56,6 +56,8 @@ The repo provides a QA action run to build and validate the docs. This step incl
 
 > To use links to internal pages such as Notion, that public users do not have access to (e.g. in the metadata), it is necessary to comment out the URL.
 
+> To use links to external pages that have access control, it is necessary to add them to the allow list in linkcheck.config.json at the root level of this repo.
+
 ## Vale
 
 Vale is a linting tool for spelling, grammar, and style.
