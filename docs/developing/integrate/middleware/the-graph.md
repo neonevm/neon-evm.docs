@@ -130,15 +130,19 @@ The address of the contract deployed to the `dataSources.network` in the subgrap
 - IPFS: https://ipfs.neonevm.org
 - Graph UI: https://thegraph.neonevm.org
 - Deployment: https://thegraph.neonevm.org/deploy
-- GraphQL: https://thegraph.neonevm.org/index-node/graphql
+- GraphQL: https://thegraph.neonevm.org/subgraphs/name/{YOUR_SUBGRAPH_SLUG}/graphql 
+
+> Replace {YOUR_SUBGRAPH_SLUG} with your slug.
 
 </TabItem>
 <TabItem value="Opt2" label="Devnet" default>
 
 - IPFS: https://ch-ipfs.neontest.xyz
-- Graph UI: https://thegraph.neonevm.org
-- Deployment: https://thegraph.neonevm.org/deploy
-- GraphQL: https://ch2-graph.neontest.xyz/subgraphs/name/{YOUR_SUBGRAPH_SLUG>}/graphql
+- Graph UI: https://ch2-graph.neontest.xyz/
+- Deployment: https://ch2-graph.neontest.xyz/deploy/
+- GraphQL: https://ch2-graph.neontest.xyz/subgraphs/name/{YOUR_SUBGRAPH_SLUG}/graphql
+
+> Replace {YOUR_SUBGRAPH_SLUG} with your slug.
 
 </TabItem>
 </Tabs>
@@ -151,12 +155,8 @@ When you have finished creating the subgraph manifest, the subgraph’s GraphQL 
 
 ### Step 1: request access
 
-Access to the allowlist for The Graph endpoints must be made to info@neonevm.org. You will be added to the allowlist for:
+Request access to the allowlist for The Graph endpoints at info@neonevm.org. You will be added to the allowlist for the endpoint of the [network/s](#the-graph-endpoints) you request.
 
-- IPFS: https://ipfs.neonevm.org
-- Graph UI: https://thegraph.neonevm.org
-- Deployment: https://thegraph.neonevm.org/deploy
-- GraphQL: https://thegraph.neonevm.org/index-node/graphql
 
 ### Step 2: set up
 
