@@ -4,16 +4,15 @@ proofedDate: 20230810
 iterationBy: HB
 includedInSite: true
 approvedBy: na
-comment: 
+comment:
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-
 :::note
 This is a bare bones Get Started; alternatively browse the full support available here.
-::: 
+:::
 
 ## Get test NEON for Neon Devnet
 
@@ -29,7 +28,6 @@ The network credentials are configured under the “networks” property in the 
 <Tabs>
   <TabItem value="Devnet" label="Devnet" default>
 
-
 ```jsx
 neondevnet: {
       url: "https://devnet.neonevm.org",
@@ -41,6 +39,7 @@ neondevnet: {
       isFork: true,
 },
 ```
+
 </TabItem>
 
 <TabItem value="Mainnet" label="Mainnet" default>
@@ -56,6 +55,7 @@ neonmainnet: {
       isFork: true,
 },
 ```
+
 </TabItem>
 </Tabs>
 
@@ -64,55 +64,12 @@ See the [Hardhat tutorial](https://docs.neonfoundation.io/docs/developing/deploy
 <!-- Docusaurus issue with tabs -- links not rendering See the [Hardhat tutorial](/docs/deploy_facilities/configure_hardhat). -->
 
 </TabItem>
-<TabItem value="Truffle" label="Truffle" default>
-
-The network credentials can be configured under the “networks” property in the `truffle-config.js`.
-
-<Tabs>
-  <TabItem value="Devnet" label="Devnet" default>
-
-```jsx
-neondevnet: {
-      provider: () => {
-        return new HDWalletProvider(
-          [Array_of_accounts_private_keys],
-          "https://devnet.neonevm.org",
-        );
-      },
-      network_id: 245022926
-},
-```
-
-</TabItem>
-<TabItem value="Mainnet" label="Mainnet" default>
-
-```jsx
-neondevnet: {
-      provider: () => {
-        return new HDWalletProvider(
-          [Array_of_accounts_private_keys],
-          "https://neon-proxy-mainnet.solana.p2p.org",
-        );
-      },
-      network_id: 245022934
-},
-```
-</TabItem>
-</Tabs>
-
-See the [Truffle tutorial](https://docs.neonfoundation.io/docs/developing/deploy_facilities/configure_truffle).
-
-<!-- Docusaurus issue with relative links inside tabs>> See the [Truffle tutorial](/docs/developing/deploy_facilities/using_truffle). -->
-
-
-</TabItem>
 <TabItem value="Foundry" label="Foundry" default>
 
-Foundry doesn’t have a config file like Hardhat or Truffle to configure the network settings. Rather, the RPC endpoint and the private key are specified in the command line when passing foundry commands. See the [Foundry tutorial](https://github.com/neonlabsorg/examples/tree/main/simple-erc20-foundry).
+Foundry doesn’t have a config file like Hardhat to configure the network settings. Rather, the RPC endpoint and the private key are specified in the command line when passing foundry commands. See the [Foundry tutorial](https://github.com/neonlabsorg/neon-tutorials/tree/main/foundry).
 
 </TabItem>
 </Tabs>
-
 
 ## Verify contracts on Neon Devnet with Hardhat and NeonScan:
 
@@ -139,10 +96,10 @@ etherscan: {
 The command for verifying a deployed contract is:
 
 ```jsx
-./node_modules/.bin/hardhat verify <DEPLOYED_CONTRACT_ADDRESS> --network neonevm
+npx hardhat verify <DEPLOYED_CONTRACT_ADDRESS> --network neondevnet
 ```
 
-Follow this GitHub tutorial for contract verification [github.com/neonscan/hardhat-integrate](https://github.com/neonscan/hardhat-integrate).
+Follow this GitHub tutorial for contract verification [Hardhat Github Tutorial](https://github.com/neonlabsorg/neon-tutorials/tree/main/hardhat).
 
 ## Gotchas
 
