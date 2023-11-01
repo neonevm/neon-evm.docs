@@ -1,6 +1,6 @@
 ---
 title: Connect to Neon RPC
-proofedDate: 20230526
+proofedDate: 20231101
 iterationBy: na
 includedInSite: true
 approvedBy: na
@@ -15,7 +15,7 @@ RPC endpoints are available on [Chainlist](https://chainlist.org/?chain=24502292
 
 ## Introduction
 
-This tutorial explains how to connect to a Neon RPC via Chainlist. You may connect an EVM-compatible wallet to a network and accept the default Proxy. Alternatively, you can manually setup your Proxy Operator.
+This tutorial explains how to connect to a Neon RPC via Chainlist. You may connect an EVM-compatible wallet to a network and accept the default Proxy. Alternatively, you can manually set up your Proxy Operator.
 
 > The [Proxy Operator you choose](#choose-a-remote-proxy) is responsible for settling your Neon transactions on Solana. Chainlist will assign a default, but you can edit this later.
 
@@ -62,4 +62,4 @@ Please note that, for Hardhat, you need to set up the configuration file by sett
 
 ## What next?
 
-If you wish to transact via your RPC, then checkout the [supported RPC API methods](/docs/evm_compatibility/json_rpc_api_methods).
+If you wish to transact via your RPC, then check out the [supported RPC API methods](/docs/evm_compatibility/json_rpc_api_methods).
