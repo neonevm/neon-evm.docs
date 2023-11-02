@@ -1,5 +1,5 @@
 ---
-title: FAQ
+title: Common Questions
 proofedDate: 20230919
 iterationBy: na
 includedInSite: true
