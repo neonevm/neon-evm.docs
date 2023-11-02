@@ -39,9 +39,12 @@ const sidebars = {
       ]
     },
     {
-      type: 'doc',
+      type: 'category',
       label: '💬 FAQ',
-      id: 'faq/neon-brief-faq',
+      items: [
+        'faq/neon-brief-faq',
+        'faq/neonpass'
+        ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Tools</h4>' },
@@ -133,6 +136,13 @@ const sidebars = {
         'architecture/neon_evm_arch',
         'architecture/eth_sol_solution',
         'architecture/solana-accounts'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Token Accounts',
+      items:[
+       'tokens/token-accounts'
       ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },

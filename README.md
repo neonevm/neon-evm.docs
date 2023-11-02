@@ -50,6 +50,7 @@ Using the default location:
 
 ## QA layer
 
+
 ## External and internal links
 
 The repo provides a QA action run to build and validate the docs. This step includes verifying internal and external links.
@@ -60,7 +61,9 @@ The repo provides a QA action run to build and validate the docs. This step incl
 
 ## Vale
 
-Vale is a linting tool for spelling, grammar, and style.
+Neon EVM follows the Google Developer's Style Guide with some tweaks. We use US English and maintain a list of preferred variants (e.g. dApp) and legal guiderails.  
+
+Vale is a linting tool that enforces grammar, and style.
 
 If you want to move fast there is a [decent intro](https://passo.uno/posts/first-steps-with-the-vale-prose-linter/) to the tooling. And, [vale's own docs](https://vale.sh/docs/vale-cli/installation/).
 
@@ -78,7 +81,7 @@ Linting with Vale may either be local (with Vale installed via the CLI) or on a 
 
 Local installation and CLI linting is recommended for documentarians:
 
-You can either lint **all** Markdown files with `vale .`, or you can name a specific file to lint, e.g. `vale readme.md` or `vale {path-to-doc.docname.md`.
+You can either lint **all** Markdown files with `vale .`, or you can name a specific file to lint, e.g. `vale readme.md` or `vale {path-to-doc.docname}.md`, e.g. `vale docs/faq/fees.md`.
 
 
 ### Tabs boilerplate
