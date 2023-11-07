@@ -42,7 +42,7 @@ The parameters pertaining to the Neon DAO governance framework may be adjusted a
 
 ## Ecosystem
 
-The Ecosystem Focus Area is charged with the promotion of sustainable, long-term growth of the Neon ecosystem. As the collective owner of the Neon Treasury, its duties and responsibilties consist of distribution of funds for grants, security audits, bug bounties, and other ecosystem initiatives.
+The Ecosystem Focus Area is charged with the promotion of sustainable, long-term growth of the Neon ecosystem. As the collective owner of the Neon Treasury, its duties and responsibilities consist of distribution of funds for grants, security audits, bug bounties, and other ecosystem initiatives.
 
 Within the Ecosystem Focus Area, the Ecosystem Assembly and Foundation work in collaboration to provide a frictionless experience for Ecosystem developers. The Ecosystem Assembly provides custodial services to the Foundation, informs the Foundation on decisions taken, and lets the Foundation distribute funds based on its own legal assessment of potential grantees.
 
