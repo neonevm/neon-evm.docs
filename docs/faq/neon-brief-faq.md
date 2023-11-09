@@ -21,7 +21,7 @@ Neon EVM is a smart contract on Solana acting as the Ethereum Virtual Machine. I
 
 ### How can I start building on Neon?
 
-To begin building on Neon, follow our [Quick Start Guide](/docs/quick_start). Porting and deploying your existing EVM contracts onto Neon using Truffle, Remix, or Hardhat is also an easy and seamless process.
+To begin building on Neon, follow our [Quick Start Guide](/docs/quick_start). Porting and deploying your existing EVM contracts onto Neon using Foundry, Remix, or Hardhat is also an easy and seamless process.
 
 ### Why is Neon good for Ethereum dApps?
 
@@ -36,9 +36,10 @@ Neon EVM is unique in combining the powerful technical advantages of Solana with
 ### What tools are currently available on Neon?
 
 The following tools are available on Neon:
-* [NeonScan](https://neonscan.org/) - Neon EVM’s block explorer
-* [NeonPass](https://neonpass.live/) - A utility for transferring SPL tokens between Solana and Neon
-* [Neon Faucet](https://neonfaucet.org/) - Where tokens for the Neon Devnet may be retrieved for testing and experimental purposes
+
+- [NeonScan](https://neonscan.org/) - Neon EVM’s block explorer
+- [NeonPass](https://neonpass.live/) - A utility for transferring SPL tokens between Solana and Neon
+- [Neon Faucet](https://neonfaucet.org/) - Where tokens for the Neon Devnet may be retrieved for testing and experimental purposes
 
 ### How do I transfer SPL tokens between Solana and Neon?
 
@@ -46,7 +47,7 @@ The following tools are available on Neon:
 
 ### What is Neon's Roadmap?
 
-You can view our roadmap  on our [Home Page](https://neon-labs.org/).
+You can view our roadmap on our [Home Page](https://neon-labs.org/).
 
 ## Community
 
