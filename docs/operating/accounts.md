@@ -1,6 +1,6 @@
 ---
 title: Accounts & Payment
-proofedDate: na
+proofedDate: na sublime only
 iterationBy: na
 includedInSite: true
 approvedBy: na
@@ -72,7 +72,7 @@ The number of required SOLs depends on:
 
 To calculate the number of SOLs required by the Neon Operator, use the following logic:
 
-- The TPS depends on the finalization time of the Solana, which is equal to 32 Solana blocks because the content of the holder account should be retained untill successful finalization of the the Neon transaction
+- The TPS depends on the finalization time of the Solana, which is equal to 32 Solana blocks because the content of the holder account should be retained until successful finalization of the the Neon transaction
 - The Solana block time is 400 ms. So in 1 second, Solana may produce 1 / 0.4 = 2.5 blocks
 
 The formula to calculate the number of holder accounts and required SOLs is as follows:
@@ -83,7 +83,7 @@ Number-of-Holders = TPS / Solana-Blocks-per-Sec * Solana-Blocks-for-Finalization
 - Solana-Blocks-for-Finalization = 32 (see above)
 
 SOLs-for-Holders = Rent-Exempt-Balance * Number-of-Holders
-- Rent-Exempt-Balance = 1.82541312 SOL (see Solana standard rent calcs in the tab above)
+- Rent-Exempt-Balance = 1.82541312 SOL (see Solana standard rent calculations in the tab above)
 
 Number-of-Holders-per-Operator-key = Number-of-Holders / Number-of-Operator-keys
 :::
@@ -130,7 +130,7 @@ You may query your account balances visually or programmatically.
 <Tabs>
 	<TabItem value="View" label="View your balance" default>
 
-Neon Proxy provides a local Grafana dashboad which monitors statistics in the Prometheus/Grafana. They display metrics from operator_neon_balance and operator_sol_balance.
+Neon Proxy provides a local Grafana dashboard which monitors statistics in the Prometheus/Grafana. They display metrics from operator_neon_balance and operator_sol_balance.
 
 > <img src={solBal} />
 
