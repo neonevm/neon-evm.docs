@@ -79,7 +79,7 @@ The Neon Proxy has several settings accommodate the calculation of gas-price on 
 
 <!-- ## Zero gas price for testing
 
-On Devnet test NEON is availiable, however, for beta Mainnet testing purposes, the Neon Proxy can be configured to accept transactions with a 0 gas price (a balance of SOL is available to cover the transaction fees on Solana). 
+On Devnet test NEON is available, however, for beta Mainnet testing purposes, the Neon Proxy can be configured to accept transactions with a 0 gas price (a balance of SOL is available to cover the transaction fees on Solana). 
 
 To enable this configuration, the Neon Operator should set up the following parameters:
 

@@ -100,7 +100,7 @@ Clients work on a different blockchain via the same interface by changing the ad
 
 The Neon EVM runs inside BPF, which is run by Solana. The Neon EVM is a Solana contract, so it recognizes the transaction format from the received batch. Neon EVM extracts data from each transaction, therefore, it can retrieve all the original user information placed in the transaction.
 
-<!-- I can't unpack the preceeding p todo -->
+<!-- I can't unpack the preceding p todo -->
 
 The Neon EVM also validates the N-tx signature. If the signature is authentic, the Neon EVM takes the contract code that the transaction is addressed to and starts to execute it. As soon as the contract code has been executed successfully, Neon EVM records a new state.
 
