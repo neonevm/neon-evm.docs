@@ -85,7 +85,7 @@ Ensure you have enough SOL/NEON to pay the withdrawal approval fee.
 
 After successfully connecting your wallets to NeonPass, the **Connect Wallet** text changes to the name of the network (Solana or Neon), and the public key of your accounts is displayed.
 
-## Transfer tokens from Neon EVM to Solana with NeonPass
+## Tutorial: Transfer tokens from Neon EVM to Solana with NeonPass
 
 ### Conduct transfer
 
@@ -130,10 +130,10 @@ Let's also check the destination Solana wallet address on [Solana Explorer](http
 </div>
 
 :::tip
-Alternatively, use Blockscout's dedicated explorer [Neon.blockscout.com](https://neon.blockscout.com) to search by transaction hash.
+Alternatively, use Blockscout's dedicated explorer [neon.blockscout.com](https://neon.blockscout.com) to search by transaction hash.
 :::
 
-## Tutorial: Moving Tokens From Solana to Neon EVM
+## Tutorial: Transfer tokens from Solana to Neon EVM with NeonPass
 
 The following is an example of transferring NEON SPL tokens from Solana to Neon EVM on Devnet. Please make sure to check the arrow for the forwarding direction of the transaction from `Solana` to `Neon`.
 
@@ -149,7 +149,9 @@ On the NeonPass screen, click `Choose token`. In the list that appears, select t
 
 ### 2. Approve Transaction and Complete Transfer
 
-There are two options for the token selection for the transaction fee. You can select either NEON or SOL from the bullet points below the `Transfer` button. Click `Transfer` to begin the token transfer procedure. The transaction must then be confirmed in both the MetaMask and Phantom wallet windows which will pop up. Verify the transaction details and approve it if you wish to proceed. A loading screen will appear after you approve.
+2.1 There are two options for the token selection for the transaction fee. You can select either NEON or SOL from the bullet points below the `Transfer` button.
+
+2.2 Click `Transfer` to begin the token transfer procedure. The transaction must then be confirmed in both the MetaMask and Phantom wallet windows which will pop up. Verify the transaction details and approve it if you wish to proceed. A loading screen will appear after you approve.
 
 After the transaction has been processed successfully, you will see the following screen indicating that the transfer is complete.
 
