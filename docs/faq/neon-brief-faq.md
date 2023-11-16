@@ -28,7 +28,7 @@ To begin building on Neon, follow our [Quick Start Guide](/docs/quick_start). Po
 
 As a smart contract on Solana, Neon EVM benefits from Solana’s low gas fees (no less than 0.000015 SOL per transaction) and high throughput (+2,000 TPS). This arguably makes it the cheapest and most efficient way to run Ethereum dApps.
 
-Neon EVM doesn't require any significant changes to run existing Ethereum smart contracts, with all the advantages and innovations of Solana. In addition, the Neon EVM provides access to many familiar Ethereum developer tools, including MetaMask, Remix, Hardhat, Truffle, and Brownie. Neon is the perfect platform for Ethereum dApps to tap into the Solana ecosystem.
+Neon EVM doesn't require any significant changes to run existing Ethereum smart contracts, with all the advantages and innovations of Solana. In addition, the Neon EVM provides access to many familiar Ethereum developer tools, including MetaMask, Remix, Hardhat, and Truffle. Neon is the perfect platform for Ethereum dApps to tap into the Solana ecosystem.
 
 ### What makes Neon EVM so special?
 
