@@ -14,7 +14,7 @@
         "id": 1,
         "icon": "/icons/config.svg",
         "title": "Configure & Use Devtools",
-        "description": "Hardhat, Truffle, and Brownie",
+        "description": "Foundry, Hardhat, Truffle, and Brownie",
         "url": "/docs/developing/deploy_facilities/configure_hardhat"
       },
       {
@@ -28,7 +28,7 @@
         "id": 3,
         "icon": "/icons/daps.svg",
         "title": "Deploy dApps",
-        "description": "Using Hardhat, Truffle, Remix & Brownie",
+        "description": "Using Foundry, Hardhat, Truffle, Remix & Brownie",
         "url": "/docs/developing/deploy_facilities/using_remix"
       },
       {
