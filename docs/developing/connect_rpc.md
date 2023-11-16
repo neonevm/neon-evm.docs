@@ -53,7 +53,7 @@ The preceding steps demonstrate how to connect to a Solana cluster via Chainlist
 ## Connect dev tools to Neon EVM
 To connect to a Proxy using Remix, Truffle, or Hardhat, check out the following resources:
 * [Using Foundry](developing/deploy_facilities/using_foundry.md)
-* [Using Hardhat](developing/deploy_facilities/using_hardhat.md)
+* [Using Hardhat](developing/deploy_facilities/using_hardhat.mdx)
 * [Using Remix](developing/deploy_facilities/using_remix.md)
 * [Using Truffle](developing/deploy_facilities/using_truffle.md)
 

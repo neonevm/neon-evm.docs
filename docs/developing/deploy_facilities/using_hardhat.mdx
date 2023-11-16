@@ -7,13 +7,17 @@ approvedBy: na
 comment: 
 ---
 
+import WhatHardHat from '../../single-source-snippets/_hardhat.mdx'
+
+import ConfigHardHat from '../../single-source-snippets/_hardhat_config.mdx'
+
 This page details setting up a Hardhat configuration file. 
 
 ## Introduction
 
-Hardhat is a development environment used to compile, deploy, test, and debug Ethereum software. It helps developers manage and automate the recurring tasks inherent to the process of building smart contracts and launching dApps, as well as supporting various add-on features that streamline this workflow.
+<WhatHardHat/>
 
-The Hardhat framework isn't described here; find that in the [Hardhat documentation](https://hardhat.org/getting-started/#overview). This tutorial is based on an [example in GitHub](/docs/developing/deploy_facilities/using_hardhat).
+The Hardhat framework isn't described here; find that in the [Hardhat documentation](https://hardhat.org/getting-started/#overview). This tutorial is based on an [example in GitHub](https://github.com/neonlabsorg/neon-tutorials/tree/main/hardhat).
 
 ## Prerequisites
 
@@ -31,9 +35,7 @@ Before you start, make sure the following software is installed on your device:
 
 ## The Hardhat configuration file
 
-To deploy a contract to Neon EVM with Hardhat, some Neon-specific information must be configured. The configuration file is called `hardhat.config.js` and is located at the root of your project directory. 
-
-This file is a JavaScript file and can execute any code necessary to create your configuration. Its file schema, variables, and other documentation can be found on the [official Hardhat website](https://hardhat.org/hardhat-runner/docs/config). 
+<ConfigHardHat/>
 
 :::info
 The deployer wallet address needs to have enough tokens to cover the gas cost of the deployment. 
