@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 
 :::note
-This is a bare bones Get Started; alternatively browse the full support available here.
+This is a bare bones Get Started; alternatively browse the full support available in this site.
 ::: 
 
 ## Get test NEON for Neon Devnet
@@ -61,7 +61,7 @@ neonmainnet: {
 
 See the [Hardhat tutorial](https://docs.neonfoundation.io/docs/developing/deploy_facilities/configure_hardhat)
 
-<!-- Docusaurus issue with tabs -- links not rendering See the [Hardhat tutorial](/docs/deploy_facilities/configure_hardhat). -->
+<!-- todo find alt fix for Docusaurus issue with tabs -- links not rendering See the [Hardhat tutorial](/docs/deploy_facilities/configure_hardhat). -->
 
 </TabItem>
 <TabItem value="Truffle" label="Truffle" default>

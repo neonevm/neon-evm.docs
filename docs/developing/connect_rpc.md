@@ -4,10 +4,11 @@ proofedDate: 20230526
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: 
+comment: todo Find out from Yury whether we can have a NeonLabs youtube domain to support the video material that has been created to complement this page
 ---
 
 import chainlist_raw from '@site/static/img/doc-images/developing/chainlist/chainlist-raw-2.png';
+import chainlist_gotcha from '@site/static/img/doc-images/developing/chainlist/chainlist_raw.png';
 
 ## TL;DR
 RPC endpoints are available on [Chainlist](https://chainlist.org/?chain=245022926&testnets=true&search=Neon+EVM).
@@ -51,12 +52,20 @@ The preceding steps demonstrate how to connect to a Solana cluster via Chainlist
 
 ## Connect dev tools to Neon EVM
 To connect to a Proxy using Remix, Truffle, or Hardhat, check out the following resources:
+* [Using Foundry](developing/deploy_facilities/using_foundry.md)
+* [Using Hardhat](developing/deploy_facilities/using_hardhat.md)
 * [Using Remix](developing/deploy_facilities/using_remix.md)
 * [Using Truffle](developing/deploy_facilities/using_truffle.md)
-* [Using Hardhat](developing/deploy_facilities/using_hardhat.md)
 
 Please note that, for Truffle and Hardhat, you need to set up the configuration file by setting either the `HDWalletProvider` provider (for Truffle) or the URL and the `network_id`/`chainId` to the RPC URL (and ID) selected from Chainlist. This is described in detail in the relevant tutorial sections.
 
 ## What next?
 
 If you wish to transact via your RPC, then checkout the [supported RPC API methods](/docs/evm_compatibility/json_rpc_api_methods).
+
+## Gotchas
+
+Should the main "Connect Wallet" button not function, use the dropdown and use the "Connect Wallet" for a specified RPC server address.
+
+
+> <img src={chainlist_gotcha} width="450" />
