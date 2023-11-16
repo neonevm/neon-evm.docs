@@ -9,15 +9,15 @@ comment:
 
 Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.
 
-Details on how to use the Foundry framework will not be described here. You can find all necessary information by reading the [Foundry documentation](https://book.getfoundry.sh).
+## Introduction
 
-For a tutorial on how to use Foundry to deploy on the Neon EVM, see [here](/docs/developing/deploy_facilities/using_foundry).
+This page details several parameters required to configure Foundry. The Foundry framework isn't described here; find that in the [Foundry documentation](https://book.getfoundry.sh).
 
 ## Prerequisites
 Before you start, make sure the following software is installed on your device:
   * `cURL` - You will need cURL to install Foundery, some operating systems ship curl by default. If your terminal doesn't support it you have to install it.
 
-## The Foundry Configuration
+## Foundry configuration
 Unlike other toolkits Foundry doesn't have a config file which is holding the chain parameters, instead everything is being passed into commands. This command is an example of how to deploy a smart contract:
 ```
 forge create --rpc-url $RPC_URL_DEVNET \
@@ -31,3 +31,7 @@ The parameters for `forge create` command include:
 * `--private-key`: The private key of the transaction signer
 * `--constructor-args`: The constructor arguments to be passed to the contract that is being deployed
 * `--legacy`: This parameter is being passed to use legacy transactions _( Neon EVM currently doesn't support EIP-1559 transactions )_
+
+## What next?
+
+See the [tutorial on how to use Foundry to deploy to Neon EVM](/docs/developing/deploy_facilities/using_foundry).
