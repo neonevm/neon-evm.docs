@@ -14,7 +14,7 @@
         "id": 1,
         "icon": "/icons/config.svg",
         "title": "Configure & Use Devtools",
-        "description": "Hardhat and Truffle",
+        "description": "Hardhat & Truffle",
         "url": "/docs/developing/deploy_facilities/configure_hardhat"
       },
       {
@@ -28,7 +28,7 @@
         "id": 3,
         "icon": "/icons/daps.svg",
         "title": "Deploy dApps",
-        "description": "Using Hardhat, Truffle and Remix",
+        "description": "Using Hardhat, Truffle & Remix",
         "url": "/docs/developing/deploy_facilities/using_remix"
       },
       {
