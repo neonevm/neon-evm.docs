@@ -78,6 +78,7 @@ const sidebars = {
       label: 'Configure Dev Tools',
       items: [
         'developing/deploy_facilities/configure_hardhat',
+        'developing/deploy_facilities/configure_foundry',
         'developing/deploy_facilities/configure_truffle',
         'developing/deploy_facilities/configure_brownie'
       ]
