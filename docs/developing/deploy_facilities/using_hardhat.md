@@ -1,37 +1,50 @@
 ---
 title: "Configure Hardhat"
-proofedDate: na
+proofedDate: 20231116
 iterationBy: na
 includedInSite: true
 approvedBy: na
 comment: 
 ---
 
-Hardhat is a development environment used to compile, deploy, test, and debug Ethereum software. It helps developers manage and automate the recurring tasks that are inherent to the process of building smart contracts and launching dApps, as well as supporting various add-on functionality and features in order to streamline this workflow.
+This page details setting up a Hardhat configuration file. 
 
-Details on how to use the Hardhat framework will not be described here. You can find all necessary information by reading the [Hardhat documentation](https://hardhat.org/getting-started/#overview).
+## Introduction
 
-For a tutorial on how to use Hardhat to deploy on the Neon EVM, see [here](/docs/developing/deploy_facilities/using_hardhat).
+Hardhat is a development environment used to compile, deploy, test, and debug Ethereum software. It helps developers manage and automate the recurring tasks inherent to the process of building smart contracts and launching dApps, as well as supporting various add-on features that streamline this workflow.
+
+The Hardhat framework isn't described here; find that in the [Hardhat documentation](https://hardhat.org/getting-started/#overview). This tutorial is based on an [example in GitHub](/docs/developing/deploy_facilities/using_hardhat).
 
 ## Prerequisites
+
 Before you start, make sure the following software is installed on your device:
-  * `NodeJS v8.9.4` or later
-  * `Web3 v1.2.0` or later
+-  `NodeJS v8.9.4` or later
+- `Web3 v1.2.0` or later[
+- An EVM-compatible wallet such as [MetaMask](wallet/metamask_setup.md#installing-metamask):
+  - Configured for a [Neon EVM network](/docs/developing/connect_rpc#connect-via-chainlist)
+  - Balance to cover gas fees
 
-Also make sure that the following is true:
-  * MetaMask is installed on your device. To install MetaMask, follow [this guide](wallet/metamask_setup.md#installing-metamask). 
-  * MetaMask is configured for the Neon EVM.
+## Network configuration
 
-## Network Configurations
-  * [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
-  * Solana works in test mode and the proxy interacts with it through Neon EVM.
+- [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
+- Solana works in test mode and the proxy interacts with it through Neon EVM.
 
-## The Hardhat Configuration File
-To deploy a contract to the Neon EVM with Hardhat, some Neon-specific information must be specified in a configuration file. This configuration file is called `hardhat.config.js` and is located at the root of your project directory. This file is a JavaScript file and can execute any code necessary to create your configuration. Its file schema, variables, and other documentation can be found on the [official Hardhat website](https://hardhat.org/hardhat-runner/docs/config). Please note that the deployer wallet address needs to have enough NEON tokens to cover the gas cost of the deployment. NEON tokens for Devnet can be obtained using the [NeonFaucet](developing/utilities/faucet.md).
+## The Hardhat configuration file
+
+To deploy a contract to Neon EVM with Hardhat, some Neon-specific information must be configured. The configuration file is called `hardhat.config.js` and is located at the root of your project directory. 
+
+This file is a JavaScript file and can execute any code necessary to create your configuration. Its file schema, variables, and other documentation can be found on the [official Hardhat website](https://hardhat.org/hardhat-runner/docs/config). 
+
+:::info
+The deployer wallet address needs to have enough tokens to cover the gas cost of the deployment. 
+
+- [Get Devnet NEON](https://neonfaucet.org/)
+:::
 
 The following is a full example, configured for the example below, of the `hardhat.config.js` configuration file for connecting Hardhat to a devnet-proxy using the one-way library on Node.js:
 
 ##### hardhat.config.js
+
 ```js
 require("@nomiclabs/hardhat-waffle");
 
