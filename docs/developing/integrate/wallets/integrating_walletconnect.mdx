@@ -1,10 +1,10 @@
 ---
 title: WalletConnect
-proofedDate: 20230427
-iterationBy: HB
+proofedDate: 20231117
+iterationBy: Miro
 includedInSite: true
 approvedBy: na
-comment: TODO suggest a boilerplate ReactApp such as codepen be setup as an example to refer to -- this will then allow better support at Step 4 " connect your preferred wallet with Neon EVM DevNet within the WalletConnect interface. " to be included rather than just alluded to. See also comments inline
+comment: 
 ---
 
 import Tabs from '@theme/Tabs';
@@ -35,27 +35,31 @@ Web3Modal supports:
 - [HTML](https://docs.walletconnect.com/web3modal/html/about)
 :::
 
-## Get Started
+
+## Prerequisites 
+
+- EVM-compatible wallet (this tutorial uses MathWallet)
+- WalletConnect account
+
+## Tutorial
 
 ### Step 1: Create a project
 
 Log into [WalletConnect Cloud](https://cloud.walletconnect.com/) to create a new project and copy the Project ID.
-
-<!-- following text style works -- not convinced image class is working >> alt is to use  docusaurus method -- but that means keeping images in static folder NOT granular as per current method applied in this site https://docusaurus.io/docs/static-assets -->
 
 > <img src={projectid} width="450" />
 
 
 ### Step 2: Configure your project's chain
 
-From WalletConnect's project page click the **Explorer** tab and select the Neon chain you require from the **Chains** drop-down. For this guide, we will use the Neon EVM DevNet.
+From WalletConnect's project page, click the **Explorer** tab and select the Neon chain you require from the **Chains** drop-down. For this guide, we will use the Neon EVM Devnet.
 
 > <img src={devnet} width="400" />
 
 
 ### Step 3: Configure your app
 
-For this guide, we are configuring a HTML Web App.
+For this guide, we are configuring an HTML Web App.
 
 <!-- yet we also provide a pure HTML path, yes?? -->
 
@@ -78,7 +82,9 @@ yarn add @wagmi/core @web3modal/wagmi viem vite
 </TabItem>
 </Tabs>
 
-3.2 Inside `package.json` file add the following code ( `vite` is a dependency that is starting instant server ):
+3.2 Inside `package.json` file, add the following code: 
+
+> `vite` is a dependency that starts the server
 
 ```json
 "scripts": {
@@ -88,7 +94,7 @@ yarn add @wagmi/core @web3modal/wagmi viem vite
 
 3.3 Create `.env.local` file and place `VITE_PROJECT_ID="XYZ"` ( place your project ID key from [WalletConnect Cloud](https://cloud.walletconnect.com/) ).
 
-3.4 Create `index.html` file and place the following code:
+3.4 Create an `index.html` file and use the following code:
 
 ```html
 <!DOCTYPE html>
@@ -104,7 +110,7 @@ yarn add @wagmi/core @web3modal/wagmi viem vite
 </html>
 ```
 
-3.5 Create `main.js` file and place the following code:
+3.5 Create a `main.js` file and place the following code:
 
 ```javascript
 import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi';
@@ -124,22 +130,23 @@ const wagmiConfig = defaultWagmiConfig({chains, projectId, metadata});
 const modal = createWeb3Modal({wagmiConfig, projectId, chains});
 ```
 
-3.6 Run command `npm run dev` to start your Web application and you should see the Web3Modal button loaded in your Web app page.
+3.6 Run `npm run dev` to start your Web application, and you should see the Web3Modal button loaded in your Web app page.
 
 ### Step 4: Connect your wallet
-For this example we will be using [MathWallet](https://mathwallet.org/).
 
-4.1 After clicking the Web3Modal button you should be able to see several connecting options, select WalletConnect:
+For this example, we use [MathWallet](https://mathwallet.org/).
+
+4.1 You have several connecting options; select **WalletConnect**:
 <img src={buttonclicked} width="300" />
 
-4.2 After selecting WalletConnect the popup will load a WalletConnect QR code:
+4.2 The popup will load a WalletConnect QR code.
 <img src={walletconnectqr} width="300" />
 
-4.3 Now open your MathWallet mobile app and scan the WalletConnect QR code:
+4.3 Open your MathWallet mobile app and scan the QR code.
 <img src={mathwalletconnect} width="300" />
 
-4.4 After scanning the WalletConnect QR code you should be able to see your NEON balance inside your Web app page:
+4.4 After scanning the WalletConnect QR code, you should be able to see your NEON balance inside your Web app page:
 <img src={walletconnectlogged} width="300" />
 
-Now if you click on your NEON balance you will be able to see more options for your WalletConnect connection:
+Now, if you click your NEON balance, you'll be able to see more options for your WalletConnect connection:
 <img src={walletconnectloggedoptions} width="300" />

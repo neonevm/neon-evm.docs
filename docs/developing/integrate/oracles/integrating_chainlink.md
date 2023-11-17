@@ -4,7 +4,7 @@ proofedDate: 20230526
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: todo boilerplate as Remix link also
+comment:
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introduction
 
-[Chainlink data feeds](https://data.chain.link/) are the quickest way to connect your smart contracts to oracle data such as asset prices. 
+[Chainlink data feeds](https://data.chain.link/) are the quickest way to connect your smart contracts to oracle data, such as asset prices. 
 
 Chainlink is implemented as a smart contract on Neon EVM, making Chainlink data feeds from the Solana network available for smart contracts to consume. 
 
