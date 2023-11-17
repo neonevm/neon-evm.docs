@@ -7,8 +7,12 @@ approvedBy: na
 comment: Step 3 previous txt said both confirm in wallets, latest tutorial says EVM-compatible, I am assuming that neither is true == and the sending wallet must confirm
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import image1 from '@site/static/img/doc-images/neonpass/connect-wallets.png';
 import image2 from '@site/static/img/doc-images/neonpass/transfer.png';
+import image3 from '@site/static/img/doc-images/neonpass/select_network.png';
+import image4 from '@site/static/img/doc-images/neonpass/transfer1.png';
 
 ## TL;DR
 
@@ -31,6 +35,8 @@ You can transfer tokens in either direction, but each transaction incurs a gas f
 
 > Under the hood, moving tokens from Neon EVM to Solana or vice versa requires two transactions: one for Neon EVM (which requires a fee in NEON) and another for Solana (which requires a fee in SOL). However, NeonPass consolidates these payments. Transferring tokens from Neon EVM to Solana requires the tansaction fees to be paid in NEON; whereas transferring tokens from Solana to Neon EVM requires the transaction fees to be paid in either NEON or SOL (depending on user's choice of token).
 
+- Access the NeonPass page using a browser where your wallet applications are attached.
+
 <!-- Retiring this, believe it is out dated in terms of payment
 
 For example, moving tokens from Neon EVM to Solana requires two transactions, one for Neon EVM (which requires a fee in NEON) and another for Solana (which requires a fee in SOL). -->
@@ -47,15 +53,17 @@ The following is an example of transferring NEON tokens from Neon EVM to Solana 
 
 -->
 
-## Set up wallets
+## Transfer tokens with NeonPass
 
-1. Navigate to [NeonPass](https://neonpass.live/).
+### Step 1: Set up wallets
 
-2. Add your required Neon EVM network in your EVM-compatible wallet through [chainlist.org/chain/245022934](https://chainlist.org/?chain=245022934&search=Neon+EVM&testnets=true).
+1.1 Navigate to [NeonPass](https://neonpass.live/).
+
+1.2 Add your required Neon EVM network in your EVM-compatible wallet through [chainlist.org/chain/245022934](https://chainlist.org/?chain=245022934&search=Neon+EVM&testnets=true).
 
 > For further help, see our [wallet setup walkthrough](/docs/wallet/metamask_setup).
 
-## Connect wallets to NeonPass
+### Step 2: Connect wallets to NeonPass
 
 :::tip
 
@@ -63,17 +71,13 @@ Remember to use a browser to which both your Solana- and EVM-compatible wallets 
 
 :::
 
-1. Select the network you want to connect to from the dropdown in the top right corner.
+<img src={image3} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-<div className='neon-img-box-300' style={{textAlign: 'center'}}>
-
-![](img/select_network.png)
-
-</div>
-
-2. Click **Connect Wallet** to connect your Solana-compatible wallet to NeonPass. Follow the login procedure in your wallet's popup window.
+2.1 Select the network you want to connect to from the dropdown in the top right corner.
 
 <img src={image1} width="450" style={{ display: 'block', margin: '10px auto' }} />
+
+2.2 Click **Connect Wallet** to connect your Solana-compatible wallet to NeonPass. Follow the login procedure in your wallet's popup window and ensure it's connected to the network you require (e.g. Mainnet).
 
 :::tip
 
@@ -81,23 +85,24 @@ Ensure you have enough SOL/NEON to pay the withdrawal approval fee.
 
 :::
 
-3. Repeat this step for your EVM-compatible wallet.
+2.3 Repeat this step for your EVM-compatible wallet.
 
 After successfully connecting your wallets to NeonPass, the **Connect Wallet** text changes to the name of the network (Solana or Neon), and the public key of your accounts is displayed.
 
-## Tutorial: Transfer tokens from Neon EVM to Solana with NeonPass
+### Step 3: Conduct transfer
 
-### Conduct transfer
+<Tabs>
+  <TabItem value="neontosolana" label="Neon EVM to Solana" default>
 
-1. Use the arrow to determine the direction of transfer (from Neon EVM to Solana).
+3.1 Use the arrow to determine the direction of transfer (from Neon EVM to Solana).
 
 <img src={image2} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-2. Use the drop-down to select the token you want to transfer and enter the amount you want to send.
+3.2 Use the drop-down to select the token you want to transfer and enter the amount you want to send.
 
-3. Click **Transfer**.
+3.3 Click **Transfer**.
 
-4. Confirm the transaction in your sending wallet.
+3.4 Confirm the transaction in your sending wallet.
 
 > Always verify the transaction details and only approve if you wish to proceed.
 
@@ -132,14 +137,15 @@ Let's also check the destination Solana wallet address on [Solana Explorer](http
 :::tip
 Alternatively, use Blockscout's dedicated explorer [neon.blockscout.com](https://neon.blockscout.com) to search by transaction hash.
 :::
+</TabItem>
 
-## Tutorial: Transfer tokens from Solana to Neon EVM with NeonPass
+<TabItem value="solanatoneon" label="Solana to Neon EVM">
 
-The following is an example of transferring NEON SPL tokens from Solana to Neon EVM on Devnet. Please make sure to check the arrow for the forwarding direction of the transaction from `Solana` to `Neon`.
+3.1 Use the arrow to determine the direction of transfer (from Solana to Neon EVM).
 
-### 1. Select Token
+<img src={image4} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-On the NeonPass screen, click `Choose token`. In the list that appears, select the desired token symbol and specify the quantity to be sent (in our example, it is 30 NEON).
+3.2 On the NeonPass screen, click `Choose token`. In the list that appears, select the desired token symbol and specify the quantity to be sent (in our example, it is 30 NEON).
 
 <div className='neon-img-box-300' style={{textAlign: 'center'}}>
 
@@ -147,11 +153,9 @@ On the NeonPass screen, click `Choose token`. In the list that appears, select t
 
 </div>
 
-### 2. Approve Transaction and Complete Transfer
+3.3 There are two options for the token selection for the transaction fee. You can select either NEON or SOL from the bullet points below the `Transfer` button.
 
-2.1 There are two options for the token selection for the transaction fee. You can select either NEON or SOL from the bullet points below the `Transfer` button.
-
-2.2 Click `Transfer` to begin the token transfer procedure. The transaction must then be confirmed in both the MetaMask and Phantom wallet windows which will pop up. Verify the transaction details and approve it if you wish to proceed. A loading screen will appear after you approve.
+3.4 Click `Transfer` to begin the token transfer procedure. The transaction must then be confirmed in both the MetaMask and Phantom wallet windows which will pop up. Verify the transaction details and approve it if you wish to proceed. A loading screen will appear after you approve.
 
 After the transaction has been processed successfully, you will see the following screen indicating that the transfer is complete.
 
@@ -176,6 +180,9 @@ Click on `View on Solana Explorer` and confirm on SolScan that the tokens have b
 ![](img/token_transfer_solana.png)
 
 </div>
+
+</TabItem>
+</Tabs>
 
 ## Under the hood
 
