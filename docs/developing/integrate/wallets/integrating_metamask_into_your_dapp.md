@@ -1,6 +1,6 @@
 ---
 title: MetaMask
-proofedDate: na
+proofedDate: 20231117
 iterationBy: na
 includedInSite: true
 approvedBy: na
@@ -12,11 +12,11 @@ import TabItem from '@theme/TabItem';
 
 ## Introduction
 
-This guide goes through the process of integrating MetaMask into your dApp so that users of your dApp can click on a `Connect to Neon` button and be prompted to connect to your dApp via MetaMask in an intuitive and accessible manner.
+This guide goes through the process of integrating MetaMask into your dApp so that users of your dApp can click on a **Connect to Neon** button and be prompted to connect to your dApp via MetaMask in an intuitive and accessible manner.
 
 This guide assumes proficiency in JavaScript.
 
-## Full JavaScript Code
+## Full JavaScript code
 
 This code is also available on [CodeSandbox](https://codesandbox.io/s/autumn-sky-0gkxs4).
 
