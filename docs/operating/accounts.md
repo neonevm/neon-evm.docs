@@ -64,7 +64,7 @@ The number of required SOLs depends on:
 - The size of the [holder account](/docs/architecture/solana-accounts/#holder-account-size)
 - The number of holder accounts 
 
-> Remember, the number of holder accounts correlates with the the TPS of the Neon Proxy instance.
+> Remember, the number of holder accounts correlates with the TPS of the Neon Proxy instance.
 
 
 <Tabs>
@@ -72,7 +72,7 @@ The number of required SOLs depends on:
 
 To calculate the number of SOLs required by the Neon Operator, use the following logic:
 
-- The TPS depends on the finalization time of the Solana, which is equal to 32 Solana blocks because the content of the holder account should be retained until successful finalization of the the Neon transaction
+- The TPS depends on the finalization time of the Solana, which is equal to 32 Solana blocks because the content of the holder account should be retained until successful finalization of the Neon transaction
 - The Solana block time is 400 ms. So in 1 second, Solana may produce 1 / 0.4 = 2.5 blocks
 
 The formula to calculate the number of holder accounts and required SOLs is as follows:
