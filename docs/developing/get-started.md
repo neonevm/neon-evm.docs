@@ -64,10 +64,53 @@ See the [Hardhat tutorial](https://docs.neonfoundation.io/docs/developing/deploy
 <!-- Docusaurus issue with tabs -- links not rendering See the [Hardhat tutorial](/docs/deploy_facilities/configure_hardhat). -->
 
 </TabItem>
+
 <TabItem value="Foundry" label="Foundry" default>
 
-Foundry doesn’t have a config file like Hardhat to configure the network settings. Rather, the RPC endpoint and the private key are specified in the command line when passing foundry commands. See the [Foundry tutorial](https://github.com/neonlabsorg/neon-tutorials/tree/main/foundry).
+Foundry doesn’t have a config file like Hardhat or Truffle to configure the network settings. Rather, the RPC endpoint and the private key are specified in the command line when passing foundry commands. See the [Foundry tutorial](https://github.com/neonlabsorg/neon-tutorials/tree/main/foundry).
 
+</TabItem>
+
+<TabItem value="Truffle" label="Truffle" default>
+
+The network credentials can be configured under the “networks” property in the `truffle-config.js`.
+
+<Tabs>
+  <TabItem value="Devnet" label="Devnet" default>
+
+```jsx
+neondevnet: {
+      provider: () => {
+        return new HDWalletProvider(
+          [Array_of_accounts_private_keys],
+          "https://devnet.neonevm.org",
+        );
+      },
+      network_id: 245022926
+},
+```
+
+</TabItem>
+<TabItem value="Mainnet" label="Mainnet" default>
+
+```jsx
+neondevnet: {
+      provider: () => {
+        return new HDWalletProvider(
+          [Array_of_accounts_private_keys],
+          "https://neon-proxy-mainnet.solana.p2p.org",
+        );
+      },
+      network_id: 245022934
+},
+```
+
+</TabItem>
+</Tabs>
+
+See the [Truffle tutorial](https://docs.neonfoundation.io/docs/developing/deploy_facilities/configure_truffle).
+
+<!-- Docusaurus issue with relative links inside tabs>> See the [Truffle tutorial](/docs/developing/deploy_facilities/using_truffle). -->
 </TabItem>
 </Tabs>
 
