@@ -31,27 +31,13 @@ This guide demonstrates how to transfer tokens between Solana and Neon EVM using
 
 ## Fees
 
-You can transfer tokens in either direction, but each transaction incurs a gas fee in either NEON or SOL.
-
-> Under the hood, moving tokens from Neon EVM to Solana or vice versa requires two transactions: one for Neon EVM (which requires a fee in NEON) and another for Solana (which requires a fee in SOL). However, NeonPass consolidates these payments. Transferring tokens from Neon EVM to Solana requires the tansaction fees to be paid in NEON; whereas transferring tokens from Solana to Neon EVM requires the transaction fees to be paid in either NEON or SOL (depending on user's choice of token).
-
 - Access the NeonPass page using a browser where your wallet applications are attached.
 
-<!-- Retiring this, believe it is out dated in terms of payment
+Neon EVM is coming up with a [new feature](https://neonevm.org/blog/feature-alternative-gas-fee-token) in the following weeks on Devnet with which the users will have the option to pay the gas fees with the token they are transacting, rather than only NEON.
 
-For example, moving tokens from Neon EVM to Solana requires two transactions, one for Neon EVM (which requires a fee in NEON) and another for Solana (which requires a fee in SOL). -->
+You can transfer tokens in either direction, but each transaction incurs a gas fee in either NEON or SOL or the token of your choice with which you are transacting.
 
-<!-- is this no longer true -- rather than account required, just wallet required?
-* Have an account on the source network with the necessary token balance. This means that:
-  * When transferring from Neon EVM to Solana, make sure your Neon EVM account has enough NEON and the token being moved to complete the transfer and cover the gas fee.
-  * When transferring from Solana to Neon EVM, make sure your Solana account has enough SOL and the token being moved to complete the transfer and cover the gas fee.
-* Use non-custodial browser-based wallet applications [MetaMask](https://metamask.io/) and [Phantom](https://phantom.app/), which are currently supported by NeonPass.
-* Access the NeonPass page using a browser where your wallet applications are attached.
-
-## Tutorial: Moving Tokens From Neon EVM to Solana
-The following is an example of transferring NEON tokens from Neon EVM to Solana on Devnet.
-
--->
+> Under the hood, transferring tokens from Neon EVM to Solana requires the tansaction fees to be paid in NEON or the token of user's choice; whereas transferring tokens from Solana to Neon EVM requires the transaction fees to be paid in either NEON or SOL (depending on user's choice of token).
 
 ## Transfer tokens with NeonPass
 
