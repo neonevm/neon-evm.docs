@@ -23,7 +23,7 @@ There are also more concrete prohibitions on improper behavior that must be kept
 * No member should improperly influence the vote of another.
 * Members agree to hold software developers blameless for unintentional mistakes made by them in the expression of contractual intent, whether or not said mistakes were due to actual or perceived negligence.
 
-In addition, the NEON DAO is transparent and flexibile. All users have access to all relevant information in order to make well-informed decisions, and the governance process is adaptable to the ever-evolving needs of the community.
+In addition, the NEON DAO is transparent and flexible. All users have access to all relevant information in order to make well-informed decisions, and the governance process is adaptable to the ever-evolving needs of the community.
 
 ### Rules and Etiquette
 
@@ -41,7 +41,7 @@ The DAO Forum is not the place for general discussions, advertising, off-topic c
 
 ## Measures Against Abuse and Misuse
 
-Like any governance system, the Neon DAO faces the risk of malicious actors being involved, which could jeopardize the Neon ecosystem as well as treasury or user funds if their subversive proposals are erronously passed. To reduce this risk, the Neon DAO has implemented defensive measures in several key areas, corresponding to stages along the process of a proposal becoming implemented. These areas include limiting the number of proposals, detecting malicious proposals, and cancelling malicious proposals.
+Like any governance system, the Neon DAO faces the risk of malicious actors being involved, which could jeopardize the Neon ecosystem as well as treasury or user funds if their subversive proposals are erroneously passed. To reduce this risk, the Neon DAO has implemented defensive measures in several key areas, corresponding to stages along the process of a proposal becoming implemented. These areas include limiting the number of proposals, detecting malicious proposals, and cancelling malicious proposals.
 
 ### Limiting the Number of Proposals
 Malicious actors have an easier time pushing through one of their proposals if they can submit as many proposals as they like. To prevent this, the Neon DAO's Assemblies have protections in place to limit the number of proposals an Assembly can accept from a given user. These measures include:
@@ -50,4 +50,4 @@ Malicious actors have an easier time pushing through one of their proposals if t
 * A minimum amount of locked tokens necessary for a user to create a proposal (each Assembly has different requirements)
 * Some Assemblies require a higher locked token threshold for creating proposals than for updating the Neon EVM
 
-Beside preventing the proliferation of malicious proposals, these measures also reduce spam, making the governance system easier to use and more efficient.
+Besides preventing the proliferation of malicious proposals, these measures also reduce spam, making the governance system easier to use and more efficient.

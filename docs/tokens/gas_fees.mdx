@@ -63,7 +63,7 @@ Within [Solana](https://docs.solana.com/storage_rent_economics), the rental cost
 
 > If an account has less than two years' worth of deposited rent, the network charges rent on a per-epoch basis, in credit for the next epoch. This rent is deducted at a rate specified in genesis, in lamports per kilobyte-year.
 
-To simplify the user experience, Neon charges two years' worth of rent deposits for each new account. The the gas cost of creating a new account is:
+To simplify the user experience, Neon charges two years' worth of rent deposits for each new account. The gas cost of creating a new account is:
 > 0 \* 2 \* 5,000 (computational cost + treasury) + (128 + 71) \* 6960 (storage cost for the minimum Neon account size) ≈ 1,400,000 units
 
 Therefore, the total gas fee is 1,400,000 units \* 132 Galan = 0.1848 NEON tokens.

@@ -149,7 +149,7 @@ This is where you configure various aspects of how you wish to run your Proxy. O
 #### `Proxy`
 
 * `PROXY_VER` - specifies the Proxy/Docker image version
-* `PROXY_COUNT` - specifies the the number of pods that you need to host in your cluster namespace
+* `PROXY_COUNT` - specifies the number of pods that you need to host in your cluster namespace
 * `PROXY_COUNT` - specifies the number of keys that each pod will use from Hashicorp Vault
 * `PROXY_HOST` - if you want to use an ingress to serve your own DNS name inside the cluster, set this variable to point to the host
 * `PRX_FAUCET_URL` - specifies the internal name inside your namespace that calls the faucet application (only applicable to local development and devnet)

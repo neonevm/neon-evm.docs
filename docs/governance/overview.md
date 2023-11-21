@@ -12,7 +12,7 @@ import dao from '@site/static/img/doc-images/governance/dao_organization.png';
 
 ## The Neon DAO
 
-The Neon DAO is a collection of community-led, community-driven organizations that foster and enhance decentralization, resilence, and self-sustainability for the Neon EVM platform and ecosystem. To do so, community members reach consensus on solving issues, develop rules for the functioning of the Neon DAO, and change the governance rules themselves through contractual amendments, if applicable.
+The Neon DAO is a collection of community-led, community-driven organizations that foster and enhance decentralization, resilience, and self-sustainability for the Neon EVM platform and ecosystem. To do so, community members reach consensus on solving issues, develop rules for the functioning of the Neon DAO, and change the governance rules themselves through contractual amendments, if applicable.
 
 The Neon DAO's Assemblies are built using [SPL Governance](https://github.com/solana-labs/solana-program-library/tree/master/governance), a versatile DAO creation tool for the Solana blockchain.
 
