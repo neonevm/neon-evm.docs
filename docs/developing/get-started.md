@@ -4,7 +4,7 @@ proofedDate: 20231101
 iterationBy: HB
 includedInSite: true
 approvedBy: na
-comment:
+comment: todo -- link to internal Foundry tutorial once its PR is in
 ---
 
 import Tabs from '@theme/Tabs';
