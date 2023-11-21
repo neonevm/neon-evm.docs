@@ -4,7 +4,7 @@ proofedDate: 20230928
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: todo this page uses a mix of image locations static as per best practice and local >> fix this
+comment: todo this page uses a mix of image locations static as per best practice and local >> fix this >> note relocated images to follow step
 ---
 
 import Tabs from '@theme/Tabs';
