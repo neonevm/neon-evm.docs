@@ -16,7 +16,7 @@ This is a bare-bones Get Started; alternatively, browse the full support availab
 
 ## Get test NEON for Neon Devnet
 
-To populate the accounts with test NEON, visit [the faucet](https://neonfaucet.org), where you will be issued 100 NEONS at a time.
+To populate the accounts with test NEON, visit [the faucet](https://neonfaucet.org), where you will be issued up to 100 NEON.
 
 ## Configure Neon network credentials in your framework's config file
 
@@ -67,7 +67,9 @@ See the [Hardhat tutorial](https://docs.neonfoundation.io/docs/developing/deploy
 
 <TabItem value="Foundry" label="Foundry" default>
 
-Foundry doesn’t have a config file like Hardhat or Truffle to configure the network settings. Rather, the RPC endpoint and the private key are specified in the command line when passing foundry commands. See the [Foundry tutorial](https://github.com/neonlabsorg/neon-tutorials/tree/main/foundry).
+Foundry doesn’t have a configuration file like Hardhat or Truffle to configure the network settings. Rather, the RPC endpoint and the private key are specified in the command line when passing foundry commands. 
+
+See the [Foundry tutorial](https://github.com/neonlabsorg/neon-tutorials/tree/main/foundry).
 
 </TabItem>
 
@@ -111,6 +113,7 @@ neondevnet: {
 See the [Truffle tutorial](https://docs.neonfoundation.io/docs/developing/deploy_facilities/configure_truffle).
 
 <!-- Docusaurus issue with relative links inside tabs>> See the [Truffle tutorial](/docs/developing/deploy_facilities/using_truffle). -->
+
 </TabItem>
 </Tabs>
 
@@ -142,7 +145,7 @@ The command for verifying a deployed contract is:
 npx hardhat verify <DEPLOYED_CONTRACT_ADDRESS> --network neondevnet
 ```
 
-Follow this GitHub tutorial for contract verification [Hardhat Github Tutorial](https://github.com/neonlabsorg/neon-tutorials/tree/main/hardhat).
+Follow this [GitHub tutorial](https://github.com/neonlabsorg/neon-tutorials/tree/main/hardhat) for Hardhat contract verification.
 
 ## Gotchas
 
