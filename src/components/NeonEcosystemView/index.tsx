@@ -5,7 +5,7 @@ import { NeonEvm } from './neon-evm';
 import { Proxy } from './proxy';
 import './style.css';
 
-export function QuickLookNeonImage() {
+export function NeonEcosystemView() {
   const { colorMode } = useColorMode();
   const [state, setState] = useState(null);
 
