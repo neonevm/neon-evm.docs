@@ -4,7 +4,7 @@ proofedDate: 20230928
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: Step 3 previous txt said both confirm in wallets, latest tutorial says EVM-compatible, I am assuming that neither is true == and the sending wallet must confirm
+comment: todo this page uses a mix of image locations static as per best practice and local >> fix this
 ---
 
 import Tabs from '@theme/Tabs';
@@ -37,7 +37,7 @@ Neon EVM is coming up with a [new feature](https://neonevm.org/blog/feature-alte
 
 You can transfer tokens in either direction, but each transaction incurs a gas fee in either NEON or SOL or the token of your choice with which you are transacting.
 
-> Under the hood, transferring tokens from Neon EVM to Solana requires the tansaction fees to be paid in NEON or the token of user's choice; whereas transferring tokens from Solana to Neon EVM requires the transaction fees to be paid in either NEON or SOL (depending on user's choice of token).
+> Under the hood, transferring tokens from Neon EVM to Solana requires the tansaction fees to be paid in NEON or (if supported) the transaction token as per the user's choice; whereas transferring tokens from Solana to Neon EVM requires the transaction fees to be paid in either NEON or SOL (depending on user's choice of token).
 
 ## Transfer tokens with NeonPass
 
@@ -57,17 +57,17 @@ Remember to use a browser to which both your Solana- and EVM-compatible wallets 
 
 :::
 
-<img src={image3} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
 2.1 Select the network you want to connect to from the dropdown in the top right corner.
+<img src={image3} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-<img src={image1} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
 2.2 Click **Connect Wallet** to connect your Solana-compatible wallet to NeonPass. Follow the login procedure in your wallet's popup window and ensure it's connected to the network you require (e.g. Mainnet).
+<img src={image1} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
 :::tip
 
-Ensure you have enough SOL/NEON to pay the withdrawal approval fee.
+Ensure you have enough funds to pay the withdrawal approval fee.
 
 :::
 
@@ -94,7 +94,7 @@ After successfully connecting your wallets to NeonPass, the **Connect Wallet** t
 
 A successful transaction is confirmed.
 
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
+<div className='neon-img-box-450' style={{textAlign: 'center'}}>
 
 ![](img/transfer_complete.png)
 
@@ -104,7 +104,7 @@ We hope that you love NeonPass and that you are ready to leverage the full poten
 
 3.5 Don't trust: verify
 
-If you wish to verify the transaction, click **View on Neon Explorer** to confirm on [NeonScan](https://neonscan.org) that the tokens were transferred. In the following example, 42 NEON was transferred out of Neon EVM.
+If you wish to verify the transaction, click **View on Neon Explorer** to confirm on [NeonScan](https://neonscan.org) that the tokens were transferred. In the following example, 42 NEON were transferred out of Neon EVM.
 
 <div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
