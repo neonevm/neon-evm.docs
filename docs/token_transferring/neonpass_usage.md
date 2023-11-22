@@ -98,8 +98,6 @@ A successful transaction is confirmed.
 
 </div>
 
-We hope that you love NeonPass and that you are ready to leverage the full potential of Neon EVM by facilitating hassle-free transfers of assets to and from Solana.
-
 3.5 Don't trust: verify
 
 If you wish to verify the transaction, click **View on Neon Explorer** to confirm on [NeonScan](https://neonscan.org) that the tokens were transferred. In the following example, 42 NEON were transferred out of Neon EVM.
@@ -155,7 +153,7 @@ A successful transaction is confirmed.
 
 3.6 Don't trust: verify
 
-Click on `View on Solana Explorer` and confirm on SolScan that the tokens have been moved. In this case, 30 NEON was transferred out of the origin wallet.
+Click on `View on Solana Explorer` and confirm on SolScan that the tokens have been moved. In this case, 30 NEON were transferred out of the Solana wallet.
 
 <div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
@@ -171,6 +169,8 @@ Click on `View on Solana Explorer` and confirm on SolScan that the tokens have b
 
 </TabItem>
 </Tabs>
+
+We hope that you love NeonPass and that you are ready to leverage the full potential of Neon EVM by facilitating hassle-free transfers of assets to and from Solana.
 
 ## Under the hood
 
