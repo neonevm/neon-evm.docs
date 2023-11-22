@@ -57,10 +57,8 @@ Remember to use a browser to which both your Solana- and EVM-compatible wallets 
 
 :::
 
-
 2.1 Select the network you want to connect to from the dropdown in the top right corner.
 <img src={image3} width="450" style={{ display: 'block', margin: '10px auto' }} />
-
 
 2.2 Click **Connect Wallet** to connect your Solana-compatible wallet to NeonPass. Follow the login procedure in your wallet's popup window and ensure it's connected to the network you require (e.g. Mainnet).
 <img src={image1} width="450" style={{ display: 'block', margin: '10px auto' }} />
@@ -141,9 +139,13 @@ Alternatively, use Blockscout's dedicated explorer [neon.blockscout.com](https:/
 
 3.3 There are two options for the token selection for the transaction fee. You can select either NEON or SOL from the bullet points below the `Transfer` button.
 
-3.4 Click `Transfer` to begin the token transfer procedure. The transaction must then be confirmed in both the MetaMask and Phantom wallet windows which will pop up. Verify the transaction details and approve it if you wish to proceed. A loading screen will appear after you approve.
+3.4 Click **Transfer**.
 
-After the transaction has been processed successfully, you will see the following screen indicating that the transfer is complete.
+3.5 Confirm the transaction in your sending wallet.
+
+> Always verify the transaction details and only approve if you wish to proceed.
+
+A successful transaction is confirmed.
 
 <div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
@@ -151,7 +153,7 @@ After the transaction has been processed successfully, you will see the followin
 
 </div>
 
-3.5 Don't trust: verify
+3.6 Don't trust: verify
 
 Click on `View on Solana Explorer` and confirm on SolScan that the tokens have been moved. In this case, 30 NEON was transferred out of the origin wallet.
 
