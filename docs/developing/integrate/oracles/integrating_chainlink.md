@@ -1,6 +1,6 @@
 ---
 title: Chainlink
-proofedDate: 20230526
+proofedDate: 20231124
 iterationBy: na
 includedInSite: true
 approvedBy: na
