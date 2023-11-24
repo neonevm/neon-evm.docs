@@ -1,6 +1,6 @@
 ---
 title: Neon DAO Organization
-proofedDate: na
+proofedDate: na sublime only
 iterationBy: na
 includedInSite: true
 approvedBy: na
@@ -16,7 +16,7 @@ Since the results depend on Neon's stability, a high level of coordination must 
 
 ## The Neon DAO Model
 
-The Neon DAO model is based on the interplay and synergy of several decentralized Assemblies, organized into three Focus Areas. In a nutshell, Assemblies are member-owned communities that serve as safe and effective venues for like-minded indivuals to constructively work together and engage in collective decision-making. While each Assembly has different criteria for submitting proposals, eligibility for voting, and the scope of influence its decisions can have, they all follow the same basic formula as described in the [Voting Process Overview](/docs/governance/overview/#voting-process-overview).
+The Neon DAO model is based on the interplay and synergy of several decentralized Assemblies, organized into three Focus Areas. In a nutshell, Assemblies are member-owned communities that serve as safe and effective venues for like-minded individuals to constructively work together and engage in collective decision-making. While each Assembly has different criteria for submitting proposals, eligibility for voting, and the scope of influence its decisions can have, they all follow the same basic formula as described in the [Voting Process Overview](/docs/governance/overview/#voting-process-overview).
 
 * An idea for potential implementation is brought to an Assembly within a Focus Area.
 * Assembly participants discuss, review, and revise the proposed idea off-chain.
@@ -42,7 +42,7 @@ The parameters pertaining to the Neon DAO governance framework may be adjusted a
 
 ## Ecosystem
 
-The Ecosystem Focus Area is charged with the promotion of sustainable, long-term growth of the Neon ecosystem. As the collective owner of the Neon Treasury, its duties and responsibilties consist of distribution of funds for grants, security audits, bug bounties, and other ecosystem initiatives.
+The Ecosystem Focus Area is charged with the promotion of sustainable, long-term growth of the Neon ecosystem. As the collective owner of the Neon Treasury, its duties and responsibilities consist of distribution of funds for grants, security audits, bug bounties, and other ecosystem initiatives.
 
 Within the Ecosystem Focus Area, the Ecosystem Assembly and Foundation work in collaboration to provide a frictionless experience for Ecosystem developers. The Ecosystem Assembly provides custodial services to the Foundation, informs the Foundation on decisions taken, and lets the Foundation distribute funds based on its own legal assessment of potential grantees.
 
@@ -53,6 +53,7 @@ The Ecosystem Assembly is the most active Assembly in the Neon DAO. Most Ecosyst
 * Informing the Foundation on decisions taken, and letting the Foundation distribute funds based on its own legal assessment of potential grantees
 
 #### Usage Scenarios
+
 A typical scenario, funding an ecosystem initiative, would proceed as follows:
 1. During the off-chain stage, the Assembly discusses and evaluates the proper incentives to provide for the initiative in question.
 2. The proponent of the idea then creates a proposal to
@@ -61,12 +62,14 @@ A typical scenario, funding an ecosystem initiative, would proceed as follows:
 3. The proposal is voted on and, if approved, leads to the transfer of funds to the Budget account.
 
 ### Neon Foundation
+
 The Neon Foundation is an organization that is responsible for implementing Ecosystem Assembly proposals. These responsibilities include:
 * Performing necessary Know-Your-Customer (KYC) and Anti-Money Laundering (AML) processes for contractors and grantees
 * Signing agreements with contractors
 * Processing signed agreements with regards to acceptance and payments
 
 ## Development
+
 As the owner of the Neon EVM program, the Development Assembly is the only component of the Development Focus Area. This Assembly is the group that deals with the technical aspects of the Neon EVM, and can upgrade the Neon EVM version. In break-glass emergency scenarios, Emergency Engineers, appointed by the Development Assembly, may elect to stop the Neon EVM without the Assembly's approval.
 
 ### Development Assembly
@@ -101,4 +104,5 @@ Within the Security Focus Area, the Treasury Watchdog and EVM Emergency Assembly
 The Treasury Watchdog is meant as a check on the Ecosystem Assembly, to make sure no malicious actors attempt to withdraw funds from any treasury wallets/accounts by taking advantage of the Ecosystem Assembly's decentralized nature. The Treasury Watchdog's main function is to identify malicious proposals that have been approved in rare cases and may target treasury accounts normally controlled by the Ecosystem Assembly. A Treasury Watchdog proposal to prevent such a withdrawal must be undertaken before or during the hold up period of the malicious Ecosystem Assembly proposal.
 
 ### EVM Emergency Assembly
+
 The EVM Emergency Assembly is meant as a check on the Development Assembly, to make sure no malicious actors attempt to submit a malicious upgrade to the Neon EVM by taking advantage of the Development Assembly's decentralized nature. The EVM Emergency Assembly's main function is to prevent the Neon EVM being upgraded with malicious code. An EVM Emergency Assembly proposal to prevent such an upgrade must be undertaken before or during the hold up period of the malicious Development Assembly proposal.

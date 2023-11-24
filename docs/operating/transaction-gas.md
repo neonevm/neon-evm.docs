@@ -69,17 +69,17 @@ The Neon transaction will only be executed when the gas price covers Operator co
 
 ## Calculation configuration
 
-The Neon Proxy has several settings accommodate the calculation of gas-price on your required network:
+The Neon Proxy has several settings that accommodate the calculation of gas-price on your required network:
 
 - `PRX_PP_SOLANA_URL`: the HTTP/S address of the Solana node (Devnet/Mainnet) that provides the Pyth data account that supplies $NEON and $SOL prices
 - `PRX_PYTH_MAPPING_ACCOUNT`: the Solana address of the Pyth mapping account; select the address on (https://pyth.network/developers/accounts) based on the type of network (Devnet/Mainnet)
-- `PRX_UPDATE_PYTH_MAPPING_PERIOD_SEC`: the time period to reread the Pyth mapping account. The Neon Proxy reads the Pyth mapping account at the start, gets the addresses of $NEON and $SOL accounts, and rechecks the address from the Pyth Mapping account only after `UPDATE_PYTH_MAPPING_PERIOD_SEC`. It is recommend to set this generously (e.g. 1/3/10 hours), because the price feed accounts don’t change often.
+- `PRX_UPDATE_PYTH_MAPPING_PERIOD_SEC`: the time period to reread the Pyth mapping account. The Neon Proxy reads the Pyth mapping account at the start, gets the addresses of $NEON and $SOL accounts, and rechecks the address from the Pyth Mapping account only after `UPDATE_PYTH_MAPPING_PERIOD_SEC`. It is recommended to set this generously (e.g. 1/3/10 hours), because the price feed accounts don’t change often.
 - `PRX_MINIMAL_GAS_PRICE`: the minimum gas price to accept transactions into the mempool for on-chain execution
 > Let's take a closer look at the minimum gas price variable.
 
 <!-- ## Zero gas price for testing
 
-On Devnet test NEON is availiable, however, for beta Mainnet testing purposes, the Neon Proxy can be configured to accept transactions with a 0 gas price (a balance of SOL is available to cover the transaction fees on Solana). 
+On Devnet test NEON is available, however, for beta Mainnet testing purposes, the Neon Proxy can be configured to accept transactions with a 0 gas price (a balance of SOL is available to cover the transaction fees on Solana). 
 
 To enable this configuration, the Neon Operator should set up the following parameters:
 

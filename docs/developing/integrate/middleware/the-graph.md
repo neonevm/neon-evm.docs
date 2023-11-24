@@ -7,6 +7,10 @@ approvedBy: na
 comment: original item https://medium.com/neon-labs/the-graph-on-neon-evm-enabling-efficient-on-chain-dapp-data-querying-d5c73e3c6bb1 the examples repo has (out of date) full proxy local/Solana/Tracer/Indexer for Graph here https://github.com/neonlabsorg/examples/blob/main/the-graph-integration/README.md For the graph we will have separate RPC Endpoint not public 
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
 *This page presents a high-level overview of how to create a subgraph for The Graph and the endpoint services provided by Neon EVM.*
 
 ## TL;DR
@@ -15,12 +19,8 @@ comment: original item https://medium.com/neon-labs/the-graph-on-neon-evm-enabli
 
 > `yarn global add @graphprotocol/graph-cli` or `npm install -g @graphprotocol/graph-cli`
 
-- Send a request to info@neonevm.org to be added to the allowlist for The Graph endpoints:
-    - IPFS: https://ipfs.neonevm.org
-    - Graph UI: https://thegraph.neonevm.org
-    - Deployment: https://thegraph.neonevm.org/deploy
-    - GraphQL: https://thegraph.neonevm.org/index-node/graphql
-
+- Send a request to info@neonevm.org to be added to the allowlist for The Graph [endpoints](#the-graph-endpoints).
+   
 ## Prerequisites for standard flow
 
 :::info 
@@ -32,7 +32,7 @@ The standard flow is where the end user deploys and collects data from their own
 3. [Configure your subgraph.yaml](#subgraph-overview) to collect data on events emitted by contract with value and block number from previous step
 4. [Deploy your subgraph](#deploy-your-subgraph)
 
- The Graph is highly customizable and supports other flows; for example, it allows you to monitor [public contracts](#public-contracts) too. 
+The Graph is highly customizable and supports other flows; for example, it allows you to monitor [public contracts](#public-contracts) too. 
 
 ::: 
 
@@ -46,6 +46,10 @@ On the Solana blockchain, data accounts are used to temporarily store data with 
 
 This means that The Graph may not be able to acquire all data according to the block number assigned. It is important that end users consider what data they wish to extract and store from the API service provided by their subgraph for future use.
 
+:::important
+Neon subgraph supports specVersion: 0.0.4 inside the subgraph.yaml file.
+:::
+
 ## Introduction
 
 To extract, process, and store data from a dApp contract on Neon EVM using The Graph protocol, you must deploy a dedicated subgraph to a Graph node. 
@@ -56,6 +60,7 @@ Subgraphs map 1:1 with a dApp to provide Graph nodes with the information and lo
 - Translate the events into entities for storage
 
 :::
+
 
 ### Subgraph overview
 
@@ -117,20 +122,85 @@ If you set  `dataSources.networking` to `neonlabs.`, then the manifest file will
 
 The address of the contract deployed to the `dataSources.network` in the subgraph.yaml manifest file. 
 
+## The Graph endpoints
+
+<Tabs>
+    <TabItem value="Opt1" label="Mainnet" default>
+
+- IPFS: https://ipfs.neonevm.org
+- Graph UI: https://thegraph.neonevm.org
+- Deployment: https://thegraph.neonevm.org/deploy
+- GraphQL: https://thegraph.neonevm.org/subgraphs/name/{YOUR_SUBGRAPH_SLUG}/graphql 
+
+> Replace {YOUR_SUBGRAPH_SLUG} with your slug.
+
+</TabItem>
+<TabItem value="Opt2" label="Devnet" default>
+
+- IPFS: https://ch-ipfs.neontest.xyz
+- Graph UI: https://ch2-graph.neontest.xyz/
+- Deployment: https://ch2-graph.neontest.xyz/deploy/
+- GraphQL: https://ch2-graph.neontest.xyz/subgraphs/name/{YOUR_SUBGRAPH_SLUG}/graphql
+
+> Replace {YOUR_SUBGRAPH_SLUG} with your slug.
+
+</TabItem>
+</Tabs>
+
+
+
 ## Deploy your subgraph
 
 When you have finished creating the subgraph manifest, the subgraph’s GraphQL schema, and the AssemblyScript Mapping file, you’re ready to deploy the subgraph.
 
 ### Step 1: request access
 
-Access to the allowlist for The Graph endpoints must be made to info@neonevm.org. You will be added to the allowlist for:
+Request access to the allowlist for The Graph endpoints at info@neonevm.org. You will be added to the allowlist for the endpoint of the [network/s](#the-graph-endpoints) you request.
 
-- IPFS: https://ipfs.neonevm.org
-- Graph UI: https://thegraph.neonevm.org
-- Deployment: https://thegraph.neonevm.org/deploy
-- GraphQL: https://thegraph.neonevm.org/index-node/graphql
 
-### Step 2: create
+### Step 2: set up
+
+2.1 Get The Graph's CLI with:
+
+<Tabs>
+    <TabItem value="Opt1" label="yarn" default>
+
+    ```bash
+    yarn global add @graphprotocol/graph-cli
+    ```
+
+</TabItem>
+<TabItem value="Opt2" label="npm" default>
+
+
+    ```bash
+    npm install -g @graphprotocol/graph-cli
+    ```
+</TabItem>
+</Tabs>
+
+2.2 Initiate a project:
+
+<Tabs>
+    <TabItem value="Opt1" label="Clone our example" default>
+
+Neon EVM provides an example of how to integrate The Graph on Neon [on GitHub](https://github.com/neonlabsorg/neon-tutorials/tree/main/the-graph-test). This project includes example of how to fetch data for the USDC token deployed on Neon Mainnet.
+
+</TabItem>
+<TabItem value="Opt2" label="Fresh project" default>
+
+Start a fresh Graph project with 
+
+```bash
+    graph init --studio {YOUR_SUBGRAPH_SLUG}
+```
+> Remember to define your custom network to `neonlabs` in the subgraph.yaml and again in truffle-config.js to define the neonlabs network.
+
+</TabItem>
+</Tabs>
+
+
+### Step 3: create
 
 For example, let's create a subgraph called `test-subgraph` on Neon EVM. From The Graph CLI, run:
 
@@ -138,7 +208,7 @@ For example, let's create a subgraph called `test-subgraph` on Neon EVM. From Th
 graph create neonlabs/test-subgraph --node https://thegraph.neonevm.org/deploy/
 ```
 
-### Step 3: instantiate 
+### Step 4: instantiate 
 
 In the CLI, instantiate `test-subgraph` with:
 
@@ -152,7 +222,7 @@ graph codegen
 graph build
 ```
 
-### Step 4: deploy
+### Step 5: deploy
 
 Deploy to the Graph node with:
 
@@ -160,27 +230,18 @@ Deploy to the Graph node with:
 graph deploy neonlabs/test-subgraph --ipfs https://ipfs.neonevm.org/ --node https://thegraph.neonevm.org/deploy/ --version-label="v0.0.1"
 ```
 
-### Step 5: record
+### Step 6: record
 
 Finally, record the output of the previous command: the URL at which your subgraph provides the API service feed for your data.
 
+## Gotchas
+
+Remember:
+
+- Neon subgraph supports specVersion: 0.0.4 inside the subgraph.yaml file.
+- Due to the different memory models of Solana and the EVM, there are [Neon-specific deviations](#neon-evm-specific-deviations).
 
 ## What next?
 
 If you are new to The Graph and need further support, consider trying our [full walk-through](https://medium.com/neon-labs/the-graph-on-neon-evm-enabling-efficient-on-chain-dapp-data-querying-d5c73e3c6bb1) for setting up and deploying a subgraph on Neon EVM.
 
-
-<!-- ## Gravity.sol overview
-
-This overview discusses a simple Solidity smart contract called Gravity.sol. You can find the truffle project files [here](https://github.com/neonlabsorg/examples/tree/main/the-graph-integration).
-
-Lets take a look at the contract we will use, paying particular attention to the events that it emits. Next we will consider the subgraph that listens to these events. 
-
-Gravity.sol is a smart contract that links a blockchain address with a path to an image. It allows users to set avatars to their Ethereum/Neon EVM address. Each of these avatars are known as Gravatars. Gravatars include information such as owner, displayName, and imageUrl. The relationship between Gravatars and specific blockchain addresses are stored in an array.
-
-Within Gravity.sol there are four functions that allow users to create, update, and retrieve Gravatars:
-
-- `createGravatar`: on creation, `NewGravatar` event is emitted
-- `getGravatar`
-- `updateGravatarName`: on update, `UpdatedGravatar` event is emitted
-- `updateGravatarImage`: on update, `UpdatedGravatar` event is emitted -->

@@ -39,9 +39,12 @@ const sidebars = {
       ]
     },
     {
-      type: 'doc',
+      type: 'category',
       label: '💬 FAQ',
-      id: 'faq/neon-brief-faq',
+      items: [
+        'faq/neon-brief-faq',
+        'faq/neonpass'
+        ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Tools</h4>' },
@@ -76,8 +79,8 @@ const sidebars = {
       label: 'Configure Dev Tools',
       items: [
         'developing/deploy_facilities/configure_hardhat',
+        'developing/deploy_facilities/configure_foundry',
         'developing/deploy_facilities/configure_truffle',
-        'developing/deploy_facilities/configure_brownie'
       ]
     },
     {
@@ -106,8 +109,7 @@ const sidebars = {
       items: [
         'developing/deploy_facilities/using_hardhat',
         'developing/deploy_facilities/using_truffle',
-        'developing/deploy_facilities/using_remix',
-        'developing/deploy_facilities/using_brownie'
+        'developing/deploy_facilities/using_remix'
       ]
     },
     {
@@ -134,6 +136,13 @@ const sidebars = {
         'architecture/neon_evm_arch',
         'architecture/eth_sol_solution',
         'architecture/solana-accounts'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Token Accounts',
+      items:[
+       'tokens/token-accounts'
       ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
