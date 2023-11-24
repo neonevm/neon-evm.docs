@@ -4,7 +4,7 @@ proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: 
+comment: killing this line You can learn more about how to configure Brownie [here](/docs/developing/deploy_facilities/configure_brownie). Confused anyhow -- thought we were clearing out Brownie
 ---
 
 *This page outlines the steps for deploying and testing contracts in the Neon EVM using [Brownie](https://eth-brownie.readthedocs.io/en/stable/).*
@@ -34,7 +34,7 @@ cd examples/simple-spl-erc20-brownie
 
 ### Step 2: Configuration
 
-[`brownie-config.yaml`](https://github.com/neonlabsorg/examples/blob/main/simple-spl-erc20-brownie/brownie-config.yaml) is Brownie's configuration file. You can learn more about how to configure Brownie [here](/docs/developing/deploy_facilities/configure_brownie).
+[`brownie-config.yaml`](https://github.com/neonlabsorg/examples/blob/main/simple-spl-erc20-brownie/brownie-config.yaml) is Brownie's configuration file. 
 
 This first line in `brownie-config.yaml` means that the `.env` file, if it exists, will be loaded by Brownie.
 ```bash
