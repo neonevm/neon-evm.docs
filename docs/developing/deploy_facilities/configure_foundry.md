@@ -4,7 +4,7 @@ proofedDate: 20231116
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: 
+comment: Killing the ## What next? See the [tutorial on how to use Foundry](/docs/developing/deploy_facilities/using_foundry) to deploy to Neon EVM. as this is killing the build todo -- return this later
 ---
 
 Foundry is a blazing fast, portable,modular toolkit for Ethereum application development written in Rust.
@@ -33,7 +33,5 @@ The parameters for `forge create` command include:
 * `--constructor-args`: The constructor arguments to be passed to the contract that is being deployed
 * `--legacy`: This parameter is being passed to use legacy transactions _(Neon EVM currently [doesn't support EIP-1559 transactions](/docs/evm_compatibility/overview#shared-standards-and-features))_
 
-## What next?
 
-See the [tutorial on how to use Foundry](/docs/developing/deploy_facilities/using_foundry) to deploy to Neon EVM.
 
