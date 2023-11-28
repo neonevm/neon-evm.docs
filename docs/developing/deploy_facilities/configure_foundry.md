@@ -35,4 +35,4 @@ The parameters for `forge create` command include:
 
 ## What next?
 
-See the [tutorial on how to use Foundry](/docs/developing/deploy_facilities/using_foundry) to deploy to Neon EVM].
+See the [tutorial on how to use Foundry](/docs/developing/deploy_facilities/using_foundry) to deploy to Neon EVM.
