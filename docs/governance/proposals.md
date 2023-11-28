@@ -116,7 +116,7 @@ After a proposal is created, it is ready to be put to a vote. The community of e
 
 To vote on a proposal, follow the following steps:
 
-1. You might have been given a link to a proposal that is in the `Voting` state, or you might have clicked on a proposal in the `Voting` stage from the list of proposals. Either way, tou should see a proposal page like this:
+1. You might have been given a link to a proposal that is in the `Voting` state, or you might have clicked on a proposal in the `Voting` stage from the list of proposals. Either way, you should see a proposal page like this:
 
 > <img src={govern12} />
 
@@ -133,7 +133,7 @@ To vote on a proposal, follow the following steps:
     <!-- ![](./img/new_gov_ui_negative_popup.png) -->
      3. You can then choose/customize the percentage of your NEON tokens you would like to commit for this vote
      4. Click "Confirm" once you are happy with your ballot.
-3. A prompt by your wallet application will ask if you to approve the voting transaction. If you have verified its details and wish to continue, approve it, then wait a few moments for the transaction to process.
+3. A prompt by your wallet application will ask you to approve the voting transaction. If you have verified its details and wish to continue, approve it, then wait a few moments for the transaction to process.
 5. You have now cast your vote on this proposal. 
 
 Once the voting period is concluded, the votes are automatically counted. If the proposal's "Accept" votes pass the Assembly's required vote threshold ("Vote tipping point" in the image below), the proposal is passed and is ready for implementation. Otherwise, the proposal fails.
