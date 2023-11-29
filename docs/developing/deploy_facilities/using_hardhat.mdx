@@ -1,90 +1,102 @@
 ---
-title: "Deploy with Hardhat"
-proofedDate: 20231116
+title: Deploy with Hardhat
+proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
 comment: 
 ---
 
-import WhatHardHat from '../../single-source-snippets/_hardhat.mdx'
+import mm_p_key from '@site/static/img/doc-images/developing/deploy_facilities/foundry-metamask.png';
 
-import ConfigHardHat from '../../single-source-snippets/_hardhat_config.mdx'
+*This page outlines the steps for deploying and testing contracts in the Neon EVM using the Hardhat tool.*
 
-This page details setting up a Hardhat configuration file. 
+Before beginning the tutorial below, make sure that you have properly [configured Hardhat](configure_hardhat) for the Neon EVM.
 
-## Introduction
+## How to Use Hardhat: A Tutorial
+The example this tutorial is based on is located in [this repository](https://github.com/neonlabsorg/neon-tutorials/tree/main/hardhat).
 
-<WhatHardHat/>
+By the end of this tutorial, you will deploy a contract describing an ERC-20 token to the Neon Devnet.
 
-The Hardhat framework isn't described here; find that in the [Hardhat documentation](https://hardhat.org/getting-started/#overview). This tutorial is based on an [example in GitHub](https://github.com/neonlabsorg/neon-tutorials/tree/main/hardhat).
+### Step 1: Installation
+> **Note:** This page is just a quickstart based on a specific example program. For more details on installing Hardhat, refer to the *[Hardhat documentation](https://hardhat.org/hardhat-runner/docs/getting-started#overview)*.
 
-## Prerequisites
-
-Before you start, make sure the following software is installed on your device:
--  `NodeJS v8.9.4` or later
-- `Web3 v1.2.0` or later[
-- An EVM-compatible wallet such as [MetaMask](wallet/metamask_setup.md#installing-metamask):
-  - Configured for a [Neon EVM network](/docs/developing/connect_rpc#connect-via-chainlist)
-  - Balance to cover gas fees
-
-## Network configuration
-
-- [Solana cluster](https://docs.solana.com/clusters) is accessed via a proxy.
-- Solana works in test mode and the proxy interacts with it through Neon EVM.
-
-## The Hardhat configuration file
-
-<ConfigHardHat/>
-
-:::info
-The deployer wallet address needs to have enough tokens to cover the gas cost of the deployment. 
-
-- [Get Devnet NEON](https://neonfaucet.org/)
-:::
-
-The following is a full example, configured for the example below, of the `hardhat.config.js` configuration file for connecting Hardhat to a devnet-proxy using the one-way library on Node.js:
-
-##### hardhat.config.js
-
-```js
-require("@nomiclabs/hardhat-waffle");
-
-const proxy_url = 'https://devnet.neonevm.org';
-const network_id = 245022926;
-
-// Private keys for test accounts
-// NOTE: Replace these placeholders with your own and make sure the accounts have non-zero NEON balances
-const privateKeys = [
-  "0xPLACEHOLDER1",
-  "0xPLACEHOLDER2"
-];
-
-module.exports = {
-  solidity: "0.8.4",
-  defaultNetwork: 'neonlabs',
-  networks: {
-    neonlabs: {
-      url: proxy_url,
-      accounts: privateKeys,
-      network_id: network_id,
-      chainId: network_id,
-      allowUnlimitedContractSize: false,
-      timeout: 1000000,
-      isFork: true
-    }
-  }
-};
+Using Git, clone the example Hardhat project from the remote repository and navigate to it:
+```sh
+git clone https://github.com/neonlabsorg/neon-tutorials
+cd neon-tutorials/hardhat
 ```
 
-The parameters for `module.exports` include:
-* `solidity`: version of Solidity used
-* `defaultNetwork`: 'neonlabs'
-* `networks`:
-  * `neonlabs`:
-    * `url`: proxy URL
-    * `accounts`: an array of deployer's private keys
-    * `network_id`: the network's network ID
-    * `chainId`: the network's chain ID
+Then, run the following command:
+```sh
+npm install
+```
+This will install all the necessary packages to continue with the example. These packages include the `Hardhat` library.
 
-Note that `proxy_url`, `network_id`, and `chainId` can be retrieved from the RPC endpoints table and/or [chainlist.org](https://chainlist.org/).
+If the above command results in an error, run:
+```sh
+npm cache clear --force
+npm install
+```
+
+### Step 2: Set Up MetaMask Accounts
+:::info
+This step requires an EVM-compatible wallet such as MetaMask, connected to Neon Devnet, with a balance in Devnet NEON available from [NeonFaucet](https://neonfaucet.org/).
+
+The following tutorials assist you to meet these prerequisites:
+- Learn how to [install a MetaMask wallet and connect it to Devnet](/docs/wallet/metamask_setup)
+> Or [connect an existing wallet to Devnet](/docs/developing/connect_rpc#connect-via-chainlist)
+:::
+
+2.1 Obtain the private key for your wallet account.
+
+> To obtain the private key from MetaMask, from the hamburger menu, click **Account Details** > **Show Private Key**, enter your password, and click **Confirm** for access to the private key for that account.
+> <img src={mm_p_key} width="250" />
+
+2.2 Create a .env file and add these lines:
+
+```
+PRIVATE_KEY_OWNER=<YOUR_PRIVATE_KEY>
+```
+:::important
+Replace <YOUR_PRIVATE_KEY> with your data.
+:::
+
+2.3 Run:
+```
+source .env
+```
+
+### Step 3: Compile Contracts
+All of the contracts are located in the project's `contracts/` directory. Before these contracts can be run, they must first be compiled. To compile the project's contracts, run the following command:
+```sh
+npx hardhat compile
+```
+
+After running this step, you should see output similar to the following:
+```
+Compiled 23 Solidity files successfully
+```
+
+### Step 4: Deploy Contracts
+To deploy the project's contracts, simply run the command below to run the deployment script in the `scripts/` directory:
+```sh
+npx hardhat run scripts/TestERC20/deploy.js --network neondevnet
+```
+
+After running this command and deploying our TestERC20 smart contract now we can take the newly deployed contract address and included it inside `scripts/TestERC20/transfer.js` where we can intitiate a token transfer:
+```sh
+npx hardhat run scripts/TestERC20/transfer.js --network neondevnet
+```
+The outpout should look like:
+```
+Sender balance before transfer 1000000000000000000000n
+Receiver balance before transfer 0n
+Sender balance after transfer 990000000000000000000n
+Receiver balance after transfer 10000000000000000000n
+```
+
+### Step 5: Connect Project to MetaMask
+To import your project as an asset in MetaMask, follow the instructions [here](https://support.metamask.io/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask#h_01FWH492CHY60HWPC28RW0872H) and use the contract address from the previous step as the 'Token Contract Address' in MetaMask.
+
+Once you complete this final step, you will be able to see your new ERC-20 assets in the MetaMask profiles of the new test accounts.
