@@ -128,9 +128,9 @@ Deployed to: 0x5537599aa2F97Dd60a66342522a465A7f2e40Ff9
 Transaction hash: 0x6de9dab8a526cbac33008056d185b93dff725605efb791bf116b6bece4f0c486
 ```
 
-### Step 5: NeonScan contract verification
+### Step 5: Contract verification
 
-5.1 Verify the deployment of our smart contract on the explorer [NeonScan](https://neonscan.org/) using:
+5.1 Verify the deployment of our smart contract on the explorer [Neon Blockscout](https://neon-devnet.blockscout.com) using following command:
 ```sh
 forge verify-contract --chain-id $CHAIN_ID_DEVNET <contract_address> src/TestERC20/TestERC20.sol:TestERC20 --verifier-url $VERIFIER_URL_BLOCKSCOUT --verifier blockscout
 ```

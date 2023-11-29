@@ -96,7 +96,12 @@ Sender balance after transfer 990000000000000000000n
 Receiver balance after transfer 10000000000000000000n
 ```
 
-### Step 5: Connect Project to MetaMask
-To import your project as an asset in MetaMask, follow the instructions [here](https://support.metamask.io/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask#h_01FWH492CHY60HWPC28RW0872H) and use the contract address from the previous step as the 'Token Contract Address' in MetaMask.
+### Step 5: Contract verification
+```
+npx hardhat verify --network neondevnet <CONTRACT_ADDRESS>
+```
 
-Once you complete this final step, you will be able to see your new ERC-20 assets in the MetaMask profiles of the new test accounts.
+This command is how we verify contracts on [Neonscan](https://devnet.neonscan.org). More info about verifying smart contracts thru Hardhat can be found [here](https://hardhat.org/hardhat-runner/docs/guides/verifying).
+:::important
+Replace <CONTRACT_ADDRESS> with your smart contract address.
+:::
