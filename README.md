@@ -86,6 +86,8 @@ You can either lint **all** Markdown files with `vale .`, or you can name a spec
 
 ### Tabs boilerplate
 
+> Warning Heading links do not work *within* tabs >> Only once the correct tab is selected would a link function making them useless for cross-page linking (there is probably a workaround/plugin todo).
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -106,6 +108,40 @@ import TabItem from '@theme/TabItem';
 [codesandbox](https://codesandbox.io/dashboard/recent?workspace=6715f772-9c64-4139-8c8d-a18fe3f51a91) setup for grammarly@neonlabs.org
 
 with authentication via [GitHub](https://github.com/anonNeon)
+
+## Walkthrough boilerplate
+
+When creating user walkthroughs, it is important to think about what structure and heirachy supports end users. The style applied in this dev portal is:
+
+[H2] TL;DR
+Tell the user in 3 bullet points or less what they need to know to either
+- avoid using the tutorial entirely
+- decide whether they will use it
+{todo: in the future, we want to add a time required for the walkthrough here}
+
+[H2] Introduction
+The assumption is that less than 30% of users need an intro >> this item supports the bottom tail
+
+[H2] Prerequisites
+What does the user need to have or know to achieve success? NB stay sane else the list could become long!
+
+[H2]How to do this thing
+The first heading gathers the entire tutorial into one structure
+
+[H3] Step 1: Do this first thing
+Break the tutorial down into logical chunks, e.g. 1. go clone and install a repo 2. configure a file 3. Run the configured program
+The H3 is the final item that will be shown in the TOC (table of contents) on the RHS of the page, this allows the user to scan the TOC to gain an impression of what they are getting themselves into and to skip ahead according to their setup/knowledge level
+
+## Information pages boilerplate
+[H2] TL;DR
+Tell the user in 3 bullet points or less what they need to know to either
+- avoid reading the page entirely
+- decide whether they want to read it
+
+[H2] Introduction
+Tell the users what this page is about
+
+[H2]/[H3] Content -- nest the content into H2s and H3s for TOC presence -- H4 and H5 can be applied, but remember these are nested within the page and do not appear in the TOC. The user should be able to get an idea of what the page is about *without* reading the full intro -- just by using the TL;DR and/or TOC.
 
 
 ## Troubleshooting
