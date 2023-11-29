@@ -114,4 +114,8 @@ You pull main and can no longer build. Don't fret, someone probably changed a de
 `npm install`
 and then build or serve and see if that fixes it
 
+## End user support
+
+The current search is provided by algolia.com
+We wish to expand this functionality by implementing Mava AI (ticket with FE team)
 
