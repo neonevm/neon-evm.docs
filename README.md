@@ -143,6 +143,7 @@ Tell the users what this page is about
 
 [H2]/[H3] Content -- nest the content into H2s and H3s for TOC presence -- H4 and H5 can be applied, but remember these are nested within the page and do not appear in the TOC. The user should be able to get an idea of what the page is about *without* reading the full intro -- just by using the TL;DR and/or TOC.
 
+Example page: docs/evm_compatibility/overview
 
 ## Troubleshooting
 
