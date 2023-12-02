@@ -45,9 +45,10 @@ For example, for a Neon transaction with N iterations and S newly allocated byte
 ## Examples
 The following are some examples of gas fee calculation on Neon. They are all based on the following assumptions:
 * The SOL price is $30 and the NEON price is $0.25
-* The SOL-to-NEON rate is therefore 30 / 0.25 = 120.
-* The Proxy Operator fee is 10%.
-* The gas price is therefore (1 + 10%) \* 120 \* 10<sup>-9</sup> NEON = 132 \* 10<sup>9</sup> Alan = 132 Galan
+* The SOL-to-NEON rate is therefore 30 / 0.25 = 120
+* The Proxy Operator fee is 10%
+* The Proxy gas price slippage is 0.99
+* The gas price is therefore (1 + 0.1 + 0.99) \* 120 \* 10<sup>-9</sup> NEON = 250.8 \* 10<sup>9</sup> Alan = 250.8 Galan
 
 ### Example 1: swap
 The gas amount in this case is 10 \* 2 \* 5,000 (computational cost + treasury) + 5 \* 6,960 (storage cost) ≈ 134,800 units
