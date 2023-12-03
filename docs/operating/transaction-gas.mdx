@@ -7,6 +7,9 @@ approvedBy: na
 comment: wip items inline
 ---
 
+import Formula from '../single-source-snippets/_price_formula.mdx'
+import Price from '../single-source-snippets/_gas_price_calc.mdx'
+
 ## TL;DR
 
 Operators: 
@@ -36,24 +39,20 @@ Because the Neon EVM operates on Solana, not Ethereum it takes advantage of Sola
 
 The Neon Proxy obtains the current prices of SOL and NEON tokens from the [pyth.network](http://pyth.network) oracles.
 
-Gas price = $SOL / $NEON * (1 + `PRX_OPERATOR_FEE` + `PRX_GAS_PRICE_SLIPPAGE`)
+<Formula/>
 
-> This ensures that the Neon Operator receives enough NEONs to cover the transaction cost in SOLs.
+> This ensures that the Neon Operator receives enough NEON to cover the transaction cost in SOL.
 
 The Neon Operator configures the value of `PRX_OPERATOR_FEE` where 1.0 represents 100% of the potential fee extraction. The value of this parameter is currently set to **1**.
 
 Parameter `PRX_GAS_PRICE_SLIPPAGE` represents a buffer that is needed to skip transactions getting stucked in the mempool when there is spike in prices of $SOL and $NEON. The value of this parameter is currently set to **0.99**.
 
 For example:
-- $NEON = $0.25
-- $SOL = $10
-- PRX_OPERATOR_FEE = "1"
-- PRX_GAS_PRICE_SLIPPAGE = "0.99"
-- Gas price = 10 / 0.25 * (1 + 1 + 0.99) = 119.6 Galan
+<Price/>
 
-Neon recommends that Neon Operators should initially set `PRX_OPERATOR_FEE` to “1.0” for Mainnet launch. This allows Operators to cover their hardware costs while transaction demands are low. As demand grows, Operators may adjust their fees in response.
+Neon recommended that Neon Operators should initially set `PRX_OPERATOR_FEE` to “1.0” for Mainnet launch. This allows Operators to cover their hardware costs while transaction demands are low. As demand grows, Operators may adjust their fees in response.
 
-> For example, `PRX_OPERATOR_FEE` = “0.1” → 10% of the total possible Neon Operator fee.
+> A `PRX_OPERATOR_FEE` = “0.1” → 10% of the total possible Neon Operator fee.
 
 ## Minimum gas price
 
