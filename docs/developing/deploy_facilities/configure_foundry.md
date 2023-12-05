@@ -4,7 +4,7 @@ proofedDate: 20231116
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: Killing the ## What next? See the [tutorial on how to use Foundry](/docs/developing/deploy_facilities/using_foundry) to deploy to Neon EVM. as this is killing the build todo -- return this later
+comment: 
 ---
 
 Foundry is a blazing fast, portable,modular toolkit for Ethereum application development written in Rust.
