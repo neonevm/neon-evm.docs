@@ -11,8 +11,6 @@ import mm_p_key from '@site/static/img/doc-images/developing/deploy_facilities/f
 
 This tutorial walks through deploying a contract describing an ERC-20 token to Neon Devnet. 
 
-<!-- I don't see this step: You test this contract by transferring tokens to randomly generated wallet. todo verify if this can be added, or if I missed it -->
-
 ## Introduction
 
 This tutorial is based on an [example in GitHub](https://github.com/neonlabsorg/neon-tutorials/tree/main/foundry).
