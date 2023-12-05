@@ -76,23 +76,23 @@ mv {PATH_TO_WHITELISTED_KEYS} keys/
      - For Mainnet, use: `NeonVMyRX5GbCrsAHnUwx1nYYoJAtskU1bWUo6JGNyG`
    - `SOLANA_URL`
      - Refer to the [RPC Endpoints table](#rpc-endpoints)
-   - `PROXY_VERSION`
+   - `REVISION` - neon proxy revision
 
 For example,
 ```bash
 export EVM_LOADER=eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU
 export SOLANA_URL=http://api.devnet.solana.com/
-export PROXY_VERSION=latest
+export REVISION=latest
 ```
 
 3. Download the `docker-compose` [file](https://github.com/neonlabsorg/proxy-model.py/blob/develop/docker-compose/docker-compose-remote-solana.yml). This file should be placed in the same folder with the `keys/` directory.
 ```bash
-wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/proxy/docker-compose-remote-solana.yml
+wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/docker-compose/docker-compose-remote-solana.yml
 ```
 
 4. Start the local environment.
 ```bash   
-docker-compose -f docker-compose-remote-solana.yml up -d
+docker-compose -f docker-compose-remote-solana.yml up postgres dbcreation proxy indexer -d
 ```
 
 If you want to destroy the local environment, run the following command:

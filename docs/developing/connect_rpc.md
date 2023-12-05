@@ -4,10 +4,11 @@ proofedDate: 20231101
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment:
+comment: todo Find out from Yury whether we can have a NeonLabs youtube domain to support the video material that has been created to complement this page
 ---
 
-import chainlist_raw from '@site/static/img/doc-images/developing/chainlist/chainlist-raw-3.png';
+import chainlist_gotcha from '@site/static/img/doc-images/developing/chainlist/chainlist4.png';
+import chainlist from '@site/static/img/doc-images/developing/chainlist/chainlist-raw-3.png';
 
 ## TL;DR
 
@@ -41,7 +42,7 @@ One Proxy may be available on different networks (i.e. Devnet and Mainnet). The 
 
 To view the available RPC endpoints, expand the card details of the network of your choice.
 
-> <img src={chainlist_raw} width="450" />
+> <img src={chainlist} width="450" />
 
 Notice that if several Proxy Operators offer public RPC endpoints, you have a choice over who to use.
 
@@ -53,13 +54,21 @@ The preceding steps demonstrate how to connect to a Solana cluster via Chainlist
 
 ## Connect dev tools to Neon EVM
 
-To connect to a Proxy using Remix or Hardhat, check out the following resources:
-
-- [Using Remix](developing/deploy_facilities/using_remix.md)
-- [Using Hardhat](developing/deploy_facilities/using_hardhat.md)
+To connect to a Proxy check out the following resources:
+* [Using Foundry](developing/deploy_facilities/using_foundry.md)
+* [Using Hardhat](developing/deploy_facilities/using_hardhat.mdx)
+* [Using Remix](developing/deploy_facilities/using_remix.md)
+* [Using Truffle](developing/deploy_facilities/using_truffle.md)
 
 Please note that, for Hardhat, you need to set up the configuration file by setting the URL and the `network_id`/`chainId` to the RPC URL (and ID) selected from Chainlist. This is described in detail in the relevant tutorial sections.
 
+## Gotchas
+
+Should the main "Connect Wallet" button not function, use the dropdown and use the "Connect Wallet" for a specified RPC server address.
+
+> <img src={chainlist_gotcha} width="450" />
+
 ## What next?
 
-If you wish to transact via your RPC, then check out the [supported RPC API methods](/docs/evm_compatibility/json_rpc_api_methods).
+If you wish to transact via your RPC, then checkout the [supported RPC API methods](/docs/evm_compatibility/json_rpc_api_methods).
+
