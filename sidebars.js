@@ -78,8 +78,8 @@ const sidebars = {
       label: 'Configure Dev Tools',
       items: [
         'developing/deploy_facilities/configure_hardhat',
+        'developing/deploy_facilities/configure_foundry',
         'developing/deploy_facilities/configure_truffle',
-        'developing/deploy_facilities/configure_brownie'
       ]
     },
     {
@@ -107,9 +107,9 @@ const sidebars = {
       label: 'Deploy Contracts',
       items: [
         'developing/deploy_facilities/using_hardhat',
+        'developing/deploy_facilities/using_foundry',
         'developing/deploy_facilities/using_truffle',
-        'developing/deploy_facilities/using_remix',
-        'developing/deploy_facilities/using_brownie'
+        'developing/deploy_facilities/using_remix'
       ]
     },
     {
