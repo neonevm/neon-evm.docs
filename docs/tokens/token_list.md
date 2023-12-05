@@ -39,7 +39,6 @@ The following tables provide the addresses of ERC-20 interface contracts for the
 | <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/solana-wsol-logo.svg" className="coin-icon" />   | wSOL            | `0x5f38248f339Bf4e84A2caf4e4c0552862dC9F82a` | `So11111111111111111111111111111111111111112`  |
 | <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/usd-coin-usdc-logo.svg" className="coin-icon" /> | USDC            | `0xEA6B04272f9f62F997F666F07D3a974134f7FFb9` | `EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v` |
 | <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/tether-usdt-logo.svg" className="coin-icon" />   | USDT            | `0x5f0155d08eF4aaE2B500AefB64A3419dA8bB611a` | `Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB` |
-| <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/sollet-wbtc-logo.svg" className="coin-icon" />   | BTC (Sollet)    | `0x54EcEC9D995A6CbFF3838F6a8F38099E518805d7` | `9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E` |
 | <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/wormhole-weth-logo.svg" className="coin-icon" /> | WETH (Wormhole) | `0xcFFd84d468220c11be64dc9dF64eaFE02AF60e8A` | `7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs` |
 </TabItem>
 <TabItem value="devnet" label="Devnet">
