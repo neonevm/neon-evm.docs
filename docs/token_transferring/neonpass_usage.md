@@ -28,21 +28,23 @@ import image8 from '@site/static/img/doc-images/neonpass/confirmation_transfer_s
 
 This guide demonstrates how to transfer tokens between Solana and Neon EVM using the [NeonPass](https://neonpass.live/) UI. The same tooling is available as an [npm package](/docs/developing/integrate/neon_transfer).
 
+You can transfer tokens in either direction, but each transaction incurs a gas fee in either NEON or SOL or the token of your choice with which you are transacting.
+
+:::info
+ Neon EVM's Devnet now supports a feature providing the option to pay the gas fees with the [token of transaction](https://neonevm.org/blog/feature-alternative-gas-fee-token), rather than only NEON or SOL.
+:::
+
+
+
+> Under the hood, transferring tokens from Neon EVM to Solana requires the transaction fees to be paid in NEON or (if supported) the transaction token as per the user's choice; whereas transferring tokens from Solana to Neon EVM requires the transaction fees to be paid in either NEON or SOL.
+
 ## Prerequisites
 
 - EVM-compatible wallet (e.g. Atomic Wallet, MetaMask, etc.)
 - Solana-compatible wallet (e.g. Phantom, Solfare, etc.)
+- Browser with both wallet applications attached
 - Token balance to pay gas fees
 
-## Fees
-
-- Access the NeonPass page using a browser where your wallet applications are attached.
-
-Neon EVM is coming up with a [new feature](https://neonevm.org/blog/feature-alternative-gas-fee-token) in the following weeks on Devnet with which the users will have the option to pay the gas fees with the token they are transacting, rather than only NEON.
-
-You can transfer tokens in either direction, but each transaction incurs a gas fee in either NEON or SOL or the token of your choice with which you are transacting.
-
-> Under the hood, transferring tokens from Neon EVM to Solana requires the transaction fees to be paid in NEON or (if supported) the transaction token as per the user's choice; whereas transferring tokens from Solana to Neon EVM requires the transaction fees to be paid in either NEON or SOL (depending on user's choice of token).
 
 ## Transfer tokens with NeonPass
 
@@ -50,7 +52,7 @@ You can transfer tokens in either direction, but each transaction incurs a gas f
 
 1.1 Navigate to [NeonPass](https://neonpass.live/).
 
-1.2 Add your required Neon EVM network in your EVM-compatible wallet through [chainlist.org/chain/245022934](https://chainlist.org/?chain=245022934&search=Neon+EVM&testnets=true).
+1.2 Add your required Neon EVM network in your EVM-compatible wallet through [Chainlist.org/chain/245022934](https://chainlist.org/?chain=245022934&search=Neon+EVM&testnets=true).
 
 > For further help, see our [wallet setup walkthrough](/docs/wallet/metamask_setup).
 
