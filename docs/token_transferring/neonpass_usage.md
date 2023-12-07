@@ -1,10 +1,10 @@
 ---
 title: Move Tokens Between Neon EVM and Solana
-proofedDate: 20230928
+proofedDate: 20231207
 iterationBy: na
 includedInSite: true
-approvedBy: na
-comment: todo this page uses a mix of image locations static as per best practice and local >> fix this >> note relocated images to follow step
+approvedBy: HB
+comment:
 ---
 
 import Tabs from '@theme/Tabs';
@@ -13,6 +13,11 @@ import image1 from '@site/static/img/doc-images/neonpass/connect-wallets.png';
 import image2 from '@site/static/img/doc-images/neonpass/transfer.png';
 import image3 from '@site/static/img/doc-images/neonpass/select_network.png';
 import image4 from '@site/static/img/doc-images/neonpass/transfer1.png';
+import image5 from '@site/static/img/doc-images/neonpass/transfer-solana-neon.png';
+import image6 from '@site/static/img/doc-images/neonpass/transfer_complete_solana_neon.png';
+import image7 from '@site/static/img/doc-images/neonpass/confirmation_transfer_neonscan.png';
+import image8 from '@site/static/img/doc-images/neonpass/confirmation_transfer_solana.png';
+
 
 ## TL;DR
 
@@ -37,7 +42,7 @@ Neon EVM is coming up with a [new feature](https://neonevm.org/blog/feature-alte
 
 You can transfer tokens in either direction, but each transaction incurs a gas fee in either NEON or SOL or the token of your choice with which you are transacting.
 
-> Under the hood, transferring tokens from Neon EVM to Solana requires the tansaction fees to be paid in NEON or (if supported) the transaction token as per the user's choice; whereas transferring tokens from Solana to Neon EVM requires the transaction fees to be paid in either NEON or SOL (depending on user's choice of token).
+> Under the hood, transferring tokens from Neon EVM to Solana requires the transaction fees to be paid in NEON or (if supported) the transaction token as per the user's choice; whereas transferring tokens from Solana to Neon EVM requires the transaction fees to be paid in either NEON or SOL (depending on user's choice of token).
 
 ## Transfer tokens with NeonPass
 
@@ -82,43 +87,9 @@ After successfully connecting your wallets to NeonPass, the **Connect Wallet** t
 
 <img src={image2} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-3.2 Use the drop-down to select the token you want to transfer and enter the amount you want to send.
+3.2 Use the dropdown to select the token you want to transfer and enter the amount you want to send.
 
-3.3 Click **Transfer**.
 
-3.4 Confirm the transaction in your sending wallet.
-
-> Always verify the transaction details and only approve if you wish to proceed.
-
-A successful transaction is confirmed.
-
-<div className='neon-img-box-450' style={{textAlign: 'center'}}>
-
-![](img/transfer_complete.png)
-
-</div>
-
-3.5 Don't trust: verify
-
-If you wish to verify the transaction, click **View on Neon Explorer** to confirm on [NeonScan](https://neonscan.org) that the tokens were transferred. In the following example, 42 NEON were transferred out of Neon EVM.
-
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
-
-![](img/confirmation_transfer_neonscan.png)
-
-</div>
-
-Let's also check the destination Solana wallet address on [Solana Explorer](https://explorer.solana.com/) to verify the arrival of those 42 NEON tokens.
-
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
-
-![](img/confirmation_transfer_solana.png)
-
-</div>
-
-:::tip
-Alternatively, use Blockscout's dedicated explorer [neon.blockscout.com](https://neon.blockscout.com) to search by transaction hash.
-:::
 </TabItem>
 
 <TabItem value="solanatoneon" label="Solana to Neon EVM">
@@ -127,47 +98,50 @@ Alternatively, use Blockscout's dedicated explorer [neon.blockscout.com](https:/
 
 <img src={image4} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-3.2 On the NeonPass screen, click `Choose token`. In the list that appears, select the desired token symbol and specify the quantity to be sent (in our example, it is 30 NEON).
+3.2 Select token to transfer and token to pay in:
 
-<div className='neon-img-box-300' style={{textAlign: 'center'}}>
+a. Select the token using the drop-down and enter the amount you want to send.
 
-![](img/transfer-solana-neon.png)
+b. Uset the selector options below the `Transfer` button to pay in NEON or SOL.
 
-</div>
 
-3.3 There are two options for the token selection for the transaction fee. You can select either NEON or SOL from the bullet points below the `Transfer` button.
+<img src={image5} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-3.4 Click **Transfer**.
 
-3.5 Confirm the transaction in your sending wallet.
+</TabItem>
+</Tabs>
+
+3.3. Click **Transfer**.
+
+3.4 Confirm the transaction in your sending wallet.
 
 > Always verify the transaction details and only approve if you wish to proceed.
 
 A successful transaction is confirmed.
 
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
+<img src={image6} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-![](img/transfer_complete_solana_neon.png)
+3.5 Don't trust: verify
 
-</div>
+<Tabs>
+  <TabItem value="neonscan" label="NeonScan" default>
 
-3.6 Don't trust: verify
+To verify the transaction, click **View on Neon Explorer** to confirm on [NeonScan](https://neonscan.org) that the tokens were transferred. In the following example, 42 NEON were transferred out of Neon EVM.
 
-Click on `View on Solana Explorer` and confirm on SolScan that the tokens have been moved. In this case, 30 NEON were transferred out of the Solana wallet.
+<img src={image7} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
-![](img/transaction_confirmation_solana.png)
+Let's also check the destination Solana wallet address on [Solana Explorer](https://explorer.solana.com/) to verify the arrival of those 42 NEON tokens.
 
-</div>
+<img src={image8} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
+  </TabItem>
 
-![](img/token_transfer_solana.png)
+  <TabItem value="blockscout" label="Blockscout" default>
 
-</div>
+  Alternatively, use Blockscout's dedicated explorer [neon.blockscout.com](https://neon.blockscout.com) to search by transaction hash.
 
-</TabItem>
+  </TabItem>
 </Tabs>
 
 We hope that you love NeonPass and that you are ready to leverage the full potential of Neon EVM by facilitating hassle-free transfers of assets to and from Solana.
