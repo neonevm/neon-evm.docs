@@ -3,7 +3,7 @@ title: "Flair"
 proofedDate: 20231207
 includedInSite: true
 approvedBy: na
-description: Real-time and historical custom data indexing for any evm chain.
+comment: Miro todo inline.
 ---
 
 
@@ -39,7 +39,7 @@ Learn more about the [structure of manifest.yml](https://docs.flair.dev/referenc
 
 ### Step 2: configure Neon RPC nodes
 
-<!-- Miro pls add to this step to clarify line 40 as necessary todo -->
+<!-- Miro pls add to this step to clarify step 2 as necessary todo -->
 
 2. Set a unique namespace, Neon `chainId` and RPC endpoint in your configuration file. Remember that you can add up to 10 RPC endpoints for resiliency.
 
