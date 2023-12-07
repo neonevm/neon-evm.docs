@@ -1,57 +1,47 @@
 ---
-title: Flair
+title: "Flair"
+proofedDate: 20231207
+includedInSite: true
+approvedBy: na
 description: Real-time and historical custom data indexing for any evm chain.
 ---
 
-# 🔮 Flair
-Real-time and historical custom data indexing for any evm chain.
 
-[Flair](https://flair.dev) offers reusable **indexing primitives** (such as fault-tolerant RPC ingestors, custom processors, re-org aware database integrations) to make it easy to receive, transform, store and access your on-chain data.
+*This page provides a tutorial covering how to leverage Flair for data collection from Neon EVM*.
+
+
+# Introduction
+
+[Flair](https://flair.dev) supports real-time and historical custom data indexing for any EVM chain via an RPC URL.
+
+Flair offers reusable indexing primitives (such as fault-tolerant RPC ingestors, custom processors, re-org aware database integrations) to simplify how you receive, transform, store, and access on-chain data.
 
 [![flair architecture](https://imgur.com/0q5bHZK.png)](https://docs.flair.dev/)
 
+Learn more about [Flair's features](#flair-features)
 
-## Why Flair?
+## How to integrate with Flair
 
-Compared to other alternatives the main reasons are:
+### Step 1: clone the repo
 
-* 🚀  Adopting **parallel and distributed processing** paradigm means high scalability and resiliency for your indexing stack. Instead of constrained sequential processing (e.g Subgraph).
-* 🧩  Focused on **primitives**, which means on the left you plug-in an RPC and on the right you output the data to any destination database.
-* 🚄  Native **real-time stream processing** for certain data workload (such as aggregations, rollups) for things like total volume per pool, or total portfolio per user wallet.
-* ☁️  **Managed** cloud services avoid DevOps and irrelevant engineering costs for dApp developers.
-* 🧑‍💻  Avoid decentralization **overhead** (consensus, network hops, etc) since we believe to enable best UX for dApps reading data must be as close to the developers as possible.
-### Features
-
-* ✅ Listen to **any EVM chain** with just an RPC URL.
-  * Free managed RPC URLs for +8 popular chains already included.
-  * Works with both websocket and https-only RPCs.
-* ✅ Track and ingest **any contract** for **any event topic.**
-  * Auto-track new contracts deployed from factory contracts.
-* ✅ **Custom processor scripts** with Javascript runtime (with **Typescript** support)
-  * Make external API or Webhook calls to third-party or your backend.
-  * Get current or historical USD value of any ERC20 token amount of any contract address on any chain.
-  * Use any external NPM library.
-* ✅ **Stream** any stored data to your destination database (Postgres, MongoDB, MySQL, Kafka, Elasticsearch, Timescale, etc).
-
-## Getting Started
-
-1️⃣ Clone the [starter boilerplate](https://github.com/flair-sdk/starter-boilerplate) template and follow the instructions
+1. Clone the [starter boilerplate](https://github.com/flair-sdk/starter-boilerplate) template and follow the instructions in the README.md:
 
 ```bash
 git clone https://github.com/flair-sdk/starter-boilerplate.git
-# ... follow instructions in README.md
 ```
 :::info
 
-Boilerplate instructions will create a **new cluster**, generate **an API Key**, and set up a manifest.yml to index your **first contract** with **sample custom processor** scripts.
+The boilerplate creates a **new cluster**, generates **an API Key**, and sets up a manifest.yml to index your **first contract** with **sample custom processor** scripts.
 
 Learn more about the [structure of manifest.yml](https://docs.flair.dev/reference/manifest.yml).
 
 :::
 
-2️⃣ Configure Neon RPC nodes
+### Step 2: configure Neon RPC nodes
 
-Set a unique namespace, Neon chainId and RPC endpoint in your config. Remember that you can add up to 10 RPC endpoints for resiliency.
+<!-- Miro pls add to this step to clarify line 40 as necessary todo -->
+
+2. Set a unique namespace, Neon `chainId` and RPC endpoint in your configuration file. Remember that you can add up to 10 RPC endpoints for resiliency.
 
 ```yaml
 {
@@ -74,7 +64,9 @@ Set a unique namespace, Neon chainId and RPC endpoint in your config. Remember t
 }
 ```
 
-3️⃣  Sync some historical data using [backfill command](https://docs.flair.dev/reference/backfilling). Remember that `enabled: true` flag in your `config` enabled your indexer to capture data in real-time already.
+### Step 3: Sync
+
+3. Sync some historical data using the [backfill command](https://docs.flair.dev/reference/backfilling). Remember that the `enabled: true` flag in your `config` enables your indexer to capture data in real-time.
 
 ```bash
 # backfill certain contracts or block ranges
@@ -87,10 +79,11 @@ pnpm flair backfill --chain 245022934 -b 219068525
 pnpm flair backfill --chain 245022934 --min-timestamp="30 mins ago" -d backward
 ```
 
+### Step 4: work with your data
 
-4️⃣ [Query](https://docs.flair.dev/#getting-started) your custom indexed data.
+4.1 [Query](https://docs.flair.dev/#getting-started) your custom-indexed data.
 
-5️⃣ Stream the data to your [own database](https://docs.flair.dev/reference/database#your-own-database).
+4.2 Stream the data to your [own database](https://docs.flair.dev/reference/database#your-own-database).
 
 ## Examples
 
@@ -104,8 +97,27 @@ Explore real-world usage of Flair indexing primitives for various use-cases.
 
 ### NFT
 
-* [Index ERC721 and ERC1155 NFTs on any EVM chain with an RPC URL](https://github.com/flair-sdk/examples/tree/main/erc721-and-erc1155-nft-indexing)
+* [Index ERC-721 and ERC-1155 NFTs on any EVM chain with an RPC URL](https://github.com/flair-sdk/examples/tree/main/erc721-and-erc1155-nft-indexing)
+
+## Flair features
+
+Flair offers:
+
+* A **parallel and distributed processing** paradigm means high scalability and resiliency for your indexing stack. Instead of constrained sequential processing (e.g Subgraph).
+* A focus on **primitives**, which means on the left, you plug-in an RPC, and on the right, you output the data to any destination database.
+* Native **real-time stream processing** for certain data workload (such as aggregations or rollups) for properties such as total volume per pool, or total portfolio per user wallet.
+* **Managed** cloud services avoid DevOps and irrelevant engineering costs for dApp developers.
+* Avoids decentralization **overhead** (consensus, network hops, etc.): simplifying data access.
+* Free managed RPC URLs for 8+ chains.
+* Works with both websocket and https-only RPCs.
+* Tracks and ingests **any contract** for **any event topic.**
+* Auto-tracks new contracts deployed from factory contracts.
+* **Custom processor scripts** with Javascript runtime (with **Typescript** support)
+* Makes external API or Webhook calls to third-party or your backend.
+* Gets current or historical USD value of any ERC20 token amount of any contract address on any chain.
+* Uses any external NPM library.
+* **Streams** stored data to your destination database (Postgres, MongoDB, MySQL, Kafka, Elasticsearch, Timescale, etc.).
 
 ## Need help?
 
-[Our engineers](https://docs.flair.dev/talk-to-an-engineer) are available to help you at any stage.
+[Flair engineers](https://docs.flair.dev/talk-to-an-engineer) provide product support.
