@@ -34,8 +34,6 @@ You can transfer tokens in either direction, but each transaction incurs a gas f
  Neon EVM's Devnet now supports a feature providing the option to pay the gas fees with the [token of transaction](https://neonevm.org/blog/feature-alternative-gas-fee-token), rather than only NEON or SOL.
 :::
 
-
-
 > Under the hood, transferring tokens from Neon EVM to Solana requires the transaction fees to be paid in NEON or (if supported) the transaction token as per the user's choice; whereas transferring tokens from Solana to Neon EVM requires the transaction fees to be paid in either NEON or SOL.
 
 ## Prerequisites
