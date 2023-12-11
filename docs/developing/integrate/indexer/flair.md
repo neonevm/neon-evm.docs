@@ -3,7 +3,7 @@ title: "Flair"
 proofedDate: 20231207
 includedInSite: true
 approvedBy: na
-comment: Miro todo inline.
+comment:
 ---
 
 
@@ -24,7 +24,7 @@ Learn more about [Flair's features](#flair-features)
 
 ### Step 1: clone the repo
 
-1. Clone the [starter boilerplate](https://github.com/flair-sdk/starter-boilerplate) template and follow the instructions in the README.md:
+Clone the [starter boilerplate](https://github.com/flair-sdk/starter-boilerplate) template and follow the instructions in the README.md:
 
 ```bash
 git clone https://github.com/flair-sdk/starter-boilerplate.git
@@ -39,9 +39,7 @@ Learn more about the [structure of manifest.yml](https://docs.flair.dev/referenc
 
 ### Step 2: configure Neon RPC nodes
 
-<!-- Miro pls add to this step to clarify step 2 as necessary todo -->
-
-2. Set a unique namespace, Neon `chainId` and RPC endpoint in your configuration file. Remember that you can add up to 10 RPC endpoints for resiliency.
+Set a **unique** namespace, Neon `chainId` and RPC endpoint in your configuration file. Remember that you can add up to 10 RPC endpoints for resiliency.
 
 ```yaml
 {
@@ -63,6 +61,12 @@ Learn more about the [structure of manifest.yml](https://docs.flair.dev/referenc
   ]
 }
 ```
+
+:::info 
+
+Make sure that you will be using **unique** namespace value. A single namespace cannot be used for more than one Flair integration.
+
+::: 
 
 ### Step 3: Sync
 
