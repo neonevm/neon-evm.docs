@@ -3,7 +3,7 @@ title: "Flair"
 proofedDate: 20231207
 includedInSite: true
 approvedBy: na
-comment:
+description: Real-time and historical custom data indexing for any evm chain.
 ---
 
 
@@ -25,6 +25,7 @@ Learn more about [Flair's features](#flair-features)
 ### Step 1: clone the repo
 
 Clone the [starter boilerplate](https://github.com/flair-sdk/starter-boilerplate) template and follow the instructions in the README.md:
+
 
 ```bash
 git clone https://github.com/flair-sdk/starter-boilerplate.git
@@ -64,7 +65,7 @@ Set a **unique** namespace, Neon `chainId` and RPC endpoint in your configuratio
 
 :::info 
 
-Make sure that you will be using **unique** namespace value. A single namespace cannot be used for more than one Flair integration.
+Ensure that you apply a **unique** namespace value. A single namespace cannot be used for more than one Flair integration.
 
 ::: 
 
