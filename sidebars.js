@@ -38,6 +38,7 @@ const sidebars = {
         'tokens/token_list'
       ]
     },
+    { type: 'doc', label: 'Neon Proxy API', id: 'api/neon-api' },
     {
       type: 'category',
       label: '💬 FAQ',

@@ -1,0 +1,101 @@
+type: object
+description: Response to request for transaction gas price.
+required:
+  - jsonrpc
+  - id
+  - result
+properties:
+  jsonrpc:
+    type: string
+    default: '2.0'
+    description: The JSON RPC version.
+  id:
+    type: string
+    examples:
+      - OpEgqw7r98qwerqwehkjhwe8
+    description: End-user provided identifier for the request.
+  result:
+    type: array
+    items:
+      type: object
+      properties:
+        gas_price:
+          description: Gas fee as hexadecimal value in Galan (NEON). The `gas_price` may be lower than the suggested_gas_price. The `gas_price` may NOT be lower than `min_acceptable_gas_price`, in which case the transaction would be rejected by Neon Proxy. if `gas-price` is less than `min_executable_gas_price`, tx is accepted to Neon Proxy's mempool, to wait untill `min_executable_gas_price` drops to equate with/be less than `gas-price`.
+          type: string
+          format: hexadecimal
+          examples:
+            - "0x0"
+        suggested_gas_price:
+          description: Returned as a hexadecimal value in Galan (NEON). This price was assigned when the transaction was created. The price is verified to cover Operator fee and slippage. 
+          type: string
+          format: hexadecimal
+          examples:
+            - "0x10c2c383c6"
+        min_acceptable_gas_price:
+          description: Minimum gas price accepted by Neon Proxy, as hexadecimal value in Galan (NEON).
+          type: string
+          format: hexadecimal
+          examples:
+            - "0x3b9aca00"
+        min_executable_gas_price:
+          description: Minimum executable gas price for execution by the Operator as a hexadecimal value in Galan (NEON). `min_executable_gas_price` is a variable; dependent on the SOL and NEON prices. A tx is executed if gas price is greater than or equal to `min_executable_gas_price`.
+          type: string
+          format: hexadecimal
+          examples:
+            - "0x109c1bb304"
+        min_wo_chainid_acceptable_gas_price:
+          description: Supports a legacy format (pre EIP-155) to enable tx be accepted without chainid. Minimal gas price for transaction without `chainid` in hexadecimal value in Galan (NEON).
+          type: string
+          format: hexadecimal
+          examples:
+            - "0x2540be400"
+        allow_underpriced_tx_wo_chainid:
+          description: If true, the Proxy is configured to accept a low gas price for deploying contracts (as per [EIP-1820](https://eips.ethereum.org/EIPS/eip-1820)) to support and simpify the deployer's contract initiation.
+          type: boolean
+          examples:
+            - true
+        sol_price_usd:
+          description: USD value of Sol that Proxy has retrieved from Oracle service. Hexadecimal value in USD.
+          type: string
+          format: hexadecimal
+          examples:
+            - "0x656"
+        neon_price_usd:
+          description: USD value of NEON that Proxy has retrieved from Oracle service. Hexadecimal value in USD.
+          type: string
+          format: hexadecimal
+          examples:
+            - "0x19"
+        operator_fee:
+          description: The component of the "gas fee" that pays the Operator, hexadecimal value in Galan (NEON).
+          type: string
+          format: hexadecimal
+          examples:
+            - "0x3e8"
+        gas_price_slippage:
+          description: Token volatility window as hexadecimal value in Galan (NEON).
+          type: string
+          format: hexadecimal
+          examples:
+            - "0x64"
+x-examples:
+  - title: Simple response.
+    jsonrpc: "2.0"
+    id: 8423kljlj439
+    result: 
+		 - gas_price: "0x10c4cf9e80"
+  - title: Detailed response.
+    jsonrpc: "2.0"
+    id: 6423kljlj439
+    result:
+      - gas_price: "0x0"
+        suggested_gas_price: "0x10c2c383c6"
+        min_acceptable_gas_price: "0x3b9aca00"
+        min_executable_gas_price: "0x109c1bb304"
+        min_wo_chainid_acceptable_gas_price: "0x2540be400"
+        allow_underpriced_tx_wo_chainid: true
+        accept_reverted_tx_into_mempool: false
+        sol_price_usd: "0x656"
+        neon_price_usd: "0x19"
+        operator_fee: "0x3e8"
+        gas_price_slippage: "0x64"

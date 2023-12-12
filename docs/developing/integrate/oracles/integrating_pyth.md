@@ -4,7 +4,7 @@ proofedDate: 20230606
 iterationBy: HB
 includedInSite: true
 approvedBy: na
-comment: 
+comment: todo the <!-- https://github.com/pyth-network/pyth-neon_ --> is an archive
 ---
 
 ## TL;DR

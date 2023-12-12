@@ -1,0 +1,6 @@
+{
+	"jsonrpc": "2.0",
+	"method": "neon_getLogs",
+	"params":[],
+	"id":1
+}
