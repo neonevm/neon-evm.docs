@@ -7,18 +7,18 @@ approvedBy: YYY
 links: The ecosystem image links to /docs/tokens/neon_token and /docs/tokens/gas_fees
 comment: #2 TODO Tracer API needs internal linking to replace Medium article todo we have more wallets than just MetaMask -- perhaps add an FAQ and link there? TODO what was the outcome of Anton not wanting to use BPF?
 ---
-import {NeonEcosystemView} from '@site/src/components/NeonEcosystemView';
+
+import { NeonEcosystemView } from '@site/src/components/NeonEcosystemView';
 
 <NeonEcosystemView></NeonEcosystemView>
 
-**Neon EVM** is *the* solution that makes Solana's throughput, swift block speeds, and low gas prices available to Ethereum contracts. Neon EVM interacts directly with Solana nodes to carry out transactions on Solana. The service is made up of three main components:
+**Neon EVM** is _the_ solution that makes Solana's throughput, swift block speeds, and low gas prices available to Ethereum contracts. Neon EVM interacts directly with Solana nodes to carry out transactions on Solana. The service is made up of three main components:
 
 - Neon EVM
 - Neon Proxy
 - Neon DAO
 
 This page presents a high-level overview of each, and the native tools and integrations available within the Neon Ecosystem.
-
 
 ## Neon EVM program
 
@@ -56,7 +56,6 @@ The DAO provides custodial services to Neon Foundation, assisting the foundation
 
 [NeonScan](https://neonscan.org/) provides a block explorer and analytics platform to examine Neon transactions within Solana.
 
-
 ### NeonPass
 
 [NeonPass](https://devnet.neonpass.live/) transfers ERC-20 tokens between Solana and Neon EVM. The [ERC-20 SPL wrapper](/docs/developing/deploy_facilities/interacting_with_spl_tokens) makes such transfers possible via (non-custodial) wallets.
@@ -67,7 +66,6 @@ The DAO provides custodial services to Neon Foundation, assisting the foundation
 
 [NeonFaucet](https://neonfaucet.org/) provides NEON test tokens and other ERC-20 test tokens to be used for testing applications on DevNet.
 
-
 ## Integrations
 
 Neon EVM integrates with several essential services:
@@ -75,15 +73,16 @@ Neon EVM integrates with several essential services:
 ### Oracles
 
 Oracles enable the decentralized Web3 ecosystem to access price feeds and other external (off-chain) data sources. Neon EVM supports querying data from Solana deployed Oracles:
-* [Chainlink](/docs/developing/integrate/oracles/integrating_chainlink)
-* [Pyth](/docs/developing/integrate/oracles/integrating_pyth)
 
+- [Chainlink](/docs/developing/integrate/oracles/integrating_chainlink)
+- [Pyth](/docs/developing/integrate/oracles/integrating_pyth)
 
 ### Wallets
 
 Neon EVM is supported by EVM-compatible wallets such as MetaMask's non-custodial wallet.
 
 > This allows dApp devs to sign deployment transactions and mint tokens.
+
 <!-- > Learn more about minting and wrapping tokens with Neon EVM. suggest adding link here as Phantom wallet is involved for Solana-based mints -->
 
 ### Protocols
@@ -101,6 +100,7 @@ The Tracer API supports a rerun of historical transactions, runs transactions on
 ## Development tools
 
 Various tools such as:
+
 - [Hardhat](/docs/developing/deploy_facilities/using_hardhat)
 - [Remix](/docs/developing/deploy_facilities/using_remix)
-
+- [Foundry](/docs/developing/deploy_facilities/using_foundry)

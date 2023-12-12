@@ -76,15 +76,6 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Configure Dev Tools',
-      items: [
-        'developing/deploy_facilities/configure_hardhat',
-        'developing/deploy_facilities/configure_foundry',
-        'developing/deploy_facilities/configure_truffle',
-      ]
-    },
-    {
-      type: 'category',
       label: 'Use Tokens',
       items: [
         'developing/deploy_facilities/interacting_with_spl_tokens',
@@ -100,7 +91,8 @@ const sidebars = {
         'developing/integrate/wallets/integrating_walletconnect',
         'developing/integrate/oracles/integrating_chainlink',
         'developing/integrate/oracles/integrating_pyth',
-        'developing/integrate/middleware/the-graph'
+        'developing/integrate/middleware/the-graph',
+        'developing/integrate/indexer/flair'
       ]
     },
     {
@@ -108,8 +100,18 @@ const sidebars = {
       label: 'Deploy Contracts',
       items: [
         'developing/deploy_facilities/using_hardhat',
+        'developing/deploy_facilities/using_foundry',
         'developing/deploy_facilities/using_truffle',
         'developing/deploy_facilities/using_remix'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Configure Dev Tools',
+      items: [
+        'developing/deploy_facilities/configure_hardhat',
+        'developing/deploy_facilities/configure_foundry',
+        'developing/deploy_facilities/configure_truffle',
       ]
     },
     {
