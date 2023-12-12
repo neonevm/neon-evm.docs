@@ -75,15 +75,6 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Configure Dev Tools',
-      items: [
-        'developing/deploy_facilities/configure_hardhat',
-        'developing/deploy_facilities/configure_foundry',
-        'developing/deploy_facilities/configure_truffle',
-      ]
-    },
-    {
-      type: 'category',
       label: 'Use Tokens',
       items: [
         'developing/deploy_facilities/interacting_with_spl_tokens',
@@ -111,6 +102,15 @@ const sidebars = {
         'developing/deploy_facilities/using_foundry',
         'developing/deploy_facilities/using_truffle',
         'developing/deploy_facilities/using_remix'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Configure Dev Tools',
+      items: [
+        'developing/deploy_facilities/configure_hardhat',
+        'developing/deploy_facilities/configure_foundry',
+        'developing/deploy_facilities/configure_truffle',
       ]
     },
     {

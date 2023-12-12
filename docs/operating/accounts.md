@@ -4,7 +4,7 @@ proofedDate: 20230622
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: todo 1. dedicated script in text as wip 2. Link to Docker compose file wip
+comment: todo Page deserves major refactoring -- tries to do too much in one page here
 ---
 
 import solBal from '@site/static/img/doc-images/operating/sol-bal.png';
@@ -210,7 +210,7 @@ Best practice is to use the dedicated script (wip: coming soon!) to automaticall
 
 :::
 
-> Link to Docker compose file (wip) and coming soon!
+> Link to [Docker compose file](https://github.com/neonlabsorg/proxy-model.py/tree/master/docker-compose).
 
 ### Reduce holder account count and withdraw balance
 
@@ -224,22 +224,45 @@ The Neon Proxy checks existing holder account requirements and creates holder ac
 
 But, if you want to decrease the number of holder accounts, you can delete holder accounts by address, and withdraw SOLs from their balance back to the linked Operator key account with the following commands:
 
-To get the list of existing holder accounts:
+1. **List existing holder accounts**:
+
+<Tabs>
+	<TabItem value="Opt1" label="Docker" default>
 
 ```bash
 docker exec -ti proxy ./proxy-cli.sh holder-account list
 
 ```
+</TabItem>
+<TabItem value="Opt2" label="Kubernetes" default>
 
-<!-- k8 alt? -->
+```bash
+kubectl exec -it po/neon-proxy-0 -n neon-proxy -- ./proxy-cli.sh holder-account list
+
+```
+</TabItem>
+</Tabs>
 
 
-To delete a specified account:
+2. **Delete a specified account**:
+
+
+<Tabs>
+	<TabItem value="Opt1" label="Docker" default>
 
 ```bash
 docker exec -ti proxy ./proxy-cli.sh holder-account delete <holder-address>
 ```
-<!-- k8 alt? -->
+
+</TabItem>
+<TabItem value="Opt2" label="Kubernetes" default>
+
+```bash
+kubectl exec -it po/neon-proxy-0 -n neon-proxy -- ./proxy-cli.sh holder-account delete
+
+```
+</TabItem>
+</Tabs>
 
 
 ### Withdraw NEON
@@ -248,11 +271,23 @@ Solana can process transactions in parallel — as long as the request passes an
 
 To get the list of Neon accounts, run the following command:
 
-- Docker
+
+<Tabs>
+	<TabItem value="Opt1" label="Docker" default>
+
 ```bash
 docker exec -ti proxy ./proxy-cli.sh neon-account list
 ```
-<!-- k8 alt? -->
+
+</TabItem>
+<TabItem value="Opt2" label="Kubernetes" default>
+
+```bash
+kubectl exec -it po/neon-proxy-0 -n neon-proxy -- ./proxy-cli.sh neon-account list
+```
+</TabItem>
+</Tabs>
+
 
 Alternatively, you may retrieve a structured JSON output with more detailed account information by using:
 
@@ -300,7 +335,7 @@ kubectl -nneon-proxy exec -it neon-proxy-0 -- ./proxy-cli.sh neon-account withdr
 
 **For example: **
 
-##### Withdraw 100% of all NEONs:
+##### Withdraw 100% of all NEON:
 
 <Tabs>
 	<TabItem value="View" label="Docker" default>
@@ -319,7 +354,7 @@ kubectl -nneon-proxy exec -it neon-proxy-0 -- ./proxy-cli.sh neon-account withdr
 </Tabs>
 
 
-##### Withdraw 10 NEONs from all accounts:
+##### Withdraw 10 NEON from all accounts:
 
 <Tabs>
 	<TabItem value="View" label="Docker" default>

@@ -33,3 +33,7 @@ The following variables may be configured to customize your Neon Proxy implement
 
 `ERC20_BRIDGE_CONTRACTS` & `ERC20_BRIDGE_TOKENS_WHITELIST` should both be specified. If they are missed, the gas tank doesn't analyze common ERC20 transfers.
 
+## What next?
+
+A full list of the parameters are available in the [sample configuration](https://github.com/neonlabsorg/infrastructure-kubernetes/blob/main/config.ini.sample).
+
