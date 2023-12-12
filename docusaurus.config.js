@@ -73,14 +73,28 @@ const config = {
         },
         items: [
           {
-            label: 'Quick Start',
+            label: 'Home',
             position: 'left',
             to: '/docs/quick_start'
           },
-          {
-            label: 'Tutorials',
+          { label: 'DAO',
             position: 'left',
-            to: '/docs/developing/deploy_facilities/using_hardhat'
+            to: '/docs/governance/overview'
+          },
+          {
+            label: 'Develop',
+            position: 'left',
+            to: '/docs/developing/get-started'
+          },
+          {
+            label: 'Fees',
+            position: 'left',
+            to: '/docs/tokens/gas_fees'
+          },
+          {
+            label: 'Operate',
+            position: 'left',
+            to: '/docs/operating/operator-introduction'
           }
         ]
       },
