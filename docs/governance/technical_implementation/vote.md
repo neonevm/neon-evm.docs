@@ -68,7 +68,7 @@ Ledger maintains and curates their to provide you the best support possible. How
 <Tabs>
   <TabItem value="Ledger" label="Ledger's configuration guide" default>
 
-See Ledger's [configuration guide](https://support.ledger.com/hc/en-us/articles/4416927988625-Set-up-your-Ledger-Nano-S-Plus-?docs=true). 
+See Ledger's [configuration guide](https://support.ledger.com/hc/en-us/articles/4416927988625-Set-up-your-Ledger-Nano-S-Plus). 
 
   </TabItem>
   <TabItem value="Neon" label="Neon Guide">
@@ -78,7 +78,7 @@ See Ledger's [configuration guide](https://support.ledger.com/hc/en-us/articles/
 
 1.1 Unbox and charge your Ledger hardware wallet by connecting it to your computer with a USB-C cable.
 
-1.2 Download the Ledger Live Mac app from [https://www.ledger.com/start](www.ledger.com/start). 
+1.2 Download the Ledger Live Mac app from [https://www.ledger.com/start](https://www.ledger.com/start). 
 
 > Select “Mac app” from the dropdown menu after you click **Download**.
 
@@ -106,16 +106,16 @@ Your device will display **”Processing”** and then **Your device is now read
 
 #### Step 2: Install the Solana app on your Ledger and enable blind signing
 
-2.1 Install the Solana app on your Ledger hardware wallet by following the steps outlined in [Ledger's official tutorial](https://support.ledger.com/hc/en-us/articles/360016265659-Solana-SOL-?support=true)
+2.1 Install the Solana app on your Ledger hardware wallet by following the steps outlined in [Ledger's official tutorial](https://support.ledger.com/hc/en-us/articles/360016265659-Solana-SOL)
 
 > Ensure that blind signing is enabled during the installation process. **Blind signing** allows you to sign transactions without revealing the contents to the other parties involved in a MultiSig wallet.
-> If you miss this step, enable it as per [Ledger's documentation](https://support.ledger.com/hc/en-us/articles/4499092909085-Allowing-blind-signing-in-the-Solana-SOL-app?support=true).
+> If you miss this step, enable it as per [Ledger's documentation](https://support.ledger.com/hc/en-us/articles/4499092909085-Allowing-blind-signing-in-the-Solana-SOL-app).
 
 #### Step 3: Install the Phantom wallet and connect Ledger to Phantom
 
 3.1 Install the Phantom wallet on your browser by visiting the Phantom website: [https://phantom.app/](https://phantom.app/).
 
-3.2 Next, connect your Ledger wallet as per [Ledger's documentation](https://support.ledger.com/hc/en-us/articles/4408131265169-Set-up-and-use-Phantom-to-access-your-Ledger-Solana-SOL-account?docs=true)
+3.2 Next, connect your Ledger wallet as per [Ledger's documentation](https://support.ledger.com/hc/en-us/articles/4408131265169-Set-up-and-use-Phantom-to-access-your-Ledger-Solana-SOL-account)
 
 > Ensure you remember the password you set up for Phantom.
 

@@ -7,3 +7,7 @@ mainNet
 MainMet
 testNet
 TestNet
+GALAN
+GALANS
+galan
+NeonEVM

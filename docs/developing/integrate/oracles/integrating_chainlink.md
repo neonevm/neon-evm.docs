@@ -1,10 +1,10 @@
 ---
 title: Chainlink
-proofedDate: 20230526
+proofedDate: 20231124
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: todo boilerplate as Remix link also
+comment:
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introduction
 
-[Chainlink data feeds](https://data.chain.link/) are the quickest way to connect your smart contracts to oracle data such as asset prices. 
+[Chainlink data feeds](https://data.chain.link/) are the quickest way to connect your smart contracts to oracle data, such as asset prices. 
 
 Chainlink is implemented as a smart contract on Neon EVM, making Chainlink data feeds from the Solana network available for smart contracts to consume. 
 
@@ -44,7 +44,7 @@ The Chainlink controller contract is deployed on Devnet. This contract implement
 
 
 </TabItem>
-  <TabItem value="Devnet" label="Devnet" default> 
+  <TabItem value="Devnet" label="Devnet"> 
 
 |Currency pair|Chainlink contract feed address|
 |:----:|:-----:|
@@ -60,39 +60,37 @@ The Chainlink controller contract is deployed on Devnet. This contract implement
 
 ## Boilerplate contract
 
+[View GitHub example](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/contracts/TestChainlink/TestChainlink.sol)
+
+[View in Remix](https://remix.ethereum.org/#url=https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/contracts/TestChainlink/TestChainlink.sol&lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.21+commit.d9974bed.js)
+
 ```Solidity
 SPDX-License-Identifier: MIT
-pragma solidity ^0.8.7;
+pragma solidity 0.8.21;
 
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
-contract PriceConsumerV3 {
-    AggregatorV3Interface internal priceFeed;
 
+contract TestChainlink {
     /**
-     * Network: NeonEVM Devnet
-     * Aggregator: BTC/USD
-     * Address: 0x878738FdbCC9Aa39Ce68Fa3B0B0B93426EcB6417
+     * Returns the latest price for specific price feed
      */
-    constructor() {
-        priceFeed = AggregatorV3Interface(
-            0x878738FdbCC9Aa39Ce68Fa3B0B0B93426EcB6417
-        );
-    }
-
-    /**
-     * Returns the latest price.
-     */
-    function getLatestPrice() public view returns (int) {
-        // prettier-ignore
+    function getLatestPrice(address _priceFeed) external view returns (int) {
         (
             /* uint80 roundID */,
             int price,
             /*uint startedAt*/,
             /*uint timeStamp*/,
             /*uint80 answeredInRound*/
-        ) = priceFeed.latestRoundData();
+        ) = AggregatorV3Interface(_priceFeed).latestRoundData();
         return price;
+    }
+
+    /**
+     * Returns the decimals for specific price feed
+     */
+    function getDecimals(address _priceFeed) external view returns (uint8) {
+        return AggregatorV3Interface(_priceFeed).decimals();
     }
 }
 ```

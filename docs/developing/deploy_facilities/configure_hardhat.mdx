@@ -1,0 +1,99 @@
+---
+title: "Configure Hardhat"
+proofedDate: 20231116
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
+---
+
+import WhatHardHat from '../../single-source-snippets/_hardhat.mdx'
+
+import ConfigHardHat from '../../single-source-snippets/_hardhat_config.mdx'
+
+
+## Introduction
+
+<WhatHardHat/>
+
+The Hardhat framework isn't described here; find that in the [Hardhat documentation](https://hardhat.org/getting-started/#overview).
+
+## Prerequisites
+- `NodeJS`
+
+## The Hardhat Configuration File
+
+<ConfigHardHat/>
+
+The following config file provides a full example of the `hardhat.config.js`  for connecting Hardhat to a Devnet Proxy using the one-way library on Node.js:
+
+### hardhat.config.js
+
+```js
+require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config();
+
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+    solidity: "0.8.21",
+    defaultNetwork: "neondevnet",
+    etherscan: {
+        apiKey: {
+            neonevm: "test"
+        },
+        customChains: [
+            {
+                network: "neonevm",
+                chainId: 245022926,
+                urls: {
+                    apiURL: "https://devnet-api.neonscan.org/hardhat/verify",
+                    browserURL: "https://devnet.neonscan.org"
+                }
+            },
+            {
+                network: "neonevm",
+                chainId: 245022934,
+                urls: {
+                    apiURL: "https://api.neonscan.org/hardhat/verify",
+                    browserURL: "https://neonscan.org"
+                }
+            }
+        ]
+    },
+    networks: {
+        neondevnet: {
+            url: "https://devnet.neonevm.org",
+            accounts: [process.env.PRIVATE_KEY_OWNER],
+            chainId: 245022926
+        },
+        neonmainnet: {
+            url: "https://neon-proxy-mainnet.solana.p2p.org",
+            accounts: [process.env.PRIVATE_KEY_OWNER],
+            chainId: 245022934
+        }
+    }
+};
+```
+
+The parameters for `module.exports` include:
+* `solidity`: version of Solidity used
+* `defaultNetwork`: default chain (for deploying or testing)
+* `etherscan`: settings used to verify contracts on-chain [read more here](https://hardhat.org/hardhat-runner/docs/guides/verifying)
+* `networks`: the list of the supported networks
+  * `neondevnet`:
+    * `url`: RPC URL
+    * `accounts`: an array of deployer's private keys; in the current example, PRIVATE_KEY_OWNER is stored inside .env file
+    * `chainId`: the network's chain ID
+
+Note that `url` and `chainId` can be retrieved from the RPC endpoints table and/or [Chainlist](https://chainlist.org/?search=Neon+EVM&testnets=true).
+
+## What next?
+
+See the [tutorial on how to use Hardhat to deploy to Neon EVM](/docs/developing/deploy_facilities/using_hardhat).
+
+## Gotchas
+
+:::info
+Remember, the deployer wallet address needs to have enough tokens to cover the gas cost of a deployment. 
+> Get [NEON for Devnet](developing/utilities/faucet.md).
+:::
