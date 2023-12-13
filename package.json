@@ -23,6 +23,7 @@
     "@mdx-js/react": "^1.6.22",
     "algolia": "^0.0.0",
     "clsx": "^1.2.1",
+    "docusaurus-json-schema-plugin": "^1.6.1",
     "docusaurus-plugin-image-zoom": "https://github.com/neonlabsorg/docusaurus-plugin-image-zoom.git#1.0.2",
     "markdown-link-check": "^3.11.2",
     "neon-web-components": "^1.0.1",

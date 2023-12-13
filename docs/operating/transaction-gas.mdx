@@ -20,7 +20,7 @@ Operators:
 - [Can set gas to zero for testing](#zero-gas-price-for-testing)
 - Must configure the Proxy to accept no-fee transactions
 
-<!-- wip Support needed for last item>> Operators need to accept request to provide gasless (0 gas fee transaction). Is this handled by the Proxy without any configuration? -->
+<!-- wip Support needed for last item>> Operators need to accept request to provide no-fee transaction. Is this handled by the Proxy without any configuration? -->
 
 ## The Neon Operator economy
 
@@ -63,13 +63,13 @@ An Operator has two options:
 
 > For example, by setting the gas price minimum to 65 Galan, Neon Proxy rejects transactions with a gas price of less than 65.
 
+## Gas price: oracle configuration
 If a transaction request arrives with a gas price below that of the Operator costs + Operator fee, but with a gas price larger than the designated `PRX_MINIMAL_GAS_PRICE`, the Neon Proxy accepts the transaction into mempool. 
 
 The Neon transaction will only be executed when the gas price covers Operator costs + Operator fee. If the number of transactions in the mempool grows to the `PRX_MEMPOOL_CAPACITY` (by default =4096), Neon Proxy removes the transaction with the smallest gas price from the mempool to accept transactions with the higher gas price. Therefore, it's not critical to set the `PRX_MINIMAL_GAS_PRICE` to a small value. 
 
 
 ## Calculation configuration
-
 The Neon Proxy has several settings that accommodate the calculation of gas-price on your required network:
 
 - `PRX_PP_SOLANA_URL`: the HTTP/S address of the Solana node (Devnet/Mainnet) that provides the Pyth data account that supplies $NEON and $SOL prices
@@ -92,4 +92,6 @@ To enable this configuration, the Neon Operator should set up the following para
 - PRX_MINIMAL_GAS_PRICE = 0
 
 As a result, the Neon Proxy returns the 0 gas price and accepts Neon transactions with the 0 gas price.
+
  -->
+

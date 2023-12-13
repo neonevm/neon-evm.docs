@@ -1,10 +1,10 @@
 ---
 title: Accounts & Payment
-proofedDate: na sublime only
+proofedDate: 20230622
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: todo 1. dedicated script in text as wip 2. Link to Docker compose file wip
+comment: todo Page deserves major refactoring -- tries to do too much in one page here
 ---
 
 import solBal from '@site/static/img/doc-images/operating/sol-bal.png';
@@ -37,7 +37,7 @@ Operator keys should be spread [evenly between Proxy instances](operator-introdu
 
 [Holder accounts](/docs/architecture/solana-accounts/#holder-accounts) are a crucial element of Neon EVM. Neon Proxy creates holder accounts with [rent-exempt balances](https://docs.solana.com/ru/developing/programming-model/accounts#rent) on start. The number of holder accounts created determines the TPS provided to users and can be configured with `PRX_PERM_ACCOUNT_LIMIT`. 
 
-You may retrieve a list of Neon Operator key accounts and attached holder accounts (see [**Retrieve your balance**](#query-balance), below).
+You may retrieve a list of Neon Operator key accounts and attached holder accounts (see [**Retrieve your balance**](#query-balance) below).
 
 
 ## Account balance
@@ -72,17 +72,20 @@ The number of required SOLs depends on:
 
 To calculate the number of SOLs required by the Neon Operator, use the following logic:
 
-- The TPS depends on the finalization time of the Solana, which is equal to 32 Solana blocks because the content of the holder account should be retained until successful finalization of the Neon transaction
+- The TPS depends on the finalization time of the Solana, which is equal to 32 Solana blocks because the content of the holder account should be retained until successful finalization of the the Neon transaction
+
 - The Solana block time is 400 ms. So in 1 second, Solana may produce 1 / 0.4 = 2.5 blocks
+
+:::info
 
 The formula to calculate the number of holder accounts and required SOLs is as follows:
 
-:::info
 Number-of-Holders = TPS / Solana-Blocks-per-Sec * Solana-Blocks-for-Finalization
 - Solana-Blocks-per-Second = 2.5 (see above)
 - Solana-Blocks-for-Finalization = 32 (see above)
 
 SOLs-for-Holders = Rent-Exempt-Balance * Number-of-Holders
+
 - Rent-Exempt-Balance = 1.82541312 SOL (see Solana standard rent calculations in the tab above)
 
 Number-of-Holders-per-Operator-key = Number-of-Holders / Number-of-Operator-keys
@@ -130,7 +133,7 @@ You may query your account balances visually or programmatically.
 <Tabs>
 	<TabItem value="View" label="View your balance" default>
 
-Neon Proxy provides a local Grafana dashboard which monitors statistics in the Prometheus/Grafana. They display metrics from operator_neon_balance and operator_sol_balance.
+Neon Proxy provides a local Grafana dashboard that monitors statistics in the Prometheus/Grafana. They display metrics from `operator_neon_balance` and `operator_sol_balance`.
 
 > <img src={solBal} />
 
@@ -203,11 +206,11 @@ Neon provides a docker compose file to add SOLs to your accounts. This is not re
 
 :::caution
 
-Best practice is to use the dedicated script (wip: coming soon!) to automatically transfer SOLs to your Neon Operator key accounts when the balance becomes too low. This security measure avoids storing excessive SOLs in Neon Operator key accounts, to protect them from a malicious user. The potential vulnerability arises because the Neon Proxy has access to Neon Operator keys. Therefore, should a hacker gain access to the Neon Operator server they may get access to the Neon Proxy configuration with the Neon Operator keys.
+Best practice is to use the dedicated script (wip: coming soon!) to automatically transfer SOLs to your Neon Operator key accounts when the balance becomes too low. This security measure avoids storing excessive SOLs in Neon Operator key accounts, to protect them from a malicious user. The potential vulnerability arises because the Neon Proxy has access to Neon Operator keys. Therefore, should a hacker gain access to the Neon Operator server, they may get access to the Neon Proxy configuration with the Neon Operator keys.
 
 :::
 
-> Link to Docker compose file wip and coming soon!
+> Link to [Docker compose file](https://github.com/neonlabsorg/proxy-model.py/tree/master/docker-compose).
 
 ### Reduce holder account count and withdraw balance
 
@@ -221,18 +224,46 @@ The Neon Proxy checks existing holder account requirements and creates holder ac
 
 But, if you want to decrease the number of holder accounts, you can delete holder accounts by address, and withdraw SOLs from their balance back to the linked Operator key account with the following commands:
 
-To get the list of existing Holder accounts:
+1. **List existing holder accounts**:
+
+<Tabs>
+	<TabItem value="Opt1" label="Docker" default>
 
 ```bash
 docker exec -ti proxy ./proxy-cli.sh holder-account list
 
 ```
+</TabItem>
+<TabItem value="Opt2" label="Kubernetes" default>
 
-To delete a specified account:
+```bash
+kubectl exec -it po/neon-proxy-0 -n neon-proxy -- ./proxy-cli.sh holder-account list
+
+```
+</TabItem>
+</Tabs>
+
+
+2. **Delete a specified account**:
+
+
+<Tabs>
+	<TabItem value="Opt1" label="Docker" default>
 
 ```bash
 docker exec -ti proxy ./proxy-cli.sh holder-account delete <holder-address>
 ```
+
+</TabItem>
+<TabItem value="Opt2" label="Kubernetes" default>
+
+```bash
+kubectl exec -it po/neon-proxy-0 -n neon-proxy -- ./proxy-cli.sh holder-account delete
+
+```
+</TabItem>
+</Tabs>
+
 
 ### Withdraw NEON
 
@@ -240,10 +271,23 @@ Solana can process transactions in parallel — as long as the request passes an
 
 To get the list of Neon accounts, run the following command:
 
-- Docker
+
+<Tabs>
+	<TabItem value="Opt1" label="Docker" default>
+
 ```bash
 docker exec -ti proxy ./proxy-cli.sh neon-account list
 ```
+
+</TabItem>
+<TabItem value="Opt2" label="Kubernetes" default>
+
+```bash
+kubectl exec -it po/neon-proxy-0 -n neon-proxy -- ./proxy-cli.sh neon-account list
+```
+</TabItem>
+</Tabs>
+
 
 Alternatively, you may retrieve a structured JSON output with more detailed account information by using:
 
@@ -291,7 +335,7 @@ kubectl -nneon-proxy exec -it neon-proxy-0 -- ./proxy-cli.sh neon-account withdr
 
 **For example: **
 
-##### Withdraw 100% of all NEONs:
+##### Withdraw 100% of all NEON:
 
 <Tabs>
 	<TabItem value="View" label="Docker" default>
@@ -310,7 +354,7 @@ kubectl -nneon-proxy exec -it neon-proxy-0 -- ./proxy-cli.sh neon-account withdr
 </Tabs>
 
 
-##### Withdraw 10 NEONs from all accounts:
+##### Withdraw 10 NEON from all accounts:
 
 <Tabs>
 	<TabItem value="View" label="Docker" default>
