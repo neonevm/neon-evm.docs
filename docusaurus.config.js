@@ -77,10 +77,10 @@ const config = {
             position: 'left',
             to: '/docs/quick_start'
           },
-          { label: 'DAO',
-            position: 'left',
-            to: '/docs/governance/overview'
-          },
+          // { label: 'DAO',
+          //   position: 'left',
+          //   to: '/docs/governance/overview'
+          // },
           {
             label: 'Develop',
             position: 'left',
