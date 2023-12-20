@@ -2,7 +2,9 @@
   "type": "object",
   "description": "POST request to get current versions for the Proxy tech stack.",
   "required": [
-    "method"
+    "method",
+    "params",
+    "jsonrpc"
   ],
   "properties": {
     "jsonrpc": {

@@ -1,8 +1,34 @@
 {
-		"jsonrpc":"2.0",
-		"id": 1,
-		"method":"neon_getSolanaTransactionByNeonTransaction",
-		"params":[
-        "0x9e3b3574099a4fb55b7475955ccc3e0d3f594ee673b6764a8169a3a0492bedf0"
+  "type": "object",
+  "description": "POST request to get Solana Transaction by Neon Transaction.",
+  "required": [
+    "method",
+    "jsonrpc",
+    "params",
+    "id"
+  ],
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "default": "2.0",
+      "description": "The JSON RPC version."
+    },
+    "method": {
+      "type": "string",
+      "default": "neon_getSolanaTransactionByNeonTransaction",
+      "description": "The method name."
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "P927qw7r98qwerqwehkjhwe8"
+      ],
+      "description": "End-user provided identifier for the request; returned with payload."
+    },
+    "params": {
+      "type": "array",
+      "examples": [   "0x9e3b3574099a4fb55b7475955ccc3e0d3f594ee673b6764a8169a3a0492bedf0"
     ]
+}
+}
 }
