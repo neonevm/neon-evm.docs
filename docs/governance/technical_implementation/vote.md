@@ -208,7 +208,7 @@ This step covers creating a transaction, note that the flow is slightly differen
 
   d. Click **Save draft**.
 
-  e. You may either **Run Simulation** to verify the transaction is executable, or **Initate Transaction**.
+  e. You may either **Run Simulation** to verify the transaction is executable, or **Initiate Transaction**.
 
 </TabItem>
 </Tabs>

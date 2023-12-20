@@ -1,12 +1,14 @@
 ---
-title: Command line utilites
+title: Command line utilities
 proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
 ---
 ## Command line utilities
+
 ### Get vesting information with `vesting-contract-cli`
+
 The main part of the NEON-tokens is in a locked state and will be issued in parts according 
 to a certain schedule. For their storage and release at the required time, the vesting contract is used 
 (https://github.com/neonlabsorg/neon-spl-governance/tree/main/addin-vesting, commit `1fc1ad6a21aebd13911db7f60ca7099a6ad61b92`).
@@ -17,7 +19,7 @@ The vesting contract was audited by the next teams:
 * [Ackee Blockchain at Jule 22th, 2022](https://github.com/neonlabsorg/neon-spl-governance/blob/main/audit/20220906-AckeeBlockchain.pdf)
 * [Neodyme at June 7th, 2023](https://github.com/neonlabsorg/neon-spl-governance/blob/main/audit/20230607-Neodyme.pdf)
 
-This contract was deployed at address `919AnvG1Vi9ekoxQs6d6SYQiRmYMcinw4U6bzL2YNoFM` in Solana mainnet 
+This contract was deployed at address `919AnvG1Vi9ekoxQs6d6SYQiRmYMcinw4U6bzL2YNoFM` in Solana Mainnet 
 (https://solscan.io/account/919AnvG1Vi9ekoxQs6d6SYQiRmYMcinw4U6bzL2YNoFM).
 
 To view information about vesting, its quantity and output schedule, you can use the vesting-contract-cli 
