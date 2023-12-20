@@ -24,18 +24,18 @@ import neon_getLogs_response from "@site/static/schemas/neon-api/v1/neon_getLogs
 import neon_getTransactionReceipt_response from "@site/static/schemas/neon-api/v1/neon_getTransactionReceipt/response.json";
 import neon_getSolanaTransactionByNeonTransaction_response from "@site/static/schemas/neon-api/v1/neon_getSolanaTransactionByNeonTransaction/response.json";
 import neon_emulate_response from "@site/static/schemas/neon-api/v1/neon_emulate/response.json";
+import neon_getEvmParams_request from "@site/static/schemas/neon-api/v1/neon_getEvmParams/request.json";
+import neon_getEvmParams_response from "@site/static/schemas/neon-api/v1/neon_getEvmParams/response.json";
 
 <!-- redundant if I can use the method as enums
 
 import neon_proxyVersion_request from "@site/static/schemas/neon-api/v1/neon_proxyVersion/request.json";
 import neon_evmVersion_request from "@site/static/schemas/neon-api/v1/neon_evmVersion/request.json";
 import neon_cliVersion_request from "@site/static/schemas/neon-api/v1/neon_cliVersion/request.json";
-import neon_getEvmParams_request from "@site/static/schemas/neon-api/v1/neon_getEvmParams/request.json";
 import neon_solanaVersion_request from "@site/static/schemas/neon-api/v1/neon_solanaVersion/request.json";
 import neon_proxyVersion_response from "@site/static/schemas/neon-api/v1/neon_proxyVersion/response.json";
 import neon_evmVersion_response from "@site/static/schemas/neon-api/v1/neon_evmVersion/response.json";
 import neon_cliVersion_response from "@site/static/schemas/neon-api/v1/neon_cliVersion/response.json";
-import neon_getEvmParams_response from "@site/static/schemas/neon-api/v1/neon_getEvmParams/response.json";
 import neon_solanaVersion_response from "@site/static/schemas/neon-api/v1/neon_solanaVersion/response.json";
 
 -->
@@ -115,7 +115,7 @@ The method [neon_gasPrice](#get-neon-gas-price) returns data on gas price.
 
 ### 4. Parameters
 
-[neon_getEvmParams](#get-the-neon-evm-program-version): returns parameters of the Neon EVM program deployed on Solana.
+[neon_getEvmParams](#get-parameters): returns parameters of the Neon EVM program deployed on Solana.
 
 ## Get versions
 
@@ -326,3 +326,7 @@ The `neon_emulate` method returns details of an emultated transaction.
 
 </TabItem>
 </Tabs>
+
+## Get Parameters
+
+
