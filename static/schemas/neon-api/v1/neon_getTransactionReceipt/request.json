@@ -1,6 +1,30 @@
 {
-	"jsonrpc": "2.0",
-	"method": "neon_getLogs",
-	"params":[],
-	"id":1
+  "type": "object",
+  "description": "POST request to get Neon logs.",
+  "required": [
+    "method",
+    "jsonrpc",
+    "params",
+    "id"
+  ],
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "default": "2.0",
+      "description": "The JSON RPC version."
+    },
+    "method": {
+      "type": "string",
+      "default": "neon_getLogs",
+      "description": "The method name."
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "P927qw7r98qwerqwehkjhwe8"
+      ],
+      "description": "End-user provided identifier for the request; returned with payload."
+    },
+    "params":[]
+}
 }

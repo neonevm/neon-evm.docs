@@ -18,7 +18,7 @@ This page details several parameters required to configure Foundry. The Foundry 
 
 ## Foundry configuration
 
-Unlike other toolkits, Foundry doesn't have a config file to hold the chain parameters, instead, parameters are passed into commands. For example, this comand deploys a smart contract:
+Unlike other toolkits, Foundry doesn't have a config file to hold the chain parameters, instead, parameters are passed into commands. For example, this command deploys a smart contract:
 
 ```
 forge create --rpc-url $RPC_URL_DEVNET \

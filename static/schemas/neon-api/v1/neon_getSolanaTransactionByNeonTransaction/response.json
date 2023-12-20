@@ -1,6 +1,24 @@
 {
-    "jsonrpc": "2.0",
-    "id": 1,
+  "type": "object",
+  "description": "Response to get Solana Transaction by Neon Transaction.",
+  "required": [
+    "jsonrpc",
+    "id",
+    "result"
+  ],
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "default": "2.0",
+      "description": "The JSON RPC version."
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "OpEgqw7r98qwerqwehkjhwe8"
+      ],
+      "description": "End-user provided identifier for the request."
+    },
     "result": [
         "5K5zxwDVmsYE2GvYxqDSkPP2GmPQf6CnBn9tWtwhhT6HVwuUMFwfX63BsHich7T1ugJ4DNVEDwsp2bgrxyvtmu9v",
         "5GSkkx7XFkCNGTB8mg2CVn5AKZ4KZUpyE24nBZUCFBHvgy9Q1muH8QkaqyWLvBvzrokTn8Ww2XsofKUCT4oaYSPf",
@@ -29,4 +47,5 @@
         "2AXFyEhAKbtCiJwW6Hc3spBdUktdLUEhaDTf4PuNNQP6pixsrsPoLvEn9ukVT1Xvyr2kHZmMKYz4hn8ibu8n92Ln",
         "4pPxPWP8MAQgGn4ttFUZEiyNjXxpRAH6vJjmdPAtzuPtdxrTwrChsvEPc93EKwficAVSD5WrYwAdv4VqwvQk7BV4"
     ]
+}
 }
