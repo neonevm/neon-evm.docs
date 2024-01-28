@@ -14,7 +14,7 @@ With Truffle, you get:
   * An easy process of deploying and debugging contracts on the network
   * Automated deployment and running of tests
 
-For a tutorial on how to use Truffle to deploy on the Neon EVM, see [here](/docs/developing/deploy_facilities/using_truffle).
+For a tutorial on how to use Truffle to deploy on the Neon EVM, see [here](https://github.com/neonevm/neon-evm.docs/blob/main/docs/developing/deploy_facilities/using_truffle.md).
 
 ## Prerequisites
 Before you start, make sure the following software is installed on your device:
