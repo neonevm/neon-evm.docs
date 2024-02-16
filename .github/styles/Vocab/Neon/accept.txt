@@ -8,7 +8,9 @@ DeFi platform
 [Dd]issalowlist
 [Dd]ocumentarian
 ESLint
+Ethereum
 [Ff]ailover
+Galan
 gcc
 gif
 Gitter
@@ -30,7 +32,9 @@ MakerDAO
 Markdown
 Merkel-Patricia Trie
 MetaMask
+N-tx
 Neon
+NEON
 NEON token
 NeonAnalytics
 NeonDAO
@@ -55,8 +59,9 @@ React.js
 readline
 rst
 Sealevel
-S-trx
+S-tx
 S-trexes
+Solana
 Solana cluster
 Solana Mainnet
 Solana Program Library (SPL)

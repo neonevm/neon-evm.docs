@@ -8,8 +8,8 @@ const config = {
   tagline: 'Neon EVM is an open source project implementing the Ethereum virtual machine on Solana.',
   url: 'https://docs.neonfoundation.io',
   baseUrl: '/',
-  onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.png',
   organizationName: 'neonlabsorg',
   projectName: 'neon-evm.docs',
@@ -27,20 +27,31 @@ const config = {
       }
     }
   ],
+  themes: ["docusaurus-json-schema-plugin"],
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/og_image.png',
       cookieBanner: {},
       algolia: {
-        apiKey: 'f091c9673db5f9d6b08e940901f8ede5',
-        appId: '879GT1L978',
-        indexName: 'neonfoundation',
+        apiKey: 'b42bf0be9b7f964aa534f802164b53f8',
+        appId: 'IMU5IHYKIJ',
+        indexName: 'neon-labs',
         contextualSearch: true,
         placeholder: 'search something...',
-        algoliaOptions: { facetFilters: ['language:en'] },
+        algoliaOptions: { facetFilters: ['type:$TYPE'] },
         debug: false,
         dropdown: true
+      },
+      zoom: {
+        selector: '.image-zoom > img',
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(27, 27, 29)'
+        },
+        config: {
+          margin: 60
+        }
       },
       metadata: [
         {
@@ -55,21 +66,35 @@ const config = {
         }
       ],
       navbar: {
-        title: 'NeonDocs',
+        title: 'Neon EVM Docs',
         logo: {
           alt: 'Neon EVM',
           src: 'img/logo.svg'
         },
         items: [
           {
-            label: 'Quick Start',
+            label: 'Home',
             position: 'left',
             to: '/docs/quick_start'
           },
+          // { label: 'DAO',
+          //   position: 'left',
+          //   to: '/docs/governance/overview'
+          // },
           {
-            label: 'Tutorials',
+            label: 'Develop',
             position: 'left',
-            to: '/docs/developing/deploy_facilities/using_hardhat'
+            to: '/docs/developing/get-started'
+          },
+          {
+            label: 'Fees',
+            position: 'left',
+            to: '/docs/tokens/gas_fees'
+          },
+          {
+            label: 'Operate',
+            position: 'left',
+            to: '/docs/operating/operator-introduction'
           }
         ]
       },
@@ -80,14 +105,14 @@ const config = {
         },
         links: [
           {
-            title: 'Getting Started',
+            title: 'Get Started',
             items: [
               { label: '🏓 Quick Start', to: '/docs/quick_start' },
               { label: '🧬 Neon EVM Overview', to: '/docs/about/why_neon' },
               { label: '🔑 Set Up Wallet', to: '/docs/wallet/metamask_setup' },
               { label: '💰 Tokens', to: '/docs/tokens/neon_token' },
               { label: '🛰 Transfer Tokens', to: '/docs/token_transferring/neonpass_usage' },
-              { label: '💬 FAQ', to: '/docs/faq/what-is-neon' }
+              { label: '💬 FAQ', to: '/docs/faq/neon-brief-faq' }
             ]
           },
           {
@@ -99,7 +124,7 @@ const config = {
             ]
           },
           {
-            title: 'Developers',
+            title: 'Develop',
             items: [
               { label: 'Connect to Neon RPC', to: '/docs/developing/connect_rpc' },
               { label: 'Request Test Tokens', to: '/docs/developing/utilities/faucet' },
@@ -119,15 +144,14 @@ const config = {
             ]
           },
           {
-            title: 'Operators',
+            title: 'Operate',
             items: [
-              { label: 'Operate a Neon Proxy', to: '/docs/operating/overview/introduction' },
-              { label: 'Operator Requirements', to: '/docs/operating/operator_requirements' },
-              { label: 'Running a Proxy Server', to: '/docs/operating/operator_guide' }
+              { label: 'Operate a Neon Proxy', to: '/docs/operating/operator-introduction' },
+              { label: 'Run a Proxy Server', to: '/docs/operating/basic' }
             ]
           },
           {
-            title: 'Governance',
+            title: 'Govern',
             items: [
               { label: 'Overview', to: '/docs/governance/overview' },
               { label: 'Neon DAO Organization', to: '/docs/governance/neon_daos' },
@@ -162,6 +186,7 @@ const config = {
     ]
   ],
   plugins: [
+    require.resolve('docusaurus-plugin-image-zoom'),
     [
       '@docusaurus/plugin-client-redirects',
       {

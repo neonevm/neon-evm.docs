@@ -19,6 +19,7 @@
   --ifm-menu-link-sublist-icon: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.93292 4.4366C7.28794 4.07691 7.86355 4.07691 8.21857 4.4366L13.0671 9.34888C13.4221 9.70857 13.4221 10.2918 13.0671 10.6514L8.21857 15.5637C7.86355 15.9234 7.28795 15.9234 6.93292 15.5637C6.5779 15.204 6.5779 14.6209 6.93292 14.2612L11.1386 10.0002L6.93292 5.73917C6.5779 5.37947 6.5779 4.79629 6.93292 4.4366Z' fill='%2361676F'/%3E%3C/svg%3E%0A");
   --ifm-hover-overlay: #F6F7F9;
   --ifm-menu-color: #61676F;
+  --ifm-menu-color-hover: #262B35;
   --ifm-menu-color-background-active: #FEEDF8;
   --page-helpful-background: #194CFF;
   --ifm-footer-background-color: #F1F4F9;
@@ -40,6 +41,7 @@
   --ifm-background-surface-color: #1B1B1D;
   --ifm-hover-overlay: #262B35;
   --ifm-menu-color: #A6B0C3;
+  --ifm-menu-color-hover: #F1F4F9;
   --ifm-menu-color-background-active: #431F30;
   --ifm-footer-background-color: #000000;
 }
@@ -110,4 +112,10 @@ article {
 img {
   max-width: 100%!important;
   height: auto!important;
+}
+
+.coin-icon {
+  min-width: 24px!important;
+  height: 24px!important;
+  vertical-align: middle;
 }

@@ -18,6 +18,10 @@ jobs:
       - name: Install modules
         run: |
           yarn install
+      - name: Check external links
+        run: |
+          find ./README.md ./docs/ -regex ".*.[md|mdx]" -print0 | xargs -0 -n1 \
+          ./node_modules/markdown-link-check/markdown-link-check --config linkcheck.config.json -q
       - name: Build
         run: |
           yarn clear

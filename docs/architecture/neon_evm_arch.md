@@ -1,10 +1,10 @@
 ---
-title: Neon EVM Architecture
+title: Architectural overview
 proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: 
+comment: review required
 ---
 
 *This section describes the architectural solutions built into Neon EVM that enable fast transaction processing for Ethereum users. It also describes how tokens pass from users to final consumers.*
@@ -33,14 +33,14 @@ The components of the architecture are:
 ### Neon EVM User (user)
 Any user who has an account in Neon EVM with a balance in ETH, ERC-20, or ERC-721 tokens.  
 
-### Solana Transaction (S-trx)
+### Solana Transaction (S-tx)
 A transaction formed according to Solana network rules with a signature produced by Solana rules.  
 
-### Neon Transaction (N-trx)
+### Neon Transaction (N-tx)
 A transaction formed according to Ethereum rules with a signature produced by Ethereum rules.  
 
 ### Neon EVM Client (client)
-An application that has an EVM (Solidity, Vyper, etc.) bytecode contract loaded into Neon EVM. The application generates a transaction N-trx according to Ethereum rules and sends it to a proxy. Before sending N-trx, the client transfers the required funds to the Solana deposit to cover the costs of an operator.  
+An application that has an EVM (Solidity, Vyper, etc.) bytecode contract loaded into Neon EVM. The application generates a transaction N-tx according to Ethereum rules and sends it to a proxy. Before sending N-tx, the client transfers the required funds to the Solana deposit to cover the costs of an operator.  
 
 ### Neon EVM Operator (operator)
 A role performed by a Solana account using a software tool. Within Neon EVM, an operator is provided with software in the form of a proxy in order to fulfill certain functions. The operator can deploy one or more proxies. The operator can also configure one proxy for multiple operators, as well as run several proxies with different settings.  
@@ -50,11 +50,11 @@ The software that an operator uses to do their job. Although the proxy is not a 
 
 The proxy contains an EVM emulator that pre-tests the execution of the transaction. This testing determines the number of coins required on the operator's balance, as well as the current exchange rate of SOL to ETH. Each operator configures their proxy server with this course in mind. This relates to economic motivation.  
 
-A proxy converts N-trx into transactions under Solana rules. N-trx is signed by a user, while S-trxs are signed by an operator. The Neon transaction text is loaded from the received S-trxs into a separate account that is created in Solana. Neon EVM receives a command to execute the transaction located at the address of this account.  
+A proxy converts N-tx into transactions under Solana rules. N-tx is signed by a user, while S-txs are signed by an operator. The Neon transaction text is loaded from the received S-txs into a separate account that is created in Solana. Neon EVM receives a command to execute the transaction located at the address of this account.  
 
-More details on how the proxy converts a N-trx to multiple S-trxs can be found [here](https://neonlabsorg.medium.com/neon-web3-proxy-facilitating-seamless-transactions-on-neon-evm-b33c2041aa08).
+More details on how the proxy converts a N-tx to multiple S-txs can be found [here](https://neonlabsorg.medium.com/neon-web3-proxy-facilitating-seamless-transactions-on-neon-evm-b33c2041aa08).
 
-Below is a list of the main Neon Web3 Proxy features that are implemented in the Neon EVM Testnet:
+Below is a list of the main Neon Web3 Proxy features that are implemented in the Neon EVM:
   * Receiving requests over Web3 API protocol
   * Shaping responses using Web3 API protocol
   * Packaging a Neon transaction into a Solana transaction. The Solana transaction contains the following information:
@@ -79,7 +79,7 @@ Governance participants perform the following functions:
   * Changing settings parameters such as the fee value, opening a new balance, the Mn value and the maximum number of iterations.  
 
 
-### ERC-20 TKN
+### ERC-20 token
 This is a contract based on the ERC-20 standard token. An ERC-20 token shows user balances for a certain ticker. After an account (user-acc) selects a type of token, this contract becomes blocked.  
 
 ### SPL Token
@@ -165,9 +165,9 @@ The ERC-20 wrapper allows users to transfer their SPL tokens on the ERC-20 Balan
 ### Payment Queues
 
 **The Issue**  
-If the ERC-20 TKN contract contains only one map for all users and their balances, it can result in an issue: if the majority of users pay with ETH tokens, then the same contract will appear inside each N-trx, where the value will need to be changed.  
+If the ERC-20 TKN contract contains only one map for all users and their balances, it can result in an issue: if the majority of users pay with ETH tokens, then the same contract will appear inside each N-tx, where the value will need to be changed.  
 
-This will cause all N-trxs to line up “single file”, and they cannot be executed in parallel. This is because at the final step, the funds would be transferred from the user's balance to the operator's balance within one contract.  
+This will cause all N-txs to line up “single file”, and they cannot be executed in parallel. This is because at the final step, the funds would be transferred from the user's balance to the operator's balance within one contract.  
 
 **The Solution**  
 The default token type field is added to the Neon account along with the balance. This field provides a special option that will allow a user to select a type of token for payment. The ERC-20 wrapper can be used to transfer SPL tokens from outside to an operator's account.  

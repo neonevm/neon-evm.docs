@@ -1,0 +1,152 @@
+---
+title: WalletConnect
+proofedDate: 20231117
+iterationBy: Miro
+includedInSite: true
+approvedBy: na
+comment: 
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import devnet from '@site/static/img/doc-images/developing/integrate/protocols/walletconnect/devnet.png';
+import projectid from '@site/static/img/doc-images/developing/integrate/protocols/walletconnect/projectid.png';
+import buttonclicked from '@site/static/img/doc-images/developing/integrate/protocols/walletconnect/button-clicked.png';
+import walletconnectqr from '@site/static/img/doc-images/developing/integrate/protocols/walletconnect/wallet-connect-qr.png';
+import mathwalletconnect from '@site/static/img/doc-images/developing/integrate/protocols/walletconnect/math-wallet-connect.jpeg';
+import walletconnectlogged from '@site/static/img/doc-images/developing/integrate/protocols/walletconnect/wallet-connect-logged.png';
+import walletconnectloggedoptions from '@site/static/img/doc-images/developing/integrate/protocols/walletconnect/wallet-connect-logged-options.png';
+
+## Introduction
+
+[WalletConnect](https://docs.walletconnect.com/2.0/) is a protocol providing a decentralized standard to connect Web3 wallets and dApps.
+
+This guide lays out a step-by-step process to configure a React or HTML dApp on Neon EVM using WalletConnect's [Web3Modal SDK](https://docs.walletconnect.com/web3modal/about).
+
+Web3Modal is a library that allows users to connect to any dApp via the WalletConnect interface.
+
+:::info
+
+Check out Web3Modal code on [GitHub](https://github.com/WalletConnect/web3modal).
+
+Web3Modal supports:
+
+- [React](https://docs.walletconnect.com/web3modal/react/about)
+- [HTML](https://docs.walletconnect.com/web3modal/html/about)
+:::
+
+
+## Prerequisites 
+
+- EVM-compatible wallet (this tutorial uses MathWallet)
+- WalletConnect account
+
+## Tutorial
+
+### Step 1: Create a project
+
+Log into [WalletConnect Cloud](https://cloud.walletconnect.com/) to create a new project and copy the Project ID.
+
+> <img src={projectid} width="450" />
+
+
+### Step 2: Configure your project's chain
+
+From WalletConnect's project page, click the **Explorer** tab and select the Neon chain you require from the **Chains** drop-down. For this guide, we will use the Neon EVM Devnet.
+
+> <img src={devnet} width="400" />
+
+
+### Step 3: Configure your app
+
+For this guide, we are configuring an HTML Web App.
+
+<!-- yet we also provide a pure HTML path, yes?? -->
+
+3.1 Install the required packages into your app:
+
+<Tabs>
+<TabItem value="npm" label="npm" default>
+
+```bash
+npm install @wagmi/core @web3modal/wagmi viem vite
+```
+
+</TabItem>
+<TabItem value="yarn" label="yarn">
+
+```
+yarn add @wagmi/core @web3modal/wagmi viem vite
+```
+
+</TabItem>
+</Tabs>
+
+3.2 Inside `package.json` file, add the following code: 
+
+> `vite` is a dependency that starts the server
+
+```json
+"scripts": {
+    "dev": "vite"
+}
+```
+
+3.3 Create `.env.local` file and place `VITE_PROJECT_ID="XYZ"` ( place your project ID key from [WalletConnect Cloud](https://cloud.walletconnect.com/) ).
+
+3.4 Create an `index.html` file and use the following code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Neon WalletConnect Example</title>
+    </head>
+    <body>
+        <w3m-button />
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
+```
+
+3.5 Create a `main.js` file and place the following code:
+
+```javascript
+import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi';
+import { neonMainnet, neonDevnet } from '@wagmi/core/chains';
+
+const projectId = import.meta.env.VITE_PROJECT_ID;
+const metadata = {
+    name: 'Neon Example',
+    description: 'Neon Web3Modal Example',
+    url: 'https://neonevm.org',
+    icons: ['https://neonevm.org/favicons/android-chrome-512x512.png']
+};
+
+const chains = [neonMainnet, neonDevnet];
+const wagmiConfig = defaultWagmiConfig({chains, projectId, metadata});
+
+const modal = createWeb3Modal({wagmiConfig, projectId, chains});
+```
+
+3.6 Run `npm run dev` or `yarn run dev` to start your Web application, and you should see the Web3Modal button loaded in your Web app page.
+
+### Step 4: Connect your wallet
+
+For this example, we use [MathWallet](https://mathwallet.org/).
+
+4.1 You have several connecting options; select **WalletConnect**:
+<img src={buttonclicked} width="300" />
+
+4.2 The popup will load a WalletConnect QR code.
+<img src={walletconnectqr} width="300" />
+
+4.3 Open your MathWallet mobile app and scan the QR code.
+<img src={mathwalletconnect} width="300" />
+
+4.4 After scanning the WalletConnect QR code, you should be able to see your NEON balance inside your Web app page:
+<img src={walletconnectlogged} width="300" />
+
+Now, if you click your NEON balance, you'll be able to see more options for your WalletConnect connection:
+<img src={walletconnectloggedoptions} width="300" />

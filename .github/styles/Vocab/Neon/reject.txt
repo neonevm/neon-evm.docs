@@ -2,3 +2,12 @@ testSpellingError
 main net
 test net
 dev net
+DevNet
+mainNet
+MainMet
+testNet
+TestNet
+GALAN
+GALANS
+galan
+NeonEVM

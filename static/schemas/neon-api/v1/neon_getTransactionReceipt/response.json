@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "description": "Response to request for get transaction receipt.",
+  "required": [
+    "jsonrpc",
+    "id",
+    "result"
+  ],
+ "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "default": "2.0",
+      "description": "The JSON RPC version."
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "OpEgqw7r98qwerqwehkjhwe8"
+      ],
+      "description": "End-user provided identifier for the request."
+    },
+    "result": {
+      "type": "array"
+  }
+}
+}

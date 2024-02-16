@@ -1,0 +1,161 @@
+extends: substitution
+message: "Use '%s' instead of '%s'."
+link: 'https://developers.google.com/style/word-list'
+level: warning
+ignorecase: false
+action:
+  name: replace
+swap:
+  '(?:API Console|dev|developer) key': API key
+  '(?:cell ?phone|smart ?phone)': phone|mobile phone
+  '(?:dev|developer|APIs) console': API console
+  '(?:e-mail|Email|E-mail)': email
+  '(?:file ?path|path ?name)': path
+  '(?:kill|terminate|abort)': stop|exit|cancel|end
+  '(?:OAuth ?2|Oauth)': OAuth 2.0
+  '(?:ok|Okay)': OK|okay
+  '(?:WiFi|wifi)': Wi-Fi
+  '[\.]+apk': APK
+  '3\-D': 3D
+  'Google (?:I\-O|IO)': Google I/O
+  'tap (?:&|and) hold': touch & hold
+  'un(?:check|select)': clear
+  3rd party: third party|Third party
+  3rd-party: third-party| Third-party
+  above: preceding
+  account name: username
+  action bar: app bar
+  admin: administrator
+  Ajax: AJAX
+  Android device: Android-powered device
+  android: Android
+  amongst: among
+  approx\.: approximately
+  authN: authentication
+  authZ: authorization
+  autoupdate: automatically update
+  '(?:back-end|back end)': backend
+  below: following
+  bi-weekly: biweekly
+  bitshares|Bitshares: BitShares
+  block chain: blockchain
+  Block chain: Blockchain
+  '(?:Blockchain Validator|Blockchain validator)': Blockchain validator
+  '(?:blockchain Validator|blockchain Validator)': blockchain validator
+  box: computer
+  cellular data: mobile data
+  cellular network: mobile network
+  chapter: documents|pages|sections
+  check box: checkbox
+  check: select
+  click on: click
+  Cloud: Google Cloud Platform|GCP
+  codepen: CodePen
+  Codepen: CodePen
+  config: configuration
+  Container Engine: Kubernetes Engine
+  content type: media type
+  '(?:crosschain|cross chain)': cross-chain
+  '(?:Crosschain|Cross chain)': Cross-chain
+  cryptobots: CryptoBots
+  Cryptobots: CryptoBots
+  curated roles: predefined roles
+  '(?:dev net|Dev net|Dev-net|DevNet)': Devnet|Proper noun for named devnet (and sentence start)
+  DAPP|DApp: dApp
+  data are: data is
+  deselect: clear
+  desire: want
+  desired: wanted
+  Developers Console: Google API Console|API Console
+  '(?:Digital Signature|digital Signature)': digital signature
+  disabled: turn off|off
+  discord: Discord
+  docker: Docker
+  docker compose: Docker Compose
+  dockerfile: Dockerfile
+  docker image: Docker image
+  double click: double-click
+  ecosystem: Ecosystem|use caps for Neon/Solana/Ethereum Ecosystems
+  end point: endpoint
+  End point: Endpoint
+  end-point: endpoint
+  End-point: End-point
+  '(?:ethereum|Etherum|Etheruem|etheruem)': Ethereum
+  ephemeral IP address: ephemeral external IP address
+  '(?:ERC 20| erc-20|erc 20)': ERC-20
+  '(?:ERC 721|erc-721|erc 721)': ERC-721
+  et cetera: etc.
+  fewer data: less data
+  file name: filename
+  firewalls: firewall rules
+  functionality: capability|feature
+  '(?=s:front-end|front end|Front-end|Front end)': frontend|Frontend
+  '(?:Git Hub|Github| Git hub)': GitHub
+  '(?:full-withdrawl|Full-withdrawl)': full withdrawl|Full withdrawl
+  '(?:Google account|google account)': Google Account
+  Googling: search with Google
+  grayed-out: unavailable
+  HTTPs: HTTPS
+  '(?:Id|id)': ID
+  in order to: to
+  info: information
+  information on: information about
+  ingest: import|load
+  '(?:Layer 1|layer 1)': Layer 1 (L1)|use acronym if already defined
+  '(?:Layer 2|layer 2)': Layer 2 (L2)|use acronym if already defined
+  '(?:local host|local-host)': localhost
+  '(?:Local host|Local-host)': Localhost
+  '(?:log into|Log into|login to|Login to)': log in to
+  long press: touch & hold
+  '(?:mac OS|macos|Mac OS|Mac os)': macOS
+  '(?:main net|Main net|main-net|Main-net|MainNet)': Mainnet|Proper noun for named mainnet (and sentence start)
+  '(?:market-makers|Market-makers)': market makers|Market makers
+  make sure: ensure
+  '(?:Meta Mask|Meta mask|Meta-Mask|meta mask|meta-mask|metaMask)': MetaMask
+  '(?:multi sig|multi-sig)': multisig
+  '(?:NeonEVM|NoenEVM)': Neon EVM
+  '(?:Neon foundation|Noen foundation|Noen Foundation)': Neon Foundation
+  '(?:Neon labs|Noen Labs|Noen labs)': Neon Labs
+  network IP address: internal IP address
+  '(?:Non-Fungible Token|non-fungible token|Non-fungible Token|non-fungible token)': Non-Fungible Token (NFT)|use acronym if already defined
+  '(?:on boarding|onboarding|On boarding|On-boarding)': onboarding|Onboarding
+  '(?:on board|onboard|On board|On-board)': onboard|Onboard
+  '(?:On chain|on chain|Onchain|onchain)': on-chain|On-chain
+  '(?:on ramping|onramping|Onramping|Onramping)': on-ramping|On-ramping
+  '(?:on ramp|offramp|On ramp|On ramp)': on-ramp|On-ramp
+  '(?:off ramping|offramping|Off ramping|Offramping)': off-ramping|Off-ramping
+  '(?:off ramp|offramp|Off ramp|Offramp)': off-ramp|Off-ramp
+  '(?:no code change|no code changes)': minor reconfiguration| don't claim no changes; rather qualify it
+  omnibox: address bar
+  '(?:on chain|onchain)': on-chain
+  '(?:open-source|opensource|Open-source|Opensource)': open source|Open source
+  '(?:Optimistic rollup|optimistic Rollup)': Optimistic Rollup
+  operator: Operator|unless not Neon Operator
+  operators: Operators|unless not Neon Operator
+  '(?:Proof-of-Stake|proof-of-stake|Proof-of-stake)': Proof-of-Stake (PoS)|use acronym if already defined
+  '(?:Proof-of-Work|proof-of-work|Proof-of-work)': Proof-of-Work (PoW )|use acronym if already defined
+  '(?:Proof-of-History|proof-of-history|Proof-of-history)': Proof-of-History (PoH)|use acronym if already defined
+  '(?:Peer-to-peer;peer-to-peer)': Peer-to-Peer (P2P)|use acronym if already defined
+  regex: regular expression
+  right click: right-click
+  SHA1: SHA-1|HAS-SHA1
+  sign into: sign in to
+  sign-?on: single sign-on
+  singing: signing |perhaps you really did mean "to sing"?
+  static IP address: static external IP address
+  stylesheet: style sheet
+  synch: sync
+  '(?:test net|Test net|Test-net|Test-net)': Testnet|Proper noun for named testnet (and sentence start)
+  tablename: table name
+  tablet: device
+  touch: tap
+  TX: tx
+  url: URL
+  usecase: use case
+  U.S.: US
+  U.S.A.: USA
+  '(?:validity rollup|validity Rollup)': Validity Rollup
+  World Wide Web: web
+  '(?:web3|web 3|Web 3)': Web3
+  '(?:ZK Rollup|ZK rollup|ZK-Rollup|zk rollup|zk-rollup)': ZK-rollup
+

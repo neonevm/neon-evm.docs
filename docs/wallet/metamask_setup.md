@@ -4,15 +4,21 @@ proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: 
+comment: TODO -- update to tell user Step 4 Connect MM to Proxy is binding a MM WalletID to a Neon Account ID -- this allows signing with a Neon Account
 ---
 
+## TL;DR
+
+RPC endpoints are available on [Chainlist](https://chainlist.org/?chain=245022926&testnets=true&search=Neon+EVM).
+
+
+## Introduction 
 MetaMask is a convenient and fairly easy-to-use application for storing Ethereum addresses and private keys. This tutorial will guide you, step by step, in installing MetaMask on your device and connecting the wallet to the Neon Devnet environment.  
 
 ## Configuring MetaMask
 
 ### Step 1: Install MetaMask
-Go to the MetaMask [download page](https://metamask.io/download.html). From there, select any platform you use and follow the instructions to load and install MetaMask on your device's browser.  
+Go to the MetaMask [download page](https://metamask.io/download). From there, select any platform you use and follow the instructions to load and install MetaMask on your device's browser.  
 
 <div className='neon-img-box-600' style={{textAlign: 'center', width: 400, display: 'block', margin: 'auto'}}>
 
@@ -89,7 +95,7 @@ Fill in the fields on the next page.
 * `Currency Symbol`: NEON
 * `Block Explorer URL (optional)`: https://devnet.neonscan.org
 
-> **Note:** The `Chain ID` is specified for [Devnet](https://docs.solana.com/clusters#devnet). To choose [Testnet](https://docs.solana.com/clusters#testnet) or [Mainnet](https://docs.solana.com/clusters#mainnet-beta) in this field, you need to specify the value *245022940* or *245022934*, respectively. The `New RPC URL` must also be changed to either https://testnet.neonevm.org for Testnet, or https://mainnet.neonevm.org for Mainnet.
+> **Note:** The `Chain ID` is specified for [Devnet](https://docs.solana.com/clusters#devnet). To choose [Testnet](https://docs.solana.com/clusters#testnet) or [Mainnet](https://docs.solana.com/clusters#mainnet-beta) in this field, you need to specify the value *245022940* or *245022934*, respectively. The `New RPC URL` must also be changed to either https://testnet.neonevm.org for Testnet, or select an RPC endpoint for Mainnet from [Chainlist](https://chainlist.org/?chain=245022926&testnets=true&search=Neon+EVM).
 
 The wallet settings depend on the values given for the options mentioned above.
 
