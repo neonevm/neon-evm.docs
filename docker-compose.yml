@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  docusaurus:
+    build:
+      context: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - './docs:/app/docs'
+      - './src:/app/src'
+      - './static:/app/static'
+      - './docusaurus.config.js:/app/docusaurus.config.js'
+      - './sidebars.js:/app/sidebars.js'
