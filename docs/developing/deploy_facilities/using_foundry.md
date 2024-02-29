@@ -75,11 +75,11 @@ RPC_URL_DEVNET=https://devnet.neonevm.org
 CHAIN_ID_DEVNET=245022926
 RPC_URL_MAINNET=https://neon-proxy-mainnet.solana.p2p.org
 CHAIN_ID_MAINNET=245022934
-PRIVATE_KEY=<YOUR_PRIVATE_KEY>
+PRIVATE_KEY=`YOUR_PRIVATE_KEY`
 VERIFIER_URL_BLOCKSCOUT=https://neon-devnet.blockscout.com/api
 ```
 :::important
-Replace <YOUR_PRIVATE_KEY> with your data.
+Replace `YOUR_PRIVATE_KEY` with your data.
 :::
 
 2.3 Run:

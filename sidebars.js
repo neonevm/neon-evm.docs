@@ -9,14 +9,14 @@ const sidebars = {
       label: '🏓 Quick Start',
       id: 'quick_start'
     },
-     {
+    {
       type: 'category',
       label: '🧬 Neon EVM Overview',
       items:
         [
           'about/why_neon',
           'about/neon_ecosystem',
-          'about/how_it_works',
+          'about/how_it_works'
         ]
     },
     {
@@ -27,7 +27,7 @@ const sidebars = {
     {
       type: 'doc',
       label: '🛰 Transfer Tokens',
-      id: 'token_transferring/neonpass_usage',
+      id: 'token_transferring/neonpass_usage'
     },
     {
       type: 'category',
@@ -45,7 +45,7 @@ const sidebars = {
       items: [
         'faq/neon-brief-faq',
         'faq/neonpass'
-        ]
+      ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Tools</h4>' },
@@ -81,7 +81,7 @@ const sidebars = {
         'developing/deploy_facilities/interacting_with_spl_tokens',
         'tokens/token_list',
         'developing/integrate/neon_transfer'
-        ]
+      ]
     },
     {
       type: 'category',
@@ -111,7 +111,7 @@ const sidebars = {
       items: [
         'developing/deploy_facilities/configure_hardhat',
         'developing/deploy_facilities/configure_foundry',
-        'developing/deploy_facilities/configure_truffle',
+        'developing/deploy_facilities/configure_truffle'
       ]
     },
     {
@@ -121,7 +121,7 @@ const sidebars = {
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Learn</h4>' },
-      {
+    {
       type: 'category',
       label: 'EVM Compatibility',
       items: [
@@ -131,7 +131,7 @@ const sidebars = {
         'evm_compatibility/precompiles'
       ]
     },
-     {
+    {
       type: 'category',
       label: 'Neon EVM Architecture',
       items: [
@@ -143,8 +143,8 @@ const sidebars = {
     {
       type: 'category',
       label: 'Token Accounts',
-      items:[
-       'tokens/token-accounts'
+      items: [
+        'tokens/token-accounts'
       ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
