@@ -177,7 +177,8 @@ const config = {
           trackingID: 'G-Y5QG48111W'
         },
         docs: {
-          sidebarPath: require.resolve('./sidebars.js')
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/neonevm/neon-evm.docs/edit/main',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css')
