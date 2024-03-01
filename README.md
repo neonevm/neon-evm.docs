@@ -14,6 +14,14 @@ yarn install
 yarn start
 ```
 
+### Docker compose
+
+```shell
+docker compose build # build compose
+docker compose up # start dev server
+docker compose down # stop dev server
+```
+
 This command starts a local development server and opens up a browser window for localhost. Most changes are reflected live without having to restart the server.
 
 ### Build

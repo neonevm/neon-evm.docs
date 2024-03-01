@@ -1,6 +1,6 @@
 // @ts-check
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer').themes.github;
+const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -9,6 +9,7 @@ const config = {
   url: 'https://docs.neonfoundation.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'ignore',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.png',
   organizationName: 'neonlabsorg',
@@ -177,7 +178,8 @@ const config = {
           trackingID: 'G-Y5QG48111W'
         },
         docs: {
-          sidebarPath: require.resolve('./sidebars.js')
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/neonevm/neon-evm.docs/edit/main',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css')

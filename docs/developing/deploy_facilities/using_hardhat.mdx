@@ -4,7 +4,7 @@ proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: 
+comment:
 ---
 
 import mm_p_key from '@site/static/img/doc-images/developing/deploy_facilities/foundry-metamask.png';
@@ -56,10 +56,10 @@ The following tutorials assist you to meet these prerequisites:
 2.2 Create a .env file and add these lines:
 
 ```
-PRIVATE_KEY_OWNER=<YOUR_PRIVATE_KEY>
+PRIVATE_KEY_OWNER=`YOUR_PRIVATE_KEY`
 ```
 :::important
-Replace <YOUR_PRIVATE_KEY> with your data.
+Replace `YOUR_PRIVATE_KEY` with your data.
 :::
 
 2.3 Run:
@@ -98,10 +98,10 @@ Receiver balance after transfer 10000000000000000000n
 
 ### Step 5: Contract verification
 ```
-npx hardhat verify --network neondevnet <CONTRACT_ADDRESS>
+npx hardhat verify --network neondevnet `CONTRACT_ADDRESS`
 ```
 
 This command is how we verify contracts on [Neonscan](https://devnet.neonscan.org). More info about verifying smart contracts thru Hardhat can be found [here](https://hardhat.org/hardhat-runner/docs/guides/verifying).
 :::important
-Replace <CONTRACT_ADDRESS> with your smart contract address.
+Replace `CONTRACT_ADDRESS` with your smart contract address.
 :::

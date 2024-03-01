@@ -69,16 +69,13 @@ docker-compose -f ./docker-compose/docker-compose-test.yml up
 
 </TabItem>
 <TabItem value="Retrieve" label="Outcome" default>
-
+  
 <div className='neon-img-box-300' style={{textAlign: 'center', width: 900, display: 'block', margin: 'auto'}}>
-
 <img src={stats} />
-
 </div>
+
 </TabItem>
 </Tabs>
-
-
 
 
 Congratulations, you are now running Neon EVM deployed to a single, local node of Solana.
@@ -131,9 +128,9 @@ And click **Save**.
 
 </TabItem>
 <TabItem value="Retrieve" label="Show" default>
+
 <div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
 <img src={network2} />  
-
 </div>
 
 </TabItem>
@@ -173,16 +170,17 @@ fi
 
 - It is recommended that you have a couple of terabytes of free space! Should you want to run your node with persistent data, the space requirements will grow.
 - The MetaMask Wallet may not update automatically:
-> <Tabs>
->  <TabItem value="View" label="Reselect " default>
-> <b>Neon Localhost</b> to force a refresh after using the faucet
-> </TabItem>
-> <TabItem value="Retrieve" label="Show" default>
-> <div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
+
+<Tabs>
+<TabItem value="View" label="Reselect " default>
+<b>Neon Localhost</b> to force a refresh after using the faucet
+</TabItem>
+<TabItem value="Retrieve" label="Show" default>
+<div className='neon-img-box-600' style={{textAlign: 'center', width: 600, display: 'block', margin: 'auto'}}>
 <img src={update} />  
 </div>
-> </TabItem>
-> </Tabs> 
+</TabItem>
+</Tabs> 
 
 - It is only possible to set up the localhost network in the MetaMask wallet while the proxy service is running.
 - If you are following best practice, and adding your [user to the `docker` group](https://docs.docker.com/engine/install/linux-postinstall/) to avoid running Docker as root or sudo, then restart to apply the update.
