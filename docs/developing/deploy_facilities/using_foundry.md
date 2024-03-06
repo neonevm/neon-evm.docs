@@ -282,4 +282,6 @@ Submitted contract for verification:
 
 5.2 Copy/paste this link in your browser, remembering to replace `contract_address` with your freshly deployed contract address:
 
-`https://neon-devnet.blockscout.com/address/<contract_address>`
+```sh
+https://neon-devnet.blockscout.com/address/<contract_address>
+```
