@@ -238,7 +238,8 @@ In case you want to use a remote Solana node, change the SOLANA_URL value to its
 
 ## Step 2: Configure environment variables
 
-Set the following optional variables to "latest" to work with the Docker image's latest settings. If the variables are not spcified the version 1.7 is used by default.
+Set the following optional variables to "latest" to work with the Docker image's latest settings. If a variable is not specified, the version 1.7 of the corresponding component is used by default.
+
 Run the commands: 
 
 ```bash
