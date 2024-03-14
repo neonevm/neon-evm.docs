@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
 Save the following code to a file in your local destination.
 <span style="padding-left: 20px; font-style: italic;"> 
 <details>
-<summary>docker compose file content</summary>
+<summary>docker-compose.yml file content</summary>
 
 ```YAML
 version: "3"
@@ -238,10 +238,11 @@ In case you want to use a remote Solana node, change the SOLANA_URL value to its
 
 ## Step 2: Configure environment variables
 
-Set the following variables to "latest" to work with the Docker image's latest settings. Run the commands: 
+Set the following optional variables to "latest" to work with the Docker image's latest settings. If the variables are not spcified the version 1.7 is used by default.
+Run the commands: 
 
 ```bash
-export NEON_EVM_COMMIT=latest; export REVISION=latest; export FAUCET_COMMIT=latest
+export NEON_EVM_COMMIT=latest; export PROXY_COMMIT=latest; export FAUCET_COMMIT=latest
 ```
 
 ## Step 3: Run the Docker containers 
@@ -251,13 +252,13 @@ Use the docker compose file created in the Step 1 to pull and run the docker con
 3.1 Pull the Docker images:
 
 ```bash
-docker-compose -f "your path to docker compose file" pull
+docker-compose -f /path/to/docker-compose.yml pull
 ```
 
 3.2 Start the proxy with:
 
 ```bash
-docker-compose -f "your path to docker compose file" up
+docker-compose -f /path/to/docker-compose.yml up
 ```
 
 
@@ -288,7 +289,7 @@ Congratulations, you are now running Neon EVM deployed to a single, local node o
 
 > When you are at the point where you are willing to lose your data, then free your disk space and close the instance by running:
 > ```bash
-> docker-compose -f "your path to docker compose file" down
+> docker-compose -f /path/to/docker-compose.yml down
 > ```
 :::
 
