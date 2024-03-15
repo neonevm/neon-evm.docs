@@ -28,32 +28,238 @@ import TabItem from '@theme/TabItem';
 - nmap (or equivalent)
 
 
-## Step 1: Clone a local copy of the code
+## Step 1: Create a docker compose file
 
-Clone the Neon Proxy for Solana: https://github.com/neonlabsorg/proxy-model.py and change directory (`cd`) into the folder.
+<!-- Clone the Neon Proxy for Solana: https://github.com/neonlabsorg/proxy-model.py and change directory (`cd`) into the folder. -->
+Save the following code to a file in your local destination.
+<span style="padding-left: 20px; font-style: italic;"> 
+<details>
+<summary>docker-compose.yml file content</summary>
+
+```YAML
+version: "3"
+
+services:
+  solana:
+    container_name: solana
+    image: neonlabsorg/evm_loader:${NEON_EVM_COMMIT:-v1.7.2}
+    environment:
+      SOLANA_URL: http://solana:8899
+      RUST_LOG: solana_runtime::system_instruction_processor=trace,solana_runtime::message_processor=debug,solana_bpf_loader=debug,solana_rbpf=debug
+    hostname: solana
+    expose:
+      - "8899"
+      - "9900"
+      - "8900"
+      - "8001"
+      - "8001-8009/udp"
+    networks:
+      - net
+    ports:
+      - 8899:8899
+      - 8900:8900
+    healthcheck:
+      # Must be available from outside (calling without -u causes premature result)
+      test: [ CMD-SHELL, "./wait-for-neon.sh" ]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 5s
+    entrypoint: /opt/solana-run-neon.sh
+
+  neon_test_invoke_program_loader:
+    container_name: neon_test_invoke_program_loader
+    image: neonlabsorg/neon_test_invoke_program:develop
+    environment:
+      SOLANA_URL: http://solana:8899
+    networks:
+      - net
+    depends_on:
+      solana:
+        condition: service_healthy
+    entrypoint: /opt/neon-test-invoke-program.sh
+
+  postgres:
+    container_name: postgres
+    image: postgres:15.3
+    command: postgres -c 'max_connections=1000'
+    environment:
+      POSTGRES_DB: neon-db
+      POSTGRES_USER: neon-proxy
+      POSTGRES_PASSWORD: neon-proxy-pass
+    hostname: postgres
+    healthcheck:
+      test: [ CMD-SHELL, "pg_isready -h postgres -p 5432" ]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+    expose:
+      - "5432"
+    ports:
+      - "5432"
+    networks:
+      - net
+
+  dbcreation:
+    container_name: dbcreation
+    image: neonlabsorg/proxy:${PROXY_COMMIT:-v1.7.9}
+    environment:
+      SOLANA_URL: http://solana:8899
+      POSTGRES_DB: neon-db
+      POSTGRES_USER: neon-proxy
+      POSTGRES_PASSWORD: neon-proxy-pass
+      POSTGRES_HOST: postgres
+    entrypoint: /bin/sh
+    command: proxy/run-dbcreation.sh
+    networks:
+      - net
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  proxy:
+    container_name: proxy
+    image: neonlabsorg/proxy:${PROXY_COMMIT:-v1.7.9}
+    environment:
+      SOLANA_URL: http://solana:8899
+      FAUCET_URL: http://faucet:3333
+      PROXY_URL: http://proxy:9090/solana
+      POSTGRES_DB: neon-db
+      POSTGRES_USER: neon-proxy
+      POSTGRES_PASSWORD: neon-proxy-pass
+      POSTGRES_HOST: postgres
+      NEON_CLI_DEBUG_LOG: "YES"
+      FUZZ_FAIL_PCT: 0
+      GATHER_STATISTICS: "YES"
+      CONFIG: ci
+      MIN_OPERATOR_BALANCE_TO_WARN: 4565760000 # = 913152000 * 5 (5 storage accounts) = 4.56576 SOL
+      MIN_OPERATOR_BALANCE_TO_ERR: 913152000 # = solana rent 131072 (= Rent-exempt minimum: 0.913152 SOL) SOLs to create a storage
+      PP_SOLANA_URL: ${CI_PP_SOLANA_URL:-https://api.devnet.solana.com}
+      PYTH_MAPPING_ACCOUNT: ${CI_PYTH_MAPPING_ACCOUNT:-BmA9Z6FjioHJPpjT39QazZyhDRUdZy2ezwx4GiDdE2u2}
+      GAS_PRICE_SLIPPAGE: 0.3
+      ENABLE_PRIVATE_API: "NO"
+      ALLOW_UNDERPRICED_TX_WITHOUT_CHAINID: "YES"
+      LOG_FULL_OBJECT_INFO: "NO"
+      EVM_LOADER: 53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io
+      RUST_BACKTRACE: ${RUST_BACKTRACE:-0}
+      COMMIT_LEVEL: "Confirmed"
+      SOLANA_KEY_FOR_EVM_CONFIG: "BMp6gEnveANdvSvspESJUrNczuHz1GF5UQKjVLCkAZih"
+    hostname: proxy
+    depends_on:
+      solana:
+        condition: service_healthy
+      dbcreation:
+        condition: service_completed_successfully
+    ports:
+      - 9090:9090
+      - 8881:8888
+    expose:
+      - "8888"
+      - "9090"
+    networks:
+      - net
+    entrypoint: proxy/run-test-proxy.sh
+    healthcheck:
+      test: [ CMD-SHELL, "/opt/health_check_proxy.sh" ]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 5s
+
+  faucet:
+    container_name: faucet
+    image: neonlabsorg/faucet:${FAUCET_COMMIT:-v1.7.x}
+    environment:
+      FAUCET_RPC_BIND: 0.0.0.0
+      FAUCET_RPC_PORT: 3333
+      FAUCET_WEB3_ENABLE: 'true'
+      WEB3_RPC_URL: http://solana:8899
+      WEB3_PRIVATE_KEY: 0x4deacb079b4714c38f39508aa8900039f2721ed8686835d43347ba9267da767b
+      NEON_ERC20_TOKENS: '["0xB521b9F3484deF53545F276F1DAA50ef0Ca82E2d", "0x8a2a66CA0E5D491A001957edD45A6350bC76D708", "0x914782059DC42d4E590aeFCfdbF004B2EcBB9fAA", "0x7A7510b9b18241C788a7aAE8299D1fA6010D8128"]'
+      NEON_ERC20_MAX_AMOUNT: 1000
+      FAUCET_SOLANA_ENABLE: 'true'
+      SOLANA_URL: http://solana:8899
+      NEON_OPERATOR_KEYFILE: /root/.config/solana/id.json
+      NEON_ETH_MAX_AMOUNT: 50000
+      TEST_FAUCET_INIT_NEON_BALANCE: 100000000
+      EVM_LOADER: 53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io
+      NEON_TOKEN_MINT: HPsV9Deocecw3GeZv1FkAPNCBRfuVyfw9MMwjwRe1xaU
+      NEON_TOKEN_MINT_DECIMALS: 9
+      SOLANA_COMMITMENT: confirmed
+      RUST_BACKTRACE: ${RUST_BACKTRACE:-0}
+    hostname: faucet
+    ports:
+      - 3333:3333
+    expose:
+      - "3333"
+    networks:
+      - net
+    entrypoint: ./run-test-faucet.sh
+    depends_on:
+      solana:
+        condition: service_healthy
+
+  indexer:
+    container_name: indexer
+    image: neonlabsorg/proxy:${PROXY_COMMIT:-v1.7.9}
+    environment:
+      SOLANA_URL: http://solana:8899
+      POSTGRES_DB: neon-db
+      POSTGRES_USER: neon-proxy
+      POSTGRES_PASSWORD: neon-proxy-pass
+      POSTGRES_HOST: postgres
+      POSTGRES_TIMEOUT: 5
+      GATHER_STATISTICS: "YES"
+      LOG_FULL_OBJECT_INFO: "NO"
+      CONFIG: ci
+      EVM_LOADER: 53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io
+      START_SLOT: latest
+      REINDEX_START_SLOT: continue
+    hostname: indexer
+    depends_on:
+      solana:
+        condition: service_healthy
+      dbcreation:
+        condition: service_completed_successfully
+    expose:
+      - "8887"
+    ports:
+      - 8882:8888
+    networks:
+      - net
+    entrypoint: proxy/run-indexer.sh
+
+networks:
+  net:
+```
+</details> </span>
+In case you want to use a remote Solana node, change the SOLANA_URL value to its URL.
 
 ## Step 2: Configure environment variables
 
-Set the following variables to "latest" to work with the Docker image's latest settings. Run the commands: 
+Set the following optional variables to "latest" to work with the Docker image's latest settings. If a variable is not specified, the version 1.7 of the corresponding component is used by default.
+
+Run the commands: 
 
 ```bash
-export NEON_EVM_COMMIT=latest; export REVISION=latest; export FAUCET_COMMIT=latest
+export NEON_EVM_COMMIT=latest; export PROXY_COMMIT=latest; export FAUCET_COMMIT=latest
 ```
 
-## Step 3: Run the Docker container
+## Step 3: Run the Docker containers 
 
-Working at the root folder of the proxy-model.py codebase:
+Use the docker compose file created in the Step 1 to pull and run the docker containers:
 
-3.1 Pull the Docker image:
+3.1 Pull the Docker images:
 
 ```bash
-docker-compose -f ./docker-compose/docker-compose-test.yml pull
+docker-compose -f /path/to/docker-compose.yml pull
 ```
 
 3.2 Start the proxy with:
 
 ```bash
-docker-compose -f ./docker-compose/docker-compose-test.yml up
+docker-compose -f /path/to/docker-compose.yml up
 ```
 
 
@@ -84,7 +290,7 @@ Congratulations, you are now running Neon EVM deployed to a single, local node o
 
 > When you are at the point where you are willing to lose your data, then free your disk space and close the instance by running:
 > ```bash
-> docker-compose -f ./docker-compose/docker-compose-test.yml down
+> docker-compose -f /path/to/docker-compose.yml down
 > ```
 :::
 
