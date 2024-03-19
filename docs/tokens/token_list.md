@@ -48,6 +48,12 @@ The following tables provide the addresses of ERC-20 interface contracts for the
 | <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/mango-token-logo.svg" className="coin-icon" />          | MNGO            | `0x6d12eAA69f8e4902D3F83d546B31F7318717014C` | `MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac`  |
 | <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/fidelion-token-logo.svg" className="coin-icon" />       | 2080            | `0x96e636d3Ef60ee9745945120010c73619144632C` | `Dwri1iuy5pDFf2u2GwwsH2MxjR6dATyDv9En9Jk8Fkof` |
 | <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/pyth-token-logo.svg" className="coin-icon" />           | PYTH            | `0x0575dD4AFD93B7522fEE4e0179f243ecA3856137` | `HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3` |
+| <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/blaze-token-logo.svg" className="coin-icon" />          | BLZE            | `0x09F8A075D6fca984EA0bAda25A64326DF00691A4` | `BLZEEuZUBVqFhj8adcCFPJvPVCiCyVmh3hkJMrU8KuJA` |
+| <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/jsol-logo.svg" className="coin-icon" />                 | JSOL            | `0x7b9f9033afcf602b556a7aeac5871a52b56a06ee` | `7Q2afV64in6N6SeZsAAB81TJzwDoD6zpqmHkzi9Dcavn` |
+| <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/cgt-token-logo.svg" className="coin-icon" />            | CGT             | `0x9950ef047D87599EB28bF5E9Fc7F63cEd1b5F4AE` | `5qkTJu3hVd3SYToWpyHUmGfiLR48jj9oSz1WniV1UcgS` |
+| <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/jupiter-logo.svg" className="coin-icon" />              | JUP             | `0x9F0fCE2AB962984b1EE50108A8510eA190BeEb8d` | `JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN`  |
+| <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/dogwifhat-logo.png" className="coin-icon" />            | $WIF            | `0xF86934c2b05c31f3bBE3BCd6E3a8aA7790cAd9c1` | `EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm` |
+| <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/wen-logo.png" className="coin-icon" />                  | WEN             | `0xc61e8aB62666D25F0854C5723587507A7E92E289` | `WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk`  |
 
 </TabItem>
 <TabItem value="devnet" label="Devnet">
