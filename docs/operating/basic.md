@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 <!-- Clone the Neon Proxy for Solana: https://github.com/neonlabsorg/proxy-model.py and change directory (`cd`) into the folder. -->
 Save the following code to a file in your local destination.
-<span style="padding-left: 20px; font-style: italic;"> 
+<span style={{paddingLeft: '20px', fontStyle: 'italic'}}> 
 <details>
 <summary>docker-compose.yml file content</summary>
 
