@@ -7,12 +7,12 @@ approvedBy: na
 comment: todo the zero gas for testing setup (see commented out section)
 ---
 
-import Formula from '../single-source-snippets/_price_formula.mdx'
-import Price from '../single-source-snippets/_gas_price_calc.mdx'
+import Formula from '../single-source-snippets/_price_formula.mdx';
+import Price from '../single-source-snippets/_gas_price_calc.mdx';
 
 ## TL;DR
 
-Operators: 
+Operators:
 
 - [Configure the Operator fee](#gas-price-the-operator-fee)
 - [Configure oracle price sources](#calculation-configuration)
@@ -26,29 +26,29 @@ Operators:
 
 Neon Proxy enables Neon Operators to earn NEON tokens by processing transactions from Neon users.
 
-The Neon Operator economy is based on providing a custom gas price returned by the eth_gasPrice method. The Neon Proxy calculates the gas price based on the assumption that it should cover the cost of transaction processing on the Solana cluster and include the profit of the Neon Operator. The Neon Operator should include all additional costs (such as hardware rent) plus profit in their Operator Fee. 
+The Neon Operator economy is based on providing a custom gas price returned by the eth_gasPrice method. The Neon Proxy calculates the gas price based on the assumption that it should cover the cost of transaction processing on the Solana cluster and include the profit of the Neon Operator. The Neon Operator should include all additional costs (such as hardware rent) plus profit in their Operator Fee.
 
-The Neon EVM calculates gas usage by tracking the SOL spent by the Neon Operator during transaction execution. The gas price includes the ratio of NEON and SOL tokens, so the payment from the Neon User to Neon Operator covers all spent SOLs. The ultimate gas price is variable because it depends on the prices of SOL and NEON. 
+The Neon EVM calculates gas usage by tracking the SOL spent by the Neon Operator during transaction execution. The gas price includes the ratio of NEON and SOL tokens, so the payment from the Neon User to Neon Operator covers all spent SOLs. The ultimate gas price is variable because it depends on the prices of SOL and NEON.
 
 ### Pass on gas savings
 
 Because the Neon EVM operates on Solana, not Ethereum, it takes advantage of Solana’s inexpensive transaction costs and favorable approach to only charge for storage allocation. This contrasts with Ethereum, where calculations require much more gas, and gas is charged for every change in data stored in Ethereum. As a result, gas usage on Solana is much cheaper than on Ethereum, and the Neon EVM passes these savings on to users.
 
-
 ## Gas price: the Operator fee
 
 The Neon Proxy obtains the current prices of SOL and NEON tokens from the [pyth.network](http://pyth.network) oracles.
 
-<Formula/>
+<Formula />
 
 > This ensures that the Neon Operator receives enough NEON to cover the transaction cost in SOL.
 
-The Neon Operator configures the value of `PRX_OPERATOR_FEE`, where 1.0 represents 100% of the potential fee extraction. The value of this parameter is currently set to **1**.
+The Neon Operator configures the value of `PRX_OPERATOR_FEE`, where 1.0 represents 100% of the potential fee extraction. The value of this parameter is currently set to **2.5**.
 
 Parameter `PRX_GAS_PRICE_SLIPPAGE` provides a buffer against transactions getting stuck in the mempool if there is volatility in prices of $SOL and $NEON. The value of this parameter is currently set to **0.25**.
 
 For example:
-<Price/>
+
+<Price />
 
 Neon recommended that Neon Operators should initially set `PRX_OPERATOR_FEE` to “1.0” for Mainnet launch. This allows Operators to cover their hardware costs while transaction demands are low. As demand grows, Operators may adjust their fees in response.
 
@@ -59,17 +59,18 @@ Neon recommended that Neon Operators should initially set `PRX_OPERATOR_FEE` to 
 An Operator has two options:
 
 - **Recommended**: set up the `PRX_MINIMAL_GAS_PRICE` to 1 as per the default value in EVMs
-- Set up the `PRX_MINIMAL_GAS_PRICE` to reject low offers 
+- Set up the `PRX_MINIMAL_GAS_PRICE` to reject low offers
 
 > For example, by setting the gas price minimum to 65 Galan, Neon Proxy rejects transactions with a gas price of less than 65.
 
 ## Gas price: oracle configuration
-If a transaction request arrives with a gas price below that of the Operator costs + Operator fee, but with a gas price larger than the designated `PRX_MINIMAL_GAS_PRICE`, the Neon Proxy accepts the transaction into mempool. 
 
-The Neon transaction will only be executed when the gas price covers Operator costs + Operator fee. If the number of transactions in the mempool grows to the `PRX_MEMPOOL_CAPACITY` (by default =4096), Neon Proxy removes the transaction with the smallest gas price from the mempool to accept transactions with the higher gas price. Therefore, it's not critical to set the `PRX_MINIMAL_GAS_PRICE` to a small value. 
+If a transaction request arrives with a gas price below that of the Operator costs + Operator fee, but with a gas price larger than the designated `PRX_MINIMAL_GAS_PRICE`, the Neon Proxy accepts the transaction into mempool.
 
+The Neon transaction will only be executed when the gas price covers Operator costs + Operator fee. If the number of transactions in the mempool grows to the `PRX_MEMPOOL_CAPACITY` (by default =4096), Neon Proxy removes the transaction with the smallest gas price from the mempool to accept transactions with the higher gas price. Therefore, it's not critical to set the `PRX_MINIMAL_GAS_PRICE` to a small value.
 
 ## Calculation configuration
+
 The Neon Proxy has several settings that accommodate the calculation of gas-price on your required network:
 
 - `PRX_PP_SOLANA_URL`: the HTTP/S address of the Solana node (Devnet/Mainnet) that provides the Pyth data account that supplies $NEON and $SOL prices
@@ -77,13 +78,13 @@ The Neon Proxy has several settings that accommodate the calculation of gas-pric
 - `PRX_UPDATE_PYTH_MAPPING_PERIOD_SEC`: the time period to reread the Pyth mapping account. The Neon Proxy reads the Pyth mapping account at the start, gets the addresses of $NEON and $SOL accounts, and rechecks the address from the Pyth Mapping account only after `UPDATE_PYTH_MAPPING_PERIOD_SEC`. It is recommended to set this generously (e.g. 1/3/10 hours), because the price feed accounts don’t change often.
 - `PRX_MINIMAL_GAS_PRICE`: the minimum gas price to accept transactions into the mempool for on-chain execution
 
-<!-- 
+<!--
 
 > Let's take a closer look at the minimum gas price variable.
 
 ## Zero gas price for testing
 
-On Devnet test NEON is available, however, for beta Mainnet testing purposes, the Neon Proxy can be configured to accept transactions with a 0 gas price (a balance of SOL is available to cover the transaction fees on Solana). 
+On Devnet test NEON is available, however, for beta Mainnet testing purposes, the Neon Proxy can be configured to accept transactions with a 0 gas price (a balance of SOL is available to cover the transaction fees on Solana).
 
 To enable this configuration, the Neon Operator should set up the following parameters:
 
@@ -94,4 +95,3 @@ To enable this configuration, the Neon Operator should set up the following para
 As a result, the Neon Proxy returns the 0 gas price and accepts Neon transactions with the 0 gas price.
 
  -->
-

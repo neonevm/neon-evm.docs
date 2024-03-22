@@ -4,7 +4,7 @@ proofedDate: 20231204
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: Calc sheet https://docs.google.com/spreadsheets/d/1g2ms3DveyPgrG0Gf6cSwq6xhT0AgrrRus_pa9ICHP4w/edit?usp=sharing 
+comment: Calc sheet https://docs.google.com/spreadsheets/d/1g2ms3DveyPgrG0Gf6cSwq6xhT0AgrrRus_pa9ICHP4w/edit?usp=sharing
 ---
 
 import Formula from '../single-source-snippets/_price_formula.mdx'
@@ -24,7 +24,7 @@ The NEON token is used to pay the “gas fees” required for transaction execut
 
 :::info
 Neon EVM will soon support fee payment in the same token as the transaction token for supported tokens e.g. SOL and USDC.
-::: 
+:::
 
 > `Gas Fee` = `Gas amount` \* `Gas price`
 >
@@ -85,11 +85,11 @@ The Gas amount is calculated with N=1 iterations and S=0 storage costs:
 
 ### Example 2: create a new account
 Within [Solana](https://docs.solana.com/storage_rent_economics), the rental cost for storage can be paid via one of two methods:
-1. Set it and forget it. 
+1. Set it and forget it.
 
 > With this approach, accounts with two years' worth of rent deposited are exempt from network rent charges. By maintaining this minimum balance, the broader network benefits from reduced liquidity and the account holder can rest assured that their data is retained for continual access and usage.
 
-2. Pay per byte. 
+2. Pay per byte.
 
 > The network can charge rent on a per-epoch basis, in credit for the next epoch. This rent is deducted at a rate specified in genesis, in Lamports per Kilobyte-year.
 
@@ -119,4 +119,4 @@ To simplify the user experience, Neon takes option 1 and charges two years' wort
 
 ## What next?
 
-If you want to get your dApp started on Neon EVM, you may be wondering how you pay for the first transactions that are required to buy the NEON required to cover gas costs. This is where our starter pack of [gasless transactions](/docs/developing/gasless) comes in. Furthermore, our "coming soon" feature will allow users to pay fees in [alternative tokens](https://neonevm.org/blog/feature-alternative-gas-fee-token).
+If you want to get your dApp started on Neon EVM, you may be wondering how you pay for the first transactions that are required to buy the NEON required to cover gas costs. This is where our starter pack of gasless transactions comes in. Furthermore, our "coming soon" feature will allow users to pay fees in [alternative tokens](https://neonevm.org/blog/feature-alternative-gas-fee-token).
