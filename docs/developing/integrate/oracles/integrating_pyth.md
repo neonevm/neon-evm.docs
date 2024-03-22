@@ -11,18 +11,18 @@ comment: todo the <!-- https://github.com/pyth-network/pyth-neon_ --> is an arch
 
 - First call `pyth.updatePriceFeeds`
 - Next call `pyth.getPrice`
-- Find price feed addresses on [Devnet](https://pyth.network/developers/price-feed-ids/#neon-evm-devnet) and [Mainnet](https://pyth.network/developers/price-feed-ids/#neon-evm-mainnet)
+- Find price feed addresses on [Devnet](https://pyth.network/developers/price-feed-ids#solana-devnet) and [Mainnet](https://pyth.network/developers/price-feed-ids#solana-mainnet-beta)
 
 ## Introduction
 
-[Pyth](https://pyth.network/) is an open-source real-time on-chain market data feed. To use Pyth prices, you must call the function `updatePriceFeeds `, which submits the price update data to the Pyth contract in your target chain. 
+[Pyth](https://pyth.network/) is an open-source real-time on-chain market data feed. To use Pyth prices, you must call the function `updatePriceFeeds `, which submits the price update data to the Pyth contract in your target chain.
 
 > Your contract interacts with the Pyth contract to request a data refresh. This interaction also provides an opportunity to validate that the updates you received are authentic.
 
 Next, your contract should query the Pyth Contract that holds this updated data for the token prices you require. The price feed IDs are available for Neon EVM:
-- [Pyth on Devnet](https://pyth.network/developers/price-feed-ids/#neon-evm-devnet)
-- [Pyth on Mainnet](https://pyth.network/developers/price-feed-ids/#neon-evm-mainnet)
 
+- [Pyth on Devnet](https://pyth.network/developers/price-feed-ids#solana-devnet)
+- [Pyth on Mainnet](https://pyth.network/developers/price-feed-ids#solana-mainnet-beta)
 
 ## How to integrate with the Pyth contract
 
