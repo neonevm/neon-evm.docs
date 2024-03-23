@@ -7,6 +7,8 @@ approvedBy: na
 comment: todo the <!-- https://github.com/pyth-network/pyth-neon_ --> is an archive
 ---
 
+import mm_p_key from '@site/static/img/doc-images/developing/deploy_facilities/foundry-metamask.png';
+
 ## TL;DR
 
 - First call `pyth.updatePriceFeeds`
@@ -24,38 +26,160 @@ Next, your contract should query the Pyth Contract that holds this updated data 
 - [Pyth on Devnet](https://pyth.network/developers/price-feed-ids#solana-devnet)
 - [Pyth on Mainnet](https://pyth.network/developers/price-feed-ids#solana-mainnet-beta)
 
-## How to integrate with the Pyth contract
+## Boilerplate contract
 
-Because Pyth is an on-demand oracle, you must first retrieve the price feeds before calling the token's price based on the price feed ID for the token symbol/s you are interested in.
+[View GitHub example](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/contracts/TestPyth/TestPyth.sol)
 
-Let's examine an extract of a swap function (for the full contract, [see Pyth's example](https://github.com/pyth-network/pyth-crosschain/blob/main/target_chains/ethereum/examples/oracle_swap/contract/src/OracleSwap.sol)):
+```
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.21;
 
-```SOL showLineNumbers
-SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.0;
+import "@pythnetwork/pyth-sdk-solidity/IPyth.sol";
 
-function swap(
-        bool isBuy,
-        uint size,
-        bytes[] calldata pythUpdateData
-    ) external payable {
-    // Ensure the contract on Neon EVM has the current data.
-        uint updateFee = pyth.getUpdateFee(pythUpdateData);
-        pyth.updatePriceFeeds{value: updateFee}(pythUpdateData);
-    // Retrieve the token price for the tokens you need.
-        PythStructs.Price memory currentBasePrice = pyth.getPrice(
-            baseTokenPriceId
-        );
-        PythStructs.Price memory currentQuotePrice = pyth.getPrice(
-            quoteTokenPriceId
-        );
+contract TestPyth {
+    address public immutable pyth;
+
+    constructor(address _pyth) {
+        pyth = _pyth;
+    }
+
+    /// @notice Returns the price and confidence interval.
+    /// @dev Reverts if the price has not been updated within the last `getValidTimePeriod()` seconds.
+    function getPrice(bytes32 id) external view returns (PythStructs.Price memory) {
+        return IPyth(pyth).getPrice(id);
+    }
+
+    /// @notice Returns the price of a price feed without any sanity checks.
+    /// @dev This function returns the most recent price update in this contract without any recency checks.
+    /// This function is unsafe as the returned price update may be arbitrarily far in the past.
+    function getPriceUnsafe(bytes32 id) external view returns (PythStructs.Price memory) {
+        return IPyth(pyth).getPriceUnsafe(id);
+    }
+
+    /// @notice Returns the required fee to update an array of price updates.
+    function getUpdateFee(bytes[] calldata updateData) external view returns (uint) {
+        return IPyth(pyth).getUpdateFee(updateData);
+    }
+
+    /// @notice Update price feeds with given update messages.
+    /// This method requires the caller to pay a fee in wei; the required fee can be computed by calling
+    /// `getUpdateFee` with the length of the `updateData` array.
+    /// Prices will be updated if they are more recent than the current stored prices.
+    /// The call will succeed even if the update is not the most recent.
+    /// @dev Reverts if the transferred fee is not sufficient or the updateData is invalid.
+    function updatePriceFeeds(bytes[] calldata updateData) external payable {
+        IPyth(pyth).updatePriceFeeds{value: msg.value}(updateData);
+    }
+}
 ```
 
-Line 7 refreshes the data held by the Pyth contract, and line 13-15 retrieves the first of the token prices required for the swap logic.
+The constructor in the smart contract takes the proxy contract address as an argument.
 
-## Considerations for using Pyth on Neon EVM
+| Location | Proxy Contract address                     |
+| :------- | :----------------------------------------- |
+| Devnet   | 0x2FF312f50689ad279ABb164dB255Eb568733BD6c |
+| Mainnet  | 0x7f2db085efc3560aff33865dd727225d91b4f9a5 |
 
-Pyth maintains the contracts on Neon EVM, with the repo maintained by Pyth on GitHub at [pyth-network/pyth-neon](https://github.com/pyth-network/pyth-neon).
+## How to integrate with the Pyth contract
+
+The example this tutorial is based on is located in [this repository](https://github.com/neonlabsorg/neon-tutorials/tree/main/hardhat).
+
+By the end of this tutorial, you will deploy a contract which reads Pyth price feeds.
+
+### Step 1: Installation
+
+> **Note:** This page is just a quickstart based on a specific example program. For more details on installing Hardhat, refer to the _[Hardhat documentation](https://hardhat.org/hardhat-runner/docs/getting-started#overview)_.
+
+Using Git, clone the example Hardhat project from the remote repository and navigate to it:
+
+```sh
+git clone https://github.com/neonlabsorg/neon-tutorials
+cd neon-tutorials/hardhat
+```
+
+Then, run the following command:
+
+```sh
+npm install
+```
+
+This will install all the necessary packages to continue with the example. These packages include the `Hardhat` library.
+
+If the above command results in an error, run:
+
+```sh
+npm cache clear --force
+npm install
+```
+
+### Step 2: Set Up MetaMask Accounts
+
+:::info
+This step requires an EVM-compatible wallet such as MetaMask, connected to Neon Devnet, with a balance in Devnet NEON available from [NeonFaucet](https://neonfaucet.org/).
+
+The following tutorials assist you to meet these prerequisites:
+
+- Learn how to [install a MetaMask wallet and connect it to Devnet](/docs/wallet/metamask_setup)
+
+  > Or [connect an existing wallet to Devnet](/docs/developing/connect_rpc#connect-via-chainlist)
+  > :::
+
+  2.1 Obtain the private key for your wallet account.
+
+> To obtain the private key from MetaMask, from the hamburger menu, click **Account Details** > **Show Private Key**, enter your password, and click **Confirm** for access to the private key for that account.
+> <img src={mm_p_key} width="250" />
+
+2.2 Create a .env file and add these lines:
+
+```
+PRIVATE_KEY_OWNER=`YOUR_PRIVATE_KEY`
+```
+
+:::important
+Replace `YOUR_PRIVATE_KEY` with your data.
+:::
+
+2.3 Run:
+
+```
+source .env
+```
+
+### Step 3: Compile Contracts
+
+All of the contracts are located in the project's `contracts/` directory. Before these contracts can be run, they must first be compiled. To compile the project's contracts, run the following command:
+
+```sh
+npx hardhat compile
+```
+
+After running this step, you should see output similar to the following:
+
+```
+Compiled 23 Solidity files successfully
+```
+
+### Step 4: Deploy Contract
+
+`NEON_COFIG` contains the proxy contract addresses on Devnet and Mainnet, and the price ids for reading Pyth prices from Solana.
+
+To deploy the project's contract for Pyth price, simply run the command below to run the deployment script in the `scripts/` directory:
+
+```sh
+npx hardhat run scripts/TestPyth/deploy.js --network neondevnet
+```
+
+After running this command and deploying our TestPyth smart contract now we can take the newly deployed contract address and included it inside `scripts/TestPyth/getPrice.js` where we can initiate getting the Pyth price feeds:
+
+```sh
+npx hardhat run scripts/TestPyth/getPrice.js --network neondevnet
+```
+
+The output should look like:
+
+```
+
+```
 
 It's **strongly recommended** that you follow the [consumer best practices](https://docs.pyth.network/documentation/pythnet-price-feeds/best-practices) when consuming Pyth data.
 
@@ -66,10 +190,3 @@ While Pyth provides a sane default for the staleness threshold and a fallback pr
 ## What next?
 
 To learn more about Pyth's architecture, see their video: [How to use Pyth's on-demand model](https://www.youtube.com/watch?v=qdwrs23Qc9g).
-
-<!-- ### How to Deploy to Neon EVM
-
-1. Create a `.secret` file containing the private key or mnemonic of the account you want to use to deploy the
-   contracts.
-2. (Optional) Edit `truffle-config.js` to add the NEON network you want to deploy to.
-3. Run `truffle migrate --network neon_devnet` -->
