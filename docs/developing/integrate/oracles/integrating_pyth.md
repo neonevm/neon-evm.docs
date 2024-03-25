@@ -13,7 +13,7 @@ import mm_p_key from '@site/static/img/doc-images/developing/deploy_facilities/f
 
 - First call `pyth.updatePriceFeeds`
 - Next call `pyth.getPrice`
-- Find price feed addresses on [Devnet](https://pyth.network/developers/price-feed-ids#solana-devnet) and [Mainnet](https://pyth.network/developers/price-feed-ids#solana-mainnet-beta)
+- Find price feed IDs on Neon EVM Mainnet and Devnet [here](https://pyth.network/developers/price-feed-ids#pyth-evm-stable).
 
 ## Introduction
 
@@ -21,10 +21,7 @@ import mm_p_key from '@site/static/img/doc-images/developing/deploy_facilities/f
 
 > Your contract interacts with the Pyth contract to request a data refresh. This interaction also provides an opportunity to validate that the updates you received are authentic.
 
-Next, your contract should query the Pyth Contract that holds this updated data for the token prices you require. The price feed IDs are available for Neon EVM:
-
-- [Pyth on Devnet](https://pyth.network/developers/price-feed-ids#solana-devnet)
-- [Pyth on Mainnet](https://pyth.network/developers/price-feed-ids#solana-mainnet-beta)
+Next, your contract should query the Pyth Contract that holds this updated data for the token prices you require. The price feed IDs are available for Neon EVM [here](https://pyth.network/developers/price-feed-ids#pyth-evm-stable).
 
 ## Boilerplate contract
 
@@ -77,7 +74,7 @@ The constructor in the smart contract takes the proxy contract address as an arg
 
 | Location | Proxy Contract address                     |
 | :------- | :----------------------------------------- |
-| Devnet   | 0x2FF312f50689ad279ABb164dB255Eb568733BD6c |
+| Devnet   | 0x0708325268dF9F66270F1401206434524814508b |
 | Mainnet  | 0x7f2db085efc3560aff33865dd727225d91b4f9a5 |
 
 ## How to integrate with the Pyth contract
@@ -161,7 +158,7 @@ Compiled 23 Solidity files successfully
 
 ### Step 4: Deploy Contract
 
-`NEON_COFIG` contains the proxy contract addresses on Devnet and Mainnet, and the price ids for reading Pyth prices from Solana.
+`NEON_COFIG` contains the proxy contract addresses on Devnet and Mainnet, and the price ids for reading Pyth prices.
 
 To deploy the project's contract for Pyth price, simply run the command below to run the deployment script in the `scripts/` directory:
 
@@ -178,7 +175,12 @@ npx hardhat run scripts/TestPyth/getPrice.js --network neondevnet
 The output should look like:
 
 ```
-
+BTC_USD Result(4) [ 6997401314334n, 3802014633n, -8n, 1711403472n ]
+ETH_USD Result(4) [ 359529041250n, 172892485n, -8n, 1711403472n ]
+SOL_USD Result(4) [ 19007398487n, 20190280n, -8n, 1711403472n ]
+LINK_USD Result(4) [ 1930030964n, 2261590n, -8n, 1711403472n ]
+USDC_USD Result(4) [ 99989324n, 49324n, -8n, 1711403472n ]
+USDT_USD Result(4) [ 100035012n, 35012n, -8n, 1711403472n ]
 ```
 
 It's **strongly recommended** that you follow the [consumer best practices](https://docs.pyth.network/documentation/pythnet-price-feeds/best-practices) when consuming Pyth data.
