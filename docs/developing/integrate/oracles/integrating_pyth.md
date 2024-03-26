@@ -158,7 +158,7 @@ Compiled 23 Solidity files successfully
 
 ### Step 4: Deploy Contract
 
-`NEON_COFIG` contains the proxy contract addresses on Devnet and Mainnet, and the price ids for reading Pyth prices.
+`NEON_CONFIG` contains the proxy contract addresses on Devnet and Mainnet, and the price ids for reading Pyth prices.
 
 To deploy the project's contract for Pyth price, simply run the command below to run the deployment script in the `scripts/` directory:
 
@@ -182,6 +182,10 @@ LINK_USD Result(4) [ 1930030964n, 2261590n, -8n, 1711403472n ]
 USDC_USD Result(4) [ 99989324n, 49324n, -8n, 1711403472n ]
 USDT_USD Result(4) [ 100035012n, 35012n, -8n, 1711403472n ]
 ```
+
+:::info
+To deploy on Neon EVM Mainnet, change `--network neondevnet` to `--network neonmainnet` in the command line.
+:::
 
 It's **strongly recommended** that you follow the [consumer best practices](https://docs.pyth.network/documentation/pythnet-price-feeds/best-practices) when consuming Pyth data.
 
