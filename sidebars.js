@@ -75,7 +75,8 @@ const sidebars = {
         'developing/integrate/oracles/integrating_chainlink',
         'developing/integrate/oracles/integrating_pyth',
         'developing/integrate/middleware/the-graph',
-        'developing/integrate/indexer/flair'
+        'developing/integrate/indexer/flair',
+        'developing/integrate/indexer/envio'
       ]
     },
     {
