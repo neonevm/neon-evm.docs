@@ -60,7 +60,7 @@ neonmainnet: {
 </TabItem>
 </Tabs>
 
-See the [Hardhat tutorial](https://docs.neonfoundation.io/docs/developing/deploy_facilities/configure_hardhat)
+See the [Hardhat tutorial](/docs/developing/deploy_facilities/configure_hardhat)
 
 <!-- todo find alt fix for Docusaurus issue with tabs -- links not rendering See the [Hardhat tutorial](/docs/deploy_facilities/configure_hardhat). -->
 

@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 _This page outlines the steps for verifying contracts on Neon EVM using the Hardhat tool._
 
-Before beginning the tutorial below, make sure that you have properly [configured Hardhat](configure_hardhat) for Neon EVM.
+Before beginning the tutorial below, make sure that you have properly [configured Hardhat](/docs/developing/deploy_facilities/configure_hardhat) for Neon EVM.
 
 This tutorial is based on the example located in [this repository](https://github.com/neonlabsorg/neon-tutorials/tree/main/hardhat).
 
