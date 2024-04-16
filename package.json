@@ -15,11 +15,11 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.1.1",
-    "@docusaurus/plugin-client-redirects": "^3.1.1",
-    "@docusaurus/plugin-google-analytics": "^3.1.1",
-    "@docusaurus/preset-classic": "^3.1.1",
-    "@docusaurus/theme-search-algolia": "^3.1.1",
+    "@docusaurus/core": "^3.2.1",
+    "@docusaurus/plugin-client-redirects": "^3.2.1",
+    "@docusaurus/plugin-google-analytics": "^3.2.1",
+    "@docusaurus/preset-classic": "^3.2.1",
+    "@docusaurus/theme-search-algolia": "^3.2.1",
     "@mdx-js/react": "^3.0.1",
     "algolia": "^0.0.0",
     "clsx": "^2.1.0",
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.23.4",
-    "@docusaurus/module-type-aliases": "^3.1.1",
+    "@docusaurus/module-type-aliases": "^3.2.1",
     "@tsconfig/docusaurus": "^2.0.2",
     "typescript": "^5.3.3"
   },
