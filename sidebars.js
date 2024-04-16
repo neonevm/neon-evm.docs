@@ -91,6 +91,15 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Verify Contracts',
+      items: [
+        'developing/verify_facilities/using_hardhat',
+        'developing/verify_facilities/using_foundry',
+        'developing/verify_facilities/verify_manually'
+      ]
+    },
+    {
+      type: 'category',
       label: 'Configure Dev Tools',
       items: [
         'developing/deploy_facilities/configure_hardhat',
