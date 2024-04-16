@@ -209,6 +209,8 @@ Total Paid: 0.0034876870402 ETH (20000 gas * avg 174.38435201 gwei)
 ```
 
 :::important
+`--skip-simulation` parameter skips the on-chain simulation which doesn't work on Neon EVM.
+
 The native token displayed above should be NEON instead of ETH and the unit should be Galan instead of gwei (It is not possible to customize the display).
 :::
 
