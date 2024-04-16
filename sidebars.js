@@ -110,6 +110,7 @@ const sidebars = {
       label: 'EVM Compatibility',
       items: [
         'evm_compatibility/overview',
+        'evm_compatibility/code_compatibility_checklist',
         'evm_compatibility/json_rpc_api_methods',
         'evm_compatibility/opcodes',
         'evm_compatibility/precompiles'
