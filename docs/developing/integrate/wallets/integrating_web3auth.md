@@ -145,6 +145,12 @@ This Web3Auth example allows you to login via the following ways -
 
 4.3 After successfully signing in with any of the above mentioned ways of signing in, the following methods can be checked on Neon EVM -
 
+<div className='neon-img-width-600' style={{textAlign: 'center'}}>
+
+![](img/web3auth-6.png)
+
+</div>
+
 :::important
 By default, this example is configured to connect with **Neon EVM Devnet**. `readContract()` and `writeContract()` functions in the `src/web3RPC.ts` file includes a simple storage contract address `0x093451875d5A8D61bB90faA7A8645eB17c86b297` and its ABI deployed on Neon EVM Devnet.
 
