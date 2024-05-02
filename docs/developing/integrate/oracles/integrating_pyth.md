@@ -172,10 +172,11 @@ Result(3) [ 299735750000n, 1714670448n, 1n ] ethPrice
 Result(3) [ 5919709374999n, 1714670448n, 1n ] btcPrice
 ```
 
-> The result represents an array with the following parameters -
-> 1st parameter - Price
-> 2nd parameter - Timestamp of the last price push
-> 3rd parameter - Status (0 = UNKNOWN, 1 = TRADING, 2 = HALTED, 3 = AUCTION)
+> The result represents an array with the following parameters:
+>
+> - 1st parameter - Price
+> - 2nd parameter - Timestamp of the last price push
+> - 3rd parameter - Status (0 = UNKNOWN, 1 = TRADING, 2 = HALTED, 3 = AUCTION)
 >
 > For validating the correct price, a check for the timestamp or status can be implemented in the code.
 
