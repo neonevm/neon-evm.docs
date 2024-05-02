@@ -1,6 +1,6 @@
 ---
 title: Pyth
-proofedDate: 20240501
+proofedDate: 20240502
 iterationBy: HB
 includedInSite: true
 approvedBy: na
@@ -33,7 +33,10 @@ import "./QueryAccount.sol";
 contract TestReadPythPriceFeed {
     using SolanaDataConverterLib for bytes;
     using SolanaDataConverterLib for uint64;
+    using SolanaDataConverterLib for uint32;
 
+    /// @notice This method serves to read the bytes length of a Solana data account
+    /// @param solanaAddress The Solana data account address of the price feed
     function readSolanaDataAccountLen(bytes32 solanaAddress) public view returns(uint256) {
         (bool success, uint256 data) = QueryAccount.length(uint256(solanaAddress));
         require(success, "failed to query account data");
@@ -41,6 +44,10 @@ contract TestReadPythPriceFeed {
         return data;
     }
 
+    /// @notice This method serves to read the raw data of a Solana data account
+    /// @param solanaAddress The Solana data account address of the price feed
+    /// @param offset The offset in bytes, starting to read from the byte
+    /// @param len The length of the Solana data account
     function readSolanaDataAccountRaw(bytes32 solanaAddress, uint64 offset, uint64 len) public view returns(bytes memory) {
         (bool success, bytes memory data) = QueryAccount.data(uint256(solanaAddress), offset, len);
         require(success, "failed to query account data");
@@ -48,11 +55,22 @@ contract TestReadPythPriceFeed {
         return data;
     }
 
-    function readSolanaPythPriceFeed(bytes32 solanaAddress, uint64 offset, uint64 len) public view returns(int64, uint64) {
+    /// @notice This method serves to read from Pyth price feeds price, prevPublishTimestamp and status
+    /// @param solanaAddress The Solana data account address of the price feed
+    /// @param offset The offset in bytes, starting to read from the byte
+    /// @param len The length of the Solana data account
+    /// @return Price
+    /// @return Timestamp
+    /// @return Status - could be UNKNOWN, TRADING, HALTED, AUCTION
+    function readSolanaPythPriceFeed(bytes32 solanaAddress, uint64 offset, uint64 len) public view returns(int64, uint64, uint32) {
         (bool success, bytes memory data) = QueryAccount.data(uint256(solanaAddress), offset, len);
         require(success, "failed to query account data");
 
-        return ((data.toUint64(208)).readLittleEndianSigned64(), (data.toUint64(200)).readLittleEndianUnsigned64());
+        return (
+            (data.toUint64(208)).readLittleEndianSigned64(),
+            (data.toUint64(200)).readLittleEndianUnsigned64(),
+            (data.toUint32(224)).readLittleEndianUnsigned32()
+        );
     }
 }
 ```
@@ -147,14 +165,19 @@ npx hardhat run scripts/TestReadSolanaData/TestReadPythPriceFeed.js --network ne
 The output should look like:
 
 ```
-TestReadPythPriceFeed deployed to 0x80f239B384C85fc012bF7e8b608bC741ba5a002D
-Result(2) [ 101142500n, 1714620698n ] neonPrice
-Result(2) [ 13086946350n, 1714620699n ] solPrice
-Result(2) [ 292996614519n, 1714620700n ] ethPrice
-Result(2) [ 5761891500000n, 1714620702n ] btcPrice
+TestReadPythPriceFeed deployed to 0x7068EbfED06C7a87ba23e339199FACeF76515Df2
+Result(3) [ 102486086n, 1714670447n, 1n ] neonPrice
+Result(3) [ 13932481388n, 1714670448n, 1n ] solPrice
+Result(3) [ 299735750000n, 1714670448n, 1n ] ethPrice
+Result(3) [ 5919709374999n, 1714670448n, 1n ] btcPrice
 ```
 
-**The 1st parameter in the resulting array is the price and the 2nd parameter is the timestamp of the last price push.**
+> The result represents an array with the following parameters -
+> 1st parameter - Price
+> 2nd parameter - Timestamp of the last price push
+> 3rd parameter - Status (0 = UNKNOWN, 1 = TRADING, 2 = HALTED, 3 = AUCTION)
+>
+> For validating the correct price, a check for the timestamp or status can be implemented in the code.
 
 :::info
 To deploy on Neon EVM Mainnet, change `--network neondevnet` to `--network neonmainnet` in the command line.
