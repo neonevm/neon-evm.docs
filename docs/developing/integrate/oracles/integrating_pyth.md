@@ -120,12 +120,6 @@ PRIVATE_KEY_OWNER=`YOUR_PRIVATE_KEY`
 Replace `YOUR_PRIVATE_KEY` with your data.
 :::
 
-2.3 Run:
-
-```
-source .env
-```
-
 ### Step 3: Compile Contracts
 
 All of the contracts are located in the project's `contracts/` directory. Before these contracts can be run, they must first be compiled. To compile the project's contracts, run the following command:
@@ -159,6 +153,8 @@ Result(2) [ 13086946350n, 1714620699n ] solPrice
 Result(2) [ 292996614519n, 1714620700n ] ethPrice
 Result(2) [ 5761891500000n, 1714620702n ] btcPrice
 ```
+
+**The 1st parameter in the resulting array is the price and the 2nd parameter is the timestamp of the last price push.**
 
 :::info
 To deploy on Neon EVM Mainnet, change `--network neondevnet` to `--network neonmainnet` in the command line.
