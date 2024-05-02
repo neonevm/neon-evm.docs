@@ -1,87 +1,71 @@
 ---
 title: Pyth
-proofedDate: 20230606
+proofedDate: 20240501
 iterationBy: HB
 includedInSite: true
 approvedBy: na
-comment: todo the <!-- https://github.com/pyth-network/pyth-neon_ --> is an archive
+comment:
 ---
 
 import mm_p_key from '@site/static/img/doc-images/developing/deploy_facilities/foundry-metamask.png';
 
-## TL;DR
-
-- First call `pyth.updatePriceFeeds`
-- Next call `pyth.getPrice`
-- Find price feed IDs on Neon EVM Mainnet and Devnet [here](https://pyth.network/developers/price-feed-ids#pyth-evm-stable).
-
 ## Introduction
 
-[Pyth](https://pyth.network/) is an open-source real-time on-chain market data feed. To use Pyth prices, you must call the function `updatePriceFeeds `, which submits the price update data to the Pyth contract in your target chain.
+[Pyth](https://pyth.network/) is an open-source real-time on-chain market data feed. Neon EVM can read Pyth Solana Mainnet and Devnet price feeds natively with precompiles.
 
-> Your contract interacts with the Pyth contract to request a data refresh. This interaction also provides an opportunity to validate that the updates you received are authentic.
+Next, your contract should query the Solana Pyth Contract that holds this updated data for the token prices you require. The price feed IDs are available for -
 
-Next, your contract should query the Pyth Contract that holds this updated data for the token prices you require. The price feed IDs are available for Neon EVM [here](https://pyth.network/developers/price-feed-ids#pyth-evm-stable).
+- [Solana Mainnet Beta](https://pyth.network/developers/price-feed-ids#solana-mainnet-beta)
+- [Solana Devnet](https://pyth.network/developers/price-feed-ids#solana-devnet)
 
 ## Boilerplate contract
 
-[View GitHub example](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/contracts/TestPyth/TestPyth.sol)
+[View GitHub example](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/contracts/TestReadSolanaData/TestReadPythPriceFeed.sol)
 
 ```
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.21;
 
-import "@pythnetwork/pyth-sdk-solidity/IPyth.sol";
+import "./SolanaDataConverterLib.sol";
+import "./QueryAccount.sol";
 
-contract TestPyth {
-    address public immutable pyth;
 
-    constructor(address _pyth) {
-        pyth = _pyth;
+contract TestReadPythPriceFeed {
+    using SolanaDataConverterLib for bytes;
+    using SolanaDataConverterLib for uint64;
+
+    function readSolanaDataAccountLen(bytes32 solanaAddress) public view returns(uint256) {
+        (bool success, uint256 data) = QueryAccount.length(uint256(solanaAddress));
+        require(success, "failed to query account data");
+
+        return data;
     }
 
-    /// @notice Returns the price and confidence interval.
-    /// @dev Reverts if the price has not been updated within the last `getValidTimePeriod()` seconds.
-    function getPrice(bytes32 id) external view returns (PythStructs.Price memory) {
-        return IPyth(pyth).getPrice(id);
+    function readSolanaDataAccountRaw(bytes32 solanaAddress, uint64 offset, uint64 len) public view returns(bytes memory) {
+        (bool success, bytes memory data) = QueryAccount.data(uint256(solanaAddress), offset, len);
+        require(success, "failed to query account data");
+
+        return data;
     }
 
-    /// @notice Returns the price of a price feed without any sanity checks.
-    /// @dev This function returns the most recent price update in this contract without any recency checks.
-    /// This function is unsafe as the returned price update may be arbitrarily far in the past.
-    function getPriceUnsafe(bytes32 id) external view returns (PythStructs.Price memory) {
-        return IPyth(pyth).getPriceUnsafe(id);
-    }
+    function readSolanaPythPriceFeed(bytes32 solanaAddress, uint64 offset, uint64 len) public view returns(int64, uint64) {
+        (bool success, bytes memory data) = QueryAccount.data(uint256(solanaAddress), offset, len);
+        require(success, "failed to query account data");
 
-    /// @notice Returns the required fee to update an array of price updates.
-    function getUpdateFee(bytes[] calldata updateData) external view returns (uint) {
-        return IPyth(pyth).getUpdateFee(updateData);
-    }
-
-    /// @notice Update price feeds with given update messages.
-    /// This method requires the caller to pay a fee in wei; the required fee can be computed by calling
-    /// `getUpdateFee` with the length of the `updateData` array.
-    /// Prices will be updated if they are more recent than the current stored prices.
-    /// The call will succeed even if the update is not the most recent.
-    /// @dev Reverts if the transferred fee is not sufficient or the updateData is invalid.
-    function updatePriceFeeds(bytes[] calldata updateData) external payable {
-        IPyth(pyth).updatePriceFeeds{value: msg.value}(updateData);
+        return ((data.toUint64(208)).readLittleEndianSigned64(), (data.toUint64(200)).readLittleEndianUnsigned64());
     }
 }
 ```
 
-The constructor in the smart contract takes the proxy contract address as an argument.
-
-| Location | Proxy Contract address                     |
-| :------- | :----------------------------------------- |
-| Devnet   | 0x0708325268dF9F66270F1401206434524814508b |
-| Mainnet  | 0x7f2db085efc3560aff33865dd727225d91b4f9a5 |
+:::important
+`TestReadPythPriceFeed.sol` contract imports `QueryAccount.sol` and `SolanaDataConverterLib.sol` which are the required libraries to read data from Solana accounts natively.
+:::
 
 ## How to integrate with the Pyth contract
 
 The example this tutorial is based on is located in [this repository](https://github.com/neonlabsorg/neon-tutorials/tree/main/hardhat).
 
-By the end of this tutorial, you will deploy a contract which reads Pyth price feeds.
+By the end of this tutorial, you will deploy a contract which reads Pyth Solana price feeds.
 
 ### Step 1: Installation
 
@@ -160,27 +144,20 @@ Compiled 23 Solidity files successfully
 
 `NEON_CONFIG` contains the proxy contract addresses on Devnet and Mainnet, and the price ids for reading Pyth prices.
 
-To deploy the project's contract for Pyth price, simply run the command below to run the deployment script in the `scripts/` directory:
+To deploy the project's contract for Solana Pyth price, simply run the command below to run the deployment script in the `scripts/` directory:
 
 ```sh
-npx hardhat run scripts/TestPyth/deploy.js --network neondevnet
-```
-
-After running this command and deploying our TestPyth smart contract now we can take the newly deployed contract address and included it inside `scripts/TestPyth/getPrice.js` where we can initiate getting the Pyth price feeds:
-
-```sh
-npx hardhat run scripts/TestPyth/getPrice.js --network neondevnet
+npx hardhat run scripts/TestReadSolanaData/TestReadPythPriceFeed.js --network neondevnet
 ```
 
 The output should look like:
 
 ```
-BTC_USD Result(4) [ 6997401314334n, 3802014633n, -8n, 1711403472n ]
-ETH_USD Result(4) [ 359529041250n, 172892485n, -8n, 1711403472n ]
-SOL_USD Result(4) [ 19007398487n, 20190280n, -8n, 1711403472n ]
-LINK_USD Result(4) [ 1930030964n, 2261590n, -8n, 1711403472n ]
-USDC_USD Result(4) [ 99989324n, 49324n, -8n, 1711403472n ]
-USDT_USD Result(4) [ 100035012n, 35012n, -8n, 1711403472n ]
+TestReadPythPriceFeed deployed to 0x80f239B384C85fc012bF7e8b608bC741ba5a002D
+Result(2) [ 101142500n, 1714620698n ] neonPrice
+Result(2) [ 13086946350n, 1714620699n ] solPrice
+Result(2) [ 292996614519n, 1714620700n ] ethPrice
+Result(2) [ 5761891500000n, 1714620702n ] btcPrice
 ```
 
 :::info
@@ -188,11 +165,3 @@ To deploy on Neon EVM Mainnet, change `--network neondevnet` to `--network neonm
 :::
 
 It's **strongly recommended** that you follow the [consumer best practices](https://docs.pyth.network/documentation/pythnet-price-feeds/best-practices) when consuming Pyth data.
-
-:::note
-While Pyth provides a sane default for the staleness threshold and a fallback process if feed data is stale, users may configure this functionality.
-:::
-
-## What next?
-
-To learn more about Pyth's architecture, see their video: [How to use Pyth's on-demand model](https://www.youtube.com/watch?v=qdwrs23Qc9g).
