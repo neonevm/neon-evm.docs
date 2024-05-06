@@ -76,7 +76,8 @@ const sidebars = {
         'developing/integrate/oracles/integrating_pyth',
         'developing/integrate/middleware/the-graph',
         'developing/integrate/indexer/flair',
-        'developing/integrate/indexer/envio'
+        'developing/integrate/indexer/envio',
+        'developing/integrate/indexer/subsquid'
       ]
     },
     {
@@ -87,6 +88,15 @@ const sidebars = {
         'developing/deploy_facilities/using_foundry',
         'developing/deploy_facilities/using_truffle',
         'developing/deploy_facilities/using_remix'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Verify Contracts',
+      items: [
+        'developing/verify_facilities/using_hardhat',
+        'developing/verify_facilities/using_foundry',
+        'developing/verify_facilities/verify_manually'
       ]
     },
     {
@@ -110,6 +120,7 @@ const sidebars = {
       label: 'EVM Compatibility',
       items: [
         'evm_compatibility/overview',
+        'evm_compatibility/code_compatibility_checklist',
         'evm_compatibility/json_rpc_api_methods',
         'evm_compatibility/opcodes',
         'evm_compatibility/precompiles'
