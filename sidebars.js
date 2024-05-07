@@ -87,7 +87,8 @@ const sidebars = {
         'developing/deploy_facilities/using_hardhat',
         'developing/deploy_facilities/using_foundry',
         'developing/deploy_facilities/using_truffle',
-        'developing/deploy_facilities/using_remix'
+        'developing/deploy_facilities/using_remix',
+        'developing/deploy_facilities/using_goethereum'
       ]
     },
     {
