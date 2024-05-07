@@ -27,6 +27,9 @@ import TabItem from '@theme/TabItem';
 > Solana provides further details on the [recommended minimum requirements](https://docs.solana.com/ru/running-validator/validator-reqs).
 - nmap (or equivalent)
 
+:::important
+This example for setting up the local proxy works only with **Neon EVM Devnet**.
+:::
 
 ## Step 1: Create a docker compose file
 
