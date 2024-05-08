@@ -56,7 +56,7 @@ These files are auto-generated according to the template and language chosen by 
 
 This walkthrough explains how to initialize an indexer using a single or multiple contracts that are already deployed on a blockchain. This process allows a user to quickly and easily start up a basic indexer and a queryable GraphQL API for their blockchain application within a few minutes.
 
-### Intialize your indexer
+### Initialize your indexer
 
 `cd` into the folder of your choice and run
 
