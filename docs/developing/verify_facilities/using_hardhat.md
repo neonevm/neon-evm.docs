@@ -4,7 +4,7 @@ proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment:
+comment: This is another test
 ---
 
 import Tabs from '@theme/Tabs';
