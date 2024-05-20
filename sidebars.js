@@ -152,7 +152,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Run Neon Proxy',
-      items: ['operating/basic', 'operating/enhanced', 'operating/installation/setup_kubernetes']
+      items: ['operating/basic', 'operating/enhanced']
     },
     {
       type: 'category',
