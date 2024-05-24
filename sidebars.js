@@ -110,11 +110,11 @@ const sidebars = {
         'developing/deploy_facilities/configure_truffle'
       ]
     },
-    {
-      type: 'doc',
-      label: 'Set up Local Neon EVM',
-      id: 'developing/dev_environment/local_proxy_remote_solana'
-    },
+    //{
+    //  type: 'doc',
+    //  label: 'Set up Local Neon EVM',
+    //  id: 'developing/dev_environment/local_proxy_remote_solana'
+    //},
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Learn</h4>' },
     {
