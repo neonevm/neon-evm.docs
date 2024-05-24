@@ -63,8 +63,6 @@ To create a proposal:
 
 1. Navigate to the Governance topic that best suits your proposal.
 
-<!-- >> <img src={govern4} /> -->
-
 2. Click on the "Create proposal" button.
 
 > <img src={govern5} />
@@ -79,8 +77,6 @@ To create a proposal:
 
 5. Approve the transaction in your wallet to finalize the proposal creation.
 
-<!-- >> <img src={govern8} /> -->
-
 Your proposal will now appear in the list of active proposals, ready for the voting process.
 
 ## Voting
@@ -91,15 +87,9 @@ To vote on a proposal:
 
 1. Open the proposal you wish to vote on from the list of active proposals or by following a direct link.
 
-<!-- >> <img src={govern9} /> -->
-
 2. Choose "Positive" to vote in favor of the proposal or "Negative" to vote against it.
 
-<!-- >> <img src={govern10} /> -->
-
 3. Select the percentage of your NEON tokens you want to allocate to the vote and click "Confirm."
-
-<!-- >> <img src={govern11} /> -->
 
 4. Approve the voting transaction in your wallet.
 
