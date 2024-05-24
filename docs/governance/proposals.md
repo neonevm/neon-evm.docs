@@ -1,5 +1,3 @@
-Here is the updated "Voting Process" page in its original Docusaurus format, with relevant image placeholders and wireframe references:
-
 ---
 title: Voting Process
 proofedDate: na
