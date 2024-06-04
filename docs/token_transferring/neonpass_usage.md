@@ -139,7 +139,7 @@ When transferring tokens from Solana to Neon EVM:
 
 </Tabs>
 
-:::caution
+:::important
 Please be aware of the gas fee specificities for each transfer direction. Always ensure you have sufficient funds in the appropriate token to cover gas fees before initiating a transfer.
 :::
 
@@ -160,7 +160,7 @@ Please be aware of the gas fee specificities for each transfer direction. Always
     <img src={image12} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
 :::info
-If you encounter any persistent issues or have questions about edge cases not covered here, please reach out to our support team for assistance.
+If you encounter any persistent issues or have questions about edge cases not covered here, please reach out to our [support team](http://discord.com/invite/neonevm) for assistance.
 :::
 
 ## Using NeonPass on Mobile Devices
@@ -183,7 +183,7 @@ NeonPass is designed to be responsive and user-friendly across various devices, 
   
   <img src={image15} width="450" style={{ display: 'block', margin: '10px auto' }} /> 
 
-   :::caution
+   :::important
    Always double-check the transaction details before confirming a transfer, especially on mobile devices where screen sizes are smaller.
    :::
 
