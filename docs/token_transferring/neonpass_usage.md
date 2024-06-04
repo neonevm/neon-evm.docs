@@ -28,8 +28,7 @@ import image16 from '@site/static/img/doc-images/neonpassV2/Transfer_failed.png'
 
 ## TL;DR
 
-- Transfer tokens to and from Solana and Neon networks with our [intuitive UI](https://neonpass.live/)
-- No wrapping
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Yw6u6YkTgQ4?si=ooklUkFXbuUXKK_d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Overview
 
@@ -65,14 +64,14 @@ When transferring tokens from Neon EVM to Solana for the first time, ensure that
 ### Step 2: Connect wallets to NeonPass
 
 :::tip
-Remember to use a browser to which both your Solana- and EVM-compatible wallets are attached.
+Remember to use a browser to which both your Solana and Neon EVM compatible wallets are attached.
 :::
 
-2.1 Click **Connect Wallet** to connect your Solana-compatible wallet to NeonPass. Follow the login procedure in your wallet's popup window and ensure it's connected to the network you require (e.g. Mainnet).
+2.1 Click **Connect Wallet** to connect your Solana compatible wallet to NeonPass. Follow the login procedure in your wallet's popup window and ensure it's connected to the network you require (e.g. Mainnet).
 
 <img src={image1} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-2.2 Repeat this step for your EVM-compatible wallet.
+2.2 Repeat this step for your Neon EVM compatible wallet.
 
 ### Step 3: Conduct transfer
 
@@ -90,11 +89,9 @@ Your first ever transaction from your wallet includes a one time fee to generate
 
 3.2 Choose the token and enter the amount to transfer.
 
-3.3 Are you an expert user? Click on 'Advanced Mode' and select a different priority fee to speed up 
+3.3 Click **Transfer** and sign the transaction in your connected wallets.
 
-3.4 Click **Transfer** and sign the transaction in your connected wallets.
-
-3.5 Review the transaction summary and enjoy your tokens in Solana!
+3.4 Review the transaction summary and enjoy your tokens in Solana!
 
  </TabItem>
 
@@ -106,15 +103,17 @@ Your first ever transaction from your wallet includes a one time fee to generate
 
 3.2 Choose the token, enter the amount, and select the gas token (NEON or SOL).
 
-3.3 Click **Transfer** and sign the transaction in your connected wallets.
+3.3 Are you an expert user? Click on 'Advanced Mode' and select a different priority fee to speed up 
 
-3.4 Review the transaction summary and enjoy your tokens in Neon EVM!
+3.4 Click **Transfer** and sign the transaction in your connected wallets.
+
+3.5 Review the transaction summary and enjoy your tokens in Neon EVM!
 
  </TabItem>
 
 </Tabs>
 
-3.5 Verify the transaction on [NeonScan](https://neonscan.org) or [Solana Explorer](https://explorer.solana.com/).
+**Verify the transaction on [NeonScan](https://neonscan.org/) or [Blockscout](https://neon.blockscout.com/).**
 
 We hope that you love NeonPass and that you are ready to leverage the full potential of Neon EVM by facilitating hassle-free transfers of assets to and from Solana.
 
