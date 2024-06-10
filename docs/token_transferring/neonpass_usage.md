@@ -28,7 +28,7 @@ import image16 from '@site/static/img/doc-images/neonpassV2/Transfer_failed.png'
 
 ## TL;DR
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Yw6u6YkTgQ4?si=ooklUkFXbuUXKK_d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OPZwzh_9Qy4?si=Z1M904pYTlvDp0tM" title="How to Use NeonPass | Step-by-Step Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Overview
 
@@ -157,7 +157,7 @@ Please be aware of the gas fee specificities for each transfer direction. Always
    
    <img src={image11} width="450" style={{ display: 'block', margin: '10px auto' }} /> 
    
-    <img src={image12} width="450" style={{ display: 'block', margin: '10px auto' }} />
+   <img src={image12} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
 :::info
 If you encounter any persistent issues or have questions about edge cases not covered here, please reach out to our [support team](http://discord.com/invite/neonevm) for assistance.
