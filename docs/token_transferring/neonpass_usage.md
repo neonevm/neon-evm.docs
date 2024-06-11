@@ -167,11 +167,11 @@ If you encounter any persistent issues or have questions about edge cases not co
 
 NeonPass is designed to be responsive and user-friendly across various devices, including mobile phones.
 
-<img src={image13} width="450" style={{ display: 'block', margin: '10px auto' }} /> 
+<img src={image13} width="190" style={{ display: 'block', margin: '5px auto' }} /> 
 
 1. Connecting wallets on mobile
    
-  <img src={image14} width="450" style={{ display: 'block', margin: '10px auto' }} /> 
+  <img src={image14} width="190" style={{ display: 'block', margin: '10px auto' }} /> 
 
    :::tip
    Make sure you have your mobile wallet apps installed and set up before attempting to connect them to NeonPass.
@@ -181,15 +181,15 @@ NeonPass is designed to be responsive and user-friendly across various devices, 
 
 3. Initiating and confirming transfers
   
-  <img src={image15} width="450" style={{ display: 'block', margin: '10px auto' }} /> 
+  <img src={image15} width="190" style={{ display: 'block', margin: '10px auto' }} /> 
 
    :::important
    Always double-check the transaction details before confirming a transfer, especially on mobile devices where screen sizes are smaller.
    :::
 
-4. Tracking transfer progress and history
+4. Track transfer progress and history in a dedicated explorer
 
-   <img src={image16} width="450" style={{ display: 'block', margin: '10px auto' }} />
+<!--    <img src={image16} width="450" style={{ display: 'block', margin: '10px auto' }} /> -->
 
 By following these steps, you can easily transfer tokens using NeonPass on your mobile device, enjoying a seamless and user-friendly experience on the go.
 
