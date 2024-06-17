@@ -111,7 +111,7 @@ neondevnet: {
 </TabItem>
 </Tabs>
 
-See the [Truffle tutorial](https://docs.neonfoundation.io/docs/developing/deploy_facilities/configure_truffle).
+See the [Truffle tutorial](https://neonevm.org/docs/developing/deploy_facilities/using_truffle).
 
 <!-- Docusaurus issue with relative links inside tabs>> See the [Truffle tutorial](/docs/developing/deploy_facilities/using_truffle). -->
 

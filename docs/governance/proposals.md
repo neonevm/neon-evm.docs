@@ -100,7 +100,7 @@ Users can pay a higher fee to expedite the processing of their voting transactio
 :::
 
 :::note High Priority Voting
-A high priority voting feature is available for executing critical changes to the Strategical DAO or smart contracts. This feature requires a higher token threshold (e.g., 1 million tokens) compared to regular voting.
+A high priority voting feature is available for executing critical changes to the Strategic DAO or smart contracts. This feature requires a higher token threshold (e.g., 1 million tokens) compared to regular voting.
 :::
 
 Once the voting period concludes, the votes are automatically tallied. If the proposal's "Accept" votes surpass the Assembly's required vote threshold, the proposal passes and is ready for implementation. Otherwise, the proposal fails.
@@ -243,7 +243,7 @@ Users can pay a higher fee to expedite the processing of their voting transactio
 :::
 
 :::note High Priority Voting
-A high priority voting feature is available for executing critical changes to the Strategical DAO or smart contracts. This feature requires a higher token threshold (e.g., 1 million tokens) compared to regular voting.
+A high priority voting feature is available for executing critical changes to the Strategic DAO or smart contracts. This feature requires a higher token threshold (e.g., 1 million tokens) compared to regular voting.
 :::
 
 Once the voting period is concluded, the votes are automatically counted. If the proposal's "Accept" votes pass the Assembly's required vote threshold ("Vote tipping point" in the image below), the proposal is passed and is ready for implementation. Otherwise, the proposal fails. -->

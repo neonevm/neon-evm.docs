@@ -9,7 +9,7 @@ comment: Merged and updated based on initial Docusaurus pages and meeting notes
 
 ## The Neon DAO
 
-The Neon DAO is a community-led, community-driven organization that fosters and enhances decentralization, resilience, and self-sustainability for the Neon EVM platform and ecosystem. The DAO is primarily focused on the Strategical DAO, which manages funds and voting contracts with different thresholds for each.
+The Neon DAO is a community-led, community-driven organization that fosters and enhances decentralization, resilience, and self-sustainability for the Neon EVM platform and ecosystem. The DAO is primarily focused on the Strategic DAO, which manages funds and voting contracts with different thresholds for each.
 
 The Neon DAO's Assemblies are built using [SPL Governance](https://github.com/solana-labs/solana-program-library/tree/master/governance), a versatile DAO creation tool for the Solana blockchain.
 
@@ -29,9 +29,9 @@ All Neon DAO parameters, such as the pass threshold to accept a proposal, voting
 
 Learn more about the [voting process](/docs/governance/proposals.md).
 
-## Strategical DAO
+## Strategic DAO
 
-The Strategical DAO is responsible for managing funds and voting contracts within the Neon DAO. It plays a crucial role in the governance and decision-making processes of the platform.
+The Strategic DAO is responsible for managing funds and voting contracts within the Neon DAO. It plays a crucial role in the governance and decision-making processes of the platform.
 
 ### Responsibilities
 - Overseeing the distribution of funds for grants, security audits, bug bounties, and other ecosystem initiatives
@@ -54,7 +54,7 @@ The vesting contract was audited by the next teams:
 To start working with the Neon DAO, follow these steps:
 
 1. Join the Neon community on Discord and participate in discussions related to governance and ecosystem development.
-2. Familiarize yourself with the Neon DAO's governance structure, voting process, and the responsibilities of the Strategical DAO.
+2. Familiarize yourself with the Neon DAO's governance structure, voting process, and the responsibilities of the Strategic DAO.
 3. Acquire NEON tokens to gain voting rights and actively participate in the decision-making process.
 4. Stay informed about ongoing proposals, vote on them, and contribute to the growth and success of the Neon ecosystem.
 
