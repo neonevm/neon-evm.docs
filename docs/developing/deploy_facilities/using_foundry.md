@@ -258,9 +258,32 @@ type                    0
 Replace `<contract_address>` and `<deployer_address>` with your smart contract address and deployer address respectively.
 :::
 
-### Step 5: Contract verification
+### Step 5: Call contract functions without publishing a transaction
 
-5.1 Verify the deployment of your smart contract on the explorer [Neon Blockscout](https://neon-devnet.blockscout.com) using following command:
+To perform a call on a deployed contract without publishing a transaction, you can use `cast call` command. For example, to fetch the total supply of the deployed TestERC20 token in the previous step, you can use:
+
+```sh
+$ cast call --rpc-url $RPC_URL_DEVNET 0x5537599aa2F97Dd60a66342522a465A7f2e40Ff9 "totalSupply()" --trace
+```
+
+On running this step, you should get console output similar to:
+
+```
+Traces:
+  [2326] 0x5537599aa2F97Dd60a66342522a465A7f2e40Ff9::totalSupply()
+    └─ ← [Return] 0x000000000000000000000000000000000000000000000001158e460913d00000
+
+Transaction successfully executed.
+Gas used: 23390
+```
+
+:::important
+`--trace` flag is mandatory for the `cast call` command to get the result of the function call.
+:::
+
+### Step 6: Contract verification
+
+6.1 Verify the deployment of your smart contract on the explorer [Neon Blockscout](https://neon-devnet.blockscout.com) using following command:
 
 ```sh
 forge verify-contract --chain-id $CHAIN_ID_DEVNET <contract_address> src/TestERC20/TestERC20.sol:TestERC20 --verifier-url $VERIFIER_URL_BLOCKSCOUT --verifier blockscout
@@ -282,7 +305,7 @@ Submitted contract for verification:
         https://neon-devnet.blockscout.com/api?/address/0x5537599aa2f97dd60a66342522a465a7f2e40ff9
 ```
 
-5.2 Copy/paste this link in your browser, remembering to replace `contract_address` with your freshly deployed contract address:
+6.2 Copy/paste this link in your browser, remembering to replace `contract_address` with your freshly deployed contract address:
 
 ```sh
 https://neon-devnet.blockscout.com/address/<contract_address>
