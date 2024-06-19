@@ -72,10 +72,12 @@ const sidebars = {
       items: [
         'developing/integrate/wallets/integrating_metamask_into_your_dapp',
         'developing/integrate/wallets/integrating_walletconnect',
+        'developing/integrate/wallets/integrating_web3auth',
         'developing/integrate/oracles/integrating_chainlink',
         'developing/integrate/oracles/integrating_pyth',
         'developing/integrate/middleware/the-graph',
         'developing/integrate/indexer/flair',
+        'developing/integrate/indexer/envio',
         'developing/integrate/indexer/subsquid'
       ]
     },
@@ -86,7 +88,8 @@ const sidebars = {
         'developing/deploy_facilities/using_hardhat',
         'developing/deploy_facilities/using_foundry',
         'developing/deploy_facilities/using_truffle',
-        'developing/deploy_facilities/using_remix'
+        'developing/deploy_facilities/using_remix',
+        'developing/deploy_facilities/using_goethereum'
       ]
     },
     {
@@ -149,7 +152,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Run Neon Proxy',
-      items: ['operating/basic', 'operating/enhanced', 'operating/installation/setup_kubernetes']
+      items: ['operating/basic', 'operating/enhanced']
     },
     {
       type: 'category',

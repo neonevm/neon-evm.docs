@@ -50,4 +50,30 @@ The parameters for `forge create` command include:
 - `--constructor-args`: The constructor arguments to be passed to the contract that is being deployed
 - `--legacy`: This parameter is being passed to use legacy transactions _(Neon EVM currently [doesn't support EIP-1559 transactions](/docs/evm_compatibility/overview#shared-standards-and-features))_
 
+3. The following command fetches the total supply of wNEON from Neon Mainnet contract:
+
+```
+$ cast call --rpc-url https://neon-proxy-mainnet.solana.p2p.org/ 0x202C35e517Fa803B537565c40F0a6965D7204609 "totalSupply()" --trace
+```
+
+This will output the result as:
+
+```
+Traces:
+  [327] 0x202C35e517Fa803B537565c40F0a6965D7204609::totalSupply()
+    └─ ← [Return] 0x000000000000000000000000000000000000000000007df4c0bc89d9a1ce65b6
+
+Transaction successfully executed.
+Gas used: 21391
+```
+
+The parameters for `forge create` command include:
+
+- `--rpc-url`: RPC URL
+- `--trace`: Flag used to display the stack trace of the function call
+
+:::important
+`--trace` flag is mandatory for the `cast call` command to get the result of the function call.
+:::
+
 ### What next? See the [tutorial on how to use Foundry](/docs/developing/deploy_facilities/using_foundry) to deploy on Neon EVM.
