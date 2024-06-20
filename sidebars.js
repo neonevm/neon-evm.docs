@@ -166,21 +166,21 @@ const sidebars = {
       label: 'Overview',
       id: 'governance/overview'
     },
-    //{
-    //  type: 'doc',
-    //  label: 'Neon DAO Organization',
-    //  id: 'governance/neon_daos'
-    //},
+    {
+      type: 'doc',
+      label: 'Neon DAO Organization',
+      id: 'governance/neon_daos'
+    },
     {
       type: 'doc',
       label: 'Voting Process',
       id: 'governance/proposals'
     },
-    //{
-    //  type: 'doc',
-    //  label: 'Sign Votes',
-    //  id: 'governance/technical_implementation/vote'
-    //},
+    {
+      type: 'doc',
+      label: 'Sign Votes',
+      id: 'governance/technical_implementation/vote'
+    },
     {
       type: 'doc',
       label: 'Principles and Objectives',
