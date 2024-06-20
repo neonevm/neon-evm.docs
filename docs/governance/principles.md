@@ -4,7 +4,7 @@ proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment:  
+comment: 
 ---
 
 ## Principles
@@ -16,7 +16,6 @@ To ensure that the Neon DAO works smoothly and is effective at implementing the 
 * Seeking to resolve disputes in a constructive and collaborative manner
 * Encouraging a diversity of perspectives
 * Promoting openness and transparency
-* Not funding or supporting terrorism, illegal drugs, weapons, prostitution, or other illicit activities
 
 There are also more concrete prohibitions on improper behavior that must be kept in mind, including that:
 
@@ -25,10 +24,6 @@ There are also more concrete prohibitions on improper behavior that must be kept
 * Members agree to hold software developers blameless for unintentional mistakes made by them in the expression of contractual intent, whether or not said mistakes were due to actual or perceived negligence.
 
 In addition, the NEON DAO is transparent and flexible. All users have access to all relevant information in order to make well-informed decisions, and the governance process is adaptable to the ever-evolving needs of the community.
-
-### Alignment with Forum Rules and Principles
-
-The principles and objectives outlined in this section serve as high-level rules that guide the Neon DAO's governance process. They are closely aligned with the rules and principles of the Neon DAO forum, ensuring consistency and coherence across the various platforms and channels of communication within the Neon community.
 
 ### Rules and Etiquette
 
