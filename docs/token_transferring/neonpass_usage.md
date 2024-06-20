@@ -34,7 +34,7 @@ import image16 from '@site/static/img/doc-images/neonpassV2/Transfer_failed.png'
 
 This guide demonstrates how to transfer tokens between Solana and Neon EVM using the [NeonPass](https://neonpass.live/) UI. The same tooling is available as an [npm package](/docs/developing/integrate/neon_transfer).
 
-You can transfer tokens in either direction, but each transaction incurs a gas fee in either NEON or SOL or the token of your choice with which you are transacting.
+You can transfer tokens in either direction, but each transaction incurs a gas fee in either NEON or SOL.
 
 :::info
  Neon EVM's Devnet now supports a feature providing the option to pay the gas fees with the [token of transaction](https://neonevm.org/blog/feature-alternative-gas-fee-token), rather than only NEON or SOL.
