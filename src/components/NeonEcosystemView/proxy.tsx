@@ -69,7 +69,7 @@ export function Proxy(props: { changeState: Dispatch<any>, theme: 'dark' | 'ligh
             <circle cx="1259" cy="390" r="15" stroke={linkColor} strokeWidth="2"/>
           </g>
         </a>
-        <a href="/docs/tokens/gas_fees.mdx">
+        <a href="/docs/tokens/gas_fees">
           <text fill={linkColor} fontFamily="Inter" fontSize="25" letterSpacing="-0.514979px" textDecoration="underline"><tspan x="1491.85" y="398.091">gas fees</tspan></text>
           <g>
             <path d="M1602.6 382.8H1616.2V396.4" stroke={linkColor} strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round"/>
