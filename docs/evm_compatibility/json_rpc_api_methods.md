@@ -62,7 +62,8 @@ Split this into standard ETH-supported methods // Not supported methods // AND a
 | 39  | [eth_getTransactionByBlockNumberAndIndex](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_gettransactionbyblocknumberandindex) | _Returns information about a transaction by block number and transaction index position_                                                                      | ![done](img/done.ico)              |
 | 40  | [eth_getTransactionReceipt](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_gettransactionrecepit)               | _Returns the receipt of a transaction by transaction hash_                                                                                                    | ![done](img/done.ico)              |
 
-
+Methods `eth_getTransactionByHash`,  `eth_getTransactionByBlockHashAndIndex`, `eth_getTransactionByBlockNumberAndIndex`, `eth_getBlockByHash` and `eth_getBlockByNumber` also return the `chainId` property in addition to the [specified](https://ethereum.org/en/developers/docs/apis/json-rpc) output.
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 ## JSON-RPC methods according to the [Web3 Module API](https://openethereum.github.io/JSONRPC-web3-module)
 
 | Num | Method                                                                                       | Description                                                            | Status                         |
