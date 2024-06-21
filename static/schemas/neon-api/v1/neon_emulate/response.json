@@ -15,60 +15,51 @@
       "description": "End-user provided identifier for the request."
     },
     "result": {
-      "accounts": [
-        {
-          "account": "2iBArBKoWNTG2gJ8KfEMtGv63CFPfTnwfsvarBncLtRX",
-          "additional_resize_steps": 0,
-          "address": "0xa59cd271578da4931c093f7611488b0a1a4bd198",
-          "new": false,
-          "size": 71,
-          "size_current": 71,
-          "writable": true
-        },
-        {
-          "account": "7Q8xmg4pHEfxTdwrKKpho6WfX6eFYRsDUuABsnk9iMB8",
-          "additional_resize_steps": 0,
-          "address": "0x549b5cb2d324f901aed6938a3838fb9b10898441",
-          "new": false,
-          "size": 11427,
-          "size_current": 11427,
-          "writable": false
-        },
-        {
-          "account": "AJthh52LdmRpif8HevQUF5TN4tuLCqGMQbm1rDuSkpzZ",
-          "additional_resize_steps": 0,
-          "address": "0x6dcdd1620ce77b595e6490701416f6dbf20d2f67",
-          "new": false,
-          "size": 10550,
-          "size_current": 10550,
-          "writable": false
-        }
-      ],
-      "solana_accounts": [
-        {
-          "is_writable": false,
-          "pubkey": "AUmmih1fr3Spj6rd8LFYB1EhfyMV24NqusM8QbWAoBad"
-        },
-        {
-          "is_writable": false,
-          "pubkey": "CnvWtQMgWiG7KzYMTBYXwk8PB2YYxRzPAZBaPWhRkctJ"
-        },
-        {
-          "is_writable": false,
-          "pubkey": "HFVUvrCzh26DTFpxjGzSn8cHn2sCtZGJogk3YhmBmzQ4"
-        }
-      ],
-      "actions": [
-        {
-          "EvmIncrementNonce": {
-            "address": "0xa59cd271578da4931c093f7611488b0a1a4bd198"
-          }
-        }
-      ],
-      "exit_status": "revert",
-      "result": "08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002645524332303a207472616e7366657220616d6f756e7420657863656564732062616c616e63650000000000000000000000000000000000000000000000000000",
-      "steps_executed": 919,
-      "used_gas": 30000
+      "exitCode": "revert",
+      "externalSolanaCall": false,
+      "revertBeforeSolanaCall": true,
+      "revertAfterSolanaCall": false,
+      "result": "0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000007a45787465726e616c2063616c6c206661696c7320546f6b656e6b65675166655a79694e77414a624e62474b50465843577542766639537336323356513544413a204572726f722070726f63657373696e6720496e737472756374696f6e20303a20637573746f6d2070726f6772616d206572726f723a20307834000000000000",
+      "numEvmSteps": 441,
+      "gasUsed": 25000,
+      "numIterations": 3,
+      "solanaAccounts": [
+       {
+          "pubkey": "7pjifx9FL83gidWbR3KvwwRJb1ThJe3NabhBG3VtjdC3",
+          "isWritable": true,
+          "isLegacy": false
+       },
+       {
+          "pubkey": "6gANWp6ZbZpdpt5GhBoCopNAJv1iTnA9kf7L7VRj2ivj",
+          "isWritable": false,
+          "isLegacy": false
+       },
+       {
+          "pubkey": "4dWQAaevdp89Jqr5GQV8KTZkG7Un9kvj7QY8fUnJHCgc",
+          "isWritable": true,
+          "isLegacy": false
+       },
+       {
+          "pubkey": "EMDBr8bmj7FjSWEmsKeBZZfikuFXhWTJKhQSj41NFLaB",
+          "isWritable": true,
+          "isLegacy": false
+       },
+       {
+          "pubkey": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "isWritable": false,
+          "isLegacy": false
+       },
+       {
+          "pubkey": "DR6toPZGbKRdgfQ7krDRrdbX8NDatuttteuXtAcFm4mF",
+          "isWritable": false,
+          "isLegacy": false
+       },
+       {
+          "pubkey": "9WY2FENzKGCDQgoi8dXxJrvAqPqoWpKmnXvu7KgADSeb",
+          "isWritable": false,
+          "isLegacy": false
+       }
+      ]
     }
   },
   "required": [
