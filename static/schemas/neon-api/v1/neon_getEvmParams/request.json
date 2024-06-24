@@ -14,13 +14,13 @@
     },
     "method": {
       "type": "string",
-      "const": "nneon_getEvmParams",
+      "const": "neon_getEvmParams",
       "description": "The method name."
     },
     "id": {
       "type": "number",
       "examples": [
-        "OpEgqw7r98qwerqwehkjhwe8"
+        "1712927726192"
       ],
       "description": "End-user provided identifier for the request; returned with payload."
     }
