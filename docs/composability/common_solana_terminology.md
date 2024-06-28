@@ -26,7 +26,7 @@ Since Solana programs are stateless, hence the data on Solana is stored in what 
 2. Accounts require a rent deposit in SOL, proportional to the amount of data stored. This deposit is fully refundable when the account is closed.
 3. Each account has a program "owner". Only the owning program can modify the account's data or reduce its lamport balance, but anyone can increase the balance.
 
-Every account in Solana has the structure called `AccountInfo` which includes the following fields:
+Every account in Solana has the structure called `AccountInfo` which includes the following fields -
 
 - `data`: A byte array that holds the state of an account. If the account is a program (smart contract), it contains the executable program code. This field is commonly known as "account data".
 - `executable`: A boolean flag indicating whether the account is a program.
