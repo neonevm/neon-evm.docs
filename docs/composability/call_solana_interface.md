@@ -47,7 +47,7 @@ The interface contract `ICallSolana.sol` can be found in this [Github Repository
 
 | getPayer() -> bytes32                                                                                                                                                         |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| This function returns the Solana address of the payer account in bytes32 format. payer account is required if an instruction needs an account to fund newly created accounts. |
+| This function returns the Solana address of the payer account in bytes32 format. Payer account is required if an instruction needs an account to fund newly created accounts. |
 
 | execute(uint64 lamports, Instruction memory instruction) -> bytes                                                                                                                                                                                                                                                                                                                                                                           |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
