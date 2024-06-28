@@ -44,7 +44,7 @@ Solana account types can be divided into two broad categories - Executable and n
 
 2. **Non-executable Programs**: Non-executable programs are "storage" or "data" accounts that hold various types of data, such as program variables, token balances, NFTs, and fungible currencies. These accounts reflect state changes that occur after each transaction within the protocol.
 
-   These type of accounts can be further divided into -
+   This type of accounts can be further divided into -
 
    - `System Accounts` : System accounts are essential for the network's functionality and manage the basic aspects of account creation and transaction processing. They are managed by the Solana runtime and are necessary for performing fundamental actions like creating, funding, and managing accounts.
    - `Token Accounts` : Token accounts are owned by the Token Program and tracks the number of units of a specific type of token (mint account) owned by a particular address. Token accounts are specialized accounts used to manage and interact with tokens that adhere to the Solana Token Program (often referred to as SPL Token Program). These accounts facilitate the creation, transfer, and management of SPL tokens.
