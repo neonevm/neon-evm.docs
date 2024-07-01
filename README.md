@@ -1,6 +1,6 @@
 # Documentation
 
-[Docs](https://docs.neonfoundation.io/) are built using [Docusaurus 2](https://docusaurus.io/).
+[Docs](https://neonevm.org) are built using [Docusaurus 3](https://docusaurus.io/).
 
 ### Installation
 

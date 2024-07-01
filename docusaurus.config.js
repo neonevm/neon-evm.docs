@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 const config = {
   title: 'Neon Docs',
   tagline: 'Neon EVM is an open source project implementing the Ethereum virtual machine on Solana.',
-  url: 'https://docs.neonfoundation.io',
+  url: 'https://neonevm.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'ignore',
