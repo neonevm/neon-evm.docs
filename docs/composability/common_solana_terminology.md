@@ -42,7 +42,7 @@ Solana account types can be divided into two broad categories - Executable and n
    - `Native Programs`: Executable native programs are integral to the Solana ecosystem, handling tasks such as maintaining and operating validator nodes. The most notable example is the **System Program**, responsible for creating new system accounts (commonly referred to as "wallets") and transferring SOL. Other examples of native programs include the **Stake Program**, which manages the staking mechanism, and the BPF Loader, which functions similarly to Ethereum’s EVM.
    - `Custom Programs`: Executable program accounts are pre-built Solana programs designed to create and store other programs. A prime example is the **Solana Program Library (SPL)**, a collection of programs that facilitate various on-chain activities such as creating, swapping, and lending tokens, generating stake pools, and maintaining an on-chain name service. A notable component of the SPL is the Token Program, which creates and manages tokens.
 
-2. **Non-executable Programs**: Non-executable programs are "storage" or "data" accounts that hold various types of data, such as program variables, token balances, NFTs, and fungible currencies. These accounts reflect state changes that occur after each transaction within the protocol.
+2. **Non-executable Accounts**: Non-executable programs are "storage" or "data" accounts that hold various types of data, such as program variables, token balances, NFTs, and fungible currencies. These accounts reflect state changes that occur after each transaction within the protocol.
 
    This type of accounts can be further divided into -
 
