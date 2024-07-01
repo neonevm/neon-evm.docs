@@ -16,9 +16,9 @@ You can request devUSDCs and devSAMO from https://everlastingsong.github.io/nebu
 
 This example code is based on the following files on the Github repository -
 
-1. [TestCallSolana.sol](https://github.com/neonlabsorg/neon-tutorials/blob/add/call-solana/hardhat/contracts/TestCallSolana/TestCallSolana.sol) - This is a solidity smart contract which interacts with the precompile `0xFF00000000000000000000000000000000000006` via the `ICallSolana.sol` interface contract described in details on the previous page.
-2. [config.sol](https://github.com/neonlabsorg/neon-tutorials/blob/add/call-solana/hardhat/scripts/TestCallSolana/config.js) - This is a script which includes the contract address of the deployed `TestCallSolana.sol` and the helper functions required to execute the instructions on Solana via the deployed smart contract.
-3. [OrcaSwap.js](https://github.com/neonlabsorg/neon-tutorials/blob/add/call-solana/hardhat/scripts/TestCallSolana/OrcaSwap.js) - This script is designed to perform a token swap on the [Orca decentralized exchange (DEX)](https://www.orca.so/) on the Solana blockchain. It uses the Anchor SDK to interact with the blockchain and requires specific environment variables to be set for execution.
+1. [TestCallSolana.sol](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/contracts/TestCallSolana/TestCallSolana.sol) - This is a solidity smart contract which interacts with the precompile `0xFF00000000000000000000000000000000000006` via the `ICallSolana.sol` interface contract described in details [here](docs/composability/call_solana_interface.md).
+2. [config.sol](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/scripts/TestCallSolana/config.js) - This is a script which includes the contract address of the deployed `TestCallSolana.sol` and the helper functions required to execute the instructions on Solana via the deployed smart contract.
+3. [OrcaSwap.js](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/scripts/TestCallSolana/OrcaSwap.js) - This script is designed to perform a token swap on the [Orca decentralized exchange (DEX)](https://www.orca.so/) on the Solana blockchain. It uses the Anchor SDK to interact with the blockchain and requires specific environment variables to be set for execution.
 
 ## How the script works
 

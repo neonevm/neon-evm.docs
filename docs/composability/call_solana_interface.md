@@ -10,7 +10,7 @@ approvedBy: na
 
 To use the **Composability** feature of Solana, let us learn about the interface and the functions included in the interface that will be used to interact with the Solana programs via the precompile `0xFF00000000000000000000000000000000000006`.
 
-The interface contract `ICallSolana.sol` can be found in this [Github Repository](https://github.com/neonlabsorg/neon-tutorials/blob/add/call-solana/hardhat/contracts/TestCallSolana/interfaces/ICallSolana.sol).
+The interface contract `ICallSolana.sol` can be found in this [Github Repository](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/contracts/TestCallSolana/interfaces/ICallSolana.sol).
 
 ## Struct Variables
 

@@ -12,9 +12,9 @@ This tutorial will walk you through the steps of creating two accounts on Solana
 
 This example code is based on the following files on the Github repository -
 
-1. [TestCallSolana.sol](https://github.com/neonlabsorg/neon-tutorials/blob/add/call-solana/hardhat/contracts/TestCallSolana/TestCallSolana.sol) - This is a solidity smart contract which interacts with the precompile `0xFF00000000000000000000000000000000000006` via the `ICallSolana.sol` interface contract described in details on the previous page.
-2. [config.sol](https://github.com/neonlabsorg/neon-tutorials/blob/add/call-solana/hardhat/scripts/TestCallSolana/config.js) - This is a script which includes the contract address of the deployed `TestCallSolana.sol` and the helper functions required to execute the instructions on Solana via the deployed smart contract.
-3. [TransferSOLsBetweenAccounts.js](https://github.com/neonlabsorg/neon-tutorials/blob/add/call-solana/hardhat/scripts/TestCallSolana/TransferSOLsBetweenAccounts.js) - This script is designed to demonstrate the creation of two accounts (SenderAccount and ReceiverAccount) on the Solana blockchain and perform a couple of SOL transfer transactions involving these accounts.
+1. [TestCallSolana.sol](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/contracts/TestCallSolana/TestCallSolana.sol) - This is a solidity smart contract which interacts with the precompile `0xFF00000000000000000000000000000000000006` via the `ICallSolana.sol` interface contract described in details [here](docs/composability/call_solana_interface.md).
+2. [config.sol](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/scripts/TestCallSolana/config.js) - This is a script which includes the contract address of the deployed `TestCallSolana.sol` and the helper functions required to execute the instructions on Solana via the deployed smart contract.
+3. [TransferSOLsBetweenAccounts.js](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/scripts/TestCallSolana/TransferSOLsBetweenAccounts.js) - This script is designed to demonstrate the creation of two accounts (SenderAccount and ReceiverAccount) on the Solana blockchain and perform a couple of SOL transfer transactions involving these accounts.
 
 ## How the script works
 
