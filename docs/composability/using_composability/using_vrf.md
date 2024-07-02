@@ -196,3 +196,7 @@ Result(3) [
 ] receipt args
 17369911603807770235n randomness
 ```
+
+:::important
+The full code of the script can be viewed here [OraoNetworkVRF.js](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/scripts/TestCallSolana/OraoNetworkVRF.js).
+:::

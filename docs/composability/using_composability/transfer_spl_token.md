@@ -426,3 +426,7 @@ Result(3) [
   '0x'
 ]  receipt args instruction # 1
 ```
+
+:::important
+The full code of the script can be viewed here [TransferSPLTokenBetweenAccounts.js](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/scripts/TestCallSolana/TransferSPLTokenBetweenAccounts.js).
+:::

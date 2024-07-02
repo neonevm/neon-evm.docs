@@ -304,3 +304,7 @@ Result(3) [
   '0x'
 ] receipt args
 ```
+
+:::important
+The full code of the script can be viewed here [OrcaSwap.js](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/scripts/TestCallSolana/OrcaSwap.js).
+:::
