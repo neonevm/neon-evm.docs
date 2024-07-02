@@ -12,6 +12,9 @@ import mm_p_key from '@site/static/img/doc-images/developing/deploy_facilities/f
 
 The tutorials on the next pages are based on the [Github example](https://github.com/neonlabsorg/neon-tutorials/tree/main/hardhat) and will walk you through them to test different Composability features on Neon EVM Devnet and Solana Devnet.
 
+- [TestCallSolana.sol](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/contracts/TestCallSolana/TestCallSolana.sol) - This is a solidity smart contract which interacts with the precompile `0xFF00000000000000000000000000000000000006` via the `ICallSolana.sol` interface contract described in details [here](docs/composability/call_solana_interface.md).
+- [config.js](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/scripts/TestCallSolana/config.js) - This is a script which includes the contract address of the deployed `TestCallSolana.sol` and the helper functions required to execute the instructions on Solana via the deployed smart contract.
+
 ### Step 1: Installation
 
 > **Note:** For more details on installing Hardhat, refer to the [_Hardhat documentation_](https://hardhat.org/hardhat-runner/docs/getting-started#overview).

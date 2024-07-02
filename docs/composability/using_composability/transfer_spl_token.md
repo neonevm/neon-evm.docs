@@ -10,11 +10,7 @@ approvedBy: na
 
 This tutorial will walk you through the steps of creating two accounts on Solana using the `createAccountWithSeed` instruction, minting an SPL token to one account and then transferring the SPL token from that account to another using a solidity smart contract on Neon EVM Devnet.
 
-This example code is based on the following files on the Github repository -
-
-1. [TestCallSolana.sol](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/contracts/TestCallSolana/TestCallSolana.sol) - This is a solidity smart contract which interacts with the precompile `0xFF00000000000000000000000000000000000006` via the `ICallSolana.sol` interface contract described in details [here](docs/composability/call_solana_interface.md).
-2. [config.sol](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/scripts/TestCallSolana/config.js) - This is a script which includes the contract address of the deployed `TestCallSolana.sol` and the helper functions required to execute the instructions on Solana via the deployed smart contract.
-3. [TransferSPLTokenBetweenAccounts.js](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/scripts/TestCallSolana/TransferSPLTokenBetweenAccounts.js) - This script demonstrates creating two accounts on Solana using the `createAccountWithSeed` instruction, minting tokens to one account, and transferring those tokens to another account. It illustrates the process of handling SPL Token transfers between accounts. For this example, we are using an SPL Token with account address `8LkbY4Q1jGEF1BwedHz1ALM3q4zZRhZpCMWRe6SbrbKj` on Solana Devnet.
+This example code is based on the script [TransferSPLTokenBetweenAccounts.js](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/scripts/TestCallSolana/TransferSPLTokenBetweenAccounts.js). This script demonstrates creating two accounts on Solana using the `createAccountWithSeed` instruction, minting tokens to one account, and transferring those tokens to another account. It illustrates the process of handling SPL Token transfers between accounts. For this example, we are using an SPL Token with account address `8LkbY4Q1jGEF1BwedHz1ALM3q4zZRhZpCMWRe6SbrbKj` on Solana Devnet.
 
 ## How the script works
 
