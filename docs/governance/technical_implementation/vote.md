@@ -113,7 +113,7 @@ Your device will display **”Processing”** and then **Your device is now read
 
 #### Step 3: Install the Phantom wallet and connect Ledger to Phantom
 
-3.1 Install the Phantom wallet on your browser by visiting the Phantom website: [https://phantom.app/](https://phantom.app/).
+3.1 Install the Phantom wallet on your browser by visiting the [Phantom website](https://phantom.app/download).
 
 3.2 Next, connect your Ledger wallet as per [Ledger's documentation](https://support.ledger.com/hc/en-us/articles/4408131265169-Set-up-and-use-Phantom-to-access-your-Ledger-Solana-SOL-account)
 

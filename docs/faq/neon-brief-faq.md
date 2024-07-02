@@ -17,7 +17,7 @@ Neon EVM is an Ethereum Virtual Machine operating as a smart contract on Solana.
 
 ### How does Neon EVM Work?
 
-Neon EVM is a smart contract on Solana acting as the Ethereum Virtual Machine. It's compiled into Berkeley Packet Filter bytecode, a format that can be executed on Solana. This allows Neon EVM to receive Solana transactions that contain wrapped Ethereum-like transactions and process them on Solana according to Ethereum rules. Get more details [here](https://docs.neonfoundation.io/docs/about/how_it_works).
+Neon EVM is a smart contract on Solana acting as the Ethereum Virtual Machine. It's compiled into Berkeley Packet Filter bytecode, a format that can be executed on Solana. This allows Neon EVM to receive Solana transactions that contain wrapped Ethereum-like transactions and process them on Solana according to Ethereum rules. Get more details [here](https://neonevm.org/docs/about/how_it_works).
 
 ### How can I start building on Neon?
 
@@ -45,7 +45,7 @@ The following tools are available on Neon:
 
 ### How do I transfer SPL tokens between Solana and Neon?
 
-[NeonPass](/docs/token_transferring/neonpass_usage) is an open-source service that facilitates token transfers between Solana and Neon EVM, including the NEON SPL token. To use NeonPass, you must have access to two wallets: a Solana wallet, such as [Phantom](https://phantom.app/), and an EVM wallet, such as [MetaMask](https://metamask.io/).
+[NeonPass](/docs/token_transferring/neonpass_usage) is an open-source service that facilitates token transfers between Solana and Neon EVM, including the NEON SPL token. To use NeonPass, you must have access to two wallets: a Solana wallet, such as [Phantom](https://phantom.app/download), and an EVM wallet, such as [MetaMask](https://metamask.io/).
 
 ### What is Neon's roadmap?
 
@@ -59,7 +59,7 @@ Neon has an active community: check out our [community page](https://neonevm.org
 
 ### Where can I see a list of projects in the ecosystem?
 
-You can see the list of projects building on Neon [here](https://docs.neonfoundation.io/docs/about/neon_ecosystem).
+You can see the list of projects building on Neon [here](https://neonevm.org/docs/about/neon_ecosystem).
 
 ### Where can I see a list of upcoming events involving Neon?
 
