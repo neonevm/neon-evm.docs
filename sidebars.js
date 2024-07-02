@@ -116,7 +116,7 @@ const sidebars = {
       id: 'developing/dev_environment/local_proxy_remote_solana'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Composability</h4>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Interact with Solana</h4>' },
     {
       type: 'doc',
       label: 'Common Solana Terminology',
