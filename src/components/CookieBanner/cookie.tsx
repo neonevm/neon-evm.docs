@@ -21,6 +21,15 @@ export default function CookieComponent() {
       containerClass={ classList.container }
       policyUrl={ 'https://neon-labs.org/cookie-policy' }
       linkTarget={ true }
+      consentOptions={JSON.stringify([
+        'adConsentGranted',
+        'adUserDataConsentGranted',
+        'adPersonalizationConsentGranted',
+        'analyticsConsentGranted',
+        'functionalityConsentGranted',
+        'personalizationConsentGranted',
+        'securityConsentGranted'
+      ])}
       titleClass={ classList.title }
       descriptionClass={ classList.description }
       acceptCtaClass={ classList.acceptCta }
