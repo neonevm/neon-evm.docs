@@ -116,6 +116,29 @@ const sidebars = {
       id: 'developing/dev_environment/local_proxy_remote_solana'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Interact with Solana</h4>' },
+    {
+      type: 'doc',
+      label: 'Common Solana Terminology',
+      id: 'composability/common_solana_terminology'
+    },
+    {
+      type: 'doc',
+      label: 'ICallSolana Interface',
+      id: 'composability/call_solana_interface'
+    },
+    {
+      type: 'category',
+      label: 'Using Composability',
+      items: [
+        'composability/using_composability/setup_configure',
+        'composability/using_composability/transfer_sols',
+        'composability/using_composability/transfer_spl_token',
+        'composability/using_composability/swap_on_orca',
+        'composability/using_composability/using_vrf'
+      ]
+    },
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Learn</h4>' },
     {
       type: 'category',
