@@ -45,6 +45,9 @@
     },
     {
       "pattern": "^https://thegraph.neonevm.org/index-node/graphql"
+    },
+    {
+      "pattern": "^https://phantom.app"
     }
   ],
   "aliveStatusCodes": [
