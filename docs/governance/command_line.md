@@ -25,9 +25,9 @@ This contract was deployed at address `919AnvG1Vi9ekoxQs6d6SYQiRmYMcinw4U6bzL2YN
 To view information about vesting, its quantity and output schedule, you can use the vesting-contract-cli 
 utility (its sources are located at https://github.com/neonlabsorg/neon-spl-governance/tree/main/addin-vesting/cli).
 ```
-vesting-contract-cli --url https://api.mainnet-beta.solana.com info --governance_program_id DRJeCVsc33fDT2khezFiMQpQiuoucFrji1A62QfbxPPT --vesting_program_id 919AnvG1Vi9ekoxQs6d6SYQiRmYMcinw4U6bzL2YNoFM --vesting_address <VESTING_ADDRESS>
+vesting-contract-cli --url https://api.mainnet-beta.solana.com info --governance_program_id DRJeCVsc33fDT2khezFiMQpQiuoucFrji1A62QfbxPPT --vesting_program_id 919AnvG1Vi9ekoxQs6d6SYQiRmYMcinw4U6bzL2YNoFM --vesting_address `VESTING_ADDRESS`
 ```
-The <VESTING_ADDRESS> is taken from the `Address` column of the token holders page 
+The `VESTING_ADDRESS` is taken from the `Address` column of the token holders page 
 https://solscan.io/token/NeonTjSjsuo3rexg9o6vHuMXw62f9V7zvmu8M8Zut44#holders.
 Output example:
 ```

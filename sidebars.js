@@ -9,15 +9,10 @@ const sidebars = {
       label: '🏓 Quick Start',
       id: 'quick_start'
     },
-     {
+    {
       type: 'category',
       label: '🧬 Neon EVM Overview',
-      items:
-        [
-          'about/why_neon',
-          'about/neon_ecosystem',
-          'about/how_it_works',
-        ]
+      items: ['about/why_neon', 'about/neon_ecosystem', 'about/how_it_works']
     },
     {
       type: 'doc',
@@ -27,25 +22,18 @@ const sidebars = {
     {
       type: 'doc',
       label: '🛰 Transfer Tokens',
-      id: 'token_transferring/neonpass_usage',
+      id: 'token_transferring/neonpass_usage'
     },
     {
       type: 'category',
       label: '💰 Tokens',
-      items: [
-        'tokens/neon_token',
-        'tokens/gas_fees',
-        'tokens/token_list'
-      ]
+      items: ['tokens/neon_token', 'tokens/gas_fees', 'tokens/token_list']
     },
     { type: 'doc', label: 'Neon Proxy API', id: 'api/neon-api' },
     {
       type: 'category',
       label: '💬 FAQ',
-      items: [
-        'faq/neon-brief-faq',
-        'faq/neonpass'
-        ]
+      items: ['faq/neon-brief-faq', 'faq/neonpass']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Tools</h4>' },
@@ -70,18 +58,13 @@ const sidebars = {
       id: 'developing/utilities/faucet'
     },
     {
-      type: 'doc',
-      label: 'Gasless transactions',
-      id: 'developing/gasless'
-    },
-    {
       type: 'category',
       label: 'Use Tokens',
       items: [
         'developing/deploy_facilities/interacting_with_spl_tokens',
         'tokens/token_list',
         'developing/integrate/neon_transfer'
-        ]
+      ]
     },
     {
       type: 'category',
@@ -89,10 +72,13 @@ const sidebars = {
       items: [
         'developing/integrate/wallets/integrating_metamask_into_your_dapp',
         'developing/integrate/wallets/integrating_walletconnect',
+        'developing/integrate/wallets/integrating_web3auth',
         'developing/integrate/oracles/integrating_chainlink',
         'developing/integrate/oracles/integrating_pyth',
         'developing/integrate/middleware/the-graph',
-        'developing/integrate/indexer/flair'
+        'developing/integrate/indexer/flair',
+        'developing/integrate/indexer/envio',
+        'developing/integrate/indexer/subsquid'
       ]
     },
     {
@@ -102,7 +88,17 @@ const sidebars = {
         'developing/deploy_facilities/using_hardhat',
         'developing/deploy_facilities/using_foundry',
         'developing/deploy_facilities/using_truffle',
-        'developing/deploy_facilities/using_remix'
+        'developing/deploy_facilities/using_remix',
+        'developing/deploy_facilities/using_goethereum'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Verify Contracts',
+      items: [
+        'developing/verify_facilities/using_hardhat',
+        'developing/verify_facilities/using_foundry',
+        'developing/verify_facilities/verify_manually'
       ]
     },
     {
@@ -111,7 +107,7 @@ const sidebars = {
       items: [
         'developing/deploy_facilities/configure_hardhat',
         'developing/deploy_facilities/configure_foundry',
-        'developing/deploy_facilities/configure_truffle',
+        'developing/deploy_facilities/configure_truffle'
       ]
     },
     {
@@ -120,18 +116,42 @@ const sidebars = {
       id: 'developing/dev_environment/local_proxy_remote_solana'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Interact with Solana</h4>' },
+    {
+      type: 'doc',
+      label: 'Common Solana Terminology',
+      id: 'composability/common_solana_terminology'
+    },
+    {
+      type: 'doc',
+      label: 'ICallSolana Interface',
+      id: 'composability/call_solana_interface'
+    },
+    {
+      type: 'category',
+      label: 'Using Composability',
+      items: [
+        'composability/using_composability/setup_configure',
+        'composability/using_composability/transfer_sols',
+        'composability/using_composability/transfer_spl_token',
+        'composability/using_composability/swap_on_orca',
+        'composability/using_composability/using_vrf'
+      ]
+    },
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Learn</h4>' },
-      {
+    {
       type: 'category',
       label: 'EVM Compatibility',
       items: [
         'evm_compatibility/overview',
+        'evm_compatibility/code_compatibility_checklist',
         'evm_compatibility/json_rpc_api_methods',
         'evm_compatibility/opcodes',
         'evm_compatibility/precompiles'
       ]
     },
-     {
+    {
       type: 'category',
       label: 'Neon EVM Architecture',
       items: [
@@ -143,9 +163,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Token Accounts',
-      items:[
-       'tokens/token-accounts'
-      ]
+      items: ['tokens/token-accounts']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Operate</h4>' },
@@ -157,20 +175,12 @@ const sidebars = {
     {
       type: 'category',
       label: 'Run Neon Proxy',
-      items: [
-        'operating/basic',
-        'operating/enhanced',
-        'operating/installation/setup_kubernetes'
-      ]
+      items: ['operating/basic', 'operating/enhanced']
     },
     {
       type: 'category',
       label: 'Configuration',
-      items: [
-        'operating/transaction-gas',
-        'operating/accounts',
-        'operating/configuration'
-      ]
+      items: ['operating/transaction-gas', 'operating/accounts', 'operating/configuration']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Govern</h4>' },

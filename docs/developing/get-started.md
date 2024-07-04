@@ -60,7 +60,7 @@ neonmainnet: {
 </TabItem>
 </Tabs>
 
-See the [Hardhat tutorial](https://docs.neonfoundation.io/docs/developing/deploy_facilities/configure_hardhat)
+See the [Hardhat tutorial](/docs/developing/deploy_facilities/configure_hardhat)
 
 <!-- todo find alt fix for Docusaurus issue with tabs -- links not rendering See the [Hardhat tutorial](/docs/deploy_facilities/configure_hardhat). -->
 
@@ -111,7 +111,7 @@ neondevnet: {
 </TabItem>
 </Tabs>
 
-See the [Truffle tutorial](https://docs.neonfoundation.io/docs/developing/deploy_facilities/configure_truffle).
+See the [Truffle tutorial](https://neonevm.org/docs/developing/deploy_facilities/using_truffle).
 
 <!-- Docusaurus issue with relative links inside tabs>> See the [Truffle tutorial](/docs/developing/deploy_facilities/using_truffle). -->
 

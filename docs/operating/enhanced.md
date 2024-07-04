@@ -13,9 +13,7 @@ import TabItem from '@theme/TabItem';
 
 ## Who Should Use This Guide
 
-This guide provides instructions on how to run a self-managed instance of Neon Proxy that offers more flexibility, configurability, and control for its Operator. It is designed for:
-* More **advanced** operators who would like to build their own Kubernetes clusters from scratch and run Neon Proxy on them
-* **Enterprise** operators with cluster solutions on-premise or with third-party public cloud providers such as AWS, Google Cloud, and Microsoft Azure
+The guide provides instructions on how to run a self-managed instance of Neon Proxy that offers more flexibility, configurability, and control for its Operator. It is designed for operators who use or would like to use a Kubernetes cluster to host the Neon Proxy installation. Kubernetes could be either on-premise or provided by a third party, such as AWS(EKS), Azure(AKS), or GCP(GKE).
 
 Please note that operating a self-managed Neon Proxy requires certain technical expertise and a solid understanding of network and security protocols. The operator is responsible for ensuring the security and reliability of the proxy and the Kubernetes cluster it runs on, and will be well-advised to invest time and resources into managing and maintaining them.
 
@@ -53,7 +51,7 @@ This means that the following components need to be **installed** on your device
 * [kubectl](https://kubernetes.io/docs/reference/kubectl/), a command-line tool for Kubernetes' control plane
 * [jq](https://stedolan.github.io/jq/), a command-line JSON processor
 
-To set up Kubernetes with k0s, refer to [this guide](/docs/operating/installation/setup_kubernetes).
+To set up Kubernetes with k0s, refer to [this guide](https://docs.k0sproject.io/head/install/).
 
 ### Hardware Recommendations
 
@@ -95,10 +93,9 @@ The scripts in [neonlabsorg/infrastructure-kubernetes](https://github.com/neonla
 1. The `neon-proxy` namespace 
 2. The `proxy-svc` Proxy service  
 3. The `indexersvc` Indexer service  
-4. For local tests: `airdropper` and `faucet` services (devnet and testnet)
-5. Prometheus (used to gather application metrics from proxy and indexer services)
-6. Loki (tool for log collection from all applications inside the cluster)
-7. Grafana (visualization tool for monitoring metrics)
+4. Prometheus (used to gather application metrics from proxy and indexer services)
+5. Loki (tool for log collection from all applications inside the cluster)
+6. Grafana (visualization tool for monitoring metrics)
 
 For the database service, there are two options available, both of which will be described in detail in the following section.
 :::
@@ -127,7 +124,6 @@ This is where you configure various aspects of how you wish to run your Proxy. O
 * `VAULT_ENABLED` - enables/disables [Hashicorp Vault](https://www.vaultproject.io/) container inside your cluster as a service
 * `NEON_PROXY_ENABLED` - enables/disables Neon Proxy container
 * `POSTGRES_ENABLED` - enables/disables local Postgresql pods (see the [`Postgres` section](#postgres))
-* `CLUSTER_TYPE` - specifies the Kubernetes provider used. Options are `"eks"`, `"gke"` or `"localhost"` (see the [Kubernetes section](#kubernetes))
 * `NAMESPACE` - specifies the namespace that the Proxy will be deployed inside the cluster. Default is `neon-proxy`
 * `KEY_DIR` - path to the directory containing your neon-labs operator keys, relative to the current directory
 * `KEY_MASK` - regular expression that finds your operator key JSON files
@@ -144,7 +140,7 @@ This is where you configure various aspects of how you wish to run your Proxy. O
     | devnet | https://api.devnet.solana.com/ | 10 | 60 (slot) | 
     | testnet | https://api.testnet.solana.com/ | 15 | 60 (slot) | 
     | local | http://localhost:8899 | 1 | 10 (slot) | 
-* `PP_SOLANA_URL` - For standalone Solana, different values (`SOLANA_URL` and `PP_SOLANA_URL`) are necessary. For testnet/devnet/mainnet-beta, you can use the same value for `SOLANA_URL` **and** `PP_SOLANA_URL`. If left empty, `PP_SOLANA_URL`'s value will be the same as `SOLANA_URL`
+* `PP_SOLANA_URL` - specifies the Solana URL RPC endpoint which is connected to PYTH. Used to obtain current crypto rates. For standalone Solana, different values (`SOLANA_URL` and `PP_SOLANA_URL`) are necessary. For testnet/devnet/mainnet-beta, you can use the same value for `SOLANA_URL` **and** `PP_SOLANA_URL`. If left empty, `PP_SOLANA_URL`'s value will be the same as `SOLANA_URL`
 
 #### `Proxy`
 
@@ -202,7 +198,12 @@ where
 * `POSTGRES_DB` - specifies the schema name that will generate inside your database
 * `POSTGRES_USER` - specifies your database username
 * `POSTGRES_PORT` - specifies your database's TCP port. Default is `5432`
-* `POSTGRES_STORAGE_CLASS` - specifies the database's storage class. Options are `"host"` if you set up your database in your local cluster; and `"efs"` if you already have an [AWS Elastic File System (EFS)](https://aws.amazon.com/efs/) storage that will keep your database records
+* `POSTGRES_STORAGE_CLASS` - specifies the database's storage class.
+    - Set value to`"host"` if you set up your database in your local cluster;
+    - You can check other available options for self-hosted and third-party provided Kubernetes clusters with:
+     ```bash
+     kubectl get storageclasses.storage.k8s.io
+     ```
 * `POSTGRES_PASSWORD` - specifies the database password of your choosing. If left empty, the password will be randomly generated. 
   * If the password is randomly generated, you can use `kubectl` to get from the secret object and see its value by running
     ```bash

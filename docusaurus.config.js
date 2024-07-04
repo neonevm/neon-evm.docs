@@ -1,14 +1,15 @@
 // @ts-check
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer').themes.github;
+const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Neon Docs',
   tagline: 'Neon EVM is an open source project implementing the Ethereum virtual machine on Solana.',
-  url: 'https://docs.neonfoundation.io',
+  url: 'https://neonevm.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'ignore',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.png',
   organizationName: 'neonlabsorg',
@@ -177,7 +178,8 @@ const config = {
           trackingID: 'G-Y5QG48111W'
         },
         docs: {
-          sidebarPath: require.resolve('./sidebars.js')
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/neonevm/neon-evm.docs/edit/main',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css')

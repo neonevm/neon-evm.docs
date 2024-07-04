@@ -17,7 +17,11 @@ import TabItem from '@theme/TabItem';
 
 - Work from The Graph CLI
 
-> `yarn global add @graphprotocol/graph-cli` or `npm install -g @graphprotocol/graph-cli`
+```bash
+yarn global add @graphprotocol/graph-cli 
+# or 
+npm install -g @graphprotocol/graph-cli
+```
 
 - Send a request to info@neonevm.org to be added to the allowlist for The Graph [endpoints](#the-graph-endpoints).
    
@@ -55,6 +59,7 @@ Neon subgraph supports specVersion: 0.0.4 inside the subgraph.yaml file.
 To extract, process, and store data from a dApp contract on Neon EVM using The Graph protocol, you must deploy a dedicated subgraph to a Graph node. 
 
 :::info
+
 Subgraphs map 1:1 with a dApp to provide Graph nodes with the information and logic needed to:
 - Observe the blockchain for log events of smart contacts
 - Translate the events into entities for storage
@@ -72,7 +77,6 @@ A subgraph is created using three main components:
 - Subgraph manifest
 - GraphQL schema
 - AssemblyScript mapping file
-
 
 :::info
 
@@ -114,7 +118,7 @@ If you’re developing a subgraph for an existing public project, you will need 
 
 :::tip
 
-If you set  `dataSources.networking` to `neonlabs.`, then the manifest file will pull the corresponding “neonlabs” network configurations as setup in your project’s truffle.js file. 
+If you set `dataSources.networking` to `neonlabs.`, then the manifest file will pull the corresponding “neonlabs” network configurations as setup in your project’s truffle.js file. 
 
 :::
 
@@ -125,14 +129,14 @@ The address of the contract deployed to the `dataSources.network` in the subgrap
 ## The Graph endpoints
 
 <Tabs>
-    <TabItem value="Opt1" label="Mainnet" default>
+<TabItem value="Opt1" label="Mainnet" default>
 
 - IPFS: https://ipfs.neonevm.org
 - Graph UI: https://thegraph.neonevm.org
 - Deployment: https://thegraph.neonevm.org/deploy
-- GraphQL: https://thegraph.neonevm.org/subgraphs/name/{YOUR_SUBGRAPH_SLUG}/graphql 
+- GraphQL: https://thegraph.neonevm.org/subgraphs/name/YOUR_SUBGRAPH_SLUG/graphql 
 
-> Replace {YOUR_SUBGRAPH_SLUG} with your slug.
+> Replace `YOUR_SUBGRAPH_SLUG` with your slug.
 
 </TabItem>
 <TabItem value="Opt2" label="Devnet" default>
@@ -140,9 +144,9 @@ The address of the contract deployed to the `dataSources.network` in the subgrap
 - IPFS: https://ch-ipfs.neontest.xyz
 - Graph UI: https://ch2-graph.neontest.xyz/
 - Deployment: https://ch2-graph.neontest.xyz/deploy/
-- GraphQL: https://ch2-graph.neontest.xyz/subgraphs/name/{YOUR_SUBGRAPH_SLUG}/graphql
+- GraphQL: https://ch2-graph.neontest.xyz/subgraphs/name/YOUR_SUBGRAPH_SLUG/graphql
 
-> Replace {YOUR_SUBGRAPH_SLUG} with your slug.
+> Replace `YOUR_SUBGRAPH_SLUG` with your slug.
 
 </TabItem>
 </Tabs>
@@ -163,26 +167,25 @@ Request access to the allowlist for The Graph endpoints at info@neonevm.org. You
 2.1 Get The Graph's CLI with:
 
 <Tabs>
-    <TabItem value="Opt1" label="yarn" default>
+<TabItem value="Opt1" label="yarn" default>
 
-    ```bash
-    yarn global add @graphprotocol/graph-cli
-    ```
+```bash
+yarn global add @graphprotocol/graph-cli
+```
 
 </TabItem>
 <TabItem value="Opt2" label="npm" default>
 
-
-    ```bash
-    npm install -g @graphprotocol/graph-cli
-    ```
+```bash
+npm install -g @graphprotocol/graph-cli
+```
 </TabItem>
 </Tabs>
 
 2.2 Initiate a project:
 
 <Tabs>
-    <TabItem value="Opt1" label="Clone our example" default>
+<TabItem value="Opt1" label="Clone our example" default>
 
 Neon EVM provides an example of how to integrate The Graph on Neon [on GitHub](https://github.com/neonlabsorg/neon-tutorials/tree/main/the-graph-test). This project includes example of how to fetch data for the USDC token deployed on Neon Mainnet.
 
@@ -192,7 +195,7 @@ Neon EVM provides an example of how to integrate The Graph on Neon [on GitHub](h
 Start a fresh Graph project with 
 
 ```bash
-    graph init --studio {YOUR_SUBGRAPH_SLUG}
+graph init --studio {YOUR_SUBGRAPH_SLUG}
 ```
 > Remember to define your custom network to `neonlabs` in the subgraph.yaml and again in truffle-config.js to define the neonlabs network.
 
@@ -212,12 +215,14 @@ graph create neonlabs/test-subgraph --node https://thegraph.neonevm.org/deploy/
 
 In the CLI, instantiate `test-subgraph` with:
 
-2.1 
+2.1
+
 ```bash
 graph codegen
 ```
 
-2.2 
+2.2
+
 ```bash
 graph build
 ```
