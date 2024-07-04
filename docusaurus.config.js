@@ -174,6 +174,9 @@ const config = {
       '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        googleTagManager: {
+          containerId: 'GTM-NKNPBQ2S',
+        },
         gtag: {
           trackingID: 'G-Y5QG48111W'
         },
