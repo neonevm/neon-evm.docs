@@ -1,5 +1,5 @@
 ---
-title: Global Variables Issues in Neon EVM Ecosystem
+title: Global Variables & Oracle Integration Optimizations
 proofedDate: 20240708
 iterationBy: AI
 includedInSite: true
