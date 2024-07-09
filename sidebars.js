@@ -61,7 +61,7 @@ const sidebars = {
       type: 'category',
       label: 'Dev Recommendations',
       items: [
-        'developing/dev_recommend/global_variables'
+        'developing/dev_recommend/global_variables.md'
       ]
     },
     {
