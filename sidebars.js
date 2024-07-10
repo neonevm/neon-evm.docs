@@ -59,6 +59,13 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Dev Recommendations',
+      items: [
+        'developing/dev_recommendations/global_variables'
+      ]
+    },
+    {
+      type: 'category',
       label: 'Use Tokens',
       items: [
         'developing/deploy_facilities/interacting_with_spl_tokens',
