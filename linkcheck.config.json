@@ -27,7 +27,6 @@
     {
       "pattern": "^https://thegraph.neonevm.org/subgraphs/name/{YOUR_SUBGRAPH_SLUG}/graphql "
     },
-
     {
       "pattern": "^https://thegraph.neonevm.org/deploy"
     },
