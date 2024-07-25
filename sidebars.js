@@ -203,6 +203,11 @@ const sidebars = {
     },
     {
       type: 'doc',
+      label: 'Claiming Vested NEON Tokens',
+      id: 'governance/withdraw_neon'
+    },    
+    {
+      type: 'doc',
       label: 'Voting Process',
       id: 'governance/proposals'
     },
