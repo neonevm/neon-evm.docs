@@ -60,9 +60,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Dev Recommendations',
-      items: [
-        'developing/dev_recommendations/global_variables'
-      ]
+      items: ['developing/dev_recommendations/global_variables']
     },
     {
       type: 'category',
@@ -82,6 +80,7 @@ const sidebars = {
         'developing/integrate/wallets/integrating_web3auth',
         'developing/integrate/oracles/integrating_chainlink',
         'developing/integrate/oracles/integrating_pyth',
+        'developing/integrate/oracles/integrating_api3',
         'developing/integrate/middleware/the-graph',
         'developing/integrate/indexer/flair',
         'developing/integrate/indexer/envio',
