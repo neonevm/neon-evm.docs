@@ -55,6 +55,7 @@ The following tables provide the addresses of ERC-20 interface contracts for the
 | <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/dogwifhat-logo.png" className="coin-icon" />            | $WIF            | `0xF86934c2b05c31f3bBE3BCd6E3a8aA7790cAd9c1` | `EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm` |
 | <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/wen-logo.png" className="coin-icon" />                  | WEN             | `0xc61e8aB62666D25F0854C5723587507A7E92E289` | `WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk`  |
 | <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/popcat-logo.svg" className="coin-icon" />               | POPCAT          | `0xb89c62e960457d1d2c5f20135bedfd215d2466de` | `7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr` |
+| <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/whale-token-logo.svg" className="coin-icon" />          | WHALE           | `0x663572b924db12e0e3822c6160df29154630c8e3` | `9uhHjyfc5tKdaZnjstLLKoLGcF889ub8zX9wtwhtzgK6` |
 
 </TabItem>
 <TabItem value="devnet" label="Devnet">
