@@ -64,11 +64,8 @@ The Neon EVM address is registered inside `neonlabsorg/proxy`, so the Proxy know
 #### Create and run services with Docker Compose
 In order to create and run these services: 
 
-1. Create a "keys" folder and put your allowlisted key into it. Note that the file with the Operator key should be named `id.json`.
-```bash
-mkdir keys
-mv {PATH_TO_WHITELISTED_KEYS} keys/
-```
+1. Create a file `id.json` for storing an Operator key.
+   Put Solana private key to the `id.json`.
 
 2. Set the following environment variables
    - `EVM_LOADER`, i.e. the contract address for Neon EVM
@@ -76,50 +73,66 @@ mv {PATH_TO_WHITELISTED_KEYS} keys/
      - For Mainnet, use: `NeonVMyRX5GbCrsAHnUwx1nYYoJAtskU1bWUo6JGNyG`
    - `SOLANA_URL`
      - Refer to the [RPC Endpoints table](#rpc-endpoints)
-   - `REVISION` - neon proxy revision
+   - `VERSION` - neon proxy revision
+   - `SOLANA_KEY_FOR_EVM_CONFIG` - operator key, should be a valid solana public key with SOLs on it
 
-For example,
+Example for devnet configuration:
 ```bash
 export EVM_LOADER=eeLSJgWzzxrqKv1UxtRVVH8FX3qCQWUs9QuAjJpETGU
-export SOLANA_URL=http://api.devnet.solana.com/
-export REVISION=latest
+export VERSION=v1.13.20
+export SOLANA_URL=<SOLANA_NODE>
+export SOLANA_KEY_FOR_EVM_CONFIG=<YOUR_SOLANA_PUBLIC_KEY>
 ```
+Please note that public Solana nodes have [rate limits](https://solana.com/docs/core/clusters) and they may not work with the local Neon Proxy. 
+If you want to host the local instance on your end you need a Solana node with no rate limits. You can set up your own node or just request one from a provider like P2P, Everstake or QuickNode.
 
-3. Download the `docker-compose` [file](https://github.com/neonlabsorg/proxy-model.py/blob/develop/docker-compose/docker-compose-remote-solana.yml). This file should be placed in the same folder with the `keys/` directory.
+3. Download the files neede to run services:
 ```bash
-wget https://raw.githubusercontent.com/neonlabsorg/proxy-model.py/develop/docker-compose/docker-compose-remote-solana.yml
+# docker-compose file
+wget https://raw.githubusercontent.com/neonlabsorg/neon-proxy.py/develop/docker-compose/docker-compose-ro.yml
+
+# directory to store the data in case you want to rerun indexer service
+mkdir indexer_db
+
+# db scheme
+mkdir db
+cd db
+wget https://raw.githubusercontent.com/neonlabsorg/neon-proxy.py/develop/db/scheme.sql
+cd ..
 ```
 
 4. Start the local environment.
 ```bash   
-docker-compose -f docker-compose-remote-solana.yml up postgres dbcreation proxy indexer -d
+docker-compose -f docker-compose-ro.yml up -d
 ```
 
+5. Check the local environment.
+You can ensure that start is succesfull by service statuses:
+```console
+dbcreation - Exited
+indexer - Up
+postgres, proxy - Up (healthy)
+```
+If proxy works, the request
+```bash
+curl -X POST -H 'Content-Type: application/json' -d '{"jsonrpc":"2.0","method":"eth_blockNumber","id":1}' http://127.0.0.1:9090/solana
+```
+will return current block as in the example:
+```JSON
+{"jsonrpc":"2.0","id":1,"result":"0x12b23ae0"}
+```
+
+6. Destroy the local environment.
 If you want to destroy the local environment, run the following command:
 ```bash
-docker-compose -f docker-compose-remote-solana.yml down
-```
-
-The console output should look like this:
-```console
-Creating postgres ... done
-Creating dbcreation ... done
-Creating indexer ... done
-Creating proxy ... done
+docker-compose down
 ```
 
 ## Connect to a Solana cluster RPC endpoint
 
-A Proxy connects to a public [Solana cluster RPC endpoint](https://docs.solana.com/cluster/rpc-endpoints) depending on the `SOLANA_URL` value set. The following table shows the *endpoint* value that's set automatically based on the value of the `CONFIG` flag.
+**RPC endpoints**
 
-### RPC endpoints
-CONFIG | RPC Endpoint
-:-|:-
-Devnet | `https://api.devnet.solana.com`
-Testnet | `https://api.testnet.solana.com`
-Mainnet | `https://api.mainnet-beta.solana.com`
-
-To use a different endpoint, you need to specify the variable `-e SOLANA_URL='http://<Solana node RPC endpoint>'` on the command line. For example, to use Devnet, add the flag `-e SOLANA_URL='https://api.devnet.solana.com'`.
+To use a Solana RPC endpoint, you need to specify the variable `-e SOLANA_URL='http://<Solana node RPC endpoint>'` on the command line.
 
 When a Proxy is deployed, it generates a wallet containing a key pair. If you don't need the new wallet and want to use the keys you already have, you need to specify the path to your wallet on the command line.
 
