@@ -83,6 +83,36 @@ Every Solana transaction which corresponds to a particular Neon EVM transaction,
 
 If the data emitted by an event is more than 128K bytes, the transaction won't get reverted, but some of the event data won't be stored on-chain, causing some inconsistencies in the data stored.
 
+### Usage of dynamic sized variable types
+
+There is a limitation in Solidity versions prior to `0.8.15` when using dynamic-sized variable types, such as `strings` and `bytes`, as mapping values in functions that are invoked multiple times. This issue arises because reusing the same parameters of these types in transactions leads to an increased consumption of Solana accounts.
+
+For example:
+
+```sh
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.7.0 <0.9.0;
+
+contract MappingActions {
+    mapping(uint256 => string) public mapping1;
+    mapping(uint256 => bytes) public mapping2;
+
+    function testMapping1() external {
+        for (uint256 i = 0; i < 45; ++i) {
+            mapping1[i] = 'Test 123 Hello';
+        }
+    }
+
+    function testMapping2() external {
+        for (uint256 i = 0; i < 45; ++i) {
+            mapping2[i] = '0x1';
+        }
+    }
+}
+```
+
+The transaction will fail with the error `Too many accounts` if the functions `testMapping1()` and `testMapping2()` are invoked more than once.
+
 ## Support
 
 Should you require further advice to help troubleshoot, create a ticket in the support-tickets channel in [Neon's Discord](https://discord.gg/neonevm).
