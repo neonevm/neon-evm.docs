@@ -85,7 +85,7 @@ If the data emitted by an event is more than 128K bytes, the transaction won't g
 
 ### Usage of dynamic sized variable types
 
-There is a limitation in Solidity versions prior to `0.8.15` when using dynamic-sized variable types, such as `strings` and `bytes`, as mapping values in functions that are invoked multiple times. This issue arises because reusing the same parameters of these types in transactions leads to an increased consumption of Solana accounts.
+In Solidity versions before `0.8.15`, there is a limitation when using dynamic-sized variable types, such as `string` and `bytes`, as mapping values in functions invoked multiple times. This issue arises because reusing the same parameters of these types in transactions leads to increased consumption of Solana accounts.
 
 For example:
 
