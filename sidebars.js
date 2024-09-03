@@ -141,6 +141,7 @@ const sidebars = {
         'composability/using_composability/transfer_sols',
         'composability/using_composability/transfer_spl_token',
         'composability/using_composability/swap_on_orca',
+        'composability/using_composability/swap_on_raydium',
         'composability/using_composability/using_vrf'
       ]
     },
