@@ -46,6 +46,9 @@
       "pattern": "^https://thegraph.neonevm.org/index-node/graphql"
     },
     {
+      "pattern": "^https://solscan.io/"
+    },
+    {
       "pattern": "^https://phantom.app"
     }
   ],
