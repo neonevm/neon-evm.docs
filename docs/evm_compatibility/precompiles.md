@@ -4,25 +4,22 @@ proofedDate: na
 iterationBy: na
 includedInSite: true
 approvedBy: na
-comment: From meet>> Requires supported precompiles Anton can provide + explanation of WHY they are not supported #3 Requires a list of native precomiled contracts Anton can provide by slack [actually, the yellow paper https://ethereum.github.io/yellowpaper/paper.pdf is not a great source for the opcodes -- using docs instead]
+comment: We need to get the custom precompile addresses
 ---
 
 ## Precompiled EVM contracts
 
 Currently, Neon EVM supports the majority of [precompiled contracts](https://www.evm.codes/precompiled?fork=merge)
 
-## Unsupported precompiled EVM contracts
-
-There are some precompiled EVM contracts that Neon EVM does not support.
-
-Contracts written in the Solidity language will not be executed in Neon EVM if they contain calls to the following:
-
-- bigModExp — Used for efficient RSA verification inside an EVM, as well as other forms of number theory-based cryptography
-- bn256Add — Performs addition on the elliptic curve operations
-- bn256ScalarMult — Performs scalar multiplication on the elliptic curve operations
-- bn256Pairing — Elliptic curve pairing operations to perform zkSTARKs verification within the block gas limit
-
-> The Neon EVM requires the implementation of system calls in Solana to support these contracts in the future.
-
-
-<!-- todo We have our own native Precompiled contracts -- need to list those and provide addresses -->
+| Address | Name             | Compatibility                        |
+| ------- | ---------------- | ------------------------------------ |
+| 0x01    | ecRecover        | ![Supported](img/done.ico)           |
+| 0x02    | SHA2-256         | ![Supported](img/done.ico)           |
+| 0x03    | RIPEMD-160       | ![Supported](img/done.ico)           |
+| 0x04    | identity         | ![Supported](img/done.ico)           |
+| 0x05    | modexp           | ![Not Supported](img/false-copy.png) |
+| 0x06    | ecAdd            | ![Supported](img/done.ico)           |
+| 0x07    | ecMul            | ![Supported](img/done.ico)           |
+| 0x08    | ecPairing        | ![Supported](img/done.ico)           |
+| 0x09    | blake2f          | ![Supported](img/done.ico)           |
+| 0x0a    | point evaluation | ![Not Supported](img/false-copy.png) |
