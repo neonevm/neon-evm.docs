@@ -80,7 +80,7 @@ const sidebars = {
         'developing/integrate/wallets/integrating_web3auth',
         'developing/integrate/oracles/integrating_chainlink',
         'developing/integrate/oracles/integrating_pyth',
-        'developing/integrate/oracles/integrating_api3',
+        // 'developing/integrate/oracles/integrating_api3', integrating_api3 item is blocked (detalis are in TBA-195)
         'developing/integrate/middleware/the-graph',
         'developing/integrate/indexer/flair',
         'developing/integrate/indexer/envio',

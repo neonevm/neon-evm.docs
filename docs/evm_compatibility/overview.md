@@ -133,7 +133,7 @@ for (uint256 i = 0; i < 32; i++) {
 <!-- todo looks like these code snippets will benefit at least a sentence to explain list vs map which is better and why -->
 
 ### Heap size
-Ethereum-like transactions are executed by Neon EVM inside [Solana's Berkeley Packet Filter (BPF)](https://docs.solana.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf). The BPF has heap memory limit of 256 KB, i.e. the size of the heap allocated to a contract call, is limited to 256 KB.
+Ethereum-like transactions are executed by Neon EVM inside [Solana's Berkeley Packet Filter (BPF)](https://solana.com/docs/core/programs#berkeley-packet-filter-bpf). The BPF has heap memory limit of 256 KB, i.e. the size of the heap allocated to a contract call, is limited to 256 KB.
 
 :::info
 
