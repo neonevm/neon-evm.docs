@@ -27,7 +27,7 @@ const sidebars = {
     {
       type: 'category',
       label: '💰 Tokens',
-      items: ['tokens/neon_token', 'tokens/gas_fees', 'tokens/token_list']
+      items: ['tokens/neon_token', 'tokens/token_list']
     },
     { type: 'doc', label: 'Neon Proxy API', id: 'api/neon-api' },
     {
