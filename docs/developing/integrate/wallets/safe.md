@@ -28,7 +28,7 @@ The primary purpose of Safe Neon EVM is to facilitate the secure storage, manage
 
 <div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](safe1.png)
+![](img/safe1.png)
 
 </div>
 
@@ -36,7 +36,7 @@ The primary purpose of Safe Neon EVM is to facilitate the secure storage, manage
 
 <div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](safe2.png)
+![](img/safe2.png)
 
 </div>
 
@@ -44,7 +44,7 @@ The primary purpose of Safe Neon EVM is to facilitate the secure storage, manage
 
 <div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](safe3.png)
+![](img/safe3.png)
 
 </div>
 
@@ -52,7 +52,7 @@ The primary purpose of Safe Neon EVM is to facilitate the secure storage, manage
 
 <div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](safe4.png)
+![](img/safe4.png)
 
 </div>
 
@@ -61,7 +61,7 @@ The primary purpose of Safe Neon EVM is to facilitate the secure storage, manage
 
 <div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](safe5.png)
+![](img/safe5.png)
 
 </div>
 
@@ -70,7 +70,7 @@ Accept the transaction in your initial wallet
 
 <div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](safe6.png)
+![](img/safe6.png)
 
 </div>
 
@@ -78,13 +78,13 @@ Accept the transaction in your initial wallet
 
 <div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](safe7.png)
+![](img/safe7.png)
 
 </div>
 
 1.8 Welcome page
 <div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
-![](safe8.png)
+![](img/safe8.png)
 
 </div>
