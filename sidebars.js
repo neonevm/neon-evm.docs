@@ -77,6 +77,7 @@ const sidebars = {
       items: [
         'developing/integrate/wallets/integrating_metamask_into_your_dapp',
         'developing/integrate/wallets/integrating_walletconnect',
+        'developing/integrate/wallets/safe',
         'developing/integrate/wallets/integrating_web3auth',
         'developing/integrate/oracles/integrating_chainlink',
         'developing/integrate/oracles/integrating_pyth',
