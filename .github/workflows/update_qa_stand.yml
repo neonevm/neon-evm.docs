@@ -18,37 +18,21 @@ jobs:
       - name: Install modules
         run: |
           yarn install
-      
-      # - name: List Markdown files
-      #   run: |
-      #     find docs/markdown_files -type f \( -name '*.md' -o -name '*.mdx' \) > files-to-check
-      
-      - name: Check external links_new
-        uses: gaurav-nelson/github-action-markdown-link-check@v1
-        with:
-          use-quiet-mode: 'no'
-          use-verbose-mode: 'yes'
-          config-file: 'linkcheck.config.json'
-          file-extension: '.md*'
-          folder-path: 'docs'
-          # file-path: 'docs/*.md, docs/*.mdx'
-
       - name: Check external links
         run: |
           find ./README.md ./docs/ -regex ".*.[md|mdx]" -print0 | xargs -0 -n1 \
-          ./node_modules/markdown-link-check/bin/markdown-link-check --config linkcheck.config.json -v
-  
-      # - name: Build
-      #   run: |
-      #     yarn clear
-      #     yarn build
-      # - name: Deploy to s3
-      #   uses: jakejarvis/s3-sync-action@master
-      #   with:
-      #     args: --acl public-read --delete
-      #   env:
-      #     AWS_S3_BUCKET: ${{secrets.QA_AWS_S3_BUCKET}}
-      #     AWS_ACCESS_KEY_ID: ${{secrets.QA_AWS_ACCESS_KEY_ID}}
-      #     AWS_SECRET_ACCESS_KEY: ${{secrets.QA_AWS_SECRET_ACCESS_KEY}}
-      #     AWS_REGION: ${{secrets.QA_AWS_REGION}}
-      #     SOURCE_DIR: "build"
+          ./node_modules/markdown-link-check/markdown-link-check --config linkcheck.config.json -q
+      - name: Build
+        run: |
+          yarn clear
+          yarn build
+      - name: Deploy to s3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --delete
+        env:
+          AWS_S3_BUCKET: ${{secrets.QA_AWS_S3_BUCKET}}
+          AWS_ACCESS_KEY_ID: ${{secrets.QA_AWS_ACCESS_KEY_ID}}
+          AWS_SECRET_ACCESS_KEY: ${{secrets.QA_AWS_SECRET_ACCESS_KEY}}
+          AWS_REGION: ${{secrets.QA_AWS_REGION}}
+          SOURCE_DIR: "build"
