@@ -29,8 +29,9 @@ jobs:
           use-quiet-mode: 'no'
           use-verbose-mode: 'yes'
           config-file: 'linkcheck.config.json'
-          file-extension: '.md, .mdx'
-          folder-path: 'docs'
+          # file-extension: '.md*'
+          # folder-path: 'docs'
+          file-path: 'docs/*.md, docs/*.mdx'
 
       - name: Check external links
         run: |
