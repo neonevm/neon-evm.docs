@@ -18,6 +18,20 @@ jobs:
       - name: Install modules
         run: |
           yarn install
+      
+      # - name: List Markdown files
+      #   run: |
+      #     find docs/markdown_files -type f \( -name '*.md' -o -name '*.mdx' \) > files-to-check
+      
+      - name: Check external links_new
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'no'
+          use-verbose-mode: 'yes'
+          config-file: 'linkcheck.config.json'
+          file-extension: '.md, .mdx'
+          folder-path: 'docs'
+
       - name: Check external links
         run: |
           find ./README.md ./docs/ -regex ".*.[md|mdx]" -print0 | xargs -0 -n1 \
