@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "description": "NOT CURRENT  POST request to get Neon Proxy version",
+  "required": [
+    "method"
+  ],
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "default value": "2.0",
+      "description": "The JSON RPC version"
+    },
+    "method": {
+      "type": "string",
+      "const": "neon_proxyVersion",
+      "description": "The method name"
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "U18N7qw7r98qwerqwehkjhwe8"
+      ],
+      "description": "End-user provided identifier for the request; returned with payload"
+    }
+  }
+}

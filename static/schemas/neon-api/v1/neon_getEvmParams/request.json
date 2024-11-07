@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "description": "POST request for parameters of the Neon EVM program deployed on Solana.",
+  "required": [
+    "method",
+    "params",
+    "jsonrpc"
+  ],
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "default": "2.0",
+      "description": "The JSON RPC version."
+    },
+    "method": {
+      "type": "string",
+      "const": "neon_getEvmParams",
+      "description": "The method name."
+    },
+    "id": {
+      "type": "number",
+      "examples": [
+        "1712927726192"
+      ],
+      "description": "End-user provided identifier for the request; returned with payload."
+    }
+  }
+}

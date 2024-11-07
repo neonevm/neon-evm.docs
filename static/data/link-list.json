@@ -14,7 +14,7 @@
         "id": 1,
         "icon": "/icons/config.svg",
         "title": "Configure & Use Devtools",
-        "description": "Hardhat, Truffle, and Brownie",
+        "description": "Foundry, Hardhat & Truffle",
         "url": "/docs/developing/deploy_facilities/configure_hardhat"
       },
       {
@@ -28,7 +28,7 @@
         "id": 3,
         "icon": "/icons/daps.svg",
         "title": "Deploy dApps",
-        "description": "Using Hardhat, Truffle, Remix & Brownie",
+        "description": "Using Foundry, Hardhat, Truffle & Remix",
         "url": "/docs/developing/deploy_facilities/using_remix"
       },
       {
@@ -71,13 +71,6 @@
         "title": "NeonFaucet",
         "description": "Airdrop test tokens",
         "url": "https://neonfaucet.org/"
-      },
-      {
-        "id": 4,
-        "icon": "/icons/indexing.svg",
-        "title": "NeonAnalytics",
-        "description": "Analyze deployed contracts",
-        "url": "https://neon.aleph.cloud/"
       }
     ]
   }

@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "description": "POST request to get transaction gas price. The payload returned depends on how you form the request using the `params` object. While each property is optional individually, an empty array is not processed. Two example permutations of possible request structures are provided; more are supported.",
+  "required": [
+    "method",
+    "params",
+    "jsonrpc"
+  ],
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "default": "2.0",
+      "description": "The JSON RPC version."
+    },
+    "method": {
+      "type": "string",
+      "const": "neon_gasPrice",
+      "description": "The method name."
+    },
+    "id": {
+      "type": "number",
+      "examples": [
+        "OpEgqw7r98qwerqwehkjhwe8"
+      ],
+      "description": "End-user provided identifier for the request; returned with payload."
+    },
+    "params": {
+      "oneOf": [
+        {
+          "type": "object",
+          "title": "Filter request",
+          "description": "Exclude `from` address to retrieve common gas price for all accounts.",
+          "properties": {
+            "from": {
+              "type": "string",
+              "description": "Optional. Account tx request originates from. If not provided, request retrieves common gas price for all accounts.",
+              "examples": [
+                "0x348ee8817eA227e52e233668874fA609aA51C83D"
+              ]
+            },
+            "nonce": {
+              "type": "number",
+              "format": "hexadecimal",
+              "description": "Optional. Requires `from` property. If `from` is provided but `nonce` is not provided, Neon Proxy uses the transaction counter providing the state of the `from` account as the nonce for the request. If nonce is absent from the request, the Proxy accesses the value of the nonce from the state.",
+              "examples": [
+                "0x0"
+              ]
+            },
+            "full": {
+              "type": "boolean",
+              "description": "Optional. Switch to determine verbose or light response. For verbose, use `true`.",
+              "examples": [
+                true,
+                false
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "title": "All accounts",
+          "description": "This request returns the details for all accounts.",
+          "properties": {
+            "full": {
+              "type": "boolean",
+              "description": "Switch to determine verbose or light response. For verbose, use `true`.",
+              "example": true
+            }
+          }
+        }
+      ]
+    }
+  }
+}

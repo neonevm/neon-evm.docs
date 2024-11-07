@@ -1,0 +1,25 @@
+type: object
+description: POST request to get current versions for the Proxy tech stack.
+required:
+  - method
+  - jsonrpc
+  - id
+properties:
+  jsonrpc:
+    type: string
+    default: '2.0'
+    description: The JSON RPC version.
+  method:
+	  type: string
+	  enum:
+			- neon_versions
+			- neon_evmVersion
+			- neon_cliVersion
+			- neon_solanaVersion
+			- neon_proxyVersion
+  	description: The method name.
+  id:
+    type: string
+    examples: 
+			- K827qw7r98qwerqwehkjhwe8
+    description: End-user provided identifier for the request; returned with payload.

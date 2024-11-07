@@ -1,124 +1,198 @@
 ---
-title: Transfer Solana Tokens
+title: Move Tokens Between Neon EVM and Solana
+proofedDate: 20231207
+iterationBy: na
+includedInSite: true
+approvedBy: VS
+comment:
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import image1 from '@site/static/img/doc-images/neonpassV2/Connect_to_wallet.png';
+import image2 from '@site/static/img/doc-images/neonpassV2/Neon_to_Solana.png';
+import image3 from '@site/static/img/doc-images/neonpass/select_network.png';
+import image4 from '@site/static/img/doc-images/neonpassV2/Solana_to_Neon_transfer.png';
+import image5 from '@site/static/img/doc-images/neonpassV2/Transfer_completed_general.png';
+import image6 from '@site/static/img/doc-images/neonpassV2/Transfer_completed_general.png';
+import image7 from '@site/static/img/doc-images/neonpass/confirmation_transfer_neonscan.png';
+import image8 from '@site/static/img/doc-images/neonpass/confirmation_transfer_solana.png';
+import image9 from '@site/static/img/doc-images/neonpassV2/Not_Enough_SOL.png';
+import image10 from '@site/static/img/doc-images/neonpassV2/Wrong_network.png';
+import image11 from '@site/static/img/doc-images/neonpassV2/Transfer_completed.png';
+import image12 from '@site/static/img/doc-images/neonpassV2/Transfer_failed.png';
+import image13 from '@site/static/img/doc-images/neonpassV2/Homepage.png';
+import image14 from '@site/static/img/doc-images/neonpassV2/Mobile Wallet connect.png';
+import image15 from '@site/static/img/doc-images/neonpassV2/Transfer complete.png';
+import image16 from '@site/static/img/doc-images/neonpassV2/Transfer_failed.png';
+
+## TL;DR
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OPZwzh_9Qy4?si=Z1M904pYTlvDp0tM" title="How to Use NeonPass | Step-by-Step Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Overview
-This guide provides instructions on how to transfer ERC-20 tokens between Solana and Neon EVM using NeonPass. You can do it in any direction, i.e. transfer tokens from Solana to Neon EVM or withdraw them back. However, you need to keep in mind that each transaction in Neon EVM or Solana will be charged a fee in the form of NEON or SOL tokens, respectively. For example, withdrawing tokens from Neon EVM to Solana requires 2 transactions: one for Neon EVM (requires a fee in NEON) and another for Solana (requires a fee in SOL). Therefore, you will have to pay two fees.
 
-Before you start transferring ERC-20 tokens, you have to fulfill the following requirements:
-  * On a source side, you should already have an account with the balance of tokens that will be transferred.
-  * NeonPass uses [MetaMask](about/terminology.md#metamask) and [Phantom](about/terminology.md#phantom), two popular non-custodial browser based wallets.
-  * The NeonPass application is deployed in the browser to which your wallets are attached.
+This guide demonstrates how to transfer tokens between Solana and Neon EVM using the [NeonPass](https://neonpass.live/) UI. The same tooling is available as an [npm package](/docs/developing/integrate/neon_transfer).
 
-## Procedure
-This procedure presents the example of transferring USDT tokens from Neon EVM to Solana in Devnet. The task is to transfer 5 USDT from Neon EVM to Solana.
+You can transfer tokens in either direction, but each transaction incurs a gas fee in either NEON or SOL.
 
-Initial conditions:
-  * Your Neon EVM account contains a non-zero USDT balance.
-  * You have a non-zero NEON balance to pay the withdrawal approval fee.
-  * Your Solana account contains a non-zero SOL-balance to pay the fee.
+:::info
+ Neon EVM's Devnet now supports a feature providing the option to pay the gas fees with the [token of transaction](https://neonevm.org/blog/feature-alternative-gas-fee-token), rather than only NEON or SOL.
+:::
 
-Transferring tokens using NeonPass occurs in three stages:
-  * Source — Connecting the MetaMask wallet to NeonPass and providing access to the sender's account balance.
-  * Target — Connecting the Phantom wallet to NeonPass and providing access to the recipient's account balance.
-  * Confirmation — Signing the transaction and checking the result of transferring tokens.
+:::important
+When transferring tokens from Neon EVM to Solana for the first time, ensure that you have SOL in your Solana wallet to cover the transaction costs. This is a one-time requirement for the initial transfer.
+:::
 
-### The Source Stage
+## Prerequisites
 
-Go to the [NeonPass](https://neonpass.live/) page in the browser to which the Phantom and MetaMask wallets are attached.
+- Neon EVM-compatible wallet (e.g. Atomic Wallet, MetaMask, Rabby Wallet, WalletConnect, Trust Wallet, Ledger, etc.)
+- Solana-compatible wallet (e.g. Phantom, Solfare, etc.)
+- Browser with both wallet applications attached
+- Token balance to pay gas fees
 
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
+## Transfer tokens with NeonPass
 
-![](img/transfer-spl-1.png)
+### Step 1: Set up wallets
 
-</div>
+1.1 Navigate to [NeonPass](https://neonpass.live/).
 
-1. Make sure that the icons of these wallets are displayed at the top right.
-2. By default, the direction of transferring tokens is set from `Solana` to `Neon`. If this is not the case, you have to click on the arrow icon to reverse the forwarding direction.
-3. Click `Connect Wallet` to connect your MetaMask wallet to the NeonPass app. The MetaMask window should pop up on the screen. Follow the login procedure to your wallet and make sure it is connected to Devnet. Also, make sure you have enough USDT tokens in your account to transfer (there are 987.9 USDT in our example) and have a non-zero NEON balance to pay the withdrawal approval fee.
+1.2 Add your required Neon EVM Network in your Neon compatible wallet through [Chainlist.org/chain/245022934](https://chainlist.org/?chain=245022934&search=Neon+EVM&testnets=true).
 
-Upon successful connection of the MetaMask wallet to NeonPass and access to your account balance, the inscription `Connect Wallet` will change to the public key of your account in the Neon EVM.
+> For further help, see our [wallet setup walkthrough](/docs/wallet/metamask_setup).
 
-<div className='neon-img-box-300' style={{textAlign: 'center'}}>
+### Step 2: Connect wallets to NeonPass
 
-![](img/transfer-spl-2.png)
+:::tip
+Remember to use a browser to which both your Solana and Neon EVM compatible wallets are attached.
+:::
 
-</div>
+2.1 Click **Connect Wallet** to connect your Solana compatible wallet to NeonPass. Follow the login procedure in your wallet's popup window and ensure it's connected to the network you require (e.g. Mainnet).
 
-On the NeonPass screen, click `Select a token`. In the list that appears, select the desired token symbol and specify the quantity to be sent. (In our example, it is 5 USDT.)
+<img src={image1} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-<div className='neon-img-box-300' style={{textAlign: 'center'}}>
+2.2 Repeat this step for your Neon EVM compatible wallet.
 
-![](img/transfer-spl-3.png)
+### Step 3: Conduct transfer
 
-</div>
+<Tabs>
 
-Click `Next` to continue the token transfer procedure and proceed to the Target stage.
+ <TabItem value="neontosolana" label="Neon EVM to Solana" default>
 
-### The Target Stage
+3.1 Select the transfer direction from Neon EVM to Solana.
 
-The `Target` windows will appear on the NeonPass screen. Click `Select Wallet` to connect your Phantom wallet to NeonPass.
+<img src={image2} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-<div className='neon-img-box-300' style={{textAlign: 'center'}}>
+:::important
+Your first ever transaction from your wallet includes a one time fee to generate the Solana account linked to your address. Therefore the first transaction will be more expensive than the subsequent ones.
+:::
 
-![](img/transfer-spl-4.png)
+3.2 Choose the token and enter the amount to transfer.
 
-</div>
+3.3 Click **Transfer** and sign the transaction in your connected wallets.
 
-The Phantom window should pop up on the screen. Follow the login procedure to your wallet and make sure it is connected to Devnet. Also make sure you have a non-zero SOL balance in your account to pay the fee. (There are 10 SOL in our example.)
+3.4 Review the transaction summary and enjoy your tokens in Solana!
 
-Upon successful connection of the Phantom wallet to NeonPass and access to your account balance, the inscription `Select Wallet` will change to the public key of your account in Solana. This means that a user authorizes NeonPass to use this key to sign transactions. Phantom stores sets of account keys, but does not store any balances. To obtain balances, Phantom will refer to the Solana blockchain.
+ </TabItem>
 
-<div className='neon-img-box-300' style={{textAlign: 'center'}}>
+ <TabItem value="solanatoneon" label="Solana to Neon EVM">
 
-![](img/transfer-spl-5.png)
+3.1 Select the transfer direction from Solana to Neon EVM.
 
-</div>
+<img src={image4} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-Click `Next` to continue the token transfer procedure and proceed to the Confirmation stage.
+3.2 Choose the token, enter the amount, and select the gas token (NEON or SOL).
 
-### The Confirmation Stage
+3.3 Are you an expert user? Click on 'Advanced Mode' and select a different priority fee to speed up 
 
-Read the details of the upcoming transfer of tokens and click `Confirm`.
+3.4 Click **Transfer** and sign the transaction in your connected wallets.
 
-<div className='neon-img-box-300' style={{textAlign: 'center'}}>
+3.5 Review the transaction summary and enjoy your tokens in Neon EVM!
 
-![](img/transfer-spl-6.png)
+ </TabItem>
 
-</div>
+</Tabs>
 
-The MetaMask window will pop up on the NeonPass screen with the amount of fee charged for using gas in Neon EVM. The fee is paid in NEON tokens. If you agree with these terms, click `Confirm`. The transaction will be signed automatically with the public key of your Neon EVM account.
+**Verify the transaction on [NeonScan](https://neonscan.org/) or [Blockscout](https://neon.blockscout.com/).**
 
-<div className='neon-img-box-300' style={{textAlign: 'center'}}>
+We hope that you love NeonPass and that you are ready to leverage the full potential of Neon EVM by facilitating hassle-free transfers of assets to and from Solana.
 
-![](img/transfer-spl-7.png)
+## Gas Fees and Priority Selection
 
-</div>
+<Tabs>
 
-You should also approve the transaction in the Phantom window, which will display the amount transferred and fee charged in SOL tokens. The transaction will be signed automatically with the public key of your Solana account.
+<TabItem value="neontosolana" label="Neon EVM to Solana" default>
 
-<div className='neon-img-width-300' style={{textAlign: 'center'}}>
+When transferring tokens from Neon EVM to Solana:
+- You can pay gas fees in NEON or the token of transaction.
+- If you're withdrawing to a new Solana account or an existing account that has never received the specific ERC-20 token before, ensure that you have sufficient SOL in your Solana wallet to cover the gas fees.
 
-![](img/transfer-spl-8.png)
+</TabItem>
 
-</div>
+<TabItem value="solanatoneon" label="Solana to Neon EVM">
 
-You should receive a notification that the token transfer was successful. Open the `View on Solana Explorer` page to see the results of transferring funds using NeonPass.
+When transferring tokens from Solana to Neon EVM:
+- For sending NEON tokens, you can choose between NEON and SOL as the gas token.
+- For sending SPL tokens (e.g., USDC), only SOL can be used as the gas token.
 
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
+</TabItem>
 
-![](img/transfer-spl-9.png)
+</Tabs>
 
-</div>
+:::important
+Please be aware of the gas fee specificities for each transfer direction. Always ensure you have sufficient funds in the appropriate token to cover gas fees before initiating a transfer.
+:::
 
-The `Token Balance Change` tab shows the change in balances upon completion of the procedure.
+## Edge Cases
 
-<div className='neon-img-box-600' style={{textAlign: 'center'}}>
+1. Insufficient funds for gas fees
+   
+  <img src={image9} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-![](img/transfer-spl-10.png)
+2. Wallet connection issues
+   
+   <img src={image10} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-</div>
+3. Transfer completion and failure
+   
+   <img src={image11} width="450" style={{ display: 'block', margin: '10px auto' }} /> 
+   
+   <img src={image12} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-## Conclusion
+:::info
+If you encounter any persistent issues or have questions about edge cases not covered here, please reach out to our [support team](http://discord.com/invite/neonevm) for assistance.
+:::
 
-We examined the use of NeonPass in Devnet using the example of transferring USDT tokens from Neon EVM to Solana. The procedure for reverse transferring tokens from Solana to Neon EVM using NeonPass is not much different from the one given, and therefore we do not consider it here. The main difference will be only in the order of connecting wallets to NeonPass.
+## Using NeonPass on Mobile Devices
+
+NeonPass is designed to be responsive and user-friendly across various devices, including mobile phones.
+
+<img src={image13} width="190" style={{ display: 'block', margin: '5px auto' }} /> 
+
+1. Connecting wallets on mobile
+   
+  <img src={image14} width="190" style={{ display: 'block', margin: '10px auto' }} /> 
+
+   :::tip
+   Make sure you have your mobile wallet apps installed and set up before attempting to connect them to NeonPass.
+   :::
+
+2. Selecting tokens and entering amounts
+
+3. Initiating and confirming transfers
+  
+  <img src={image15} width="190" style={{ display: 'block', margin: '10px auto' }} /> 
+
+   :::important
+   Always double-check the transaction details before confirming a transfer, especially on mobile devices where screen sizes are smaller.
+   :::
+
+4. Track transfer progress and history in a dedicated explorer
+
+<!--    <img src={image16} width="450" style={{ display: 'block', margin: '10px auto' }} /> -->
+
+By following these steps, you can easily transfer tokens using NeonPass on your mobile device, enjoying a seamless and user-friendly experience on the go.
+
+## Under the hood
+
+Neon EVM isn't a blockchain, and so it follows that NeonPass isn't a conventional blockchain bridge. Your assets are not wrapped. Instead, Neon EVM applies an ERC-20 interface, making SPL tokens behave like Ethereum-natives when in the Neon network. [Learn more about how NeonPass works](/docs/tokens/token-accounts).

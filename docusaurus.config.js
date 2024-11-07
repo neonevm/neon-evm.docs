@@ -1,15 +1,16 @@
 // @ts-check
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer').themes.github;
+const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Neon Docs',
   tagline: 'Neon EVM is an open source project implementing the Ethereum virtual machine on Solana.',
-  url: 'https://docs.neon-labs.org',
+  url: 'https://neonevm.org',
   baseUrl: '/',
-  onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw',
+  onBrokenAnchors: 'ignore',
+  onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.png',
   organizationName: 'neonlabsorg',
   projectName: 'neon-evm.docs',
@@ -27,6 +28,7 @@ const config = {
       }
     }
   ],
+  themes: ["docusaurus-json-schema-plugin"],
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -38,9 +40,19 @@ const config = {
         indexName: 'neon-labs',
         contextualSearch: true,
         placeholder: 'search something...',
-        algoliaOptions: { 'facetFilters': ['type:$TYPE'] },
+        algoliaOptions: { facetFilters: ['type:$TYPE'] },
         debug: false,
         dropdown: true
+      },
+      zoom: {
+        selector: '.image-zoom > img',
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(27, 27, 29)'
+        },
+        config: {
+          margin: 60
+        }
       },
       metadata: [
         {
@@ -55,21 +67,35 @@ const config = {
         }
       ],
       navbar: {
-        title: 'NeonDocs',
+        title: 'Neon EVM Docs',
         logo: {
           alt: 'Neon EVM',
           src: 'img/logo.svg'
         },
         items: [
           {
-            label: 'Quick Start',
+            label: 'Home',
             position: 'left',
             to: '/docs/quick_start'
           },
+          // { label: 'DAO',
+          //   position: 'left',
+          //   to: '/docs/governance/overview'
+          // },
           {
-            label: 'Tutorials',
+            label: 'Develop',
             position: 'left',
-            to: '/docs/developing/deploy_facilities/using_hardhat'
+            to: '/docs/developing/get-started'
+          },
+          {
+            label: 'Fees',
+            position: 'left',
+            to: '/docs/tokens/gas_fees'
+          },
+          {
+            label: 'Operate',
+            position: 'left',
+            to: '/docs/operating/operator-introduction'
           }
         ]
       },
@@ -80,14 +106,14 @@ const config = {
         },
         links: [
           {
-            title: 'Getting Started',
+            title: 'Get Started',
             items: [
               { label: '🏓 Quick Start', to: '/docs/quick_start' },
               { label: '🧬 Neon EVM Overview', to: '/docs/about/why_neon' },
               { label: '🔑 Set Up Wallet', to: '/docs/wallet/metamask_setup' },
               { label: '💰 Tokens', to: '/docs/tokens/neon_token' },
               { label: '🛰 Transfer Tokens', to: '/docs/token_transferring/neonpass_usage' },
-              { label: '💬 FAQ', to: '/docs/faq/what-is-neon' }
+              { label: '💬 FAQ', to: '/docs/faq/neon-brief-faq' }
             ]
           },
           {
@@ -95,12 +121,11 @@ const config = {
             items: [
               { label: 'BlockExplorer', to: 'https://neonscan.org/' },
               { label: 'NeonPass', to: 'https://neonpass.live/' },
-              { label: 'NeonFaucet', to: 'https://neonfaucet.org/' },
-              { label: 'NeonAnalytics', to: 'https://neon.aleph.cloud/' }
+              { label: 'NeonFaucet', to: 'https://neonfaucet.org/' }
             ]
           },
           {
-            title: 'Developers',
+            title: 'Develop',
             items: [
               { label: 'Connect to Neon RPC', to: '/docs/developing/connect_rpc' },
               { label: 'Request Test Tokens', to: '/docs/developing/utilities/faucet' },
@@ -116,18 +141,18 @@ const config = {
                 label: 'Integrate',
                 to: '/docs/developing/integrate/oracles/integrating_chainlink'
               },
-              { label: 'Tutorials', to: '/docs/developing/deploy_facilities/using_hardhat' },
+              { label: 'Tutorials', to: '/docs/developing/deploy_facilities/using_hardhat' }
             ]
           },
           {
-            title: 'Operators',
+            title: 'Operate',
             items: [
-              { label: 'Operator Requirements', to: '/docs/operating/operator_requirements' },
-              { label: 'Running a Proxy Server', to: '/docs/operating/operator_guide' }
+              { label: 'Operate a Neon Proxy', to: '/docs/operating/operator-introduction' },
+              { label: 'Run a Proxy Server', to: '/docs/operating/basic' }
             ]
           },
           {
-            title: 'Governance',
+            title: 'Govern',
             items: [
               { label: 'Overview', to: '/docs/governance/overview' },
               { label: 'Neon DAO Organization', to: '/docs/governance/neon_daos' },
@@ -149,11 +174,15 @@ const config = {
       '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        googleTagManager: {
+          containerId: 'GTM-NKNPBQ2S',
+        },
         gtag: {
           trackingID: 'G-Y5QG48111W'
         },
         docs: {
-          sidebarPath: require.resolve('./sidebars.js')
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/neonevm/neon-evm.docs/edit/main',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css')
@@ -162,11 +191,13 @@ const config = {
     ]
   ],
   plugins: [
+    require.resolve('docusaurus-plugin-image-zoom'),
     [
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
-          { from: '/docs', to: '/docs/quick_start' }
+          { from: '/docs', to: '/docs/quick_start' },
+          { from: '/docs/developing/integrate/oracles/integrating_api3', to: '/docs/quick_start' }
         ]
       }
     ]

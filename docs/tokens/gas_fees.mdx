@@ -1,0 +1,122 @@
+---
+title: Gas Fees
+proofedDate: 20231204
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: Calc sheet https://docs.google.com/spreadsheets/d/1g2ms3DveyPgrG0Gf6cSwq6xhT0AgrrRus_pa9ICHP4w/edit?usp=sharing
+---
+
+import Formula from '../single-source-snippets/_price_formula.mdx'
+import Price from '../single-source-snippets/_gas_price_calc.mdx'
+
+## TL;DR
+
+- `Gas Fee` = `Gas amount` \* `Gas price`
+- [`Gas price`](#gas-price) depends on the SOL:NEON ratio and Proxy Operator fee
+- [`Gas amount`](#gas-amount) depends on the computational resources as per Solana's rules
+- The first transaction (i.e. requires account setup), is [more expensive](#example-2-create-a-new-account) than subsequent transactions
+
+
+## Introduction
+
+The NEON token is used to pay the “gas fees” required for transaction execution. The gas fee is the amount of NEON a user pays for a transaction to execute successfully.
+
+:::info
+Neon EVM will soon support fee payment in the same token as the transaction token for supported tokens e.g. SOL and USDC.
+:::
+
+> `Gas Fee` = `Gas amount` \* `Gas price`
+>
+> This amount is usually displayed for users in [Galans (10<sup>-9</sup> NEON)](/docs/tokens/neon_token#token-parameters).
+
+On a high level, gas fee payments in the Neon EVM work as follows:
+1. The **User** pays for each transaction in NEON tokens to the **Proxy Operator**.
+2. The **Proxy Operator** then pays the **Solana Validator** and the **DAO Treasury**.
+
+<div className='neon-img-box-600' style={{textAlign: 'center'}}>
+
+![](./img/payments-neon.png)
+
+</div>
+
+As depicted in the diagram, users of dApps built on the Neon EVM pay for all the resources they consume plus the Operator fees (that may differ between Operators). Operators pay for the resources they consume in SOL. Specifically, Operators pay Solana validators and governance fees in SOL. Operators pay the same amount for governance as they pay to Solana validators (for the signature validation).
+
+### Gas amount
+
+The **gas amount** is the amount of computational resources, such as CPU time and storage, used to execute the transaction. The gas amount is calculated in accordance with Solana's rules (in fact, 1 gas unit = 1 Lamport) as a sum of the following amounts:
+* The **computational cost**
+> 5,000 units for each transaction (Solana charges 5,000 Lamports for the signature validation for each transaction). This amount goes to Solana validator. This computational cost is **doubled** to give the same amount of gas fees to the **DAO Treasury**.
+* The **storage cost**
+> 6,960 units for each newly allocated byte (Solana charges 6,960 Lamports for each byte), while re-use of existing or already-allocated storage is free.
+
+For example, for a Neon transaction with N iterations and S newly allocated bytes, the *gas amount* will be:
+
+> 2(computational cost) + storage cost
+
+> = 2(5,000 \* N) + (6960 \* S  units)
+
+### Gas price
+
+The **gas price** is the cost of 1 unit of gas in NEON. This price is calculated using the price of SOL:NEON multiplied by an adjuster that is configured by the Proxy Operator:
+
+<Formula/>
+
+
+## Examples
+
+The following examples of gas fee calculations on Neon are all based on these assumptions:
+
+<Price/>
+
+### Example 1: swap or transfer
+
+If the spend is already approved from an account that already exists, we can use the following Gas amount with the Gas price as calculated above.
+
+The Gas amount is calculated with N=1 iterations and S=0 storage costs:
+
+| Component          | Value      | Units/Definition   | Calculation                  |
+| ------------------ | ---------- | ------------------ | ---------------------------- |
+| Computational cost | 1         | iterations \* 5000 | 1000                        |
+| Storage cost       | 0          | bytes \* 6960      | 34800                        |
+| Gas amount         | 54800     | Lamports           | (2\*computational) + storage |
+|                    |            |                    |                              |
+| **Gas Fee**            | **0.002475** | NEON               | [gas price](#examples) \* gas amount      |
+
+### Example 2: create a new account
+Within [Solana](https://docs.solana.com/storage_rent_economics), the rental cost for storage can be paid via one of two methods:
+1. Set it and forget it.
+
+> With this approach, accounts with two years' worth of rent deposited are exempt from network rent charges. By maintaining this minimum balance, the broader network benefits from reduced liquidity and the account holder can rest assured that their data is retained for continual access and usage.
+
+2. Pay per byte.
+
+> The network can charge rent on a per-epoch basis, in credit for the next epoch. This rent is deducted at a rate specified in genesis, in Lamports per Kilobyte-year.
+
+To simplify the user experience, Neon takes option 1 and charges two years' worth of rent deposits for each new account. The gas cost of creating a new account is:
+
+
+| Component          | Value      | Units/Definition   | Calculation                  |
+| ------------------ | ---------- | ------------------ | ---------------------------- |
+| Computational cost | 1         | iterations \* 5000 | 1000                        |
+| Storage cost       | 199         | bytes \* 6960      | 34800                        |
+| Gas amount         | 1395040     | Lamports           | (2\*computational) + storage |
+|                    |            |                    |                              |
+| **Gas Fee**            | **0.3452724** | NEON               | [gas price](#examples) \* gas amount      |
+
+
+
+### Example 3: create a pool in Sobal
+
+| Component          | Value      | Units/Definition   | Calculation                  |
+| ------------------ | ---------- | ------------------ | ---------------------------- |
+| Computational cost | 32         | iterations \* 5000 | 1000                        |
+| Storage cost       | 10000         | bytes \* 6960      | 34800                        |
+| Gas amount         | 69920000     | Lamports           | (2\*computational) + storage |
+|                    |            |                    |                              |
+| **Gas Fee**            | **17.3052** | NEON               | [gas price](#examples) \* gas amount      |
+
+
+## What next?
+
+If you want to get your dApp started on Neon EVM, you may be wondering how you pay for the first transactions that are required to buy the NEON required to cover gas costs. This is where our starter pack of gasless transactions comes in. Furthermore, our "coming soon" feature will allow users to pay fees in [alternative tokens](https://neonevm.org/blog/feature-alternative-gas-fee-token).

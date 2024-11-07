@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "description": "Request to emulate a tx.",
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "default": "2.0",
+      "description": "The JSON RPC version."
+    },
+    "method": {
+      "type": "string",
+      "const": "neon_emulate",
+      "description": "The method name."
+    },
+    "id": {
+      "type": "number",
+      "examples": [
+        "1716308324042"
+      ],
+      "description": "End-user provided identifier for the request; returned with payload."
+    },
+    "params": [
+      "f88c25851150a01ae482d6d894549b5cb2d324f901aed6938a3838fb9b1089844180a4a59f3e0c00000000000000000000000000000000000000000000000873ee7db76059be9b841d3581bfa036c26c7f3d5f20a34da19cf5796c40be39add518027f40f37a51d215db242074a004402aa547dc02e4ca63f87c1caee2f8c41eb6bdb5eb49fba8507e1383c68dc2"
+    ]
+  },
+  "required": [
+    "id",
+    "jsonrpc",
+    "method"
+  ]
+}

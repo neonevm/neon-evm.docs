@@ -34,6 +34,10 @@
   text-decoration: underline;
 }
 
+.cookie-banner .description a:hover {
+  color: var(--ifm-color-primary-lightest);
+}
+
 .cookie-banner .actions {
   display: grid;
   grid-template-columns: fit-content(200px) auto;
@@ -66,5 +70,34 @@
 [data-theme='dark'] .cookie-banner .description {
   color: #fff;
 }
+
+.cookie-banner button.main {
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+}
+
+.cookie-banner button.secondary {
+  color: var(--ifm-menu-color);
+  font-weight: bold;
+}
+
+.cookie-banner button.main:hover, button.secondary:hover {
+  cursor: pointer;
+}
+
+.cookie-banner button.main:hover {
+  color: var(--ifm-color-primary-lightest);
+}
+
+.cookie-banner button.secondary:hover {
+  color: var(--ifm-menu-color-hover);
+}
+
+.cookie-banner button, button:focus, button:active {
+  outline: none;
+  background: transparent;
+  border: none;
+}
+
 
 

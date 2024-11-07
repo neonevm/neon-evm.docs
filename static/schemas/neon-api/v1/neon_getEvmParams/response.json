@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "description": "Response to request for parameters of the Neon EVM program deployed on Solana.",
+  "required": [
+    "jsonrpc",
+    "id",
+    "result"
+  ],
+  "properties": {
+    "jsonrpc": {
+      "type": "string",
+      "default": "2.0",
+      "description": "The JSON RPC version."
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "OpEgqw7r98qwerqwehkjhwe8"
+      ],
+      "description": "End-user provided identifier for the request."
+    },
+    "result": {
+        "neonAccountSeedVersion": "3",
+        "neonMaxEvmStepsInLastIteration": "1",
+        "neonMinEvmStepsInIteration": "500",
+        "neonGasLimitMultiplierWithoutChainId": "1000",
+        "neonHolderMessageSize": "950",
+        "neonPaymentToTreasury": "5000",
+        "neonStorageEntriesInContractAccount": "64",
+        "neonTreasuryPoolCount": "128",
+        "neonTreasuryPoolSeed": "treasury_pool",
+        "neonEvmProgramId": "53DfF883gyixYNXnM7s5xhdeyV8mVk9T4i2hGV9vG9io"
+    }
+}
+}

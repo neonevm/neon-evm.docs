@@ -1,5 +1,10 @@
 ---
 title: "Configure Truffle"
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: na
+comment: 
 ---
 
 The main goal in using Truffle is to make it easier for developers to deploy and debug contracts in Neon EVM.
@@ -67,7 +72,7 @@ module.exports = {
 
 > **Note:** If both mnemonic and private keys are provided, the mnemonic takes precedence and is used instead.
 
-To connect Truffle to a proxy on `node.js`, the `eth_accounts` method from the [Ethereum JSON RPC API](https://eth.wiki/json-rpc/API) set is required. This method allows serving a list of *20* byte addresses owned by a client. Since the Neon EVM proxy does not support the `eth_accounts` method required to connect Truffle, the HDWalletProvider library is used to function as this method. The connection is configured in `truffle-config.js`.
+To connect Truffle to a proxy on `node.js`, the `eth_accounts` method from the [Ethereum JSON RPC API](https://ethereum.org/en/developers/docs/apis/json-rpc/) set is required. This method allows serving a list of *20* byte addresses owned by a client. Since the Neon EVM proxy does not support the `eth_accounts` method required to connect Truffle, the HDWalletProvider library is used to function as this method. The connection is configured in `truffle-config.js`.
 
 The configuration file is publicly available, and therefore the `word mnemonic` and `private key` contained in the file are also publicly available. This makes it possible for the library to use this data. HDWalletProvider obtains the `word mnemonic` or `private key` from the configuration file and uses this data to sign transactions before sending them to the proxy. Due to this potential vulnerability, Truffle deployment should only be used with test wallets.
 
