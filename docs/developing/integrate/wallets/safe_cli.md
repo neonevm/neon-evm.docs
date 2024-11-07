@@ -1,5 +1,5 @@
 ---
-title: CLI
+title: Safe CLI
 proofedDate: 20241909
 iterationBy: na
 includedInSite: false
