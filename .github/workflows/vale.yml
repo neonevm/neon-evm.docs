@@ -6,7 +6,7 @@ on:
 jobs:
   typos:
     name: runner / chore
-    runs-on: ubuntu-latest
+    runs-on: ["self-hosted", "k8s-prod"]
     steps:
       - uses: actions/checkout@v3
       - uses: crate-ci/typos@v1.16.25
