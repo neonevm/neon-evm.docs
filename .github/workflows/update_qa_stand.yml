@@ -4,7 +4,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ["self-hosted", "k8s-prod-ubuntu-22"]
     strategy:
       matrix:
         node-version: [18]
@@ -15,6 +15,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - run: corepack enable
+
       - name: Install modules
         run: |
           yarn install
@@ -26,13 +28,14 @@ jobs:
         run: |
           yarn clear
           yarn build
-      - name: Deploy to s3
-        uses: jakejarvis/s3-sync-action@master
+
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
         with:
-          args: --acl public-read --delete
-        env:
-          AWS_S3_BUCKET: ${{secrets.QA_AWS_S3_BUCKET}}
-          AWS_ACCESS_KEY_ID: ${{secrets.QA_AWS_ACCESS_KEY_ID}}
-          AWS_SECRET_ACCESS_KEY: ${{secrets.QA_AWS_SECRET_ACCESS_KEY}}
-          AWS_REGION: ${{secrets.QA_AWS_REGION}}
-          SOURCE_DIR: "build"
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: "6aa89f18f67a9754ebd563ed320efb8b"
+          projectName: "docs-test"
+          directory: "build"
+          # Optional: Enable this if you want to have GitHub Deployments triggered
+          gitHubToken: ${{ secrets.GHTOKEN }}
