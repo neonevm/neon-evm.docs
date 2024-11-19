@@ -4,7 +4,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ["self-hosted", "k8s-prod"]
+    runs-on: ["self-hosted", "k8s-prod-ubuntu-22"]
     strategy:
       matrix:
         node-version: [18]
