@@ -52,10 +52,10 @@ The [ERC-20-for-SPL-Mintable variant](https://github.com/neonlabsorg/neon-evm/bl
 Depending on which output you need to construct, you will sign with different accounts, as shown in the table:
 
 
-| Contract            | Usage                                | Requirements                               |tx signed by                                                    |
-| :-----:------------------- | ----------------------------------- | ------------------------------------------ | -------------------------------------------------------------------- |
-| ERC-20-For-Spl         | Provide interface for Solana-minted token | 1\. Neon Account<br></br>2\. Existing SPL token | Signed by the Solana account private key (via linked Phantom wallet) <br></br>3\. Solana account & wallet|
-| ERC-20-ForSpl-Mintable | Mint a token on Solana & provide interface  | 1\. Neon Account                           | Signed by the Neon account private key (via linked MetaMask wallet)  |
+| Contract               | Usage                                       | Requirements                                                                         |tx signed by                                                          |
+| :--------------------: | ------------------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------- |
+| ERC-20-For-Spl         | Provide interface for Solana-minted token   | 1\. Neon Account<br></br>2\. Existing SPL token <br></br>3\. Solana account & wallet | Signed by the Solana account private key (via linked Phantom wallet) |
+| ERC-20-ForSpl-Mintable | Mint a token on Solana & provide interface  | 1\. Neon Account                                                                     | Signed by the Neon account private key (via linked MetaMask wallet)  |
 
 
 ## Restrictions
