@@ -196,8 +196,7 @@ const config = {
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
-          { from: '/docs', to: '/docs/quick_start' },
-          { from: '/docs/developing/integrate/oracles/integrating_api3', to: '/docs/quick_start' }
+          { to: '/docs/quick_start', from: ['/docs', '/docs/developing/integrate/oracles/integrating_api3'] }
         ]
       }
     ]
