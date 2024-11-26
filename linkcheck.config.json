@@ -49,6 +49,15 @@
       "pattern": "^https://solscan.io/"
     },
     {
+      "pattern": "^https://docs.api3.org/explore/*"
+    },
+    {
+      "pattern": "^https://thegraph.neonevm.org/*"
+    },
+    {
+      "pattern": "^https://api.devnet.solana.com"
+    },
+    {
       "pattern": "^https://phantom.app"
     }
   ],
