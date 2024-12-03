@@ -1,6 +1,6 @@
 ---
 title: Pyth
-proofedDate: 20240502
+proofedDate: 20241202
 iterationBy: HB
 includedInSite: true
 approvedBy: na
