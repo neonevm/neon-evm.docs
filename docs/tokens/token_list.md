@@ -56,6 +56,10 @@ The following tables provide the addresses of ERC-20 interface contracts for the
 | <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/wen-logo.png" className="coin-icon" />                  | WEN             | `0xc61e8aB62666D25F0854C5723587507A7E92E289` | `WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk`  |
 | <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/popcat-logo.svg" className="coin-icon" />               | POPCAT          | `0xb89c62e960457d1d2c5f20135bedfd215d2466de` | `7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr` |
 | <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/whale-token-logo.svg" className="coin-icon" />          | WHALE           | `0x663572b924db12e0e3822c6160df29154630c8e3` | `9uhHjyfc5tKdaZnjstLLKoLGcF889ub8zX9wtwhtzgK6` |
+| <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/hege-token-logo.svg" className="coin-icon" />           | HEGE            | `0x6Eb3d07B0E3A9b432A0e3828820e7c9cbEDfcD0B` | `ULwSJmmpxmnRfpu6BjnK6rprKXqD5jXUmPpS1FxHXFy`  |
+| <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/kart-token-logo.svg" className="coin-icon" />           | KART            | `0xdDFC206c7fd2B99C87a12eC5A3599C350D6d13c7` | `GDzfemoYR5GkbK4YupYpyq3E8Du9fSfKXxKDpkdrqGjs` |
+| <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/solerium-logo.svg" className="coin-icon" />             | SOLE            | `0xc901d4d435a5f9b5a4c8b4074624b867d5295034` | `H2fjXJsDJq2ghbXzcYJzQ73sWj6A26qZouLtx6wmrd6`  |
+| <img src="https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/rz-token-logo.svg" className="coin-icon" />             | RZ              | `0x8fd74165048af8f63e0e2c8a0f7a80706e689265` | `874mHtP579VYPxjthdrVU286Qk9fDPaZkw6KPnpZqPJf` |
 
 </TabItem>
 <TabItem value="devnet" label="Devnet">
