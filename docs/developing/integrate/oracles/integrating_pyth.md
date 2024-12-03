@@ -19,7 +19,6 @@ import TabItem from '@theme/TabItem';
 ## Deployed feeds
 
 The Pyth on Neon EVM supports the following feeds:
-
 <Tabs>
 
   <TabItem value="Mainnet" label="Mainnet">
