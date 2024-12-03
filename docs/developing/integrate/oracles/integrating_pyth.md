@@ -18,70 +18,10 @@ Next, your contract should query the Solana Pyth Contract that holds this update
 - [Solana Mainnet Beta](https://pyth.network/developers/price-feed-ids#solana-mainnet-beta)
 - [Solana Devnet](https://pyth.network/developers/price-feed-ids#solana-devnet)
 
-## Boilerplate contract
-
-[View GitHub example](https://github.com/neonlabsorg/neon-tutorials/blob/main/hardhat/contracts/TestReadSolanaData/TestReadPythPriceFeed.sol)
-
-```
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.21;
-
-import "./SolanaDataConverterLib.sol";
-import "./QueryAccount.sol";
-
-
-contract TestReadPythPriceFeed {
-    using SolanaDataConverterLib for bytes;
-    using SolanaDataConverterLib for uint64;
-    using SolanaDataConverterLib for uint32;
-
-    /// @notice This method serves to read the bytes length of a Solana data account
-    /// @param solanaAddress The Solana data account address of the price feed
-    function readSolanaDataAccountLen(bytes32 solanaAddress) public view returns(uint256) {
-        (bool success, uint256 data) = QueryAccount.length(uint256(solanaAddress));
-        require(success, "failed to query account data");
-
-        return data;
-    }
-
-    /// @notice This method serves to read the raw data of a Solana data account
-    /// @param solanaAddress The Solana data account address of the price feed
-    /// @param offset The offset in bytes, starting to read from the byte
-    /// @param len The length of the Solana data account
-    function readSolanaDataAccountRaw(bytes32 solanaAddress, uint64 offset, uint64 len) public view returns(bytes memory) {
-        (bool success, bytes memory data) = QueryAccount.data(uint256(solanaAddress), offset, len);
-        require(success, "failed to query account data");
-
-        return data;
-    }
-
-    /// @notice This method serves to read from Pyth price feeds price, prevPublishTimestamp and status
-    /// @param solanaAddress The Solana data account address of the price feed
-    /// @param offset The offset in bytes, starting to read from the byte
-    /// @param len The length of the Solana data account
-    /// @return Price
-    /// @return Timestamp
-    /// @return Status - could be UNKNOWN, TRADING, HALTED, AUCTION
-    function readSolanaPythPriceFeed(bytes32 solanaAddress, uint64 offset, uint64 len) public view returns(int64, uint64, uint32) {
-        (bool success, bytes memory data) = QueryAccount.data(uint256(solanaAddress), offset, len);
-        require(success, "failed to query account data");
-
-        return (
-            (data.toUint64(208)).readLittleEndianSigned64(),
-            (data.toUint64(200)).readLittleEndianUnsigned64(),
-            (data.toUint32(224)).readLittleEndianUnsigned32()
-        );
-    }
-}
-```
-
-:::important
-`TestReadPythPriceFeed.sol` contract imports `QueryAccount.sol` and `SolanaDataConverterLib.sol` which are the required libraries to read data from Solana accounts natively.
-:::
-
 ## How to integrate with the Pyth contract
 
-The example this tutorial is based on is located in [this repository](https://github.com/neonlabsorg/neon-tutorials/tree/main/hardhat).
+You can use the [Boilerplate contract](https://github.com/neonlabsorg/neon-contracts/blob/main/contracts/oracles/Pyth/PythAggregatorV3.sol) as starting point.
+For the detailed explanation, follow this tutorial. It is based on the contract example located in [this repository](https://github.com/neonlabsorg/neon-tutorials/tree/main/hardhat).
 
 By the end of this tutorial, you will deploy a contract which reads Pyth Solana price feeds.
 
