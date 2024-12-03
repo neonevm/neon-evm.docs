@@ -8,6 +8,8 @@ comment:
 ---
 
 import mm_p_key from '@site/static/img/doc-images/developing/deploy_facilities/foundry-metamask.png';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## Introduction
 
