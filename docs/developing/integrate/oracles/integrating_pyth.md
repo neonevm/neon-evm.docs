@@ -22,7 +22,6 @@ The Pyth on Neon EVM supports the following feeds:
 
   <TabItem value="Mainnet" label="Mainnet">
 
-|Currency pair|Neon EVM address|Price feed ID|
 | <div style="width:100px">Price feed</div> | Neon EVM address | Price feed ID |
 | ------- | --- | --- |
 | SOL/ USDC | [0x66d23fc4521d75613921f6475ce1776ed4a8f109](https://neon.blockscout.com/address/0x66d23fc4521d75613921f6475ce1776ed4a8f109) | 0xef0d8b6fda2ceba41da15d4095d1da392a0d2f8ed0c6c7bc0f4cfac8c280b56d |
@@ -37,7 +36,6 @@ The Pyth on Neon EVM supports the following feeds:
 | BONK/USD | [0x3d22FD7e59D19e08a6D5f55aD720549339fc8544](https://neon.blockscout.com/address/0x3d22FD7e59D19e08a6D5f55aD720549339fc8544) | 0x72b021217ca3fe68922a19aaf990109cb9d84e9ad004b4d2025ad6f529314419 |
 | JUP/USD | [0xD98d90B922C0a7112825232C7380B99176F090A7](https://neon.blockscout.com/address/0xD98d90B922C0a7112825232C7380B99176F090A7) | 0x0a0408d619e9380abad35060f9192039ed5042fa6f82301d0e48bb52be830996 |
 | INF/USD | [0x4Ff8DfecEb1d29bbF58e92Cc9847fd20b51406aD](https://neon.blockscout.com/address/0x4Ff8DfecEb1d29bbF58e92Cc9847fd20b51406aD) | 0xf51570985c642c49c2d6e50156390fdba80bb6d5f7fa389d2f012ced4f7d208f |
-
 
 </TabItem>
   <TabItem value="Devnet" label="Devnet"> 
