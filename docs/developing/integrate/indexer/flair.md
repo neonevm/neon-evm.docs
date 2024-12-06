@@ -15,8 +15,7 @@ description: Real-time and historical custom data indexing for any evm chain.
 [Flair](https://flair.dev) supports real-time and historical custom data indexing for any EVM chain via an RPC URL.
 
 Flair offers reusable indexing primitives (such as fault-tolerant RPC ingestors, custom processors, re-org aware database integrations) to simplify how you receive, transform, store, and access on-chain data.
-
-[![flair architecture](https://imgur.com/0q5bHZK.png)](https://docs.flair.dev/)
+[![flair architecture](img/0q5bHZK.png)](https://docs.flair.dev/)
 
 Learn more about [Flair's features](#flair-features)
 
