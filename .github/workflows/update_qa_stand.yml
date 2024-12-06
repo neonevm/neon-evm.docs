@@ -4,17 +4,19 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ["self-hosted", "k8s-prod"]
     strategy:
       matrix:
         node-version: [18]
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
       - name: Use Node ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Setup yarn
+        run: npm install -g yarn
       - name: Install modules
         run: |
           yarn install

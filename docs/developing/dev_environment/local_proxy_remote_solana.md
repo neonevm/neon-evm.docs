@@ -107,7 +107,7 @@ docker-compose -f docker-compose-ro.yml up -d
 ```
 
 5. Check the local environment.
-You can ensure that start is succesful by service statuses:
+You can ensure that start is successful by service statuses:
 ```console
 dbcreation - Exited
 indexer - Up
