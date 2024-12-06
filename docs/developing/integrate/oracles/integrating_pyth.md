@@ -13,10 +13,13 @@ import TabItem from '@theme/TabItem';
 
 ## Introduction
 
-[Pyth](https://pyth.network/) is an open-source real-time on-chain market data feed. Neon EVM can read Pyth Solana Mainnet and Devnet price feeds natively with precompiles.
+[Pyth](https://pyth.network/) is an open-source real-time on-chain market data feed. 
+Pyth price feeds exist out of the Neon EVM context.
+Neon EVM leverages a precompiled contract to read the feeds from Solana Mainnet and Devnet chains.
+The price values are regularly updated (sponsored) by the Pyth service freeing Neon users or protocols from the need to request price updates.
 
 
-## Deployed feeds
+## Supported feeds
 
 The Pyth on Neon EVM supports the following feeds:
 <Tabs>
@@ -64,9 +67,12 @@ The Pyth on Neon EVM supports the following feeds:
 
 You can use this [Boilerplate code](https://github.com/neonlabsorg/neon-contracts/blob/main/contracts/oracles/Pyth/PythAggregatorV3.sol) for your contract to use the Pyth feeds on Neon EVM.
 
-If you wish to have access over a not yet Neeon-deployed price feed from Solana, you can leverage this [script](https://github.com/neonlabsorg/neon-contracts/blob/main/scripts/oracles/Pyth/PythAggregatorV3.js) to deploy the price feed.
-
-
+If you wish to have access to a not-yet Neon-supported price feed from Solana, you can leverage this [script](https://github.com/neonlabsorg/neon-contracts/blob/main/scripts/oracles/Pyth/PythAggregatorV3.js).
+This script will work for any of the [listed](https://docs.pyth.network/price-feeds/sponsored-feeds/solana) "sponsored" price feeds. 
 :::important
-It's recommended to follow the [consumer best practices](https://docs.pyth.network/documentation/pythnet-price-feeds/best-practices) when consuming Pyth data.
+Using the script for a price feed which is not sponsored will lead to reading stale values.
 :::
+
+
+It's also recommended to follow the [consumer best practices](https://docs.pyth.network/documentation/pythnet-price-feeds/best-practices) when consuming Pyth data.
+
