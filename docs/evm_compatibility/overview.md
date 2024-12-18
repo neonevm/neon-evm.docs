@@ -15,7 +15,6 @@ import heap from '@site/static/img/doc-images/evm-compat/heap-overflow-error.png
 - Apply (most of) Ethereum's standard [JSON RPC API methods](/docs/evm_compatibility/json_rpc_api_methods)
 - Direct the calls to a [Neon RPC](/docs/developing/connect_rpc) via a Proxy Operator
 - Solana and Ethereum differ: consider those differences and the limitations they enforce
-- EIP-1559 not supported
 
 ## Introduction
 
