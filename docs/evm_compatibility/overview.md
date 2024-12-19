@@ -157,19 +157,6 @@ Consider the following techniques if you need to troubleshoot a heap overflow er
 	- Avoid strings, arrays, and mappings
 - Local variables: avoid strings, arrays, and mappings
 
-
-### Limitation on `block.timestamp` / `block.number` usage
-
-Time-related methods in addresses for mapping indexes, namely `block.timestamp` and `block.number`, behave differently from Ethereum and developers are **strongly cautioned** against using them when developing on Neon EVM. 
-
-The following code snippet is correct on Ethereum, but is **not** correct on Neon, due to the usage of `block.timestamp`.
-```javascript
-function create_new_element_timestamp() external {
-	block_timestamp = block.timestamp;
-	test_mapping[block_timestamp] = 100;
-}
-```
-
 ## Support
 
 Should you require further advice to help troubleshoot, create a ticket in the support-tickets channel in [Neon's Discord](https://discord.gg/neonevm).
