@@ -70,49 +70,26 @@ How you set up the ERC-20 Factory Contract will determine the contract deployed 
  <TabItem value="Constructor non-mintable" label="ERC20-For-Spl Constructor" default>
 
 ```
-constructor(
-     bytes32 _tokenMint
-)
-Arguments:
-_tokenMint – address of SPL token account
-Constructor signature for Mintable token is:
-constructor(
-<!--      string memory _name,
-     string memory _symbol, Is this to be removed for non-mintable?? -->
-     uint8 _decimals,
-     address _mint_authority
-)
-Arguments:
-_name – string representing full name of the token 
-_symbol – string representing shorten symbol of the token 
-_decimals – decimals of new token
-_mint_authority – address of mint/freeze authority Neon account
+/// @notice ERC20ForSpl constructor
+/// @param _tokenMint The Solana-like address of the Token Mint on Solana in bytes32 format
+constructor(bytes32 _tokenMint)
 ```
  </TabItem>
 <TabItem value="Constructor mintable" label="ERC20-For-Spl-Mintable Constructor">
 
 ``` 
+/// @notice ERC20ForSplMintable constructor
+/// @dev parameter _decimals cannot be bigger than 9, because of Solana's maximum value limit of uint64
+/// @param _name The name of the SPLToken
+/// @param _symbol The symbol of the SPLToken
+/// @param _decimals The decimals of the SPLToken
+/// @param _mint_authority The owner of the ERC20ForSPLMintable contract which has the permissions to mint new tokens
 constructor(
-     string memory _name,
-     string memory _symbol,
-     bytes32 _tokenMint
+    string memory _name,
+    string memory _symbol,
+    uint8 _decimals,
+    address _mint_authority
 )
-Arguments:
-_name – string representing full name of the token 
-_symbol – string representing shorten symbol of the token 
-_tokenMint – address of SPL token account
-Constructor signature for mintable token is:
-constructor(
-     string memory _name,
-     string memory _symbol,
-     uint8 _decimals,
-     address _mint_authority
-)
-Arguments:
-_name – string representing full name of the token 
-_symbol – string representing shorten symbol of the token 
-_decimals – decimals of new token
-_mint_authority – address of mint/freeze authority Neon account 
 ```
  </TabItem>
 </Tabs>
