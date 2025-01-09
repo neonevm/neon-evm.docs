@@ -36,7 +36,7 @@ Depending on the method called and the arguments passed to this contract, two va
 
 ### ERC-20-for-SPL
 
-The [ERC-20-for-SPL variant](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol#L17) works with a precompiled contract within Neon EVM which can call the SPL token program. This enables you to utilize existing SPL tokens e.g. SOL or NEON, as wSOL or wNEON, respectively, via the ERC-20 interface, i.e. this contract assigns the to the token.
+The [ERC-20-for-SPL variant](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol#L17) works with a precompiled contract within Neon EVM which can call the SPL token program. This enables you to utilize existing SPL tokens e.g. SOL or USDC, as wSOL or USDC tokens on Neon EVM chain, respectively, via the ERC-20 interface that this contract assigns the to the token.
 
 :::info
 Note that before setting up the ERC-20 Factory Contract to construct an ERC-20-for-SPL, you must register the token's existing [Metaplex metadata](https://developers.metaplex.com/token-metadata).
