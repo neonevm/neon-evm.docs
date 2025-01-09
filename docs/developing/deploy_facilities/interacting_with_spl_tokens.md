@@ -46,6 +46,15 @@ Note that before setting up the ERC-20 Factory Contract to construct an ERC-20-f
 
 The [ERC-20-for-SPL-Mintable variant](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol#LL35C1-L35C1) has two additional methods that enable you to use the Neon EVM to mint a new SPL token and register it to the interface to be ERC-20-compatible. When the ERC-20 Factory Contract is constructed to this variant, it creates a new SPL token using Solana's Token Program and provides mint and freeze authority to the Neon account specified in the constructor.
 
+## Deploying
+Setting up the ERC-20-for-SPL interface could be a 1-step or 2-step process:
+- You already have an existing SPLToken on Solana:
+  1. In this case, you only have to submit a transaction on Neon EVM to create the smart contract instance for the SPLToken.
+- You don't have an existing SPLToken and decided to use ERC-20-for-SPL-Mintable to mint a new SPLToken and to create smart contract instance:
+  1. Here, you can pass a single transaction to Neon EVM chain.
+- You don't have an existing SPLToken, but you want to be the owner of the token in the context of Solana:
+  1. Firstly, you need to deploy the SPLToken on Solana with a Solana transaction.
+  2. Next step is a transaction to Neon EVM to create the smart contract instance for the SPLToken you just deployed in the step 1.
 
 ## Contract signing
 
