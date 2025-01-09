@@ -93,6 +93,9 @@ constructor(
 ```
  </TabItem>
 </Tabs>
+:::important
+It's highly desirable to not place `decimals` greater than 9. Neglecting this restricion may lead to issues with math operations inside the smart contract.
+:::
 
 ## Notes on usage
 
