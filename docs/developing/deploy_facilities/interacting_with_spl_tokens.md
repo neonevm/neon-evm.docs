@@ -36,16 +36,25 @@ Depending on the method called and the arguments passed to this contract, two va
 
 ### ERC-20-for-SPL
 
-The [ERC-20-for-SPL variant](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol#L17) works with a precompiled contract within Neon EVM which can call the SPL token program. This enables you to utilize existing SPL tokens e.g. SOL or NEON, as wSOL or wNEON, respectively, via the ERC-20 interface, i.e. this contract assigns the to the token.
+The [ERC-20-for-SPL variant](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol#L17) works with a precompiled contract within Neon EVM which can call the SPL token program. This enables you to utilize existing SPL tokens e.g. SOL or USDC, as wSOL or USDC tokens on Neon EVM chain, respectively, via the ERC-20 interface.
 
 :::info
-Note that before setting up the ERC-20 Factory Contract to construct an ERC-20-for-SPL, you must register the token's existing [Metaplex metadata](https://docs.metaplex.com/programs/token-metadata/overview).
+Note that before setting up the ERC-20 Factory Contract to construct an ERC-20-for-SPL, you must register the token's existing [Metaplex metadata](https://developers.metaplex.com/token-metadata).
 :::
 
 ### ERC-20-for-SPL-Mintable
 
 The [ERC-20-for-SPL-Mintable variant](https://github.com/neonlabsorg/neon-evm/blob/4bcae0f476721e5396916c43396ec85e465f878f/evm_loader/solidity/erc20_for_spl_factory.sol#LL35C1-L35C1) has two additional methods that enable you to use the Neon EVM to mint a new SPL token and register it to the interface to be ERC-20-compatible. When the ERC-20 Factory Contract is constructed to this variant, it creates a new SPL token using Solana's Token Program and provides mint and freeze authority to the Neon account specified in the constructor.
 
+## Deploying
+Setting up the ERC-20-for-SPL interface could be a 1-step or 2-step process:
+- You already have an existing SPLToken on Solana:
+  1. In this case, you only have to submit a transaction on Neon EVM to create the smart contract instance for the SPLToken.
+- You don't have an existing SPLToken and decided to use ERC-20-for-SPL-Mintable to mint a new SPLToken and to create smart contract instance:
+  1. Here, you can pass a single transaction to Neon EVM chain.
+- You don't have an existing SPLToken, but you want to be the owner of the token in the context of Solana:
+  1. Firstly, you need to deploy the SPLToken on Solana with a Solana transaction.
+  2. Next step is a transaction to Neon EVM to create the smart contract instance for the SPLToken you just deployed in the step 1.
 
 ## Contract signing
 
@@ -70,52 +79,32 @@ How you set up the ERC-20 Factory Contract will determine the contract deployed 
  <TabItem value="Constructor non-mintable" label="ERC20-For-Spl Constructor" default>
 
 ```
-constructor(
-     bytes32 _tokenMint
-)
-Arguments:
-_tokenMint – address of SPL token account
-Constructor signature for Mintable token is:
-constructor(
-<!--      string memory _name,
-     string memory _symbol, Is this to be removed for non-mintable?? -->
-     uint8 _decimals,
-     address _mint_authority
-)
-Arguments:
-_name – string representing full name of the token 
-_symbol – string representing shorten symbol of the token 
-_decimals – decimals of new token
-_mint_authority – address of mint/freeze authority Neon account
+/// @notice ERC20ForSpl constructor
+/// @param _tokenMint The Solana-like address of the Token Mint on Solana in bytes32 format
+constructor(bytes32 _tokenMint)
 ```
  </TabItem>
 <TabItem value="Constructor mintable" label="ERC20-For-Spl-Mintable Constructor">
 
 ``` 
+/// @notice ERC20ForSplMintable constructor
+/// @dev parameter _decimals cannot be bigger than 9, because of Solana's maximum value limit of uint64
+/// @param _name The name of the SPLToken
+/// @param _symbol The symbol of the SPLToken
+/// @param _decimals The decimals of the SPLToken
+/// @param _mint_authority The owner of the ERC20ForSPLMintable contract, which has the permissions to mint new tokens
 constructor(
-     string memory _name,
-     string memory _symbol,
-     bytes32 _tokenMint
+    string memory _name,
+    string memory _symbol,
+    uint8 _decimals,
+    address _mint_authority
 )
-Arguments:
-_name – string representing full name of the token 
-_symbol – string representing shorten symbol of the token 
-_tokenMint – address of SPL token account
-Constructor signature for mintable token is:
-constructor(
-     string memory _name,
-     string memory _symbol,
-     uint8 _decimals,
-     address _mint_authority
-)
-Arguments:
-_name – string representing full name of the token 
-_symbol – string representing shorten symbol of the token 
-_decimals – decimals of new token
-_mint_authority – address of mint/freeze authority Neon account 
 ```
  </TabItem>
 </Tabs>
+:::important
+It's highly desirable to not place `decimals` greater than 9. Neglecting this restricion may lead to issues with math operations inside the smart contract.
+:::
 
 ## Notes on usage
 
