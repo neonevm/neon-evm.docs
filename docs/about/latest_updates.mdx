@@ -1,0 +1,116 @@
+---
+title: Latest updates
+proofedDate: 20250116
+iterationBy: BA
+includedInSite: true
+approvedBy: YYY
+comments: na
+---
+# Neon EVM 1.18 Mainnet Release
+Release Date:   January 7, 2025
+
+## 1. Overview
+
+This release focuses on bridging the gap between Ethereum and Solana by introducing native Solana wallet support, implementing the EIP-1559 fee mechanism, refining time-sensitive operations, and optimizing Solidity contract storage. Collectively, these improvements enhance user experience, streamline dApp development, and maintain Ethereum parity.
+
+## 2. Key Features
+
+### 2.1 Solana-Native Wallet Support & Signature SDK
+
+**Summary**
+Neon EVM now supports direct interaction with Solana-native wallets (Phantom, Backpack, Solflare). This removes the need for EVM-centric wallets like MetaMask, creating a frictionless experience for Solana users.
+
+**Details**
+
+- Introduces a dedicated Signature SDK for seamless Solana wallet integration.
+- Eliminates wallet switching or added complexity for users accustomed to Solana ecosystems.
+
+**Impact**
+
+- **Frictionless UX**: Users can continue using their favorite Solana wallets without extra steps.
+- **Broader User Reach**: Simplifies onboarding for both Solana and Ethereum communities.
+
+### 2.2 EIP-1559 Fee Mechanism
+
+**Summary**
+
+Neon EVM now implements the Ethereum EIP-1559 fee model, using two parameters to manage transaction costs and prioritization.
+
+**Details**
+
+- **baseFeePerGas**: Predictable base fee covering Solana fees and the operator margin.
+- **priorityFeePerGas**: Optional premium users can add to speed up transactions.
+- Full alignment with popular Ethereum tooling (e.g., MetaMask, Web3.js).
+
+**Impact**
+
+- **Fee predictability**: Enhanced accuracy for user fee estimations.
+- **Simplicity**: Leverages familiar Ethereum ecosystems and developer tools.
+- **Fairness**: Separates mandatory fees from acceleration fees.
+
+### 2.3 Enhanced `block.timestamp`
+
+**Summary**
+
+Addresses previous disparities between Ethereum and Solana infrastructures by ensuring `block.timestamp` and `block.number` behave as they do on Ethereum.
+
+**Details**
+
+- Removes inconsistencies in time-based operations.
+- No workaround logic needed for applications that rely on precise time or block metrics.
+
+**Impact**
+
+- **Accurate time-based mechanics**: Critical for interest accrual, staking, and games.
+- **Streamlined dApp development**: Ethereum developers can maintain existing time-sensitive code.
+
+### 2.4 Saving HEAP in Solana Accounts
+
+**Summary**
+
+Solidity contracts now persist HEAP states across transactions by saving these in Solana accounts.
+
+**Details**
+
+- Memory-intensive Solidity dApps can store data more efficiently.
+- Reduces in-transaction memory overhead by leveraging Solana’s accounts system.
+
+**Impact**
+
+- **Optimized resource usage**: Ideal for complex dApps requiring significant memory.
+- **Improved contract stability**: Lowers the risk of hitting memory limits in high-throughput scenarios.
+
+## 3. Why it matters
+
+Neon EVM 1.18 creates a more cohesive development experience, merging the strengths of Ethereum and Solana:
+
+- **Seamless wallet integration**: Solana users don’t need new wallets or conversion tools.
+- **Optimized fees**: The EIP-1559 model offers clarity, predictability, and fairness.
+- **Accurate timing**: Key for finance, staking, and real-time applications.
+- **Enhanced storage**: More robust support for complex or large-scale contracts.
+
+## 4. Upgrade notes
+
+1. **Review wallet integrations**
+    - If your dApp is designed for MetaMask or similar wallets, test the new Solana wallet flow.
+2. **Adjust fee settings**
+    - Update fee-logic to use both `baseFeePerGas` and `priorityFeePerGas` for accurate estimates.
+3. **Time-based contracts**
+    - Validate any contracts that rely on `block.timestamp` or `block.number` to ensure desired behavior.
+4. **Check storage configurations**
+    - If your contract handles large data sets, confirm that HEAP storage in Solana accounts is working as expected.
+
+## 5. Fixes
+
+- Gas limit estimation: Resolved an issue where the gas estimation mechanism inaccurately predicted significantly higher gas usage. The estimation logic has been optimized to provide more accurate projections.
+- Slow emulation during iterations: Addressed a performance bottleneck in the emulation process that previously caused delays during iterative Solana transactions. The updated emulation logic now executes significantly faster, ensuring smoother transaction processing.
+- Hanging transactions in optimistic execution: Fixed a bug in the optimistic execution mechanism that led to certain transactions hanging or failing to complete. Transactions now execute reliably without interruptions.
+- Priority fee distribution: Improved the distribution of the user’s priority fee, ensuring a more equitable allocation between Solana Validators and operators. While the previous implementation disproportionately allocated fees to operators, the updated mechanism distributes compute prices more effectively, aligning with the intended behavior.
+
+## 6. Additional Resources
+
+<!-- - Change logs -->
+- Relevant code repositories:
+    - [neonlabsorg/neon-evm](https://github.com/neonlabsorg/neon-evm/tree/v1.18.x)
+    - [neonlabsorg/neon-proxy](https://github.com/neonlabsorg/neon-proxy.py/tree/v1.18.x)
+- [Developer guides](https://neonevm.org/docs/developing/get-started)
