@@ -12,7 +12,7 @@ const sidebars = {
     {
       type: 'category',
       label: '🧬 Neon EVM Overview',
-      items: ['about/why_neon', 'about/neon_ecosystem', 'about/how_it_works']
+      items: ['about/why_neon', 'about/neon_ecosystem', 'about/how_it_works', 'about/latest_updates']
     },
     {
       type: 'doc',
