@@ -18,8 +18,6 @@ export interface QuickStartListData {
 }
 
 export function QuickStartItem({ data }: { data: QuickStartData }) {
-
-
   return <>
     <Link className={'quick-start-item'} to={data.url}>
       <div className={'quick-start-icon'}>
