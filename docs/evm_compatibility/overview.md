@@ -15,7 +15,6 @@ import heap from '@site/static/img/doc-images/evm-compat/heap-overflow-error.png
 - Apply (most of) Ethereum's standard [JSON RPC API methods](/docs/evm_compatibility/json_rpc_api_methods)
 - Direct the calls to a [Neon RPC](/docs/developing/connect_rpc) via a Proxy Operator
 - Solana and Ethereum differ: consider those differences and the limitations they enforce
-- EIP-1559 not supported
 
 ## Introduction
 
@@ -157,19 +156,6 @@ Consider the following techniques if you need to troubleshoot a heap overflow er
 	- Don't return data you don't use!
 	- Avoid strings, arrays, and mappings
 - Local variables: avoid strings, arrays, and mappings
-
-
-### Limitation on `block.timestamp` / `block.number` usage
-
-Time-related methods in addresses for mapping indexes, namely `block.timestamp` and `block.number`, behave differently from Ethereum and developers are **strongly cautioned** against using them when developing on Neon EVM. 
-
-The following code snippet is correct on Ethereum, but is **not** correct on Neon, due to the usage of `block.timestamp`.
-```javascript
-function create_new_element_timestamp() external {
-	block_timestamp = block.timestamp;
-	test_mapping[block_timestamp] = 100;
-}
-```
 
 ## Support
 
