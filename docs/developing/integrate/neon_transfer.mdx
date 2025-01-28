@@ -1,5 +1,5 @@
 ---
-title: Neon Transfer Client
+title: Neon Transfer SDK
 proofedDate: na
 iterationBy: na
 includedInSite: true
@@ -15,18 +15,18 @@ This page explains how to pass tokens between Solana and Neon EVM programmatical
 
 ## TL;DR
 
-- [Neon Token Transfer](https://www.npmjs.com/package/@neonevm/token-transfer-core) is available as an npm package.
+- [Neon Transfer SDK](https://www.npmjs.com/package/@neonevm/token-transfer-core) is available as an npm package.
 - [Github repo](https://github.com/neonlabsorg/neon-client-transfer) available.
 - [React demo](https://codesandbox.io/s/neon-token-transfer-demo-2x5gdt) available.
 
 ## Introduction
 
-This page describes how to use the Neon token pass tool: providing the same functionality as the [NeonPass UI](https://devnet.neonpass.live).
-The tool is an npm package that supports the transfer of SPL or ERC-20 tokens between Solana and Neon EVM.
+This page describes how to use the Neon Transfer SDK that provides similar to the [NeonPass UI](https://devnet.neonpass.live) functionality.
+The SDK is an npm package. It supports the transfer of SPL or ERC-20 tokens between Solana and Neon EVM.
 
 ## Prerequisites
 
-- You need to integrate Solana-compatible and EVM-compatible wallet providers from supported official libraries such as `@solana/web3.js` or `web3.js`, `ether.js` and `WalletConnect`.
+- You need to integrate Solana-compatible and EVM-compatible wallet providers from supported official libraries such as `ether.js`, which we will use in further examples.
 - Supported browser plugins (e.g. Phantom or MetaMask wallets).
 
 ## Step 1: Install and setup
@@ -38,7 +38,7 @@ The tool is an npm package that supports the transfer of SPL or ERC-20 tokens be
 
 ```sh
 yarn add @neonevm/token-transfer-core
-yarn add @neonevm/token-transfer-web3
+yarn add @neonevm/token-transfer-ethers
 ```
 
 </TabItem>
@@ -46,7 +46,7 @@ yarn add @neonevm/token-transfer-web3
 
 ```sh
 npm install @neonevm/token-transfer-core --save
-npm install @neonevm/token-transfer-web3 --save
+npm install @neonevm/token-transfer-ethers
 ```
 
 </TabItem>
@@ -56,22 +56,12 @@ npm install @neonevm/token-transfer-web3 --save
 
 Now you need to create a connection to the Solana and NeonEVM devnet, and connect the appropriate wallets to perform transfers between them.
 
-In this example we use `web3.js`, but you can also use `ethers.js` as an alternative, by setting `@neonevem/token-transfer-ethers` instead of `@neonevem/token-transfer-web3`.
-
 ```javascript
-import { Connection, Keypair, PublicKey } from '@solana/web3.js';
-import { HttpProvider } from 'web3-providers-http';
-import { Web3 } from 'web3';
-import { decode } from 'bs58';
+import { JsonRpcProvider } from 'ethers';
 
-const proxyUrl = `https://devnet.neonevm.org`;
-const solanaUrl = `https://api.devnet.solana.com`;
-
-const connection = new Connection(solanaUrl, 'confirmed');
-const web3 = new Web3(new HttpProvider(proxyUrl));
-
-const neonWallet = web3.eth.accounts.privateKeyToAccount(`<Neon wallet private key>`);
-const solanaWallet = Keypair.fromSecretKey(decode(`<Solana wallet private key>`)); // private key in base58 format string
+const solanaWallet = Keypair.fromSecretKey(PHANTOM_PRIVATE);
+const provider = new JsonRpcProvider(proxyUrl);
+const neonWallet = new Wallet(NEON_PRIVATE, provider);
 ```
 
 ### 1.3 Configure parameters
@@ -81,18 +71,26 @@ We employ the `evmParams` method from Neon EVM to obtain specific addresses and 
 Also the `nativeTokenList` method contains a list of tokens that are native to Neon EVM and can be used as token gas fee.
 
 ```javascript
-import { PublicKey } from '@solana/web3.js';
+const neonNeonEvmUrl = `https://devnet.neonevm.org`;
+const solNeonEvmUrl = `https://devnet.neonevm.org/solana/sol`;
+const solanaUrl = `https://api.devnet.solana.com`;
+const neonProxyApi = new NeonProxyRpcApi(neonNeonEvmUrl);
+const solProxyApi = new NeonProxyRpcApi(solNeonEvmUrl);
 
-const neonProxyRpcApi = new NeonProxyRpcApi(proxyUrl);
-const evmParams = await neonProxyRpcApi.evmParams();
-const nativeTokenList = await neonProxyRpcApi.nativeTokenList();
+// nativeTokenList returns the native token list for every chain network, first will be NEON, second SOL
+const [neonNativeToken, solNativeToken] = await neonProxyApi.nativeTokenList(); // get native tokens for chain networks
+const neonProxyStatus = await neonProxyApi.evmParams(); // get evm params config
+const solProxyStatus = await solProxyApi.evmParams();
 
-const id = nativeTokenList.findIndex(i => i.token_name === 'NEON');
-const gasToken = nativeTokenList[id];
+// for NEON token native network
+const neonChainId = Number(neonNativeToken.tokenChainId);
+const neonTokenMint = new PublicKey(neonNativeToken.tokenMint);
+const neonEvmProgram = new PublicKey(neonProxyStatus.neonEvmProgramId);
 
-const neonEvmProgram = new PublicKey(evmParams.NEON_EVM_ID);
-const neonTokenMint = new PublicKey(gasToken.token_mint);
-const chainId = parseInt(gasToken.token_chain_id, 16);
+// for SOL token native network
+const solChainId = Number(solNativeToken.tokenChainId);
+const solTokenMint = new PublicKey(solNativeToken.tokenMint);
+const solEvmProgram = new PublicKey(solProxyStatus.neonEvmProgramId);
 ```
 
 ## Step 2: Transfer tokens
@@ -121,7 +119,7 @@ const neonToken: SPLToken = {
   logoURI: 'https://raw.githubusercontent.com/neonlabsorg/token-list/main/neon_token_md.png'
 };
 
-const transaction = await solanaNEONTransferTransaction(solanaWallet.publicKey, neonWallet.address, neonEvmProgram, neonTokenMint, neonToken, amount, chainId);
+const transaction = await solanaNEONTransferTransaction(solanaWallet, neonWallet, neonEvmProgram, neonTokenMint, neonToken, amount, chainId);
 const signature = await sendSolanaTransaction(connection, transaction, [toSigner(solanaWallet)]);
 console.log(signature);
 ```
