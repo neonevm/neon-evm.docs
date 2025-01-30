@@ -122,8 +122,20 @@ const neonToken: SPLToken = {
   logoURI: 'https://raw.githubusercontent.com/neonlabsorg/token-list/main/neon_token_md.png'
 };
 
-const transaction = await solanaNEONTransferTransaction(solanaWallet, neonWallet, neonEvmProgram, neonTokenMint, neonToken, amount, chainId);
-const signature = await sendSolanaTransaction(connection, transaction, [toSigner(solanaWallet)]);
+const transaction = await solanaNEONTransferTransaction({
+  solanaWallet,
+  neonWallet,
+  neonEvmProgram,
+  neonTokenMint,
+  token: neonToken,
+  amount,
+  chainId: neonChainId
+});
+
+const signers = [toSigner(solanaWallet)];
+transaction.recentBlockhash = (await connection.getLatestBlockhash('finalized')).blockhash; 
+transaction.sign(...signers);
+const signature = await connection.sendRawTransaction(transaction.serialize());
 console.log(signature);
 ```
 
@@ -148,8 +160,16 @@ const neonToken: SPLToken = {
   logoURI: 'https://raw.githubusercontent.com/neonlabsorg/token-list/main/neon_token_md.png'
 };
 
-const transaction = await neonNeonTransactionEthers({ provider, neonWallet.address, NEON_TRANSFER_CONTRACT_DEVNET, solanaWallet, amount });
+const transaction = await neonNeonTransactionEthers({
+  provider,
+  from: neonWallet.address,
+  to: NEON_TRANSFER_CONTRACT_DEVNET,
+  solanaWallet,
+  amount
+});
+
 const signedTrx = await neonWallet.signTransaction(transaction);
+
 if (signedTrx?.rawTransaction) {
   const txResult = neonWallet.sendSignedTransaction(signedTrx.rawTransaction);
   txResult.on('transactionHash', (hash: string) => console.log(hash));
@@ -164,12 +184,11 @@ if (signedTrx?.rawTransaction) {
 
 ### 2.2 Transfer SOL
 
-<!--
 To transfer SOL as a native token, it is necessary to change the configuration of Neon EVM.
 
 ```javascript
 // Neon EVM Devnet for SOL fee configuration
-const proxyUrl = `https://devnet.neonevm.org/solana/sol`;
+const proxyUrl = `https://devnet.neonevm.org/sol`;
 const solProxyRpcApi = new NeonProxyRpcApi(proxyUrl);
 const solProxyStatus = await solProxyRpcApi.evmParams();
 const gasTokens = await solProxyRpcApi.nativeTokenList();
@@ -180,9 +199,7 @@ const gasToken = gasTokens[id];
 const neonEvmProgram = new PublicKey(solProxyStatus.NEON_EVM_ID);
 const solTokenMint = new PublicKey(gasToken.token_mint);
 const chainId = parseInt(gasToken.token_chain_id, 16);
-const web3 = new Web3(new HttpProvider(proxyUrl));
 ```
--->
 
 <Tabs>
 <TabItem value="Opt1" label="Solana to Neon EVM" default>
@@ -192,28 +209,33 @@ To transfer SOL token as a native token from Solana to Neon EVM, use the followi
 ```javascript
 import { solanaSOLTransferTransaction, SPLToken } from '@neonevm/token-transfer-core';
 
-const solToken: SPLToken = {
+const neonToken: SPLToken = {
   chainId: solChainId,
-  address_spl: 'So11111111111111111111111111111111111111112',
+  address_spl: solTokenMint.toBase58(),
   address: '0xc7Fc9b46e479c5Cb42f6C458D1881e55E6B7986c',
   decimals: 9,
   name: 'Solana SOL',
   symbol: 'SOL',
   logoURI: 'https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/solana-sol-logo.svg'
 };
+
 const amount = '1';
 
 const transaction = await solanaSOLTransferTransaction({
   connection,
-  solanaWallet.publicKey, 
-  neonWallet.address,
+  solanaWallet: solanaWallet.publicKey,
+  neonWallet: neonWallet.address,
   neonEvmProgram: solEvmProgram,
   neonTokenMint: solTokenMint,
-  splToken: solToken, 
+  splToken: solToken,
   amount,
-  chainId: solChainId 
+  chainId: solChainId
 });
-const signature = await sendSolanaTransaction(connection, transaction, [toSigner(solanaWallet)]);
+
+const signers = [toSigner(solanaWallet)];
+transaction.recentBlockhash = (await connection.getLatestBlockhash('finalized')).blockhash; // Network blockhash
+transaction.sign(...signers);
+const signature = await connection.sendRawTransaction(transaction.serialize());
 console.log(signature);
 ```
 
@@ -225,20 +247,19 @@ Similarly, to transfer SOL tokens from Neon EVM to Solana:
 ```javascript
 import {
   SOL_TRANSFER_CONTRACT_DEVNET,
-  NEON_TOKEN_MINT_DECIMALS
 } from '@neonevm/token-transfer-core';
 
 const neonToken: SPLToken = {
-  chainId: neonChainId,
-  address_spl: neonTokenMint.toBase58(),
-  address: '',
-  decimals: NEON_TOKEN_MINT_DECIMALS,
-  name: 'Neon',
-  symbol: 'NEON',
-  logoURI: 'https://raw.githubusercontent.com/neonlabsorg/token-list/main/neon_token_md.png'
+  chainId: solChainId,
+  address_spl: solTokenMint.toBase58(),
+  address: '0xc7Fc9b46e479c5Cb42f6C458D1881e55E6B7986c',
+  decimals: 9,
+  name: 'Solana SOL',
+  symbol: 'SOL',
+  logoURI: 'https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/solana-sol-logo.svg'
 };
 
-const transaction = await neonNeonTransactionEthers({ provider, neonWallet.address, SOL_TRANSFER_CONTRACT_DEVNET, solanaWallet, amount });
+const transaction = await neonNeonTransactionEthers({ provider, from: neonWallet.address, SOL_TRANSFER_CONTRACT_DEVNET, solanaWallet: solanaWallet.publicKey, amount });
 const signedTrx = await neonWallet.signTransaction(transaction);
 if (signedTrx?.rawTransaction) {
   const txResult = neonWallet.sendSignedTransaction(signedTrx.rawTransaction);
@@ -272,24 +293,27 @@ To transfer ERC-20 tokens from Solana to Neon EVM, use the following patterns:
 
 ```javascript
 import tokenList from 'token-list/tokenlist.json';
+import { JsonRpcProvider, keccak256, Wallet } from 'ethers'; 
+import { NeonProxyRpcApi } from '@neonevm/token-transfer-core';
 
 const proxyUrl = `https://devnet.neonevm.org`;
+const neonProxyRpcApi = new NeonProxyRpcApi(proxyUrl);
 const tokens = tokenList.tokens.filter((token) => token.chainId === CHAIN_ID);
 const token = tokens[0];
 //The wallet signer from ethers.js, used for signing the transaction.
 const walletSigner = new Wallet(keccak256(Buffer.from(`${neonWallet.address.slice(2)}${solanaWallet.publicKey.toBase58()}`, 'utf-8')), new JsonRpcProvider(proxyUrl));
 
-const transaction = await neonTransferMintTransactionEthers({ 
-  connection, 
-  proxyApi, 
-  neonEvmProgram/* or solEvmProgram*/, 
-  solanaWallet,
-  neonWallet: neonWallet.address,
-  walletSigner,
-  splToken: token, 
-  amount,
-  chainId: neonChainId /*or solChainId*/ 
-});
+const transaction = await neonTransferMintTransactionEthers({
+    connection,
+    proxyApi: neonProxyRpcApi,
+    neonEvmProgram, /* or solEvmProgram*/
+    solanaWallet: solanaWallet.publicKey,
+    neonWallet: neonWallet.address,
+    walletSigner,
+    splToken: token,
+    amount,
+    chainId: neonChainId /*or solChainId*/ 
+  });
 transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
 const signature = await connection.sendRawTransaction(transaction.serialize());
 ```
@@ -304,14 +328,17 @@ import tokenList from 'token-list/tokenlist.json';
 
 const tokens = tokenList.tokens.filter((token) => token.chainId === CHAIN_ID);
 const mintPubkey = new PublicKey(token.address_spl);
-const associatedToken = getAssociatedTokenAddressSync(mintPubkey, solanaWallet);
-const solanaTransaction = createAssociatedTokenAccountTransaction({ 
-  solanaWallet,
-  tokenMint: mintPubkey, 
-  associatedToken,
-  neonHeapFrame: proxyStatus.NEON_HEAP_FRAME 
-});
-solanaTransaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
+const associatedToken = getAssociatedTokenAddressSync(mintPubkey, solanaWallet.publicKey);
+const solanaTransaction = createAssociatedTokenAccountTransaction({
+      solanaWallet: solanaWallet.publicKey,
+      tokenMint: mintPubkey,
+      associatedToken
+    });
+    const signers = [toSigner(solanaWallet)];
+transaction.recentBlockhash = (await connection.getLatestBlockhash('finalized')).blockhash; // Network blockhash
+transaction.sign(...signers);
+const signature = await connection.sendRawTransaction(transaction.serialize());
+//Create and send NEON transaction
 const neonTransaction = await createMintNeonTransactionEthers({ 
   provider,
   neonWallet: neonWallet.address, 
@@ -319,9 +346,8 @@ const neonTransaction = await createMintNeonTransactionEthers({
   splToken: token, 
   amount
 });
-const solanaSignature = await connection.sendRawTransaction(transaction.serialize());
-const neonSignature = await neonWallet.signTransaction(transaction);
-const txResult = neonWallet.sendSignedTransaction(neonSignature.rawTransaction);
+const receipt = await neonWallet.sendTransaction(transaction);
+const txResult = receipt.hash;
 ```
 
 </TabItem>
