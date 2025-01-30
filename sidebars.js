@@ -29,16 +29,6 @@ const sidebars = {
       label: '🛰 Transfer Tokens',
       items: ['token_transferring/neonpass_usage', 'token_transferring/neon_transfer']
     },
-    {
-      type: 'doc',
-      label: 'NeonPass UI',
-      id: 'token_transferring/neonpass_usage'
-    },
-    {
-      type: 'doc',
-      label: 'Neon Transfer SDK',
-      id: 'token_transferring/neon_transfer'
-    },
     { type: 'doc', label: 'Neon Proxy API', id: 'api/neon-api' },
     {
       type: 'category',
