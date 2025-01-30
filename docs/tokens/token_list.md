@@ -23,7 +23,7 @@ For the most up-to-date list of tokens whose contracts are deployed in Neon EVM 
 
 ## Token list: NeonPass-supported tokens
 
-The following tables provide the addresses of ERC-20 interface contracts for the tokens available through [NeonPass](docs/developing/integrate/neon_transfer.mdx).
+The following tables provide the addresses of ERC-20 interface contracts for the tokens available through [NeonPass](docs/token_transferring/neon_transfer.mdx).
 
 ## ERC-20 interface addresses on Neon
 
