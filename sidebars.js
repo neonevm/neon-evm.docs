@@ -78,7 +78,7 @@ const sidebars = {
       items: [
         'developing/deploy_facilities/interacting_with_spl_tokens',
         'tokens/token_list',
-        'developing/integrate/neon_transfer'
+        'token_transferring/neon_transfer'
       ]
     },
     {
