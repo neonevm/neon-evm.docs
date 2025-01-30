@@ -60,7 +60,7 @@ Now you need to create a connection to the Solana and NeonEVM devnet, and connec
 import { JsonRpcProvider } from 'ethers';
 
 const neonNeonEvmUrl = `https://devnet.neonevm.org`;
-const solNeonEvmUrl = `https://devnet.neonevm.org/solana/sol`;
+const solNeonEvmUrl = `https://devnet.neonevm.org/sol`;
 const solanaUrl = `https://api.devnet.solana.com`;
 const neonProxyApi = new NeonProxyRpcApi(neonNeonEvmUrl);
 const solProxyApi = new NeonProxyRpcApi(solNeonEvmUrl);
@@ -259,7 +259,8 @@ const neonToken: SPLToken = {
   logoURI: 'https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/solana-sol-logo.svg'
 };
 
-const transaction = await neonNeonTransactionEthers({ provider, from: neonWallet.address, SOL_TRANSFER_CONTRACT_DEVNET, solanaWallet: solanaWallet.publicKey, amount });
+const transaction = await neonNeonTransactionEthers({ provider, from: neonWallet.address, to: SOL_TRANSFER_CONTRACT_DEVNET, solanaWallet: solanaWallet.publicKey, amount });
+
 const signedTrx = await neonWallet.signTransaction(transaction);
 if (signedTrx?.rawTransaction) {
   const txResult = neonWallet.sendSignedTransaction(signedTrx.rawTransaction);
@@ -337,6 +338,7 @@ const solanaTransaction = createAssociatedTokenAccountTransaction({
     const signers = [toSigner(solanaWallet)];
 transaction.recentBlockhash = (await connection.getLatestBlockhash('finalized')).blockhash; // Network blockhash
 transaction.sign(...signers);
+const provider = new JsonRpcProvider(proxyUrl);
 const signature = await connection.sendRawTransaction(transaction.serialize());
 //Create and send NEON transaction
 const neonTransaction = await createMintNeonTransactionEthers({ 
