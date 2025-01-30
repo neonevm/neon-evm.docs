@@ -32,7 +32,7 @@ import image16 from '@site/static/img/doc-images/neonpassV2/Transfer_failed.png'
 
 ## Overview
 
-This guide demonstrates how to transfer tokens between Solana and Neon EVM using the [NeonPass](https://neonpass.live/) UI. The same tooling is available as an [npm package](/docs/developing/integrate/neon_transfer).
+This guide demonstrates how to transfer tokens between Solana and Neon EVM using the [NeonPass](https://neonpass.live/) UI. The same tooling is available as an [npm package](/docs/token_transferring/neon_transfer).
 
 You can transfer tokens in either direction, but each transaction incurs a gas fee in either NEON or SOL.
 
