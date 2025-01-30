@@ -13,7 +13,7 @@ This page answers some of the most commonly asked questions about NeonPass.
 
 ### How do I use NeonPass?
 
-The [NeonPass](/docs/token_transferring/neonpass_usage) tutorial details the steps to use the NeonPass app. Alternatively, you may use the [npm package](/docs/developing/integrate/neon_transfer).
+The [NeonPass](/docs/token_transferring/neonpass_usage) tutorial details the steps to use the NeonPass app. Alternatively, you may use the [npm package](/docs/token_transferring/neon_transfer).
 
 
 ### Does NeonPass wrap my tokens?
