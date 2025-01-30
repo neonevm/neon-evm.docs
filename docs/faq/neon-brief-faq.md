@@ -39,7 +39,7 @@ Neon EVM is unique in combining the powerful technical advantages of Solana with
 The following tools are available on Neon:
 
 * [NeonScan](https://neonscan.org/): Neon EVM’s block explorer
-* NeonPass: A tool for transferring tokens between Solana and Neon: available as an [App](https://neonpass.live/) and an [npm package](/docs/developing/integrate/neon_transfer)
+* NeonPass: A tool for transferring tokens between Solana and Neon: available as an [App](https://neonpass.live/) and an [npm package](/docs/token_transferring/neon_transfer)
 * [Neon Faucet](https://neonfaucet.org/): Provides NEON tokens on Devnet for testing purposes
 
 
