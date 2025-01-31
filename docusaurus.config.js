@@ -28,7 +28,7 @@ const config = {
       }
     }
   ],
-  themes: ["docusaurus-json-schema-plugin"],
+  themes: ['docusaurus-json-schema-plugin'],
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -175,14 +175,14 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         googleTagManager: {
-          containerId: 'GTM-NKNPBQ2S',
+          containerId: 'GTM-NKNPBQ2S'
         },
         gtag: {
           trackingID: 'G-Y5QG48111W'
         },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/neonevm/neon-evm.docs/edit/main',
+          editUrl: 'https://github.com/neonevm/neon-evm.docs/edit/main'
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css')
@@ -191,15 +191,20 @@ const config = {
     ]
   ],
   plugins: [
-    require.resolve('docusaurus-plugin-image-zoom'),
     [
       '@docusaurus/plugin-client-redirects',
       {
-        redirects: [
-          { to: '/docs/quick_start', from: ['/docs', '/docs/developing/integrate/oracles/integrating_api3'] }
-        ]
+        redirects: [{
+          from: [
+            '/docs/non-existing-page',
+            '/docs/other-non-existing-page',
+            '/docs/developing/integrate/oracles/integrating_api3' // page with `draft: true` title
+          ],
+          to: '/docs/quick_start'
+        }]
       }
-    ]
+    ],
+    require.resolve('docusaurus-plugin-image-zoom')
   ]
 };
 
