@@ -20,14 +20,14 @@ const sidebars = {
       id: 'wallet/metamask_setup'
     },
     {
-      type: 'doc',
-      label: '🛰 Transfer Tokens',
-      id: 'token_transferring/neonpass_usage'
-    },
-    {
       type: 'category',
       label: '💰 Tokens',
       items: ['tokens/neon_token', 'tokens/gas_fees', 'tokens/token_list']
+    },
+    {
+      type: 'category',
+      label: '🛰 Transfer Tokens',
+      items: ['token_transferring/neonpass_usage', 'token_transferring/neon_transfer']
     },
     { type: 'doc', label: 'Neon Proxy API', id: 'api/neon-api' },
     {
@@ -68,7 +68,7 @@ const sidebars = {
       items: [
         'developing/deploy_facilities/interacting_with_spl_tokens',
         'tokens/token_list',
-        'developing/integrate/neon_transfer'
+        'token_transferring/neon_transfer'
       ]
     },
     {
@@ -144,8 +144,13 @@ const sidebars = {
         'composability/using_composability/transfer_spl_token',
         'composability/using_composability/swap_on_orca',
         'composability/using_composability/swap_on_raydium',
-        'composability/using_composability/using_vrf'
+        'composability/using_composability/using_vrf',
       ]
+    },
+    {
+      type: 'doc',
+      label: 'Solana Native SDK',
+      id: 'composability/sdk_solana_native'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Learn</h4>' },
