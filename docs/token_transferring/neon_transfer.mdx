@@ -209,7 +209,7 @@ To transfer SOL token as a native token from Solana to Neon EVM, use the followi
 ```javascript
 import { solanaSOLTransferTransaction, SPLToken } from '@neonevm/token-transfer-core';
 
-const neonToken: SPLToken = {
+const solToken: SPLToken = {
   chainId: solChainId,
   address_spl: solTokenMint.toBase58(),
   address: '0xc7Fc9b46e479c5Cb42f6C458D1881e55E6B7986c',
@@ -248,16 +248,6 @@ Similarly, to transfer SOL tokens from Neon EVM to Solana:
 import {
   SOL_TRANSFER_CONTRACT_DEVNET,
 } from '@neonevm/token-transfer-core';
-
-const neonToken: SPLToken = {
-  chainId: solChainId,
-  address_spl: solTokenMint.toBase58(),
-  address: '0xc7Fc9b46e479c5Cb42f6C458D1881e55E6B7986c',
-  decimals: 9,
-  name: 'Solana SOL',
-  symbol: 'SOL',
-  logoURI: 'https://raw.githubusercontent.com/neonlabsorg/token-list/master/assets/solana-sol-logo.svg'
-};
 
 const transaction = await neonNeonTransactionEthers({ provider, from: neonWallet.address, to: SOL_TRANSFER_CONTRACT_DEVNET, solanaWallet: solanaWallet.publicKey, amount });
 
@@ -326,8 +316,8 @@ Similarly, to transfer ERC-20 tokens from Neon EVM to Solana:
 
 ```javascript
 import tokenList from 'token-list/tokenlist.json';
-
 const tokens = tokenList.tokens.filter((token) => token.chainId === CHAIN_ID);
+const token = tokens[0];
 const mintPubkey = new PublicKey(token.address_spl);
 const associatedToken = getAssociatedTokenAddressSync(mintPubkey, solanaWallet.publicKey);
 const solanaTransaction = createAssociatedTokenAccountTransaction({
