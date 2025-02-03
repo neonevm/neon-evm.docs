@@ -191,20 +191,7 @@ const config = {
     ]
   ],
   plugins: [
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [{
-          from: [
-            '/docs/non-existing-page',
-            '/docs/other-non-existing-page',
-            '/docs/developing/integrate/oracles/integrating_api3' // page with `draft: true` title
-          ],
-          to: '/docs/quick_start'
-        }]
-      }
-    ],
-    require.resolve('docusaurus-plugin-image-zoom')
+    require.resolve('docusaurus-plugin-image-zoom'),
   ]
 };
 
