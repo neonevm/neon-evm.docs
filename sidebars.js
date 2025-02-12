@@ -76,6 +76,7 @@ const sidebars = {
       label: 'Integrate',
       items: [
         'developing/integrate/wallets/integrating_metamask_into_your_dapp',
+        'developing/integrate/wallets/EIP_1559',
         'developing/integrate/wallets/integrating_walletconnect',
         'developing/integrate/wallets/safe',
         'developing/integrate/wallets/safe_cli',
