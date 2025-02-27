@@ -196,6 +196,7 @@ const config = {
       {
         redirects: [{
           from: [
+            '/docs',
             '/docs/non-existing-page',
             '/docs/other-non-existing-page',
             '/docs/developing/integrate/oracles/integrating_api3' // page with `draft: true` title

@@ -46,6 +46,20 @@
   --ifm-footer-background-color: #000000;
 }
 
+.docMainContainer_TBSr {
+  justify-content: center;
+}
+
+.docMainContainer_TBSr .container {
+  margin: 0;
+}
+
+@media (min-width: 1920px) {
+  .docMainContainer_TBSr .container {
+    max-width: 75%
+  }
+}
+
 .menu {
   padding: 16px !important;
 }
@@ -71,11 +85,6 @@
 
 .tocCollapsibleButtonExpanded_node_modules-\@docusaurus-theme-classic-lib-theme-TOCCollapsible-CollapseButton-styles-module::after {
   transform: rotate(90deg) !important;
-}
-
-article {
-  max-width: 630px;
-  margin: 0 auto;
 }
 
 .footer__title {
