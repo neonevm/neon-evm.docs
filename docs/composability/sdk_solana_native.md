@@ -181,13 +181,11 @@ yarn start
 #### Configuration
 Utilize tsconfig files to specify build targets and module configurations.
 
-### Contributors
-•	@oable (Igor Prokopev)
-•	@eubash (Evgeniya)
 
-### Languages
-•	TypeScript: 59.6%
-•	Solidity: 40.2%
-•	JavaScript: 0.2%
+Additional Resources
+For further exploration and practical demonstration, check out the following resources:
 
-For detailed implementation and updates, refer to the GitHub repository (https://github.com/neonlabsorg/neon-solana-signer)
+•	Swap UI Demo: A live demonstration of the swap UI is available at Neon Solana Signature Demo (https://neon-solana-signature-demo.pages.dev/)
+
+•	GitHub Repository: The source code for the Solana signature demo can be found on GitHub (https://github.com/neonlabsorg/neon-solana-signature-demo)
+
