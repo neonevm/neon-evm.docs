@@ -185,6 +185,6 @@ Utilize tsconfig files to specify build targets and module configurations.
 Additional Resources
 For further exploration and practical demonstration, check out the following resources:
 
-•	Swap UI Demo: A live demonstration of the swap UI is available at Neon Solana Signature Demo (https://neon-solana-signature-demo.pages.dev/)
+•	Swap UI Demo: A live demonstration of the swap UI is available at Neon Solana Signature Demo (https://neon-solana-signature-demo.neontest.xyz/)
 
 •	GitHub Repository: The source code for the Solana signature demo can be found on GitHub (https://github.com/neonlabsorg/neon-solana-signature-demo)
