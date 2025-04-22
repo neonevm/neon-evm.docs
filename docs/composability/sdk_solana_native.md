@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 Library for Scheduled Neon EVM Transactions
 Note: This package is under development, runs on the Neon test environment, and is not ready for production use.
 
-[Solana Signer SDK Documentation](http://solana-signer.sdk.neonevm.org/)
+📄[Solana Signer SDK Documentation](http://solana-signer.sdk.neonevm.org/)
 
 ### Installation and Testing
 #### Install dependencies:
@@ -182,67 +182,91 @@ yarn start
 Utilize tsconfig files to specify build targets and module configurations.
 
 
-### Neon Solana Signature Demo
-The Neon Solana Signature Demo is a web-based application that illustrates the process of signing messages and transactions on the Solana blockchain using the Neon EVM. This demo serves as an educational tool for developers aiming to understand the integration of Solana’s signing mechanisms within Ethereum-compatible environments.
+### Solana Native – Use Case Demos
+The Neon Solana Signature Demo is a web-based application that illustrates how to sign and send Neon EVM transactions using a Solana wallet. The demo showcases how Solana-native user authentication can be used to interact with Ethereum-compatible smart contracts on Neon EVM. It serves as an educational tool for developers exploring cross-runtime composability between Solana and EVM ecosystems.
 
-#### Accessing the Demo
-The application is accessible at: (https://neon-solana-signature-demo.neontest.xyz/)
+#### Demo 1: Simple Swap
 
-#### Application Flow
-1. Wallet Connection:
-	•	Upon accessing the demo, users are prompted to connect their Solana-compatible wallet (e.g., Phantom).
-	•	The application detects the wallet and establishes a connection, enabling interaction with the user’s Solana account.
-2. Message Signing:
-  •	Users can input a custom message into the provided text field.
-  •	By clicking the “Sign Message” button, the application sends a signature request to the connected wallet.
-  •	The wallet prompts the user to approve the signing request.
-  •	Once approved, the application displays the signed message and its corresponding signature.
-3.	Transaction Signing:
-  •	The demo allows users to create a sample transaction, such as transferring a nominal amount of SOL to a predefined address.
-  •	Upon initiating the transaction, the application constructs the transaction object and sends a signing request to the connected wallet.
-  •	The wallet prompts the user to approve the transaction.
-  •	After approval, the signed transaction is displayed, and users have the option to submit it to the Solana network.
-4.	Signature Verification:
-  •	The application provides functionality to verify the authenticity of signed messages.
-  •	Users can input a signed message and its signature to validate that the signature corresponds to the original message and was signed by the correct public key.
+Description:  
+Use Solana wallet (e.g., Phantom) and Solana-native assets (e.g., USDC, wSOL) to perform token swaps on a DEX running on Neon EVM. This demo shows how Neon EVM allows Solana-native user authentication and asset usage in Ethereum-compatible environments.
+
+📄[Live Demo](https://neon-solana-signature-demo.neontest.xyz/)
+📄[GitHub Repository](https://github.com/neonlabsorg/neon-solana-signature-demo)
+
+### Application Flow (Simplified Overview)
+
+1. Wallet Connection  
+   - Upon opening the demo, users are prompted to connect a Solana-compatible wallet (e.g., Phantom).  
+   - Once connected, the app detects the wallet and fetches relevant token balances on Neon EVM (e.g., USDC, wSOL).
+
+2. Token Selection and Swap
+   - Users select a source and destination token (e.g., USDC → wSOL), input the amount, and initiate the swap.  
+   - The transaction is signed by the connected Solana wallet, then executed on Neon EVM.
+
+3. Transaction Confirmation  
+   - The wallet prompts the user to approve the transaction.  
+   - Upon approval, the app displays a confirmation and updates the balances accordingly.
+
+4. Optional: Verify on Neonscan  
+   - Since the transaction runs on Neon EVM, users can view it via [https://neonscan.org](https://neonscan.org) by pasting their **Neon wallet address (derived from their Solana keypair).
 
 #### Integration Insights
-  Developers can utilize the concepts demonstrated in this application to integrate Solana’s signing functionalities into their own dApps. Key takeaways include:
+Developers can apply the concepts demonstrated in this application to build **EVM-compatible dApps running on Neon EVM** that use **Solana wallets for transaction signing**.
   •	Establishing connections with Solana-compatible wallets.
   •	Constructing and signing messages and transactions programmatically.
   •	Handling user approvals and displaying transaction outcomes.
 GitHub Repository: The source code for the Solana signature demo can be found on GitHub (https://github.com/neonlabsorg/neon-solana-signature-demo)
 
-### Swap UI Demo — Step-by-Step Guide
-This guide describes how to perform a token swap using the Neon EVM Swap UI Demo (https://neon-solana-signature-demo.neontest.xyz/).
-#### Step 1: Open the Swap Demo Interface
-	•	Navigate to https://neon-solana-signature-demo.neontest.xyz.
-	•	You’ll see the Swap Demo interface.
-	•	Choose the desired contract version (e.g., v2 for the latest demo).
-	•	You will see fields to select:
-	  • Token to swap from (e.g., USDC (v2 Demo))
-	  •	Token to swap to (e.g., wSOL (v2 Demo))
+### Swap UI Demo — Version Breakdown
 
-#### Step 2: Connect Your Wallet
-  •	Click the “Select Wallet” button in the top-right corner.
-  •	Connect your preferred Solana-compatible wallet (e.g., Phantom).
-  •	After connection, the token balances (e.g., USDCV2DEMO, wSOLV2DEMO) will be displayed.
-  •	You should be in Testnet Mode (displayed in the wallet interface).
+#### **v1 – Solana Wallet → Transfer SDK (Basic Demo)**
 
-#### Step 3: Initiate a Swap
-  •	Enter the amount of the source token you wish to swap (e.g., 10 USDC).
-  •	Click the Swap (⇄) button.
-  •	The app will prompt your wallet to confirm the transaction.
-    
-#### Step 4: Confirm Transaction in Wallet
-  •	Approve the transaction in your wallet (e.g., Phantom).
-  •	Once confirmed, the transaction will be processed via Neon EVM.
+📄 [Spec](https://www.notion.so/neonfoundation/Solana-signature-V1-Solana-Wallet-Transfer-SDK-165d6d79e4eb802f8239ed681d7d32e9?pvs=4)
 
-#### Step 5: View Success Confirmation
-  •	After successful execution, a “Success” message will appear in the UI.
-  •	Token balances in your wallet will update accordingly.
+This version demonstrates **basic Neon EVM integration** using a **Solana wallet** for **transferring tokens**, without swap logic or interaction with DEX contracts.
 
-#### Step 6: Verify on Neonscan
-	•	You can verify your swap transaction on Neonscan(https://neonscan.org) by:
-	 •	Copying your wallet address.
-	 •	Searching it in Neonscan to view the transaction history and status.
+##### v1 Flow:
+1. **Connect Phantom Wallet**  
+   User connects a Solana-compatible wallet to the dApp.
+
+2. **Enter Destination & Token Info**  
+   Select a destination address (Neon EVM-compatible), specify amount and token.
+
+3. **Sign with Solana Wallet**  
+   The transfer is signed using the Solana private key but executed on Neon EVM.
+
+4. **Broadcast Transaction**  
+   Transaction is sent to Neon EVM RPC for execution.
+
+5. **View Confirmation**  
+   The result is shown to the user. Transaction can be verified on Neonscan.
+
+#### **v2 – Solana Wallet → Swap SDK with ERC-20 Migration Support**
+
+📄 [Spec](https://www.notion.so/neonfoundation/Solana-signature-V2-Solana-Wallet-SDK-new-ERC20-tokens-migration-184d6d79e4eb80559c33da736f200509?pvs=4)
+
+This advanced version builds on v1 by adding:
+- Support for **Neon-compatible ERC-20 tokens** tied to Solana-native assets.
+- Full **token swap functionality** via **DEX smart contracts** deployed on Neon EVM.
+
+##### v2 Flow:
+1. **Connect Phantom Wallet**  
+   User connects a Solana wallet.
+
+2. **Select Tokens for Swap**  
+   Choose a source token (e.g., USDC v2) and a destination token (e.g., wSOL v2).
+
+3. **Enter Amount to Swap**  
+   Specify how much of the source token to convert.
+
+4. **Sign with Solana Wallet**  
+   The swap transaction is signed by the Solana wallet, but runs on Neon.
+
+5. **Execute Swap via Neon DEX**  
+   The transaction interacts with a DEX (e.g., CPMM pool) on Neon.
+
+6. **View Success Message**  
+   UI confirms success; balances update accordingly.
+
+7. **Verify on Neonscan**  
+   Since this is a Neon EVM transaction, users can verify it via [neonscan.org](https://neonscan.org).
