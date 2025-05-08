@@ -131,6 +131,8 @@ for (const { transactionHash, status } of transactionStatus) {
 
 ### Creating Multiple Scheduled Transactions
 
+**Multiple Scheduled Transactions** is an advanced use case for creating a **ScheduledTransaction**. It allows you to create a transaction that can execute multiple operations in a single transaction.
+
 ```typescript
 const transactionsData = [{
   from: solanaUser.neonWallet,
@@ -155,9 +157,12 @@ const { scheduledTransaction, transactions } = await proxyApi.createMultipleTran
 await connection.sendRawTransaction(scheduledTransaction.serialize());
 ```
 
+At this stage, you need to pass the Scheduled transaction to a specific method in the Neon Proxy RPC. If everything is done correctly, the Neon Proxy RPC will return the hash of the transaction.
 ```typescript
 const result = await proxyApi.sendRawScheduledTransactions(transactions);
 ```
+
+Next, you need to wait for the transaction to be executed.
 
 ```typescript
 const transactionsStatus = await neonProxyRpcApi.waitTransactionTreeExecution(solanaUser.neonWallet, nonce, 1e5);
@@ -171,6 +176,12 @@ for (const { transactionHash, status } of transactionsStatus) {
 ```
 
 ### Solana approving
+
+The Solana approving process is a crucial step in the transaction lifecycle. It ensures that the transaction is valid and authorized by the necessary parties before it is executed on the Neon EVM.
+
+This creates additional requirements for executing `ScheduledTransactions`, without Solana approving `estimateScheduledTransactionGas` won't work, and the transaction itself may be rejected by Neon EVM.
+
+#### Example of Solana approving
 
 ```typescript
 const tokenATA = getAssociatedTokenAddressSync(mintAddress, solanaUser.publicKey);
@@ -191,22 +202,12 @@ const { scheduledTransaction, transactions } = await proxyApi.createMultipleTran
 });
 ```
 
+Similarly, it is necessary to pass any other Solana instructions that may be required for executing the `ScheduledTransaction`.
+
 ## Additional Resources
 
-<Tabs>
-  <TabItem value="One" label="Simple contract" default>
-    * [Solana Native SendBox](https://codesandbox.io/p/devbox/neon-solana-signer-demo-forked-27lnss)
-    * The source code in [GitHub](https://github.com/neonlabsorg/neon-solana-signer/tree/main/examples)
-    <DemoFrame src='https://27lnss-5173.csb.app/' title='Contract example' style={{minHeight:"700px"}} />
-  </TabItem>
-  <TabItem value="Two" label="Native Swap">
-    * [Swap UI Demo](https://neon-solana-native-swap-demo.neontest.xyz/)
-    * The source code in [GitHub](https://github.com/neonlabsorg/neon-solana-signature-demo)
-    <DemoFrame src='https://neon-solana-native-swap-demo.neontest.xyz/' title='Neon Solana Native Swap Demo' style={{minHeight:"700px"}} />
-  </TabItem>
-  <TabItem value="Three" label="Native StableSwap">
-    * [StableSwap UI Demo](https://neon-solana-native-stableswap-demo.neontest.xyz/pools)
-    * The source code in [GitHub](https://github.com/neonlabsorg/neon-solana-native-stableswap-demo)
-    <DemoFrame src='https://neon-solana-native-stableswap-demo.neontest.xyz/pools' title='Neon Solana Native StableSwap Demo' style={{minHeight:"700px"}} />
-  </TabItem>
-</Tabs>
+For further exploration and practical demonstration, check out the following resources:
+
+•	Swap UI Demo: A live demonstration of the swap UI is available at Neon Solana Signature Demo (https://neon-solana-signature-demo.neontest.xyz/)
+
+•	GitHub Repository: The source code for the Solana signature demo can be found on GitHub (https://github.com/neonlabsorg/neon-solana-signature-demo)
