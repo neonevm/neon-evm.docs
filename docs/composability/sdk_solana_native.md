@@ -208,6 +208,20 @@ Similarly, it is necessary to pass any other Solana instructions that may be req
 
 For further exploration and practical demonstration, check out the following resources:
 
-•	Swap UI Demo: A live demonstration of the swap UI is available at Neon Solana Signature Demo (https://neon-solana-signature-demo.neontest.xyz/)
-
-•	GitHub Repository: The source code for the Solana signature demo can be found on GitHub (https://github.com/neonlabsorg/neon-solana-signature-demo)
+<Tabs>
+  <TabItem value="One" label="Simple contract" default>
+    * [Solana Native SendBox](https://codesandbox.io/p/devbox/neon-solana-signer-demo-forked-27lnss)
+    * The source code in [GitHub](https://github.com/neonlabsorg/neon-solana-signer/tree/main/examples)
+    <DemoFrame src='https://27lnss-5173.csb.app/' title='Contract example' style={{minHeight:"700px"}} />
+  </TabItem>
+  <TabItem value="Two" label="Native Swap">
+    * [Swap UI Demo](https://neon-solana-native-swap-demo.neontest.xyz/)
+    * The source code in [GitHub](https://github.com/neonlabsorg/neon-solana-signature-demo)
+    <DemoFrame src='https://neon-solana-native-swap-demo.neontest.xyz/' title='Neon Solana Native Swap Demo' style={{minHeight:"700px"}} />
+  </TabItem>
+  <TabItem value="Three" label="Native StableSwap">
+    * [StableSwap UI Demo](https://neon-solana-native-stableswap-demo.neontest.xyz/pools)
+    * The source code in [GitHub](https://github.com/neonlabsorg/neon-solana-native-stableswap-demo)
+    <DemoFrame src='https://neon-solana-native-stableswap-demo.neontest.xyz/pools' title='Neon Solana Native StableSwap Demo' style={{minHeight:"700px"}} />
+  </TabItem>
+</Tabs>
