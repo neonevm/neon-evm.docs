@@ -74,6 +74,15 @@
     },
     {
       "pattern": "^https://phantom.app"
+    },
+    {
+      "pattern": "^https://github.com"
+    },
+    {
+      "pattern": "^https://ch2-graph.neontest.xyz"
+    },
+    {
+      "pattern": "^https://www.json2yaml.com"
     }
   ],
   "aliveStatusCodes": [
