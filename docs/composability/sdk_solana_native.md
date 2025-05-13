@@ -212,7 +212,7 @@ For further exploration and practical demonstration, check out the following res
   </TabItem>
   <TabItem value="Two" label="Native Swap">
     * [Swap UI Demo](https://neon-solana-native-swap-demo.neontest.xyz/)
-    * The source code in [GitHub](https://github.com/neonlabsorg/neon-solana-signature-demo)
+    * The source code in [GitHub](https://github.com/neonlabsorg/neon-solana-native-swap-demo)
     <DemoFrame src='https://neon-solana-native-swap-demo.neontest.xyz/' title='Neon Solana Native Swap Demo' style={{minHeight:"700px"}} />
   </TabItem>
   <TabItem value="Three" label="Native StableSwap">
