@@ -147,6 +147,11 @@ const sidebars = {
       label: 'Solana Native SDK',
       id: 'composability/sdk_solana_native'
     },
+    {
+      type: 'doc',
+      label: 'Using SPL Tokens',
+      id: 'composability/using_spl_tokens'
+    },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Learn</h4>' },
     {
