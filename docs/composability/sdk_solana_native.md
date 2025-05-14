@@ -9,6 +9,7 @@ comment:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { DemoFrame } from '@site/src/components/DemoFrame';
 
 # Library for Scheduled Neon EVM Transactions
 
@@ -39,42 +40,38 @@ yarn test
 ### Initialization
 
 #### Setup Solana and Neon Providers:
-```
-const result = await getProxyState('<neon_proxy_rpc_url>');
-const token = getGasToken(result.tokensList, NeonChainId.testnetSol);
 
-const connection = new Connection('<solana_rpc_url>', 'confirmed');
-const provider = new JsonRpcProvider('<neon_proxy_rpc_url>');
-const neonClientApi = new NeonClientApi('<neon_client_api_url>');
-const neonProxyRpcApi = result.proxyApi;
-const neonEvmProgram = result.evmProgramAddress;
-
-const chainId = Number(token.gasToken.tokenChainId);
-const chainTokenMint = new PublicKey(token.gasToken.tokenMint);
+```typescript
+const connection = new Connection(`<solana_rpc_url>`, 'confirmed');
+const proxyApi = new NeonProxyRpcApi(`<neon_proxy_rpc_url>`);
 ```
 
 #### Connect a Solana Wallet:
+
 Example using Keypair:
 ```
 const solanaPrivateKey = bs58.decode('<you_private_key_base58>');
 const keypair = Keypair.fromSecretKey(solanaPrivateKey);
-const solanaUser = SolanaNeonAccount.fromKeypair(
-    keypair,
-    neonEvmProgram,
-    chainTokenMint,
-    chainId
-);
+const {chainId, solanaUser, provider, programAddress, tokenMintAddress} = await proxyApi.init(keypair);
 await solanaAirdrop(connection, solanaUser.publicKey, 1e9);
 ```
 
 ### Creating and Sending a Scheduled Transaction
 
 #### Retrieve Nonce for Neon Wallet:
-```
+
+```typescript
 const nonce = Number(await neonProxyRpcApi.getTransactionCount(solanaUser.neonWallet));
 ```
 
 #### Create a Scheduled Transaction:
+
+```typescript
+const transactionData = {
+  from: solanaUser.neonWallet,
+  to: `<contract_address>`,
+  data: `<call_contract_data>`
+};
 ```
 const scheduledTransaction = new ScheduledTransaction({
     nonce: toBeHex(nonce),
@@ -87,42 +84,43 @@ const scheduledTransaction = new ScheduledTransaction({
 ```
 
 #### Prepare Solana Transaction:
-```
-const transaction = await createScheduledNeonEvmTransaction({
-    chainId,
-    signerAddress: solanaUser.publicKey,
-    tokenMintAddress: solanaUser.tokenMint,
-    neonEvmProgram,
-    neonWallet: solanaUser.neonWallet,
-    neonWalletNonce: nonce,
-    neonTransaction: scheduledTransaction.serialize()
+
+```typescript
+const transactionGas = await proxyApi.estimateScheduledTransactionGas({
+  solanaPayer: solanaUser.publicKey,
+  transactions: [transactionData],
+});
+
+const { scheduledTransaction } = await proxyApi.createScheduledTransaction({
+  transactionGas,
+  transactionData,
+  nonce
 });
 ```
 
 #### Ensure Solana Balance Account is Initialized:
-```
+
+```typescript
 const account = await connection.getAccountInfo(solanaUser.balanceAddress);
 if (account === null) {
-    transaction.instructions.unshift(
-        createBalanceAccountInstruction(
-            neonEvmProgram,
-            solanaUser.publicKey,
-            solanaUser.neonWallet,
-            solanaUser.chainId
-        )
-    );
+  scheduledTransaction.instructions.unshift(
+    createBalanceAccountInstruction(
+      programAddress,
+      solanaUser.publicKey,
+      solanaUser.neonWallet,
+      chainId
+    )
+  );
 }
 ```
 
 #### Sign and Send the Transaction:
-```
+
+```typescript
 const { blockhash, lastValidBlockHeight } = await connection.getLatestBlockhash();
 transaction.recentBlockhash = blockhash;
-transaction.sign({
-    publicKey: solanaUser.publicKey,
-    secretKey: solanaUser.keypair
-});
-const signature = await connection.sendRawTransaction(transaction.serialize());
+transaction.sign({ publicKey: solanaUser.publicKey, secretKey: solanaUser.keypair });
+const signature = await connection.sendRawTransaction(scheduledTransaction.serialize());
 console.log('Transaction signature', signature);
 ```
 
@@ -159,7 +157,10 @@ yarn build:docs
 #### Initialization:
 - Deploy contracts using:
 ```
-yarn setup
+
+At this stage, you need to pass the Scheduled transaction to a specific method in the Neon Proxy RPC. If everything is done correctly, the Neon Proxy RPC will return the hash of the transaction.
+```typescript
+const result = await proxyApi.sendRawScheduledTransactions(transactions);
 ```
 
 - Define and initialize contracts for scheduled transactions:

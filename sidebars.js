@@ -36,11 +36,6 @@ const sidebars = {
       items: ['faq/neon-brief-faq', 'faq/neonpass']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Tools</h4>' },
-    { type: 'link', label: 'NeonScan', href: 'https://neonscan.org/' },
-    { type: 'link', label: 'NeonPass', href: 'https://neonpass.live/' },
-    { type: 'link', label: 'NeonFaucet', href: 'https://neonfaucet.org/' },
-    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Develop</h4>' },
     {
       type: 'doc',
@@ -151,6 +146,11 @@ const sidebars = {
       type: 'doc',
       label: 'Solana Native SDK',
       id: 'composability/sdk_solana_native'
+    },
+    {
+      type: 'doc',
+      label: 'Using SPL Tokens',
+      id: 'composability/using_spl_tokens'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Learn</h4>' },
