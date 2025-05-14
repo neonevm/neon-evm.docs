@@ -72,14 +72,14 @@ const transactionData = {
   to: `<contract_address>`,
   data: `<call_contract_data>`
 };
-```
+
 const scheduledTransaction = new ScheduledTransaction({
-    nonce: toBeHex(nonce),
-    payer: solanaUser.neonWallet,
-    target: '<contract_address>',
-    callData: '<call_contract_data>',
-    maxFeePerGas: toBeHex(0x77359400),
-    chainId: toBeHex(NeonChainId.testnetSol)
+  nonce: toBeHex(nonce),
+  payer: solanaUser.neonWallet,
+  target: '<contract_address>',
+  callData: '<call_contract_data>',
+  maxFeePerGas: toBeHex(0x77359400),
+  chainId: toBeHex(NeonChainId.testnetSol)
 });
 ```
 
@@ -90,6 +90,7 @@ const transactionGas = await proxyApi.estimateScheduledTransactionGas({
   solanaPayer: solanaUser.publicKey,
   transactions: [transactionData],
 });
+```
 
 const { scheduledTransaction } = await proxyApi.createScheduledTransaction({
   transactionGas,
