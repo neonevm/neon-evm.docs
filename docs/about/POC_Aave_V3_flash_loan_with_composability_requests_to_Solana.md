@@ -1,4 +1,6 @@
-## **POC Aave V3 flash loan with composability requests to Solana**
+---
+title: POC Aave V3 flash loan with composability requests to Solana
+---
 
 1. ## **Overview**
 
