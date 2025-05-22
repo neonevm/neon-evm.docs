@@ -1,4 +1,4 @@
-# **POC \- Aave V3 flash loan with composability requests to Solana**
+## **POC Aave V3 flash loan with composability requests to Solana**
 
 1. ## **Overview**
 
