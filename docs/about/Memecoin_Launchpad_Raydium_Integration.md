@@ -159,9 +159,9 @@ node convert-key.js
 chmod 600 id.json
 
 Set the wallet environment:
-
+```
 export ANCHOR\_WALLET=./id.json
-
+```
 **Troubleshooting**
 
 | Issue | Solution |
