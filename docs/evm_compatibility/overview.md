@@ -20,7 +20,7 @@ import heap from '@site/static/img/doc-images/evm-compat/heap-overflow-error.png
 
 Interacting with Neon EVM is essentially the same as interacting with any [Ethereum Virtual Machine (EVM)](https://ethereum.org/en/developers/docs/evm/).
 
-Neon EVM provides a proxy service that accepts [Ethereum's standard RPC API methods](https://ethereum.github.io/execution-apis/api-documentation/). 
+Neon EVM provides a proxy service that accepts [Ethereum's standard RPC API methods](https://ethereum.github.io/execution-apis/). 
 
 > Your dApp can apply familiar methods: with your calls directed to the [Neon Proxy](../about/neon_ecosystem.mdx#neon-proxy) rather than an Ethereum L1 node.
 
