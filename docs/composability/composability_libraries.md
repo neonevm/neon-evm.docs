@@ -64,12 +64,16 @@ when it comes to user authentication and _Solana_ accounts management.
 ### System program
 <dl>
   <dd>
+    
 #### Repository
+
 [System program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/system-program/README.md)
 #### Exmaple contract
+
 [CallSystemProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallSystemProgram.sol) - example contract demonstrating how the System program Solidity libraries can be used in practice to interact with Solana's System program.
 
 #### System program Solidity librarie
+
 ##### LibSystemProgram library
   
 This library provides helper functions for formatting instructions to be executed by _Solana_'s **System** program.
