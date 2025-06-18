@@ -1,12 +1,12 @@
 ---
-title: 'System program composability libraies'
+title: 'System program composability libraries'
 proofedDate: 20250618
 iterationBy: na
 includedInSite: true
 approvedBy: Greg
 ---
 
-# System program composability libraies
+# System program composability libraries
 
 ## Repository
 
