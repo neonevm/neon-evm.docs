@@ -1,5 +1,5 @@
 ---
-title: 'Composability Libraries'
+title: 'Composability Libraries Overview'
 proofedDate: 20250618
 iterationBy: na
 includedInSite: true
