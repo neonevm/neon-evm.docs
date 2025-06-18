@@ -72,9 +72,9 @@ when it comes to user authentication and _Solana_ accounts management.
 
 [CallSystemProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallSystemProgram.sol) - example contract demonstrating how the System program Solidity libraries can be used in practice to interact with Solana's System program.
 
-#### System program Solidity librarie
+#### System program Solidity libraries
 
-##### LibSystemProgram library
+##### *LibSystemProgram* library
   
 This library provides helper functions for formatting instructions to be executed by _Solana_'s **System** program.
   
@@ -90,7 +90,7 @@ This library provides helper functions for formatting instructions to be execute
   
   - `allocateWithSeed`: allocates storage space to a _Solana_ PDA (program-derived account). See [instruction formatting](LibSystemProgram.sol#L141).
   
-##### LibSystemData library
+##### `LibSystemData` library
   
   This library provides a set of getter functions for querying **System** accounts data from _Solana_.
   
@@ -105,7 +105,7 @@ This library provides helper functions for formatting instructions to be execute
   uint64 rent_epoch
   ```
   
-  ##### LibSystemErrors library
+  ##### `LibSystemErrors` library
   
   This library provides a set of custom errors that may be thrown when using **LibSystemProgram** and **LibSystemData** 
   libraries.
