@@ -64,18 +64,17 @@ when it comes to user authentication and _Solana_ accounts management.
 ### System program
 <dl>
   <dd>
- #### Rpository
-  [System program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/system-program/README.md)
- #### Exmaple contract
-  [CallSystemProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallSystemProgram.sol) - example contract demonstrating how the System program Solidity libraries can be used in practice to interact with Solana's System program.
+#### Repository
+[System program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/system-program/README.md)
+#### Exmaple contract
+[CallSystemProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallSystemProgram.sol) - example contract demonstrating how the System program Solidity libraries can be used in practice to interact with Solana's System program.
 
 #### System program Solidity librarie
-  ##### LibSystemProgram library
+##### LibSystemProgram library
   
-  This library provides helper functions for formatting instructions to be executed by _Solana_'s **System** 
-  program.
+This library provides helper functions for formatting instructions to be executed by _Solana_'s **System** program.
   
-  ###### Available System program instructions
+###### Available System program instructions
   
   - `createAccountWithSeed`: creates a new _Solana_ PDA (program-derived account) which public key is derived from a base 
   public key, a program id and a seed. A payer account pays for the rent exemption balance of the created PDA based on the
@@ -87,7 +86,7 @@ when it comes to user authentication and _Solana_ accounts management.
   
   - `allocateWithSeed`: allocates storage space to a _Solana_ PDA (program-derived account). See [instruction formatting](LibSystemProgram.sol#L141).
   
-  ##### LibSystemData library
+##### LibSystemData library
   
   This library provides a set of getter functions for querying **System** accounts data from _Solana_.
   
