@@ -61,15 +61,15 @@ when it comes to user authentication and _Solana_ accounts management.
 
 ## Supported Solana programs
 
-- ### [System program](docs/composability/system_program_composability_libraries.md)
+- [System program](docs/composability/system_program_composability_libraries.md)
 
-- ### [SPL Token program](docs/composability/spl_token_program_composability_libraries.md)
+- [SPL Token program](docs/composability/spl_token_program_composability_libraries.md)
 
-- ### [Metaplex program](docs/composability/metaplex_program_composability_libraries.md)
+- [Metaplex program](docs/composability/metaplex_program_composability_libraries.md)
 
-- ### [Associated Token program](docs/composability/associated_token_program_composability_libraries.md)
+- [Associated Token program](docs/composability/associated_token_program_composability_libraries.md)
 
-- ### [Raydium program](docs/composability/raydium_program_composability_libraries.md)
+- [Raydium program](docs/composability/raydium_program_composability_libraries.md)
 
 
 ## Composability helper contracts
