@@ -23,4 +23,4 @@ program.
 ### Available Associated Token program instructions
 
 - `create`: creates and initializes a canonical _Associated Token account_ on _Solana_. Such an account holds 
-data related to an SPL token holder. See [instruction formatting](LibAssociatedTokenProgram.sol#L16).
+data related to an SPL token holder. See [instruction formatting](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/associated-token-program/LibAssociatedTokenProgram.sol).
