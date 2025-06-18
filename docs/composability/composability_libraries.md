@@ -90,7 +90,7 @@ This library provides helper functions for formatting instructions to be execute
   
   - `allocateWithSeed`: allocates storage space to a _Solana_ PDA (program-derived account). See [instruction formatting](LibSystemProgram.sol#L141).
   
-##### `LibSystemData` library
+##### *LibSystemData* library
   
   This library provides a set of getter functions for querying **System** accounts data from _Solana_.
   
@@ -105,7 +105,7 @@ This library provides helper functions for formatting instructions to be execute
   uint64 rent_epoch
   ```
   
-  ##### `LibSystemErrors` library
+  ##### *LibSystemErrors* library
   
   This library provides a set of custom errors that may be thrown when using **LibSystemProgram** and **LibSystemData** 
   libraries.
@@ -117,12 +117,21 @@ This library provides helper functions for formatting instructions to be execute
 <dl>
   <dd>
 
-  #### LibSPLTokenProgram library
+#### Repository
+
+[SPL Token program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/spl-token-program/README.md)
+
+#### Exmaple contract
+[CallSPLTokenProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallSPLTokenProgram.sol) - example contract demonstrating how the SPL Token program Solidity libraries can be used in practice to interact with Solana's SPL Token program.
+
+#### SPL Token program libraries
+
+  ##### *LibSPLTokenProgram* library
   
   This library provides helper functions for formatting instructions to be executed by _Solana_'s **SPL Token** 
   program.
   
-  ### Available SPL Token program instructions
+  ###### Available SPL Token program instructions
   
   - `initializeMint2`: initializes a _Solana_ account as a SPL _token mint_. Such an account holds data related to a 
   SPL token (see `LibSPLTokenData.SPLTokenMintData`). See [instruction formatting](LibSPLTokenProgram.sol#L24).
@@ -148,11 +157,11 @@ This library provides helper functions for formatting instructions to be execute
   - `syncNative`: syncs the token balance of a `Wrapped SOL` _token account_ to reflect its `SOL` balance (minus rent 
   exemption balance). See [instruction formatting](LibSPLTokenProgram.sol#L345).
   
-  #### LibSPLTokenData library
+  ##### _LibSPLTokenData_ library
   
   This library provides a set of getter functions for querying **SPL Token** accounts data from _Solana_.
   
-  ##### SPL _token mint_ data
+  ###### SPL _token mint_ data
   
   The following data fields are stored by SPL _token mint_ accounts and can be queried using the **LibSPLTokenData** library:
   ```solidity
@@ -165,7 +174,7 @@ This library provides helper functions for formatting instructions to be execute
   bytes32 freezeAuthority
   ```
   
-  ##### SPL _token account_ data
+  ###### SPL _token account_ data
   
   The following data fields are stored by SPL _token account_s and can be queried using the **LibSPLTokenData** library:
   ```solidity
@@ -182,15 +191,10 @@ This library provides helper functions for formatting instructions to be execute
   bytes32 closeAuthority
   ```
   
-  #### LibSPLTokenErrors library
+  ##### _LibSPLTokenErrors_ library
   
   This library provides a set of custom errors that may be thrown when using **LibSPLTokenProgram** and **LibSPLTokenData** 
   libraries.
-
-* [SPL Token program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/spl-token-program/README.md)
-
-* [CallSPLTokenProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallSPLTokenProgram.sol) example contract demonstrating how the SPL Token 
-program Solidity libraries can be used in practice to interact with Solana's SPL Token program.
 
   </dd>
 </dl>
@@ -198,12 +202,22 @@ program Solidity libraries can be used in practice to interact with Solana's SPL
 ### Metaplex program
 <dl>
   <dd>
-#### LibMetaplexProgram library
+
+#### Repository
+
+[Metaplex program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/metaplex-program/README.md)
+
+#### Exmaple contract
+[CallMetaplexProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallMetaplexProgram.sol) - example contract demonstrating how the Metaplex program Solidity libraries can be used in practice to interact with Solana's Metaplex program.
+
+#### Metaplex program libraries
+
+##### _LibMetaplexProgram_ library
 
 This library provides helper functions for formatting instructions to be executed by _Solana_'s **Metaplex** 
 program.
 
-##### Available Metaplex program instructions
+###### Available Metaplex program instructions
 
 - `createMetadataAccountV3`: creates a new token metadata account associated with an already initialized _token mint_ 
 account and store provided token metadata on it. A token metadata account can be **_mutable_**, meaning that it is 
@@ -211,11 +225,11 @@ possible for the specified `updateAuthority` account to update the metadata held
 
 - `updateMetadataAccountV2`: updates an existing **mutable** token metadata account, storing new token metadata on it.
 
-#### LibMetaplexData library
+##### _LibMetaplexData_ library
 
 This library provides a set of getter functions for querying **Metaplex** accounts data from _Solana_.
 
-##### Metaplex token metadata
+###### Metaplex token metadata
 
 The following data fields are stored by token metadata accounts and can be queried using the **LibMetaplexData** library:
 ```solidity
@@ -226,15 +240,10 @@ bool isMutable;
 bytes32 updateAuthority;
 ```
 
-#### LibMetaplexErrors library
+##### _LibMetaplexErrors_ library
 
 This library provides a set of custom errors that may be thrown when using **LibMetaplexProgram** and **LibMetaplexData** 
 libraries.
-
-* [Metaplex program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/metaplex-program/README.md)
-
-* [CallMetaplexProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallMetaplexProgram.sol) example contract demonstrating how the Metaplex
-  program Solidity libraries can be used in practice to interact with Solana's Metaplex program.
 
   </dd>
 </dl>
@@ -242,18 +251,23 @@ libraries.
 ### Associated Token program
 <dl>
   <dd>
+
+#### Repository
+
+[Associated Token program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/associated-token-program/README.md)
+
+#### Exmaple contract
+[CallAssociatedTokenProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallAssociatedTokenProgram.sol) - example contract demonstrating how the Associated Token program Solidity libraries can be used in practice to interact with Solana's Associated Token program.
+
+#### Associated Token program library
+    
 This library provides helper functions for formatting instructions to be executed by _Solana_'s **Associated Token** 
 program.
 
-#### Available Associated Token program instructions
+##### Available Associated Token program instructions
 
 - `create`: creates and initializes a canonical _Associated Token account_ on _Solana_. Such an account holds 
 data related to an SPL token holder. See [instruction formatting](LibAssociatedTokenProgram.sol#L16).
-
-* [Associated Token program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/associated-token-program/README.md)
-
-* [CallAssociatedTokenProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallAssociatedTokenProgram.sol) example contract demonstrating how the 
-Associated Token program Solidity libraries can be used in practice to interact with Solana's Associated Token program.
 
   </dd>
 </dl>
@@ -262,11 +276,20 @@ Associated Token program Solidity libraries can be used in practice to interact 
 <dl>
   <dd>
 
-#### LibRaydiumProgram library
+#### Repository
+
+[Raydium program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/raydium-program/README.md)
+
+#### Exmaple contract
+[CallRaydiumProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallRaydiumProgram.sol) - example contract demonstrating how the Raydium program Solidity libraries can be used in practice to interact with Solana's Raydium program.
+
+#### Raydium program libraries
+
+##### _LibRaydiumProgram_ library
 This library provides helper functions for formatting instructions to be executed by _Solana_'s **Raydium** 
 program.
 
-##### Available Raydium CPMM program instructions
+###### Available Raydium CPMM program instructions
 * `createPoolInstruction` - Deploying CPMM pool on Raydium for selected tokens pair. This method also returns the needed `lamports` amount for the instruction to be processed successfully in Solana, this amount constains several account creations plus the pool creation fee paid to Raydium. [Info](LibRaydiumProgram.sol#L30)
 * `addLiquidityInstruction` - Adding liquidity for selected tokens pair. [Info](LibRaydiumProgram.sol#L152)
 * `withdrawLiquidityInstruction` - Withdrawing liquidity from selected tokens pair. [Info](LibRaydiumProgram.sol#L246)
@@ -275,7 +298,7 @@ program.
 * `swapInputInstruction` - Swapping exact token input amount, example - swap 100 tokensA for X tokensB. [Info](LibRaydiumProgram.sol#L559)
 * `swapOutputInstruction` - Swapping tokens to exact token output amount, example - swap X tokensA for 100 tokensB. [Info](LibRaydiumProgram.sol#L605)
 
-#### LibRaydiumData library
+##### _LibRaydiumData_ library
 This library provides a set of getter functions for querying different accounts & data. Also some calculations such as swap input or output amount; convert LP amount to tokens amounts; etc. Here are some of the getters:
 * `getPoolData` - Returns the data of Raydium CPMM pool. [Info](LibRaydiumData.sol#L150)
 * `getConfigData` - Returns the data for requested utils index. [Info](LibRaydiumData.sol#L173)
@@ -286,14 +309,9 @@ This library provides a set of getter functions for querying different accounts 
 * `getSwapInput` - Returns a swap quote of provided exact output amount. [Info](LibRaydiumData.sol#L240)
 
 
-#### LibRaydiumErrors library
+##### _LibRaydiumErrors_ library
 This library provides a set of custom errors that may be thrown when using **LibRaydiumProgram** and **LibRaydiumData** 
 libraries.
-
-* [Raydium program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/raydium-program/README.md)
-
-* [CallRaydiumProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallRaydiumProgram.sol) example contract demonstrating how the Raydium program 
-Solidity libraries can be used in practice to interact with Solana's Raydium program.
 
   </dd>
 </dl>
