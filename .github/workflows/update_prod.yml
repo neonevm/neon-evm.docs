@@ -4,7 +4,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ["self-hosted", "k8s-prod"]
+    runs-on: ["gha-runner-scale-set"]
     strategy:
       matrix:
         node-version: [20]
