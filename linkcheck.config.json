@@ -83,6 +83,9 @@
     },
     {
       "pattern": "^https://www.json2yaml.com"
+    },
+    {
+      "pattern": "https://docs.google.com/spreadsheets/d/1g2ms3DveyPgrG0Gf6cSwq6xhT0AgrrRus_pa9ICHP4w/edit?usp=sharing"
     }
   ],
   "aliveStatusCodes": [
