@@ -136,6 +136,11 @@ const sidebars = {
       id: 'composability/call_solana_interface'
     },
     {
+      type: 'doc',
+      label: 'Composability Libraries',
+      id: 'composability/composability_libraries'
+    },
+    {
       type: 'category',
       label: 'Using Composability',
       items: [
