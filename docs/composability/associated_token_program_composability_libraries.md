@@ -1,12 +1,12 @@
 ---
-title: 'Associated Token program composability libraries'
+title: 'Associated Token program composability library'
 proofedDate: 20250618
 iterationBy: na
 includedInSite: true
 approvedBy: Greg
 ---
 
-# Associated Token program composability libraries
+# Associated Token program composability library
 
 ## Repository
 
