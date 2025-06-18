@@ -61,7 +61,7 @@ when it comes to user authentication and _Solana_ accounts management.
 
 ## Supported Solana programs
 
-### - [System program](/system_program_composability_libraries.md)
+- ### [System program](docs/composability/system_program_composability_libraries.md)
 
 ### SPL Token program
 <dl>
