@@ -37,8 +37,8 @@ This library provides a set of getter functions for querying different accounts 
 * `getTokenReserve` - Returns pool token reserve for selected token mint. [Info](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/raydium-program/LibRaydiumData.sol#L194)
 * `getPoolLpAmount` - Returns the pool's LP amount. [Info](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/raydium-program/LibRaydiumData.sol#L199)
 * `lpToAmount` - Converts LP amount to reserves amounts. [Info](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/raydium-program/LibRaydiumData.sol#L204)
-* `getSwapOutput` - Returns a swap quote of provided exact input amount. [Info](LibRaydiumData.sol#L224)
-* `getSwapInput` - Returns a swap quote of provided exact output amount. [Info](LibRaydiumData.sol#L240)
+* `getSwapOutput` - Returns a swap quote of provided exact input amount. [Info](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/raydium-program/LibRaydiumData.sol#L224)
+* `getSwapInput` - Returns a swap quote of provided exact output amount. [Info](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/raydium-program/LibRaydiumData.sol#L240)
 
 
 ### _LibRaydiumErrors_ library
