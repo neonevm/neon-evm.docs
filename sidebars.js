@@ -127,42 +127,23 @@ const sidebars = {
     { type: 'html', value: '<h4 class="sidebar-menu-title">Interact with Solana</h4>' },
     {
       type: 'doc',
-      label: 'Common Solana Terminology',
-      id: 'composability/common_solana_terminology'
+      label: 'Overview of Composability',
+      id: 'composability/Overview_of_Composability'
     },
     {
       type: 'doc',
       label: 'ICallSolana Interface',
-      id: 'composability/call_solana_interface'
-    },
-    {
-      type: 'category',
-      label: 'Composability Libraries',
-      items: [
-        'composability/composability_libraries',
-        'composability/system_program_composability_libraries',
-        'composability/spl_token_program_composability_libraries',
-        'composability/metaplex_program_composability_libraries',
-        'composability/associated_token_program_composability_libraries',
-        'composability/raydium_program_composability_libraries'
-        ]
-    },
-    {
-      type: 'category',
-      label: 'Using Composability',
-      items: [
-        'composability/using_composability/setup_configure',
-        'composability/using_composability/transfer_sols',
-        'composability/using_composability/transfer_spl_token',
-        'composability/using_composability/swap_on_orca',
-        'composability/using_composability/swap_on_raydium',
-        'composability/using_composability/using_vrf',
-      ]
+      id: 'composability/ICallSolana_Interface'
     },
     {
       type: 'doc',
-      label: 'Solana Native SDK',
-      id: 'composability/sdk_solana_native'
+      label: 'Solana Interactions (Solidity Contracts on NeonEVM --> Solana Programs)',
+      id: 'composability/Solana_Interactions'
+    },
+    {
+      type: 'doc',
+      label: 'Solana Native SDK (Solana Wallet → Neon EVM Programs)',
+      id: 'composability/Solana_Native_SDK'
     },
     {
       type: 'doc',
