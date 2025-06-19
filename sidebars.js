@@ -137,6 +137,18 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Composability Libraries',
+      items: [
+        'composability/composability_libraries',
+        'composability/system_program_composability_libraries',
+        'composability/spl_token_program_composability_libraries',
+        'composability/metaplex_program_composability_libraries',
+        'composability/associated_token_program_composability_libraries',
+        'composability/raydium_program_composability_libraries'
+        ]
+    },
+    {
+      type: 'category',
       label: 'Using Composability',
       items: [
         'composability/using_composability/setup_configure',
