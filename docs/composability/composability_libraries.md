@@ -9,6 +9,27 @@ approvedBy: Greg
 
 ## Overview
 
+### NeonEVM's composability feature
+
+_NeonEVM_ is a _Solana_ **network extension** enabling EVM dApps to tap into _Solana_'s user base and liquidity. It 
+comes with a set of precompiled smart contracts acting as an interface between EVM dApps on _NeonEVM_ and _Solana_'s 
+accounts and programs.
+
+The **composability** feature allows EVM dApps deployed on _NeonEVM_ to interact with _Solana_ programs, which involves 
+formatting _Solana_ instructions in ways that are specific to each program.
+
+Here we provide a set of **Solidity** libraries which make it possible to easily implement secure interactions with the 
+following _Solana_ programs:
+
+* **System program**: `LibSystemProgram`, `LibSystemData` and `LibSystemErrors` libraries
+* **SPL Token program**: `LibSPLTokenProgram`, `LibSPLTokenData` and `LibSPLTokenErrors` libraries
+* **Associated Token program**: : `LibAssociatedTokenProgram` and `LibAssociatedTokenData` libraries
+* **Metaplex program**: `LibMetaplexProgram`, `LibMetaplexData` and `LibMetaplexErrors` libraries
+* **Raydium program**: `LibRaydiumProgram`, `LibRaydiumData` and `LibRaydiumErrors` libraries
+
+We also provide a set of example smart-contracts implementing typical use cases for these libraries and best practices 
+when it comes to user authentication and _Solana_ accounts management.
+
 ### Installation
 
 ```javascript
@@ -33,33 +54,10 @@ contract CallSPLTokenProgram {
 }
 ```
 
-## NeonEVM's composability feature
-
-_NeonEVM_ is a _Solana_ **network extension** enabling EVM dApps to tap into _Solana_'s user base and liquidity. It 
-comes with a set of precompiled smart contracts acting as an interface between EVM dApps on _NeonEVM_ and _Solana_'s 
-accounts and programs.
-
-The **composability** feature allows EVM dApps deployed on _NeonEVM_ to interact with _Solana_ programs, which involves 
-formatting _Solana_ instructions in ways that are specific to each program.
-
-Here we provide a set of **Solidity** libraries which make it possible to easily implement secure interactions with the 
-following _Solana_ programs:
-
-* **System program**: `LibSystemProgram`, `LibSystemData` and `LibSystemErrors` libraries
-* **SPL Token program**: `LibSPLTokenProgram`, `LibSPLTokenData` and `LibSPLTokenErrors` libraries
-* **Associated Token program**: : `LibAssociatedTokenProgram` and `LibAssociatedTokenData` libraries
-* **Metaplex program**: `LibMetaplexProgram`, `LibMetaplexData` and `LibMetaplexErrors` libraries
-* **Raydium program**: `LibRaydiumProgram`, `LibRaydiumData` and `LibRaydiumErrors` libraries
-
-We also provide a set of example smart-contracts implementing typical use cases for these libraries and best practices 
-when it comes to user authentication and _Solana_ accounts management.
+## Supported Solana programs
 
 > [!CAUTION]
 > The following contracts have not been audited yet and are here for educational purposes.
-
-
-
-## Supported Solana programs
 
 - [System program](system_program_composability_libraries.md)
 
