@@ -11,7 +11,7 @@ approvedBy: Greg
 ## Repository
 
 [System program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/system-program/README.md)
-## Exmaple contract
+## Example contract
 
 [CallSystemProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallSystemProgram.sol) - example contract demonstrating how the System program Solidity libraries can be used in practice to interact with Solana's System program.
 
