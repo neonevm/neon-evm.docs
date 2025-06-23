@@ -25,7 +25,7 @@ following _Solana_ programs:
 * **SPL Token program**: `LibSPLTokenProgram`, `LibSPLTokenData` and `LibSPLTokenErrors` libraries
 * **Associated Token program**: : `LibAssociatedTokenProgram` and `LibAssociatedTokenData` libraries
 * **Metaplex program**: `LibMetaplexProgram`, `LibMetaplexData` and `LibMetaplexErrors` libraries
-* **Raydium program**: `LibRaydiumProgram`, `LibRaydiumData` and `LibRaydiumErrors` libraries
+* **Raydium program**: `LibRaydiumCPMMProgram`, `LibRaydiumCPMMData` and `LibRaydiumCPMMErrors` libraries
 
 We also provide a set of example smart-contracts implementing typical use cases for these libraries and best practices 
 when it comes to user authentication and _Solana_ accounts management.
@@ -35,24 +35,9 @@ when it comes to user authentication and _Solana_ accounts management.
 ```javascript
 npm install @neonevm/call-solana
 ```
-
-### Usage
-
-Once you have installed the package, you can use the Solidity libraries by importing them in your contracts:
-
-```solidity
-pragma solidity 0.8.28;
-
-import { LibSPLTokenData } from "@neonevm/call-solana/composability/libraries/spl-token-program/LibSPLTokenData.sol";
-
-contract CallSPLTokenProgram {
-  /// @param tokenAccount The 32 bytes SPL token account public key
-  /// @return token account balance as uint64
-  function getSPLTokenAccountBalance(bytes32 tokenAccount) external view returns(uint64) {
-    return LibSPLTokenData.getSPLTokenAccountBalance(tokenAccount);
-  }
-}
-```
+:::note
+More details about the composability libraries package at [npm: @neonevm/call-solana](https://www.npmjs.com/package/@neonevm/call-solana)
+:::
 
 ## Supported Solana programs
 
