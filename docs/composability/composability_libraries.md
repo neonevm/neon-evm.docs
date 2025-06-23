@@ -41,8 +41,9 @@ More details about the composability libraries package at [npm: @neonevm/call-so
 
 ## Supported Solana programs
 
-> [!CAUTION]
-> The following contracts have not been audited yet and are here for educational purposes.
+:::important
+The following contracts have not been audited yet and are here for educational purposes.
+:::
 
 - [System program](system_program_composability_libraries.md)
 
