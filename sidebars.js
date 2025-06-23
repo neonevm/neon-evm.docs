@@ -131,6 +131,18 @@ const sidebars = {
       id: 'composability/Overview_of_Composability'
     },
     {
+      type: 'category',
+      label: 'Composability Libraries',
+      items: [
+        'composability/composability_libraries',
+        'composability/system_program_composability_libraries',
+        'composability/spl_token_program_composability_libraries',
+        'composability/metaplex_program_composability_libraries',
+        'composability/associated_token_program_composability_libraries',
+        'composability/raydium_program_composability_libraries'
+        ]
+    },
+    {
       type: 'doc',
       label: 'ICallSolana Interface',
       id: 'composability/ICallSolana_Interface'
