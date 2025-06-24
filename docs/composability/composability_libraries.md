@@ -37,17 +37,13 @@ npm install @neonevm/call-solana
 ```
 
 :::note
-
 More details about the composability libraries package at [npm: @neonevm/call-solana](https://www.npmjs.com/package/@neonevm/call-solana)
-
 :::
 
 ## Supported Solana programs
 
 :::important
-
 The following contracts have not been audited yet and are here for educational purposes.
-
 :::
 
 
