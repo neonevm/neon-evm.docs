@@ -127,6 +127,11 @@ const sidebars = {
     { type: 'html', value: '<h4 class="sidebar-menu-title">Interact with Solana</h4>' },
     {
       type: 'doc',
+      label: 'Common Solana Terminology',
+      id: 'composability/common_solana_terminology'
+    },
+    {
+      type: 'doc',
       label: 'Overview of Composability',
       id: 'composability/Overview_of_Composability'
     },
