@@ -10,10 +10,10 @@ approvedBy: Greg
 
 ## Repository
 
-[Metaplex program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/metaplex-program/README.md)
+[Metaplex program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/main/contracts/composability/libraries/metaplex-program/README.md)
 
 ## Exmaple contract
-[CallMetaplexProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallMetaplexProgram.sol) - example contract demonstrating how the Metaplex program Solidity libraries can be used in practice to interact with Solana's Metaplex program.
+[CallMetaplexProgram](https://github.com/neonevm/neon-contracts/blob/main/contracts/composability/CallMetaplexProgram.sol) - example contract demonstrating how the Metaplex program Solidity libraries can be used in practice to interact with Solana's Metaplex program.
 
 ## Libraries
 
