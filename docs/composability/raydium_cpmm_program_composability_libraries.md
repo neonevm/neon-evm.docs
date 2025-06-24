@@ -10,10 +10,10 @@ approvedBy: Greg
 
 ## Repository
 
-[Raydium program Solidity libraries](https://github.com/neonevm/neon-contracts/tree/main/contracts/composability/libraries/raydium-cpmm-program)
+[Raydium CPMM program Solidity libraries](https://github.com/neonevm/neon-contracts/tree/main/contracts/composability/libraries/raydium-cpmm-program)
 
 ## Exmaple contract
-[CallRaydiumProgram](https://github.com/neonevm/neon-contracts/blob/main/contracts/composability/CallRaydiumCPMMProgram.sol) - example contract demonstrating how the Raydium program Solidity libraries can be used in practice to interact with Solana's Raydium program.
+[CallRaydiumCPMMProgram](https://github.com/neonevm/neon-contracts/blob/main/contracts/composability/CallRaydiumCPMMProgram.sol) - example contract demonstrating how the Raydium program Solidity libraries can be used in practice to interact with Solana's Raydium program.
 
 ## Libraries
 
