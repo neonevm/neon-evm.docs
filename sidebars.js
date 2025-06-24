@@ -144,7 +144,7 @@ const sidebars = {
         'composability/spl_token_program_composability_libraries',
         'composability/metaplex_program_composability_libraries',
         'composability/associated_token_program_composability_libraries',
-        'composability/raydium_program_composability_libraries'
+        'composability/raydium_cpmm_program_composability_libraries'
         ]
     },
     {
