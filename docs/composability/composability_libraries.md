@@ -35,15 +35,21 @@ when it comes to user authentication and _Solana_ accounts management.
 ```javascript
 npm install @neonevm/call-solana
 ```
+
 :::note
+
 More details about the composability libraries package at [npm: @neonevm/call-solana](https://www.npmjs.com/package/@neonevm/call-solana)
+
 :::
 
 ## Supported Solana programs
 
 :::important
+
 The following contracts have not been audited yet and are here for educational purposes.
+
 :::
+
 
 - [System program](system_program_composability_libraries.md)
 
@@ -58,15 +64,15 @@ The following contracts have not been audited yet and are here for educational p
 
 ## Composability helper contracts
 
-* [Constants.sol](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/Constants.sol) provides commonly used constants for formatting 
+* [Constants.sol](https://github.com/neonevm/neon-contracts/blob/main/contracts/composability/libraries/Constants.sol) provides commonly used constants for formatting 
 instructions to be executed by _Solana_ programs
-* [CallSolanaHelperLib.sol](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/utils/CallSolanaHelperLib.sol) provides helper functions to prepare formatted instructions
+* [CallSolanaHelperLib.sol](https://github.com/neonevm/neon-contracts/blob/main/contracts/utils/CallSolanaHelperLib.sol) provides helper functions to prepare formatted instructions
 right before they are executed on _Solana_
-* [SolanaDataConverterLib.sol](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/utils/SolanaDataConverterLib.sol) provides helper functions for casting data to and 
+* [SolanaDataConverterLib.sol](https://github.com/neonevm/neon-contracts/blob/main/contracts/utils/SolanaDataConverterLib.sol) provides helper functions for casting data to and 
 from various types commonly used on _Solana_
-* [ICallSolana.sol](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/precompiles/ICallSolana.sol) provides an interfacte to the `CallSolana` precompiled contract which 
+* [ICallSolana.sol](https://github.com/neonevm/neon-contracts/blob/main/contracts/precompiles/ICallSolana.sol) provides an interfacte to the `CallSolana` precompiled contract which 
 is the cornerstone of _NeonEVM_'s composability with _Solana_. See: [ICallSolana interface documentation ](https://neonevm.org/docs/composability/call_solana_interface).
-* [QueryAccount.sol](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/precompiles/QueryAccount.sol) provides a set of getter function for reading _Solana_'s state by 
+* [QueryAccount.sol](https://github.com/neonevm/neon-contracts/blob/main/contracts/precompiles/QueryAccount.sol) provides a set of getter function for reading _Solana_'s state by 
 querying data stored on _Solana_ accounts
 
 ## Solana specifics
