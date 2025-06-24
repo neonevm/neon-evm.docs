@@ -55,7 +55,7 @@ The following contracts have not been audited yet and are here for educational p
 
 - [Associated Token program](associated_token_program_composability_libraries.md)
 
-- [Raydium program](raydium_program_composability_libraries.md)
+- [Raydium program](raydium_cpmm_program_composability_libraries.md)
 
 
 ## Composability helper contracts
