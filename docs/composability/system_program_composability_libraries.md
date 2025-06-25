@@ -10,10 +10,10 @@ approvedBy: Greg
 
 ## Repository
 
-[System program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/system-program/README.md)
-## Exmaple contract
+[System program Solidity libraries](https://github.com/neonevm/neon-contracts/blob/main/contracts/composability/libraries/system-program/README.md)
+## Example contract
 
-[CallSystemProgram](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/CallSystemProgram.sol) - example contract demonstrating how the System program Solidity libraries can be used in practice to interact with Solana's System program.
+[CallSystemProgram](https://github.com/neonevm/neon-contracts/blob/main/contracts/composability/CallSystemProgram.sol) - example contract demonstrating how the System program Solidity libraries can be used in practice to interact with Solana's System program.
 
 ## Libraries
 
@@ -25,13 +25,13 @@ This library provides helper functions for formatting instructions to be execute
   
   - `createAccountWithSeed`: creates a new _Solana_ PDA (program-derived account) which public key is derived from a base 
   public key, a program id and a seed. A payer account pays for the rent exemption balance of the created PDA based on the
-  size of the storage allocated to the account. See [instruction formatting](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/system-program/LibSystemProgram.sol#L19).
+  size of the storage allocated to the account. See [instruction formatting](https://github.com/neonevm/neon-contracts/blob/main/contracts/composability/libraries/system-program/LibSystemProgram.sol#L19).
   
-  - `transfer`: transfers an amount of SOL to another _Solana_ account. See [instruction formatting](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/system-program/LibSystemProgram.sol#L66).
+  - `transfer`: transfers an amount of SOL to another _Solana_ account. See [instruction formatting](https://github.com/neonevm/neon-contracts/blob/main/contracts/composability/libraries/system-program/LibSystemProgram.sol#L66).
   
-  - `assignWithSeed`: assigns a _Solana_ PDA (program-derived account) to a _Solana_ program. See [instruction formatting](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/system-program/LibSystemProgram.sol#L102).
+  - `assignWithSeed`: assigns a _Solana_ PDA (program-derived account) to a _Solana_ program. See [instruction formatting](https://github.com/neonevm/neon-contracts/blob/main/contracts/composability/libraries/system-program/LibSystemProgram.sol#L102).
   
-  - `allocateWithSeed`: allocates storage space to a _Solana_ PDA (program-derived account). See [instruction formatting](https://github.com/neonevm/neon-contracts/blob/dev/solidity-composability-libraries/contracts/composability/libraries/system-program/LibSystemProgram.sol#L141).
+  - `allocateWithSeed`: allocates storage space to a _Solana_ PDA (program-derived account). See [instruction formatting](https://github.com/neonevm/neon-contracts/blob/main/contracts/composability/libraries/system-program/LibSystemProgram.sol#L141).
   
 ### *LibSystemData* library
   
