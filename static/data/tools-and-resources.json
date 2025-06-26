@@ -1,0 +1,45 @@
+{
+  "title": "Tools & Resources",
+  "content": [
+    {
+      "id": 0,
+      "title": "Set up your EVM wallet",
+      "link": "https://neonevm.org/docs/wallet/metamask_setup"
+    },
+    {
+      "id": 1,
+      "title": "NeonPass (bridge)",
+      "link": "https://neonevm.org/docs/token_transferring/neonpass_usage"
+    },
+    {
+      "id": 2,
+      "title": "NeonFaucet",
+      "link": "https://neonfaucet.org"
+    },
+    {
+      "id": 3,
+      "title": "Block Explorer",
+      "link": "https://neon.blockscout.com"
+    },
+    {
+      "id": 4,
+      "title": "GitHub Starter Repo",
+      "link": "https://github.com/neonevm/neon-evm"
+    },
+    {
+      "id": 5,
+      "title": "Discord for Help",
+      "link": ""
+    },
+    {
+      "id": 6,
+      "title": "SDKs",
+      "link": "https://neonevm.org/docs/composability/sdk_solana_native"
+    },
+    {
+      "id": 7,
+      "title": "GitHub onchain",
+      "link": "https://github.com/neonevm/neon-contracts/tree/dev/solidity-composability-libraries/contracts/composability"
+    }
+  ]
+}

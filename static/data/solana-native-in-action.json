@@ -1,0 +1,30 @@
+{
+  "title": "See Solana Native in Action",
+  "action": {
+    "title": "Explore more demos",
+    "link": "https://neonevm.org/docs/about/POC_Aave_V3_flash_loan_with_composability_requests_to_Solana",
+    "icon": "/icons/arrow-right.svg"
+  },
+  "content": [
+    {
+      "id": 0,
+      "icon": "/icons/coin-swap.svg",
+      "title": "Swap with SPL Tokens",
+      "description": "Swap native Solana tokens using Neon EVM",
+      "link": {
+        "title": "Launch demo",
+        "url": "https://neonevm.org/docs/composability/sdk_solana_native#solana-native--use-case-demos"
+      }
+    },
+    {
+      "id": 1,
+      "icon": "/icons/cube.svg",
+      "title": "Create LPs on Raydium from Neon EVM",
+      "description": "See how a token launchpad on Neon EVM can create a liquidity pool on Raydium",
+      "link": {
+        "title": "Read more",
+        "url": "https://neonevm.org/docs/about/Memecoin_Launchpad_Raydium_Integration"
+      }
+    }
+  ]
+}
