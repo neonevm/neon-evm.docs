@@ -86,7 +86,8 @@ const sidebars = {
         'developing/integrate/middleware/the-graph',
         'developing/integrate/indexer/flair',
         'developing/integrate/indexer/envio',
-        'developing/integrate/indexer/subsquid'
+        'developing/integrate/indexer/subsquid',
+        'developing/integrate/indexer/subquery'
       ]
     },
     {
