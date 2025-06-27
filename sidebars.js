@@ -94,27 +94,15 @@ const sidebars = {
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Developer Guide</h4>' },
-    // {
-    //   type: 'category',
-    //   label: 'Setup & Deployment',
-    //   items: [
-    //     {
-    //       type: 'doc',
-    //       label: 'Get Started',
-    //       id: 'developing/get-started'
-    //     }, 
-    //     {
-    //       type: 'doc',
-    //       label: 'Connect to Neon RPC',
-    //       id: 'developing/connect_rpc'
-    //     },
-    //     {
-    //       type: 'doc',
-    //       label: 'Request Test Tokens',
-    //       id: 'developing/utilities/faucet'
-    //     },
-    //   ]
-    // },
+    {
+      type: 'category',
+      label: 'Setup & Deployment',
+      items: [
+        'developing/get-started',
+        'developing/connect_rpc',
+        'developing/utilities/faucet'
+      ]
+    },
     // {
     //   type: 'category',
     //   label: 'Contract Development',
