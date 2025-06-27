@@ -1,5 +1,11 @@
-# Understanding Composability on Solana and Neon EVM
-## **Understanding Composability**
+---
+title: Understanding Composability
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: Grzegorz
+comment: na
+---
 
 ## **Introduction**
 
