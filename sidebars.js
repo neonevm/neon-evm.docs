@@ -171,37 +171,37 @@ const sidebars = {
         },        
       ]
     },
-    // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    // { type: 'html', value: '<h4 class="sidebar-menu-title">Tools</h4>' },
-    // {
-    //   type: 'link',
-    //   label: 'Block Explorer',
-    //   href: 'https://neon.blockscout.com/'
-    // },
-    // {
-    //   type: 'link',
-    //   label: 'NeonPass',
-    //   href: 'https://devnet.neonpass.live/'
-    // },
-    // {
-    //   type: 'link',
-    //   label: 'NeonFaucet',
-    //   href: 'https://neonfaucet.org/'
-    // },        
-    // {
-    //   type: 'category',
-    //   label: 'Configure Dev Tools',
-    //   items: [
-    //     'developing/deploy_facilities/configure_hardhat',
-    //     'developing/deploy_facilities/configure_foundry',
-    //     'developing/deploy_facilities/configure_truffle'
-    //   ]
-    // },
-    // {
-    //   type: 'doc',
-    //   label: 'Set up Local Neon EVM',
-    //   id: 'developing/dev_environment/local_proxy_remote_solana'
-    // },
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Tools</h4>' },
+    {
+      type: 'link',
+      label: 'Block Explorer',
+      href: 'https://neon.blockscout.com/'
+    },
+    {
+      type: 'link',
+      label: 'NeonPass',
+      href: 'https://devnet.neonpass.live/'
+    },
+    {
+      type: 'link',
+      label: 'NeonFaucet',
+      href: 'https://neonfaucet.org/'
+    },        
+    {
+      type: 'category',
+      label: 'Configure Dev Tools',
+      items: [
+        'developing/deploy_facilities/configure_hardhat',
+        'developing/deploy_facilities/configure_foundry',
+        'developing/deploy_facilities/configure_truffle'
+      ]
+    },
+    {
+      type: 'doc',
+      label: 'Set up Local Neon EVM',
+      id: 'developing/dev_environment/local_proxy_remote_solana'
+    },
     // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     // { type: 'html', value: '<h4 class="sidebar-menu-title">Architecture & Concepts</h4>' },
     // {
