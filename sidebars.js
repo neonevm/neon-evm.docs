@@ -87,7 +87,6 @@ const sidebars = {
       label: 'Voting Process',
       id: 'governance/proposals'
     },    
-    { type: 'doc', label: 'Neon Proxy API', id: 'api/neon-api' },
     {
       type: 'category',
       label: 'FAQ',
@@ -96,34 +95,52 @@ const sidebars = {
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Developer Guide</h4>' },
     {
-      type: 'doc',
-      label: 'Get Started',
-      id: 'developing/get-started'
-    },
-    {
-      type: 'doc',
-      label: 'Connect to Neon RPC',
-      id: 'developing/connect_rpc'
-    },
-    {
-      type: 'doc',
-      label: 'Request Test Tokens',
-      id: 'developing/utilities/faucet'
-    },
-    {
       type: 'category',
-      label: 'Dev Recommendations',
-      items: ['developing/dev_recommendations/global_variables']
-    },
-    {
-      type: 'category',
-      label: 'Use Tokens',
+      label: 'Setup & Deployment',
       items: [
-        'developing/deploy_facilities/interacting_with_spl_tokens',
-        'tokens/token_list',
-        'token_transferring/neon_transfer'
+        {
+          type: 'doc',
+          label: 'Get Started',
+          id: 'developing/get-started'
+        }, 
+        {
+          type: 'doc',
+          label: 'Connect to Neon RPC',
+          id: 'developing/connect_rpc'
+        },
+        {
+          type: 'doc',
+          label: 'Request Test Tokens',
+          id: 'developing/utilities/faucet'
+        },
       ]
     },
+    {
+      type: 'category',
+      label: 'Contract Development',
+      items: [
+        {
+          type: 'category',
+          label: 'Deploy Contracts',
+          items: [
+            'developing/deploy_facilities/using_hardhat',
+            'developing/deploy_facilities/using_foundry',
+            'developing/deploy_facilities/using_truffle',
+            'developing/deploy_facilities/using_remix',
+            'developing/deploy_facilities/using_goethereum'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Verify Contracts',
+          items: [
+            'developing/verify_facilities/using_hardhat',
+            'developing/verify_facilities/using_foundry',
+            'developing/verify_facilities/verify_manually'
+          ]
+        },
+      ]
+    },        
     {
       type: 'category',
       label: 'Integrate',
@@ -138,54 +155,51 @@ const sidebars = {
         // 'developing/integrate/oracles/integrating_api3', integrating_api3 item is blocked (detalis are in TBA-195)
         'developing/integrate/middleware/the-graph',
         'developing/integrate/indexer/flair',
-        'developing/integrate/indexer/envio',
-        'developing/integrate/indexer/subsquid'
+        'developing/integrate/indexer/envio'
       ]
     },
     {
       type: 'category',
-      label: 'Deploy Contracts',
-      items: [
-        'developing/deploy_facilities/using_hardhat',
-        'developing/deploy_facilities/using_foundry',
-        'developing/deploy_facilities/using_truffle',
-        'developing/deploy_facilities/using_remix',
-        'developing/deploy_facilities/using_goethereum'
-      ]
-    },
-    {
-      type: 'category',
-      label: 'Verify Contracts',
-      items: [
-        'developing/verify_facilities/using_hardhat',
-        'developing/verify_facilities/using_foundry',
-        'developing/verify_facilities/verify_manually'
-      ]
-    },
-    {
-      type: 'category',
-      label: 'Tools',
+      label: 'Tutorials',
       items: [
         {
-         type: 'link',
-         label: 'Block Explorer',
-         href: 'https://neon.blockscout.com/'
+          type: 'category',
+          label: 'Use Tokens',
+          items: [
+            'developing/deploy_facilities/interacting_with_spl_tokens',
+            'tokens/token_list',
+            'token_transferring/neon_transfer'
+          ]
         },
         {
-         type: 'link',
-         label: 'NeonPass',
-         href: 'https://devnet.neonpass.live/'
+          type: 'category',
+          label: 'Dev Recommendations',
+          items: ['developing/dev_recommendations/global_variables']
         },
         {
-         type: 'link',
-         label: 'NeonFaucet',
-         href: 'https://neonfaucet.org/'
+          type: 'category',
+          label: 'Example Integrations',
+          items: ['developing/integrate/indexer/subsquid']
         },        
       ]
     },
-
-
-    
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Tools</h4>' },
+    {
+      type: 'link',
+      label: 'Block Explorer',
+      href: 'https://neon.blockscout.com/'
+    },
+    {
+      type: 'link',
+      label: 'NeonPass',
+      href: 'https://devnet.neonpass.live/'
+    },
+    {
+      type: 'link',
+      label: 'NeonFaucet',
+      href: 'https://neonfaucet.org/'
+    },        
     {
       type: 'category',
       label: 'Configure Dev Tools',
@@ -200,20 +214,8 @@ const sidebars = {
       label: 'Set up Local Neon EVM',
       id: 'developing/dev_environment/local_proxy_remote_solana'
     },
-
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Learn</h4>' },
-    {
-      type: 'category',
-      label: 'EVM Compatibility',
-      items: [
-        'evm_compatibility/overview',
-        'evm_compatibility/code_compatibility_checklist',
-        'evm_compatibility/json_rpc_api_methods',
-        'evm_compatibility/opcodes',
-        'evm_compatibility/precompiles'
-      ]
-    },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Architecture & Concepts</h4>' },
     {
       type: 'category',
       label: 'Neon EVM Architecture',
@@ -225,11 +227,21 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'EVM Compatibility',
+      items: [
+        'evm_compatibility/overview',
+        'evm_compatibility/code_compatibility_checklist',
+        'evm_compatibility/opcodes',
+        'evm_compatibility/precompiles'
+      ]
+    },    
+    {
+      type: 'category',
       label: 'Token Accounts',
       items: ['tokens/token-accounts']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Operate</h4>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Operating Neon EVM</h4>' },
     {
       type: 'doc',
       label: 'Operate a Neon Proxy',
@@ -245,6 +257,20 @@ const sidebars = {
       label: 'Configuration',
       items: ['operating/transaction-gas', 'operating/accounts', 'operating/configuration']
     },
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">API Referenc</h4>' },
+    {
+      type: 'doc',
+      label: 'JSON-RPC API Methods',
+      id: 'evm_compatibility/json_rpc_api_methods'
+    },
+    { type: 'doc', label: 'Neon Proxy API', id: 'api/neon-api' },
+    {
+      type: 'doc',
+      label: 'Principles and Objectives',
+      id: 'governance/principles'
+    },
+    {   type: 'link',   label: 'Community Channels & Support', href:     'https://www.neonevm.org/community' },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Govern</h4>' },
     {
@@ -271,11 +297,6 @@ const sidebars = {
       type: 'doc',
       label: 'Sign Votes',
       id: 'governance/technical_implementation/vote'
-    },
-    {
-      type: 'doc',
-      label: 'Principles and Objectives',
-      id: 'governance/principles'
     },
     {
       type: 'doc',
