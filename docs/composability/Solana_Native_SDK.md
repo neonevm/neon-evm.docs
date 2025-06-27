@@ -1,5 +1,11 @@
-# Solana Native SDK: Interacting with Neon EVM from Solana Wallets
-## **Solana Native SDK (Solana Wallet → Neon EVM Programs)**
+---
+title: Solana Native SDK (Solana Wallet → Neon EVM Programs)
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: Grzegorz
+comment: na
+---
 
 ### **Overview of Solana Native SDK**
 
