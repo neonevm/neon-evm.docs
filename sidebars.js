@@ -303,7 +303,7 @@ const sidebars = {
     //   label: 'Command Line Utilities',
     //   id: 'governance/command_line'
     // },
-    // { type: 'html', value: '<div class="sidebar-menu-divider"/>' }
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' }
   ]
 };
 
