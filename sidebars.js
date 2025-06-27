@@ -146,31 +146,31 @@ const sidebars = {
         'developing/integrate/indexer/envio'
       ]
     },
-    // {
-    //   type: 'category',
-    //   label: 'Tutorials',
-    //   items: [
-    //     {
-    //       type: 'category',
-    //       label: 'Use Tokens',
-    //       items: [
-    //         'developing/deploy_facilities/interacting_with_spl_tokens',
-    //         'tokens/token_list',
-    //         'token_transferring/neon_transfer'
-    //       ]
-    //     },
-    //     {
-    //       type: 'category',
-    //       label: 'Dev Recommendations',
-    //       items: ['developing/dev_recommendations/global_variables']
-    //     },
-    //     {
-    //       type: 'category',
-    //       label: 'Example Integrations',
-    //       items: ['developing/integrate/indexer/subsquid']
-    //     },        
-    //   ]
-    // },
+    {
+      type: 'category',
+      label: 'Tutorials',
+      items: [
+        {
+          type: 'category',
+          label: 'Use Tokens',
+          items: [
+            'developing/deploy_facilities/interacting_with_spl_tokens',
+            'tokens/token_list',
+            'token_transferring/neon_transfer'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Dev Recommendations',
+          items: ['developing/dev_recommendations/global_variables']
+        },
+        {
+          type: 'category',
+          label: 'Example Integrations',
+          items: ['developing/integrate/indexer/subsquid']
+        },        
+      ]
+    },
     // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     // { type: 'html', value: '<h4 class="sidebar-menu-title">Tools</h4>' },
     // {
