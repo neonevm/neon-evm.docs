@@ -18,7 +18,7 @@ const sidebars = {
       type: 'category',
       label: 'Token',
       items: ['tokens/neon_token', 'tokens/gas_fees', 'tokens/token_list', 'token_transferring/neonpass_usage', 'token_transferring/neon_transfer']
-    },
+    }//,
     // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     // { type: 'html', value: '<h4 class="sidebar-menu-title">Building Solana Native EVM dApps</h4>' },
     // {
