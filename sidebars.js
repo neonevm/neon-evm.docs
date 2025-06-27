@@ -65,7 +65,7 @@ const sidebars = {
       label: 'Using SPL Tokens',
       id: 'composability/using_spl_tokens'
     },
-    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+/*    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">User Guide</h4>' },    
     {
       type: 'category',
@@ -302,7 +302,7 @@ const sidebars = {
       type: 'doc',
       label: 'Command Line Utilities',
       id: 'governance/command_line'
-    },
+    },*/
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' }
   ]
 };
