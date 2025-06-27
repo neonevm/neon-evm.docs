@@ -246,7 +246,7 @@ const sidebars = {
       items: ['operating/transaction-gas', 'operating/accounts', 'operating/configuration']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">API Referenc</h4>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">API Reference</h4>' },
     {
       type: 'doc',
       label: 'JSON-RPC API Methods',
