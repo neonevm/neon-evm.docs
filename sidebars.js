@@ -103,49 +103,49 @@ const sidebars = {
         'developing/utilities/faucet'
       ]
     },
-    // {
-    //   type: 'category',
-    //   label: 'Contract Development',
-    //   items: [
-    //     {
-    //       type: 'category',
-    //       label: 'Deploy Contracts',
-    //       items: [
-    //         'developing/deploy_facilities/using_hardhat',
-    //         'developing/deploy_facilities/using_foundry',
-    //         'developing/deploy_facilities/using_truffle',
-    //         'developing/deploy_facilities/using_remix',
-    //         'developing/deploy_facilities/using_goethereum'
-    //       ]
-    //     },
-    //     {
-    //       type: 'category',
-    //       label: 'Verify Contracts',
-    //       items: [
-    //         'developing/verify_facilities/using_hardhat',
-    //         'developing/verify_facilities/using_foundry',
-    //         'developing/verify_facilities/verify_manually'
-    //       ]
-    //     },
-    //   ]
-    // },        
-    // {
-    //   type: 'category',
-    //   label: 'Integrate',
-    //   items: [
-    //     'developing/integrate/wallets/integrating_metamask_into_your_dapp',
-    //     'developing/integrate/wallets/integrating_walletconnect',
-    //     'developing/integrate/wallets/safe',
-    //     'developing/integrate/wallets/safe_cli',
-    //     'developing/integrate/wallets/integrating_web3auth',
-    //     'developing/integrate/oracles/integrating_chainlink',
-    //     'developing/integrate/oracles/integrating_pyth',
-    //     // 'developing/integrate/oracles/integrating_api3', integrating_api3 item is blocked (detalis are in TBA-195)
-    //     'developing/integrate/middleware/the-graph',
-    //     'developing/integrate/indexer/flair',
-    //     'developing/integrate/indexer/envio'
-    //   ]
-    // },
+    {
+      type: 'category',
+      label: 'Contract Development',
+      items: [
+        {
+          type: 'category',
+          label: 'Deploy Contracts',
+          items: [
+            'developing/deploy_facilities/using_hardhat',
+            'developing/deploy_facilities/using_foundry',
+            'developing/deploy_facilities/using_truffle',
+            'developing/deploy_facilities/using_remix',
+            'developing/deploy_facilities/using_goethereum'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Verify Contracts',
+          items: [
+            'developing/verify_facilities/using_hardhat',
+            'developing/verify_facilities/using_foundry',
+            'developing/verify_facilities/verify_manually'
+          ]
+        },
+      ]
+    },        
+    {
+      type: 'category',
+      label: 'Integrate',
+      items: [
+        'developing/integrate/wallets/integrating_metamask_into_your_dapp',
+        'developing/integrate/wallets/integrating_walletconnect',
+        'developing/integrate/wallets/safe',
+        'developing/integrate/wallets/safe_cli',
+        'developing/integrate/wallets/integrating_web3auth',
+        'developing/integrate/oracles/integrating_chainlink',
+        'developing/integrate/oracles/integrating_pyth',
+        // 'developing/integrate/oracles/integrating_api3', integrating_api3 item is blocked (detalis are in TBA-195)
+        'developing/integrate/middleware/the-graph',
+        'developing/integrate/indexer/flair',
+        'developing/integrate/indexer/envio'
+      ]
+    },
     // {
     //   type: 'category',
     //   label: 'Tutorials',
