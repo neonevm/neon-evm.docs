@@ -3,7 +3,7 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   tutorialSidebar: [
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Introduction</h4>' },
+    { type: 'html', value: '<h2 class="sidebar-menu-title">Introduction</h2>' },
     {
       type: 'doc',
       label: 'Quick Start',
@@ -20,7 +20,7 @@ const sidebars = {
       items: ['tokens/neon_token', 'tokens/gas_fees', 'tokens/token_list', 'token_transferring/neonpass_usage', 'token_transferring/neon_transfer']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Building Solana Native EVM dApps</h4>' },
+    { type: 'html', value: '<h2 class="sidebar-menu-title">Building Solana Native EVM dApps</h2>' },
     {
       type: 'doc',
       label: 'Common Solana Terminology',
@@ -66,7 +66,7 @@ const sidebars = {
       id: 'composability/using_spl_tokens'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">User Guide</h4>' },    
+    { type: 'html', value: '<h2 class="sidebar-menu-title">User Guide</h2>' },    
     {
       type: 'category',
       label: 'Neon EVM Overview',
@@ -93,7 +93,7 @@ const sidebars = {
       items: ['faq/neon-brief-faq', 'faq/neonpass']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Developer Guide</h4>' },
+    { type: 'html', value: '<h2 class="sidebar-menu-title">Developer Guide</h2>' },
     {
       type: 'category',
       label: 'Setup & Deployment',
@@ -172,7 +172,7 @@ const sidebars = {
       ]
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Tools</h4>' },
+    { type: 'html', value: '<h2 class="sidebar-menu-title">Tools</h2>' },
     {
       type: 'link',
       label: 'Block Explorer',
@@ -203,7 +203,7 @@ const sidebars = {
       id: 'developing/dev_environment/local_proxy_remote_solana'
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Architecture & Concepts</h4>' },
+    { type: 'html', value: '<h2 class="sidebar-menu-title">Architecture & Concepts</h2>' },
     {
       type: 'category',
       label: 'Neon EVM Architecture',
@@ -229,7 +229,7 @@ const sidebars = {
       items: ['tokens/token-accounts']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Operating Neon EVM</h4>' },
+    { type: 'html', value: '<h2 class="sidebar-menu-title">Operating Neon EVM</h2>' },
     {
       type: 'doc',
       label: 'Operate a Neon Proxy',
@@ -246,7 +246,7 @@ const sidebars = {
       items: ['operating/transaction-gas', 'operating/accounts', 'operating/configuration']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">API Reference</h4>' },
+    { type: 'html', value: '<h2 class="sidebar-menu-title">API Reference</h2>' },
     {
       type: 'doc',
       label: 'JSON-RPC API Methods',
@@ -260,7 +260,7 @@ const sidebars = {
     },
     {   type: 'link',   label: 'Community Channels & Support', href: 'https://www.neonevm.org/community' },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h4 class="sidebar-menu-title">Govern</h4>' },
+    { type: 'html', value: '<h2 class="sidebar-menu-title">Govern</h2>' },
     {
       type: 'doc',
       label: 'Overview',
