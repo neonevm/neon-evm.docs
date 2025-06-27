@@ -1,5 +1,11 @@
-# Solana Interactions from Neon EVM Smart Contracts
-## **Solana Interactions (Neon EVM → Solana Programs)**
+---
+title: Solana Interactions (Neon EVM → Solana Programs)
+proofedDate: na
+iterationBy: na
+includedInSite: true
+approvedBy: Grzegorz
+comment: na
+---
 
 ### **Transactions & Transfers**
 
