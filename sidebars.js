@@ -65,124 +65,124 @@ const sidebars = {
       label: 'Using SPL Tokens',
       id: 'composability/using_spl_tokens'
     },
-    // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    // { type: 'html', value: '<h4 class="sidebar-menu-title">User Guide</h4>' },    
-    // {
-    //   type: 'category',
-    //   label: 'Neon EVM Overview',
-    //   items: ['about/why_neon', 'about/neon_ecosystem', 'about/how_it_works', 'about/latest_updates']
-    // },
-    // {
-    //   type: 'doc',
-    //   label: 'Connect Wallet',
-    //   id: 'wallet/metamask_setup'
-    // },    
-    // {
-    //   type: 'category',
-    //   label: 'Transfer Tokens',
-    //  items: ['token_transferring/neonpass_usage', 'token_transferring/neon_transfer']
-    // },    
-    // {
-    //   type: 'doc',
-    //   label: 'Voting Process',
-    //   id: 'governance/proposals'
-    // },    
-    // {
-    //   type: 'category',
-    //   label: 'FAQ',
-    //   items: ['faq/neon-brief-faq', 'faq/neonpass']
-    // },
-    // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    // { type: 'html', value: '<h4 class="sidebar-menu-title">Developer Guide</h4>' },
-    // {
-    //   type: 'category',
-    //   label: 'Setup & Deployment',
-    //   items: [
-    //     {
-    //       type: 'doc',
-    //       label: 'Get Started',
-    //       id: 'developing/get-started'
-    //     }, 
-    //     {
-    //       type: 'doc',
-    //       label: 'Connect to Neon RPC',
-    //       id: 'developing/connect_rpc'
-    //     },
-    //     {
-    //       type: 'doc',
-    //       label: 'Request Test Tokens',
-    //       id: 'developing/utilities/faucet'
-    //     },
-    //   ]
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'Contract Development',
-    //   items: [
-    //     {
-    //       type: 'category',
-    //       label: 'Deploy Contracts',
-    //       items: [
-    //         'developing/deploy_facilities/using_hardhat',
-    //         'developing/deploy_facilities/using_foundry',
-    //         'developing/deploy_facilities/using_truffle',
-    //         'developing/deploy_facilities/using_remix',
-    //         'developing/deploy_facilities/using_goethereum'
-    //       ]
-    //     },
-    //     {
-    //       type: 'category',
-    //       label: 'Verify Contracts',
-    //       items: [
-    //         'developing/verify_facilities/using_hardhat',
-    //         'developing/verify_facilities/using_foundry',
-    //         'developing/verify_facilities/verify_manually'
-    //       ]
-    //     },
-    //   ]
-    // },        
-    // {
-    //   type: 'category',
-    //   label: 'Integrate',
-    //   items: [
-    //     'developing/integrate/wallets/integrating_metamask_into_your_dapp',
-    //     'developing/integrate/wallets/integrating_walletconnect',
-    //     'developing/integrate/wallets/safe',
-    //     'developing/integrate/wallets/safe_cli',
-    //     'developing/integrate/wallets/integrating_web3auth',
-    //     'developing/integrate/oracles/integrating_chainlink',
-    //     'developing/integrate/oracles/integrating_pyth',
-    //     // 'developing/integrate/oracles/integrating_api3', integrating_api3 item is blocked (detalis are in TBA-195)
-    //     'developing/integrate/middleware/the-graph',
-    //     'developing/integrate/indexer/flair',
-    //     'developing/integrate/indexer/envio'
-    //   ]
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'Tutorials',
-    //   items: [
-    //     {
-    //       type: 'category',
-    //       label: 'Use Tokens',
-    //       items: [
-    //         'developing/deploy_facilities/interacting_with_spl_tokens',
-    //         'tokens/token_list',
-    //         'token_transferring/neon_transfer'
-    //       ]
-    //     },
-    //     {
-    //       type: 'category',
-    //       label: 'Dev Recommendations',
-    //       items: ['developing/dev_recommendations/global_variables']
-    //     },
-    //     {
-    //       type: 'category',
-    //       label: 'Example Integrations',
-    //       items: ['developing/integrate/indexer/subsquid']
-    //     },        
-    //   ]
-    // },
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">User Guide</h4>' },    
+    {
+      type: 'category',
+      label: 'Neon EVM Overview',
+      items: ['about/why_neon', 'about/neon_ecosystem', 'about/how_it_works', 'about/latest_updates']
+    },
+    {
+      type: 'doc',
+      label: 'Connect Wallet',
+      id: 'wallet/metamask_setup'
+    },    
+    {
+      type: 'category',
+      label: 'Transfer Tokens',
+     items: ['token_transferring/neonpass_usage', 'token_transferring/neon_transfer']
+    },    
+    {
+      type: 'doc',
+      label: 'Voting Process',
+      id: 'governance/proposals'
+    },    
+    {
+      type: 'category',
+      label: 'FAQ',
+      items: ['faq/neon-brief-faq', 'faq/neonpass']
+    },
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Developer Guide</h4>' },
+    {
+      type: 'category',
+      label: 'Setup & Deployment',
+      items: [
+        {
+          type: 'doc',
+          label: 'Get Started',
+          id: 'developing/get-started'
+        }, 
+        {
+          type: 'doc',
+          label: 'Connect to Neon RPC',
+          id: 'developing/connect_rpc'
+        },
+        {
+          type: 'doc',
+          label: 'Request Test Tokens',
+          id: 'developing/utilities/faucet'
+        },
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Contract Development',
+      items: [
+        {
+          type: 'category',
+          label: 'Deploy Contracts',
+          items: [
+            'developing/deploy_facilities/using_hardhat',
+            'developing/deploy_facilities/using_foundry',
+            'developing/deploy_facilities/using_truffle',
+            'developing/deploy_facilities/using_remix',
+            'developing/deploy_facilities/using_goethereum'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Verify Contracts',
+          items: [
+            'developing/verify_facilities/using_hardhat',
+            'developing/verify_facilities/using_foundry',
+            'developing/verify_facilities/verify_manually'
+          ]
+        },
+      ]
+    },        
+    {
+      type: 'category',
+      label: 'Integrate',
+      items: [
+        'developing/integrate/wallets/integrating_metamask_into_your_dapp',
+        'developing/integrate/wallets/integrating_walletconnect',
+        'developing/integrate/wallets/safe',
+        'developing/integrate/wallets/safe_cli',
+        'developing/integrate/wallets/integrating_web3auth',
+        'developing/integrate/oracles/integrating_chainlink',
+        'developing/integrate/oracles/integrating_pyth',
+        // 'developing/integrate/oracles/integrating_api3', integrating_api3 item is blocked (detalis are in TBA-195)
+        'developing/integrate/middleware/the-graph',
+        'developing/integrate/indexer/flair',
+        'developing/integrate/indexer/envio'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Tutorials',
+      items: [
+        {
+          type: 'category',
+          label: 'Use Tokens',
+          items: [
+            'developing/deploy_facilities/interacting_with_spl_tokens',
+            'tokens/token_list',
+            'token_transferring/neon_transfer'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Dev Recommendations',
+          items: ['developing/dev_recommendations/global_variables']
+        },
+        {
+          type: 'category',
+          label: 'Example Integrations',
+          items: ['developing/integrate/indexer/subsquid']
+        },        
+      ]
+    },
     // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     // { type: 'html', value: '<h4 class="sidebar-menu-title">Tools</h4>' },
     // {
