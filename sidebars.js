@@ -228,69 +228,69 @@ const sidebars = {
       label: 'Token Accounts',
       items: ['tokens/token-accounts']
     },
-    // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    // { type: 'html', value: '<h4 class="sidebar-menu-title">Operating Neon EVM</h4>' },
-    // {
-    //   type: 'doc',
-    //   label: 'Operate a Neon Proxy',
-    //   id: 'operating/operator-introduction'
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'Run Neon Proxy',
-    //   items: ['operating/basic', 'operating/enhanced']
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'Configuration',
-    //   items: ['operating/transaction-gas', 'operating/accounts', 'operating/configuration']
-    // },
-    // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    // { type: 'html', value: '<h4 class="sidebar-menu-title">API Referenc</h4>' },
-    // {
-    //   type: 'doc',
-    //   label: 'JSON-RPC API Methods',
-    //   id: 'evm_compatibility/json_rpc_api_methods'
-    // },
-    // { type: 'doc', label: 'Neon Proxy API', id: 'api/neon-api' },
-    // {
-    //   type: 'doc',
-    //   label: 'Principles and Objectives',
-    //   id: 'governance/principles'
-    // },
-    // {   type: 'link',   label: 'Community Channels & Support', href: 'https://www.neonevm.org/community' },
-    // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    // { type: 'html', value: '<h4 class="sidebar-menu-title">Govern</h4>' },
-    // {
-    //   type: 'doc',
-    //   label: 'Overview',
-    //   id: 'governance/overview'
-    // },
-    // {
-    //   type: 'doc',
-    //   label: 'Neon DAO Organization',
-    //   id: 'governance/neon_daos'
-    // },
-    // {
-    //   type: 'doc',
-    //   label: 'Claiming Vested NEON Tokens',
-    //   id: 'governance/withdraw_neon'
-    // },    
-    // {
-    //   type: 'doc',
-    //   label: 'Voting Process',
-    //   id: 'governance/proposals'
-    // },
-    // {
-    //   type: 'doc',
-    //   label: 'Sign Votes',
-    //   id: 'governance/technical_implementation/vote'
-    // },
-    // {
-    //   type: 'doc',
-    //   label: 'Command Line Utilities',
-    //   id: 'governance/command_line'
-    // },
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Operating Neon EVM</h4>' },
+    {
+      type: 'doc',
+      label: 'Operate a Neon Proxy',
+      id: 'operating/operator-introduction'
+    },
+    {
+      type: 'category',
+      label: 'Run Neon Proxy',
+      items: ['operating/basic', 'operating/enhanced']
+    },
+    {
+      type: 'category',
+      label: 'Configuration',
+      items: ['operating/transaction-gas', 'operating/accounts', 'operating/configuration']
+    },
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">API Referenc</h4>' },
+    {
+      type: 'doc',
+      label: 'JSON-RPC API Methods',
+      id: 'evm_compatibility/json_rpc_api_methods'
+    },
+    { type: 'doc', label: 'Neon Proxy API', id: 'api/neon-api' },
+    {
+      type: 'doc',
+      label: 'Principles and Objectives',
+      id: 'governance/principles'
+    },
+    {   type: 'link',   label: 'Community Channels & Support', href: 'https://www.neonevm.org/community' },
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Govern</h4>' },
+    {
+      type: 'doc',
+      label: 'Overview',
+      id: 'governance/overview'
+    },
+    {
+      type: 'doc',
+      label: 'Neon DAO Organization',
+      id: 'governance/neon_daos'
+    },
+    {
+      type: 'doc',
+      label: 'Claiming Vested NEON Tokens',
+      id: 'governance/withdraw_neon'
+    },    
+    {
+      type: 'doc',
+      label: 'Voting Process',
+      id: 'governance/proposals'
+    },
+    {
+      type: 'doc',
+      label: 'Sign Votes',
+      id: 'governance/technical_implementation/vote'
+    },
+    {
+      type: 'doc',
+      label: 'Command Line Utilities',
+      id: 'governance/command_line'
+    },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' }
   ]
 };
