@@ -202,32 +202,32 @@ const sidebars = {
       label: 'Set up Local Neon EVM',
       id: 'developing/dev_environment/local_proxy_remote_solana'
     },
-    // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    // { type: 'html', value: '<h4 class="sidebar-menu-title">Architecture & Concepts</h4>' },
-    // {
-    //   type: 'category',
-    //   label: 'Neon EVM Architecture',
-    //   items: [
-    //     'architecture/neon_evm_arch',
-    //     'architecture/eth_sol_solution',
-    //     'architecture/solana-accounts'
-    //   ]
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'EVM Compatibility',
-    //   items: [
-    //     'evm_compatibility/overview',
-    //     'evm_compatibility/code_compatibility_checklist',
-    //     'evm_compatibility/opcodes',
-    //     'evm_compatibility/precompiles'
-    //   ]
-    // },    
-    // {
-    //   type: 'category',
-    //   label: 'Token Accounts',
-    //   items: ['tokens/token-accounts']
-    // },
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Architecture & Concepts</h4>' },
+    {
+      type: 'category',
+      label: 'Neon EVM Architecture',
+      items: [
+        'architecture/neon_evm_arch',
+        'architecture/eth_sol_solution',
+        'architecture/solana-accounts'
+      ]
+    },
+    {
+      type: 'category',
+      label: 'EVM Compatibility',
+      items: [
+        'evm_compatibility/overview',
+        'evm_compatibility/code_compatibility_checklist',
+        'evm_compatibility/opcodes',
+        'evm_compatibility/precompiles'
+      ]
+    },    
+    {
+      type: 'category',
+      label: 'Token Accounts',
+      items: ['tokens/token-accounts']
+    },
     // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     // { type: 'html', value: '<h4 class="sidebar-menu-title">Operating Neon EVM</h4>' },
     // {
