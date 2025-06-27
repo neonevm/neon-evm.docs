@@ -270,7 +270,7 @@ const sidebars = {
       label: 'Principles and Objectives',
       id: 'governance/principles'
     },
-    {   type: 'link',   label: 'Community Channels & Support', href:     'https://www.neonevm.org/community' },
+    {   type: 'link',   label: 'Community Channels & Support', href: 'https://www.neonevm.org/community' },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">Govern</h4>' },
     {
