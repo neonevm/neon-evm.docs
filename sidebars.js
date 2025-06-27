@@ -4,69 +4,69 @@
 const sidebars = {
   tutorialSidebar: [
     { type: 'html', value: '<h4 class="sidebar-menu-title">Introduction</h4>' },
-    // {
-    //   type: 'doc',
-    //   label: 'Quick Start',
-    //   id: 'quick_start'
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'Demos',
-    //   items: ['about/Memecoin_Launchpad_Raydium_Integration', 'about/POC_Aave_V3_flash_loan_with_composability_requests_to_Solana']
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'Token',
-    //   items: ['tokens/neon_token', 'tokens/gas_fees', 'tokens/token_list', 'token_transferring/neonpass_usage', 'token_transferring/neon_transfer']
-    // },
+    {
+      type: 'doc',
+      label: 'Quick Start',
+      id: 'quick_start'
+    },
+    {
+      type: 'category',
+      label: 'Demos',
+      items: ['about/Memecoin_Launchpad_Raydium_Integration', 'about/POC_Aave_V3_flash_loan_with_composability_requests_to_Solana']
+    },
+    {
+      type: 'category',
+      label: 'Token',
+      items: ['tokens/neon_token', 'tokens/gas_fees', 'tokens/token_list', 'token_transferring/neonpass_usage', 'token_transferring/neon_transfer']
+    },
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h4 class="sidebar-menu-title">Building Solana Native EVM dApps</h4>' },
+    {
+      type: 'doc',
+      label: 'Common Solana Terminology',
+      id: 'composability/common_solana_terminology'
+    },
+    {
+      type: 'doc',
+      label: 'ICallSolana Interface',
+      id: 'composability/call_solana_interface'
+    },
+    {
+      type: 'category',
+      label: 'Composability Libraries',
+      items: [
+        'composability/composability_libraries',
+        'composability/system_program_composability_libraries',
+        'composability/spl_token_program_composability_libraries',
+        'composability/metaplex_program_composability_libraries',
+        'composability/associated_token_program_composability_libraries',
+        'composability/raydium_cpmm_program_composability_libraries'
+        ]
+    },
+    {
+      type: 'category',
+      label: 'Using Composability',
+      items: [
+        'composability/using_composability/setup_configure',
+        'composability/using_composability/transfer_sols',
+        'composability/using_composability/transfer_spl_token',
+        'composability/using_composability/swap_on_orca',
+        'composability/using_composability/swap_on_raydium',
+        'composability/using_composability/using_vrf',
+      ]
+    },
+    {
+      type: 'doc',
+      label: 'Solana Native SDK',
+      id: 'composability/sdk_solana_native'
+    },
+    {
+      type: 'doc',
+      label: 'Using SPL Tokens',
+      id: 'composability/using_spl_tokens'
+    },
     // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    // { type: 'html', value: '<h4 class="sidebar-menu-title">Building Solana Native EVM dApps</h4>' },
-    // {
-    //   type: 'doc',
-    //   label: 'Common Solana Terminology',
-    //   id: 'composability/common_solana_terminology'
-    // },
-    // {
-    //   type: 'doc',
-    //   label: 'ICallSolana Interface',
-    //   id: 'composability/call_solana_interface'
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'Composability Libraries',
-    //   items: [
-    //     'composability/composability_libraries',
-    //     'composability/system_program_composability_libraries',
-    //     'composability/spl_token_program_composability_libraries',
-    //     'composability/metaplex_program_composability_libraries',
-    //     'composability/associated_token_program_composability_libraries',
-    //     'composability/raydium_cpmm_program_composability_libraries'
-    //     ]
-    // },
-    // {
-    //   type: 'category',
-    //   label: 'Using Composability',
-    //   items: [
-    //     'composability/using_composability/setup_configure',
-    //     'composability/using_composability/transfer_sols',
-    //     'composability/using_composability/transfer_spl_token',
-    //     'composability/using_composability/swap_on_orca',
-    //     'composability/using_composability/swap_on_raydium',
-    //     'composability/using_composability/using_vrf',
-    //   ]
-    // },
-    // {
-    //   type: 'doc',
-    //   label: 'Solana Native SDK',
-    //   id: 'composability/sdk_solana_native'
-    // },
-    // {
-    //   type: 'doc',
-    //   label: 'Using SPL Tokens',
-    //   id: 'composability/using_spl_tokens'
-    // },
-    // { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    // { type: 'html', value: '<h4 class="sidebar-menu-title">"User Guide"</h4>' },    
+    // { type: 'html', value: '<h4 class="sidebar-menu-title">User Guide</h4>' },    
     // {
     //   type: 'category',
     //   label: 'Neon EVM Overview',
