@@ -64,8 +64,8 @@ const sidebars = {
       type: 'doc',
       label: 'Using SPL Tokens',
       id: 'composability/using_spl_tokens'
-    },
-/*    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    }/*,
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h4 class="sidebar-menu-title">User Guide</h4>' },    
     {
       type: 'category',
