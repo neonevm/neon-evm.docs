@@ -132,8 +132,8 @@ const sidebars = {
     },
     {
       type: 'doc',
-      label: 'ICallSolana Interface',
-      id: 'composability/call_solana_interface'
+      label: 'Overview of Composability',
+      id: 'composability/Overview_of_Composability'
     },
     {
       type: 'category',
@@ -148,21 +148,19 @@ const sidebars = {
         ]
     },
     {
-      type: 'category',
-      label: 'Using Composability',
-      items: [
-        'composability/using_composability/setup_configure',
-        'composability/using_composability/transfer_sols',
-        'composability/using_composability/transfer_spl_token',
-        'composability/using_composability/swap_on_orca',
-        'composability/using_composability/swap_on_raydium',
-        'composability/using_composability/using_vrf',
-      ]
+      type: 'doc',
+      label: 'ICallSolana Interface',
+      id: 'composability/ICallSolana_Interface'
     },
     {
       type: 'doc',
-      label: 'Solana Native SDK',
-      id: 'composability/sdk_solana_native'
+      label: 'Solana Interactions (Solidity Contracts on NeonEVM --> Solana Programs)',
+      id: 'composability/Solana_Interactions'
+    },
+    {
+      type: 'doc',
+      label: 'Solana Native SDK (Solana Wallet → Neon EVM Programs)',
+      id: 'composability/Solana_Native_SDK'
     },
     {
       type: 'doc',
