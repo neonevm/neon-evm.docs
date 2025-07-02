@@ -229,6 +229,20 @@ const sidebars = {
       items: ['tokens/token-accounts']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
+    { type: 'html', value: '<h2 class="sidebar-menu-title">API reference</h2>' },
+    {
+      type: 'doc',
+      label: 'JSON-RPC API Methods',
+      id: 'evm_compatibility/json_rpc_api_methods'
+    },
+    { type: 'doc', label: 'Neon Proxy API', id: 'api/neon-api' },
+    {
+      type: 'doc',
+      label: 'Principles and Objectives',
+      id: 'governance/principles'
+    },
+    {   type: 'link',   label: 'Community Channels & Support', href: 'https://www.neonevm.org/community' },
+    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h2 class="sidebar-menu-title">Operating Neon EVM</h2>' },
     {
       type: 'doc',
@@ -245,20 +259,6 @@ const sidebars = {
       label: 'Configuration',
       items: ['operating/transaction-gas', 'operating/accounts', 'operating/configuration']
     },
-    { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h2 class="sidebar-menu-title">Operating Neon EVM</h2>' },
-    {
-      type: 'doc',
-      label: 'JSON-RPC API Methods',
-      id: 'evm_compatibility/json_rpc_api_methods'
-    },
-    { type: 'doc', label: 'Neon Proxy API', id: 'api/neon-api' },
-    {
-      type: 'doc',
-      label: 'Principles and Objectives',
-      id: 'governance/principles'
-    },
-    {   type: 'link',   label: 'Community Channels & Support', href: 'https://www.neonevm.org/community' },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h2 class="sidebar-menu-title">Govern</h2>' },
     {
