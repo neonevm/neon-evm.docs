@@ -16,7 +16,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Token',
+      label: 'Tokens',
       items: ['tokens/neon_token', 'tokens/gas_fees', 'tokens/token_list', 'token_transferring/neonpass_usage', 'token_transferring/neon_transfer']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
@@ -33,18 +33,6 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Composability Libraries',
-      items: [
-        'composability/composability_libraries',
-        'composability/system_program_composability_libraries',
-        'composability/spl_token_program_composability_libraries',
-        'composability/metaplex_program_composability_libraries',
-        'composability/associated_token_program_composability_libraries',
-        'composability/raydium_cpmm_program_composability_libraries'
-        ]
-    },
-    {
-      type: 'category',
       label: 'Using Composability',
       items: [
         'composability/using_composability/setup_configure',
@@ -54,6 +42,18 @@ const sidebars = {
         'composability/using_composability/swap_on_raydium',
         'composability/using_composability/using_vrf',
       ]
+    },
+    {
+      type: 'category',
+      label: 'Composability Libraries',
+      items: [
+        'composability/composability_libraries',
+        'composability/system_program_composability_libraries',
+        'composability/spl_token_program_composability_libraries',
+        'composability/metaplex_program_composability_libraries',
+        'composability/associated_token_program_composability_libraries',
+        'composability/raydium_cpmm_program_composability_libraries'
+        ]
     },
     {
       type: 'doc',
@@ -74,7 +74,7 @@ const sidebars = {
     },
     {
       type: 'doc',
-      label: 'Connect Wallet',
+      label: 'Set Up Wallet',
       id: 'wallet/metamask_setup'
     },    
     {
@@ -96,7 +96,7 @@ const sidebars = {
     { type: 'html', value: '<h2 class="sidebar-menu-title">Developer Guide</h2>' },
     {
       type: 'category',
-      label: 'Setup & Deployment',
+      label: 'Setup Dev Environment',
       items: [
         'developing/get-started',
         'developing/connect_rpc',
@@ -127,6 +127,11 @@ const sidebars = {
             'developing/verify_facilities/verify_manually'
           ]
         },
+        {
+          type: 'category',
+          label: 'Dev Recommendations',
+          items: ['developing/dev_recommendations/global_variables']
+        }
       ]
     },        
     {
@@ -158,11 +163,6 @@ const sidebars = {
             'tokens/token_list',
             'token_transferring/neon_transfer'
           ]
-        },
-        {
-          type: 'category',
-          label: 'Dev Recommendations',
-          items: ['developing/dev_recommendations/global_variables']
         },
         {
           type: 'category',
@@ -246,7 +246,7 @@ const sidebars = {
       items: ['operating/transaction-gas', 'operating/accounts', 'operating/configuration']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
-    { type: 'html', value: '<h2 class="sidebar-menu-title">API Reference</h2>' },
+    { type: 'html', value: '<h2 class="sidebar-menu-title">Operating Neon EVM</h2>' },
     {
       type: 'doc',
       label: 'JSON-RPC API Methods',
