@@ -126,7 +126,7 @@ Neon EVM follows the Google Developer's Style Guide with some tweaks. We use US 
 
 Vale is a linting tool that enforces grammar, and style.
 
-If you want to move fast there is a [decent intro](https://passo.uno/posts/first-steps-with-the-vale-prose-linter/) to the tooling. And, [vale's own docs](https://vale.sh/docs/vale-cli/installation/).
+If you want to move fast there is a [decent intro](https://passo.uno/posts/first-steps-with-the-vale-prose-linter/) to the tooling. And, [vale's own docs](https://vale.sh/docs/install).
 
 ### Vale control file
 
