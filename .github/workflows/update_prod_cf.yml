@@ -4,7 +4,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ["self-hosted", "k8s-prod-neonevm"]
+    runs-on: ["gha-runner-scale-set-neonevm"]
     strategy:
       matrix:
         node-version: [18]
