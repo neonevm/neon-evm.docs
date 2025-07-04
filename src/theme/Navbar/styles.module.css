@@ -3,3 +3,25 @@
     display: none;
   }
 }
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-right: 20px;
+}
+
+.navbar__button {
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--ifm-color-primary);
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  border: none;
+  background: transparent;
+}
+
+.navbar__button:hover {
+  text-decoration: none;
+}

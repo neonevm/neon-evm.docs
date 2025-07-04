@@ -67,9 +67,9 @@ const config = {
         }
       ],
       navbar: {
-        title: 'Neon EVM Docs',
         logo: {
           alt: 'Neon EVM',
+          srcDark: 'img/logo-dark.svg',
           src: 'img/logo.svg'
         },
         items: [
@@ -96,8 +96,8 @@ const config = {
             label: 'Operate',
             position: 'left',
             to: '/docs/operating/operator-introduction'
-          }
-        ]
+          },
+        ],
       },
       footer: {
         logo: {
