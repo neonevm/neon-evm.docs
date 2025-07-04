@@ -1,0 +1,46 @@
+name: Update Prod in CLoudFlare Pages
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ["gha-runner-scale-set-neonevm"]
+    strategy:
+      matrix:
+        node-version: [20]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Setup yarn
+        run: npm install -g yarn
+      - name: Install modules
+        run: |
+          yarn install
+      - name: install aws cli
+        run: |
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
+      - name: Build
+        run: |
+          yarn clear
+          yarn build
+
+      - name: Add whitepaper to docs build
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.CF_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.CF_AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws s3 cp s3://neonevm-website/Solana_Native.pdf ./build/Solana_Native.pdf --endpoint-url https://6aa89f18f67a9754ebd563ed320efb8b.r2.cloudflarestorage.com
+          cp ./build/Solana_Native.pdf ./build/docs/Solana_Native.pdf
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_PAGES_TOKEN }}
+          command: |
+            pages deploy ./build --project-name="${{ vars.CF_PAGES_PROJECT_PROD }}"

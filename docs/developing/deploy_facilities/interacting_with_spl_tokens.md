@@ -69,7 +69,7 @@ Depending on which output you need to construct, you will sign with different ac
 
 ## Restrictions
 
-According to the SPL token structure, an unsigned 64-bit floating point number is used to store the balance; in ERC-20, it's an unsigned 256-bit floating point number. Based on the unsigned 64-bit floating point standard, the maximum balance and transfer amount is (2^64-1)/(10^9), with 9 decimals of accuracy.
+According to the SPL token structure, an unsigned 64-bit integer is used to store the balance; in ERC-20, it's an unsigned 256-bit integer. Based on the unsigned 64-bit integer, the maximum balance and transfer amount is (2^64-1)/(10^9), with 9 decimals of accuracy.
 
 ## Notes on variants in outcome
 
