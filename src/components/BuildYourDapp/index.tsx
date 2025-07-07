@@ -6,9 +6,9 @@ export function BuildYourDapp<FC>() {
   return (
     <div className={styles.content}>
       <div>
-        <h4>
+        <h3>
           {buildYourDapp.title}
-        </h4>
+        </h3>
         <p className={styles.description}>
           {buildYourDapp.description}
         </p>

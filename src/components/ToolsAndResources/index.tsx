@@ -6,9 +6,9 @@ export function ToolsAndResources<FC>() {
   return (
     <div className={styles.content}>
       <div>
-        <h4>
+        <h3>
           {toolsAndResources.title}
-        </h4>
+        </h3>
       </div>
       <div className={styles.wrapper}>
         {toolsAndResources.content.map(i => (
