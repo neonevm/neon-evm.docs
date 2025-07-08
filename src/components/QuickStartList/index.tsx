@@ -33,9 +33,9 @@ export function QuickStartItem({ data }: { data: QuickStartData }) {
 function SolanaNativeSection<FC>() {
   return <>
     <div>
-      <h4>
+      <h3>
         { solanaNative.title }
-      </h4>
+      </h3>
       <p style={{ fontSize: '14px' }}>
         { solanaNative.description }
       </p>
@@ -44,7 +44,7 @@ function SolanaNativeSection<FC>() {
       {solanaNative.content.map(i => <div className={'list-wrapper_item'} key={i.id}>
         <div className={'list-wrapper_item-heading'}>
           <img src={i.icon} alt={i.title} />
-          <h3>{i.title}</h3>
+          <h4>{i.title}</h4>
         </div>
         {i.items.map((d, i) => <QuickStartItem data={d} key={i} />)}
       </div>)}

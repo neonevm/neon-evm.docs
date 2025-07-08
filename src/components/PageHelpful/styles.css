@@ -3,6 +3,7 @@
   flex-flow: row;
   background: var(--page-helpful-background);
   border-radius: 8px;
+  border: 1px solid var( --ifm-color-primary);
   justify-content: space-between;
   align-items: center;
   padding: 25px 30px;
@@ -11,7 +12,7 @@
 }
 
 .page-helpful-item.title {
-  color: white;
+  color: var( --ifm-color-primary);
   font-size: 20px;
   line-height: 24px;
   font-weight: bold;
@@ -23,8 +24,8 @@
   justify-content: center;
   align-items: center;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  color: white;
+  border: 1px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
   border-radius: 8px;
   padding: 4px 16px;
   font-size: 16px;
@@ -36,13 +37,22 @@
 }
 
 .page-helpful-button:hover {
-  border-color: rgba(255, 255, 255, 0.5)
+  border-color: var(--ifm-color-secondary);
+}
+
+.page-helpful-button svg, .page-helpful-button path {
+  fill: var(--ifm-color-primary);
 }
 
 .page-helpful-button[disabled] {
-  border-color: rgba(255, 255, 255, 0.28);
-  cursor: default;
+  cursor: not-allowed;
+  color: var(--ifm-gray-200);
+  border: 1px solid var(--ifm-gray-200);
   opacity: 0.7;
+}
+
+.page-helpful-button[disabled] svg, .page-helpful-button[disabled] path {
+  fill: var(--ifm-gray-200);
 }
 
 .page-helpful-button:last-of-type {

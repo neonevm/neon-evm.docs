@@ -6,13 +6,13 @@ export function SolanaInActionList<FC>() {
   return (
     <div className={styles.content}>
       <div>
-        <h4>
+        <h3>
           { solanaNativeInAction.title }
-        </h4>
+        </h3>
       </div>
       <div className={styles.wrapper}>
         {solanaNativeInAction.content.map(i => (
-          <div className={styles.item} key={i.id}>
+          <a target='_blank' className={styles.item} key={i.id} href={solanaNativeInAction.action.link}>
             <div className={styles.itemIcon}>
               <img src={i.icon} alt={i.title} />
             </div>
@@ -27,7 +27,7 @@ export function SolanaInActionList<FC>() {
             <div>
               <a className={styles.itemLink} href={i.link.url} target='_blank'>{i.link.title}</a>
             </div>
-          </div>
+          </a>
         ))}
       </div>
       <div className={styles.action}>

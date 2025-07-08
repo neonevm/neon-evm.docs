@@ -27,6 +27,11 @@
   border: 1px solid var(--ifm-white-200);
   border-radius: 12px;
   padding: 20px;
+  cursor: pointer;
+}
+
+.item:hover {
+  text-decoration: none;
 }
 
 .action {
