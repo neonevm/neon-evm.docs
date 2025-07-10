@@ -46,6 +46,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 24px 16px;
+  font-weight: 500;
   border-top: 1px solid var(--ifm-white-200);
   text-decoration: none !important;
 }
