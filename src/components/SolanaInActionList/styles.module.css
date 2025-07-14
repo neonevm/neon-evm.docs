@@ -41,7 +41,7 @@
   align-items: center;
   border: 1px solid var(--ifm-white-200);
   border-radius: 8px;
-  padding: 12px 8px;
+  padding: 8px 12px;
 }
 
 [data-theme='dark'] .action {
@@ -71,6 +71,7 @@
 
 .itemLink {
   font-size: 14px;
+  font-weight: 500;
   color: var( --ifm-gray-300)
 }
 
