@@ -1,0 +1,60 @@
+{
+  "title": "What Does “Solana Native” enable?",
+  "description": "Solana-native” means your app can talk to Solana programs and tokens, while still using Solidity, Hardhat, etc.",
+  "content": [
+    {
+      "id": 0,
+      "title": "Your EVM code can",
+      "icon": "/icons/checkmark.svg",
+      "items": [
+        {
+          "id": 0,
+          "title": "Be used by Solana users",
+          "description": "Enable Solana wallets to call your code",
+          "url": "/docs/composability/sdk_solana_native"
+        },
+        {
+          "id": 1,
+          "title": "Use Solana-native tokens",
+          "description": "Interact with SPL Tokens",
+          "url": "/docs/developing/deploy_facilities/interacting_with_spl_tokens"
+        },
+        {
+          "id": 2,
+          "title": "Tap into Solana liquidity",
+          "description": "Transfer Solana Assets",
+          "url": "/docs/composability/using_spl_tokens"
+        },
+        {
+          "id": 3,
+          "title": "Interact with any Solana program",
+          "description": "Call Solana Programs from Neon",
+          "url": "/docs/composability/using_composability/setup_configure"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Skip the Solana headache",
+      "icon": "/icons/error.svg",
+      "items": [
+        {
+          "id": 0,
+          "title": "Don't learn Rust or Anchor"
+        },
+        {
+          "id": 1,
+          "title": "No need to re-write your contracts"
+        },
+        {
+          "id": 2,
+          "title": "Keep using your EVM tools"
+        },
+        {
+          "id": 3,
+          "title": "Skip all Solana weirdness"
+        }
+      ]
+    }
+  ]
+}

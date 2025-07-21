@@ -6,13 +6,28 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #DF42AB;
+  --ifm-color-primary: #182230;
+  --ifm-color-secondary: #344054;
   --ifm-color-primary-dark: #db29a0;
   --ifm-color-primary-darker: #d22498;
   --ifm-color-primary-darkest: #ad1d7d;
   --ifm-color-primary-light: #e35bb6;
   --ifm-color-primary-lighter: #e567bb;
   --ifm-color-primary-lightest: #ec8ccc;
+
+  --ifm-white-100: #F9FAFB;
+  --ifm-white-200: #EAECF0;
+  --ifm-white-300: #ECECED;
+
+  --ifm-gray-100: #CECFD2;
+  --ifm-gray-200: #D0D5DD;
+  --ifm-gray-300: #475467;
+  --ifm-gray-400: #667085;
+  --ifm-gray-500: #333741;
+
+  --ifm-violet-100: #1F242F;
+  --ifm-violet-200: #0C111D;
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-family-base: 'Inter', sans-serif;
@@ -21,7 +36,7 @@
   --ifm-menu-color: #61676F;
   --ifm-menu-color-hover: #262B35;
   --ifm-menu-color-background-active: #FEEDF8;
-  --page-helpful-background: #194CFF;
+  --page-helpful-background: transparent;
   --ifm-footer-background-color: #F1F4F9;
 
   --ifm-menu-link-padding-horizontal: 20px;
@@ -30,7 +45,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark']:root {
-  --ifm-color-primary: #DF42AB;
+  --ifm-color-primary: var(--ifm-gray-100);
   --ifm-color-primary-dark: #db29a0;
   --ifm-color-primary-darker: #d22498;
   --ifm-color-primary-darkest: #ad1d7d;
@@ -38,16 +53,85 @@
   --ifm-color-primary-lighter: #e567bb;
   --ifm-color-primary-lightest: #ec8ccc;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-background-surface-color: #1B1B1D;
   --ifm-hover-overlay: #262B35;
   --ifm-menu-color: #A6B0C3;
   --ifm-menu-color-hover: #F1F4F9;
-  --ifm-menu-color-background-active: #431F30;
+  --ifm-menu-color-background-active: var(--ifm-violet-200);
   --ifm-footer-background-color: #000000;
+
+  --ifm-navbar-background-color: var(--ifm-violet-200);
+  --ifm-background-surface-color: var(--ifm-violet-200);
 }
 
 .docMainContainer_TBSr {
   justify-content: center;
+}
+
+[data-theme='dark'] .docsWrapper_hBAB {
+  background: var(--ifm-violet-200);
+}
+
+[data-theme='dark'] .navbar.navbar--fixed-top {
+  border-bottom: 1px solid var(--ifm-gray-500);
+}
+
+.navbarSearchContainer_Bca1 {
+  position: unset !important;
+}
+
+.navbarSearchContainer_Bca1 .DocSearch {
+  width: 200px;
+  background: transparent;
+  border-radius: 8px;
+  border: 1px solid var(--ifm-gray-200);
+}
+
+[data-theme='dark'] .navbarSearchContainer_Bca1 .DocSearch {
+  border: 1px solid var(--ifm-gray-500);
+}
+
+[data-theme='dark'] .navbarSearchContainer_Bca1 .DocSearch-Button-Container .DocSearch-Search-Icon, .navbarSearchContainer_Bca1 .DocSearch-Button-Container .DocSearch-Button-Placeholder {
+  color: var(--ifm-gray-500);
+}
+
+[data-theme='dark'] .clean-btn.toggleButton_gllP .darkToggleIcon_wfgR path {
+  fill: var(--ifm-gray-500);
+}
+
+[data-theme='dark'] .clean-btn.toggleButton_gllP:hover .darkToggleIcon_wfgR path {
+  fill: var(--ifm-white-300);
+  background: var(--ifm-violet-100);
+}
+
+[data-theme='dark'] .DocSearch.DocSearch-Button:focus, [data-theme='dark'] .DocSearch.DocSearch-Button:hover {
+  background: transparent;
+}
+
+.navbarSearchContainer_Bca1 .DocSearch-Button-Container .DocSearch-Search-Icon, .navbarSearchContainer_Bca1 .DocSearch-Button-Container .DocSearch-Button-Placeholder {
+  color: var(--ifm-gray-400);
+}
+
+.DocSearch .DocSearch-Button-Keys {
+  min-width: auto;
+  padding: 2px 4px;
+  border: 1px solid var(--ifm-white-200);
+  border-radius: 4px;
+}
+
+[data-theme='dark'] .DocSearch .DocSearch-Button-Keys {
+  border: 1px solid var(--ifm-gray-500);
+}
+
+.DocSearch .DocSearch-Button-Key {
+  top: unset;
+  width: 12px;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin-right: 0;
+  padding: 0;
+  color: var(--ifm-gray-300);
 }
 
 .docMainContainer_TBSr .container {
@@ -58,6 +142,40 @@
   .docMainContainer_TBSr .container {
     max-width: 75%
   }
+}
+
+@media (max-width: 480px) {
+  .navbar__items.navbar__items--right .navbar__container_rqDs {
+    display: none;
+  }
+}
+
+@media (max-width: 996px) {
+  .navbarSearchContainer_Bca1 .DocSearch {
+    width: auto;
+  }
+}
+
+[data-theme='dark'] .navbar__link {
+  color: var(--ifm-gray-100);
+}
+
+[data-theme='dark'] .navbar__link--active {
+  color: var(--ifm-white-300);
+  background: var(--ifm-violet-100);
+}
+
+.navbar__link {
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--ifm-color-secondary);
+  font-weight: 400;
+
+}
+
+.navbar__link--active {
+  background: var(--ifm-white-100);
+  font-weight: 600;
 }
 
 .menu {
@@ -93,7 +211,7 @@
 }
 
 .footer__link-item:hover {
-  text-decoration: none;
+  font-weight: 600;
 }
 
 .menu__link {

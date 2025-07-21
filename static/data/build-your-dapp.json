@@ -1,0 +1,35 @@
+{
+  "title": "Build Your First dApp (Quick Start Path)",
+  "description": "Skip the theory. Here’s how to go from 0 to deployed in 5 mins:",
+  "action": {
+    "title": "Start the guide",
+    "link": "https://neonevm.org/docs/quick_start",
+    "icon": "/icons/arrow-right.svg"
+  },
+  "content": [
+    {
+      "id": 0,
+      "title": "STEP 1",
+      "description": "Connect to Neon EVM using an EVM wallet",
+      "link": "https://neonevm.org/docs/wallet/metamask_setup"
+    },
+    {
+      "id": 1,
+      "title": "STEP 2",
+      "description": "Get Test Tokens",
+      "link": "https://neonevm.org/docs/developing/utilities/faucet"
+    },
+    {
+      "id": 2,
+      "title": "STEP 3",
+      "description": "Deploy a Smart Contract",
+      "link": "https://neonevm.org/docs/developing/deploy_facilities/using_hardhat"
+    },
+    {
+      "id": 3,
+      "title": "STEP 4",
+      "description": "Explore Transactions",
+      "link": "https://neonevm.org/docs/about/neon_ecosystem#block-explorer"
+    }
+  ]
+}

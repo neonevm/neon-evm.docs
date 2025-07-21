@@ -9,6 +9,8 @@ import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
 import NavbarLogo from '@theme/Navbar/Logo';
 import NavbarSearch from '@theme/Navbar/Search';
 
+import NavbarSocials from '@site/src/theme/Navbar/socials';
+
 import styles from './styles.module.css';
 
 export function splitNavbarItems<T extends { position?: 'left' | 'center' | 'right' }>(items: T[]): [leftItems: T[], rightItems: T[]] {
@@ -58,10 +60,11 @@ export default function NavbarContent(): JSX.Element {
     <NavbarContentLayout left={<>
       {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
       <NavbarLogo />
-    </>} center={<>
       <NavbarItems items={leftItems} />
+    </>} center={<>
     </>} right={<>
       <NavbarItems items={rightItems} />
+      <NavbarSocials />
       <NavbarColorModeToggle className={styles.colorModeToggle} />
       {!searchBarItem && <NavbarSearch><SearchBar /></NavbarSearch>}
     </>}
