@@ -117,7 +117,7 @@ Below is an example
 const Web3 = require("web3");
 const fs = require("fs");
 
-const web3 = new Web3(new Web3.providers.HttpProvider("https://proxy.devnet.neonlabs.org/solana"));
+const web3 = new Web3(new Web3.providers.HttpProvider("https://devnet.neonevm.org/solana"));
 const aggregatorV3InterfaceABI = JSON.parse(fs.readFileSync("./AggregatorV3Interface.json"));
 
 const contract = new web3.eth.Contract(aggregatorV3InterfaceABI, process.env.ORACLE_ADDRESS)

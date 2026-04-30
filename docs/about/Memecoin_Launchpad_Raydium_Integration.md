@@ -175,7 +175,7 @@ export ANCHOR\_WALLET=./id.json
 
 **Resources**
 
-1. [Neon EVM Docs](https://neonlabs.org/docs/)  
+1. [Neon EVM Docs](https://docs.neonevm.org/docs/)  
 2. [Raydium SDK](https://github.com/raydium-io/raydium-sdk)  
 3. [Solana Dev Docs](https://docs.solana.com/)  
 4. [Blockscout for Neon](https://neonscan.org/)

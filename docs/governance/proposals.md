@@ -170,7 +170,7 @@ The purpose of Governance UI is to:
 > Currently, the procedure for submitting and considering proposals is being finalized and therefore some actions may differ from the ones described below. If you encounter an issue, feel free to contact *community* for help.
 
 ### Posting an Article on the Neon Forum
-The first thing to do is to go to the [Neon forum](https://forum.neon-labs.org) and post an article describing your proposal. If you are not yet registered, you must do so. Then click `New Topic` and put your content in the pop-up window.
+The first thing to do is to go to the [Neon forum](https://forum.neonevm.org) and post an article describing your proposal. If you are not yet registered, you must do so. Then click `New Topic` and put your content in the pop-up window.
 
 <div className='neon-img-box-600' style={{textAlign: 'center'}}>
 
@@ -197,7 +197,7 @@ The proposal should match the recommended template and contain the following fie
   * `Instructions` — the sequence of actions for installing and running program code, if it is in the proposal.
   * `Discussion` — feedback and comments from stakeholders
 
-Once the proposal is registered in Governance UI, a new line with data about it will appear in the list of [Governance Proposals](https://governance.neon-labs.org).
+Once the proposal is registered in Governance UI, a new line with data about it will appear in the list of [Governance Proposals](https://vote.neondao.org).
 
 <div className='neon-img-width-600' style={{textAlign: 'center'}}>
 
@@ -206,7 +206,7 @@ Once the proposal is registered in Governance UI, a new line with data about it 
 </div>
 
 ### Monitoring the Status of the Submitted Proposal
-The page [Governance Proposals](https://governance.neon-labs.org) contains the list of all proposals, including their names, identifiers, and current states. Authors have the ability to track the status of their proposals and monitor the voting processes. To get up-to-date information about the proposal, click on its status field.
+The page [Governance Proposals](https://vote.neondao.org) contains the list of all proposals, including their names, identifiers, and current states. Authors have the ability to track the status of their proposals and monitor the voting processes. To get up-to-date information about the proposal, click on its status field.
 
 As an example, the following figure shows the page containing detailed information about the "Execute new proposal" with the status `Voting`.
 

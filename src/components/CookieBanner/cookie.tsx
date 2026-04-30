@@ -19,7 +19,7 @@ export default function CookieComponent() {
   return <div>
     <cookie-control
       containerClass={ classList.container }
-      policyUrl={ 'https://neon-labs.org/cookie-policy' }
+      policyUrl={ 'https://neonevm.org/cookie-policy' }
       linkTarget={ true }
       titleClass={ classList.title }
       descriptionClass={ classList.description }

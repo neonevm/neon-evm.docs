@@ -39,7 +39,7 @@ export const CookieBanner = () => {
         <h4 className='title'>We use cookies</h4>
         <p className='description'>
           If you continue browsing, we consider that you have show <a
-          href='https://neon-labs.org/cookie-policy' target='_blank'>cookies policy</a>.
+          href='https://neonevm.org/cookie-policy' target='_blank'>cookies policy</a>.
         </p>
         <div className='actions'>
           <button className='main' onClick={acceptCookies}>Accept</button>

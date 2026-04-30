@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './styles.module.css'
+import classes from './styles.module.css';
 
 export default function NavbarSocials(): JSX.Element {
   return (
@@ -8,7 +8,7 @@ export default function NavbarSocials(): JSX.Element {
         <img src='/img/socials/discord.svg' alt="discord" />
         Discord
       </a>
-      <a className={classes.navbar__button} href='https://github.com/neonlabsorg' target='_blank'>
+      <a className={classes.navbar__button} href='https://github.com/neonevm' target='_blank'>
         <img src='/img/socials/github.svg' alt="github" />
         Github
       </a>

@@ -12,7 +12,7 @@ const config = {
   onBrokenAnchors: 'ignore',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.png',
-  organizationName: 'neonlabsorg',
+  organizationName: 'neonevm',
   projectName: 'neon-evm.docs',
   headTags: [
     { tagName: 'link', attributes: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
