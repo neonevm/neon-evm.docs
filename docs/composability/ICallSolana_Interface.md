@@ -245,7 +245,7 @@ yarn test
 
 ```javascript
 const connection = new Connection('https://api.devnet.solana.com', 'confirmed');
-const proxyApi = new NeonProxyRpcApi('https://proxy.devnet.neonlabs.org');
+const proxyApi = new NeonProxyRpcApi('https://devnet.neonevm.org');
 ```
 
 5. **Connect Wallet**:
@@ -262,8 +262,8 @@ await solanaAirdrop(connection, solanaUser.publicKey, 1e9);
 
 ```
 REACT_APP_SOLANA_URL=https://api.devnet.solana.com
-REACT_APP_NEON_CORE_API_RPC_URL=https://proxy.devnet.neonlabs.org
-REACT_APP_NEON_CORE_API_URL=https://api.devnet.neonlabs.org
+REACT_APP_NEON_CORE_API_RPC_URL=https://devnet.neonevm.org
+REACT_APP_NEON_CORE_API_URL=https://api.devnet.neonevm.org
 ```
 
    * Run UI:

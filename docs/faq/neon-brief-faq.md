@@ -49,7 +49,7 @@ The following tools are available on Neon:
 
 ### What is Neon's roadmap?
 
-You can view our roadmap on our [Home Page](https://neon-labs.org/).
+You can view our roadmap on our [Home Page](https://neonevm.org/).
 
 ## Community
 
