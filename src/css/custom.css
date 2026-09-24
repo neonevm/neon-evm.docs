@@ -246,3 +246,16 @@ img {
   height: 24px!important;
   vertical-align: middle;
 }
+
+/* Deprecated content (e.g. NeonPass deposits) */
+.deprecated {
+  opacity: 0.55;
+}
+
+.deprecated img {
+  filter: grayscale(100%);
+}
+
+.menu__list-item.sidebar-deprecated > .menu__link {
+  opacity: 0.55;
+}

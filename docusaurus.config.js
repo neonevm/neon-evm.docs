@@ -112,7 +112,7 @@ const config = {
               { label: '🧬 Neon EVM Overview', to: '/docs/about/why_neon' },
               { label: '🔑 Set Up Wallet', to: '/docs/wallet/metamask_setup' },
               { label: '💰 Tokens', to: '/docs/tokens/neon_token' },
-              { label: '🛰 Transfer Tokens', to: '/docs/token_transferring/neonpass_usage' },
+              { label: '🛰 Transfer Tokens', to: '/docs/token_transferring/neonpass_withdrawal' },
               { label: '💬 FAQ', to: '/docs/faq/neon-brief-faq' }
             ]
           },
