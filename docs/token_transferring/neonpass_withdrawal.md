@@ -7,15 +7,18 @@ approvedBy: na
 comment:
 ---
 
-import image1 from '@site/static/img/doc-images/neonpassV2/Connect_to_wallet.png';
-import image2 from '@site/static/img/doc-images/neonpassV2/Neon_to_Solana.png';
-import image9 from '@site/static/img/doc-images/neonpassV2/Not_Enough_SOL.png';
-import image10 from '@site/static/img/doc-images/neonpassV2/Wrong_network.png';
-import image11 from '@site/static/img/doc-images/neonpassV2/Transfer_completed.png';
-import image12 from '@site/static/img/doc-images/neonpassV2/Transfer_failed.png';
-import image13 from '@site/static/img/doc-images/neonpassV2/Homepage.png';
-import image14 from '@site/static/img/doc-images/neonpassV2/Mobile Wallet connect.png';
-import image15 from '@site/static/img/doc-images/neonpassV2/Transfer complete.png';
+import image1 from '@site/static/img/doc-images/neonpass_withdrawal/connect_wallets.png';
+import image2 from '@site/static/img/doc-images/neonpass_withdrawal/neon_to_solana.png';
+import image3 from '@site/static/img/doc-images/neonpass_withdrawal/connect_evm_wallet.png';
+import image4 from '@site/static/img/doc-images/neonpass_withdrawal/connect_solana_wallet.png';
+import image5 from '@site/static/img/doc-images/neonpass_withdrawal/transfer_form.png';
+import image9 from '@site/static/img/doc-images/neonpass_withdrawal/insufficient_neon.png';
+import image10 from '@site/static/img/doc-images/neonpass_withdrawal/wrong_network.png';
+import image11 from '@site/static/img/doc-images/neonpass_withdrawal/transfer_completed.png';
+import image12 from '@site/static/img/doc-images/neonpass_withdrawal/transfer_failed.png';
+import image13 from '@site/static/img/doc-images/neonpass_withdrawal/mobile_home.png';
+import image14 from '@site/static/img/doc-images/neonpass_withdrawal/mobile_wallet_connect.png';
+import image15 from '@site/static/img/doc-images/neonpass_withdrawal/mobile_transfer_completed.png';
 
 ## Overview
 
@@ -50,15 +53,21 @@ When withdrawing tokens from Neon EVM to Solana for the first time, ensure that 
 Remember to use a browser to which both your Solana and Neon EVM compatible wallets are attached.
 :::
 
-2.1 Click **Connect Wallet** to connect your Solana compatible wallet to NeonPass. Follow the login procedure in your wallet's popup window and ensure it's connected to the network you require (e.g. Mainnet).
+2.1 Click **Connect EVM Wallet** in the **From** field to connect your Neon EVM compatible wallet to NeonPass.
 
 <img src={image1} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-2.2 Repeat this step for your Neon EVM compatible wallet.
+2.2 Select your wallet from the list, follow the login procedure in your wallet's popup window and ensure it's connected to the network you require (e.g. Mainnet).
+
+<img src={image3} width="450" style={{ display: 'block', margin: '10px auto' }} />
+
+2.3 Click **Connect Solana Wallet** in the **To** field and repeat this step for your Solana compatible wallet.
+
+<img src={image4} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
 ### Step 3: Withdraw tokens
 
-3.1 Make sure the transfer direction is set from Neon EVM to Solana.
+3.1 Make sure the transfer direction is from Neon (**From**) to Solana (**To**). Since deposits are closed, this is the only direction available.
 
 <img src={image2} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
@@ -66,7 +75,9 @@ Remember to use a browser to which both your Solana and Neon EVM compatible wall
 Your first ever transaction from your wallet includes a one time fee to generate the Solana account linked to your address. Therefore the first transaction will be more expensive than the subsequent ones.
 :::
 
-3.2 Choose the token and enter the amount to withdraw.
+3.2 Choose the token and enter the amount to withdraw. NeonPass shows the estimated time, the gas token, the gas fees and the amount you will receive.
+
+<img src={image5} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
 3.3 Click **Transfer** and sign the transaction in your connected wallets.
 
@@ -90,7 +101,7 @@ Always ensure you have sufficient funds in the appropriate token to cover gas fe
    
   <img src={image9} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
-2. Wallet connection issues
+2. Wallet connection issues: if your EVM wallet is connected to an unsupported network, click **Switch to Neon EVM**
    
    <img src={image10} width="450" style={{ display: 'block', margin: '10px auto' }} />
 
