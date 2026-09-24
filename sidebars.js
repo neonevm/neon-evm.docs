@@ -17,7 +17,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Tokens',
-      items: ['tokens/neon_token', 'tokens/gas_fees', 'tokens/token_list', 'token_transferring/neonpass_usage', 'token_transferring/neon_transfer']
+      items: ['tokens/neon_token', 'tokens/gas_fees', 'tokens/token_list', 'token_transferring/neonpass_withdrawal', { type: 'doc', id: 'token_transferring/neonpass_usage', className: 'sidebar-deprecated' }, 'token_transferring/neon_transfer']
     },
     { type: 'html', value: '<div class="sidebar-menu-divider"/>' },
     { type: 'html', value: '<h2 class="sidebar-menu-title">Building Solana Native EVM dApps</h2>' },
@@ -78,7 +78,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Transfer Tokens',
-     items: ['token_transferring/neonpass_usage', 'token_transferring/neon_transfer']
+     items: ['token_transferring/neonpass_withdrawal', { type: 'doc', id: 'token_transferring/neonpass_usage', className: 'sidebar-deprecated' }, 'token_transferring/neon_transfer']
     },    
     {
       type: 'doc',

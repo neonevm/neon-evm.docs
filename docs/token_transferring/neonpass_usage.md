@@ -1,5 +1,6 @@
 ---
 title: NeonPass UI
+sidebar_label: NeonPass UI (Deprecated)
 proofedDate: 20231207
 iterationBy: na
 includedInSite: true
@@ -35,6 +36,10 @@ import image16 from '@site/static/img/doc-images/neonpassV2/Transfer_failed.png'
 This guide demonstrates how to transfer tokens between Solana and Neon EVM using the [NeonPass](https://neonpass.live/) UI. The same tooling is available as an [npm package](/docs/token_transferring/neon_transfer).
 
 You can transfer tokens in either direction, but each transaction incurs a gas fee in either NEON or SOL.
+
+:::warning Deprecated
+Deposits from Solana to Neon EVM via NeonPass have been permanently disabled. The Solana to Neon EVM instructions below are kept for reference only. To withdraw tokens from Neon EVM to Solana, see the [NeonPass Withdrawal UI](/docs/token_transferring/neonpass_withdrawal) guide.
+:::
 
 :::info
  Neon EVM's Devnet now supports a feature providing the option to pay the gas fees with the [token of transaction](https://neonevm.org/blog/feature-alternative-gas-fee-token), rather than only NEON or SOL.
@@ -95,7 +100,13 @@ Your first ever transaction from your wallet includes a one time fee to generate
 
  </TabItem>
 
- <TabItem value="solanatoneon" label="Solana to Neon EVM">
+ <TabItem value="solanatoneon" label="Solana to Neon EVM (Deprecated)">
+
+:::warning Deprecated
+Deposits from Solana to Neon EVM have been permanently disabled. This section is kept for reference only.
+:::
+
+<div className="deprecated">
 
 3.1 Select the transfer direction from Solana to Neon EVM.
 
@@ -108,6 +119,8 @@ Your first ever transaction from your wallet includes a one time fee to generate
 3.4 Click **Transfer** and sign the transaction in your connected wallets.
 
 3.5 Review the transaction summary and enjoy your tokens in Neon EVM!
+
+</div>
 
  </TabItem>
 
@@ -129,11 +142,19 @@ When transferring tokens from Neon EVM to Solana:
 
 </TabItem>
 
-<TabItem value="solanatoneon" label="Solana to Neon EVM">
+<TabItem value="solanatoneon" label="Solana to Neon EVM (Deprecated)">
+
+:::warning Deprecated
+Deposits from Solana to Neon EVM have been permanently disabled. This section is kept for reference only.
+:::
+
+<div className="deprecated">
 
 When transferring tokens from Solana to Neon EVM:
 - For sending NEON tokens, you can choose between NEON and SOL as the gas token.
 - For sending SPL tokens (e.g., USDC), only SOL can be used as the gas token.
+
+</div>
 
 </TabItem>
 
