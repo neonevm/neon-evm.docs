@@ -14,7 +14,7 @@ NeonPass seamlessly transfers assets between Solana’s Associated Token Account
 
 ## Overview
 
-This page takes you under the hood of [NeonPass](/docs/token_transferring/neonpass_usage) as an excellent lens to examine how tokens are handled on Solana vs. Neon EVM. 
+This page takes you under the hood of [NeonPass](/docs/token_transferring/neonpass_withdrawal) as an excellent lens to examine how tokens are handled on Solana vs. Neon EVM. 
 
 ### How does NeonPass work?
 
