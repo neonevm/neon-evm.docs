@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "description": "POST request to get detailed information around trasaction execution.",
+  "description": "POST request to get detailed information around transaction execution.",
   "required": [
     "method",
     "jsonrpc",
